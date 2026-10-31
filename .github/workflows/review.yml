@@ -78,7 +78,7 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
-        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "public", "diagnostics-coverage", "clipboard", "walletconnect-sdk", "walletconnect-verify"]') }}
+        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "public", "diagnostics-coverage", "clipboard", "walletconnect-sdk", "walletconnect-verify", "scanner", "wallet-links", "scanner-lifecycle"]') }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}
@@ -145,6 +145,10 @@ jobs:
         run: python3 scripts/relay-envelope-check.py .work/source --output evidence/ci/relay-envelope
       - name: Reproduce response-topic correlation before and after the repair
         run: python3 scripts/response-topic-check.py .work/source --output evidence/ci/response-topic
+      - name: Trace pairing inputs through the application parser
+        run: python3 scripts/pairing-link-check.py .work/source --output evidence/ci/uri-boundary
+      - name: Reproduce pairing URI field boundaries before and after repair
+        run: python3 scripts/uri-boundary-check.py .work/source --output evidence/ci/uri-boundary
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: relay-envelope-evidence, path: evidence/ci, retention-days: 90}

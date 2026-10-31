@@ -7,9 +7,9 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`e352f56d0fb3be035c3600e646e3f9133adb9ef4`**.
-Merged in [application PR 5](https://github.com/devdasx/oath-wallet/pull/5),
-merge `fdbb5c05c06faf7cc6ce2d17d2f5ca47ce37fe77`. Publication and CI evidence
+Current review target: **`a65601b78f86e33ebae08a754035d69c1f5f5e43`**.
+Merged in [application PR 6](https://github.com/devdasx/oath-wallet/pull/6),
+merge `4694c68b87dd5f0ebeda8c8298fb03b5f2ce2b58`. Publication and CI evidence
 for this target are recorded in `scope/source.json`. These are public-source repairs;
 no App Store upload or submission was performed. Later source revisions do not
 automatically inherit these results.
@@ -22,7 +22,7 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,638 files: 77 reviewed, 5 partially reviewed, 4,556 outstanding. The Wallet Core upstream
+The application ledger contains 4,639 files: 93 reviewed, 7 partially reviewed, 4,539 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
 outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -57,10 +57,44 @@ convert unread code into reviewed code. See the machine-readable ledgers under
   legacy records and routing-field injection. Old pending Notify handshakes
   remain an unverified boundary of that unused product; no real peer test is claimed.
 
+- [OW-2026-006](../findings/OW-2026-006.md), low: repeated URI decoding
+  reinterpreted relay-data contents as a replacement pairing key. The app accepted
+  the synthetic input. Eight identical cases give 3 pass/5 fail before and
+  8 pass after. Query boundaries and serialization are repaired; this does not
+  establish unauthorized signing or fund loss.
+
 Original findings, failed runs and retests remain available. No finding is erased
 or downgraded merely to produce a passing summary.
 
 ## Current-source local validation
+
+[Results](../evidence/uri-boundary/results.json),
+[identical-corpus reproduction](../evidence/uri-boundary/reproduction/results.json),
+[app entry trace](../evidence/uri-boundary/reproduction/app-boundary.json), and
+[published hashes](../evidence/uri-boundary/manifest.json) identify `a65601b`:
+
+- Pairing URI: five failed cases before, eight passed after; production app-parser
+  trace passes five assertions without pairing or opening any connection.
+- SDK: 56 passed, one intentional skip, including 13 existing upstream URI cases.
+  The skipped Verify fixture passes in its own process.
+- Scanner: 13,635 assertions, 715 synthetic QR image round trips, 42 chains,
+  260 public BIP39 vectors in ten languages. Link checks: 145 assertions;
+  recognizer/capture-state lifecycle checks: 2,021 assertions.
+- Diagnostics: 118 passed, two explicit skips. Source-boundary validation,
+  root secret scan and diagnostics coverage passed.
+- Generic unsigned iOS Release build passed in 36.29 seconds using the existing
+  isolated cache. Source identity was checked before and after compilation.
+
+See [input review notes](INPUT-BOUNDARIES.md) for exact read dispositions and
+remaining runtime/dependency boundaries. The audit runner now exposes only the
+three offline scanner modes, validates their final assertion summaries, and
+adds these checks to CI. The 31 helper tests pass. Actionlint passes with only
+its unknown `xcode-27` runner-label diagnostic explicitly excluded; the standard
+invocation does report that label and is not claimed to pass unmodified.
+The current-source full GitHub matrix has not completed. No simulator, phone,
+real pairing peer or App Store operation was used.
+
+## Preserved e352f56 local validation
 
 [Results](../evidence/response-topic/results.json),
 [identical-corpus reproduction](../evidence/response-topic/reproduction/results.json),
@@ -106,6 +140,11 @@ advisory scan, the subsequently corrected OathAnkr test expectations/timeout, an
 a Sui host job whose detailed artifact failed to upload (ENOTFOUND). A subsequent
 local Sui check passed nine cases on f23413c; the CI command failure's cause is
 not established. These are not silently converted to successful CI outcomes.
+
+The later f23413c CI rerun has now passed its Sui job as well as OathAnkr.
+[Job metadata snapshot](../evidence/ci-run-41244250116-progress6.json) preserves
+that observation, while other jobs remain incomplete. This does not establish
+the cause of the older Sui failure or validate the current a65601b source.
 
 ## Preserved validation on the previous source commit
 

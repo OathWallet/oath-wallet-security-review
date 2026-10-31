@@ -1,5 +1,5 @@
 {
-  "source_commit": "e352f56d0fb3be035c3600e646e3f9133adb9ef4",
+  "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -7230,8 +7230,10 @@
       "sha256": "7a3c8548e4d1d8f5f489da3d12f76424d45a70d1af6758850f7a8ae4132e6d85",
       "bytes": 9106,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Import/OathMoreOptionsSheet.swift",
@@ -7318,8 +7320,10 @@
       "sha256": "ae7464354b3bd0a64a28b38ad9898bb02237d74f177120f7d95abbb335c87770",
       "bytes": 7262,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Import/OathXrplMultisigSetup.swift",
@@ -7704,48 +7708,60 @@
       "sha256": "05e67d3ef0a3f594d43453c5e8d997f84c90a32cce5e9866ea3a0d99b8d93017",
       "bytes": 8490,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Scanner/OathScanImage.swift",
       "sha256": "fd561fdfd3a73d30ffed959b3a83012d525e47cc8eb7bd539c5828af7b59fd3a",
       "bytes": 1031,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Scanner/OathScanPayload.swift",
       "sha256": "c60329300f5568dbcb5257ab838378d4e6b36594e2b7fa4df29c9719cffe61d1",
       "bytes": 28245,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Scanner/OathScanRecognizer.swift",
       "sha256": "ea53f2387a1049f737c953747378c3ee37b219f0ac7ba6f8f6958876c82f5828",
       "bytes": 1727,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Scanner/OathScannerCamera.swift",
       "sha256": "f714ab3880fc130543feaef786dd673eb3728640af766dec26dd09df58160a7c",
       "bytes": 10939,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Scanner/OathScannerCaptureState.swift",
       "sha256": "0e61426e1e108736ef7867e31fc721c6da5087559be36b04d848bbf1761eb853",
       "bytes": 2895,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Scanner/OathWalletConnectBitcoinViews.swift",
@@ -7992,8 +8008,10 @@
       "sha256": "12d495d59646f55659e4301a1beaacbec8ff41794c09c9c1c320d6d9b769b703",
       "bytes": 8971,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Security/OathAppSwitcherPrivacy.swift",
@@ -8998,7 +9016,8 @@
       "category": "application",
       "status": "reviewed",
       "evidence": [
-        "review/READ-NOTES.md"
+        "review/READ-NOTES.md",
+        "review/INPUT-BOUNDARIES.md"
       ]
     },
     {
@@ -19263,8 +19282,10 @@
       "sha256": "0692f91d14200dfbbd1ab7b7bece5147f1343b57151dff3623f94b0e5b206e37",
       "bytes": 3139,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Tools/CheckScanner.swift",
@@ -19287,8 +19308,10 @@
       "sha256": "7e2c39472ccfdeca78b6354974c350906d1a0ba13da4a874e44561486704b12a",
       "bytes": 7931,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Tools/CheckSeedPasswordWallets.swift",
@@ -19636,11 +19659,13 @@
     },
     {
       "path": "Tools/CheckWalletConnectSDK.py",
-      "sha256": "bc2693bd7cefa33a014c7a641ea0c6e91e3a84c958d1f4ea33c4d361b005a4bf",
-      "bytes": 3820,
+      "sha256": "3654a52a8b1d73965d2debc59c040c6cacfee8183a8970b3dcfd74b71721c5ae",
+      "bytes": 3949,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Tools/CheckWalletConnectSolanaLive.cjs",
@@ -19719,8 +19744,10 @@
       "sha256": "50d642e66c82323ebd6d96ddb02cee07129307e22b0678e9fc2c463690daddb5",
       "bytes": 10909,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Tools/CheckWalletPalette.swift",
@@ -20506,6 +20533,16 @@
       "category": "build-or-documentation",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Tools/WalletConnectSDKValidation/URIBoundaryTests.swift",
+      "sha256": "bad90ba99a89b9b871e4c9d7905c37589313757530c773c73e7c2992fe2d2c15",
+      "bytes": 3495,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Tools/WalletConnectSDKValidation/VerifyAbsenceTests.swift",
@@ -29395,8 +29432,10 @@
       "sha256": "512c35ac7b7e34270775886a67bbbb3aad821211a2587fff4e66d1aaa11415cf",
       "bytes": 171,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/Extensions/Data+utils.swift",
@@ -29560,8 +29599,10 @@
       "sha256": "1c8ed11cea6f028ee5868ebc8f7511b7e0a4e6e832c6d8977c96421ba0a71b2e",
       "bytes": 428,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/SIWE/RecapFactory.swift",
@@ -29669,11 +29710,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/WalletConnectURI.swift",
-      "sha256": "ae719ca422ea3b589203fbef197225c00a65371bf9027dcc13759556db861976",
-      "bytes": 5244,
+      "sha256": "2ac5921cb40fe1455d524b532c1680df29d25d29901fb3d1e5b8befe2988b6df",
+      "bytes": 5912,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/blake2b.swift",
@@ -31128,8 +31171,10 @@
       "sha256": "c847dd79e8620470345d1cc56ff4777c491b71b169aeb30833c728216643bbe6",
       "bytes": 5939,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/INPUT-BOUNDARIES.md"
+      ]
     },
     {
       "path": "Website/.gitignore",

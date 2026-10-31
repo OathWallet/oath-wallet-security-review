@@ -352,3 +352,9 @@ The same-method `awaitResponse` waiter concern remains unconfirmed and outside
 this fix; it is called by the unused Notify history product in the observed tree.
 No complete peer authentication, Notify migration or real network protocol run
 is claimed. WalletConnect session/runtime coverage remains incomplete.
+
+## Scanner and pairing URI boundary review
+
+See [INPUT-BOUNDARIES.md](INPUT-BOUNDARIES.md) for the a65601b source reads,
+partial traces, new OW-2026-006 finding and explicit host/runtime limitations.
+Earlier findings, attempts and evidence remain unchanged.

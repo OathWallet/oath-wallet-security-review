@@ -8,9 +8,25 @@ from source_state import require_source_state
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff']
 SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
+SCANNER_MODES = {'scanner': [], 'wallet-links': ['--links'], 'scanner-lifecycle': ['--performance']}
 MODES = ['envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
          'evm-send', 'solana-send', 'tron-send', 'xrpl-send', 'stellar-send',
          'aptos-send', 'sui-send', 'near-send', 'ton-send', 'thorchain-send', 'arc-send', 'permission-batch']
+
+def scanner_case_count(mode, text):
+    """Require the harness's final assertion summary, not just a successful build."""
+    patterns = {
+        'scanner': r'^Passed (\d+) scanner checks; (\d+) real CoreImage/Vision QR round trips; (\d+) chains;',
+        'wallet-links': r'^Wallet link checks passed: (\d+)$',
+        'scanner-lifecycle': r'^Scanner concurrency/lifecycle: (\d+) checks passed$',
+    }
+    matches = re.findall(patterns[mode], text, re.MULTILINE)
+    if len(matches) != 1:
+        return None
+    if mode == 'scanner':
+        cases, images, chains = map(int, matches[0])
+        return cases if cases > 0 and images > 0 and chains > 0 else None
+    return int(matches[0]) or None
 
 def sdk_case_counts(text):
     """Use individual XCTest outcomes, not the separate empty Swift Testing run."""
@@ -24,7 +40,7 @@ def sdk_case_counts(text):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('source', type=Path)
-    p.add_argument('check', choices=PACKAGES + MODES + SDK_MODES + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
+    p.add_argument('check', choices=PACKAGES + MODES + SDK_MODES + list(SCANNER_MODES) + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
     p.add_argument('--output', type=Path, default=ROOT/'evidence/local')
     a = p.parse_args()
     source, out = a.source.resolve(), a.output.resolve()
@@ -37,6 +53,8 @@ def main():
     env['OATH_VALIDATION_SCRATCH'] = str(scratch)
     if a.check in PACKAGES:
         command = ['python3',str(ROOT/'scripts/isolated_tests.py'),str(source),a.check,str(scratch)+'-native',str(out)]
+    elif a.check in SCANNER_MODES:
+        command = ['python3', 'Tools/CheckScanner.py'] + SCANNER_MODES[a.check]
     elif a.check in SDK_MODES:
         command = ['python3','Tools/CheckWalletConnectSDK.py','--build-system','native']
         if a.check == 'walletconnect-verify':
@@ -70,8 +88,11 @@ def main():
     text = text.replace(str(scratch), '<SCRATCH>').replace(os.path.expanduser('~'), '<HOME>')
     log.write_text(text)
     sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES else None
+    scanner_cases = scanner_case_count(a.check, text) if a.check in SCANNER_MODES else None
+    if a.check in SCANNER_MODES and scanner_cases is None:
+        code = code or 1
     if sdk_cases is not None:
-        minimum = 35 if a.check == 'walletconnect-sdk' else 1
+        minimum = 56 if a.check == 'walletconnect-sdk' else 1
         if sdk_cases['passed'] < minimum or sdk_cases['failed']:
             code = code or 1
     summaries = [line for line in text.splitlines() if re.search(r'XCTest:|Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]
@@ -80,6 +101,9 @@ def main():
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
                   runtime_scope='host' if a.check!='build' else 'compile-only',live_network_tests_enabled=False)
     if sdk_cases is not None: result['xctest_cases'] = sdk_cases
+    if a.check in SCANNER_MODES:
+        result['assertion_count'] = scanner_cases
+        result['runtime_scope'] = 'macOS host; synthetic QR images, no camera, simulator, device or live-chain request'
     if a.check in PACKAGES:
         xml = out/(a.check+'.xml')
         if xml.exists():

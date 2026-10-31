@@ -1,0 +1,225 @@
+[
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-audit-uri-final"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 19.28,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "1066f6db73c419792ce402193c674e9079fbb6e2fd5cb2040701fa98d57e04b9",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "82208778eedeebfda1b8c88c4ed67a2540a98c1fb1d0810c60a665ca6eff0851"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    }
+  },
+  {
+    "check": "build",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 36.29,
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "log_sha256": "a7da6d562d0b5f8cb277fe5b4435569dcd41b3fe5a77bdf0564dd02bd4dbcc5b",
+    "runtime_scope": "generic unsigned iOS Release compilation; reused isolated build cache; source checked unchanged before and after"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.35,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "public",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 41.58,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "2faaa1caf8b389b0b25ddc0502ba3e42d0c47e7381ce812715152f5a9c4dd48b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "scanner-lifecycle",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py",
+      "--performance"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 9.24,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Scanner concurrency/lifecycle: 2021 checks passed"
+    ],
+    "log_sha256": "616c9287945049552efac880061ad73bde466453c1a2276c4942b8b3005a0488",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 2021
+  },
+  {
+    "check": "scanner",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 91.26,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 13635 scanner checks; 715 real CoreImage/Vision QR round trips; 42 chains; 260 public BIP39 vectors across 10 languages. No wallet data, simulator, camera, or network used."
+    ],
+    "log_sha256": "7aa1a9d7f7a51ffef1016b5f20b7aaeb0e063fe4791c35c50dbc7473f72c1622",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 13635
+  },
+  {
+    "check": "wallet-links",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py",
+      "--links"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 10.48,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Wallet link checks passed: 145"
+    ],
+    "log_sha256": "7c591340cbec6c50f558ed26937c0a7a17339c4bf720773e16412720da7edf21",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 145
+  },
+  {
+    "check": "walletconnect-sdk",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 8.41,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.071 (0.072) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.161 (0.162) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "<GENERATED-HARNESS>/Tests/SDKTests/VerifyAbsenceTests.swift:24: -[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure] : Test skipped - Fresh process for production diagnostics reporter",
+      "Test Case '-[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure]' skipped (0.001 seconds).",
+      "\t Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "\t Executed 13 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 57 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.253 (0.255) seconds",
+      "\t Executed 57 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.253 (0.256) seconds",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "46c3c7e85beb97c7689d7b618ffc51c13dc6bf152ca8d6f8ab2ca3f53b90161b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 56,
+      "skipped": 1,
+      "failed": 0
+    }
+  },
+  {
+    "check": "walletconnect-verify",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "VerifyAbsenceTests"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 15.99,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "5b389e62054cf0c6ce6b64ad81580fab3950f8307ace93239859dd8c3cf339fb",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 1,
+      "skipped": 0,
+      "failed": 0
+    }
+  }
+]
