@@ -22,7 +22,7 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,639 files: 93 reviewed, 7 partially reviewed, 4,539 outstanding. The Wallet Core upstream
+The application ledger contains 4,639 files: 106 reviewed, 8 partially reviewed, 4,525 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
 outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -67,6 +67,16 @@ Original findings, failed runs and retests remain available. No finding is erase
 or downgraded merely to produce a passing summary.
 
 ## Current-source local validation
+
+The [TON review increment](TON-BOUNDARIES.md) adds five production-module property
+tests on the same `a65601b` source: 1,004 independent amount vectors, 256 cell
+graphs, 4,096 byte mutations and dictionary/structural limits. All five cases
+passed. [Final evidence](../evidence/ton-properties/final/ton-properties.json)
+and the initial harness-reporting failure are both retained. No new application
+vulnerability was confirmed in that increment. The audit-helper suite now has
+34 passing tests; the new properties have a dedicated audit-only CI job.
+The amount oracle uses Python integer arithmetic; cell round trips are not
+independent consensus verification or exhaustive fuzzing.
 
 [Results](../evidence/uri-boundary/results.json),
 [identical-corpus reproduction](../evidence/uri-boundary/reproduction/results.json),
@@ -141,10 +151,17 @@ a Sui host job whose detailed artifact failed to upload (ENOTFOUND). A subsequen
 local Sui check passed nine cases on f23413c; the CI command failure's cause is
 not established. These are not silently converted to successful CI outcomes.
 
-The later f23413c CI rerun has now passed its Sui job as well as OathAnkr.
-[Job metadata snapshot](../evidence/ci-run-41244250116-progress6.json) preserves
-that observation, while other jobs remain incomplete. This does not establish
-the cause of the older Sui failure or validate the current a65601b source.
+The later [f23413c CI rerun](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41244250116)
+finished with **33 successful jobs and one failure**. Every host job, inventory,
+parser, aezeed-source and unsigned generic iOS build job succeeded. The failure
+is the retained raw Go module advisory scan: 40 unique advisories. The separate
+selected-source triage does not prove the historical binary is unaffected.
+[Final metadata](../evidence/ci-run-41244250116-final.json),
+[29 hash-verified result records and durable archive identity](../evidence/ci-41244250116-results.json)
+retain this outcome; the prior progress snapshot remains unchanged. OathAnkr
+reports 1,208 passed and 194 explicitly skipped, with no failures. This does not
+establish the cause of the older Sui failure or validate the current a65601b
+source. Its separate full matrix is still incomplete.
 
 ## Preserved validation on the previous source commit
 
