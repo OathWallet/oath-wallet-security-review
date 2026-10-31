@@ -37,5 +37,15 @@
     "fix_commit": "f506dd8b820476296a6348c0ccbbdc42164c21f5",
     "retest_scope": "Synthetic production relay dispatch: two baseline rejection failures; four repaired cases pass. No end-to-end session deletion, signing bypass or fund loss demonstrated.",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/4"
+  },
+  {
+    "id": "OW-2026-005",
+    "severity": "medium",
+    "title": "Encrypted responses resolve pending requests without topic binding",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-005.md",
+    "fix_commit": "e352f56d0fb3be035c3600e646e3f9133adb9ef4",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/5",
+    "retest_scope": "Same four-case corpus: two baseline failures, four fixed passes; eight compatibility tests. Synthetic relay/history, no real peer or fund-loss demonstration."
   }
 ]

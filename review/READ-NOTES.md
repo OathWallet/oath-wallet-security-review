@@ -332,3 +332,23 @@ The request-provider debounce is wall-clock based and dispatches the oldest
 pending request. Runtime scheduling and downstream policy interactions still
 need adversarial tests. `reviewed` means the listed source was read; it does not
 mean no bugs or all runtime paths proven.
+
+
+## Response-topic repair and persisted routing
+
+Read the complete JSONRPC `RPCRequest` and `RPCID`, the updated history and
+network ingress, `SessionAuthRequestService`, `LinkAuthRequester`,
+`WalletErrorResponder`, authentication request parameter schema, `CodableStore`
+and `KeyValueStorage`, plus both new regression files. The Notify producers'
+request/response-topic construction was traced, but their identity signing and
+DID/config dependencies are not fully reviewed and their entries remain partial.
+
+OW-2026-005 confirms cross-topic response consumption. A simplistic same-topic
+candidate was withheld after source review showed authentication's deliberately
+separate reply topic. The repair persists a local-only expectation and retains
+legacy authentication routing from the stored public key. Twelve focused tests
+cover rejection, valid responses, restart, malformed routing and JSON injection.
+The same-method `awaitResponse` waiter concern remains unconfirmed and outside
+this fix; it is called by the unused Notify history product in the observed tree.
+No complete peer authentication, Notify migration or real network protocol run
+is claimed. WalletConnect session/runtime coverage remains incomplete.

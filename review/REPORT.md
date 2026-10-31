@@ -7,9 +7,9 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`f506dd8b820476296a6348c0ccbbdc42164c21f5`**.
-Merged in [application PR 4](https://github.com/devdasx/oath-wallet/pull/4),
-merge `34cda6f53099c6d6da49018f7dd28e6e0b3c37a7`. Publication and CI evidence
+Current review target: **`e352f56d0fb3be035c3600e646e3f9133adb9ef4`**.
+Merged in [application PR 5](https://github.com/devdasx/oath-wallet/pull/5),
+merge `fdbb5c05c06faf7cc6ce2d17d2f5ca47ce37fe77`. Publication and CI evidence
 for this target are recorded in `scope/source.json`. These are public-source repairs;
 no App Store upload or submission was performed. Later source revisions do not
 automatically inherit these results.
@@ -22,7 +22,7 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,636 files: 67 reviewed, 3 partially reviewed, 4,566 outstanding. The Wallet Core upstream
+The application ledger contains 4,638 files: 77 reviewed, 5 partially reviewed, 4,556 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
 outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -50,15 +50,38 @@ convert unread code into reviewed code. See the machine-readable ledgers under
   Valid encrypted type-0/type-1 messages still dispatch; tampering is rejected.
   No end-to-end signing bypass or fund loss is demonstrated.
 
-A further response-topic correlation defect has been reproduced offline and is
-under repair. A simple topic-equality candidate is withheld because authentication
-uses a separate response topic. It is not counted as fixed; compatibility and
-adversarial coverage remain required before publication of its repair.
+- [OW-2026-005](../findings/OW-2026-005.md), medium: an encrypted response on
+  another topic could consume a pending request with the same ID. The identical
+  four-case corpus has two failures before repair and four passes after repair.
+  Eight additional tests cover separate authentication topics, persistence,
+  legacy records and routing-field injection. Old pending Notify handshakes
+  remain an unverified boundary of that unused product; no real peer test is claimed.
 
 Original findings, failed runs and retests remain available. No finding is erased
 or downgraded merely to produce a passing summary.
 
 ## Current-source local validation
+
+[Results](../evidence/response-topic/results.json),
+[identical-corpus reproduction](../evidence/response-topic/reproduction/results.json),
+and [published hashes](../evidence/response-topic/manifest.json) identify
+`e352f56d0fb3be035c3600e646e3f9133adb9ef4`:
+
+- Cross-topic response corpus: two expected baseline failures; four fixed passes.
+- Eight new routing/restart/legacy/injection checks pass.
+- Full SDK: 35 passed, one intentional skip. The skipped case passes separately.
+- Diagnostics: 118 passed, two explicit skips, zero failures.
+- Generic iOS Release compilation passed without signing, using an isolated
+  incremental cache; no source changes occurred during that build.
+- Source-boundary validation, root secret scan and diagnostic coverage pass.
+
+The reply-topic field is local routing metadata, excluded from JSON-RPC. Legacy
+ordinary records decode unchanged; legacy authentication records recover their
+expected topic from the stored requester public key. No wallet storage identity,
+transaction encoding or signing secret was migrated. The full current-source
+GitHub matrix remains incomplete, and no simulator or actual peer was used.
+
+## Preserved f506dd8 local validation
 
 [OW-2026-004 evidence](../evidence/relay-envelope/results.json), the
 [reproduction](../evidence/relay-envelope/reproduction/results.json), and its

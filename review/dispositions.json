@@ -437,11 +437,11 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectNetworking/NetworkingInteractor.swift": {
-    "sha256": "c324f2cd432000b83a1d868aeb10efd092dd12c4dd6ca62413ab86ba14b000e8",
+    "sha256": "96473191026bf009f2932af9646b34ffece5a9c07668d199a7837d57693d6144",
     "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md",
-      "findings/OW-2026-004.md"
+      "findings/OW-2026-005.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkEnvelopesDispatcher.swift": {
@@ -476,11 +476,11 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistory.swift": {
-    "sha256": "f53797f92d658aff1127460ba56341ae19b53c07eb7eabe869c18b647ef61efb",
+    "sha256": "e340e237cb7dd083f86f69285c293a28c3384dc81b2f45d0308c103bc6d4c24b",
     "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md",
-      "findings/OW-2026-004.md"
+      "findings/OW-2026-005.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistoryFactory.swift": {
@@ -497,6 +497,102 @@
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-004.md"
+    ]
+  },
+  "Vendor/Reown/Sources/JSONRPC/RPCRequest.swift": {
+    "sha256": "3166cb35e9fdea13bbe32f101bb5ce002260ee3989e5b076bed5539748878dc7",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/JSONRPC/RPCID.swift": {
+    "sha256": "b40273fc8ce01680eeeb62505cb7b44a3b2631f5fba24a2f56413eb17745d892",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/Services/App/SessionAuthRequestService.swift": {
+    "sha256": "2fe8ab719deda44482629d5f7b5a44fa8dcd5384563e031838c5699dde403822",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkAuthRequester.swift": {
+    "sha256": "4adda8c3e6c4be52db178ae642af1e00744ca19d1a37c19d8ead3864a226d84d",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/WalletErrorResponder.swift": {
+    "sha256": "2deda04574949e1dd62c891fe6d42c75e4e7f20d041fb3b67512d3bfc14cbb6a",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/Types/ProtocolRPCParams/SessionAuthenticateRequestParams.swift": {
+    "sha256": "0ffef25d1c6ffb1d9f79c12b35e2ba9dfef16bdb3d04de63846259fdb36e359d",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectUtils/KeyValueStorage.swift": {
+    "sha256": "dbfe9a926c908e0b244e04361b5028f406d1a2ffe5da641b36f29e8a4a8ad5af",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectUtils/CodableStore.swift": {
+    "sha256": "ff26584271c607a66339fd82996040dda89b09cab721a0e48a68f00b3c6e3f3c",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Tools/WalletConnectSDKValidation/ResponseTopicAuthenticationTests.swift": {
+    "sha256": "3ed82a5529029efea58694c4a2f862a2b3991cc45fa0acdbe524260692b19467",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Tools/WalletConnectSDKValidation/ResponseTopicCompatibilityTests.swift": {
+    "sha256": "b1f833c55d85f55722d9775bf5650b69389594203cb4e521e50da2e3bd10337d",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectNotify/Client/Wallet/ProtocolEngine/wc_pushSubscribe/NotifySubscribeRequester.swift": {
+    "sha256": "3d027e812349001cb90db6061fb661c8c2fcd6a5e43c5868347db448bd0a63fd",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectNotify/Client/Wallet/ProtocolEngine/wc_notifyWatchSubscriptions/NotifyWatchSubscriptionsRequester.swift": {
+    "sha256": "c8e973d1de76f191cdc68a74c1f41a1ee0b274f5618fe004e08f386ce9416009",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-005.md"
     ]
   }
 }

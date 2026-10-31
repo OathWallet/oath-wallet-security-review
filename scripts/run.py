@@ -71,7 +71,7 @@ def main():
     log.write_text(text)
     sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES else None
     if sdk_cases is not None:
-        minimum = 23 if a.check == 'walletconnect-sdk' else 1
+        minimum = 35 if a.check == 'walletconnect-sdk' else 1
         if sdk_cases['passed'] < minimum or sdk_cases['failed']:
             code = code or 1
     summaries = [line for line in text.splitlines() if re.search(r'XCTest:|Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]

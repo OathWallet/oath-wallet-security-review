@@ -33,6 +33,7 @@ python3 scripts/run.py .work/source OathAnkr
 python3 scripts/run.py .work/source OathAezeed
 python3 scripts/run.py .work/source OathWalletHandoff
 python3 scripts/relay-envelope-check.py .work/source --output /tmp/relay-evidence
+python3 scripts/response-topic-check.py .work/source --output /tmp/topic-evidence
 python3 scripts/run.py .work/source walletconnect-sdk
 python3 scripts/run.py .work/source walletconnect-verify
 python3 scripts/run.py .work/source security
@@ -71,7 +72,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress4)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress5)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
