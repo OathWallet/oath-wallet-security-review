@@ -7,9 +7,10 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current tested source: **`f23413c848d202c2b3c7061bdb349e07144ab0a2`**,
-merged in [application PR 3](https://github.com/devdasx/oath-wallet/pull/3)
-at `82f5254cbfac195735aa938d055ff05ea4715cec`. These are public-source repairs;
+Current review target: **`f506dd8b820476296a6348c0ccbbdc42164c21f5`**.
+Merged in [application PR 4](https://github.com/devdasx/oath-wallet/pull/4),
+merge `34cda6f53099c6d6da49018f7dd28e6e0b3c37a7`. Publication and CI evidence
+for this target are recorded in `scope/source.json`. These are public-source repairs;
 no App Store upload or submission was performed. Later source revisions do not
 automatically inherit these results.
 
@@ -21,7 +22,7 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,635 files: 37 reviewed, 2 partially reviewed, 4596 outstanding. The Wallet Core upstream
+The application ledger contains 4,636 files: 67 reviewed, 3 partially reviewed, 4,566 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
 outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -43,12 +44,50 @@ convert unread code into reviewed code. See the machine-readable ledgers under
   public account-policy adapters were absent. Fixed with mocked chain-ID and policy
   tests. No direct app caller or fund-loss exploit was established.
 
+- [OW-2026-004](../findings/OW-2026-004.md), medium: plaintext type-2 envelopes
+  reached the encrypted relay request dispatcher without a topic key. The same
+  four-case regression reports two failures before repair and zero after repair.
+  Valid encrypted type-0/type-1 messages still dispatch; tampering is rejected.
+  No end-to-end signing bypass or fund loss is demonstrated.
+
+A further response-topic correlation defect has been reproduced offline and is
+under repair. A simple topic-equality candidate is withheld because authentication
+uses a separate response topic. It is not counted as fixed; compatibility and
+adversarial coverage remain required before publication of its repair.
+
 Original findings, failed runs and retests remain available. No finding is erased
 or downgraded merely to produce a passing summary.
 
-## Validation on the current source commit
+## Current-source local validation
 
-[Exact results](../evidence/diagnostic-repair-results.json) and per-case logs:
+[OW-2026-004 evidence](../evidence/relay-envelope/results.json), the
+[reproduction](../evidence/relay-envelope/reproduction/results.json), and its
+[hash manifest](../evidence/relay-envelope/manifest.json) identify source
+`f506dd8b820476296a6348c0ccbbdc42164c21f5`:
+
+- Four relay boundary regressions: two expected baseline failures, four fixed passes.
+- Full SDK host tests: 23 passed, one intentional skip. The skipped case passes separately.
+- Diagnostics: 118 passed, two explicit skips, zero failures.
+- Stable-source generic iOS Release compilation passed without signing.
+- Public-source boundary, root secret scan and diagnostics coverage passed.
+
+One runner attempt undercounted a case because a known SwiftPM warning was
+interleaved in a test-result line; its failure is preserved alongside the tested
+parser repair and later successful run. A build overlapping an early reproduction
+is explicitly excluded as final-source identity evidence; the subsequent stable
+build is used. The current full GitHub matrix is not yet complete.
+
+The earlier d2fccbe8 CI run [41241757605](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41241757605)
+finished with 31 successful jobs and three failures: the retained raw module
+advisory scan, the subsequently corrected OathAnkr test expectations/timeout, and
+a Sui host job whose detailed artifact failed to upload (ENOTFOUND). A subsequent
+local Sui check passed nine cases on f23413c; the CI command failure's cause is
+not established. These are not silently converted to successful CI outcomes.
+
+## Preserved validation on the previous source commit
+
+[Exact results](../evidence/diagnostic-repair-results.json) and per-case logs for
+`f23413c848d202c2b3c7061bdb349e07144ab0a2` (not relabeled as current-target results):
 
 - OathAnkr host package: **1,208 passed, 194 explicitly skipped, zero failed**.
 - OathDiagnostics host package: **118 passed, 2 explicitly skipped, zero failed**.
@@ -67,8 +106,8 @@ case exceeded the audit runner's 120-second limit; its failed log is preserved.
 
 Earlier commits have additional host and GitHub evidence, including parser,
 backup, database, authentication, lifecycle, signing and security checks. Those
-passes are **not relabeled as final-commit passes**. The new full GitHub matrix
-must independently run on the current pin; queued or cancelled jobs are not passes.
+passes are **not relabeled as final-commit passes**. Every new full GitHub matrix
+must independently run on its exact pin; queued or cancelled jobs are not passes.
 The required final matrix is not yet complete. Each run records its real toolchain.
 
 ## Dependency evidence

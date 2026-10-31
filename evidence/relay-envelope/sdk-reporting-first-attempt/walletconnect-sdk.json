@@ -1,0 +1,35 @@
+{
+  "check": "walletconnect-sdk",
+  "source_commit": "f506dd8b820476296a6348c0ccbbdc42164c21f5",
+  "command": [
+    "python3",
+    "Tools/CheckWalletConnectSDK.py",
+    "--build-system",
+    "native"
+  ],
+  "status": "failed",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 9.89,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds",
+    "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.068 (0.068) seconds",
+    "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+    "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.159 (0.159) seconds",
+    "<TEMP>/T/oath-sdk-validation-y8mim702/Tests/SDKTests/VerifyAbsenceTests.swift:24: -[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure] : Test skipped - Fresh process for production diagnostics reporter",
+    "Test Case '-[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure]' skipped (0.001 seconds).",
+    "\t Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+    "\t Executed 24 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.234 (0.235) seconds",
+    "\t Executed 24 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.234 (0.236) seconds",
+    "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "159434b1ee31518238b6f05dab994110adc7d705b0fd52232cc7ba82b122528a",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xctest_cases": {
+    "passed": 22,
+    "skipped": 1,
+    "failed": 0
+  }
+}

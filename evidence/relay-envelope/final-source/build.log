@@ -1,0 +1,401 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project OathAtmosphere.xcodeproj -scheme OathAtmosphere -configuration Release -destination generic/platform=iOS -derivedDataPath <SCRATCH> CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  OathDatabase: <SOURCE>/Packages/OathDatabase
+  SwiftImageReadWrite: https://github.com/dagronf/SwiftImageReadWrite @ 1.1.6
+  QRCode: https://github.com/WalletConnect/QRCode @ 14.3.1
+  OathBitcoin: <SOURCE>/Packages/OathBitcoin
+  reown: <SOURCE>/Vendor/Reown
+  stellarsdk: https://github.com/Soneso/stellar-ios-mac-sdk.git @ 3.12.0
+  OathSecp256k1: <SOURCE>/Packages/OathSecp256k1
+  OathCloudBackup: <SOURCE>/Packages/OathCloudBackup
+  SwiftDocCPlugin: https://github.com/apple/swift-docc-plugin @ 1.4.5
+  GRDB: https://github.com/groue/GRDB.swift @ 533286e
+  OathNativeLock: <SOURCE>/Packages/OathNativeLock
+  swift-qrcode-generator: https://github.com/dagronf/swift-qrcode-generator @ 1.0.3
+  OathExchangeRates: <SOURCE>/Packages/OathExchangeRates
+  OathAezeed: <SOURCE>/Packages/OathAezeed
+  OathTokenImages: <SOURCE>/Packages/OathTokenImages
+  CoinbaseWalletSDK: https://github.com/MobileWalletProtocol/wallet-mobile-sdk @ 1.1.2
+  OathAnkr: <SOURCE>/Packages/OathAnkr @ local
+  OathWalletHandoff: <SOURCE>/Packages/OathWalletHandoff
+  SymbolKit: https://github.com/swiftlang/swift-docc-symbolkit @ 1.0.0
+  Yttrium: https://github.com/reown-com/yttrium @ 0.10.59
+  WalletCore: <SOURCE>/Packages/WalletCore
+  OathMarketData: <SOURCE>/Packages/OathMarketData
+  OathDiagnostics: <SOURCE>/Packages/OathDiagnostics
+  SwiftDraw: https://github.com/swhitty/SwiftDraw.git @ 0.29.0
+  OathNativeRefresh: <SOURCE>/Packages/OathNativeRefresh
+  swift-secp256k1: https://github.com/21-DOT-DEV/swift-secp256k1 @ 0.23.2
+  bdk-swift: https://github.com/bitcoindevkit/bdk-swift @ 3.1.1
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (68 targets)
+    Target 'OathAtmosphere' in project 'OathAtmosphere'
+        ➜ Explicit dependency on target 'OathSecp256k1-product' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathBitcoin-product' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'WalletConnect-product' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking-product' in project 'reown'
+        ➜ Explicit dependency on target 'OathAezeed-product' in project 'OathAezeed'
+        ➜ Explicit dependency on target 'OathTokenImages-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathMarketData-product' in project 'OathMarketData'
+        ➜ Explicit dependency on target 'OathExchangeRates-product' in project 'OathExchangeRates'
+        ➜ Explicit dependency on target 'OathCloudBackup-product' in project 'OathCloudBackup'
+        ➜ Explicit dependency on target 'OathWalletHandoff-product' in project 'OathWalletHandoff'
+        ➜ Explicit dependency on target 'OathNativeLock-product' in project 'OathNativeLock'
+        ➜ Explicit dependency on target 'OathDatabase-product' in project 'OathDatabase'
+        ➜ Explicit dependency on target 'OathNativeRefresh-product' in project 'OathNativeRefresh'
+        ➜ Explicit dependency on target 'WalletCore-product' in project 'WalletCore'
+        ➜ Explicit dependency on target 'WalletCoreSwiftProtobuf-product' in project 'WalletCore'
+    Target 'WalletCoreSwiftProtobuf-product' in project 'WalletCore' (no dependencies)
+    Target 'WalletCore-product' in project 'WalletCore' (no dependencies)
+    Target 'OathNativeRefresh-product' in project 'OathNativeRefresh'
+        ➜ Explicit dependency on target 'OathNativeRefresh' in project 'OathNativeRefresh'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+    Target 'OathNativeRefresh' in project 'OathNativeRefresh'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+    Target 'OathNativeLock-product' in project 'OathNativeLock'
+        ➜ Explicit dependency on target 'OathNativeLock' in project 'OathNativeLock'
+    Target 'OathNativeLock' in project 'OathNativeLock' (no dependencies)
+    Target 'OathWalletHandoff-product' in project 'OathWalletHandoff'
+        ➜ Explicit dependency on target 'OathWalletHandoff' in project 'OathWalletHandoff'
+    Target 'OathWalletHandoff' in project 'OathWalletHandoff' (no dependencies)
+    Target 'OathCloudBackup-product' in project 'OathCloudBackup'
+        ➜ Explicit dependency on target 'OathCloudBackup' in project 'OathCloudBackup'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+    Target 'OathCloudBackup' in project 'OathCloudBackup'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+    Target 'OathExchangeRates-product' in project 'OathExchangeRates'
+        ➜ Explicit dependency on target 'OathExchangeRates' in project 'OathExchangeRates'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDatabase-product' in project 'OathDatabase'
+    Target 'OathExchangeRates' in project 'OathExchangeRates'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDatabase-product' in project 'OathDatabase'
+    Target 'OathMarketData-product' in project 'OathMarketData'
+        ➜ Explicit dependency on target 'OathMarketData' in project 'OathMarketData'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDatabase-product' in project 'OathDatabase'
+        ➜ Explicit dependency on target 'OathAnkr-product' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathTokenImages-product' in project 'OathTokenImages'
+    Target 'OathMarketData' in project 'OathMarketData'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDatabase-product' in project 'OathDatabase'
+        ➜ Explicit dependency on target 'OathAnkr-product' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathTokenImages-product' in project 'OathTokenImages'
+    Target 'OathDatabase-product' in project 'OathDatabase'
+        ➜ Explicit dependency on target 'OathDatabase' in project 'OathDatabase'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathBitcoin-product' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+        ➜ Explicit dependency on target 'OathAnkr-product' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathArtworkSource-product' in project 'OathTokenImages'
+    Target 'OathDatabase' in project 'OathDatabase'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathBitcoin-product' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+        ➜ Explicit dependency on target 'OathAnkr-product' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathArtworkSource-product' in project 'OathTokenImages'
+    Target 'OathAnkr-product' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathAnkr' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathAnkr_OathAnkr' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathSecp256k1-product' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'OathArtworkSource-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathTokenImages-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'stellarsdk-product' in project 'stellarsdk'
+    Target 'OathAnkr' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathAnkr_OathAnkr' in project 'OathAnkr'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathSecp256k1-product' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'OathArtworkSource-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathTokenImages-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'stellarsdk-product' in project 'stellarsdk'
+    Target 'stellarsdk-product' in project 'stellarsdk'
+        ➜ Explicit dependency on target 'stellarsdk' in project 'stellarsdk'
+        ➜ Explicit dependency on target 'ed25519C' in project 'stellarsdk'
+    Target 'stellarsdk' in project 'stellarsdk'
+        ➜ Explicit dependency on target 'ed25519C' in project 'stellarsdk'
+    Target 'ed25519C' in project 'stellarsdk' (no dependencies)
+    Target 'OathArtworkSource-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathArtworkSource' in project 'OathTokenImages'
+    Target 'OathAnkr_OathAnkr' in project 'OathAnkr' (no dependencies)
+    Target 'GRDB-product' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB_GRDB' in project 'GRDB'
+    Target 'GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB_GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDBSQLite' in project 'GRDB'
+    Target 'GRDBSQLite' in project 'GRDB' (no dependencies)
+    Target 'GRDB_GRDB' in project 'GRDB' (no dependencies)
+    Target 'OathTokenImages-product' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathTokenImages' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathArtworkSource' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'SwiftDraw-product' in project 'SwiftDraw'
+    Target 'OathTokenImages' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathArtworkSource' in project 'OathTokenImages'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'SwiftDraw-product' in project 'SwiftDraw'
+    Target 'SwiftDraw-product' in project 'SwiftDraw'
+        ➜ Explicit dependency on target 'SwiftDraw' in project 'SwiftDraw'
+        ➜ Explicit dependency on target 'SwiftDrawDOM' in project 'SwiftDraw'
+    Target 'SwiftDraw' in project 'SwiftDraw'
+        ➜ Explicit dependency on target 'SwiftDrawDOM' in project 'SwiftDraw'
+    Target 'SwiftDrawDOM' in project 'SwiftDraw' (no dependencies)
+    Target 'OathArtworkSource' in project 'OathTokenImages' (no dependencies)
+    Target 'OathAezeed-product' in project 'OathAezeed'
+        ➜ Explicit dependency on target 'OathAezeed' in project 'OathAezeed'
+        ➜ Explicit dependency on target 'OathAezeed_OathAezeed' in project 'OathAezeed'
+    Target 'OathAezeed' in project 'OathAezeed'
+        ➜ Explicit dependency on target 'OathAezeed_OathAezeed' in project 'OathAezeed'
+    Target 'OathAezeed_OathAezeed' in project 'OathAezeed' (no dependencies)
+    Target 'WalletConnectNetworking-product' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+    Target 'WalletConnect-product' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectSign' in project 'reown'
+        ➜ Explicit dependency on target 'reown_WalletConnectSign' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+        ➜ Explicit dependency on target 'Events' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectPairing' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectVerify' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectSigner' in project 'reown'
+    Target 'WalletConnectSign' in project 'reown'
+        ➜ Explicit dependency on target 'reown_WalletConnectSign' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+        ➜ Explicit dependency on target 'Events' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectPairing' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectVerify' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectSigner' in project 'reown'
+    Target 'WalletConnectSigner' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+    Target 'WalletConnectVerify' in project 'reown'
+        ➜ Explicit dependency on target 'reown_WalletConnectVerify' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+    Target 'reown_WalletConnectVerify' in project 'reown' (no dependencies)
+    Target 'WalletConnectPairing' in project 'reown'
+        ➜ Explicit dependency on target 'reown_WalletConnectPairing' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+        ➜ Explicit dependency on target 'Events' in project 'reown'
+    Target 'reown_WalletConnectPairing' in project 'reown' (no dependencies)
+    Target 'Events' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectNetworking' in project 'reown'
+    Target 'WalletConnectNetworking' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectRelay' in project 'reown'
+    Target 'WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'reown_WalletConnectRelay' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+    Target 'reown_WalletConnectRelay' in project 'reown' (no dependencies)
+    Target 'WalletConnectJWT' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectKMS' in project 'reown'
+    Target 'WalletConnectKMS' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'WalletConnectUtils' in project 'reown'
+    Target 'WalletConnectUtils' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+        ➜ Explicit dependency on target 'JSONRPC' in project 'reown'
+    Target 'JSONRPC' in project 'reown'
+        ➜ Explicit dependency on target 'Commons' in project 'reown'
+    Target 'Commons' in project 'reown' (no dependencies)
+    Target 'HTTPClient' in project 'reown'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+    Target 'reown_WalletConnectSign' in project 'reown' (no dependencies)
+    Target 'OathBitcoin-product' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'OathBitcoin' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'OathBitcoin_OathBitcoin' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathSecp256k1-product' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'BitcoinDevKit-product' in project 'bdk-swift'
+    Target 'OathBitcoin' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'OathBitcoin_OathBitcoin' in project 'OathBitcoin'
+        ➜ Explicit dependency on target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathSecp256k1-product' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'BitcoinDevKit-product' in project 'bdk-swift'
+    Target 'BitcoinDevKit-product' in project 'bdk-swift'
+        ➜ Explicit dependency on target 'BitcoinDevKit' in project 'bdk-swift'
+    Target 'BitcoinDevKit' in project 'bdk-swift' (no dependencies)
+    Target 'OathBitcoin_OathBitcoin' in project 'OathBitcoin' (no dependencies)
+    Target 'OathDiagnostics-product' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDiagnostics' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDiagnostics_OathDiagnostics' in project 'OathDiagnostics'
+    Target 'OathDiagnostics' in project 'OathDiagnostics'
+        ➜ Explicit dependency on target 'OathDiagnostics_OathDiagnostics' in project 'OathDiagnostics'
+    Target 'OathDiagnostics_OathDiagnostics' in project 'OathDiagnostics' (no dependencies)
+    Target 'OathSecp256k1-product' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'OathSecp256k1' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'libsecp256k1-product' in project 'swift-secp256k1'
+    Target 'OathSecp256k1' in project 'OathSecp256k1'
+        ➜ Explicit dependency on target 'libsecp256k1-product' in project 'swift-secp256k1'
+    Target 'libsecp256k1-product' in project 'swift-secp256k1'
+        ➜ Explicit dependency on target 'libsecp256k1' in project 'swift-secp256k1'
+    Target 'libsecp256k1' in project 'swift-secp256k1' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk <SCRATCH>/SDKStatCaches.noindex/iphoneos27.0-24A430-e829b21a6f8c9b70876ba0858053c0446c78b3cbc238196c85e1bf6c792c5915.sdkstatcache
+    cd <SOURCE>/OathAtmosphere.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -o <SCRATCH>/SDKStatCaches.noindex/iphoneos27.0-24A430-e829b21a6f8c9b70876ba0858053c0446c78b3cbc238196c85e1bf6c792c5915.sdkstatcache
+
+note: Run script build phase 'Copy local token RPC configuration' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'OathAtmosphere' from project 'OathAtmosphere')
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/OathBitcoin.framework <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathBitcoin.framework (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -bitcode-strip all -bitcode-strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip -resolve-src-symlinks -remove-static-executable <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathBitcoin.framework <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathBitcoin.framework/OathBitcoin -r -o <SCRATCH>/Build/Products/Release-iphoneos/Oath Wallet.app/Frameworks/OathBitcoin.framework/OathBitcoin
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/OathDiagnostics.framework <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathDiagnostics.framework (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -bitcode-strip all -bitcode-strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip -resolve-src-symlinks -remove-static-executable <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathDiagnostics.framework <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathDiagnostics.framework/OathDiagnostics -r -o <SCRATCH>/Build/Products/Release-iphoneos/Oath Wallet.app/Frameworks/OathDiagnostics.framework/OathDiagnostics
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/OathSecp256k1.framework <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathSecp256k1.framework (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -bitcode-strip all -bitcode-strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip -resolve-src-symlinks -remove-static-executable <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathSecp256k1.framework <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathSecp256k1.framework/OathSecp256k1 -r -o <SCRATCH>/Build/Products/Release-iphoneos/Oath Wallet.app/Frameworks/OathSecp256k1.framework/OathSecp256k1
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/GRDB_GRDB.bundle <SCRATCH>/Build/Products/Release-iphoneos/GRDB_GRDB.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/GRDB_GRDB.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+PhaseScriptExecution Copy\ local\ token\ RPC\ configuration <SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/Script-3A5091B2C73B41B4DDD9B213.sh (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    /usr/bin/sandbox-exec -D SCRIPT_OUTPUT_FILE_0\=<SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/TokenRPC.plist -D SCRIPT_INPUT_FILE_0\=<SOURCE>/OathApp/Private/TokenRPC.plist -D SCRIPT_INPUT_FILE_1\=<SOURCE>/Tools/CopyTokenRPC.sh -D SCRIPT_INPUT_FILE_2\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/Script-3A5091B2C73B41B4DDD9B213.sh -D SCRIPT_INPUT_ANCESTOR_0\=/ -D SCRIPT_INPUT_ANCESTOR_1\=/tmp -D SCRIPT_INPUT_ANCESTOR_2\=<SOURCE> -D SCRIPT_INPUT_ANCESTOR_3\=<SOURCE>/OathApp -D SCRIPT_INPUT_ANCESTOR_4\=<SOURCE>/OathApp/Private -D SCRIPT_INPUT_ANCESTOR_5\=<SOURCE>/Tools -D SCRIPT_INPUT_ANCESTOR_6\=/var -D SCRIPT_INPUT_ANCESTOR_7\=/var/folders -D SCRIPT_INPUT_ANCESTOR_8\=/var/folders/3r -D SCRIPT_INPUT_ANCESTOR_9\=<TEMP> -D SCRIPT_INPUT_ANCESTOR_10\=<TEMP>/T -D SCRIPT_INPUT_ANCESTOR_11\=<TEMP>/T/oath-security-review-builds -D SCRIPT_INPUT_ANCESTOR_12\=<TEMP>/T/oath-security-review-builds/f506dd8b820476296a6348c0ccbbdc42164c21f5 -D SCRIPT_INPUT_ANCESTOR_13\=<SCRATCH> -D SCRIPT_INPUT_ANCESTOR_14\=<SCRATCH>/Build -D SCRIPT_INPUT_ANCESTOR_15\=<SCRATCH>/Build/Intermediates.noindex -D SCRIPT_INPUT_ANCESTOR_16\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build -D SCRIPT_INPUT_ANCESTOR_17\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos -D SCRIPT_INPUT_ANCESTOR_18\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build -D SCRIPT_OUTPUT_ANCESTOR_0\=/ -D SCRIPT_OUTPUT_ANCESTOR_1\=/var -D SCRIPT_OUTPUT_ANCESTOR_2\=/var/folders -D SCRIPT_OUTPUT_ANCESTOR_3\=/var/folders/3r -D SCRIPT_OUTPUT_ANCESTOR_4\=<TEMP> -D SCRIPT_OUTPUT_ANCESTOR_5\=<TEMP>/T -D SCRIPT_OUTPUT_ANCESTOR_6\=<TEMP>/T/oath-security-review-builds -D SCRIPT_OUTPUT_ANCESTOR_7\=<TEMP>/T/oath-security-review-builds/f506dd8b820476296a6348c0ccbbdc42164c21f5 -D SCRIPT_OUTPUT_ANCESTOR_8\=<SCRATCH> -D SCRIPT_OUTPUT_ANCESTOR_9\=<SCRATCH>/Build -D SCRIPT_OUTPUT_ANCESTOR_10\=<SCRATCH>/Build/Products -D SCRIPT_OUTPUT_ANCESTOR_11\=<SCRATCH>/Build/Products/Release-iphoneos -D SCRIPT_OUTPUT_ANCESTOR_12\=<SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app -D SRCROOT\=<SOURCE> -D PROJECT_DIR\=<SOURCE> -D OBJROOT\=<SCRATCH>/Build/Intermediates.noindex -D SYMROOT\=<SCRATCH>/Build/Products -D DSTROOT\=/tmp/OathAtmosphere.dst -D SHARED_PRECOMPS_DIR\=<SCRATCH>/Build/Intermediates.noindex/PrecompiledHeaders -D CACHE_ROOT\=<TEMP>/C/com.apple.DeveloperTools/27.0-27A266a/Xcode -D CONFIGURATION_BUILD_DIR\=<SCRATCH>/Build/Products/Release-iphoneos -D CONFIGURATION_TEMP_DIR\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos -D LOCROOT\=<SOURCE> -D LOCSYMROOT\=<SOURCE> -D INDEX_PRECOMPS_DIR\=<SCRATCH>/Index.noindex/PrecompiledHeaders -D INDEX_DATA_STORE_DIR\=<SCRATCH>/Index.noindex/DataStore -D TEMP_DIR\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build -D TARGET_TEMP_DIR\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build -D DERIVED_FILE_DIR\=<SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/DerivedSources -f <SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/cfa82b97285e23838af6842daf15ee85.sb /bin/sh -c <SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/Script-3A5091B2C73B41B4DDD9B213.sh
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectSign.bundle <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectSign.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectSign.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectRelay.bundle <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectRelay.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectRelay.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectPairing.bundle <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectPairing.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectPairing.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathDiagnostics_OathDiagnostics.bundle <SCRATCH>/Build/Products/Release-iphoneos/OathDiagnostics_OathDiagnostics.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/OathDiagnostics_OathDiagnostics.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathBitcoin_OathBitcoin.bundle <SCRATCH>/Build/Products/Release-iphoneos/OathBitcoin_OathBitcoin.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/OathBitcoin_OathBitcoin.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectVerify.bundle <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectVerify.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/reown_WalletConnectVerify.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathAnkr_OathAnkr.bundle <SCRATCH>/Build/Products/Release-iphoneos/OathAnkr_OathAnkr.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/OathAnkr_OathAnkr.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+Copy <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathAezeed_OathAezeed.bundle <SCRATCH>/Build/Products/Release-iphoneos/OathAezeed_OathAezeed.bundle (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks <SCRATCH>/Build/Products/Release-iphoneos/OathAezeed_OathAezeed.bundle <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app
+
+ProcessInfoPlistFile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Info.plist <SOURCE>/OathApp/Info.plist (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-infoPlistUtility <SOURCE>/OathApp/Info.plist -producttype com.apple.product-type.application -genpkginfo <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile <SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/assetcatalog_generated_info.plist -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/OathBitcoin.framework -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/OathDiagnostics.framework -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/OathSecp256k1.framework -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/WalletCore.framework -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks/WalletCoreSwiftProtobuf.framework -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/GRDB_GRDB.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathAezeed_OathAezeed.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathAnkr_OathAnkr.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathBitcoin_OathBitcoin.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathDiagnostics_OathDiagnostics.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectPairing.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectRelay.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectSign.bundle -scanforprivacyfile <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/reown_WalletConnectVerify.bundle -requiredArchitecture arm64 -o <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Info.plist
+
+CopySwiftLibs <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app (in target 'OathAtmosphere' from project 'OathAtmosphere')
+    cd <SOURCE>
+    builtin-swiftStdLibTool --copy --verbose --scan-executable <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/OathAtmosphere --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/PlugIns --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/SystemExtensions --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Extensions --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathSecp256k1.framework --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathDiagnostics.framework --scan-folder <SCRATCH>/Build/Products/Release-iphoneos/PackageFrameworks/OathBitcoin.framework --platform iphoneos --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v27.1.266.1.nlrC01/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination <SCRATCH>/Build/Products/Release-iphoneos/Oath\ Wallet.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info <SCRATCH>/Build/Intermediates.noindex/OathAtmosphere.build/Release-iphoneos/OathAtmosphere.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+PruneExplicitPrecompiledModules <SCRATCH>/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules <SCRATCH>/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules <SCRATCH>/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+** BUILD SUCCEEDED **
+

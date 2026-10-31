@@ -1,0 +1,5 @@
+The first SDK runner attempt recorded a failure despite the native XCTest runner reporting 23 passed and one skip. A SwiftPM deprecation warning was interleaved inside one buffered case line. The audit parser counted 22 passes and failed closed. The runner now removes only that exact known warning before counting case outcomes; a regression test retains unknown interruptions as failures to count. The raw log and original failure result remain here. A later run is recorded separately.
+
+The two previous-f234 directories belong to source f23413c848d202c2b3c7061bdb349e07144ab0a2, not the new fix. The local Sui retest passed nine host checks after a CI failure whose inner log could not be recovered because the artifact upload reported ENOTFOUND. This does not establish the cause of that CI test failure.
+
+The first local generic build overlapped an early reproduction that temporarily restored the original ingress source in the isolated checkout. That build cannot establish the final tree's identity, even if it succeeds. A subsequent stable-source invocation is required. The reproduction runner now uses an independent temporary source copy.

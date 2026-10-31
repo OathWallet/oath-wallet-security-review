@@ -256,3 +256,79 @@ partially reviewed. Tag comparison accumulates differences before branching;
 this source observation is not a measured timing guarantee. Existing upstream
 AEZ, BStream, scrypt, PBKDF2 and Blake2b tests passed with Go's race detector.
 Those test passes do not change unread files' dispositions.
+
+
+## Additional WalletConnect and KMS review
+
+At `f23413c848d202c2b3c7061bdb349e07144ab0a2`, read complete app files
+`OathWalletConnectConsent`, `Policy`, `Connections`, `Service`, `Transport`,
+`Message`, `RequestViews` and `TypedReview`. The service was traced through
+all chain preparation/signing/recovery extensions, not just its EVM switch.
+
+Proposal approval reloads wallet ownership and namespaces, blocks invalid/scam
+verification and requires acknowledgment for unknown identity. Namespace methods
+are restricted per chain family after the SDK's global builder. Signing rechecks
+request/session/account ownership, expiry and current pending request across
+awaits; signed broadcast recovery uses journal identity/fingerprint rather than
+creating a new transaction. Disconnect removes the wallet mapping before relay
+I/O. Presentation ownership and cancellation generations prevent a stale review
+from acquiring a new request. This does not prove every downstream encoder or
+provider preflight, nor every interleaving. Existing host harnesses replace some
+vault/SDK/OS boundaries; runtime consent behavior was not exercised.
+
+Typed-data review explicitly warns when the signed domain has no chain binding;
+its detailed page renders the immutable signed fields. Ordinary message review
+has a bounded preview plus full-message navigation. Display-control handling and
+all localized renderings are not established by source inspection alone. The
+transport caps messages at 1 MiB and pending writes at 64, completes each write
+once under its lock, rejects stale task callbacks, and avoids logging peer close
+reasons. Cryptographic primitives are still separate dependency boundaries.
+
+Read complete vendored KMS files: `Envelope`, `Serializer`, `Serializing`,
+`ChaChaPolyCodec`, `KeyManagementService`, `AgreementKeys`, `AgreementCryptoKit`,
+`SharedSecret`, `SymmetricKey`, `KeychainStorage`, `KeychainService`, and
+`GroupKeychainStorage`; also `NetworkingClientFactory`, `ConsoleLogger` and
+`LoggingLevel`. CryptoKit supplies X25519, HKDF-SHA256 and authenticated ChaChaPoly.
+Type-1 derived-key persistence occurs after authenticated decoding. Apple
+Keychain items use AfterFirstUnlockThisDeviceOnly. This concerns relay/session
+keys, not the application's wallet-secret vault. Read/migration errors, teardown,
+shared-access-group scope and Apple implementation behavior remain separate
+integration boundaries. There is no complete memory-erasure or constant-time
+proof here.
+
+The configured networking and serializer loggers are off, with no app caller
+found enabling their debug logging. The SDK still has decrypted-payload debug
+logging branches; reading the default configuration does not prove those branches
+safe if another caller enables them. `NetworkingInteractor` was read only through
+construction/subscription and receive dispatch, and `LinkEnvelopesDispatcher`
+only through its first request path; both remain partially reviewed. Type-2
+unencrypted/link-mode separation requires further integration tracing.
+
+The existing SDK host harness compiled production modules and passed 19 cases,
+with one deliberate fresh-process diagnostics skip. Running that one case alone
+with its documented fixture flag passed. This is 20 distinct case passes across
+two processes, not an end-to-end relay test. An apparent empty-envelope bounds
+concern was checked against the production malformed-envelope test and a native
+Foundation probe: both rejected/handled it without a crash on this host. It is
+not recorded as a confirmed vulnerability; that host result does not establish
+behavior on every OS runtime.
+
+
+## WalletConnect relay ingress and session/history review
+
+Read the complete `NetworkingInteractor`, `SessionEngine`, `SessionRequestsProvider`,
+`InvalidRequestsSanitiser`, `RPCHistory`, and `RPCHistoryFactory` implementations,
+plus the new production-boundary regression fixture. Their ledger hashes identify
+exact inputs. OW-2026-004 records the confirmed unauthenticated type-2 dispatch
+and its tested fix; the earlier need to trace this path is now resolved as a
+finding, not a general clearance of WalletConnect.
+
+The session engine checks existing sessions, chain/method permissions and request
+expiry; delete processing relies on transport authentication. History stores
+requests by RPC ID and resolves responses by ID. Review identified a further
+question about response/topic correlation and same-method concurrent waiters;
+the cross-topic response consumption was reproduced with synthetic encrypted frames, but the repair remains open pending authentication-response topic compatibility tests. The same-method waiter concern remains unconfirmed.
+The request-provider debounce is wall-clock based and dispatches the oldest
+pending request. Runtime scheduling and downstream policy interactions still
+need adversarial tests. `reviewed` means the listed source was read; it does not
+mean no bugs or all runtime paths proven.

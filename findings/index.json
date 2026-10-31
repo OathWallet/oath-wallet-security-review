@@ -27,5 +27,15 @@
     "fix_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
     "retest_scope": "15 authority tests and 27 combined targeted checks; no direct application caller established",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/2"
+  },
+  {
+    "id": "OW-2026-004",
+    "severity": "medium",
+    "title": "Plaintext accepted at encrypted WalletConnect relay ingress",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-004.md",
+    "fix_commit": "f506dd8b820476296a6348c0ccbbdc42164c21f5",
+    "retest_scope": "Synthetic production relay dispatch: two baseline rejection failures; four repaired cases pass. No end-to-end session deletion, signing bypass or fund loss demonstrated.",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/4"
   }
 ]

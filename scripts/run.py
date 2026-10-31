@@ -7,14 +7,24 @@ from source_state import require_source_state
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff']
+SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
 MODES = ['envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
          'evm-send', 'solana-send', 'tron-send', 'xrpl-send', 'stellar-send',
          'aptos-send', 'sui-send', 'near-send', 'ton-send', 'thorchain-send', 'arc-send', 'permission-batch']
 
+def sdk_case_counts(text):
+    """Use individual XCTest outcomes, not the separate empty Swift Testing run."""
+    # SwiftPM can write this exact stderr warning in the middle of a buffered
+    # XCTest stdout line. Remove only that known diagnostic, including its
+    # newline, to reconstruct the original case line. Keep the raw log intact.
+    text = text.replace("warning: '--build-system native' has been deprecated and will be removed in a future release; please report an issue at https://github.com/swiftlang/swift-package-manager/issues if you are unable to adopt the default build system.\n", "")
+    states = re.findall(r"^Test Case .+ (passed|skipped|failed) \(", text, re.MULTILINE)
+    return {state: states.count(state) for state in ['passed', 'skipped', 'failed']}
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('source', type=Path)
-    p.add_argument('check', choices=PACKAGES + MODES + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
+    p.add_argument('check', choices=PACKAGES + MODES + SDK_MODES + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
     p.add_argument('--output', type=Path, default=ROOT/'evidence/local')
     a = p.parse_args()
     source, out = a.source.resolve(), a.output.resolve()
@@ -27,6 +37,13 @@ def main():
     env['OATH_VALIDATION_SCRATCH'] = str(scratch)
     if a.check in PACKAGES:
         command = ['python3',str(ROOT/'scripts/isolated_tests.py'),str(source),a.check,str(scratch)+'-native',str(out)]
+    elif a.check in SDK_MODES:
+        command = ['python3','Tools/CheckWalletConnectSDK.py','--build-system','native']
+        if a.check == 'walletconnect-verify':
+            # This enables only a URLProtocol fixture in its own process, never
+            # a production relay or the unrelated opt-in live test flags.
+            env['OATH_VERIFY_ABSENCE_TEST'] = '1'
+            command += ['--filter','VerifyAbsenceTests']
     elif a.check in MODES:
         command = ['python3','Tools/CheckMultiWallet.py','--'+a.check]
     elif a.check == 'build':
@@ -52,11 +69,17 @@ def main():
     text = log.read_text(errors='replace').replace('\x00', '<NUL>').replace(str(source), '<SOURCE>').replace(str(ROOT), '<AUDIT>')
     text = text.replace(str(scratch), '<SCRATCH>').replace(os.path.expanduser('~'), '<HOME>')
     log.write_text(text)
+    sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES else None
+    if sdk_cases is not None:
+        minimum = 23 if a.check == 'walletconnect-sdk' else 1
+        if sdk_cases['passed'] < minimum or sdk_cases['failed']:
+            code = code or 1
     summaries = [line for line in text.splitlines() if re.search(r'XCTest:|Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]
     result = dict(check=a.check,source_commit=sha,command=command,status='passed' if code==0 else 'failed',exit_code=code,
                   timed_out=timed_out,duration_seconds=round(time.time()-start,2),platform=platform.platform(),
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
                   runtime_scope='host' if a.check!='build' else 'compile-only',live_network_tests_enabled=False)
+    if sdk_cases is not None: result['xctest_cases'] = sdk_cases
     if a.check in PACKAGES:
         xml = out/(a.check+'.xml')
         if xml.exists():
@@ -76,6 +99,10 @@ def main():
     result['command']=[s.replace(str(source),'<SOURCE>').replace(str(scratch),'<SCRATCH>').replace(str(ROOT),'<AUDIT>') for s in command]
     (out/(a.check+'.json')).write_text(json.dumps(result,indent=2)+'\n')
     print(a.check, result['status'], result['duration_seconds'], 'seconds', flush=True)
+    if code != 0:
+        # Preserve a bounded sanitized failure excerpt in the Actions log even
+        # when a transient artifact-host failure prevents upload.
+        print('\n'.join(text.splitlines()[-60:]), flush=True)
     raise SystemExit(0 if code == 0 else 1)
 
 if __name__ == '__main__': main()
