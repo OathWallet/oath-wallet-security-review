@@ -1,0 +1,35 @@
+{
+  "kind": "validation-fixture-correction",
+  "baseline_source": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+  "fix_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+  "before_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41248923305",
+  "before_case": "SendStatusTrackingTests.testUpgradedDeadlineObservationTracksLeaseRetryAndSettlement",
+  "before_status": "failed",
+  "before_error": "invalidTransition",
+  "after_status": "passed",
+  "after_cases": 14,
+  "production_changes": false,
+  "scope": "Original CI failure retained; corrected scheduler fixture and deterministic stale-transition assertion; host only",
+  "files": {
+    "before-ci.log": "b323eedc83b1255d16f62fcf9b6c93fe2eb5ac91bbe6e3378ecec773b0f9e138",
+    "after-host.log.gz": "805b49ed3ee0feb0881e7824ad330fa5105eebd6e37575ed3c512198285ea10f",
+    "release-build.log.gz": "e8227b75a1e288495aeeea5e68409362eda4d6497f8322fd4723e0d7ae6738a1",
+    "public-validation.log.gz": "405538fbdfbde74ce4a287f1c013f4c19ef75387bbd21d3e7d95a9bcd5d7db5a",
+    "diagnostics-coverage.log.gz": "8c5808039737286297ee0bef2ed07ab1e6aca414091258a678aba8cdef8ff44b",
+    "secret-scan.log.gz": "499ceae8b3ac9484f81283189dec72b73053fdd07aef0646c3a7665101601527",
+    "diagnostics-host.log.gz": "710addc4ce1d56537bd33361e801e579835be69a7e50246031351e45c833152e"
+  },
+  "publication_checks": {
+    "generic_ios_release_build": "passed-unsigned",
+    "diagnostics": {
+      "passed": 118,
+      "skipped": 2,
+      "failed": 0
+    },
+    "public_validation": "passed-4639-files",
+    "diagnostics_coverage": "passed-713-catch-sites",
+    "gitleaks": "passed-no-matches"
+  },
+  "fix_pr": "https://github.com/devdasx/oath-wallet/pull/7",
+  "merge_commit": "89ca689a5af845943da0269e5c84ae16972eb657"
+}

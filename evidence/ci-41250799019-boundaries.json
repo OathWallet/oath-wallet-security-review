@@ -1,0 +1,73 @@
+{
+  "run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41250799019",
+  "workflow_commit": "5640e5082ac97bb68fdd7b6e24d0698d8f621bd3",
+  "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "relay-envelope",
+      "conclusion": "success"
+    },
+    {
+      "name": "inventory",
+      "conclusion": "success"
+    },
+    {
+      "name": "ton-properties",
+      "conclusion": "success"
+    },
+    {
+      "name": "parser",
+      "conclusion": "success"
+    },
+    {
+      "name": "host",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "upstream-entropy",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "aezeed-source",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "scanners",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "release-build",
+      "conclusion": "skipped"
+    }
+  ],
+  "result_records": [
+    {
+      "path": "ton-properties-evidence/ton-authorization.json",
+      "check": "ton-authorization",
+      "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+      "status": "passed",
+      "result_sha256": "a9e98c06a3cc9a104e6081d22dff9f3b968605bdddc9108eee5739deb183ae73",
+      "log_sha256_verified": true
+    },
+    {
+      "path": "ton-properties-evidence/ton-properties.json",
+      "check": "ton-properties",
+      "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+      "status": "passed",
+      "result_sha256": "91ac903d066d4bd9b4626ef7865014f45c5a662df8e0c843b0a646eff49b0a9c",
+      "log_sha256_verified": true
+    },
+    {
+      "path": "relay-envelope-evidence/uri-boundary/app-boundary.json",
+      "check": "pairing-link-boundary",
+      "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+      "status": "passed",
+      "result_sha256": "ee3186528d378d9baf6f79d5ab7fa557847f641ea62868ee2a3133df9f9b466e",
+      "log_sha256_verified": true
+    }
+  ],
+  "archive": "oath-audit-boundary-ci-durable.tar.gz",
+  "archive_sha256": "864b535ce73eb2466c966be33902393abb995ebd9d37214c6d4d5aac78bf417a",
+  "scope": "Boundary-only workflow; skipped full host matrix, Go/dependency scans, entropy and Release build are not passes."
+}

@@ -2923,5 +2923,100 @@
     "log_sha256": "3e3fb091da189c7fd1b73cfabc36ce65c7da62b03665a4aa267db55bc81157c8",
     "runtime_scope": "macOS host; production vault, journal and imported-key TON signer; original synthetic biometric/HD/network adapters; no device or blockchain",
     "evidence_path": "ton-authorization/pinned/ton-authorization.json"
+  },
+  {
+    "check": "solana-properties",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "tests_passed": 4,
+    "duration_seconds": 127.26,
+    "seed": "0x4f415448534f4c31",
+    "fixture_sha256": "faacdd0a4cdad801b70882395f4ee19a277633edb36b3f3305e4c75842738d73",
+    "vectors_sha256": "809744c46505a3c30ef0a9f93276956deca0983ea3ab12c5de5940abf7ce381e",
+    "transactions_sha256": "889500316616e244c5448224f37f71b327136d77f7322c7af41d3134878a4685",
+    "log": "solana-properties.log",
+    "log_sha256": "aeda0cbfc7444aa0459106e78c61a17417cfa9e67eae73996859adbcde54cb03",
+    "runtime_scope": "macOS host; production OathAnkr module; synthetic inputs; no blockchain, simulator or device"
+  },
+  {
+    "check": "solana-properties",
+    "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "tests_passed": 5,
+    "duration_seconds": 131.32,
+    "seed": "0x4f415448534f4c31",
+    "fixture_sha256": "a1b6492036258dc7411fd8e858bf82336f7935138689f35697e7f358e62b62ca",
+    "vectors_sha256": "809744c46505a3c30ef0a9f93276956deca0983ea3ab12c5de5940abf7ce381e",
+    "transactions_sha256": "889500316616e244c5448224f37f71b327136d77f7322c7af41d3134878a4685",
+    "curve_sha256": "5d30f79bf6a34af4346403e1ad92959cc4bce33bc1019503924bcbd3cdc2ef43",
+    "log": "solana-properties.log",
+    "log_sha256": "6dc6cd058c1046ad6f915a71325d364761defae51f070c336c2ddedd2a1e83a5",
+    "runtime_scope": "macOS host; production OathAnkr module; synthetic inputs; no blockchain, simulator or device"
+  },
+  {
+    "check": "build",
+    "source_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+    "status": "passed",
+    "log": "evidence/status-fixture/release-build.log.gz",
+    "log_sha256": "3d04e6651352150b2d4f74ab153a734f68967e5961073a74bc4e0cea1b16e54d",
+    "log_compression": "gzip",
+    "scope": "local host or generic unsigned iOS compilation; exact test-fix commit; see status-fixture/results.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+    "status": "passed",
+    "log": "evidence/status-fixture/public-validation.log.gz",
+    "log_sha256": "16ec866f4af7ab3311a83388ad19e7db437c3fb9f4084682a6accb26fab690ea",
+    "log_compression": "gzip",
+    "scope": "local host or generic unsigned iOS compilation; exact test-fix commit; see status-fixture/results.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+    "status": "passed",
+    "log": "evidence/status-fixture/diagnostics-coverage.log.gz",
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "log_compression": "gzip",
+    "scope": "local host or generic unsigned iOS compilation; exact test-fix commit; see status-fixture/results.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+    "status": "passed",
+    "log": "evidence/status-fixture/diagnostics-host.log.gz",
+    "log_sha256": "80fbe35d20cd446569728d353ad0dee277de80e08a683535414292229a7e4ff5",
+    "log_compression": "gzip",
+    "scope": "local host or generic unsigned iOS compilation; exact test-fix commit; see status-fixture/results.json"
+  },
+  {
+    "check": "status-fixture",
+    "source_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+    "status": "passed",
+    "log": "evidence/status-fixture/after-host.log.gz",
+    "log_sha256": "e042d6b4453b019d27edc679d6d33940e2641bb3e991febb22e8cffa9c566fea",
+    "log_compression": "gzip",
+    "scope": "local host or generic unsigned iOS compilation; exact test-fix commit; see status-fixture/results.json"
+  },
+  {
+    "check": "solana-properties",
+    "source_commit": "90b5b28a6f3852319a24d74143863f2b57837c4d",
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "tests_passed": 5,
+    "duration_seconds": 86.06,
+    "seed": "0x4f415448534f4c31",
+    "fixture_sha256": "a1b6492036258dc7411fd8e858bf82336f7935138689f35697e7f358e62b62ca",
+    "vectors_sha256": "809744c46505a3c30ef0a9f93276956deca0983ea3ab12c5de5940abf7ce381e",
+    "transactions_sha256": "889500316616e244c5448224f37f71b327136d77f7322c7af41d3134878a4685",
+    "curve_sha256": "5d30f79bf6a34af4346403e1ad92959cc4bce33bc1019503924bcbd3cdc2ef43",
+    "log": "solana-properties.log",
+    "log_sha256": "213c90a70804d90730a823f301b96d76db39b399f51dd987e44e3270a2fbc469",
+    "runtime_scope": "macOS host; production OathAnkr module; synthetic inputs; no blockchain, simulator or device"
   }
 ]

@@ -7,9 +7,10 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`a65601b78f86e33ebae08a754035d69c1f5f5e43`**.
-Merged in [application PR 6](https://github.com/devdasx/oath-wallet/pull/6),
-merge `4694c68b87dd5f0ebeda8c8298fb03b5f2ce2b58`. Publication and CI evidence
+Current review target: **`90b5b28a6f3852319a24d74143863f2b57837c4d`**.
+Merged in [application PR 7](https://github.com/devdasx/oath-wallet/pull/7),
+merge `89ca689a5af845943da0269e5c84ae16972eb657`. This adds a test-fixture repair
+to the previously reviewed `a65601b` production source. Publication and CI evidence
 for this target are recorded in `scope/source.json`. These are public-source repairs;
 no App Store upload or submission was performed. Later source revisions do not
 automatically inherit these results.
@@ -22,7 +23,7 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,639 files: 118 reviewed, 8 partially reviewed, 4,513 outstanding. The Wallet Core upstream
+The application ledger contains 4,639 files: 132 reviewed, 8 partially reviewed, 4,499 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
 outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -66,7 +67,15 @@ convert unread code into reviewed code. See the machine-readable ledgers under
 Original findings, failed runs and retests remain available. No finding is erased
 or downgraded merely to produce a passing summary.
 
-## Current-source local validation
+## Current-target validation
+
+On `90b5b28`, all 14 send-status host tests and all five Solana property cases
+passed. Diagnostics reports 118 passes and two explicit skips. Public source,
+secret-scan and diagnostics-coverage checks passed, as did unsigned generic iOS
+Release compilation. No runtime UI or App Store verification is claimed. The
+new full CI matrix is pending; these targeted passes do not complete the audit.
+
+## Preserved a65601b local validation
 
 The [TON review increment](TON-BOUNDARIES.md) adds five production-module property
 tests on the same `a65601b` source: 1,004 independent amount vectors, 256 cell
@@ -101,7 +110,7 @@ three offline scanner modes, validates their final assertion summaries, and
 adds these checks to CI. The 31 helper tests pass. Actionlint passes with only
 its unknown `xcode-27` runner-label diagnostic explicitly excluded; the standard
 invocation does report that label and is not claimed to pass unmodified.
-The current-source full GitHub matrix has not completed. No simulator, phone,
+The new 90b5b28 full GitHub matrix has not completed. No simulator, phone,
 real pairing peer or App Store operation was used.
 
 ## Authorization and CI-failure follow-up
@@ -111,16 +120,51 @@ The TON application trace now adds **19 passing authorization assertions** on
 The exact dependency-pinned result and adapter limitations are documented in
 [TON boundaries](TON-BOUNDARIES.md#application-authorization-and-recovery-increment).
 
-The current GitHub run `41248923305` exposed two additional validation problems:
-its app-parser harness timed out during compilation before assertions, and one
-database deadline-observation case threw `invalidTransition`. Neither is silently
-marked passed. The runner now records timeout failures and kills only its own
-child processes; its cold-build allowance is increased from 360 to 900 seconds.
-Five app-parser assertions pass in a local rerun, but the cold GitHub retest is
-still required. The database failure is being reproduced before disposition.
-The raw Go vulnerability scan also remains a failing check with documented
-reachability/provenance gaps. Passing unsigned iOS compilation does not override
-any of these failures.
+The full GitHub run `41248923305` exposed an app-parser compilation timeout
+and a database deadline-observation `invalidTransition`. Original failures are
+retained. The runner records timeout failures and kills only its own children;
+its cold-build allowance increased from 360 to 900 seconds. The cold GitHub
+boundary rerun [41250799019](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41250799019)
+now passes inventory, parser, relay boundary and TON jobs. Full host, dependency,
+entropy and Release-build jobs were deliberately skipped in that boundary-only
+run; it is not a successful full matrix. See its [exact result records and durable
+archive hash](../evidence/ci-41250799019-boundaries.json).
+
+The database test fixture raced a running worker: signed rows are already eligible
+for confirmation, but the fixture attempted a later synthetic signed-to-broadcast
+transition. Production correctly rejected that stale transition. Test-only commit
+`90b5b28a6f3852319a24d74143863f2b57837c4d` stops the synthetic transition while
+the worker is active and adds an explicit confirmation-before-broadcast case.
+All 14 send-status host tests pass. The new test checks that stale broadcast cannot
+undo confirmation, change signed bytes or recreate a job. No production transition
+rule was relaxed. [Before/after evidence](../evidence/status-fixture/results.json)
+keeps the original CI failure distinct from the corrected local test run.
+Its unsigned generic iOS Release build, public-source validation, secret scan
+and diagnostics checks passed. The test-only source is merged in [PR 7](https://github.com/devdasx/oath-wallet/pull/7).
+Its branch commit is the new review target. Earlier a65601b results remain pinned
+to that source; a new full matrix is required for the test-fixed target.
+
+The [a65601b full matrix](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41248923305)
+finished with 37 successful jobs and three failures:
+raw Go advisories, the old app-parser timeout and the database fixture race.
+[Final metadata](../evidence/ci-run-41248923305-final.json) and
+[34 hash-verified result records](../evidence/ci-41248923305-results.json) preserve
+the completed outcome and durable evidence archive.
+The raw Go vulnerability scan remains a failing check with documented
+reachability/provenance gaps. Passing compilation cannot override those gaps.
+
+## Solana source and adversarial-test increment
+
+The [Solana review](SOLANA-BOUNDARIES.md) traces wallet binding, native/SPL plans,
+multisig serialization and WalletConnect parsing/signature preservation through
+fourteen complete source files. The initial four production-module tests pass:
+528 independent Python Base58 vectors, all truncations of three public SDK
+transaction fixtures, signature-slot preservation and 2,048 deterministic
+mutations (703 accepted with checked invariants, 1,345 rejected during parsing).
+The extended five-case run also passes 1,038 independent modular-arithmetic
+checks of the public-input curve predicate. All 39 audit-helper unit tests pass.
+The audit-only workflow adds a dedicated source-pinned Solana job. This is
+bounded host evidence, not consensus verification or a completed Solana review.
 
 ## Preserved e352f56 local validation
 
