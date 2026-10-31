@@ -1,0 +1,143 @@
+name: Reproducible review evidence (not a completion verdict)
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: review-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: python3 scripts/checkout.py
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: |
+          python3 scripts/inventory.py .work/source --output evidence/ci/inventory.json
+          cmp scope/inventory.json evidence/ci/inventory.json
+          python3 scripts/dependencies.py .work/source --output evidence/ci
+      - name: Record outstanding coverage without converting it to a pass
+        run: |
+          set +e
+          python3 scripts/completion.py > evidence/ci/completion.txt
+          result=$?
+          printf '%s\n' "$result" > evidence/ci/completion-exit-code.txt
+          exit 0
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: inventory-evidence, path: evidence/ci, retention-days: 90}
+  scanners:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - run: python3 scripts/checkout.py
+      - run: python3 scripts/tools.py
+      - name: Scan source for secrets
+        run: |
+          mkdir -p evidence/ci
+          .work/tools/gitleaks dir .work/source --redact --report-format json --report-path evidence/ci/gitleaks.json > evidence/ci/gitleaks.log 2>&1
+      - name: Preserve unfiltered Go dependency advisories
+        if: always()
+        run: |
+          .work/tools/osv-scanner scan source --lockfile .work/source/Tools/AezeedBridge/go.mod --no-call-analysis=go --format json --output-file evidence/ci/osv-go.json > evidence/ci/osv-go.log 2>&1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: scanner-evidence, path: evidence/ci, retention-days: 90}
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        check: [OathDiagnostics, OathCloudBackup, OathDatabase, OathBitcoin, OathAnkr, OathAezeed, OathWalletHandoff, security, envelope, authentication, protected-startup, lifecycle, walletconnect, evm-send, solana-send, tron-send, xrpl-send, stellar-send, aptos-send, sui-send, near-send, ton-send, thorchain-send, arc-send, permission-batch, public, diagnostics-coverage, clipboard]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Install pinned source-boundary scanner
+        if: matrix.check == 'public'
+        run: |
+          python3 scripts/tools.py
+          echo "$PWD/.work/tools" >> "$GITHUB_PATH"
+      - run: python3 scripts/run.py .work/source '${{ matrix.check }}' --output evidence/ci
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: host-${{ matrix.check }}
+          path: evidence/ci
+          retention-days: 90
+  parser:
+    runs-on: xcode-27
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Reproduce baseline failure and fixed success
+        run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/baseline
+          git -C .work/baseline checkout --detach c7cdbde5e9f136b595500e92fbc904b107dcd8ee
+          set +e
+          sh scripts/parser-check.sh .work/baseline .work/parser-before > evidence/ci/parser-before.log 2>&1
+          before=$?
+          set -e
+          test "$before" -eq 1
+          grep -q '6016 checks, 1 failures' evidence/ci/parser-before.log
+          sh scripts/parser-check.sh .work/source .work/parser-after > evidence/ci/parser-after.log 2>&1
+          grep -q '6016 checks, 0 failures' evidence/ci/parser-after.log
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: parser-evidence, path: evidence/ci, retention-days: 90}
+  aezeed-source:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16
+        with: {go-version: '1.26.5', cache: false}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Test the bridge source with the race detector
+        working-directory: .work/source/Tools/AezeedBridge
+        run: |
+          go version
+          go mod verify
+          go test -race -count=1 ./... > ../../../../evidence/ci/aezeed-go-tests.log 2>&1
+          go vet ./... > ../../../../evidence/ci/aezeed-go-vet.log 2>&1
+          go run ./cmd/seedvectors > ../../../../evidence/ci/aezeed-vectors.json
+      - name: Check public fixture equality
+        run: python3 -c "import json; assert json.load(open('evidence/ci/aezeed-vectors.json')) == json.load(open('.work/source/Packages/OathAezeed/Tests/OathAezeedTests/Fixtures/lnd-production.json'))"
+      - name: Check reachable Go advisories
+        working-directory: .work/source/Tools/AezeedBridge
+        run: |
+          go install golang.org/x/vuln/cmd/govulncheck@v1.9.0
+          govulncheck -json ./... > ../../../../evidence/ci/govulncheck.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: aezeed-source-evidence, path: evidence/ci, retention-days: 90}
+  release-build:
+    runs-on: xcode-27
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - run: python3 scripts/run.py .work/source build --output evidence/ci
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: unsigned-ios-release-build, path: evidence/ci, retention-days: 90}
