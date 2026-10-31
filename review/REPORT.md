@@ -61,14 +61,16 @@ adversarial checks; the baseline failed exactly the object-limit check.
 
 [GitHub run 41238400744](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41238400744)
 reproduces those checks against the source-fix target and records its own
-Xcode 27.1/Swift 6.4 toolchain. Its status must be read directly; scheduled jobs
+Xcode 27.1/Swift 6.4 toolchain. The generic iOS Release build and security host harness have passed on this
+fixed commit; the remaining job statuses must be read directly. Scheduled jobs
 are not passes. The earlier run failed the expected Xcode-version guard and was
 cancelled. Local initial failures also include resource signing and AppleDouble
 C-header pollution on an external volume; neither is hidden by successful reruns.
 
 Both Wallet Core upstream release ZIP hashes match the app manifest. This is
 archive integrity evidence, not source-to-binary equivalence. Its complete
-3,941-file upstream inventory is separately recorded and remains outstanding.
+3,941-file upstream inventory is separately recorded: three files were read
+fully, two partially, and 3,936 remain outstanding.
 The application repository inventory contains 4,635 tracked files, including
 website-only changes after the baseline; website files do not change app scope.
 
@@ -80,3 +82,31 @@ scan and the public release boundary validator pass. Raw records are preserved.
 
 See [method](METHOD.md), [source notes](READ-NOTES.md), and
 [dependency limitations](DEPENDENCIES.md). There is no completion verdict.
+
+## Test-suite qualification
+
+The initial full XCTest runs exposed process-global diagnostic state: production
+`OathDiagnostics.configure` initializes one outbox per process, but different test
+cases attempt to install different sinks. The audit runner now uses SwiftPM's
+separate XCTest processes. Original failures are retained, not relabeled passes.
+
+Isolation does not make the whole suite pass. Remaining failures include:
+
+- legacy diagnostic expectations for availability errors now deliberately excluded;
+- TON/XRP expired-price tests expecting malformed data instead of the current
+  availability-deferral error, although both paths reject the stale quote;
+- four missing public account-policy endpoint registrations (Filecoin, Sei, 0G,
+  IoTeX); no direct application caller of that API was found;
+- a test comparing encoded JSON byte order and a context-equality assertion that
+  predates additional privacy-safe context fields.
+
+These are investigation items, not a claim that all failures are harmless. Required
+package validation remains **failed** until each expectation/implementation has a
+reviewed repair and a successful rerun. No production diagnostic behavior was
+changed to force a green result. A separate process-isolated rerun preserves xUnit
+case-level results as well as command logs.
+
+Current source coverage: 30 fully read application-repository files, one partially
+read, 4,604 outstanding. These include non-code assets and website files; counts
+are a coverage ledger, not a percentage security score. The completion gate also
+checks the upstream inventory and rejects outstanding dependency review.

@@ -26,3 +26,9 @@ class EvidenceTests(unittest.TestCase):
         result = module.gaps({'reviewed_commit':'a'},
             {'source_commit':'a','files':[{'path':'vault.swift','category':'application','status':'partially-reviewed'}]},[])
         self.assertIn('vault.swift',result)
+
+    def test_green_app_does_not_clear_unreviewed_dependency(self):
+        result = module.gaps({'reviewed_commit':'a'},
+            {'source_commit':'a','files':[{'path':'vault.swift','category':'application','status':'reviewed'}]}, [], [],
+            [{'repository':'upstream','files':[{'path':'sign.cpp','status':'outstanding'}]}])
+        self.assertIn('upstream: sign.cpp',result)

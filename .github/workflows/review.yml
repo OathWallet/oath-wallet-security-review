@@ -6,14 +6,14 @@ on:
   workflow_dispatch:
     inputs:
       validation_kind:
-        description: Full suite or scanner evidence only
+        description: Full suite, scanner evidence or isolated package rerun
         type: choice
         default: full
-        options: [full, scanners]
+        options: [full, scanners, packages]
 permissions:
   contents: read
 concurrency:
-  group: review-${{ github.ref }}
+  group: review-${{ github.ref }}-${{ inputs.validation_kind || 'full' }}
   cancel-in-progress: false
 jobs:
   inventory:
@@ -42,6 +42,7 @@ jobs:
         if: always()
         with: {name: inventory-evidence, path: evidence/ci, retention-days: 90}
   scanners:
+    if: inputs.validation_kind != 'packages'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -75,9 +76,9 @@ jobs:
     timeout-minutes: 90
     strategy:
       fail-fast: false
-      max-parallel: 3
+      max-parallel: 6
       matrix:
-        check: [OathDiagnostics, OathCloudBackup, OathDatabase, OathBitcoin, OathAnkr, OathAezeed, OathWalletHandoff, security, envelope, authentication, protected-startup, lifecycle, walletconnect, evm-send, solana-send, tron-send, xrpl-send, stellar-send, aptos-send, sui-send, near-send, ton-send, thorchain-send, arc-send, permission-batch, public, diagnostics-coverage, clipboard]
+        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "public", "diagnostics-coverage", "clipboard"]') }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}
@@ -98,7 +99,7 @@ jobs:
           path: evidence/ci
           retention-days: 90
   parser:
-    if: inputs.validation_kind != 'scanners'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -127,7 +128,7 @@ jobs:
         if: always()
         with: {name: parser-evidence, path: evidence/ci, retention-days: 90}
   aezeed-source:
-    if: inputs.validation_kind != 'scanners'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -161,7 +162,7 @@ jobs:
         if: always()
         with: {name: aezeed-source-evidence, path: evidence/ci, retention-days: 90}
   release-build:
-    if: inputs.validation_kind != 'scanners'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -178,3 +179,22 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: unsigned-ios-release-build, path: evidence/ci, retention-days: 90}
+  upstream-entropy:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - run: sh scripts/toolchain.sh
+      - name: Test pinned upstream entropy failure handling
+        run: |
+          git clone --filter=blob:none --no-checkout https://github.com/trustwallet/wallet-core.git .work/wallet-core
+          git -C .work/wallet-core checkout --detach d40d24a63d92619167903369308bf0e2f7eb3a59
+          sh scripts/upstream-entropy.sh .work/wallet-core .work/entropy > evidence/ci/entropy.log 2>&1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: upstream-entropy-evidence, path: evidence/ci, retention-days: 90}

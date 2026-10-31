@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-def gaps(config, inventory, findings, results=None):
+def gaps(config, inventory, findings, results=None, upstreams=None):
     result = []
     if inventory['source_commit'] != config['reviewed_commit']: result.append('source mismatch')
     for item in inventory['files']:
@@ -11,6 +11,11 @@ def gaps(config, inventory, findings, results=None):
     for finding in findings:
         if finding['status'] not in ['fixed-and-retested','documented-limitation']: result.append(finding['id'])
     if not inventory['files']: result.append('empty inventory')
+    for upstream in (upstreams or []):
+        if not upstream.get('files'): result.append('empty upstream inventory: '+upstream.get('repository','unknown'))
+        for item in upstream.get('files',[]):
+            if item['status'] not in ['reviewed','non-security-content','generated-verified']:
+                result.append('upstream: '+item['path'])
     for check in config.get('required_checks',[]):
         if not any(r.get('check') == check and r.get('source_commit') == config['reviewed_commit']
                    and r.get('status') == 'passed' and r.get('log_sha256') for r in (results or [])):
@@ -22,6 +27,7 @@ if __name__ == '__main__':
     pending = gaps(json.loads((root/'scope/source.json').read_text()),
                    json.loads((root/'scope/inventory.json').read_text()),
                    json.loads((root/'findings/index.json').read_text()),
-                   json.loads((root/'evidence/results.json').read_text()) if (root/'evidence/results.json').exists() else [])
+                   json.loads((root/'evidence/results.json').read_text()) if (root/'evidence/results.json').exists() else [],
+                   [json.loads((root/'scope/upstream-wallet-core.json').read_text())])
     print(f'{len(pending)} outstanding review items. This is not an audit-completion certificate.')
     raise SystemExit(1 if pending else 0)

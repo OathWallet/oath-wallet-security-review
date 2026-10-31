@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run bounded, explicit host checks. Never enable live-chain tests or deployment."""
 import argparse, hashlib, json, os, platform, re, signal, subprocess, time, tempfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,7 +28,7 @@ def main():
     env = {k:v for k,v in os.environ.items() if k in ['HOME','PATH','TMPDIR','DEVELOPER_DIR','SDKROOT','LANG','LC_ALL','CI']}
     env['OATH_VALIDATION_SCRATCH'] = str(scratch)
     if a.check in PACKAGES:
-        command = ['swift','test','--build-system','native','--package-path',str(source/'Packages'/a.check),'--scratch-path',str(scratch)+'-native','--jobs','4']
+        command = ['swift','test','--build-system','native','--package-path',str(source/'Packages'/a.check),'--scratch-path',str(scratch)+'-native','--jobs','4','--parallel','--num-workers','4','--xunit-output',str(out/(a.check+'.xml'))]
     elif a.check in MODES:
         command = ['python3','Tools/CheckMultiWallet.py','--'+a.check]
     elif a.check == 'build':
@@ -58,6 +59,17 @@ def main():
                   timed_out=timed_out,duration_seconds=round(time.time()-start,2),platform=platform.platform(),
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
                   runtime_scope='host' if a.check!='build' else 'compile-only',live_network_tests_enabled=False)
+    if a.check in PACKAGES:
+        xml = out/(a.check+'.xml')
+        if xml.exists():
+            tree = ET.parse(xml)
+            cases = list(tree.iter('testcase'))
+            result['xunit'] = dict(tests=len(cases), failures=sum(c.find('failure') is not None for c in cases),
+                                   errors=sum(c.find('error') is not None for c in cases),
+                                   skipped=sum(c.find('skipped') is not None for c in cases),
+                                   sha256=hashlib.sha256(xml.read_bytes()).hexdigest())
+        else:
+            result['xunit'] = {'available': False}
     # Commands are normalized for publication and still reconstructible from the README.
     result['command']=[s.replace(str(source),'<SOURCE>').replace(str(scratch),'<SCRATCH>').replace(str(ROOT),'<AUDIT>') for s in command]
     (out/(a.check+'.json')).write_text(json.dumps(result,indent=2)+'\n')

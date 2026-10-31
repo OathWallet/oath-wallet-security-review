@@ -72,3 +72,61 @@ plaintext/password buffers are cleared after use. This does not prove complete
 memory erasure. Legacy migration callers and every restore-chain derivation
 remain outstanding even though these individual files were read. No additional
 exploitable issue was confirmed in these file inspections.
+
+## Additional source read: import, restoration, export and request interpretation
+
+The complete files listed below were read at `ae5a35cec58f51bcfd6de3cd55950b47fa055a51`.
+This disposition records a bounded source examination, not proven absence of defects.
+
+- `OathWalletEngine.swift`: creation enters Wallet Core at 128-bit entropy; import
+  revalidates BIP39, Electrum or aezeed, with Bitcoin-only alternate seed profiles.
+  Reviewed explicit coin/path mapping and restored account derivation. Downstream
+  multisig implementations and native binary derivation remain separate gaps.
+- `OathPrivateKeyImport.swift` / `OathImportedPrivateKey.swift`: 2 KiB input cap,
+  explicit chain selection, WIF compression and extended-key identity, validated
+  Ed25519 public halves, Stellar checksum, algorithm-tagged Sui/Aptos parsing,
+  curve validation, and no fabricated HD scope for single keys. Swift copies and
+  strings mean buffer clearing does not prove complete process-memory erasure.
+- `OathPrivateKeyExport.swift`: committed path and address are rechecked, UTXO
+  compression/chain codes preserved, and exported formats are chain-specific.
+  Fresh authorization belongs to the vault caller, not this internal formatter.
+- `OathVaultImportPreparation.swift`: handoff validates declared chain, account
+  uniqueness and derived address equality; unsupported descriptor collections
+  fail rather than silently losing signing sources.
+- `OathWalletRestoration.swift`: bounded accounts, path segments, uniqueness,
+  exclusive secret-material representations and derivation-before-commit.
+  Migration/recovery coverage remains dependent on the vault lifecycle review.
+- `OathWalletRemovalModel.swift` / `OathResetEnvironment.swift`: cancellation
+  generations, scoped removal grant, confirmation ownership and sandbox cleanup;
+  iCloud is outside local reset. Only missing files are ignored; symlinks are
+  unlinked rather than traversed. Actor-side grants still require separate review.
+- `WalletConnectTypedData.swift`: exact JSON fields, integer precision, typed
+  ranges, bounded recursion/collections, exact domain/session chain match when
+  supplied, cycle-bounded type dependencies, visible controls, immutable digest,
+  signature recovery check, owner-bound recognized permits and time revalidation.
+  Missing domain chain is intentionally represented as generic review; whether
+  the UI communicates that clearly remains an outstanding presentation check.
+- `UTXOBroadcastProvider.swift`: verifies journal bytes/txid before sending,
+  reconciliation requires identical raw bytes (including witness), and hedges
+  only the same transaction. Cancellation checks prevent reporting a cancelled
+  response as acceptance. A task group still waits for cancellation-resistant
+  child tasks; no universal wall-clock bound is established by this read.
+- `PublicSigningAuthority.swift` / `PublicSigningEVM.swift`: mainnet identity
+  verification, fixed-block reads, Safe proxy and implementation fingerprints,
+  bounded ABI owners/threshold decoding. The existing exhaustive adapter test
+  identifies missing Filecoin, Sei, 0G and IoTeX entries. No direct app caller of
+  this account-policy API was found; the public endpoint map is also reused by
+  stablecoin checks. No fund-loss exploit has been demonstrated.
+
+## Upstream entropy source trace
+
+Pinned Trust Wallet Core `d40d24a63d92619167903369308bf0e2f7eb3a59`:
+`HDWallet.cpp` creation -> `mnemonic_generate` in `trezor-crypto/crypto/bip39.c`
+-> `random_buffer` in `trezor-crypto/crypto/rand.c` -> `/dev/urandom`.
+Creation rejects unsupported strengths; the random reader aborts on open/read/
+short-read failures. `scripts/upstream-entropy.sh` compiles that production C
+file with only the system-call boundary replaced by deterministic fault fixtures.
+Eight success/failure scenarios pass locally. This is not a statistical entropy
+assessment, review of all BIP39/HD derivation code, or proof of shipped-binary identity.
+`rand.c` and `TWHDWallet.cpp` were read in full; `HDWallet.cpp` and `bip39.c`
+were traced only through creation and remain partially reviewed.
