@@ -1,0 +1,157 @@
+[
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "OathBitcoin",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "selected": 328,
+    "passed": 268,
+    "skipped": 60,
+    "failed": 0,
+    "case_results_sha256": "ed3420b6809152f72113e5288315dd8a6df60e97f1afa6331896cea4fe708c0e",
+    "log_sha256": "5d7efe5ce08b371a94a7038b7c29377c1c465f8b18a68efd0b4dfd24bc095d04",
+    "command": [
+      "python3",
+      "scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>",
+      "<OUTPUT>",
+      "--skip-build"
+    ]
+  },
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "OathDiagnostics",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "selected": 120,
+    "passed": 118,
+    "skipped": 2,
+    "failed": 0,
+    "case_results_sha256": "14cff5fdbc34ec76fb718b5cb71ba6dc1bd9b8a03b9e7ffc9c5d5db7cfc0f739",
+    "log_sha256": "17b83ac47390bb4467a6690e76c937a38a9bc6b7ba2a8e94724cf4a8761d95be",
+    "command": [
+      "python3",
+      "scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>",
+      "<OUTPUT>",
+      "--skip-build"
+    ]
+  },
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "authority-price-targeted",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "selected": 27,
+    "passed": 27,
+    "skipped": 0,
+    "failed": 0,
+    "case_results_sha256": "3a29db8f440961c3e604e895eee464d499003cce8a96b9775fe2f695d68b355f",
+    "log_sha256": "71945bf13b2b82b7c233ee88c8f07fa57aa209a4cd40c1f4842db0d505b1b0b0",
+    "command": [
+      "python3",
+      "scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>",
+      "<OUTPUT>",
+      "--skip-build",
+      "--filter",
+      "PublicSigningAuthorityTests|TonPriceRecoveryTests|XrplPriceRecoveryTests|MultisigProviderRecoveryTests.testTransientXRP"
+    ]
+  },
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "build",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "compile-only",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<DERIVED_DATA>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "log_sha256": "5dc5895bcd25af5469acb9cf6cc4d5ce786eeeb51181c75daceb21f034686e32",
+    "duration_seconds_from_log_timestamps": 431.21,
+    "duration_limit": "File creation to last write; not a monotonic process timer"
+  },
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "public",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py"
+    ],
+    "log_sha256": "ba772f038ffe584701c6da5c353c8679ecad37047f1c4ee2eb16315f9615bac8",
+    "duration_seconds_from_log_timestamps": 18.79,
+    "duration_limit": "File creation to last write; not a monotonic process timer"
+  },
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "diagnostics-coverage",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "duration_seconds_from_log_timestamps": 0.24,
+    "duration_limit": "File creation to last write; not a monotonic process timer"
+  },
+  {
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "check": "gitleaks",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "command": [
+      "gitleaks",
+      "dir",
+      ".",
+      "--redact=100"
+    ],
+    "log_sha256": "4c7b8ce17358d71200db34a2169cc53b6e07098d6577de15c72db20c18749703",
+    "duration_seconds_from_log_timestamps": 8.12,
+    "duration_limit": "File creation to last write; not a monotonic process timer"
+  },
+  {
+    "check": "parser",
+    "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
+    "status": "passed",
+    "exit_code": 0,
+    "log_sha256": "46bb1e3ec92fb6191ccdae95d5208c07b5c058c0edd7e561f5dbbb11483fb971",
+    "command": [
+      "sh",
+      "scripts/parser-check.sh",
+      "<SOURCE>",
+      "<OUTPUT>"
+    ],
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  }
+]

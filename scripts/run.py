@@ -3,6 +3,7 @@
 import argparse, hashlib, json, os, platform, re, signal, subprocess, time, tempfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from source_state import require_source_state
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff']
@@ -18,17 +19,14 @@ def main():
     a = p.parse_args()
     source, out = a.source.resolve(), a.output.resolve()
     pin = json.loads((ROOT/'scope/source.json').read_text())['reviewed_commit']
-    sha = subprocess.check_output(['git', '-C', str(source), 'rev-parse', 'HEAD'], text=True).strip()
-    if sha != pin: raise SystemExit('Wrong source revision')
-    if subprocess.check_output(['git', '-C', str(source), 'status', '--porcelain', '--untracked-files=no']).strip():
-        raise SystemExit('Tracked source is modified; commit changes before recording final evidence')
+    sha = require_source_state(source, pin)
     out.mkdir(parents=True, exist_ok=True)
     scratch = Path(tempfile.gettempdir())/'oath-security-review-builds'/sha/a.check
     # Deliberately do not inherit OATH_* flags, provider credentials or release secrets.
     env = {k:v for k,v in os.environ.items() if k in ['HOME','PATH','TMPDIR','DEVELOPER_DIR','SDKROOT','LANG','LC_ALL','CI']}
     env['OATH_VALIDATION_SCRATCH'] = str(scratch)
     if a.check in PACKAGES:
-        command = ['swift','test','--build-system','native','--package-path',str(source/'Packages'/a.check),'--scratch-path',str(scratch)+'-native','--jobs','4','--parallel','--num-workers','4','--xunit-output',str(out/(a.check+'.xml'))]
+        command = ['python3',str(ROOT/'scripts/isolated_tests.py'),str(source),a.check,str(scratch)+'-native',str(out)]
     elif a.check in MODES:
         command = ['python3','Tools/CheckMultiWallet.py','--'+a.check]
     elif a.check == 'build':
@@ -54,7 +52,7 @@ def main():
     text = log.read_text(errors='replace').replace('\x00', '<NUL>').replace(str(source), '<SOURCE>').replace(str(ROOT), '<AUDIT>')
     text = text.replace(str(scratch), '<SCRATCH>').replace(os.path.expanduser('~'), '<HOME>')
     log.write_text(text)
-    summaries = [line for line in text.splitlines() if re.search(r'Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]
+    summaries = [line for line in text.splitlines() if re.search(r'XCTest:|Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]
     result = dict(check=a.check,source_commit=sha,command=command,status='passed' if code==0 else 'failed',exit_code=code,
                   timed_out=timed_out,duration_seconds=round(time.time()-start,2),platform=platform.platform(),
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
@@ -70,6 +68,10 @@ def main():
                                    sha256=hashlib.sha256(xml.read_bytes()).hexdigest())
         else:
             result['xunit'] = {'available': False}
+        swift_log = out/(a.check+'-swift-testing.log')
+        if swift_log.exists():
+            swift_text = swift_log.read_text(errors='replace')
+            result['swift_testing'] = dict(log_sha256=hashlib.sha256(swift_log.read_bytes()).hexdigest(), summaries=[line for line in swift_text.splitlines() if 'Test run with' in line or 'skipped' in line])
     # Commands are normalized for publication and still reconstructible from the README.
     result['command']=[s.replace(str(source),'<SOURCE>').replace(str(scratch),'<SCRATCH>').replace(str(ROOT),'<AUDIT>') for s in command]
     (out/(a.check+'.json')).write_text(json.dumps(result,indent=2)+'\n')

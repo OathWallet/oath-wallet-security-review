@@ -68,8 +68,14 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [first progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress1)
+The [first progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress2)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
 are additional evidence; they do not retroactively change its coverage claims.
+
+Package runs isolate each XCTest case in its own host process and retain its
+actual skipped/passed/failed output. Swift Testing runs separately. Earlier
+Swift parallel xUnit files remain in evidence, but their missing skip markers
+must not be read as zero skipped tests; see the reporting correction in
+`review/READ-NOTES.md`. No passing command converts an opt-in skip into evidence.

@@ -130,3 +130,72 @@ Eight success/failure scenarios pass locally. This is not a statistical entropy
 assessment, review of all BIP39/HD derivation code, or proof of shipped-binary identity.
 `rand.c` and `TWHDWallet.cpp` were read in full; `HDWallet.cpp` and `bip39.c`
 were traced only through creation and remain partially reviewed.
+
+## Biometric credential and diagnostic admission review
+
+- `OathBiometricCredentialStore.swift`: full source read. Protected Keychain item
+  uses `WhenPasscodeSetThisDeviceOnly`, `biometryCurrentSet`, nonsynchronizable
+  storage, and an installation/context-bound envelope. A successful policy
+  evaluation alone does not open the wallet; the actual credential must be read.
+  The one-shot request arbitrates cancellation, timeout and late delivery under
+  a lock; production constructs a new request for every read. Cancellation is
+  checked after delivery and before installation-envelope opening. No new defect
+  confirmed. Runtime LocalAuthentication/Keychain behavior is not established by
+  this source read; Swift Data clearing does not prove all copies are erased.
+- `DiagnosticAvailabilityPolicy.swift`: full source read. Explicit typed/coded
+  availability exclusions preserve returned errors, fatal/runtime diagnostics,
+  and selected terminal send failures. Arbitrary failure text does not become a
+  blanket timeout exclusion. Several older package tests still expect excluded
+  timeouts/TLS/transport events; they must be reconciled individually with positive
+  controls, not by changing the production policy to satisfy old expectations.
+
+## Evidence identity guard
+
+The inventory and host runner now both reject modified tracked files and
+nonignored untracked inputs before claiming a pinned source identity. Five
+synthetic Git-repository tests exercise exact revision, wrong revision, tracked
+modification, untracked compilable input, and ignored build output. This is a
+checkout guard, not a claim of a fully hermetic build: generated configuration,
+toolchains, fetched dependencies and environment are separate recorded inputs.
+
+## Application metadata and entitlements
+
+Full reads of `OathApp/OathAtmosphere.entitlements`, `Info.plist` and
+`PrivacyInfo.xcprivacy` identify two Keychain groups, the app's associated domain,
+CloudDocuments container, one background status task and registered payment/
+WalletConnect URL schemes. No arbitrary-load ATS exception appears in this
+Info.plist. Custom URL schemes are untrusted input, not proof of sender identity.
+The shared handoff Keychain group is an additional same-team entitlement boundary
+whose member authorization and protocol require their own review. The public
+Documents visibility of the iCloud container makes encryption before writing a
+necessary boundary, not an assumption that iCloud files are secret plaintext.
+
+The privacy manifest declares no collected data and no tracking. Reading that
+declaration does not validate it: the network/SDK trace remains outstanding.
+Selected `project.pbxproj` build settings show the same entitlements/Info.plist in
+both configurations and script sandboxing enabled; the full project file remains
+partially reviewed. Unsigned compilation does not verify provisioning or effective
+App Store entitlements.
+
+## Skipped-test reporting correction
+
+Swift 6.4 `swift test --parallel --xunit-output` emits a successful empty test-case
+element for some XCTest skips. A synthetic opt-in Bitcoin test was explicitly
+rerun through `xcrun xctest`: it printed `Test skipped` while the earlier parallel
+XML contained neither a skip element nor a failure. Consequently those parallel
+XML skip totals are not reliable and must not be interpreted as zero skips.
+The new host runner retains one log per XCTest process, recognizes the explicit
+passed/skipped/failed line, rejects empty selections, writes accurate skip elements,
+and runs Swift Testing separately. No opt-in network flags are enabled.
+
+## Adapter and test corrections
+
+`PublicSigningEVM.swift` adds four already-used public endpoint defaults without
+changing chain-ID verification or account parsing. Full reads of the authority
+suite and Bitcoin reconciliation-diagnostics suite include the new negative
+controls: reject a wrong chain before account reads; reject an incorrect transaction
+ID and retain its privacy-filtered validation report. TON/XRP test changes preserve
+rejection of stale quotes while expecting their intentional availability error.
+The XRPL retry test compares the complete decoded JSON object, preserving every
+request value while accepting insignificant object-key ordering. These narrow test
+edits do not imply full source review of the surrounding price/retry test files.

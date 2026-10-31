@@ -147,10 +147,11 @@
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/PublicSigningEVM.swift": {
-    "sha256": "1b5321c5382d6fdcfedf217324af201f9a0325ad5985109802495a9138f71a6b",
+    "sha256": "cd325e797a9bbe127f5b195a30fc0d2f21ce7e21c940296c2574624eb59484a6",
     "status": "reviewed",
     "evidence": [
-      "review/READ-NOTES.md"
+      "review/READ-NOTES.md",
+      "findings/OW-2026-003.md"
     ]
   },
   "OathAtmosphere/Wallet/OathWalletEngine.swift": {
@@ -214,6 +215,64 @@
     "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md"
+    ]
+  },
+  "OathAtmosphere/Passcode/OathBiometricCredentialStore.swift": {
+    "sha256": "58b8e7ada52f101406f6b6f456d28fd83beb7cef86dee34be5ba5ad681846a69",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md"
+    ]
+  },
+  "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticAvailabilityPolicy.swift": {
+    "sha256": "cce55c016b53292bf77af29708cec68995a80911ef99e55c67f2e49dd312b644",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md"
+    ]
+  },
+  "OathApp/OathAtmosphere.entitlements": {
+    "sha256": "d7aca9125670ac23fdad284ffcf9118d0f8bdcc7e20600144523f052d4086e85",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md"
+    ]
+  },
+  "OathApp/Info.plist": {
+    "sha256": "d354a164cf549bd766ff9b82d4e9063bb917f4d8f3f088af3e0041f3345be3de",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md"
+    ]
+  },
+  "OathApp/PrivacyInfo.xcprivacy": {
+    "sha256": "776cc3ae33d1e62960ac9c854320ff4ab8f942519c567214168a65e467f226e8",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md"
+    ]
+  },
+  "OathAtmosphere.xcodeproj/project.pbxproj": {
+    "sha256": "9a1330095bb6d5c023db0dd565a33ac1b76e3d1fdd3ade63d4a2641e15e835e7",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/READ-NOTES.md"
+    ]
+  },
+  "Packages/OathAnkr/Tests/OathAnkrTests/PublicSigningAuthorityTests.swift": {
+    "sha256": "7d5c6ec11653347883b1e1ecfab68216777c119ab7ff5a9ea81aec8d94e5e632",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-003.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/UTXORecoveryDiagnosticsTests.swift": {
+    "sha256": "97a7c5c1464919c0c55c1cac4b415aaf4d7579e4cfe61f252abb04fc4743a657",
+    "status": "reviewed",
+    "evidence": [
+      "review/READ-NOTES.md",
+      "findings/OW-2026-003.md"
     ]
   }
 }

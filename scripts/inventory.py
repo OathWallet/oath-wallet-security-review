@@ -2,14 +2,13 @@
 """Hash tracked source without interpreting a scanner result as human review."""
 import argparse, hashlib, json, subprocess
 from pathlib import Path
+from source_state import require_source_state
 
 ROOT = Path(__file__).resolve().parents[1]
 
 def inventory(source):
     config = json.loads((ROOT / 'scope/source.json').read_text())
-    commit = subprocess.check_output(['git', '-C', str(source), 'rev-parse', 'HEAD'], text=True).strip()
-    if commit != config['reviewed_commit']:
-        raise ValueError('Source commit does not match pinned review')
+    commit = require_source_state(source, config['reviewed_commit'])
     decisions = json.loads((ROOT / 'review/dispositions.json').read_text())
     paths = subprocess.check_output(['git', '-C', str(source), 'ls-files', '-z']).decode().split('\0')
     records = []

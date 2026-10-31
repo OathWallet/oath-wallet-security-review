@@ -1,5 +1,5 @@
 {
-  "source_commit": "ae5a35cec58f51bcfd6de3cd55950b47fa055a51",
+  "source_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -6214,16 +6214,20 @@
       "sha256": "d354a164cf549bd766ff9b82d4e9063bb917f4d8f3f088af3e0041f3345be3de",
       "bytes": 5685,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md"
+      ]
     },
     {
       "path": "OathApp/OathAtmosphere.entitlements",
       "sha256": "d7aca9125670ac23fdad284ffcf9118d0f8bdcc7e20600144523f052d4086e85",
       "bytes": 844,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md"
+      ]
     },
     {
       "path": "OathApp/OathAtmosphereApp.swift",
@@ -6246,8 +6250,10 @@
       "sha256": "776cc3ae33d1e62960ac9c854320ff4ab8f942519c567214168a65e467f226e8",
       "bytes": 278,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md"
+      ]
     },
     {
       "path": "OathApp/Resources/BIP39/bip39_chinese_simplified.txt",
@@ -6782,8 +6788,10 @@
       "sha256": "9a1330095bb6d5c023db0dd565a33ac1b76e3d1fdd3ade63d4a2641e15e835e7",
       "bytes": 226780,
       "category": "build-or-documentation",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/READ-NOTES.md"
+      ]
     },
     {
       "path": "OathAtmosphere.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
@@ -7534,8 +7542,10 @@
       "sha256": "58b8e7ada52f101406f6b6f456d28fd83beb7cef86dee34be5ba5ad681846a69",
       "bytes": 12888,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Passcode/OathBiometricPresentation.swift",
@@ -9855,12 +9865,13 @@
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/PublicSigningEVM.swift",
-      "sha256": "1b5321c5382d6fdcfedf217324af201f9a0325ad5985109802495a9138f71a6b",
-      "bytes": 6579,
+      "sha256": "cd325e797a9bbe127f5b195a30fc0d2f21ce7e21c940296c2574624eb59484a6",
+      "bytes": 6761,
       "category": "application",
       "status": "reviewed",
       "evidence": [
-        "review/READ-NOTES.md"
+        "review/READ-NOTES.md",
+        "findings/OW-2026-003.md"
       ]
     },
     {
@@ -12885,8 +12896,8 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/MultisigProviderRecoveryTests.swift",
-      "sha256": "b173c256b56b83daff5ce31cbec0e68ec2df0ba294a650edbb34c4b3697bc7a7",
-      "bytes": 7467,
+      "sha256": "ba8c5dbca16adf64d6fe335c9a26f359736de304f65cb1a419ec3304bce9f703",
+      "bytes": 7875,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -13149,11 +13160,14 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/PublicSigningAuthorityTests.swift",
-      "sha256": "b110af7cd44eb23e4411db3b059528d158653bdd8646ffc1b02b8c8b25ef0936",
-      "bytes": 10366,
+      "sha256": "7d5c6ec11653347883b1e1ecfab68216777c119ab7ff5a9ea81aec8d94e5e632",
+      "bytes": 12525,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md",
+        "findings/OW-2026-003.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/RateLimitRecoveryTests.swift",
@@ -13677,8 +13691,8 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/TonPriceRecoveryTests.swift",
-      "sha256": "8c4f74d1742a8dc3ee74b1810caaf44f2b0e51aa2f7454c0bc4922f3dcd8bff9",
-      "bytes": 11906,
+      "sha256": "8b90f4e3b7f3cc49ff363391a49eee26f60642600dd2f2432b64c2473a2b15ee",
+      "bytes": 12260,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -14029,8 +14043,8 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/XrplPriceRecoveryTests.swift",
-      "sha256": "c11b34738850dacfd86070e2002dc0b92fca29e99d5361836c9eb68674d6c519",
-      "bytes": 11364,
+      "sha256": "26fff8b021eb7e1f795b6593c84527a4137d890f62f8a418c22237edb1caef9a",
+      "bytes": 11720,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -15015,11 +15029,14 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/UTXORecoveryDiagnosticsTests.swift",
-      "sha256": "534f6a7eccee13af34fcb894530c0ff6f5cdf9e044dd21a229b4710a13fd8c2d",
-      "bytes": 2872,
+      "sha256": "97a7c5c1464919c0c55c1cac4b415aaf4d7579e4cfe61f252abb04fc4743a657",
+      "bytes": 3514,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md",
+        "findings/OW-2026-003.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/UTXORecoveryLiveTests.swift",
@@ -17068,8 +17085,10 @@
       "sha256": "cce55c016b53292bf77af29708cec68995a80911ef99e55c67f2e49dd312b644",
       "bytes": 11871,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/READ-NOTES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticEVMBroadcast.swift",

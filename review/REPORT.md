@@ -127,3 +127,25 @@ The same fixed source also passed the 158-check security harness locally.
 The complete intended review is not finished. The progress release preserves
 logs, source pins and checksums so another reviewer can inspect and continue it.
 It is a prerelease evidence snapshot, not a completed audit certificate.
+
+## Follow-up source repair and evidence
+
+Current target: `d2fccbe8e586e7fc48609a2a48fc4a55923aeaea`, merged through
+[application PR 2](https://github.com/devdasx/oath-wallet/pull/2).
+OW-2026-003 repairs missing public signing-policy adapters; no direct application
+caller or fund-loss exploit was established. The original authority implementation
+with added regression tests failed 37 assertions; the repaired targeted suite
+passed all 27 cases.
+
+The updated host runner retains one real XCTest process log per case rather than
+trusting Swift parallel XML's missing skip markers. On this target, Bitcoin has
+268 passed / 60 skipped / 0 failed; diagnostics has 118 passed / 2 skipped /
+0 failed. The focused Ankr adapter/price/request selection has 27 passed / 0 skipped /
+0 failed; this is **not** a full Ankr pass. Skipped live checks remain skipped.
+The unsigned generic-iOS Release build, source boundary, Gitleaks and diagnostic
+coverage checks passed locally. Exact command results are in
+`evidence/followup-results.json`. The earlier failures remain in the evidence.
+
+The remaining earlier-target CI jobs were cancelled and superseded by a full
+current-target run; cancellation is not a pass. The broader Ankr diagnostic-test
+failures, upstream review and binary provenance gaps remain unresolved.
