@@ -24,7 +24,8 @@ review of every file.
 - OW-2026-001: object collection bound was omitted in WalletConnect JSON parsing.
   Reproduced against production source; one-line repair passes the same corpus.
 - OW-2026-002: aezeed bridge source referenced by rebuild instructions is absent
-  from the public baseline. Source publication and validation are required.
+  from the public baseline. Source is now published and tested; historical binary
+  equivalence remains unresolved after differing reconstruction hashes.
 
 ## Validation boundaries
 
@@ -49,3 +50,33 @@ must accompany its results. Tests marked opt-in remain skipped.
 There is currently no basis for a whole-app completion verdict, an App Store
 binary-equivalence claim, or a ranking against other wallets. The final report
 must retain these gaps until evidence resolves them.
+
+## Current evidence snapshot
+
+Source-fix target: `ae5a35cec58f51bcfd6de3cd55950b47fa055a51`, on
+[application PR 1](https://github.com/devdasx/oath-wallet/pull/1).
+The local baseline generic-iOS Release build passed. The baseline host vault
+security harness passed 158 checks. The fixed production parser passed 6,016
+adversarial checks; the baseline failed exactly the object-limit check.
+
+[GitHub run 41238400744](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41238400744)
+reproduces those checks against the source-fix target and records its own
+Xcode 27.1/Swift 6.4 toolchain. Its status must be read directly; scheduled jobs
+are not passes. The earlier run failed the expected Xcode-version guard and was
+cancelled. Local initial failures also include resource signing and AppleDouble
+C-header pollution on an external volume; neither is hidden by successful reruns.
+
+Both Wallet Core upstream release ZIP hashes match the app manifest. This is
+archive integrity evidence, not source-to-binary equivalence. Its complete
+3,941-file upstream inventory is separately recorded and remains outstanding.
+The application repository inventory contains 4,635 tracked files, including
+website-only changes after the baseline; website files do not change app scope.
+
+Raw Gitleaks reported 431 matches when invoked from outside the app root. All
+431 reconcile with the application's existing exact, hash-bound fixture/source
+exceptions; there are zero newly unmatched fingerprints in that run. This
+reconciliation is not an independent review of those exceptions. A source-root
+scan and the public release boundary validator pass. Raw records are preserved.
+
+See [method](METHOD.md), [source notes](READ-NOTES.md), and
+[dependency limitations](DEPENDENCIES.md). There is no completion verdict.

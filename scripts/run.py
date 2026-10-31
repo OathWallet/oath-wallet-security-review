@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Run bounded, explicit host checks. Never enable live-chain tests or deployment."""
-import argparse, hashlib, json, os, platform, re, subprocess, time, tempfile
+import argparse, hashlib, json, os, platform, re, signal, subprocess, time, tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,14 +40,20 @@ def main():
     log = out/(a.check+'.log')
     code, timed_out = -1, False
     with log.open('w') as stream:
+        process = subprocess.Popen(command,cwd=source,env=env,stdout=stream,stderr=subprocess.STDOUT,start_new_session=True)
         try:
-            code = subprocess.run(command,cwd=source,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=3600).returncode
+            code = process.wait(timeout=3600)
         except subprocess.TimeoutExpired:
             timed_out = True
+            os.killpg(process.pid, signal.SIGTERM)
+            try: process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                process.wait()
     text = log.read_text(errors='replace').replace('\x00', '<NUL>').replace(str(source), '<SOURCE>').replace(str(ROOT), '<AUDIT>')
     text = text.replace(str(scratch), '<SCRATCH>').replace(os.path.expanduser('~'), '<HOME>')
     log.write_text(text)
-    summaries = [line for line in text.splitlines() if re.search(r'Executed \d+ tests|Test run with|checks passed|BUILD (SUCCEEDED|FAILED)|skipped',line)]
+    summaries = [line for line in text.splitlines() if re.search(r'Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]
     result = dict(check=a.check,source_commit=sha,command=command,status='passed' if code==0 else 'failed',exit_code=code,
                   timed_out=timed_out,duration_seconds=round(time.time()-start,2),platform=platform.platform(),
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),

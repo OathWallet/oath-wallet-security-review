@@ -4,6 +4,12 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      validation_kind:
+        description: Full suite or scanner evidence only
+        type: choice
+        default: full
+        options: [full, scanners]
 permissions:
   contents: read
 concurrency:
@@ -11,6 +17,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   inventory:
+    if: inputs.validation_kind != 'scanners'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -42,10 +49,16 @@ jobs:
         with: {persist-credentials: false}
       - run: python3 scripts/checkout.py
       - run: python3 scripts/tools.py
-      - name: Scan source for secrets
+      - name: Raw secret scan and exact hash-bound reconciliation
         run: |
           mkdir -p evidence/ci
+          set +e
           .work/tools/gitleaks dir .work/source --redact --report-format json --report-path evidence/ci/gitleaks.json > evidence/ci/gitleaks.log 2>&1
+          result=$?
+          set -e
+          printf '%s\n' "$result" > evidence/ci/gitleaks-exit-code.txt
+          test "$result" -le 1
+          python3 scripts/reconcile-secrets.py .work/source evidence/ci/gitleaks.json evidence/ci/secret-reconciliation.json
       - name: Preserve unfiltered Go dependency advisories
         if: always()
         run: |
@@ -54,6 +67,7 @@ jobs:
         if: always()
         with: {name: scanner-evidence, path: evidence/ci, retention-days: 90}
   host:
+    if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -84,6 +98,7 @@ jobs:
           path: evidence/ci
           retention-days: 90
   parser:
+    if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -112,6 +127,7 @@ jobs:
         if: always()
         with: {name: parser-evidence, path: evidence/ci, retention-days: 90}
   aezeed-source:
+    if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -145,6 +161,7 @@ jobs:
         if: always()
         with: {name: aezeed-source-evidence, path: evidence/ci, retention-days: 90}
   release-build:
+    if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
