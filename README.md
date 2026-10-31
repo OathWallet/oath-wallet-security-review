@@ -10,7 +10,8 @@ The exact baseline and current target are in [scope/source.json](scope/source.js
 **The whole-wallet review is not complete.** Test success does not turn
 outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [coverage ledger](scope/inventory.json), [findings](findings), and
-[Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) together.
+[Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
+[acceptance checklist](review/ACCEPTANCE.md) together.
 
 ## Reproduce
 
@@ -64,3 +65,11 @@ real credentials to these tests. Report newly discovered exploitable issues
 through the application's [private reporting channel](https://github.com/devdasx/oath-wallet/security/advisories/new).
 Technical details should accompany tested fixes; a public source fix is not
 proof that App Store users have received it.
+
+## Progress evidence release
+
+The [first progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress1)
+is a prerelease, not a completed audit. It identifies the original baseline and
+fixed source target and attaches sanitized logs, result records and SHA-256
+checksums. Failed attempts remain included. Workflow runs after the snapshot
+are additional evidence; they do not retroactively change its coverage claims.

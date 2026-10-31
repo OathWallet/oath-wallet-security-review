@@ -53,7 +53,7 @@ must retain these gaps until evidence resolves them.
 
 ## Current evidence snapshot
 
-Source-fix target: `ae5a35cec58f51bcfd6de3cd55950b47fa055a51`, on
+Source-fix target: `ae5a35cec58f51bcfd6de3cd55950b47fa055a51`, merged through
 [application PR 1](https://github.com/devdasx/oath-wallet/pull/1).
 The local baseline generic-iOS Release build passed. The baseline host vault
 security harness passed 158 checks. The fixed production parser passed 6,016
@@ -110,3 +110,20 @@ Current source coverage: 30 fully read application-repository files, one partial
 read, 4,604 outstanding. These include non-code assets and website files; counts
 are a coverage ledger, not a percentage security score. The completion gate also
 checks the upstream inventory and rejects outstanding dependency review.
+
+## Published repair status
+
+[Application PR 1](https://github.com/devdasx/oath-wallet/pull/1) is merged at
+`a6138b3b532c837bcc08adb1d7135cad4d3a54b7`. The tested source target remains
+`ae5a35cec58f51bcfd6de3cd55950b47fa055a51`; the original baseline is unchanged.
+The repair is public source, not an App Store update.
+
+GitHub package results available at this snapshot: OathDatabase 773 cases
+(71 skipped), OathDiagnostics 120 cases (2 skipped), OathCloudBackup 58 XCTest
+cases plus 1 Swift Testing case, OathAezeed 5 cases, and OathWalletHandoff 12
+Swift Testing cases passed. No skipped case is counted as executed coverage.
+The same fixed source also passed the 158-check security harness locally.
+
+The complete intended review is not finished. The progress release preserves
+logs, source pins and checksums so another reviewer can inspect and continue it.
+It is a prerelease evidence snapshot, not a completed audit certificate.
