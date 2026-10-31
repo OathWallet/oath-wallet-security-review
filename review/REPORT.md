@@ -22,7 +22,7 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,639 files: 106 reviewed, 8 partially reviewed, 4,525 outstanding. The Wallet Core upstream
+The application ledger contains 4,639 files: 118 reviewed, 8 partially reviewed, 4,513 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
 outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -74,7 +74,7 @@ graphs, 4,096 byte mutations and dictionary/structural limits. All five cases
 passed. [Final evidence](../evidence/ton-properties/final/ton-properties.json)
 and the initial harness-reporting failure are both retained. No new application
 vulnerability was confirmed in that increment. The audit-helper suite now has
-34 passing tests; the new properties have a dedicated audit-only CI job.
+36 passing tests; the new properties have a dedicated audit-only CI job.
 The amount oracle uses Python integer arithmetic; cell round trips are not
 independent consensus verification or exhaustive fuzzing.
 
@@ -103,6 +103,24 @@ its unknown `xcode-27` runner-label diagnostic explicitly excluded; the standard
 invocation does report that label and is not claimed to pass unmodified.
 The current-source full GitHub matrix has not completed. No simulator, phone,
 real pairing peer or App Store operation was used.
+
+## Authorization and CI-failure follow-up
+
+The TON application trace now adds **19 passing authorization assertions** on
+`a65601b`, including lock/reopen and cancellation during unfinished preparation.
+The exact dependency-pinned result and adapter limitations are documented in
+[TON boundaries](TON-BOUNDARIES.md#application-authorization-and-recovery-increment).
+
+The current GitHub run `41248923305` exposed two additional validation problems:
+its app-parser harness timed out during compilation before assertions, and one
+database deadline-observation case threw `invalidTransition`. Neither is silently
+marked passed. The runner now records timeout failures and kills only its own
+child processes; its cold-build allowance is increased from 360 to 900 seconds.
+Five app-parser assertions pass in a local rerun, but the cold GitHub retest is
+still required. The database failure is being reproduced before disposition.
+The raw Go vulnerability scan also remains a failing check with documented
+reachability/provenance gaps. Passing unsigned iOS compilation does not override
+any of these failures.
 
 ## Preserved e352f56 local validation
 

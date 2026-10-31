@@ -107,3 +107,48 @@ used. These tests do not establish full TON smart-contract correctness, all
 provider failure modes, live inclusion/replay behavior, all UI authorization
 paths, dependency provenance or side-channel resistance. Existing source fixes
 and findings remain unchanged. The whole-wallet review remains incomplete.
+
+## Application authorization and recovery increment
+
+The next read follows TON into `OathTonWallet`, `OathTonMultisig`,
+`OathTonSendService`, `OathTonSendModel`, `OathSendDiagnostics`, the database's
+`TonSend` and `WalletConnectTonJournal`, and cloud backup's `TonMultisigRecovery`.
+The three corresponding journal/backup test files and
+`Tools/CheckTonSendAuthorization.swift` were read as well. Exact file hashes are
+in the coverage ledger. Only relevant portions of `OathWalletVault` and
+`Tools/CheckMultiWallet.py` were inspected here; their other portions remain gaps.
+
+- Wallet/account/network identity and public-key/address agreement precede TON
+  signing. Imported-key and mnemonic paths remain distinct. Multisig recovery
+  validates threshold/key structure; cryptographic key agreement occurs in the
+  application. Structural backup validation alone does not prove ownership.
+- The app-lifetime send service excludes an actively submitted send from its
+  status checker, commits signed bytes before broadcast, distinguishes an
+  acknowledgement from uncertain delivery and keeps pending recovery durable.
+  A returned unknown outcome is not a claimed successful blockchain transfer.
+- The UI model uses generation and cancellation checks for quote/authentication
+  work. The database binds requests to accounts/assets, verifies journaled
+  signatures, excludes conflicting pending work and preserves monotonic receipt
+  handling. Shared preparation joins reservation and preflight; authentication
+  and cancellation still gate signing afterward.
+- Existing `Data` reset calls are not proof that every compiler/runtime copy of
+  sensitive material has been erased. Hardware Keychain/biometric behavior and
+  UI lifecycle execution were not tested by these host adapters.
+
+The new `scripts/ton-authorization.py` uses the existing host harness with a new
+entry point. It compiles the production vault, journal and imported-key TON
+signer, while retaining the original synthetic biometric, HD and network
+adapters. It **does not execute the complete app send service or its UI**.
+Remote dependencies are forced to the exact revisions in the reviewed database
+package lockfile. The temporary harness adaptation and fixture are public.
+
+All **19 assertions passed**, including the existing wrong-PIN, biometric
+fallback, cross-wallet, read-barrier and stale-authorization checks. New checks
+hold preparation unfinished, then lock/reopen or cancel before releasing it;
+no signed payload may be journaled. Preparation errors propagate, a mismatched
+asset fails, and fresh authorization subsequently signs and verifies correctly.
+Controlled continuations, not timing sleeps, govern those preparation races.
+The pinned run took 148.60 seconds including compilation. Its log, dependency
+lock and fixture hash are under `evidence/ton-authorization/pinned`; the initial
+run is retained separately. No funds, wallet secrets, device or blockchain was
+used. These checks do not establish every chain's authorization correctness.

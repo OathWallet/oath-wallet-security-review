@@ -5,10 +5,10 @@ import hashlib
 import json
 import os
 from pathlib import Path
-import subprocess
 import tempfile
 import time
 from source_state import require_source_state
+from bounded_process import logged_command
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -34,12 +34,12 @@ def main():
         (work/'Tools/CheckWalletLinks.swift').write_bytes(fixture)
         log = out/'app-boundary.log'
         with log.open('w') as stream:
-            run = subprocess.run(['python3','Tools/CheckScanner.py','--links'],cwd=work,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=360)
+            code, timed_out = logged_command(['python3','Tools/CheckScanner.py','--links'],cwd=work,env=env,stream=stream,timeout=900)
         text = log.read_text(errors='replace').replace(str(work),'<TEST-HARNESS>').replace(str(source),'<SOURCE>').replace(os.path.expanduser('~'),'<HOME>')
         log.write_text(text)
     require_source_state(source,sha)
-    passed = run.returncode == 0 and 'App pairing boundary: 5 assertions passed;' in text
-    result = dict(check='pairing-link-boundary',source_commit=sha,status='passed' if passed else 'failed',exit_code=run.returncode,
+    passed = code == 0 and 'App pairing boundary: 5 assertions passed;' in text
+    result = dict(check='pairing-link-boundary',source_commit=sha,status='passed' if passed else 'failed',exit_code=code,timed_out=timed_out,
         duration_seconds=round(time.monotonic()-start,2),fixture_sha256=hashlib.sha256(fixture).hexdigest(),
         log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),runtime_scope='macOS host; unchanged production app parsers, no pairing, network, simulator or wallet')
     (out/'app-boundary.json').write_text(json.dumps(result,indent=2)+'\n')

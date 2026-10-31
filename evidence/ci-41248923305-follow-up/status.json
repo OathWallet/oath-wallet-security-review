@@ -1,0 +1,18 @@
+{
+  "run_url": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41248923305",
+  "source_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
+  "observed_failures": [
+    {
+      "check": "OathDatabase",
+      "case": "testUpgradedDeadlineObservationTracksLeaseRetryAndSettlement",
+      "error": "invalidTransition",
+      "status": "investigating"
+    },
+    {
+      "check": "relay-envelope/app-parser",
+      "error": "cold compilation exceeded 360 seconds; assertions not reached",
+      "repair": "900-second limit; recorded timeout result; private child-process-group termination",
+      "github_retest": "not yet completed"
+    }
+  ]
+}

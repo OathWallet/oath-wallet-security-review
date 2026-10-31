@@ -37,6 +37,7 @@ python3 scripts/response-topic-check.py .work/source --output /tmp/topic-evidenc
 python3 scripts/uri-boundary-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/pairing-link-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/ton-properties.py .work/source --output /tmp/ton-evidence --scratch .work/ton-properties
+python3 scripts/ton-authorization.py .work/source --output /tmp/ton-authorization --scratch .work/ton-authorization
 python3 scripts/run.py .work/source scanner
 python3 scripts/run.py .work/source wallet-links
 python3 scripts/run.py .work/source scanner-lifecycle

@@ -1,0 +1,7 @@
+2026-10-31T22:44:32.8792810Z ##[group]Run python3 scripts/pairing-link-check.py .work/source --output evidence/ci/uri-boundary
+2026-10-31T22:44:32.8795310Z [36;1mpython3 scripts/pairing-link-check.py .work/source --output evidence/ci/uri-boundary[0m
+2026-10-31T22:50:33.2448400Z   File "/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/scripts/pairing-link-check.py", line 49, in <module>
+2026-10-31T22:50:33.2466470Z   File "/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/scripts/pairing-link-check.py", line 37, in main
+2026-10-31T22:50:33.2467530Z     run = subprocess.run(['python3','Tools/CheckScanner.py','--links'],cwd=work,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=360)
+2026-10-31T22:50:33.2485660Z     raise TimeoutExpired(self.args, timeout)
+2026-10-31T22:50:33.2486660Z subprocess.TimeoutExpired: Command '['python3', 'Tools/CheckScanner.py', '--links']' timed out after 360 seconds

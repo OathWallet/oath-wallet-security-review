@@ -6,10 +6,10 @@ import json
 import os
 from pathlib import Path
 import re
-import subprocess
 import tempfile
 import time
 from source_state import require_source_state
+from bounded_process import logged_command
 
 ROOT = Path(__file__).resolve().parents[1]
 SEED = 0x4F415448544F4E31
@@ -79,10 +79,7 @@ let package = Package(name: "TonAudit", platforms: [.macOS(.v14)],
         log = out/'ton-properties.log'
         command = ['swift','test','--package-path',str(work),'--scratch-path',str(args.scratch.resolve()),'--force-resolved-versions','--jobs','4','--filter','TonAuditProductionTests']
         with log.open('w') as stream:
-            try:
-                code = subprocess.run(command, env=env, stdout=stream, stderr=subprocess.STDOUT, timeout=900).returncode
-            except subprocess.TimeoutExpired:
-                stream.write('\nAUDIT TEST TIMEOUT\n'); code = -1
+            code,timed_out = logged_command(command,env=env,stream=stream,timeout=900)
         text = log.read_text(errors='replace').replace(str(work),'<HARNESS>').replace(str(source),'<SOURCE>').replace(os.path.expanduser('~'),'<HOME>')
         log.write_text(text)
         resolved = work/'Package.resolved'
@@ -93,7 +90,7 @@ let package = Package(name: "TonAudit", platforms: [.macOS(.v14)],
     require_source_state(source, sha)
     passed = len(passed_cases(text))
     success = successful(text, code)
-    result = dict(check='ton-properties',source_commit=sha,status='passed' if success else 'failed',exit_code=code,
+    result = dict(check='ton-properties',source_commit=sha,status='passed' if success else 'failed',exit_code=code,timed_out=timed_out,
         tests_passed=passed,duration_seconds=round(time.monotonic()-started,2),seed=hex(SEED),
         fixture_sha256=hashlib.sha256(fixture).hexdigest(),vectors_sha256=hashlib.sha256(vectors).hexdigest(),
         log='ton-properties.log',log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),

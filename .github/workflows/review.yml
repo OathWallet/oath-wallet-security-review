@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
     inputs:
       validation_kind:
-        description: Full suite, scanner evidence or isolated package rerun
+        description: Full suite, scanners, isolated packages, or boundary harnesses
         type: choice
         default: full
-        options: [full, scanners, packages]
+        options: [full, scanners, packages, boundaries]
 permissions:
   contents: read
 concurrency:
@@ -42,7 +42,7 @@ jobs:
         if: always()
         with: {name: inventory-evidence, path: evidence/ci, retention-days: 90}
   scanners:
-    if: inputs.validation_kind != 'packages'
+    if: inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -68,7 +68,7 @@ jobs:
         if: always()
         with: {name: scanner-evidence, path: evidence/ci, retention-days: 90}
   host:
-    if: inputs.validation_kind != 'scanners'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'boundaries'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -104,7 +104,7 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
       OATH_REVIEW_XCODE: '27.1'
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}
@@ -113,6 +113,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 scripts/checkout.py
       - run: python3 scripts/ton-properties.py .work/source --output evidence/ci --scratch .work/ton-properties
+      - run: python3 scripts/ton-authorization.py .work/source --output evidence/ci --scratch .work/ton-authorization
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: ton-properties-evidence, path: evidence/ci, retention-days: 90}
@@ -151,7 +152,7 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
       OATH_REVIEW_XCODE: '27.1'
-    timeout-minutes: 15
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}
@@ -171,7 +172,7 @@ jobs:
         if: always()
         with: {name: relay-envelope-evidence, path: evidence/ci, retention-days: 90}
   aezeed-source:
-    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -222,7 +223,7 @@ jobs:
         if: always()
         with: {name: aezeed-source-evidence, path: evidence/ci, retention-days: 90}
   release-build:
-    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -240,7 +241,7 @@ jobs:
         if: always()
         with: {name: unsigned-ios-release-build, path: evidence/ci, retention-days: 90}
   upstream-entropy:
-    if: inputs.validation_kind != 'scanners'
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'boundaries'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
