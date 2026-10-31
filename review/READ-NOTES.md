@@ -199,3 +199,60 @@ rejection of stale quotes while expecting their intentional availability error.
 The XRPL retry test compares the complete decoded JSON object, preserving every
 request value while accepting insignificant object-key ordering. These narrow test
 edits do not imply full source review of the surrounding price/retry test files.
+
+## Aezeed reachable Go source and independent vectors
+
+The bridge's pinned module graph was resolved with Go 1.26.5 for arm64 macOS,
+iOS and iOS Simulator compilation targets. This does not launch a simulator.
+Each target selects 112 packages, including 29 nonstandard source inputs (one
+is the application bridge). File hashes and module versions are retained in
+`evidence/bridge/selected-sources.json`. Standard-library implementation review
+and historical archive equivalence remain outstanding.
+
+Full source reads: LND `aezeed/cipherseed.go` and `errors.go`, x/crypto's
+`scrypt/scrypt.go` and `pbkdf2/pbkdf2.go`, and `kkdai/bstream/bstream.go`.
+The reachable decode path checks external version and CRC before scrypt,
+authenticates version/salt as AEZ associated data, and rejects authentication
+failure. The bridge accepts only 33 input bytes, 4096 passphrase bytes and 19
+output bytes, serializes KDF work, and permits internal versions 0 or 1.
+The fixed production KDF parameters (32768, 8, 1, 32) avoid the generic helpers'
+unchecked zero/negative-parameter cases; callers cannot choose these parameters.
+The bitstream path always consumes/emits exactly 24 words of 11 bits. Unknown
+word errors upstream contain input; the bridge returns numeric statuses only.
+No new reachable defect was established in these files. This is a code review,
+not a proof of cryptographic security or complete memory erasure: upstream KDF
+buffers and copied seed values are not all explicitly cleared. AEZ's primitive
+implementation and its architecture-specific backends remain outstanding.
+
+The source constants select four bytes of AEZ authentication expansion. Legacy
+format compatibility, password strength, and the probabilistic authentication
+bound must not be confused with an unconditional guarantee of correct-password
+recognition. No cryptographic format or shipped archive was changed.
+
+LND's wordlist initialization and reverse-map construction were read; all 2048
+unique words and their order match both the app resource and pinned Wallet Core
+BIP39 list. The wordlist body has a generated-data verification disposition,
+not a claim of manually assessing each word. `GoDependencyVectors.go` calls the
+actual pinned scrypt, PBKDF2 and BStream implementations: five independently
+specified RFC 7914 vectors and 1000 deterministic 264-bit cases pass. The 1 GiB
+RFC vector is explicitly excluded. These checks do not prove AEZ or binary
+provenance, and are separate from the LND-derived end-to-end seed fixtures.
+
+Forty raw OSV advisory records remain preserved. Their explicit Go import-path
+metadata (or explicit Go advisory aliases from the same scan) identifies SSH,
+OpenPGP, and Windows packages absent from all three selected source targets.
+The eight triage regression tests reject missing metadata, missing targets,
+version disagreement, unrelated-module aliases and any selected affected path.
+`source-advisory-triage.json` therefore records a source-level non-reachability
+disposition, not clearance of the historical archives or all dependency code.
+
+The arm64 AEZ dispatcher and `aez_ref.go` select the 64-bit bitsliced backend.
+`round_bitsliced64.go` was read fully (key layout, fixed AES4/AES10 round order,
+state cleanup and multi-block helpers). The dependency's `ct64` boolean-circuit
+implementation remains outstanding. In `aez.go`, the extraction, associated-data
+hash, 23-byte tiny-message path, decryption/tag comparison and dispatcher were
+traced; the longer-message core and complete PRF were not, so the file remains
+partially reviewed. Tag comparison accumulates differences before branching;
+this source observation is not a measured timing guarantee. Existing upstream
+AEZ, BStream, scrypt, PBKDF2 and Blake2b tests passed with Go's race detector.
+Those test passes do not change unread files' dispositions.

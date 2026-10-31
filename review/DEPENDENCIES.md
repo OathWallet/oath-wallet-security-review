@@ -26,3 +26,11 @@ The raw OSV and Govulncheck records are retained. CI intentionally retains the
 nonzero OSV result rather than hiding it through an ignore list. Future database
 updates may change the result. Standard-library advisories are also in the raw
 Govulncheck record. Full dependency triage remains outstanding.
+
+The subsequent selected-source inventory covers all three aezeed targets and
+adds `scope/upstream-aezeed.json` to completion accounting. Forty recorded OSV
+advisories are classified as **not compiled into those source targets**, based
+on exact affected-package metadata and a matching pinned module graph. Raw
+scanner failures remain visible. This resolves source reachability for that
+snapshot only; future advisories fail triage when metadata is missing or an
+affected package becomes selected. Historical archives remain unproven.

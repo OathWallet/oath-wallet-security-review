@@ -1,0 +1,92 @@
+[
+  {
+    "check": "OathAnkr",
+    "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "selected": 1402,
+    "passed": 1208,
+    "skipped": 194,
+    "case_results_sha256": "b6731936fc36ff06be30ccfbf214b0bd9686af14fa6cefbb6af2afbc8c003fdc",
+    "log_sha256": "b3b53b3c2cd1c180e1613e459963e726a4eebfaf98052c13bbe82bb235f0650b",
+    "log": "evidence/diagnostic-repairs/OathAnkr/command.log",
+    "summed_case_duration_seconds": 864.964,
+    "command": [
+      "python3",
+      "scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>",
+      "<OUTPUT>"
+    ]
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "selected": 120,
+    "skipped": 2,
+    "passed": 118,
+    "case_results_sha256": "ff92aa811789fec66d7aa440ed5c984cbbe3bc3e4bde6b2b26817189afc88b4b",
+    "log_sha256": "34fbddd9838980edea19c7931410d3b8eb20fbaadd5acb79a56529e7af08a92a",
+    "log": "evidence/diagnostic-repairs/OathDiagnostics/command.log",
+    "summed_case_duration_seconds": 14.467,
+    "command": [
+      "python3",
+      "scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>",
+      "<OUTPUT>"
+    ]
+  },
+  {
+    "check": "public",
+    "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+    "status": "passed",
+    "exit_code": 0,
+    "log": "evidence/diagnostic-repairs/public.log",
+    "log_sha256": "ba772f038ffe584701c6da5c353c8679ecad37047f1c4ee2eb16315f9615bac8",
+    "runtime_scope": "source-check",
+    "duration_seconds": null,
+    "duration_note": "Not separately timed in this local invocation; final CI runner records command duration."
+  },
+  {
+    "check": "secret-scan",
+    "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+    "status": "passed",
+    "exit_code": 0,
+    "log": "evidence/diagnostic-repairs/secret-scan.log",
+    "log_sha256": "40540d37e61fe0f970c1942aa2012055998111cffe5daa0c39b67f11ec900860",
+    "runtime_scope": "source-check",
+    "duration_seconds": null,
+    "duration_note": "Not separately timed in this local invocation; final CI runner records command duration."
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+    "status": "passed",
+    "exit_code": 0,
+    "log": "evidence/diagnostic-repairs/diagnostics-coverage.log",
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "source-check",
+    "duration_seconds": null,
+    "duration_note": "Not separately timed in this local invocation; final CI runner records command duration."
+  },
+  {
+    "check": "build",
+    "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+    "status": "passed",
+    "exit_code": 0,
+    "log": "evidence/diagnostic-repairs/build.log",
+    "log_sha256": "2b173a7691a0d6382c2d83275f06a6709f0f6840b459769e62ab45297d85cbef",
+    "runtime_scope": "compile-only",
+    "duration_seconds": null,
+    "duration_note": "Not separately timed in this local invocation; final CI runner records command duration."
+  }
+]

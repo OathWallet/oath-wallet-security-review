@@ -28,6 +28,6 @@ if __name__ == '__main__':
                    json.loads((root/'scope/inventory.json').read_text()),
                    json.loads((root/'findings/index.json').read_text()),
                    json.loads((root/'evidence/results.json').read_text()) if (root/'evidence/results.json').exists() else [],
-                   [json.loads((root/'scope/upstream-wallet-core.json').read_text())])
+                   [json.loads(path.read_text()) for path in sorted((root/'scope').glob('upstream-*.json'))])
     print(f'{len(pending)} outstanding review items. This is not an audit-completion certificate.')
     raise SystemExit(1 if pending else 0)

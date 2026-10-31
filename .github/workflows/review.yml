@@ -153,6 +153,23 @@ jobs:
           go run ./cmd/seedvectors > ../../../../evidence/ci/aezeed-vectors.json
       - name: Check public fixture equality
         run: python3 -c "import json; assert json.load(open('evidence/ci/aezeed-vectors.json')) == json.load(open('.work/source/Packages/OathAezeed/Tests/OathAezeedTests/Fixtures/lnd-production.json'))"
+      - name: Inventory all aezeed source targets and exercise independent vectors
+        run: |
+          reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
+          python3 scripts/go-source-inventory.py .work/source "$reviewed" evidence/ci/aezeed-selected-sources.json
+          cd .work/source/Tools/AezeedBridge
+          GOWORK=off GOFLAGS=-mod=readonly go run ../../../../tests/GoDependencyVectors.go > ../../../../evidence/ci/go-dependency-vectors.json
+          GOWORK=off GOFLAGS=-mod=readonly go test -race -count=1 github.com/Yawning/aez github.com/kkdai/bstream golang.org/x/crypto/scrypt golang.org/x/crypto/pbkdf2 golang.org/x/crypto/blake2b > ../../../../evidence/ci/upstream-go-tests.log
+      - name: Preserve and classify current module advisories against selected source
+        run: |
+          python3 scripts/tools.py
+          set +e
+          .work/tools/osv-scanner scan source --lockfile .work/source/Tools/AezeedBridge/go.mod --no-call-analysis=go --format json --output-file evidence/ci/aezeed-osv.json > evidence/ci/aezeed-osv.log 2>&1
+          result=$?
+          set -e
+          printf '%s\n' "$result" > evidence/ci/aezeed-osv-exit-code.txt
+          test "$result" -le 1
+          python3 scripts/go_advisory_triage.py evidence/ci/aezeed-osv.json evidence/ci/aezeed-selected-sources.json evidence/ci/aezeed-advisory-triage.json
       - name: Check reachable Go advisories
         working-directory: .work/source/Tools/AezeedBridge
         run: |

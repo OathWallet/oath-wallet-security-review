@@ -68,7 +68,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [first progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress2)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress3)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
@@ -79,3 +79,25 @@ actual skipped/passed/failed output. Swift Testing runs separately. Earlier
 Swift parallel xUnit files remain in evidence, but their missing skip markers
 must not be read as zero skipped tests; see the reporting correction in
 `review/READ-NOTES.md`. No passing command converts an opt-in skip into evidence.
+
+
+## Aezeed dependency reproduction
+
+The workflow pins Go 1.26.5. From the audit root after checkout:
+
+```sh
+reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
+python3 scripts/go-source-inventory.py .work/source "$reviewed" .work/aezeed-source-inputs.json
+python3 scripts/go_advisory_triage.py evidence/bridge/osv-go.json .work/aezeed-source-inputs.json .work/advisory-triage.json
+cd .work/source/Tools/AezeedBridge
+GOWORK=off GOFLAGS=-mod=readonly go run ../../../../tests/GoDependencyVectors.go
+GOWORK=off GOFLAGS=-mod=readonly go test -race -count=1 github.com/Yawning/aez github.com/kkdai/bstream golang.org/x/crypto/scrypt golang.org/x/crypto/pbkdf2 golang.org/x/crypto/blake2b
+```
+
+The committed OSV snapshot makes that classification replayable; CI also obtains
+and preserves a fresh snapshot. Any new unresolved affected import fails triage.
+For wordlist comparison, clone the pinned Wallet Core revision in
+`scope/upstream-wallet-core.json`, then run
+`python3 scripts/compare-aezeed-wordlists.py .work/source <WALLET_CORE> .work/wordlists.json`
+from the audit root. The module inventory does not establish historical archive
+identity or manually-reviewed coverage.

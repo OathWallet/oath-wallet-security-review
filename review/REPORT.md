@@ -1,151 +1,110 @@
-# Security review progress report
+# Oath Wallet security review progress report
 
-Status: **IN PROGRESS — not a completed whole-wallet audit**.
+**IN PROGRESS. This is not a completed whole-wallet audit.**
 
-Reviewer: Codex, acting at the maintainer's request. No independent security
-company endorsement is implied. Baseline: Oath Wallet 4.1.15 (100),
+This is a maintainer-commissioned, Codex-led security review. It is not an
+independent certification, a guarantee of zero vulnerabilities, or an App Store
+binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-## Method and scope
+Current tested source: **`f23413c848d202c2b3c7061bdb349e07144ab0a2`**,
+merged in [application PR 3](https://github.com/devdasx/oath-wallet/pull/3)
+at `82f5254cbfac195735aa938d055ff05ea4715cec`. These are public-source repairs;
+no App Store upload or submission was performed. Later source revisions do not
+automatically inherit these results.
 
-The intended scope is the full shipped app and the upstream implementations it
-uses: custody, import, storage, authentication, backup, signing, transaction
-review, swaps, WalletConnect, networking, diagnostics and build supply chain.
-Website services are inventoried but excluded from the mobile-wallet verdict.
-No production secrets or live financial transactions are used.
+## Scope and coverage
 
-The inventory hashes every tracked file. Entries remain outstanding until a
-specific source review and its scope are recorded. A full package test suite
-does not establish full branch coverage, end-to-end chain correctness or manual
-review of every file.
+The intended scope is the full shipped app and reachable dependencies: custody,
+creation/import, storage, authorization, backup, signing, transaction review,
+swaps, WalletConnect, providers, diagnostics and build supply chain. Website
+files are inventoried but excluded from the mobile-wallet verdict. No production
+secrets, funded accounts, live financial transactions or physical devices are used.
 
-## Findings
+The application ledger contains 4,635 files: 37 reviewed, 2 partially reviewed, 4596 outstanding. The Wallet Core upstream
+ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
+outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
+Standard-library implementation review remains a separate outstanding boundary.
+These counts are dispositions, not a security score. Tests and scanners never
+convert unread code into reviewed code. See the machine-readable ledgers under
+[scope](../scope) and the exact [read notes](READ-NOTES.md).
 
-- OW-2026-001: object collection bound was omitted in WalletConnect JSON parsing.
-  Reproduced against production source; one-line repair passes the same corpus.
-- OW-2026-002: aezeed bridge source referenced by rebuild instructions is absent
-  from the public baseline. Source is now published and tested; historical binary
-  equivalence remains unresolved after differing reconstruction hashes.
+## Findings and repair status
 
-## Validation boundaries
+- [OW-2026-001](../findings/OW-2026-001.md), low: missing object-collection limit in
+  the production WalletConnect JSON decoder. Baseline reproduction failed exactly
+  one of 6,016 checks; the repaired decoder passed the same corpus. Fixed and retested.
+- [OW-2026-002](../findings/OW-2026-002.md), assurance gap: the baseline omitted the
+  bridge source needed to rebuild its aezeed archives. Source, pinned modules,
+  generators and tests are published. Reconstruction matches seed vectors and
+  archive sizes but **not archive hashes**. Historical source-to-binary equivalence
+  remains unresolved; bundled binaries were not replaced.
+- [OW-2026-003](../findings/OW-2026-003.md), informational coverage defect: four EVM
+  public account-policy adapters were absent. Fixed with mocked chain-ID and policy
+  tests. No direct app caller or fund-loss exploit was established.
 
-Local results are recorded per command under `evidence/`. Initial package runs
-used Swift's default Xcode build system and failed during resource signing.
-Native-build-system reruns are separate evidence, not replacements for failures.
-Generic iOS compilation does not exercise Face ID, Keychain on iOS, app lifecycle,
-WalletConnect peer interaction or real transaction execution.
+Original findings, failed runs and retests remain available. No finding is erased
+or downgraded merely to produce a passing summary.
 
-The existing vault harness copies production sources into a host executable and
-substitutes network/hardware and selected derivation boundaries. Those limits
-must accompany its results. Tests marked opt-in remain skipped.
+## Validation on the current source commit
 
-## Outstanding work
+[Exact results](../evidence/diagnostic-repair-results.json) and per-case logs:
 
-- Complete file-by-file security dispositions and all chain integration traces.
-- Review the reachable upstream cryptographic and WalletConnect implementations.
-- Establish dependency/binary provenance beyond archive checksum verification.
-- Add remaining adversarial, property and fault-injection cases from those traces.
-- Resolve any resulting runtime-only uncertainty using narrowly scoped checks.
+- OathAnkr host package: **1,208 passed, 194 explicitly skipped, zero failed**.
+- OathDiagnostics host package: **118 passed, 2 explicitly skipped, zero failed**.
+- Generic iOS **Release compilation passed without signing**.
+- Public-source boundary validation, Gitleaks root scan and the diagnostic
+  coverage guard passed. The latter observed 713 catch sites; it is not an
+  independent review of all those sites.
 
-There is currently no basis for a whole-app completion verdict, an App Store
-binary-equivalence claim, or a ranking against other wallets. The final report
-must retain these gaps until evidence resolves them.
+Eighteen old diagnostics tests expected excluded availability failures to enter
+the local outbox. The repairs retain real recovery/cancellation assertions and
+add retained validation-error controls, chain/correlation checks and privacy
+checks. Production diagnostic behavior was not changed to satisfy tests. The
+76 official Squads vectors now run in four bounded 19-vector cases, retaining
+all message, signature, serialization and size assertions. The original single
+case exceeded the audit runner's 120-second limit; its failed log is preserved.
 
-## Current evidence snapshot
+Earlier commits have additional host and GitHub evidence, including parser,
+backup, database, authentication, lifecycle, signing and security checks. Those
+passes are **not relabeled as final-commit passes**. The new full GitHub matrix
+must independently run on the current pin; queued or cancelled jobs are not passes.
+The required final matrix is not yet complete. Each run records its real toolchain.
 
-Source-fix target: `ae5a35cec58f51bcfd6de3cd55950b47fa055a51`, merged through
-[application PR 1](https://github.com/devdasx/oath-wallet/pull/1).
-The local baseline generic-iOS Release build passed. The baseline host vault
-security harness passed 158 checks. The fixed production parser passed 6,016
-adversarial checks; the baseline failed exactly the object-limit check.
+## Dependency evidence
 
-[GitHub run 41238400744](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41238400744)
-reproduces those checks against the source-fix target and records its own
-Xcode 27.1/Swift 6.4 toolchain. The generic iOS Release build and security host harness have passed on this
-fixed commit; the remaining job statuses must be read directly. Scheduled jobs
-are not passes. The earlier run failed the expected Xcode-version guard and was
-cancelled. Local initial failures also include resource signing and AppleDouble
-C-header pollution on an external volume; neither is hidden by successful reruns.
+Wallet Core 4.8.4 release ZIP hashes match the app manifest; its source tag pins
+`d40d24a63d92619167903369308bf0e2f7eb3a59`. This verifies downloaded archive
+integrity, not source-to-binary identity.
 
-Both Wallet Core upstream release ZIP hashes match the app manifest. This is
-archive integrity evidence, not source-to-binary equivalence. Its complete
-3,941-file upstream inventory is separately recorded: three files were read
-fully, two partially, and 3,936 remain outstanding.
-The application repository inventory contains 4,635 tracked files, including
-website-only changes after the baseline; website files do not change app scope.
+The aezeed source graph was resolved for arm64 macOS, iOS and iOS Simulator
+compilation targets with Go 1.26.5. No simulator was launched. Forty retained
+module advisory records identify affected packages absent from all three selected
+graphs. Exact import metadata, explicit advisory aliases, module versions and
+regression-tested triage are retained. Raw OSV failures remain visible; this is
+source-level non-reachability evidence, **not clearance of historical binaries**.
 
-Raw Gitleaks reported 431 matches when invoked from outside the app root. All
-431 reconcile with the application's existing exact, hash-bound fixture/source
-exceptions; there are zero newly unmatched fingerprints in that run. This
-reconciliation is not an independent review of those exceptions. A source-root
-scan and the public release boundary validator pass. Raw records are preserved.
+Five RFC 7914 known-answer vectors and 1,000 deterministic bitstream cases pass
+against the pinned production dependency implementations. Existing upstream AEZ,
+BStream, scrypt, PBKDF2 and Blake2b tests also pass with the race detector. All
+2,048 aezeed words and their order match the app and pinned Wallet Core resources.
+The 1 GiB RFC vector, timing/side-channel measurements, complete memory-erasure
+proof, and unread cryptographic implementations remain outside these results.
 
-See [method](METHOD.md), [source notes](READ-NOTES.md), and
-[dependency limitations](DEPENDENCIES.md). There is no completion verdict.
+## Evidence boundaries and outstanding work
 
-## Test-suite qualification
+The host harnesses substitute selected OS, networking, hardware and derivation
+boundaries. Generic compilation does not exercise Face ID, real iOS Keychain,
+WalletConnect peers or transaction broadcasts. Runtime and visual checks were
+not performed in this review update. Opt-in live tests remain skipped.
 
-The initial full XCTest runs exposed process-global diagnostic state: production
-`OathDiagnostics.configure` initializes one outbox per process, but different test
-cases attempt to install different sinks. The audit runner now uses SwiftPM's
-separate XCTest processes. Original failures are retained, not relabeled passes.
+Swift 6.4 parallel XML omitted skip markers in an earlier run. The audit now
+retains a separate XCTest process log and classifies its actual result, with
+Swift Testing reported separately. Earlier misleading XML remains as historical
+evidence with this qualification. Initial build-environment failures are also
+retained; they are not called production vulnerabilities.
 
-Isolation does not make the whole suite pass. Remaining failures include:
-
-- legacy diagnostic expectations for availability errors now deliberately excluded;
-- TON/XRP expired-price tests expecting malformed data instead of the current
-  availability-deferral error, although both paths reject the stale quote;
-- four missing public account-policy endpoint registrations (Filecoin, Sei, 0G,
-  IoTeX); no direct application caller of that API was found;
-- a test comparing encoded JSON byte order and a context-equality assertion that
-  predates additional privacy-safe context fields.
-
-These are investigation items, not a claim that all failures are harmless. Required
-package validation remains **failed** until each expectation/implementation has a
-reviewed repair and a successful rerun. No production diagnostic behavior was
-changed to force a green result. A separate process-isolated rerun preserves xUnit
-case-level results as well as command logs.
-
-Current source coverage: 30 fully read application-repository files, one partially
-read, 4,604 outstanding. These include non-code assets and website files; counts
-are a coverage ledger, not a percentage security score. The completion gate also
-checks the upstream inventory and rejects outstanding dependency review.
-
-## Published repair status
-
-[Application PR 1](https://github.com/devdasx/oath-wallet/pull/1) is merged at
-`a6138b3b532c837bcc08adb1d7135cad4d3a54b7`. The tested source target remains
-`ae5a35cec58f51bcfd6de3cd55950b47fa055a51`; the original baseline is unchanged.
-The repair is public source, not an App Store update.
-
-GitHub package results available at this snapshot: OathDatabase 773 cases
-(71 skipped), OathDiagnostics 120 cases (2 skipped), OathCloudBackup 58 XCTest
-cases plus 1 Swift Testing case, OathAezeed 5 cases, and OathWalletHandoff 12
-Swift Testing cases passed. No skipped case is counted as executed coverage.
-The same fixed source also passed the 158-check security harness locally.
-
-The complete intended review is not finished. The progress release preserves
-logs, source pins and checksums so another reviewer can inspect and continue it.
-It is a prerelease evidence snapshot, not a completed audit certificate.
-
-## Follow-up source repair and evidence
-
-Current target: `d2fccbe8e586e7fc48609a2a48fc4a55923aeaea`, merged through
-[application PR 2](https://github.com/devdasx/oath-wallet/pull/2).
-OW-2026-003 repairs missing public signing-policy adapters; no direct application
-caller or fund-loss exploit was established. The original authority implementation
-with added regression tests failed 37 assertions; the repaired targeted suite
-passed all 27 cases.
-
-The updated host runner retains one real XCTest process log per case rather than
-trusting Swift parallel XML's missing skip markers. On this target, Bitcoin has
-268 passed / 60 skipped / 0 failed; diagnostics has 118 passed / 2 skipped /
-0 failed. The focused Ankr adapter/price/request selection has 27 passed / 0 skipped /
-0 failed; this is **not** a full Ankr pass. Skipped live checks remain skipped.
-The unsigned generic-iOS Release build, source boundary, Gitleaks and diagnostic
-coverage checks passed locally. Exact command results are in
-`evidence/followup-results.json`. The earlier failures remain in the evidence.
-
-The remaining earlier-target CI jobs were cancelled and superseded by a full
-current-target run; cancellation is not a pass. The broader Ankr diagnostic-test
-failures, upstream review and binary provenance gaps remain unresolved.
+Remaining work includes outstanding application/chain source, reachable Reown and
+cryptographic code, dependency/binary provenance, additional adversarial tests,
+and the exact final-source CI matrix. The completion checker rejects these gaps.
+There is **no whole-wallet successful-completion verdict**.

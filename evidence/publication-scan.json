@@ -2,7 +2,7 @@
   "tool": "gitleaks 8.30.1",
   "scope": "tracked and nonignored audit publication files; excludes work directories",
   "raw_exit_code": 1,
-  "raw_matches": 35,
+  "raw_matches": 36,
   "reviewed_false_positives": [
     {
       "file": "evidence/bridge/govulncheck.json",
@@ -248,8 +248,16 @@
       "sha256": "9a2bbfba5ed89c2262549353307bb52fdbcf91416809a73ad14113569509234a",
       "rule": "sourcegraph-access-token",
       "disposition": "false-positive: public Go advisory fix commit URL"
+    },
+    {
+      "file": "evidence/bridge/selected-sources.json",
+      "line": 3379,
+      "sha256": "581a7febe18c4c51a9dc6637dea5abfe176feced42682058af3c08ec8eea9d02",
+      "rule": "generic-api-key",
+      "disposition": "false-positive: public Go module pseudo-version for google.golang.org/genproto/googleapis/api"
     }
   ],
   "unresolved": 0,
-  "not_a_whole_app_secret_clearance": true
+  "not_a_whole_app_secret_clearance": true,
+  "source_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2"
 }
