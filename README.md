@@ -14,7 +14,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 
 ## Reproduce
 
-Use an isolated machine with Xcode 27, Swift 6.4 and Python 3.12 or later.
+Use an isolated machine with Xcode 27.1, Swift 6.4 and Python 3.14.7.
+Local exploratory runs used Xcode 27.0; each run records its actual toolchain.
 Package downloads require network access; opt-in live-chain tests are not enabled.
 No signing certificate, provider credential, real wallet or App Store access is needed.
 

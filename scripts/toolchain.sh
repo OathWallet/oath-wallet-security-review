@@ -9,5 +9,5 @@ mkdir -p evidence/ci
   python3 --version
   git --version
 } > evidence/ci/toolchain.txt
-grep -q 'Xcode 27.0' evidence/ci/toolchain.txt
+grep -q "Xcode ${OATH_REVIEW_XCODE:-27.0}" evidence/ci/toolchain.txt
 grep -q 'Swift version 6.4' evidence/ci/toolchain.txt
