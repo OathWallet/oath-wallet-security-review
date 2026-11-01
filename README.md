@@ -20,7 +20,14 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [incoming Link Mode boundaries](findings/OW-2026-024.md).
+Latest dependency finding: [link metadata and transport state](findings/OW-2026-025.md).
+Three nil-unwrap crashes and five rejected-input state assertions reproduce
+before repair; eight controls pass and all 16 cases pass after. SDK checks pass
+217/one skip and diagnostics 118/two skips. [Metadata review](review/LINK-SESSION-METADATA.md)
+discloses restored optional fields, the host opening callback and synchronous
+subscriber-test limits.
+
+Earlier dependency finding: [incoming Link Mode boundaries](findings/OW-2026-024.md).
 Eight cases reproduce 18 assertions before repair; eight controls pass and all
 16 cases pass after. SDK checks pass 201/one skip and diagnostics 118/two skips.
 [Link review](review/LINK-ENVELOPE-BOUNDARIES.md) distinguishes protocol dispatch
@@ -130,6 +137,7 @@ python3 scripts/watcher-lifetime.py .work/source --output .work/watcher-lifetime
 python3 scripts/cleanup-lifetime.py .work/source --output .work/cleanup-lifetime --scratch .work/cleanup-build
 python3 scripts/auth-boundary.py .work/source --output .work/auth-boundary --scratch .work/auth-build
 python3 scripts/link-boundary.py .work/source --output .work/link-boundary --scratch .work/link-build
+python3 scripts/link-metadata.py .work/source --output .work/link-metadata --scratch .work/link-metadata-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build

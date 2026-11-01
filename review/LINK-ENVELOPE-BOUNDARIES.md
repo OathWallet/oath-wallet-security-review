@@ -127,3 +127,10 @@ hashes of 65 result records were verified: 58 passes pinned to app
 historical baselines. [Durable artifact manifest](../evidence/ci-progress31/manifest.json)
 preserves their exact identities. This is separate from today's targeted tests;
 the full matrix for the new source pin is not yet verified.
+
+## Follow-up
+
+[Progress 40](LINK-SESSION-METADATA.md) proves and repairs missing redirect
+force unwraps and premature incoming transport upgrades identified as leads
+above. Outgoing topic authorization, async lifetime, URL trust and failure
+rollback remain distinct unfinished areas.

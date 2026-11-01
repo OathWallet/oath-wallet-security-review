@@ -7,7 +7,24 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`f2019f3e752ee3fb1b57d7259abb8721779f0cc8`**.
+Current review target: **`57893f12d80eea8203a7e235733f055f5dbd7902`**.
+[OW-2026-025](../findings/OW-2026-025.md) repairs missing-link-metadata traps
+and transport changes made before incoming request validation. Sixteen identical
+production cases retain three nil-unwrap crashes, five state assertions and
+eight passing controls before; all 16 pass after. SDK checks pass 217/one skip,
+diagnostics 118/two skips, and source/secret checks, diagnostics coverage,
+150 audit helper tests and unsigned generic iOS Release compilation
+(159.85 seconds) pass.
+
+[PR 35](https://github.com/devdasx/oath-wallet/pull/35) merged as `2c4c53ed752508102ea4a786cb3c12f878add3b7`.
+The application source matches the tested pin; 97 website-only differences are
+recorded in [merge identity](../evidence/link-metadata-merge-identity.json).
+[Metadata review](LINK-SESSION-METADATA.md) explains optional persisted fields,
+the host UIKit endpoint and the direct synchronous subscriber tests. These do
+not establish actual URL association, async error delivery, all outgoing-topic
+rules or a reachable Oath app trigger. Full new-target CI remains unverified.
+
+Previous target: `f2019f3e752ee3fb1b57d7259abb8721779f0cc8`.
 [OW-2026-024](../findings/OW-2026-024.md) repairs incoming Link Mode message
 authentication and response-topic/local-origin binding. The same 16 production
 cases record 18 assertions across eight failed cases and eight passing controls

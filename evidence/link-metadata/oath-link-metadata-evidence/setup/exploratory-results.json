@@ -1,0 +1,66 @@
+[
+  {
+    "case": "testSenderMissingRedirectThrowsWithoutTrapping",
+    "exit_code": 1
+  },
+  {
+    "case": "testSenderMissingUniversalThrowsWithoutTrapping",
+    "exit_code": 1
+  },
+  {
+    "case": "testResponderMissingRedirectThrowsWithoutTrapping",
+    "exit_code": 1
+  },
+  {
+    "case": "testResponderMissingUniversalPreservesPendingRequest",
+    "exit_code": 0
+  },
+  {
+    "case": "testMissingSessionSendIsRejected",
+    "exit_code": 0
+  },
+  {
+    "case": "testMissingSessionResponseIsRejected",
+    "exit_code": 0
+  },
+  {
+    "case": "testUnauthorizedSendIsRejectedBeforeMetadata",
+    "exit_code": 0
+  },
+  {
+    "case": "testMissingRedirectDoesNotUpgradeSession",
+    "exit_code": 1
+  },
+  {
+    "case": "testMissingUniversalDoesNotUpgradeSession",
+    "exit_code": 1
+  },
+  {
+    "case": "testUnauthorizedChainDoesNotUpgradeSession",
+    "exit_code": 1
+  },
+  {
+    "case": "testUnauthorizedMethodDoesNotUpgradeSession",
+    "exit_code": 1
+  },
+  {
+    "case": "testExpiredRequestDoesNotUpgradeSession",
+    "exit_code": 1
+  },
+  {
+    "case": "testValidIncomingRequestUpgradesAndEmits",
+    "exit_code": 0
+  },
+  {
+    "case": "testExistingLinkSessionStillEmits",
+    "exit_code": 0
+  },
+  {
+    "case": "testValidSendUsesEncryptedLinkAndKeepsPendingRecord",
+    "exit_code": 0
+  },
+  {
+    "case": "testValidResponseUsesEncryptedLinkAndCompletesHistory",
+    "exit_code": 0
+  }
+]

@@ -733,7 +733,7 @@
     ]
   },
   "Tools/CheckWalletConnectSDK.py": {
-    "sha256": "13ed5cbe087b14895ca1481fa9b15969f2b9faf65fb4f1b4f26b600c0024798c",
+    "sha256": "fd80d760efe44c89edb5c4ee3c7dd14a85db990fcaf3fddbd2f702f449d452cf",
     "status": "reviewed",
     "evidence": [
       "review/INPUT-BOUNDARIES.md",
@@ -744,7 +744,8 @@
       "review/REQUEST-LIFETIME-REVIEW.md",
       "review/WATCHER-LIFETIME-REVIEW.md",
       "review/AUTH-REQUEST-BOUNDARIES.md",
-      "review/LINK-ENVELOPE-BOUNDARIES.md"
+      "review/LINK-ENVELOPE-BOUNDARIES.md",
+      "review/LINK-SESSION-METADATA.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/TonAmount.swift": {
@@ -2368,12 +2369,13 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/LinkSessionRequester.swift": {
-    "sha256": "d1974d90633372342c44e24f3128b513953f21855121dbade8ae8542880993e4",
+    "sha256": "7ae05567c5e755b7e7fcdd7a79c1598943c1eeedff513661f5477d3fb50f28c6",
     "status": "partially-reviewed",
     "evidence": [
       "review/SESSION-EXPIRY-REVIEW.md",
       "review/REQUEST-LIFETIME-REVIEW.md",
-      "review/LINK-ENVELOPE-BOUNDARIES.md"
+      "review/LINK-ENVELOPE-BOUNDARIES.md",
+      "review/LINK-SESSION-METADATA.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/Extensions/Date.swift": {
@@ -2645,17 +2647,19 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkSessionRequestSubscriber.swift": {
-    "sha256": "4c5ef9aa818bb56fd1df646dbdae9345c5678fd9a84a1490d9167724f7ecb9ed",
+    "sha256": "444f9fb489222cc400253ebc1b117f8df28e41c6faed192ceb00268f66e600cf",
     "status": "partially-reviewed",
     "evidence": [
-      "review/LINK-ENVELOPE-BOUNDARIES.md"
+      "review/LINK-ENVELOPE-BOUNDARIES.md",
+      "review/LINK-SESSION-METADATA.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/LinkSessionResponder.swift": {
-    "sha256": "9270c3f3bcd75870ed9b487b114aa4a1a705885dba6db985f45c75f8dfed0c67",
+    "sha256": "3c827657bc945f24c866efd101a6b3baa265ff55b3f55418cc136008ff10b4ac",
     "status": "partially-reviewed",
     "evidence": [
-      "review/LINK-ENVELOPE-BOUNDARIES.md"
+      "review/LINK-ENVELOPE-BOUNDARIES.md",
+      "review/LINK-SESSION-METADATA.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Response.swift": {
@@ -2663,6 +2667,20 @@
     "status": "reviewed",
     "evidence": [
       "review/LINK-ENVELOPE-BOUNDARIES.md"
+    ]
+  },
+  "Tools/WalletConnectSDKValidation/LinkSessionMetadataTests.swift": {
+    "sha256": "f8818ab9fba8f9306b78a9a853c77f20ca60b2c7320c4b46d969a475a9571d0b",
+    "status": "reviewed",
+    "evidence": [
+      "review/LINK-SESSION-METADATA.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectPairing/Types/AppMetadata.swift": {
+    "sha256": "008b91518486ed576b905977162d6fbab2a4d6a0640d2f8221676d2040045f5c",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/LINK-SESSION-METADATA.md"
     ]
   }
 }
