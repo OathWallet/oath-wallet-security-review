@@ -7,7 +7,23 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`6d8fda366773726364b0cb8b389d793cd34bd0bd`**.
+Current review target: **`4cb121a588583b9b0adef626c05cbedafce3a759`**.
+[OW-2026-028](../findings/OW-2026-028.md) binds send completion and rollback
+to the original local history entry. Ten assertions across six stale-completion
+cases reproduce before; eight controls pass and all 14 pass after. SDK checks
+pass 254/one skip, diagnostics 118/two skips, 162 audit helper tests,
+source/secret checks, diagnostics coverage and unsigned generic iOS Release
+compilation (161.63 seconds) pass.
+
+[Source repair](https://github.com/devdasx/oath-wallet/pull/39) merged as `da45a6b791a67f41073a85b4f1db67f9ca6318c5`. Application source matches the tested pin;
+116 website and website-deployment differences are in [merge identity](../evidence/history-generation-merge-identity.json).
+[Compatibility and scope](HISTORY-SEND-GENERATIONS.md) documents the optional
+persisted generation, legacy-record controls and synthetic delivery endpoints.
+The repair cannot recall accepted messages or establish every pre-send boundary;
+relay acknowledgement bookkeeping and ordering remain open. Full current-target
+CI remains unverified. No remote signing exploit or fund loss is claimed.
+
+Previous target: `6d8fda366773726364b0cb8b389d793cd34bd0bd`.
 [OW-2026-027](../findings/OW-2026-027.md) repairs duplicate history mutations
 and stale cleanup across shared-store instances. Ten assertions across six
 controlled races reproduce before; five controls pass, and all 11 pass after.

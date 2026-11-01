@@ -491,5 +491,17 @@
     "retest_scope": "Eleven identical production-history cases: 10 assertions across six controlled races and five controls before; all pass after. Gated thread-safe memory storage; separate-process access and async response generation binding not established.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/37"
+  },
+  {
+    "id": "OW-2026-028",
+    "severity": "low",
+    "title": "Stale send completion deleted replacement pending requests",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-028.md",
+    "fix_commit": "4cb121a588583b9b0adef626c05cbedafce3a759",
+    "regression_only_commit": "c446732194d1e81ef1127985434ec7f19c147268",
+    "retest_scope": "Fourteen identical production transport/history cases: 10 assertions across six stale-completion cases and eight controls before; all pass after. Synthetic delivery endpoints and repeated relay ACKs; legacy-record and wire-field checks, not full peer handshake or message recall.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/39"
   }
 ]

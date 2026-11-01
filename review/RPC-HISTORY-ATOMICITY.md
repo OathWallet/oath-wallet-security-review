@@ -96,3 +96,10 @@ or live transaction occurred. Source repair is not proof of App Store availabili
 ## Publication
 
 [Source repair](https://github.com/devdasx/oath-wallet/pull/37) merged as `a853ab33e7739ab04003354d7992c33f0b07ef4b`. Application source matches the tested pin; 97 website-only differences are in [merge identity](../evidence/history-atomicity-merge-identity.json). This is not full-tree or installed-binary equality. Full current-target CI is not yet verified.
+
+## Follow-up
+
+[Progress 43](HISTORY-SEND-GENERATIONS.md) protects inspected request rollback,
+response completion and proposal completion with persisted entry generations.
+Other relay acknowledgement, pre-send authorization and cross-process questions
+remain unfinished; this does not make transmission and local mutation atomic.

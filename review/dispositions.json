@@ -445,20 +445,22 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectNetworking/NetworkingInteractor.swift": {
-    "sha256": "96473191026bf009f2932af9646b34ffece5a9c07668d199a7837d57693d6144",
-    "status": "reviewed",
+    "sha256": "e97454d8915dae9ef741fb083c794ad166901e87e3dcb97ae4d1933757db30f6",
+    "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md",
-      "findings/OW-2026-005.md"
+      "findings/OW-2026-005.md",
+      "review/HISTORY-SEND-GENERATIONS.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkEnvelopesDispatcher.swift": {
-    "sha256": "dc0b8c5fdb25a0bc4d71d174538a9a2e2f86b0a490ab720a2357e0be5a96142c",
+    "sha256": "544baddd43e86e4c17fe9f122455b0503eb15c3998037eaa85bc3c87656f66a8",
     "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
       "review/AUTH-REQUEST-BOUNDARIES.md",
-      "review/LINK-ENVELOPE-BOUNDARIES.md"
+      "review/LINK-ENVELOPE-BOUNDARIES.md",
+      "review/HISTORY-SEND-GENERATIONS.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/SessionEngine.swift": {
@@ -487,13 +489,14 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistory.swift": {
-    "sha256": "f2abb65a8e294ae352445c0ad76e0e78a1f47cc2f621829f13ec874040d5b3a6",
+    "sha256": "4fd83475cc4dc8311354cc110d4e92af6ada8509208469e0b8b562de2c28e8ff",
     "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-005.md",
       "review/SESSION-RESPONSE-ROUTING.md",
-      "review/RPC-HISTORY-ATOMICITY.md"
+      "review/RPC-HISTORY-ATOMICITY.md",
+      "review/HISTORY-SEND-GENERATIONS.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistoryFactory.swift": {
@@ -2704,6 +2707,13 @@
       "review/RPC-HISTORY-ATOMICITY.md"
     ],
     "sha256": "8f9dfaddc57644e8b2acc6c9375a428f89aab68a9dc97cf82d11e98b9e8a9797",
+    "status": "reviewed"
+  },
+  "Tools/WalletConnectSDKValidation/HistoryGenerationTests.swift": {
+    "evidence": [
+      "review/HISTORY-SEND-GENERATIONS.md"
+    ],
+    "sha256": "4e06f9d82c9592d6ca5a1bf238020261974f901d48b89224238c8d72a67fb119",
     "status": "reviewed"
   }
 }

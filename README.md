@@ -20,7 +20,13 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [RPC history atomicity](findings/OW-2026-027.md).
+Latest dependency finding: [history identity across sends](findings/OW-2026-028.md).
+Six stale-completion cases reproduce 10 assertions before; eight controls pass,
+and all 14 pass after. SDK checks pass 254/one skip; diagnostics 118/two skips.
+[Generation review](review/HISTORY-SEND-GENERATIONS.md) explains the optional local
+field, legacy decoding, synthetic relay ACKs and remaining delivery limits.
+
+Earlier dependency finding: [RPC history atomicity](findings/OW-2026-027.md).
 Six races reproduce 10 assertions before; five controls pass, and all 11 pass
 after. SDK checks pass 240/one skip and diagnostics 118/two skips.
 [History review](review/RPC-HISTORY-ATOMICITY.md) explains shared-store instances,
@@ -152,6 +158,7 @@ python3 scripts/link-boundary.py .work/source --output .work/link-boundary --scr
 python3 scripts/link-metadata.py .work/source --output .work/link-metadata --scratch .work/link-metadata-build
 python3 scripts/response-routing.py .work/source --output .work/response-routing --scratch .work/response-routing-build
 python3 scripts/history-atomicity.py .work/source --output .work/history-atomicity --scratch .work/history-atomicity-build
+python3 scripts/history-generation.py .work/source --output .work/history-generation --scratch .work/history-generation-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build
