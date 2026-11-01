@@ -5,7 +5,9 @@
   scanning a file is not a source review.
 - **Confirmed findings:** OW-2026-001, OW-2026-003, OW-2026-004 OW-2026-005 and OW-2026-006 have targeted source repairs and retests. OW-2026-002's absent
   build source is repaired; historical binary equivalence remains unresolved.
-- **Required final validation:** incomplete. The current f7441b8 target passed unsigned generic-iOS Release compilation; each new target needs its own build. The corrected Bitcoin suite passes with 60 explicit skips. OathAnkr now passes 1,208 host cases with 194 explicit skips on f23413c;
+  OW-2026-007 additionally repairs restored Ed25519 path metadata with actual
+  failed-before/passed-after tests; unused dependency API hazards remain explicit.
+- **Required final validation:** incomplete. The current 02a6e8a target passed unsigned generic-iOS Release compilation; each new target needs its own build. The corrected Bitcoin suite passes with 60 explicit skips. OathAnkr now passes 1,208 host cases with 194 explicit skips on f23413c;
   the complete current-target host matrix has not finished.
 - **Dependency provenance:** archive checksums and pinned source identities are
   recorded. Wallet Core and historical aezeed source-to-binary relationships remain unproven.
@@ -27,5 +29,8 @@
   evidence, with 7,692 outstanding completion items. Child-derivation failure
   propagation and secret-copy lifetime remain explicit open review leads.
 
-No simulator, physical device, funded account, production transaction, App Store
-upload or submission was used. Runtime and App Store verification are not passes.
+Progress 12 includes a minimal simulator-hosted C ABI check of the shipped Core
+framework for 112 restored-path key equivalences. This resolves that stated
+runtime concern only; it is not whole-app runtime validation. No physical device,
+funded account, production transaction, App Store upload or submission was used
+for the audit. App Store equivalence remains unverified.

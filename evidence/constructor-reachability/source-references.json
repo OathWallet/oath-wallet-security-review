@@ -1,0 +1,317 @@
+{
+  "application_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "qualification": "Source reference inventory, not dynamic call-graph or binary-equivalence proof. Reviewed C wrapper uses HDWallet<> default seedSize64; only explicit32 production caller uses raw-seed constructor.",
+  "application_references": [
+    {
+      "path": "OathAtmosphere/Wallet/OathThorchainWallet.swift",
+      "line": 18,
+      "source": "let wallet=HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "59a2ca67dfaa24907c0245326b4bfa33233a6b76ea8c9763947db15eb09a747c"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathXrplMultisig.swift",
+      "line": 15,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "9ec8c38d13a7560e758bed86f34f9c4642037c0cd50a334968354d0d9f14acbd"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathXrplMultisig.swift",
+      "line": 25,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "9ec8c38d13a7560e758bed86f34f9c4642037c0cd50a334968354d0d9f14acbd"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathAptosMultisig.swift",
+      "line": 15,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "6b7b7e77055c155db8d3c0f822a16b0ebbc7453becc6aea714b0dd287ea50969"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathAptosMultisig.swift",
+      "line": 25,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "6b7b7e77055c155db8d3c0f822a16b0ebbc7453becc6aea714b0dd287ea50969"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletEngine.swift",
+      "line": 36,
+      "source": "guard let wallet = HDWallet(strength: 128, passphrase: \"\") else {",
+      "sha256": "6d72bfbd45cbe5082acbe55c1a07210d214c67fc66779648c12c13804cb19a2c"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletEngine.swift",
+      "line": 101,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false) else {",
+      "sha256": "6d72bfbd45cbe5082acbe55c1a07210d214c67fc66779648c12c13804cb19a2c"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletConnectSigning.swift",
+      "line": 34,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false),",
+      "sha256": "14a4719b55d2d48e5a449ffdc047690ac2bd65302faf58926a9a270ca3fd80b3"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathXrplWallet.swift",
+      "line": 32,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "64a595069dfe089a6aacfc0e5607f9843a6e11df2210245f3e8415789041cd7b"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathXrplWallet.swift",
+      "line": 51,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "64a595069dfe089a6aacfc0e5607f9843a6e11df2210245f3e8415789041cd7b"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPolkadotWallet.swift",
+      "line": 19,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "09eebf74c0270d5f14e3526e0413d2146dfd733539aa4d2415b8f5864f8be2c1"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPolkadotWallet.swift",
+      "line": 37,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "09eebf74c0270d5f14e3526e0413d2146dfd733539aa4d2415b8f5864f8be2c1"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSolanaMultisig.swift",
+      "line": 15,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "6a4d173edb1ab0f9b71f41b82d90116134f9967dc8718cd67d68dc7f1123fa0f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSolanaMultisig.swift",
+      "line": 24,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false) else { throw OathWalletError.invalidPhrase }",
+      "sha256": "6a4d173edb1ab0f9b71f41b82d90116134f9967dc8718cd67d68dc7f1123fa0f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathNearMultisig.swift",
+      "line": 27,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "1ca2ccd985e9bbc1bb1997a18c7553ebf042d6c0e4812ca4e4bf41106400a851"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathNearMultisig.swift",
+      "line": 37,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "1ca2ccd985e9bbc1bb1997a18c7553ebf042d6c0e4812ca4e4bf41106400a851"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathStellarMultisig.swift",
+      "line": 15,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "e812fecdb97e5aa99b81014988827168689cb64790f3334aba1f32c325b16e67"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathStellarMultisig.swift",
+      "line": 25,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "e812fecdb97e5aa99b81014988827168689cb64790f3334aba1f32c325b16e67"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSuiWallet.swift",
+      "line": 28,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "151da384d0cab827c5e684560b6a633571cf72978677f5dc2b10d55b29f74743"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSuiWallet.swift",
+      "line": 48,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "151da384d0cab827c5e684560b6a633571cf72978677f5dc2b10d55b29f74743"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathThorchainMultisig.swift",
+      "line": 20,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "9dd08a31fccc4b1e6f036150063629f475678b9a9ee23edabe77fcbf46615a18"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathThorchainMultisig.swift",
+      "line": 30,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "9dd08a31fccc4b1e6f036150063629f475678b9a9ee23edabe77fcbf46615a18"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSuiMultisig.swift",
+      "line": 24,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "bca0d423cfd974839fb7eb949ef41e10d7c764e8934e014bf16ebb2b55e31323"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSuiMultisig.swift",
+      "line": 34,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "bca0d423cfd974839fb7eb949ef41e10d7c764e8934e014bf16ebb2b55e31323"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTonWallet.swift",
+      "line": 18,
+      "source": "let wallet=HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "816d29b775bf533ea448c20f6076d28c5d8a0a731211b571e5bee72ab1b7d8a9"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathEVMSigning.swift",
+      "line": 28,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "cb5a16ec3660ffd6b1a0f347181adf07d3946c1aadca1bf2bb1e57c8e53bde51"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathAptosWallet.swift",
+      "line": 18,
+      "source": "let wallet=HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "3bb540d9839f941f439da7da034e762c872b84a39278bc0d7d7c1f375f5f364f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathNearWallet.swift",
+      "line": 18,
+      "source": "let wallet=HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "19204adcd93c3fb9ce153d0f62d7544b10fa69e3e82cbc9246079df246e146b2"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathBitcoinMultisig.swift",
+      "line": 17,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "9b5a6fd23e0028047da2363d7273e34573674737a96f39eaa30a17749c631e2f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTonMultisig.swift",
+      "line": 20,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "ebcc2f9e73738584da2a1419388e12cfe7117f65ffbbdcef3d7799d9fe3356a5"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTonMultisig.swift",
+      "line": 30,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: try passphrase.map(RecoveryPassphrase.normalized) ?? \"\", check: false),",
+      "sha256": "ebcc2f9e73738584da2a1419388e12cfe7117f65ffbbdcef3d7799d9fe3356a5"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathArcSigning.swift",
+      "line": 19,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "f1f6615700fa9960a41762c374d1e06eb2c2a99dfe9ab1381cb2772226e8129f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTronMultisig.swift",
+      "line": 15,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "97a728b0afbd97353ba643da11f29e80d9d8ac422db8040d496e9466b400be4f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTronMultisig.swift",
+      "line": 25,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: passphrase ?? \"\", check: false),",
+      "sha256": "97a728b0afbd97353ba643da11f29e80d9d8ac422db8040d496e9466b400be4f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathStellarWallet.swift",
+      "line": 28,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "9334733ec285aa6ef607f256abf41f02fc5c5a26ee751968d37723f7a8d2e893"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathStellarWallet.swift",
+      "line": 48,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "9334733ec285aa6ef607f256abf41f02fc5c5a26ee751968d37723f7a8d2e893"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSolanaSigning.swift",
+      "line": 18,
+      "source": "let wallet=HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "37b6f5fbac5ba53c93a9847fa27de273a706e0448da8a6f8358b7ee0e12f3f5a"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTronWallet.swift",
+      "line": 32,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:passphrase,check:false),",
+      "sha256": "da19e35865138324ee5b135f3d328994302e0033b4f3094e5e07edc0186ba56f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathTronWallet.swift",
+      "line": 58,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic, passphrase:passphrase, check:false),",
+      "sha256": "da19e35865138324ee5b135f3d328994302e0033b4f3094e5e07edc0186ba56f"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathEVMMultisig.swift",
+      "line": 15,
+      "source": "let wallet = HDWallet(mnemonic: checked.phrase,",
+      "sha256": "6ffd3b2da522154b1c040f9ed5c60cde4285a7983967f934b7b3eb44cc7a85d1"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathEVMMultisig.swift",
+      "line": 25,
+      "source": "let wallet = HDWallet(mnemonic: phrase.phrase, passphrase: passphrase ?? \"\", check: false),",
+      "sha256": "6ffd3b2da522154b1c040f9ed5c60cde4285a7983967f934b7b3eb44cc7a85d1"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathLegacyUpgrade.swift",
+      "line": 263,
+      "source": "hd = HDWallet(mnemonic: secret.mnemonic, passphrase: try secret.bip39Passphrase, check: false)",
+      "sha256": "be43ee11a7bb4adda47d830dad045203a64c51f65fefb12516229e9c5959c8a7"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPrivateKeyExport.swift",
+      "line": 31,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false) else { throw OathWalletError.derivationFailed }",
+      "sha256": "c0d0fad327f91063be69bb737aa0495f4b556f7bed5ba64dae319e2e524481b4"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPrivateKeyExport.swift",
+      "line": 56,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false),",
+      "sha256": "c0d0fad327f91063be69bb737aa0495f4b556f7bed5ba64dae319e2e524481b4"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSolanaWallet.swift",
+      "line": 27,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false) else {",
+      "sha256": "4a2fc4bd1431eb8a8419bb797a1b9132dcb88c3ce79215d83002f0ac2092a685"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathBitcoinWallet.swift",
+      "line": 51,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false) else { throw OathWalletError.derivationFailed }",
+      "sha256": "d75b6f46e2193b9ed3ea5dc98645bd4eb11fe868e6b23f9f9865fd2afd031d90"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathBitcoinWallet.swift",
+      "line": 91,
+      "source": "let wallet = HDWallet(mnemonic: secret.mnemonic, passphrase: passphrase, check: false) else { throw OathWalletError.derivationFailed }",
+      "sha256": "d75b6f46e2193b9ed3ea5dc98645bd4eb11fe868e6b23f9f9865fd2afd031d90"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathBitcoinWallet.swift",
+      "line": 122,
+      "source": "let wallet = HDWallet(mnemonic:secret.mnemonic,passphrase:try secret.bip39Passphrase,check:false) else { throw OathWalletError.derivationFailed }",
+      "sha256": "d75b6f46e2193b9ed3ea5dc98645bd4eb11fe868e6b23f9f9865fd2afd031d90"
+    }
+  ],
+  "explicit_32byte_upstream_references": [
+    {
+      "path": "src/HDWallet.cpp",
+      "line": 417,
+      "source": "template class HDWallet<32>;",
+      "sha256": "a1a30c0bfc850c5baaf3b83fbc4beacc7d767842b5ce23c7e91b1ec98eb86e29"
+    },
+    {
+      "path": "src/ImmutableX/StarkKey.cpp",
+      "line": 35,
+      "source": "auto key = HDWallet<32>::bip32DeriveRawSeed(TWCoinTypeEthereum, seed, path);",
+      "sha256": "0c88d54fcbfa45d054c1070964bd74d5fb31a9a987e00af3fcdc9cf3d5f8cad6"
+    }
+  ],
+  "reviewed_boundary_hashes": {
+    "src/HDWallet.h": "5c08f4b860f54edc5c4b00b7162d5514bbbc8f0058592e6300e2d8d76c225d33",
+    "src/HDWallet.cpp": "a1a30c0bfc850c5baaf3b83fbc4beacc7d767842b5ce23c7e91b1ec98eb86e29",
+    "src/interface/TWHDWallet.cpp": "d48e24459a169828b755f1f3af189ef53158a2e0f80ddeb262419676800c1086",
+    "src/ImmutableX/StarkKey.cpp": "0c88d54fcbfa45d054c1070964bd74d5fb31a9a987e00af3fcdc9cf3d5f8cad6",
+    "src/ImmutableX/StarkKey.h": "7eee4641b971acdc332541f0c0cb731c60145733e552f54fe613904da09e659a",
+    "trezor-crypto/crypto/bip39.c": "bd3900318aec14386da390e030f50e311036ddda8ce764b744fa70676af35e33"
+  }
+}

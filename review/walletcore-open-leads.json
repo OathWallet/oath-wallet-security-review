@@ -21,13 +21,17 @@
     },
     {
       "id": "WC-LEAD-002",
-      "status": "open-call-reachability-unproven",
+      "status": "source-path-narrowed-runtime-unproven",
       "summary": "32-byte HDWallet template and 64-byte mnemonic seed output",
       "upstream_source": [
         "src/HDWallet.cpp:50",
         "src/HDWallet.h:28"
       ],
-      "next_evidence": "Establish compiled/exposed constructor reachability and sanitizer reproduction without replacing production logic."
+      "next_evidence": "C wrappers use HDWallet<64>; the only explicit HDWallet<32> caller uses the size-checked raw-data overload. No reachable Oath overflow established. A faithful sanitizer test of direct 32-byte mnemonic-constructor misuse remains outstanding.",
+      "evidence": [
+        "review/HDWALLET-CONSTRUCTOR-REACHABILITY.md",
+        "evidence/constructor-reachability/source-references.json"
+      ]
     },
     {
       "id": "WC-LEAD-003",

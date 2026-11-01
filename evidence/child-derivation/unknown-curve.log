@@ -1,0 +1,6 @@
+<UPSTREAM>/trezor-crypto/crypto/bip32.c:752:45: runtime error: member access within null pointer of type 'const curve_info'
+    #0 0x000100a4f23c in hdnode_deserialize bip32.c:752
+    #1 0x000100a30d84 in main UpstreamBIP32.c:36
+    #2 0x00018d3f3e7c in start+0x1a1c (dyld:arm64e+0x31e7c)
+
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior <UPSTREAM>/trezor-crypto/crypto/bip32.c:752:45

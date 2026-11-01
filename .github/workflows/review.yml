@@ -288,6 +288,10 @@ jobs:
         run: |
           reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
           python3 scripts/walletcore-mnemonic.py .work/wallet-core --app-source .work/source --app-commit "$reviewed" --output evidence/ci/upstream-mnemonic
+      - name: Test actual upstream child derivation and retain unused API failures
+        run: |
+          reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
+          python3 scripts/walletcore-bip32.py .work/wallet-core --app-source .work/source --app-commit "$reviewed" --output evidence/ci/upstream-bip32
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: upstream-entropy-evidence, path: evidence/ci, retention-days: 90}

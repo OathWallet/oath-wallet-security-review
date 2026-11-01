@@ -26,8 +26,11 @@ The application ledger contains 4,669 files: 135 reviewed, 8 partially reviewed,
 10 generated artifacts verified, 4,516 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 14 reviewed, 5 partially reviewed, 3,922 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
-unrepaired defects in dependency APIs outside the traced Oath call path;
+unrepaired defects in Go dependency APIs outside the traced Oath call path;
 [details and reproductions](AEZEED-DEPENDENCY-REVIEW.md) remain public.
+Two additional unrepaired Core C API hazards are documented in the
+[child-derivation review](CHILD-DERIVATION-REVIEW.md); no reachable Oath
+vulnerability was established for those calls.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
@@ -360,3 +363,28 @@ its older a65601b source, not the new target. The progress-11 upstream mnemonic
 job passed on GitHub against f7441b8; that full matrix remains in progress.
 No successful whole-wallet verdict is issued. Remaining derivation, secret-lifetime,
 application/dependency review and provenance gaps stay explicit.
+
+## Progress 13 — upstream child derivation and API failures
+
+The production C derivation harness passed 52 official SLIP-0010 vectors,
+1,920 independent hardened-path cases, 33 public/private child comparisons,
+20,000 malformed extended-key calls and two unchanged-on-failure checks with
+ASan/UBSan. Fifty-five audit-helper tests passed. Its static-library runner,
+fixture provenance, compiler identity, input hashes, logs and initial unsuccessful
+direct-link attempt are retained in [the evidence](../evidence/child-derivation).
+The harness is now part of the pinned GitHub workflow; its new CI run must be
+evaluated independently from the completed local result.
+
+Two separate subprocesses reproduce a null dereference for an invalid curve and
+a missing Nano public-key-generation branch. These dependency API failures are
+**unrepaired**, not successful fix regressions. The traced app path does not
+establish reachability; ordinary Core Nano public-key generation uses a different
+implementation. See [scope, source lines and reproductions](CHILD-DERIVATION-REVIEW.md).
+
+The 32-byte HDWallet constructor lead was narrowed by inspecting all matched
+application constructor calls and the explicit upstream specialization uses.
+No application patch was justified by that trace. Secret lifetime, transitive
+cryptography and other caller contracts remain open. No new application source
+change, simulator/device use, App Store upload or submission occurred in this
+increment. The completion ledger still reports 7,695 outstanding items; it does
+not convert passing derivation tests into complete file coverage.
