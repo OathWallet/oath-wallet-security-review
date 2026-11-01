@@ -1,25 +1,25 @@
 # Acceptance checklist — not complete
 
-Progress 37 targets application commit
-`eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed`. The completion checker reports
+Progress 38 targets application commit
+`a04bebfafd38f02a441c1a0ee81540882438a99c`. The completion checker reports
 **7,584 outstanding items**. This is an evidence checklist, not a security score.
 
-- **Full scope disposition: incomplete.** The app ledger has 290 reviewed,
-  48 partial, 11 generated-verified and 4,467 outstanding files out of 4,816.
+- **Full scope disposition: incomplete.** The app ledger has 293 reviewed,
+  50 partial, 11 generated-verified and 4,464 outstanding files out of 4,818.
   Website files are inventoried but excluded from the mobile-wallet verdict.
   Core retains 21 reviewed, 20 partial and 3,900 outstanding files. Tests do not
   automatically review dependencies or resolve runtime/protocol questions.
-  Three authentication files are reopened as partial for TTL/chain-input review;
-  their earlier response-topic evidence and fixes are preserved.
+  Authentication TTL/chain-input defects now have paired proofs; domain, URI,
+  link-response and failure-cleanup semantics remain partial.
 - **Confirmed findings: repairs published; historical assurance gap remains.**
-  OW-2026-001 and OW-2026-003 through OW-2026-022 retain source fixes and tests.
+  OW-2026-001 and OW-2026-003 through OW-2026-023 retain source fixes and tests.
   All eight DEP-CORE and three DEP-AEZEED repairs are integrated. OW-2026-002's
   missing source is restored, but historical binary equality remains unproven.
   The namespace defects now have paired proofs and documented reachability
   limits. Further parser, lifecycle and protocol concerns remain unresolved.
-- **Required final-target validation: incomplete.** Eight identical cleanup/storage
-  cases retain one crash and one timer-validity assertion before, with six
-  passing controls; all eight pass after. Current SDK checks pass 165/one skip, diagnostics pass 118/two skips, and source/secret
+- **Required final-target validation: incomplete.** Twenty identical authentication
+  cases retain eight crashes and 32 assertions across eight failed cases, with
+  four passing controls before; all 20 pass after. Current SDK checks pass 185/one skip, diagnostics pass 118/two skips, and source/secret
   checks, diagnostics coverage and unsigned generic iOS Release build pass.
   Other checks retain their earlier source pins. The complete new-target
   GitHub matrix is not yet verified.
@@ -38,8 +38,8 @@ Progress 37 targets application commit
   uses real production code in individual network-denied host processes and
   rejects unrelated crashes or compilation failures. It does not establish
   an inbound Oath exploit or exhaust all protocol/lifecycle states.
-- **Publication: progress only.** Application [PR 32](https://github.com/devdasx/oath-wallet/pull/32)
-  is merged as `7745d22b8333b71ea57cd7896067128285d06d5d`, with identical
+- **Publication: progress only.** Application [PR 33](https://github.com/devdasx/oath-wallet/pull/33)
+  is merged as `fab9c23e02060aa5a9e98f5000808c85fd14f28e`, with identical
   tested application source. 97 concurrent website-only changes are recorded
   separately in the merge identity evidence. Original findings and failed executions remain public.
   Final full-scope completion is not justified.

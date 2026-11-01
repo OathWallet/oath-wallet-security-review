@@ -452,10 +452,11 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkEnvelopesDispatcher.swift": {
-    "sha256": "cb4a78a5374c730f4600255b7689274503ffc2130be3719146db41e5df68ddac",
+    "sha256": "f402406dd414d208288ad89d6066c84b58c0eab7baa9a667d79fb5665a184a62",
     "status": "partially-reviewed",
     "evidence": [
-      "review/READ-NOTES.md#additional-walletconnect-and-kms-review"
+      "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
+      "review/AUTH-REQUEST-BOUNDARIES.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/SessionEngine.swift": {
@@ -523,21 +524,23 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Services/App/SessionAuthRequestService.swift": {
-    "sha256": "2fe8ab719deda44482629d5f7b5a44fa8dcd5384563e031838c5699dde403822",
+    "sha256": "49b74b1739190a3d8db400e241375e75c9a3a5c01ed9bbfad43c8a40674c3690",
     "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-005.md",
-      "review/CLEANUP-LIFETIME-REVIEW.md"
+      "review/CLEANUP-LIFETIME-REVIEW.md",
+      "review/AUTH-REQUEST-BOUNDARIES.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkAuthRequester.swift": {
-    "sha256": "4adda8c3e6c4be52db178ae642af1e00744ca19d1a37c19d8ead3864a226d84d",
+    "sha256": "cb3a67618a51b4d02b8c59c2876120f71a5dab330f7a0c56c893db43703547da",
     "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-005.md",
-      "review/CLEANUP-LIFETIME-REVIEW.md"
+      "review/CLEANUP-LIFETIME-REVIEW.md",
+      "review/AUTH-REQUEST-BOUNDARIES.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/WalletErrorResponder.swift": {
@@ -549,12 +552,13 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Auth/Types/ProtocolRPCParams/SessionAuthenticateRequestParams.swift": {
-    "sha256": "0ffef25d1c6ffb1d9f79c12b35e2ba9dfef16bdb3d04de63846259fdb36e359d",
-    "status": "partially-reviewed",
+    "sha256": "57342d780ce6be75c571b4125aa1a131e624b895b1a28e60e0c4690a9f82d554",
+    "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-005.md",
-      "review/CLEANUP-LIFETIME-REVIEW.md"
+      "review/CLEANUP-LIFETIME-REVIEW.md",
+      "review/AUTH-REQUEST-BOUNDARIES.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/KeyValueStorage.swift": {
@@ -726,7 +730,7 @@
     ]
   },
   "Tools/CheckWalletConnectSDK.py": {
-    "sha256": "e7c90f0aa80599630a78c9623c79050ca6dc54c354953530e0a400366ae590ce",
+    "sha256": "4ef3a77168d8824c82e15af3bdf30f57d238ba2a41d662fd7ccf02a3d8b8e637",
     "status": "reviewed",
     "evidence": [
       "review/INPUT-BOUNDARIES.md",
@@ -735,7 +739,8 @@
       "review/NAMESPACE-BOUNDARY-REVIEW.md",
       "review/CAIP-BOUNDARY-REVIEW.md",
       "review/REQUEST-LIFETIME-REVIEW.md",
-      "review/WATCHER-LIFETIME-REVIEW.md"
+      "review/WATCHER-LIFETIME-REVIEW.md",
+      "review/AUTH-REQUEST-BOUNDARIES.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/TonAmount.swift": {
@@ -2568,6 +2573,41 @@
     "status": "reviewed",
     "evidence": [
       "review/CLEANUP-LIFETIME-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/Types/AuthRequestParams.swift": {
+    "sha256": "9aebf56dbb468271e15c9d3797c70974c4e72c1440faceb7de69f6dc90d27fc3",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/AUTH-REQUEST-BOUNDARIES.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkEnvelopeRequesting.swift": {
+    "sha256": "d3a28c67264f72fb148b7d58e3bcadc6da8be24a321e381b5a22a0ebb070730d",
+    "status": "reviewed",
+    "evidence": [
+      "review/AUTH-REQUEST-BOUNDARIES.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/Services/App/AuthenticateTransportTypeSwitcher.swift": {
+    "sha256": "0e82b94192174c849d85edbaaf3b6ad675d49b79dde71ceea84bc0f2d5506cff",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/AUTH-REQUEST-BOUNDARIES.md"
+    ]
+  },
+  "Vendor/Reown/Sources/WalletConnectSign/Auth/SessionAuthenticatedProtocolMethod.swift": {
+    "sha256": "98e87b4b351fbbba66c1a3fedcef7eea4650efc273a3d5cd9aee6095d1558fe6",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/AUTH-REQUEST-BOUNDARIES.md"
+    ]
+  },
+  "Tools/WalletConnectSDKValidation/AuthRequestBoundaryTests.swift": {
+    "sha256": "f163f4fe744e3fafe1900f99653aeb57bddfb4e538035589389083c32054235d",
+    "status": "reviewed",
+    "evidence": [
+      "review/AUTH-REQUEST-BOUNDARIES.md"
     ]
   }
 }

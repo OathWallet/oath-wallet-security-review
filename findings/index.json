@@ -431,5 +431,17 @@
     "retest_scope": "Same eight production cases: one unowned-reference abort, one timer-validity assertion and six passing controls before; all eight pass after. Default-preserving queue injection is disclosed. Real timers, memory-only stores, network-denied host processes; no remotely triggered Oath teardown demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/32"
+  },
+  {
+    "id": "OW-2026-023",
+    "severity": "low",
+    "title": "Authentication inputs bypassed expiry bounds and chain checks before side effects",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-023.md",
+    "fix_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "regression_only_commit": "9050542eed7417e7c0a6ddb14f399ad51c028939",
+    "retest_scope": "Identical 20-case production corpus: 32 assertions across eight failed cases, eight crashes and four controls before; all 20 pass after. Disclosed KMS/link interfaces permit memory-only spies; network denied. Outer switcher ordering is source-reviewed/compiled, not runtime tested; no incoming Oath authorization bypass shown.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/33"
   }
 ]
