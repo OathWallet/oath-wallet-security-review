@@ -722,13 +722,14 @@
     ]
   },
   "Tools/CheckWalletConnectSDK.py": {
-    "sha256": "bb957ebe2726e1fac58c45b244187de8e8e130062cc915bb2aa05de629527282",
+    "sha256": "9abea0567fa4323440c248e348414237f920a76eb2ca9612858880c1cf3bb130",
     "status": "reviewed",
     "evidence": [
       "review/INPUT-BOUNDARIES.md",
       "review/EVENTS-LIFECYCLE-REVIEW.md",
       "review/SESSION-EXPIRY-REVIEW.md",
-      "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      "review/NAMESPACE-BOUNDARY-REVIEW.md",
+      "review/CAIP-BOUNDARY-REVIEW.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/TonAmount.swift": {
@@ -2407,24 +2408,48 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/Account.swift": {
-    "sha256": "1f05f310cf0b9975aea1827928fe91a8e5013b73dbd344fa7eb60ec32d06daf8",
-    "status": "partially-reviewed",
+    "sha256": "5575bf2d15769d1692d0d9be6916ea70add940b8d0d339d9cdc67c2cc82f11f8",
+    "status": "reviewed",
     "evidence": [
-      "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      "review/NAMESPACE-BOUNDARY-REVIEW.md",
+      "review/CAIP-BOUNDARY-REVIEW.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/Blockchain.swift": {
     "sha256": "3154bab76a0c84c7dda7c7cbf16e8e7f3503bc62f0e20f454afc939eae8fe12d",
-    "status": "partially-reviewed",
+    "status": "reviewed",
     "evidence": [
-      "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      "review/NAMESPACE-BOUNDARY-REVIEW.md",
+      "review/CAIP-BOUNDARY-REVIEW.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/Extensions/String+CAIPs.swift": {
     "sha256": "bfdc2e170d2445ae7a532b910386eee604497a1257360674558123d5750b4758",
-    "status": "partially-reviewed",
+    "status": "reviewed",
     "evidence": [
-      "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      "review/NAMESPACE-BOUNDARY-REVIEW.md",
+      "review/CAIP-BOUNDARY-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Tests/WalletConnectSignTests/AccountTests.swift": {
+    "sha256": "fdf9a145d173fb632b280496e6da17a8781a9f94fabc57b32778f071fc82c103",
+    "status": "reviewed",
+    "evidence": [
+      "review/CAIP-BOUNDARY-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Tests/WalletConnectSignTests/BlockchainTests.swift": {
+    "sha256": "03ab32b1180f31d8b6086f8d150cd513e79c0bcb9a3986b0d30ab449033bf0a1",
+    "status": "reviewed",
+    "evidence": [
+      "review/CAIP-BOUNDARY-REVIEW.md"
+    ]
+  },
+  "Tools/WalletConnectSDKValidation/CAIPBoundaryTests.swift": {
+    "sha256": "7eb2b68e53c89534b859e39c9765c7d532114017b4d5b2d0a5085e9e24a50caf",
+    "status": "reviewed",
+    "evidence": [
+      "review/CAIP-BOUNDARY-REVIEW.md"
     ]
   }
 }

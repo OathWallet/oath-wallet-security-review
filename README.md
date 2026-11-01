@@ -20,7 +20,14 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [chain-scoped namespace validation](findings/OW-2026-018.md).
+Latest dependency finding: [separate-field CAIP account validation](findings/OW-2026-019.md).
+Two expected assertions fail in one case before repair; all seven identical
+cases pass after. SDK checks pass 136/one skip; diagnostics pass 118/two skips;
+unsigned iOS Release compilation passes. [Parser review](review/CAIP-BOUNDARY-REVIEW.md)
+records the rejected line-ending hypothesis, independent character oracle,
+seeded corpus, preserved TON extension and limited app reachability.
+
+Earlier dependency finding: [chain-scoped namespace validation](findings/OW-2026-018.md).
 The same 15 production cases retain two crashes and 15 expected test failures
 before repair, with four passing controls; all 15 pass after. SDK checks pass
 118/one skip, diagnostics pass 118/two skips and unsigned iOS Release compilation
@@ -84,6 +91,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build
 python3 scripts/swap-approval.py .work/source --output .work/approval-after --scratch .work/approval-after-build

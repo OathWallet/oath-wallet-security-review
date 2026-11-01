@@ -1,5 +1,5 @@
 {
-  "source_commit": "2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4",
+  "source_commit": "8e5b6b0f565026951d7cef9435258daa0b02b9b2",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -20214,15 +20214,16 @@
     },
     {
       "path": "Tools/CheckWalletConnectSDK.py",
-      "sha256": "bb957ebe2726e1fac58c45b244187de8e8e130062cc915bb2aa05de629527282",
-      "bytes": 4390,
+      "sha256": "9abea0567fa4323440c248e348414237f920a76eb2ca9612858880c1cf3bb130",
+      "bytes": 4457,
       "category": "test",
       "status": "reviewed",
       "evidence": [
         "review/INPUT-BOUNDARIES.md",
         "review/EVENTS-LIFECYCLE-REVIEW.md",
         "review/SESSION-EXPIRY-REVIEW.md",
-        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+        "review/NAMESPACE-BOUNDARY-REVIEW.md",
+        "review/CAIP-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -21055,6 +21056,16 @@
       "category": "build-or-documentation",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Tools/WalletConnectSDKValidation/CAIPBoundaryTests.swift",
+      "sha256": "7eb2b68e53c89534b859e39c9765c7d532114017b4d5b2d0a5085e9e24a50caf",
+      "bytes": 6072,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/CAIP-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Tools/WalletConnectSDKValidation/EventsPrivacyLifecycleTests.swift",
@@ -30005,12 +30016,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/Account.swift",
-      "sha256": "1f05f310cf0b9975aea1827928fe91a8e5013b73dbd344fa7eb60ec32d06daf8",
-      "bytes": 4011,
+      "sha256": "5575bf2d15769d1692d0d9be6916ea70add940b8d0d339d9cdc67c2cc82f11f8",
+      "bytes": 4099,
       "category": "dependency",
-      "status": "partially-reviewed",
+      "status": "reviewed",
       "evidence": [
-        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+        "review/NAMESPACE-BOUNDARY-REVIEW.md",
+        "review/CAIP-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -30018,9 +30030,10 @@
       "sha256": "3154bab76a0c84c7dda7c7cbf16e8e7f3503bc62f0e20f454afc939eae8fe12d",
       "bytes": 2832,
       "category": "dependency",
-      "status": "partially-reviewed",
+      "status": "reviewed",
       "evidence": [
-        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+        "review/NAMESPACE-BOUNDARY-REVIEW.md",
+        "review/CAIP-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -30179,9 +30192,10 @@
       "sha256": "bfdc2e170d2445ae7a532b910386eee604497a1257360674558123d5750b4758",
       "bytes": 1583,
       "category": "dependency",
-      "status": "partially-reviewed",
+      "status": "reviewed",
       "evidence": [
-        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+        "review/NAMESPACE-BOUNDARY-REVIEW.md",
+        "review/CAIP-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -31556,8 +31570,10 @@
       "sha256": "fdf9a145d173fb632b280496e6da17a8781a9f94fabc57b32778f071fc82c103",
       "bytes": 2465,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/CAIP-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Tests/WalletConnectSignTests/ApproveEngineTests.swift",
@@ -31596,8 +31612,10 @@
       "sha256": "03ab32b1180f31d8b6086f8d150cd513e79c0bcb9a3986b0d30ab449033bf0a1",
       "bytes": 1478,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/CAIP-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Tests/WalletConnectSignTests/ControllerSessionStateMachineTests.swift",

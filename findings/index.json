@@ -383,5 +383,17 @@
     "retest_scope": "Identical 15-case production corpus: 13 assertion failures and two rejected-valid-case errors, two optional-unwrapping crashes, four controls before; all 15 pass after. Fixed hashing, 128 references and four dictionary capacities. Network denied; no end-to-end Oath exploit or signature bypass shown.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/26"
+  },
+  {
+    "id": "OW-2026-019",
+    "severity": "low",
+    "title": "Account constructor accepted an invalid separate chain argument",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-019.md",
+    "fix_commit": "8e5b6b0f565026951d7cef9435258daa0b02b9b2",
+    "regression_only_commit": "764dd608519e8f30f60e3dea4a553c1def2f8c07",
+    "retest_scope": "Same seven cases: two expected assertions in one case and six passing controls before; all seven pass after. Network-denied production-model checks with character corpus, seeded inputs, Codable and bounds. Oath uses typed-chain constructor in inspected approval path; no app exploit shown.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/29"
   }
 ]

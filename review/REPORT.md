@@ -7,7 +7,22 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4`**.
+Current review target: **`8e5b6b0f565026951d7cef9435258daa0b02b9b2`**.
+[OW-2026-019](../findings/OW-2026-019.md) repairs the SDK's separate-field
+account initializer. One case retains two expected assertions before; all seven
+identical cases pass after. The corpus includes byte/Unicode mutations, Codable,
+bounds and 4,096 seeded tuples. The original line-ending hypothesis did not
+reproduce. SDK checks pass 136/one skip; diagnostics pass 118/two skips; source/
+secret checks, diagnostics coverage, 127 audit helpers and unsigned generic iOS
+Release compilation (152.44 seconds) pass.
+[PR 29](https://github.com/devdasx/oath-wallet/pull/29) is merged as
+`a92996a8830e39f8ee9cd2a58c41825aaba2e13d`. Its application source matches the tested
+commit exactly. Nine concurrent website-only files differ; those changes are
+outside the mobile-wallet verdict and are not represented as tested app source.
+[Merge identity evidence](../evidence/caip-merge-identity.json) and
+[review scope](CAIP-BOUNDARY-REVIEW.md) record that distinction.
+
+Previous target: `2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4`.
 [OW-2026-018](../findings/OW-2026-018.md) repairs namespace requirement loss,
 malformed-key handling and optional-unwrapping traps. The identical 15-case
 corpus retains 13 assertion failures, two errors rejecting valid inputs and
@@ -28,7 +43,7 @@ The previous [event lifecycle repair](../findings/OW-2026-016.md) at
 `4cfeb14ce9bd85ca2d10017cb053ab421df30cf2` retains its original nine-case proof
 and 14 expected baseline assertions. Those evidence records remain bound to
 that earlier source, with broader current SDK regression results recorded above.
-[PR 25](https://github.com/devdasx/oath-wallet/pull/25) is merged with the
+[PR 24](https://github.com/devdasx/oath-wallet/pull/24) is merged with the
 identical tested source tree. No App Store operation occurred.
 
 The prior [relay metadata repair](../findings/OW-2026-015.md) at
@@ -69,8 +84,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,812 files: 278 reviewed, 42 partially reviewed,
-11 generated artifacts verified, 4,481 outstanding. The inventory also includes
+The application ledger contains 4,813 files: 284 reviewed, 39 partially reviewed,
+11 generated artifacts verified, 4,479 outstanding. The inventory also includes
 website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
@@ -108,6 +123,11 @@ No new production defect was confirmed. The new CI job is configured but its
 GitHub execution remains unverified; no app source was changed.
 
 ## Findings and repair status
+
+- [OW-2026-019](../findings/OW-2026-019.md), low: an invalid separate chain argument
+  could borrow its missing component from the address. Fixed and retested with
+  seven identical cases. Oath's inspected approval path uses a typed chain;
+  no app-level signing bypass was demonstrated.
 
 - [OW-2026-018](../findings/OW-2026-018.md), low: namespace validation lost
   required entries or trapped on optional values. Fixed and retested with the

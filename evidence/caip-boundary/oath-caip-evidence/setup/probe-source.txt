@@ -1,0 +1,4 @@
+import Foundation
+for suffix in ["\n", "\r", "\r\n", "\u{0085}", "\u{2028}", "\u{2029}"] {
+ print(suffix.unicodeScalars.map { String($0.value, radix: 16) }, Blockchain("eip155:1" + suffix) != nil, Account("eip155:1:synthetic" + suffix) != nil)
+}
