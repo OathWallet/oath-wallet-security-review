@@ -20,7 +20,14 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [SDK event opt-out lifecycle](findings/OW-2026-016.md).
+Latest dependency finding: [session expiry bounds](findings/OW-2026-017.md).
+The same 13 production cases reproduce seven expected assertions and three
+conversion crashes before repair, with six passing controls; all 13 pass after.
+SDK checks pass 82/one skip, diagnostics pass 118/two skips, and unsigned iOS
+Release compilation passes. [Review notes](review/SESSION-EXPIRY-REVIEW.md)
+explain the limited Oath reachability and outstanding namespace/lifecycle work.
+
+Earlier application finding: [SDK event opt-out lifecycle](findings/OW-2026-016.md).
 All nine identical production tests pass after reproducing 14 expected assertions
 before. Initialization, collection, cancellation and stale acknowledgements are
 covered. [Review notes](review/EVENTS-LIFECYCLE-REVIEW.md) also preserve the prior
@@ -70,6 +77,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build
 python3 scripts/swap-approval.py .work/source --output .work/approval-after --scratch .work/approval-after-build
 python3 scripts/swap-progress.py .work/source --output .work/swap-after --scratch .work/swap-after-build
 python3 scripts/permission-batch-races.py .work/source --output .work/batch-after --scratch .work/batch-after-build

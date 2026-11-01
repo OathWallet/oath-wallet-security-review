@@ -359,5 +359,17 @@
     "retest_scope": "Same nine production-code host tests under network denial: 14 expected assertions across seven failed cases and two passing controls before; all nine pass after. Memory stores, cancellation-resistant fake transport and intercepted URLSession. Bounded 0.3-second negative observations; no real telemetry delivery or fund-loss claim.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/24"
+  },
+  {
+    "id": "OW-2026-017",
+    "severity": "low",
+    "title": "Session expiry unit mismatch and unchecked timestamp conversions",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-017.md",
+    "fix_commit": "fd002d9272a767352c114e8b752a21f65f0694cc",
+    "regression_only_commit": "43281bdf88781f28f12cddbf87ec9dee03079e8b",
+    "retest_scope": "Same 13 production-code cases in isolated network-denied processes: seven expected assertions across four cases, three conversion crashes and six passing controls before; all 13 pass after. Dependency API proof only; no remote Oath exploit or fund loss demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/25"
   }
 ]

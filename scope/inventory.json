@@ -1,5 +1,5 @@
 {
-  "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+  "source_commit": "fd002d9272a767352c114e8b752a21f65f0694cc",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -20214,13 +20214,14 @@
     },
     {
       "path": "Tools/CheckWalletConnectSDK.py",
-      "sha256": "01bc45315d2aaba9c8e30b506f3a58967fa7c4680be0984afbfebc3f973b3721",
-      "bytes": 3959,
+      "sha256": "bdb1b28546de198d46bec16734b7d582252b05170946fd8dbff8204d89cdb5a2",
+      "bytes": 4201,
       "category": "test",
       "status": "reviewed",
       "evidence": [
         "review/INPUT-BOUNDARIES.md",
-        "review/EVENTS-LIFECYCLE-REVIEW.md"
+        "review/EVENTS-LIFECYCLE-REVIEW.md",
+        "review/SESSION-EXPIRY-REVIEW.md"
       ]
     },
     {
@@ -21123,6 +21124,16 @@
       "category": "build-or-documentation",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Tools/WalletConnectSDKValidation/SessionExpiryTests.swift",
+      "sha256": "9a3061e5dac47984267242e278fd7c35825d71d3b550b48e8b5801444ff0e31f",
+      "bytes": 4126,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Tools/WalletConnectSDKValidation/SocketWaitTests.swift",
@@ -29242,8 +29253,10 @@
       "sha256": "626bddac180992c9d3f6eb376cdc95407dcd05132392f0e99aa4bdbd32b85093",
       "bytes": 164,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/ApproveEngine.swift",
@@ -29317,24 +29330,30 @@
       "sha256": "4fcf3a8534c362ec27ac12f9a1a84dc0ba557ef4062e8f602cac25fa8a088e7d",
       "bytes": 2930,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/SessionExtendRequester.swift",
       "sha256": "f063e4ae34f200453e26f1d7a533392222bc5dd0b8fe7d354af8961aeb8f4925",
       "bytes": 1043,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/SessionExtendResponseSubscriber.swift",
       "sha256": "f80d2b8526356052cce25a4d539f0d06f76f9b2c64ce40e825fd35f827ccbea5",
       "bytes": 1704,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Engine/Dapp/NonControllerSessionStateMachine.swift",
@@ -29376,8 +29395,10 @@
       "sha256": "d1974d90633372342c44e24f3128b513953f21855121dbade8ae8542880993e4",
       "bytes": 2195,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/LinkSessionResponder.swift",
@@ -29392,10 +29413,11 @@
       "sha256": "d29c064ecc367f826fc8c41b5fd54d0f99cfcea7ebcfc7146526cfb2fe437151",
       "bytes": 3130,
       "category": "dependency",
-      "status": "reviewed",
+      "status": "partially-reviewed",
       "evidence": [
         "review/RELAY-METADATA-REVIEW.md",
-        "findings/OW-2026-015.md"
+        "findings/OW-2026-015.md",
+        "review/SESSION-EXPIRY-REVIEW.md"
       ]
     },
     {
@@ -29467,11 +29489,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Request.swift",
-      "sha256": "d3fab081286617a079b7a879adf2a2b74980f7f8ac63dd8b89ecf70193e19df7",
-      "bytes": 2875,
+      "sha256": "d24974bc2573551ebaa89d4f9eb8f902d710cad885ba581a2f5f7ca441ea0452",
+      "bytes": 3132,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Resources/PrivacyInfo.xcprivacy",
@@ -29737,11 +29761,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Types/Session/WCSession.swift",
-      "sha256": "ce7a66705cc5bb7a75f7e5824addceac6808087d5700a0e22cdaaa0c93876596",
-      "bytes": 10291,
+      "sha256": "956265c550a88b606a944d7c4bbfd1b4d6c0267a3f44584568a5df6c772bab07",
+      "bytes": 10643,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Types/SignReasonCode.swift",
@@ -30105,8 +30131,10 @@
       "sha256": "12826bac97f73730409964bf6438559aa24fa966eccf8af2c91663ff4afca44f",
       "bytes": 274,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/SESSION-EXPIRY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/Extensions/Dictionary.swift",

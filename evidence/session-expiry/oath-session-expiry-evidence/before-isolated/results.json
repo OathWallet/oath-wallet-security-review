@@ -1,0 +1,106 @@
+[
+  {
+    "case": "testNegativeRelativeExtensionCannotReviveExpiredSession",
+    "exit_code": 1,
+    "seconds": 1.885,
+    "assertions": 2,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testNegativeRelativeExtensionCannotReviveExpiredSession.log"
+  },
+  {
+    "case": "testCannotShortenLiveSession",
+    "exit_code": 1,
+    "seconds": 1.243,
+    "assertions": 2,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testCannotShortenLiveSession.log"
+  },
+  {
+    "case": "testCannotMoveExpiryIntoPast",
+    "exit_code": 1,
+    "seconds": 1.218,
+    "assertions": 2,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testCannotMoveExpiryIntoPast.log"
+  },
+  {
+    "case": "testMaximumIntegerDoesNotTrap",
+    "exit_code": 1,
+    "seconds": 1.322,
+    "assertions": 0,
+    "fatal": true,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testMaximumIntegerDoesNotTrap.log"
+  },
+  {
+    "case": "testMinimumIntegerDoesNotTrap",
+    "exit_code": 1,
+    "seconds": 1.464,
+    "assertions": 0,
+    "fatal": true,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testMinimumIntegerDoesNotTrap.log"
+  },
+  {
+    "case": "testCannotExceedSevenDayWindow",
+    "exit_code": 0,
+    "seconds": 1.179,
+    "assertions": 0,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testCannotExceedSevenDayWindow.log"
+  },
+  {
+    "case": "testValidExtensionPreservesExactTimestamp",
+    "exit_code": 0,
+    "seconds": 1.21,
+    "assertions": 0,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testValidExtensionPreservesExactTimestamp.log"
+  },
+  {
+    "case": "testAcknowledgementAtSameSecondIsIdempotent",
+    "exit_code": 0,
+    "seconds": 1.177,
+    "assertions": 0,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testAcknowledgementAtSameSecondIsIdempotent.log"
+  },
+  {
+    "case": "testMaximumRequestExpiryDoesNotTrap",
+    "exit_code": 1,
+    "seconds": 1.441,
+    "assertions": 0,
+    "fatal": true,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testMaximumRequestExpiryDoesNotTrap.log"
+  },
+  {
+    "case": "testRequestCannotAdvertiseUnboundedTtl",
+    "exit_code": 1,
+    "seconds": 1.33,
+    "assertions": 1,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testRequestCannotAdvertiseUnboundedTtl.log"
+  },
+  {
+    "case": "testElapsedRequestRetainsRemainingTtl",
+    "exit_code": 0,
+    "seconds": 1.193,
+    "assertions": 0,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testElapsedRequestRetainsRemainingTtl.log"
+  },
+  {
+    "case": "testMissingRequestExpiryUsesDefault",
+    "exit_code": 0,
+    "seconds": 1.225,
+    "assertions": 0,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testMissingRequestExpiryUsesDefault.log"
+  },
+  {
+    "case": "testExpiredRequestThrows",
+    "exit_code": 0,
+    "seconds": 1.195,
+    "assertions": 0,
+    "fatal": false,
+    "log": "/tmp/oath-session-expiry-evidence/before-isolated/testExpiredRequestThrows.log"
+  }
+]
