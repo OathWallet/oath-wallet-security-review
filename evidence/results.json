@@ -3407,5 +3407,68 @@
     "kdf_vectors_sha256": "1c6cc0d56dfd6294eccd3cdfb29d87a93cf1bcb87625630ba887a07379c9b269",
     "log_sha256": "6dd229a38ca5410d55750880a45d1f0ed75df54ea949d3df54423ed98573ab1b",
     "evidence_path": "walletcore-mnemonic/with-kdf/result.json"
+  },
+  {
+    "check": "cloud-restore",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "macOS host; production restoration/encryption/SQL; substituted Core derivation",
+    "log": "evidence/restored-path/after.log",
+    "log_sha256": "849a4dc9616b83ed00e40b8bd0c078ac45fe46325f257e3888a4da9c49c12177",
+    "assertion_count": 140,
+    "duration_seconds": 75.54
+  },
+  {
+    "check": "public",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "source and secret scan",
+    "log": "evidence/restored-path/public.log",
+    "log_sha256": "c72c4103c6e05b501d7e6195972cce7b62eb787d72bddc7df1c1d07ad1e45cb5"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "source scan",
+    "log": "evidence/restored-path/diagnostics-coverage.log",
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "isolated macOS XCTest processes",
+    "log": "evidence/restored-path/diagnostics.log",
+    "log_sha256": "7cccf20a29753a7fc2a439b85291ed7f740c6e959ddc9262bb221f1e497f6c20",
+    "passed": 118,
+    "skipped": 2,
+    "failed": 0
+  },
+  {
+    "check": "build",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "unsigned generic iOS Release compilation only",
+    "log": "evidence/restored-path/build.log",
+    "log_sha256": "9edc09afada6bf020df4c017c08b2e129ca2de08ae48a29442f2889f2f8b2820"
+  },
+  {
+    "check": "core-path-compatibility",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "runtime_scope": "actual Wallet Core 4.8.4 simulator framework in minimal C ABI process, not app UI",
+    "log": "evidence/restored-path/core-compatibility/runtime.log",
+    "log_sha256": "846a3be0a8ab00eeab40b7a915a0d751fa363fc10fd9603fbd018d5ad1d9139b",
+    "equivalent_keys": 112,
+    "chains": 7,
+    "path_pairs": 8,
+    "seeds": 2
   }
 ]

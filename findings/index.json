@@ -62,5 +62,15 @@
     "fix_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/6",
     "retest_scope": "Identical eight-case corpus: 3 pass/5 fail before, 8 pass after. Production app parser accepts the synthetic input. No relay, signing or fund-loss demonstration."
+  },
+  {
+    "id": "OW-2026-007",
+    "severity": "low",
+    "title": "Restored Ed25519 paths describe child steps skipped by Wallet Core",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-007.md",
+    "fix_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/9",
+    "retest_scope": "Identical restoration fixture fails before and passes 140 checks after; actual Core simulator framework confirms 112 key equivalences. Host derivation is substituted; no app UI, real credentials, transactions or App Store verification."
   }
 ]

@@ -11,7 +11,11 @@ SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
 SCANNER_MODES = {'scanner': [], 'wallet-links': ['--links'], 'scanner-lifecycle': ['--performance']}
 MODES = ['envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
          'evm-send', 'solana-send', 'tron-send', 'xrpl-send', 'stellar-send',
-         'aptos-send', 'sui-send', 'near-send', 'ton-send', 'thorchain-send', 'arc-send', 'permission-batch']
+         'aptos-send', 'sui-send', 'near-send', 'ton-send', 'thorchain-send', 'arc-send', 'permission-batch', 'cloud-restore']
+
+def restore_case_count(text):
+    matches = re.findall(r'^Passed (\d+) cloud-restore integration checks \(local synthetic backups; no live iCloud\)\.$', text, re.MULTILINE)
+    return int(matches[0]) if len(matches) == 1 and int(matches[0]) >= 140 else None
 
 def scanner_case_count(mode, text):
     """Require the harness's final assertion summary, not just a successful build."""
@@ -89,6 +93,9 @@ def main():
     log.write_text(text)
     sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES else None
     scanner_cases = scanner_case_count(a.check, text) if a.check in SCANNER_MODES else None
+    restore_cases = restore_case_count(text) if a.check == 'cloud-restore' else None
+    if a.check == 'cloud-restore' and restore_cases is None:
+        code = code or 1
     if a.check in SCANNER_MODES and scanner_cases is None:
         code = code or 1
     if sdk_cases is not None:
@@ -101,6 +108,9 @@ def main():
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
                   runtime_scope='host' if a.check!='build' else 'compile-only',live_network_tests_enabled=False)
     if sdk_cases is not None: result['xctest_cases'] = sdk_cases
+    if a.check == 'cloud-restore':
+        result['assertion_count'] = restore_cases
+        result['runtime_scope'] = 'macOS host; production restoration/encryption/SQL; substituted Wallet Core derivation; no live iCloud'
     if a.check in SCANNER_MODES:
         result['assertion_count'] = scanner_cases
         result['runtime_scope'] = 'macOS host; synthetic QR images, no camera, simulator, device or live-chain request'

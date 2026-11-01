@@ -1,11 +1,11 @@
 {
-  "application_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "application_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
   "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
   "qualification": "Investigation queue, not confirmed repaired vulnerabilities. See MNEMONIC-DERIVATION-REVIEW.md.",
   "leads": [
     {
       "id": "WC-LEAD-001",
-      "status": "open-needs-end-to-end-reproduction",
+      "status": "confirmed-application-boundary-repaired",
       "summary": "Ignored child derivation failures and curve-agnostic restored paths",
       "upstream_source": [
         "src/HDWallet.cpp:139",
@@ -15,7 +15,9 @@
         "OathAtmosphere/Wallet/OathWalletRestoration.swift:178",
         "OathAtmosphere/Wallet/OathWalletEngine.swift:113"
       ],
-      "next_evidence": "Exercise actual Core derivation with synthetic seed and invalid Ed25519 path through production restoration; check address identity and compatibility before repair."
+      "next_evidence": "Actual Core 4.8.4 key equivalence and host restoration before/after verified. Upstream ignored return behavior is unchanged; other derivation callers and failure modes remain review work.",
+      "finding": "OW-2026-007",
+      "fix_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98"
     },
     {
       "id": "WC-LEAD-002",

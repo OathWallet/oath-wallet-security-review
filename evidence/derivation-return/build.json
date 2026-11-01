@@ -1,0 +1,28 @@
+{
+  "command": [
+    "xcrun",
+    "clang",
+    "-target",
+    "arm64-apple-ios26.0-simulator",
+    "-isysroot",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.0.sdk",
+    "-F",
+    "/Volumes/MacOSDisk/oath-wallet-security-review/.work/builds/build/SourcePackages/artifacts/walletcore/WalletCore/WalletCore.xcframework/ios-arm64_x86_64-simulator",
+    "-F",
+    "/Volumes/MacOSDisk/oath-wallet-security-review/.work/builds/build/SourcePackages/artifacts/walletcore/WalletCoreSwiftProtobuf/WalletCoreSwiftProtobuf.xcframework/ios-arm64_x86_64-simulator",
+    "-framework",
+    "WalletCore",
+    "-framework",
+    "WalletCoreSwiftProtobuf",
+    "-Wl,-rpath,/Volumes/MacOSDisk/oath-wallet-security-review/.work/builds/build/SourcePackages/artifacts/walletcore/WalletCore/WalletCore.xcframework/ios-arm64_x86_64-simulator",
+    "-Wl,-rpath,/Volumes/MacOSDisk/oath-wallet-security-review/.work/builds/build/SourcePackages/artifacts/walletcore/WalletCoreSwiftProtobuf/WalletCoreSwiftProtobuf.xcframework/ios-arm64_x86_64-simulator",
+    "/tmp/oath-core-derivation-probe/probe.c",
+    "-o",
+    "/tmp/oath-core-derivation-probe/probe"
+  ],
+  "exit_code": 0,
+  "frameworks": {
+    "/Volumes/MacOSDisk/oath-wallet-security-review/.work/builds/build/SourcePackages/artifacts/walletcore/WalletCore/WalletCore.xcframework/ios-arm64_x86_64-simulator/WalletCore.framework/WalletCore": "e364beaa1c684183686b8871f1327e0fe4e7b70631067d1ddfad949722be47dc",
+    "/Volumes/MacOSDisk/oath-wallet-security-review/.work/builds/build/SourcePackages/artifacts/walletcore/WalletCoreSwiftProtobuf/WalletCoreSwiftProtobuf.xcframework/ios-arm64_x86_64-simulator/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf": "532ae08a67ff9855aa697319313871386ea65cf1ffb12bc4b0d40101ce24374d"
+  }
+}

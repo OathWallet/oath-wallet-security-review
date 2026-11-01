@@ -78,7 +78,7 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
-        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "public", "diagnostics-coverage", "clipboard", "walletconnect-sdk", "walletconnect-verify", "scanner", "wallet-links", "scanner-lifecycle"]') }}
+        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "cloud-restore", "public", "diagnostics-coverage", "clipboard", "walletconnect-sdk", "walletconnect-verify", "scanner", "wallet-links", "scanner-lifecycle"]') }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}

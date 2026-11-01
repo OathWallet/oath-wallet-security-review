@@ -1,0 +1,21 @@
+{
+  "check": "walletcore-derivation-failure-characterization",
+  "source_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "status": "reproduced",
+  "runtime": "iOS 27.0 simulator, arm64; one isolated command-line C ABI process; no production wallet data",
+  "synthetic_fixture": "Public BIP39 abandon x11 / about; no funded account",
+  "observations": {
+    "ed25519_coins_checked": 7,
+    "nonhardened_child_matches_parent": 7,
+    "hardened_children_distinct": 7
+  },
+  "scope": "Wallet Core distributed simulator framework only; application restoration runtime not yet executed; not source-to-binary identity proof",
+  "simulator_shutdown": true,
+  "logs": {
+    "probe.c": "ddbd9b12ce45a76dd7659333ec93fee74b2a023cbc87f6b3d21b385f4fedb79a",
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.json": "e01483ef8652941c0446c049da6dd475bf1bd020e96fc976906dae1550471f5a",
+    "boot.log": "99379a4319095da50536e5862b9449518f1f85e2211cf69a40672aa1b64e7705",
+    "runtime.log": "881cc05daf4ef66c21530f6f2c63c39ff1f81c13199e130e127776f9140d0fbb"
+  }
+}

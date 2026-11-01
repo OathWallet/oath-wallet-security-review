@@ -1,0 +1,72 @@
+{
+  "check": "upstream-mnemonic",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "status": "passed",
+  "compile_exit_code": 0,
+  "run_exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 10.7,
+  "seed": "0x4f41544842495039",
+  "vectors": 150,
+  "malformed_inputs": 20000,
+  "word_indices": 2048,
+  "toolchain": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "python": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "normalization": "Python unicodedata NFKD 16.0.0",
+  "runtime_scope": "macOS host; C/C++ AddressSanitizer and UndefinedBehaviorSanitizer; Swift passphrase checks without sanitizers; leak detection disabled; not Apple release binary equivalence",
+  "source_hashes": {
+    "trezor-crypto/include/TrezorCrypto/bip39_english.h": "a360e08b684ef0a6e3de4929f2edcf6d036d9e4299bcf37bc4247e6c5d24b353",
+    "trezor-crypto/crypto/bip39.c": "bd3900318aec14386da390e030f50e311036ddda8ce764b744fa70676af35e33",
+    "trezor-crypto/crypto/sha2.c": "49d1c1efd653f6434a4ea64972a24711abea227d9766e633f13403a2b1a6ee53",
+    "trezor-crypto/crypto/hmac.c": "97ddd64b6100a34d7c380b31c964d671916752d19d958b150173bcfc35cc00b8",
+    "trezor-crypto/crypto/pbkdf2.c": "3cc55736b36a4ebee9be551504f22e196c426a98c919884f70dcda2c13724755",
+    "trezor-crypto/crypto/memzero.c": "1d5534da0a5686f84d867bfb11ae750a5396ffb615f12381b7cd22c25e8104ac",
+    "trezor-crypto/crypto/rand.c": "cf432ca318af6d9896eb1ba96db11c7e5de13088c156a4c4aedb6ae4495d5875"
+  },
+  "fixture_sha256": "ac9a7ace3544baa0df812743426521931b5c90303cc7595301b1646099de30ca",
+  "vectors_sha256": "d9c562fc65e8728d2e4cbbb8b7453adb753a879fb9191e91052ac29f6dd1350b",
+  "source_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "application_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "ruby": "ruby 4.0.5 (2026-05-20 revision 64336ffd0e) +PRISM [arm64-darwin23]",
+  "additional_checks": [
+    {
+      "check": "upstream-header-generation",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "check": "hmac-pbkdf2",
+      "status": "passed",
+      "compile_exit_code": 0,
+      "run_exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "check": "derivation-path",
+      "status": "passed",
+      "compile_exit_code": 0,
+      "run_exit_code": 0,
+      "timed_out": false
+    },
+    {
+      "check": "passphrase",
+      "status": "passed",
+      "compile_exit_code": 0,
+      "run_exit_code": 0,
+      "timed_out": false
+    }
+  ],
+  "additional_source_hashes": {
+    "src/DerivationPath.cpp": "87858b263cbf7ce13b60a0b7416dcdf31656b5719053ae7fbcf5f75c42f9591d",
+    "src/DerivationPath.h": "dae898b88ae04daa879aa64df7e259e8d20993d8f641919492edbe61dd0c62e9"
+  },
+  "app_passphrase_sha256": "29b924e56aad266591752b2dbafbedd966fe628a6a88647127104d2b71bae17a",
+  "additional_fixture_hashes": {
+    "UpstreamKDF.c": "7b8a4356f78bc69840356f6f05c7df58923fc55f7912de6497f169d177024d09",
+    "UpstreamDerivationPath.cpp": "d9350b8c7ae2a19f8dcc5dec54f988bab47495cb0685c2ff14dd60a918ee97a8",
+    "RecoveryPassphraseBoundary.swift": "16ec171ae1043d8d0156436514d782d18cd2a36007640f0590b7fb8724a1d192"
+  },
+  "kdf_vectors_sha256": "1c6cc0d56dfd6294eccd3cdfb29d87a93cf1bcb87625630ba887a07379c9b269",
+  "log_sha256": "6dd229a38ca5410d55750880a45d1f0ed75df54ea949d3df54423ed98573ab1b"
+}

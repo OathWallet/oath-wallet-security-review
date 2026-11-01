@@ -7,13 +7,12 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`f7441b85d5216b702dde490eb027aece1a6cfb5a`**.
-Merged in [application PR 8](https://github.com/devdasx/oath-wallet/pull/8),
-merge `15174cdf8378816cad58310206146deeeede546d`. This replaces the aezeed
-archives with reproducible outputs and adds C ABI regressions. Exact validation
-is recorded below and in `scope/source.json`. These are public-source repairs;
-no App Store upload or submission was performed. Later revisions do not
-inherit these results automatically.
+Current review target: **`02a6e8ab66c7629dcb9dd36637c683457e821d98`**.
+Merged in [application PR 9](https://github.com/devdasx/oath-wallet/pull/9),
+merge `b3d70526734da9c69294cdb00fe2663387378b3c`. Restoration now records
+effective Ed25519 paths while preserving keys recovered from existing backups.
+These are public-source repairs; no App Store upload or submission was performed.
+Later revisions do not inherit these results automatically.
 
 ## Scope and coverage
 
@@ -23,9 +22,10 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,641 files: 133 reviewed, 8 partially reviewed, 10 generated artifacts verified, 4,490 outstanding. The Wallet Core upstream
-ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
-outstanding. The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
+The application ledger contains 4,669 files: 135 reviewed, 8 partially reviewed,
+10 generated artifacts verified, 4,516 outstanding. The Wallet Core upstream
+ledger contains 3,941 files: 14 reviewed, 5 partially reviewed, 3,922 outstanding.
+The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 unrepaired defects in dependency APIs outside the traced Oath call path;
 [details and reproductions](AEZEED-DEPENDENCY-REVIEW.md) remain public.
 Standard-library implementation review remains a separate outstanding boundary.
@@ -70,7 +70,7 @@ convert unread code into reviewed code. See the machine-readable ledgers under
 Original findings, failed runs and retests remain available. No finding is erased
 or downgraded merely to produce a passing summary.
 
-## Current-target validation
+## Preserved f7441b8 validation
 
 On `f7441b8`, seven OathAezeed host tests and 22 aezeed wallet-integration checks
 passed. The targeted Bitcoin subset passed 27 tests with one explicit skip;
@@ -295,8 +295,8 @@ proof, and unread cryptographic implementations remain outside these results.
 
 The host harnesses substitute selected OS, networking, hardware and derivation
 boundaries. Generic compilation does not exercise Face ID, real iOS Keychain,
-WalletConnect peers or transaction broadcasts. Runtime and visual checks were
-not performed in this review update. Opt-in live tests remain skipped.
+WalletConnect peers or transaction broadcasts. The only simulator runtime checks in progress 12 exercise Core C ABI derivation
+with public fixtures; full-app runtime and visual checks were not performed. Opt-in live tests remain skipped.
 
 Swift 6.4 parallel XML omitted skip markers in an earlier run. The audit now
 retains a separate XCTest process log and classifies its actual result, with
@@ -338,3 +338,25 @@ the prior exact f7441b8 generic-iOS Release build remains the compilation eviden
 There are 7,692 outstanding items in the current completion ledger. The older
 CI run and final-target matrix are not replaced by these local boundary passes.
 No successful whole-wallet conclusion or App Store equivalence is claimed.
+
+## Progress 12 — restoration path repair
+
+[OW-2026-007](../findings/OW-2026-007.md) is fixed and merged. The identical
+host regression fails before the fix and passes 140 checks afterward. A separate
+minimal process using the actual Core 4.8.4 simulator framework confirms 112 key
+equalities across seven chains, eight paths and two public seeds. Host derivation
+is substituted; the framework experiment and application host tests are distinct.
+The recovered key is preserved, including root-path backup round trips.
+
+On the current target, diagnostics passed 118 tests with two explicit skips;
+public-source and secret scans, diagnostics coverage, and unsigned generic iOS
+Release compilation passed. Fifty-two audit-helper tests passed. The full
+current-target GitHub matrix has not yet completed. See [the review and exact
+reproduction commands](RESTORED-PATHS.md) and [results](../evidence/restored-path/results.json).
+
+The earlier GitHub run 41250786693 finished with 40 successful jobs and one failed
+scanner job: raw OSV module advisories keep that check red. This is evidence for
+its older a65601b source, not the new target. The progress-11 upstream mnemonic
+job passed on GitHub against f7441b8; that full matrix remains in progress.
+No successful whole-wallet verdict is issued. Remaining derivation, secret-lifetime,
+application/dependency review and provenance gaps stay explicit.

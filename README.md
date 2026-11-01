@@ -40,8 +40,8 @@ python3 scripts/uri-boundary-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/pairing-link-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/ton-properties.py .work/source --output /tmp/ton-evidence --scratch .work/ton-properties
 python3 scripts/solana-properties.py .work/source --output /tmp/solana-evidence --scratch .work/solana-properties
-python3 scripts/aezeed-primitives.py .work/source --expected-commit f7441b85d5216b702dde490eb027aece1a6cfb5a --output /tmp/aezeed-primitives
-python3 scripts/aezeed-provenance.py .work/source --expected-commit f7441b85d5216b702dde490eb027aece1a6cfb5a --output /tmp/aezeed-provenance
+python3 scripts/aezeed-primitives.py .work/source --expected-commit 02a6e8ab66c7629dcb9dd36637c683457e821d98 --output /tmp/aezeed-primitives
+python3 scripts/aezeed-provenance.py .work/source --expected-commit 02a6e8ab66c7629dcb9dd36637c683457e821d98 --output /tmp/aezeed-provenance
 python3 scripts/ton-authorization.py .work/source --output /tmp/ton-authorization --scratch .work/ton-authorization
 python3 scripts/run.py .work/source scanner
 python3 scripts/run.py .work/source wallet-links
@@ -49,6 +49,7 @@ python3 scripts/run.py .work/source scanner-lifecycle
 python3 scripts/run.py .work/source walletconnect-sdk
 python3 scripts/run.py .work/source walletconnect-verify
 python3 scripts/run.py .work/source security
+python3 scripts/run.py .work/source cloud-restore
 python3 scripts/run.py .work/source build
 ```
 
@@ -84,7 +85,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress9)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress12)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
