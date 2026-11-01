@@ -20,7 +20,13 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [session response routing](findings/OW-2026-026.md).
+Latest dependency finding: [RPC history atomicity](findings/OW-2026-027.md).
+Six races reproduce 10 assertions before; five controls pass, and all 11 pass
+after. SDK checks pass 240/one skip and diagnostics 118/two skips.
+[History review](review/RPC-HISTORY-ATOMICITY.md) explains shared-store instances,
+controlled interleavings and the remaining cross-process/async-generation limits.
+
+Earlier dependency finding: [session response routing](findings/OW-2026-026.md).
 Eight invalid cases reproduce 18 assertions before; four controls pass, and all
 12 pass after. SDK checks pass 229/one skip and diagnostics 118/two skips.
 [Routing review](review/SESSION-RESPONSE-ROUTING.md) distinguishes link encryption
@@ -145,6 +151,7 @@ python3 scripts/auth-boundary.py .work/source --output .work/auth-boundary --scr
 python3 scripts/link-boundary.py .work/source --output .work/link-boundary --scratch .work/link-build
 python3 scripts/link-metadata.py .work/source --output .work/link-metadata --scratch .work/link-metadata-build
 python3 scripts/response-routing.py .work/source --output .work/response-routing --scratch .work/response-routing-build
+python3 scripts/history-atomicity.py .work/source --output .work/history-atomicity --scratch .work/history-atomicity-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build

@@ -479,5 +479,17 @@
     "retest_scope": "Twelve identical production cases: 18 assertions across eight invalid routing cases and four controls before; all pass after. Link response encryption/history and relay endpoint recording; no live relay or app signing exploit.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/36"
+  },
+  {
+    "id": "OW-2026-027",
+    "severity": "low",
+    "title": "Concurrent history operations accepted duplicates and erased replacements",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-027.md",
+    "fix_commit": "6d8fda366773726364b0cb8b389d793cd34bd0bd",
+    "regression_only_commit": "c1d12689cceb67d9bd4cfc76371082fe60da5893",
+    "retest_scope": "Eleven identical production-history cases: 10 assertions across six controlled races and five controls before; all pass after. Gated thread-safe memory storage; separate-process access and async response generation binding not established.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/37"
   }
 ]

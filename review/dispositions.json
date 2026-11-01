@@ -487,12 +487,13 @@
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistory.swift": {
-    "sha256": "6a43f4e6a2101ef8536d0e06f17da9c65c6bbc2903959d98430853f04d978067",
+    "sha256": "f2abb65a8e294ae352445c0ad76e0e78a1f47cc2f621829f13ec874040d5b3a6",
     "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-005.md",
-      "review/SESSION-RESPONSE-ROUTING.md"
+      "review/SESSION-RESPONSE-ROUTING.md",
+      "review/RPC-HISTORY-ATOMICITY.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistoryFactory.swift": {
@@ -500,7 +501,8 @@
     "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md",
-      "findings/OW-2026-004.md"
+      "findings/OW-2026-004.md",
+      "review/RPC-HISTORY-ATOMICITY.md"
     ]
   },
   "Tools/WalletConnectSDKValidation/RelayEnvelopeAuthenticationTests.swift": {
@@ -571,15 +573,17 @@
     "evidence": [
       "review/READ-NOTES.md",
       "findings/OW-2026-005.md",
-      "review/CLEANUP-LIFETIME-REVIEW.md"
+      "review/CLEANUP-LIFETIME-REVIEW.md",
+      "review/RPC-HISTORY-ATOMICITY.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectUtils/CodableStore.swift": {
     "sha256": "ff26584271c607a66339fd82996040dda89b09cab721a0e48a68f00b3c6e3f3c",
-    "status": "reviewed",
+    "status": "partially-reviewed",
     "evidence": [
       "review/READ-NOTES.md",
-      "findings/OW-2026-005.md"
+      "findings/OW-2026-005.md",
+      "review/RPC-HISTORY-ATOMICITY.md"
     ]
   },
   "Tools/WalletConnectSDKValidation/ResponseTopicAuthenticationTests.swift": {
@@ -2693,6 +2697,13 @@
       "review/SESSION-RESPONSE-ROUTING.md"
     ],
     "sha256": "80d99753f87c4a704071e3a49de814ade7164d1f5e1d3b31709b5e3ec5736572",
+    "status": "reviewed"
+  },
+  "Tools/WalletConnectSDKValidation/RPCHistoryAtomicityTests.swift": {
+    "evidence": [
+      "review/RPC-HISTORY-ATOMICITY.md"
+    ],
+    "sha256": "8f9dfaddc57644e8b2acc6c9375a428f89aab68a9dc97cf82d11e98b9e8a9797",
     "status": "reviewed"
   }
 }

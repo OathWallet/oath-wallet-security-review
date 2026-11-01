@@ -1,5 +1,5 @@
 {
-  "source_commit": "8508d02deaf965dbe6f46b3c0ca637074234e5da",
+  "source_commit": "6d8fda366773726364b0cb8b389d793cd34bd0bd",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -21124,6 +21124,16 @@
       ]
     },
     {
+      "path": "Tools/WalletConnectSDKValidation/RPCHistoryAtomicityTests.swift",
+      "sha256": "8f9dfaddc57644e8b2acc6c9375a428f89aab68a9dc97cf82d11e98b9e8a9797",
+      "bytes": 9235,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/RPC-HISTORY-ATOMICITY.md"
+      ]
+    },
+    {
       "path": "Tools/WalletConnectSDKValidation/RelayEnvelopeAuthenticationTests.swift",
       "sha256": "576192d27054a545fde917b47a15b818997e2caf8f1c17edf80633fce662fb60",
       "bytes": 5781,
@@ -30230,10 +30240,11 @@
       "sha256": "ff26584271c607a66339fd82996040dda89b09cab721a0e48a68f00b3c6e3f3c",
       "bytes": 3217,
       "category": "dependency",
-      "status": "reviewed",
+      "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "findings/OW-2026-005.md"
+        "findings/OW-2026-005.md",
+        "review/RPC-HISTORY-ATOMICITY.md"
       ]
     },
     {
@@ -30388,7 +30399,8 @@
       "evidence": [
         "review/READ-NOTES.md",
         "findings/OW-2026-005.md",
-        "review/CLEANUP-LIFETIME-REVIEW.md"
+        "review/CLEANUP-LIFETIME-REVIEW.md",
+        "review/RPC-HISTORY-ATOMICITY.md"
       ]
     },
     {
@@ -30446,14 +30458,15 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/RPCHistory/RPCHistory.swift",
-      "sha256": "6a43f4e6a2101ef8536d0e06f17da9c65c6bbc2903959d98430853f04d978067",
-      "bytes": 6895,
+      "sha256": "f2abb65a8e294ae352445c0ad76e0e78a1f47cc2f621829f13ec874040d5b3a6",
+      "bytes": 8043,
       "category": "dependency",
       "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
         "findings/OW-2026-005.md",
-        "review/SESSION-RESPONSE-ROUTING.md"
+        "review/SESSION-RESPONSE-ROUTING.md",
+        "review/RPC-HISTORY-ATOMICITY.md"
       ]
     },
     {
@@ -30464,7 +30477,8 @@
       "status": "reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "findings/OW-2026-004.md"
+        "findings/OW-2026-004.md",
+        "review/RPC-HISTORY-ATOMICITY.md"
       ]
     },
     {

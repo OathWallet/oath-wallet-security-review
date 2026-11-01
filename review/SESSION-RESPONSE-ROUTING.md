@@ -83,3 +83,9 @@ whole-wallet audit is asserted. No App Store, simulator or device operation occu
 ## Publication
 
 [Source repair](https://github.com/devdasx/oath-wallet/pull/36) merged as `0d0f31e4c1f2c77263742d3c796ceb3788634166`. Application source matches the tested pin; 97 website-only differences are recorded in [merge identity](../evidence/response-routing-merge-identity.json). This is not full-tree or installed-binary equality. Full new-target CI is not yet verified.
+
+## Follow-up
+
+[Progress 42](RPC-HISTORY-ATOMICITY.md) repairs compound synchronous history
+mutation across instances. Generic outgoing transport rules and binding a
+response generation across asynchronous waits remain unfinished.

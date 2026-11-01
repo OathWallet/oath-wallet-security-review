@@ -7,7 +7,23 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`8508d02deaf965dbe6f46b3c0ca637074234e5da`**.
+Current review target: **`6d8fda366773726364b0cb8b389d793cd34bd0bd`**.
+[OW-2026-027](../findings/OW-2026-027.md) repairs duplicate history mutations
+and stale cleanup across shared-store instances. Ten assertions across six
+controlled races reproduce before; five controls pass, and all 11 pass after.
+SDK checks pass 240/one skip, diagnostics 118/two skips, 158 audit helper tests,
+source/secret checks, diagnostics coverage and unsigned generic iOS Release
+compilation (237.68 seconds) pass.
+
+[Source repair](https://github.com/devdasx/oath-wallet/pull/37) merged as `a853ab33e7739ab04003354d7992c33f0b07ef4b`. Tested application source matches;
+97 website-only differences are in [merge identity](../evidence/history-atomicity-merge-identity.json).
+[History scope](RPC-HISTORY-ATOMICITY.md) distinguishes individual synchronized
+operations from async transport generations, separate processes and direct store
+writes. The factory and runtime storage have explicit reviewed scopes; history
+and CodableStore retain their unresolved areas. No duplicate app signature or
+fund loss was established. Full current-target CI remains unverified.
+
+Previous target: `8508d02deaf965dbe6f46b3c0ca637074234e5da`.
 [OW-2026-026](../findings/OW-2026-026.md) binds session responses to the pending
 remote request's topic and protocol method. Eighteen assertions across eight
 invalid cases reproduce before; four controls pass and all 12 pass after.
