@@ -1,16 +1,21 @@
 name: BDK arm64 iOS reconstruction with SDK 18.5
 on:
   push:
-    branches: [main, review/bdk-device-sdk-match]
-    paths: ['.github/workflows/bdk-device-provenance.yml', 'scripts/rebuild-bdk-ios.sh', 'scripts/compare-bdk-archives.py', 'scripts/bdk-object-versions.py', 'scripts/bdk-build-packages.py']
+    branches: [main, review/bdk-device-sdk-match, review/bdk-publisher-paths]
+    paths: ['.github/workflows/bdk-device-provenance.yml', 'scripts/rebuild-bdk-ios.sh', 'scripts/compare-bdk-archives.py', 'scripts/bdk-object-versions.py', 'scripts/bdk-build-packages.py', 'scripts/bdk-archive-differences.py']
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   rebuild:
+    strategy:
+      fail-fast: false
+      matrix:
+        layout: [isolated, publisher]
     runs-on: macos-15
     timeout-minutes: 75
     env:
+      BDK_BUILD_LAYOUT: ${{ matrix.layout }}
       DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -35,8 +40,10 @@ jobs:
       - name: Build and record the comparison
         run: |
           sh scripts/rebuild-bdk-ios.sh bridge independent original.a
-          cp independent/{comparison,packages}.json results/
-          python3 scripts/bdk-object-versions.py original.a independent/bdk-ffi/target/aarch64-apple-ios/release-smaller/libbdkffi.a results/comparison.json results/versions.json
+          cp independent/{comparison,packages,versions,differences}.json results/
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
-        with: {name: bdk-independent-sdk18-5, path: results, retention-days: 90}
+        with:
+          name: bdk-sdk18-5-${{ matrix.layout }}
+          path: results
+          retention-days: 90
