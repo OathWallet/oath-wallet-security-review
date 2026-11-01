@@ -19,7 +19,7 @@ chmod 700 rustup-init
 build_parent="$scratch"
 case "${BDK_BUILD_LAYOUT:-isolated}" in
     isolated) export RUSTUP_HOME="$scratch/toolchains" CARGO_HOME="$scratch/cargo" ;;
-    publisher)
+    publisher|publisher-rust-src)
         [ "${RUNNER_ENVIRONMENT:-}" = github-hosted ] && [ "$HOME" = /Users/runner ] || exit 2
         export RUSTUP_HOME="$HOME/.rustup" CARGO_HOME="$HOME/.cargo"
         build_parent="$HOME/work/bdk-swift/bdk-swift/build"
@@ -30,6 +30,10 @@ case "${BDK_BUILD_LAYOUT:-isolated}" in
 esac
 export RUSTUP_INIT_SKIP_PATH_CHECK=yes
 ./rustup-init -y --no-modify-path --profile minimal --default-toolchain 1.90.0 --target aarch64-apple-ios
+if [ "${BDK_BUILD_LAYOUT:-isolated}" = publisher-rust-src ]; then
+    "$CARGO_HOME/bin/rustup" component add rust-src --toolchain 1.90.0
+    test -d "$RUSTUP_HOME/toolchains/1.90.0-aarch64-apple-darwin/lib/rustlib/src/rust/library/core"
+fi
 git -C "$bridge" archive --output="$scratch/bridge.tar" "$rev" bdk-ffi
 tar -xf bridge.tar -C "$build_parent"
 export RUSTUP_TOOLCHAIN=1.90.0
