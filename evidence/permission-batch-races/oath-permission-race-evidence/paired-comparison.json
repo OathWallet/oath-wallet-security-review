@@ -1,0 +1,27 @@
+{
+  "finding": "OW-2026-011",
+  "before_source": "976971f0ca3362cfba8c63bc738bd80d15abf096",
+  "fixed_source": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+  "same_fixture_hashes": true,
+  "fixture_sha256": {
+    "Tools/CheckPermissionBatchRaces.swift": "d05821b1c2c3a95129cd46f108b0346825e983e7c5d06f34e2057174abd8cf4e",
+    "Tools/CheckMultiWallet.py": "8873f5d6a9b78365004c702878f914f6151060b6f2b64d13ac6fd7a9da5b7ad4"
+  },
+  "checks_per_process": 84,
+  "scenarios_per_process": 21,
+  "chains": [
+    "arbitrum",
+    "tron",
+    "solana"
+  ],
+  "network_denied_repetitions_per_phase": 3,
+  "before_expected_failures": 27,
+  "before_passing_controls": 225,
+  "after_passes": 252,
+  "after_failures": 0,
+  "before_binary_sha256": "2af030fcc20167722d1cde328a5e5148eca584e9da11162377df4f9d0871cb95",
+  "after_binary_sha256": "a9c7b0f6e221f2cc9d4e18ee63c25272bc9c3cb12e8701fdd2ff665870ba2769",
+  "build_and_harness_runs_counted_separately": true,
+  "runtime": "macOS host, synthetic imported keys; real vault/SQL/signatures; substituted biometrics/HD and grant clock",
+  "no_simulator_device_broadcast_or_app_store": true
+}

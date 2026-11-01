@@ -200,6 +200,31 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: evm-delegation-nonce-evidence, path: evidence/ci, retention-days: 90}
+  permission-batch-races:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Check out the regression before the production repair
+        run: |
+          git -C .work/source worktree add --detach ../batch-race-before 976971f0ca3362cfba8c63bc738bd80d15abf096
+      - name: Preserve baseline boundary reproduction
+        run: python3 scripts/permission-batch-races.py .work/batch-race-before --before --output evidence/ci/before --scratch .work/batch-race-before-build
+      - name: Verify the same regression after the repair
+        if: '!cancelled()'
+        run: python3 scripts/permission-batch-races.py .work/source --output evidence/ci/after --scratch .work/batch-race-after-build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: permission-batch-races-evidence, path: evidence/ci, retention-days: 90}
   ton-properties:
     if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27

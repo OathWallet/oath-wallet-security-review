@@ -20,7 +20,10 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [delegation nonce serialization](findings/OW-2026-010.md),
+Latest application finding: [permission-grant revocation during preparation](findings/OW-2026-011.md),
+with identical before/after tests on EVM, TRON and Solana. The
+[permission source review](review/PERMISSION-BATCH-REVIEW.md) records exact file scope.
+The previous [delegation nonce serialization finding](findings/OW-2026-010.md) remains,
 with retained arithmetic-trap evidence and identical passing post-fix tests.
 The [Safe contract cross-check](review/SAFE-CONTRACT-CROSSCHECK.md) records
 source comparisons and remaining contract provenance gaps. The previous
@@ -42,6 +45,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/permission-batch-races.py .work/source --output .work/batch-after --scratch .work/batch-after-build
 python3 scripts/evm-response-boundary.py .work/source --output .work/evm-evidence/after --scratch .work/evm-after-build
 python3 scripts/inventory.py .work/source --output scope/inventory.json
 python3 -m unittest discover -s tests -p 'test_*.py'
@@ -108,7 +112,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress22)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress25)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot

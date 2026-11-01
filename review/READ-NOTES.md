@@ -472,3 +472,15 @@ The vault grant expires on a monotonic clock, matches wallet/network/account/
 removal/fee scope and consumes each send id once. Initial scope validation,
 all signer consumption sites and concurrent interruption remain the next
 connected review boundary; the earlier broad outstanding disposition is retained.
+
+
+## Progress 25 — permission batch lifetime
+
+The full source-read boundaries are recorded in
+[PERMISSION-BATCH-REVIEW.md](PERMISSION-BATCH-REVIEW.md). Nine small production
+files and the new regression fixture receive hash-bound reviewed dispositions;
+the large vault actor and host generator remain partial. This supersedes their
+prior narrower dispositions without assigning review coverage to dependencies.
+The confirmed OW-2026-011 authorization-lifetime defect has an identical
+before/after corpus, and the initial adapter and module-cache failures remain
+preserved. No UI, physical device or App Store execution was used.

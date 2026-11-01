@@ -7600,5 +7600,251 @@
     "runtime_scope": "host",
     "live_network_tests_enabled": false,
     "evidence_path": "evm-delegation-nonce/oath-delegation-evidence/evm-send/evm-send.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-permission-race-evidence/final"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 7.72,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "90e67b23436d6410318273b99a28294799579f87cb2c4bc06f047ccba0dddac0",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "6b2104f88650a25859cd63af64e09862dad58555d0507f302641bcd4e0654a77"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    }
+  },
+  {
+    "check": "build",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 150.54,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "208a0d8b3ffd2a1567956cba0cae928b700c1127a33a595481aa373b3c190372",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.35,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "evm-send",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--evm-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 61.17,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 22 arbitrum send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "e89fcdbaffa28a75e67f9bc05ed3f1970040c183fbd03b5eb0034ee69a2577f6",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "permission-batch",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--permission-batch"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 63.38,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 11 batch authorization host checks; production vault/signatures, synthetic local credentials, no network or device."
+    ],
+    "log_sha256": "602187fca9d3192200d2bf12425976800e1d12edb89c8a975408145b854d96b2",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "public",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 27.29,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "95224e799de9ea9efb7f8273c7b331ae2632e4c154ceed8983696cb4a1d09431",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "solana-send",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--solana-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 56.1,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 27 Solana send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "ab270e6ff93cca761827e44a0da21b1e80ae42a6fbd4913ee728bf73333c1a62",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "tron-send",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--tron-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 54.61,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Tron send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "42f617f2885b2436a594a18da958928fc291aef23bed208e2bd3527483f05ce8",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false
+  },
+  {
+    "check": "permission-batch-races",
+    "source_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "phase": "after",
+    "status": "passed",
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 67.563,
+      "log": "build-and-harness.log",
+      "log_sha256": "55fe04c11a096b3ecbc6cfef973925f88a3ce8275df1f9ef19d08300c436f725",
+      "status": "passed"
+    },
+    "toolchain": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.401,
+      "log": "swift-version.log",
+      "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    "xcode": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.238,
+      "log": "xcode-version.log",
+      "log_sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+    },
+    "runs": [
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 7.593,
+        "log": "run-1.log",
+        "log_sha256": "0b14499357cd7a70f76d238106d9c3b0d4887fbb55516f4c78adbdad9b49c3f0",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 7.624,
+        "log": "run-2.log",
+        "log_sha256": "0b14499357cd7a70f76d238106d9c3b0d4887fbb55516f4c78adbdad9b49c3f0",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 7.593,
+        "log": "run-3.log",
+        "log_sha256": "0b14499357cd7a70f76d238106d9c3b0d4887fbb55516f4c78adbdad9b49c3f0",
+        "status": "passed"
+      }
+    ],
+    "fixture_sha256": {
+      "Tools/CheckPermissionBatchRaces.swift": "d05821b1c2c3a95129cd46f108b0346825e983e7c5d06f34e2057174abd8cf4e",
+      "Tools/CheckMultiWallet.py": "8873f5d6a9b78365004c702878f914f6151060b6f2b64d13ac6fd7a9da5b7ad4"
+    },
+    "test_binary_sha256": "a9c7b0f6e221f2cc9d4e18ee63c25272bc9c3cb12e8701fdd2ff665870ba2769",
+    "duration_seconds": 91.115,
+    "runtime_scope": "macOS host; production vault, SQL and imported-key EVM/TRON/Solana signatures; substituted biometrics, HD derivation and grant clock; repeated executions deny network",
+    "limitation": "No UI, real biometric, simulator, physical device, broadcast or App Store execution. A controllable monotonic grant clock changes only the permission deadline in the expiry fixture.",
+    "log": "permission-batch-races.log",
+    "log_sha256": "15c5129bdc1577b2709aa541b74a3bcce9d166caf87ca9e5440c46356d46785b"
   }
 ]

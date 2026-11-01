@@ -286,5 +286,17 @@
     "regression_only_commit": "3cfa6168aac85b5e7c7c42daa4bf7b37e23276ce",
     "retest_scope": "Identical four-case fixture in three network-denied processes: 3 arithmetic traps and 3 invalid acceptances before; all 12 cases pass after. Existing app callers already validate the nonce; no reachable app exploit established.",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/14"
+  },
+  {
+    "id": "OW-2026-011",
+    "severity": "low",
+    "title": "Consumed permission grants survive revocation during preparation",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-011.md",
+    "fix_commit": "da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b",
+    "regression_only_commit": "976971f0ca3362cfba8c63bc738bd80d15abf096",
+    "retest_scope": "Same 84-assertion, 21-scenario, three-chain corpus in three network-denied processes: 27 expected failures before; all 252 assertions pass after. Controls preserve valid grants, single use, lock and cancellation. No arbitrary-transfer bypass or live fund loss demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/15"
   }
 ]

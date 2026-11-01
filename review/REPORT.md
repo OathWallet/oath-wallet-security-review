@@ -7,13 +7,12 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc`**.
-[OW-2026-010](../findings/OW-2026-010.md) repairs the public delegation-sizing
-helper's unchecked nonce increment. The existing app callers already validate
-that nonce; no reachable app exploit is established. [PR 14](https://github.com/devdasx/oath-wallet/pull/14)
-is merged with an identical source tree. The prior response-size
-and cancellation findings retain their original evidence below. No App Store
-upload or submission is included.
+Current review target: **`da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b`**.
+[OW-2026-011](../findings/OW-2026-011.md) repairs permission-grant revocation
+across asynchronous preparation in EVM, TRON and Solana signing. The same
+84-assertion corpus runs three times before and after: 27 expected failures
+before, all 252 assertions pass after. [PR 15](https://github.com/devdasx/oath-wallet/pull/15) is merged with the same
+source tree. Prior findings and failed attempts remain visible below. No App Store upload or submission is included.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
 [application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
@@ -31,8 +30,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,678 files: 192 reviewed, 29 partially reviewed,
-10 generated artifacts verified, 4,447 outstanding. The Wallet Core upstream
+The application ledger contains 4,679 files: 202 reviewed, 29 partially reviewed,
+10 generated artifacts verified, 4,438 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -647,3 +646,60 @@ ledger now has 4,678 files: 192 reviewed, 29 partial, 10 generated-verified and
 4,447 outstanding. The completion gate still reports 7,654 outstanding items,
 including older-source-only required checks. No whole-wallet completion,
 independent certification or App Store binary-equivalence claim is made.
+
+
+## Progress 25 — permission batch revocation during signing preparation
+
+[OW-2026-011](../findings/OW-2026-011.md) confirms that ending, replacing or
+expiring a consumed batch grant did not stop a signer waiting on preparation.
+Locking and task cancellation already rejected it. The fix rechecks the grant
+immediately before synchronous signing and before returning bytes on EVM, TRON
+and Solana. Existing single-use scope/fee checks and durable journal semantics
+remain intact. This is a low-severity lifetime defect for an already approved
+removal, not a demonstrated arbitrary-transfer bypass or live fund loss.
+
+Regression baseline: `976971f0ca3362cfba8c63bc738bd80d15abf096` includes the
+controllable monotonic grant clock and completed host adapters, with production
+authorization behavior still unfixed. Fix: `da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b`.
+[PR 15](https://github.com/devdasx/oath-wallet/pull/15) is merged as
+`00e803665a6b030ed1c035939866e739b2196d57`; both commits have tree
+`25b706f9c136e26c850c1204fee974f33b57b5dd`.
+
+- The same 21-scenario, 84-assertion corpus runs three times per phase with
+  networking denied. Before: 27 expected failures and 225 passing controls.
+  After: all 252 assertions pass. Actual returned signatures are verified by
+  the production crypto paths. Fixture hashes match and binary hashes differ.
+- Existing host authorization checks pass: batch 11, EVM 22, TRON 9, Solana 27
+  (69 total). They use synthetic credentials and production vault/imported-key
+  signers with substituted biometrics/HD paths; no broadcast or device is used.
+- OathDiagnostics: 118 passed, two explicit skips, zero failures (7.72 seconds).
+  Public-source/Gitleaks and diagnostic coverage checks pass.
+- Generic unsigned iOS Release compilation passes in 150.54 seconds, reusing
+  the isolated build directory and recompiling the changed vault. This is not
+  a fresh-from-empty build, simulator test or physical-device check.
+- Audit tooling: 97 helper tests pass. Workflow lint reports only the known
+  `xcode-27` label warning; filtering that exact warning passes. Both outputs
+  are retained. The new paired CI job is pinned, read-only and has no deployment
+  credentials; it has not yet supplied a completed GitHub result.
+
+The initial test fixture failed because its host mode selected incomplete
+TRON/Solana adapters. A later build failed because Clang's cached module paths
+mixed `/var` and `/private/var`; the successful pair used a fresh canonical
+scratch directory. Both failed attempts remain in the bundle and are not
+counted as reproduced security findings. The wrong-source-pin preflight was
+rejected before execution. Earlier GitHub run 41281531851 remained pending with
+no jobs at the recorded check; this is not a green full-matrix result.
+
+[Permission source review](PERMISSION-BATCH-REVIEW.md) gives explicit read scope
+for nine production files and the new fixture. The large vault actor and host
+generator remain partial. The app ledger now contains 4,679 files: 202 reviewed,
+29 partial, 10 generated-verified, 4,438 outstanding. The completion gate reports
+**7,644 outstanding items**, including required checks not run on this exact
+revision and upstream source/provenance gaps. Prior results keep their pins.
+
+The 169-file evidence bundle is under
+[`evidence/permission-batch-races`](../evidence/permission-batch-races), with
+sanitized logs, original/published hashes, seeds implicit in the synthetic
+fixtures, source pins, durations and toolchain/binary hashes. No App Store
+upload, submission, simulator or physical device operation occurred. The whole
+wallet review remains incomplete and is not independent certification.
