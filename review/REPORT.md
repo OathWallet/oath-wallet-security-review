@@ -317,3 +317,24 @@ unrepaired hazards in APIs outside Oath's traced call path. See
 [the dependency review](AEZEED-DEPENDENCY-REVIEW.md). This increment changes audit
 evidence, not application code; progress-9 exact-pin build evidence still applies.
 The full review and current-target CI matrix remain incomplete.
+
+## Progress 11 — mnemonic and derivation boundaries
+
+The actual pinned C/C++ mnemonic, derivation parser, HMAC and PBKDF2 implementations
+passed the new macOS AddressSanitizer/UndefinedBehaviorSanitizer harness. It covers
+150 seed vectors, 2,048 word indices, 40,000 bounded malformed inputs, 242 HMAC
+vectors and 288 PBKDF2 vectors. Eleven Swift checks passed against Oath's actual
+passphrase guard without sanitizers. Forty-nine audit-helper tests passed.
+
+Eleven upstream files and the application passphrase guard now have explicit
+source-review dispositions; HDWallet/PrivateKey and BIP32 leads remain partial.
+The result retains low-level zero-round and passphrase-truncation behavior as
+characterizations, not newly repaired wallet bugs. See
+[the complete scope and reproduction notes](MNEMONIC-DERIVATION-REVIEW.md).
+The review harness's initial extraction/header failures are retained alongside
+the subsequent passing results. No application source changed in this increment;
+the prior exact f7441b8 generic-iOS Release build remains the compilation evidence.
+
+There are 7,692 outstanding items in the current completion ledger. The older
+CI run and final-target matrix are not replaced by these local boundary passes.
+No successful whole-wallet conclusion or App Store equivalence is claimed.

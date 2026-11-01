@@ -23,6 +23,9 @@
   completes the selected third-party Go file dispositions, with three unrepaired
   unused-API hazards explicitly documented and reproduced. This does not close
   the standard-library or whole-application review gaps.
+  Progress 11 adds mnemonic, derivation-path, HMAC/PBKDF2 and passphrase boundary
+  evidence, with 7,692 outstanding completion items. Child-derivation failure
+  propagation and secret-copy lifetime remain explicit open review leads.
 
 No simulator, physical device, funded account, production transaction, App Store
 upload or submission was used. Runtime and App Store verification are not passes.

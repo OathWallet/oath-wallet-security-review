@@ -1,0 +1,1 @@
+The initial harness matched only the first word on each C-header line. Vector generation rejected the resulting incomplete wordlist before any C compilation or production test. Regex corrected to parse all quoted entries within the wordlist initializer. This was a harness error, not a production-code failure.

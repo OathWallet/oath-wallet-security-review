@@ -1,0 +1,14 @@
+{
+  "audit_helpers": {
+    "status": "passed",
+    "count": 49,
+    "log": "audit-helpers.log"
+  },
+  "workflow_lint": {
+    "status": "passed",
+    "command": "actionlint -ignore 'label \"xcode-27\" is unknown' .github/workflows/review.yml",
+    "earlier_failure": "Directory discovery included an untracked AppleDouble metadata file; explicit tracked workflow lint passed. No workflow syntax change was needed."
+  },
+  "application_changes": false,
+  "simulator_or_device_used": false
+}

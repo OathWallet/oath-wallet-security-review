@@ -14,8 +14,11 @@ also require reachable-code review. Swift package checksums do not close this ga
 
 Aezeed uses LND v0.19.3-beta through the now-published bridge. The first rebuild
 with Go 1.26.5/Xcode 27.0 had equal archive sizes but different archive hashes.
-Seed vectors matched. The original binaries remain unchanged, and equivalence
-is unresolved; see OW-2026-002.
+Seed vectors matched. That historical attempt did not replace the binaries and
+did not establish equivalence; see OW-2026-002. The later f7441b8 source repair
+replaces aezeed archives with outputs that match two isolated builds using the
+recorded toolchain, as documented in `AEZEED-REPRODUCIBLE-BUILD.md`. This does not
+retroactively prove the original baseline archives or an App Store binary.
 
 OSV Scanner 2.7.0 reports advisories against the pinned `golang.org/x/crypto`
 and `golang.org/x/sys` modules. Govulncheck 1.9.0, Go 1.26.5, source mode,
@@ -34,3 +37,9 @@ on exact affected-package metadata and a matching pinned module graph. Raw
 scanner failures remain visible. This resolves source reachability for that
 snapshot only; future advisories fail triage when metadata is missing or an
 affected package becomes selected. Historical archives remain unproven.
+
+Progress 11 adds source review and sanitizer-backed tests of Wallet Core's
+mnemonic, path, HMAC and PBKDF2 boundaries. See `MNEMONIC-DERIVATION-REVIEW.md`
+for exact scope, the zero-round low-level API characterization, existing Oath
+passphrase guards and unresolved derivation/copy-lifetime leads. These source
+tests do not verify Wallet Core's distributed Apple binary equivalence.

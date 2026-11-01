@@ -1,0 +1,42 @@
+{
+  "application_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "qualification": "Investigation queue, not confirmed repaired vulnerabilities. See MNEMONIC-DERIVATION-REVIEW.md.",
+  "leads": [
+    {
+      "id": "WC-LEAD-001",
+      "status": "open-needs-end-to-end-reproduction",
+      "summary": "Ignored child derivation failures and curve-agnostic restored paths",
+      "upstream_source": [
+        "src/HDWallet.cpp:139",
+        "trezor-crypto/crypto/bip32.c:220"
+      ],
+      "application_source": [
+        "OathAtmosphere/Wallet/OathWalletRestoration.swift:178",
+        "OathAtmosphere/Wallet/OathWalletEngine.swift:113"
+      ],
+      "next_evidence": "Exercise actual Core derivation with synthetic seed and invalid Ed25519 path through production restoration; check address identity and compatibility before repair."
+    },
+    {
+      "id": "WC-LEAD-002",
+      "status": "open-call-reachability-unproven",
+      "summary": "32-byte HDWallet template and 64-byte mnemonic seed output",
+      "upstream_source": [
+        "src/HDWallet.cpp:50",
+        "src/HDWallet.h:28"
+      ],
+      "next_evidence": "Establish compiled/exposed constructor reachability and sanitizer reproduction without replacing production logic."
+    },
+    {
+      "id": "WC-LEAD-003",
+      "status": "open-lifetime-review",
+      "summary": "Uncleared entropy and intermediate secret copies",
+      "upstream_source": [
+        "src/HDWallet.cpp:102",
+        "src/PrivateKey.cpp",
+        "trezor-crypto/crypto/pbkdf2.c"
+      ],
+      "next_evidence": "Trace ownership/copies and observable lifetime; distinguish source erasure gaps from a demonstrated attacker-accessible path."
+    }
+  ]
+}
