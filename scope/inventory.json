@@ -1,5 +1,5 @@
 {
-  "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -16126,11 +16126,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectClient.swift",
-      "sha256": "e9f424dd470cfb1e843195ddaa15ba7fc11de76238a7ac957a1d0d5571acaada",
-      "bytes": 13723,
+      "sha256": "aacecff9da57d815daa5ba5fbe48b8698688824fdd8a3b3077b309654059b195",
+      "bytes": 13880,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "findings/OW-2026-032.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectMessage.swift",
@@ -16142,22 +16144,24 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectPSBT.swift",
-      "sha256": "3edcdb3111e3e53b78c6b3df7722a51c1629b53c1fcdf0d289aa56d8d0b313f1",
-      "bytes": 14405,
+      "sha256": "564655d090f5e1fd4c3d7cc368583163201b2c5cb623f27cb6930d1b182aa37e",
+      "bytes": 15340,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
-        "review/BITCOIN-PSBT-REVIEW.md"
+        "review/BITCOIN-PSBT-REVIEW.md",
+        "findings/OW-2026-032.md"
       ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectRequest.swift",
-      "sha256": "b6d648d76023fed517c30e2f01f87f706d6d4decdd4cbadc0f6235874b47e943",
-      "bytes": 7991,
+      "sha256": "0822217193b3d2098746c6b94c75e905badd0d426e8629b8176f6c8c70f3d255",
+      "bytes": 8015,
       "category": "application",
       "status": "reviewed",
       "evidence": [
-        "review/BITCOIN-PSBT-REVIEW.md"
+        "review/BITCOIN-PSBT-REVIEW.md",
+        "findings/OW-2026-032.md"
       ]
     },
     {
@@ -16563,6 +16567,16 @@
       "category": "test",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/ConnectPlanSizeTests.swift",
+      "sha256": "0546ce44b4a22e4a2683c3a23e00c6057daca303d1b03611984df411af6b0be4",
+      "bytes": 3958,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "findings/OW-2026-032.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/DiscoveryTests.swift",

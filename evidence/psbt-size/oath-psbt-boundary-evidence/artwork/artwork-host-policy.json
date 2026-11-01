@@ -1,0 +1,177 @@
+{
+  "check": "artwork-host-policy",
+  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+  "baseline_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+  "dependency_commits": {
+    "SwiftDraw": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe"
+  },
+  "fixture_sha256": "f5e0912b22bdb0db5b264ce5f8cb96b8e1960791ec2f4b51bc412c3ef3e32541",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testResolverRecognizedIPv4SpellingsAreRejected",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "expected-admission-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testResolverRecognizedIPv4SpellingsAreRejected.log",
+      "log_sha256": "7d78cc78660be5cc9156127c34066d5399f63787efb9b5dc3412dded4a0c049f"
+    },
+    {
+      "phase": "before",
+      "case": "testEscapedDelimitersAndMalformedLabelsAreRejected",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "expected-admission-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testEscapedDelimitersAndMalformedLabelsAreRejected.log",
+      "log_sha256": "344378b863312123b2d224013edbf3ad4046f266ad18743137222f0dc00d2c6e"
+    },
+    {
+      "phase": "before",
+      "case": "testHomeZoneIsRejected",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "expected-admission-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testHomeZoneIsRejected.log",
+      "log_sha256": "22e7b7d0c642d9d0b4af5dfb86fec6ef642442898610ecc11002cd1204592877"
+    },
+    {
+      "phase": "before",
+      "case": "testSignedThumbnailCannotIntroduceNumericOriginal",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "expected-admission-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testSignedThumbnailCannotIntroduceNumericOriginal.log",
+      "log_sha256": "e259c756752885d725a533fb0dc0237d2a72dea24c66f199727f1b8a49f93245"
+    },
+    {
+      "phase": "before",
+      "case": "testUntrustedLogoNeverReachesLoaderTransport",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "expected-admission-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testUntrustedLogoNeverReachesLoaderTransport.log",
+      "log_sha256": "7f12178107d0d19f4a7f2eeef5ffdd441e47cd9103bde1aa6715e4440f8a4d08"
+    },
+    {
+      "phase": "before",
+      "case": "testRedirectRejectsNumericHost",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "expected-admission-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testRedirectRejectsNumericHost.log",
+      "log_sha256": "3ced69e06acaaf911359007cd1cd139315c6e27ab535c5a766ae36f778657ec0"
+    },
+    {
+      "phase": "before",
+      "case": "testPublicDNSAndGatewayCompatibility",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testPublicDNSAndGatewayCompatibility.log",
+      "log_sha256": "a777e4821cf84524aba6b66399e3bfbd8ef446d22ea18e9cf167f165104d2ffe"
+    },
+    {
+      "phase": "before",
+      "case": "testRedirectPreservesPublicDestination",
+      "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testRedirectPreservesPublicDestination.log",
+      "log_sha256": "ad7da2f21b768dc4d5dcabbe5cabebc24112718d32c36d53d109f1c1026e9892"
+    },
+    {
+      "phase": "after",
+      "case": "testResolverRecognizedIPv4SpellingsAreRejected",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testResolverRecognizedIPv4SpellingsAreRejected.log",
+      "log_sha256": "fee237d674949f35c31a62be3fbd60dac690140adbf69896373ba7fe1df93515"
+    },
+    {
+      "phase": "after",
+      "case": "testEscapedDelimitersAndMalformedLabelsAreRejected",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testEscapedDelimitersAndMalformedLabelsAreRejected.log",
+      "log_sha256": "8402020e53b2d3f38a88fcd5460f80486e7c2a7c50836a54e0c57cefe925c08b"
+    },
+    {
+      "phase": "after",
+      "case": "testHomeZoneIsRejected",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testHomeZoneIsRejected.log",
+      "log_sha256": "a74086b33727728444bd3a7c465eb21fd63aae440916ddf8e6fc8bdd039ca910"
+    },
+    {
+      "phase": "after",
+      "case": "testSignedThumbnailCannotIntroduceNumericOriginal",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSignedThumbnailCannotIntroduceNumericOriginal.log",
+      "log_sha256": "63b647054cc72fee4b9529e3b8e721bbb6fb3103d7f42f49996a67662f7747af"
+    },
+    {
+      "phase": "after",
+      "case": "testUntrustedLogoNeverReachesLoaderTransport",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testUntrustedLogoNeverReachesLoaderTransport.log",
+      "log_sha256": "1051ab3799334eae49acc0ac6f0fe403012366aa8694678347752ea3cbcdbc25"
+    },
+    {
+      "phase": "after",
+      "case": "testRedirectRejectsNumericHost",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testRedirectRejectsNumericHost.log",
+      "log_sha256": "d9e873d06f5adfc6a4f3b35ed0701257d6d0e0d1b909efa0f2938b15a7aaa716"
+    },
+    {
+      "phase": "after",
+      "case": "testPublicDNSAndGatewayCompatibility",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testPublicDNSAndGatewayCompatibility.log",
+      "log_sha256": "3075cb5faa5c7096556f1ed7cb132c2e1c13de457a4c5c28988d91235df369c8"
+    },
+    {
+      "phase": "after",
+      "case": "testRedirectPreservesPublicDestination",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testRedirectPreservesPublicDestination.log",
+      "log_sha256": "4f3a7ec0a5b8d4d5027de8ca605f22400f7c6c55faa48bf5f74381948845ac0f"
+    }
+  ],
+  "duration_seconds": 15.465,
+  "scope": "Eight offline cases per revision. Darwin numeric parser, production artwork gate, thumbnail expansion, injected loader transport and unresumed URLSession redirect delegate. No TLS, DNS or private service contact.",
+  "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+  "log": "artwork-host-policy.log",
+  "log_sha256": "16bd6f6fe82bde904a3650233146de9d46d35a44a0f48ef8b1765b1aa2f201c0"
+}

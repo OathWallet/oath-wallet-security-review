@@ -2,7 +2,7 @@
 """Verify the SVG decoder regression on two pinned app commits."""
 import re
 import signal
-from artwork_corpus import run
+from package_corpus import run
 
 BASE = '34ba87a3e0b2beb27bd1acdb618e480f5faefb9d'
 SUITE = 'OathTokenImagesTests.ArtworkReferenceDepthTests'

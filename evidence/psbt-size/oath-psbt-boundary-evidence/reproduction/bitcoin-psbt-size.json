@@ -1,0 +1,77 @@
+{
+  "check": "bitcoin-psbt-size",
+  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+  "baseline_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "0546ce44b4a22e4a2683c3a23e00c6057daca303d1b03611984df411af6b0be4",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testCompactRequestCannotReturnOversizedUnusableReviewPlan",
+      "source_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+      "status": "expected-size-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testCompactRequestCannotReturnOversizedUnusableReviewPlan.log",
+      "log_sha256": "9c496ac5fe06de8b963b5ee981e84c9fda87aa391e41af1456cac0924f13c050"
+    },
+    {
+      "phase": "before",
+      "case": "testPacketLimitIncludesMapFieldsAndTerminators",
+      "source_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+      "status": "expected-size-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testPacketLimitIncludesMapFieldsAndTerminators.log",
+      "log_sha256": "811451f2da2aca5b4f767f0c3a5f2912d000a011e81d041afe5fff8e8cda16c1"
+    },
+    {
+      "phase": "before",
+      "case": "testSmallerRequestStillValidates",
+      "source_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSmallerRequestStillValidates.log",
+      "log_sha256": "b7b8d621714c92335043094d6402b4690188f52adbbed925ac5761c0486f44c6"
+    },
+    {
+      "phase": "after",
+      "case": "testCompactRequestCannotReturnOversizedUnusableReviewPlan",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testCompactRequestCannotReturnOversizedUnusableReviewPlan.log",
+      "log_sha256": "4ac81ab3985ebc412b90be2b75defd98d0aa26fc1ec59a076f2bbe324653243d"
+    },
+    {
+      "phase": "after",
+      "case": "testPacketLimitIncludesMapFieldsAndTerminators",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testPacketLimitIncludesMapFieldsAndTerminators.log",
+      "log_sha256": "60cdeb1504523db1bd5160c78b90828083b5a4e9008d7919c2c9afd452d3883f"
+    },
+    {
+      "phase": "after",
+      "case": "testSmallerRequestStillValidates",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSmallerRequestStillValidates.log",
+      "log_sha256": "1445f71eb275dbf05da375b906540eb81958411f538aa527e986952a436584db"
+    }
+  ],
+  "duration_seconds": 33.114,
+  "scope": "Public Bitcoin request/review, signed-plan revalidation and encoder byte boundary. Synthetic parents, no keys exported, network denied per process.",
+  "log": "bitcoin-psbt-size.log",
+  "log_sha256": "ae390249e5b339183ebfb04bd528ec00740344e3b6221d202ab45a6124271630"
+}

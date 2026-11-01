@@ -7,7 +7,13 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`eb8239ad3be4c0b0650e2e34334982ac54c15b42`**.
+Current review target: **`55f4e809ba46881b1d6d454cdce3ef62a627df85`**.
+
+[OW-2026-032](../findings/OW-2026-032.md) documents a Bitcoin WalletConnect request that expanded during review. Eight inputs referenced different outputs of one funding transaction. Review returned a 509,260-byte packet, then the signer rejected that same packet at its 500,000-byte limit. In a separate intercepted URLSession test, the original collector retained more than the limit across six unique funding transactions. The [public source fix](https://github.com/devdasx/oath-wallet/pull/44) bounds retained parents, accounts for repeated parents, and checks field prefixes and map terminators during serialization. All five paired host cases passed after the fix. The smaller request and two-parent control passed before and after.
+
+The exact fixed app commit passed 271 Bitcoin tests (60 opt-in skips), 118 diagnostics tests (two skips), public-source validation, diagnostics coverage, the artwork URL and SVG regression corpora, and unsigned generic iOS Release compilation. All 177 audit helper tests also passed. One earlier compile attempt and one audit assertion matcher error are recorded separately from the accepted [evidence](../evidence/psbt-size/manifest.json). The [merged tree](../evidence/psbt-size-merge-identity.json) equals the tested app tree. The current full CI and source/dependency coverage remain incomplete.
+
+Previous target: `eb8239ad3be4c0b0650e2e34334982ac54c15b42`.
 
 [OW-2026-031](../findings/OW-2026-031.md) reproduced an unintended token-artwork destination. Darwin recognizes `0x7f.1` as loopback. Both initial loads and the redirect gate accepted this spelling before the repair. Six of eight offline cases failed before the change (16 specific assertions); all eight passed after it. The [app repair](https://github.com/devdasx/oath-wallet/pull/42) merged before the [Bitcoin fixture repair](https://github.com/devdasx/oath-wallet/pull/43). The latter merged as `865c41b3a56ff2c741ace8588a97394433adfbc7` with the same tree as the final tested commit. Resolving a permitted domain to a private IP remains an open boundary. No private endpoint was contacted.
 

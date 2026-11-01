@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reproduce artwork URL filtering at source, thumbnail, loader and redirect boundaries."""
 import re
-from artwork_corpus import run
+from package_corpus import run
 
 BASE='7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95'
 SUITE='OathTokenImagesTests.ArtworkHostPolicyTests'

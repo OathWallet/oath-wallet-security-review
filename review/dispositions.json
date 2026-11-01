@@ -7800,17 +7800,33 @@
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectRequest.swift": {
-    "sha256": "b6d648d76023fed517c30e2f01f87f706d6d4decdd4cbadc0f6235874b47e943",
     "status": "reviewed",
+    "sha256": "0822217193b3d2098746c6b94c75e905badd0d426e8629b8176f6c8c70f3d255",
     "evidence": [
-      "review/BITCOIN-PSBT-REVIEW.md"
+      "review/BITCOIN-PSBT-REVIEW.md",
+      "findings/OW-2026-032.md"
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectPSBT.swift": {
-    "sha256": "3edcdb3111e3e53b78c6b3df7722a51c1629b53c1fcdf0d289aa56d8d0b313f1",
     "status": "partially-reviewed",
+    "sha256": "564655d090f5e1fd4c3d7cc368583163201b2c5cb623f27cb6930d1b182aa37e",
     "evidence": [
-      "review/BITCOIN-PSBT-REVIEW.md"
+      "review/BITCOIN-PSBT-REVIEW.md",
+      "findings/OW-2026-032.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectClient.swift": {
+    "status": "partially-reviewed",
+    "sha256": "aacecff9da57d815daa5ba5fbe48b8698688824fdd8a3b3077b309654059b195",
+    "evidence": [
+      "findings/OW-2026-032.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/ConnectPlanSizeTests.swift": {
+    "status": "reviewed",
+    "sha256": "0546ce44b4a22e4a2683c3a23e00c6057daca303d1b03611984df411af6b0be4",
+    "evidence": [
+      "findings/OW-2026-032.md"
     ]
   }
 }

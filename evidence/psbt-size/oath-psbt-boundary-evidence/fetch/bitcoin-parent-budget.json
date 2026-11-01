@@ -1,0 +1,57 @@
+{
+  "check": "bitcoin-parent-budget",
+  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+  "baseline_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "96363967b857ef7a277c12afaa29c7fe5f4122725a8e92e52b45d7ee3f856c79",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testParentsCannotRetainMoreThanOnePacket",
+      "source_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+      "status": "expected-retention-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testParentsCannotRetainMoreThanOnePacket.log",
+      "log_sha256": "a855ec9da5f4dbaadf2397500d7f40280234a4f1cb8587f642648d8d004c4fe6"
+    },
+    {
+      "phase": "before",
+      "case": "testSmallBatchReturnsBothHashVerifiedParents",
+      "source_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSmallBatchReturnsBothHashVerifiedParents.log",
+      "log_sha256": "a8b950e82b3c51a5608cae285345c9da28f607d6237cfba1a839e7a4dbcf4101"
+    },
+    {
+      "phase": "after",
+      "case": "testParentsCannotRetainMoreThanOnePacket",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testParentsCannotRetainMoreThanOnePacket.log",
+      "log_sha256": "07e12f7cf20c831ccf97a9d332b35beb6dd5b2e45fe22f421bee35ad24c94811"
+    },
+    {
+      "phase": "after",
+      "case": "testSmallBatchReturnsBothHashVerifiedParents",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSmallBatchReturnsBothHashVerifiedParents.log",
+      "log_sha256": "87220161a171959aebd7cea601c4bcbadbccc889efce14a1c52b5359ba9598f1"
+    }
+  ],
+  "duration_seconds": 73.742,
+  "scope": "Same synthetic URLProtocol test overlay on both pinned app archives. Six unique hash-verified parents over budget and two below budget. OS network denied.",
+  "log": "bitcoin-parent-budget.log",
+  "log_sha256": "a61cd1a4672547b65d43ad8c36ffe65c57b3466ec8acd03fb8a3d9c26ac741b9"
+}

@@ -1,0 +1,117 @@
+{
+  "check": "svg-reference-graph",
+  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+  "baseline_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+  "dependency_commits": {
+    "SwiftDraw": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe"
+  },
+  "fixture_sha256": "055b20e3ebcfdada7dd78c5ebe554cb1ea273a7de7a413c8f0fe08135039b683",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testSharedLeafFirstCannotBypassDepthBudget",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "expected-depth-assertion",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testSharedLeafFirstCannotBypassDepthBudget.log",
+      "log_sha256": "0b9644a8bda81d9faedf35f60088302aca99533833f251eb6cd68c0e5d7dc423"
+    },
+    {
+      "phase": "before",
+      "case": "testShadowedCycleCannotReachRenderer",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "expected-signal-11",
+      "exit_code": -11,
+      "timed_out": false,
+      "log": "before-testShadowedCycleCannotReachRenderer.log",
+      "log_sha256": "1be46576c3a046578ce72bc426694b2d8dfdc13c6a5635dd2f9d6c6200472331"
+    },
+    {
+      "phase": "before",
+      "case": "testSharedRootFirstCannotBypassDepthBudget",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSharedRootFirstCannotBypassDepthBudget.log",
+      "log_sha256": "c441a6afb13f67036e70eb536377e03141b185183758788e18bb8e1bd94d417f"
+    },
+    {
+      "phase": "before",
+      "case": "testExactlyAtDepthBudgetInBothOrders",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testExactlyAtDepthBudgetInBothOrders.log",
+      "log_sha256": "35cb479c0896e00fc88e69884bb6e1e063559434c935e647bd5aee14f18cf823"
+    },
+    {
+      "phase": "before",
+      "case": "testSiblingReferencesMayShareOneID",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSiblingReferencesMayShareOneID.log",
+      "log_sha256": "652c7741571ea541f6650f12774f76d84847eaaa014bbb17ef3e0e7bdbc6ce1e"
+    },
+    {
+      "phase": "after",
+      "case": "testSharedLeafFirstCannotBypassDepthBudget",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSharedLeafFirstCannotBypassDepthBudget.log",
+      "log_sha256": "b1e726c8f31aef600ee162bd6727659432adf36b3ccb1fb450af721d689d2a78"
+    },
+    {
+      "phase": "after",
+      "case": "testShadowedCycleCannotReachRenderer",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testShadowedCycleCannotReachRenderer.log",
+      "log_sha256": "eab910febb0f5568edda8492961962e2c26f84fc92ccbfd750a1a0d489008965"
+    },
+    {
+      "phase": "after",
+      "case": "testSharedRootFirstCannotBypassDepthBudget",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSharedRootFirstCannotBypassDepthBudget.log",
+      "log_sha256": "5e008e6e2efce8f33a2109aead144cce62ebda98c970c3c8b66216c4cd9d3605"
+    },
+    {
+      "phase": "after",
+      "case": "testExactlyAtDepthBudgetInBothOrders",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testExactlyAtDepthBudgetInBothOrders.log",
+      "log_sha256": "94360815fca3937520894a7715acf02f6f76433a6c106161b774f33385c955ce"
+    },
+    {
+      "phase": "after",
+      "case": "testSiblingReferencesMayShareOneID",
+      "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSiblingReferencesMayShareOneID.log",
+      "log_sha256": "fb3bf4b34836301f83a679ecba09c07c711f4758c274e00c99f8255d53fe4d15"
+    }
+  ],
+  "duration_seconds": 13.606,
+  "scope": "Production token decoder and pinned drawing dependency; five synthetic images/cases per revision. Separate offline host XCTest process per case.",
+  "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+  "log": "svg-reference-graph.log",
+  "log_sha256": "3b997d89305a57ce1fa158640c0432969b37a7b465411ab1ae0d8436bf46117e"
+}
