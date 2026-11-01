@@ -1,0 +1,43 @@
+{
+  "source_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "hazards": [
+    {
+      "id": "DEP-AEZEED-001",
+      "summary": "Partial final CBC block accepted instead of rejected",
+      "path": "gitlab.com/yawning/bsaes.git/internal/modes/cbc.go",
+      "sha256": "267823ab4de1731824daf9c0237d3dd4fb083b8ba15cc4da26123cecb0050f70",
+      "version": "v0.0.0-20190805113838-0a714cd429ec",
+      "status": "reproduced-unrepaired-unused-api",
+      "test": "TestKnownUnusedCBCPartialBlockHazard",
+      "application_reachability": "No caller in reviewed OathAezeedDecode -> LND -> AEZ source path",
+      "severity": "No application severity assigned; upstream API defect",
+      "evidence": "review/AEZEED-DEPENDENCY-REVIEW.md"
+    },
+    {
+      "id": "DEP-AEZEED-002",
+      "summary": "Malformed serialized digest state accepted and later panics",
+      "path": "golang.org/x/crypto/blake2b/blake2b.go",
+      "sha256": "f370186a863f5ef09589b842c688747c480dfd4d3d6bb89661e08de78ed49bb8",
+      "version": "v0.22.0",
+      "status": "reproduced-unrepaired-unused-api",
+      "test": "TestKnownUnusedBlakeStateHazard",
+      "application_reachability": "No caller in reviewed OathAezeedDecode -> LND -> AEZ source path",
+      "severity": "No application severity assigned; upstream API defect",
+      "evidence": "review/AEZEED-DEPENDENCY-REVIEW.md"
+    },
+    {
+      "id": "DEP-AEZEED-003",
+      "summary": "GCM bit lengths truncate at 512 MiB",
+      "path": "gitlab.com/yawning/bsaes.git/internal/modes/gcm.go",
+      "sha256": "55e3ae5c68a7234bf5f3055ac64d3f9a50d6b372c1572b247efdb4a7cd8eecd4",
+      "version": "v0.0.0-20190805113838-0a714cd429ec",
+      "status": "reproduced-unrepaired-unused-api",
+      "test": "TestKnownUnusedGCMLengthHazard",
+      "application_reachability": "No caller in reviewed OathAezeedDecode -> LND -> AEZ source path",
+      "severity": "No application severity assigned; upstream API defect",
+      "evidence": "review/AEZEED-DEPENDENCY-REVIEW.md"
+    }
+  ],
+  "app_source_changed": false,
+  "app_store_verified": false
+}

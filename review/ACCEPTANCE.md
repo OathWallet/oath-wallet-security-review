@@ -19,7 +19,10 @@
   are published. Progress tagged releases preserve explicitly incomplete progress
   snapshots. A final audit release is not yet justified. Progress 9 adds reproducible replacement aezeed archives,
   C ABI and AES primitive checks, and six additional dependency source reads.
-  Original failed jobs and historical archive gaps remain in the record.
+  Original failed jobs and historical archive gaps remain in the record. Progress 10
+  completes the selected third-party Go file dispositions, with three unrepaired
+  unused-API hazards explicitly documented and reproduced. This does not close
+  the standard-library or whole-application review gaps.
 
 No simulator, physical device, funded account, production transaction, App Store
 upload or submission was used. Runtime and App Store verification are not passes.

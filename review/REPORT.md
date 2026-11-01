@@ -25,7 +25,9 @@ secrets, funded accounts, live financial transactions or physical devices are us
 
 The application ledger contains 4,641 files: 133 reviewed, 8 partially reviewed, 10 generated artifacts verified, 4,490 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
-outstanding. The selected aezeed Go dependency ledger adds 28 files: 13 reviewed, 1 partially reviewed, 1 wordlist verified as data, 13 outstanding.
+outstanding. The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
+unrepaired defects in dependency APIs outside the traced Oath call path;
+[details and reproductions](AEZEED-DEPENDENCY-REVIEW.md) remain public.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
@@ -306,3 +308,12 @@ Remaining work includes outstanding application/chain source, reachable Reown an
 cryptographic code, dependency/binary provenance, additional adversarial tests,
 and the exact final-source CI matrix. The completion checker rejects these gaps.
 There is **no whole-wallet successful-completion verdict**.
+
+## Progress 10 — selected Go dependency review
+
+The remaining 14 selected Go files were read in full and their hashes reverified.
+The expanded harness separates ten positive validation cases from three reproduced,
+unrepaired hazards in APIs outside Oath's traced call path. See
+[the dependency review](AEZEED-DEPENDENCY-REVIEW.md). This increment changes audit
+evidence, not application code; progress-9 exact-pin build evidence still applies.
+The full review and current-target CI matrix remain incomplete.
