@@ -1,5 +1,5 @@
 {
-  "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+  "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -21065,6 +21065,17 @@
       ]
     },
     {
+      "path": "Tools/WalletConnectSDKValidation/RelayMetadataPrivacyTests.swift",
+      "sha256": "687ec2eff559f2a3954b72b2f910086563653bc5b461d6ecced04947a67ec37f",
+      "bytes": 4348,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
+    },
+    {
       "path": "Tools/WalletConnectSDKValidation/ResponseTopicAuthenticationTests.swift",
       "sha256": "3ed82a5529029efea58694c4a2f862a2b3991cc45fa0acdbe524260692b19467",
       "bytes": 5240,
@@ -21407,24 +21418,33 @@
       "sha256": "0062ed1e4d96e8c3cd08e15677e2067aab8cde6045aefde9740195e5d8c941e9",
       "bytes": 289,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/Events/EventsClient.swift",
       "sha256": "c9b61ed4ff19bd4252ba61be40717a19dc1b550908a8b2754d7f41dab1dffde0",
       "bytes": 5266,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/Events/EventsClientFactory.swift",
       "sha256": "e3360dbde71d1f90e6be777149d6d6671b86516943d68698732273f886e866aa",
       "bytes": 1079,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/Events/EventsCollector.swift",
@@ -28573,11 +28593,14 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/RPC/Methods/Publish.swift",
-      "sha256": "625ecafa7cd59c8139cd9598d219ddd6da0e8ac1e7248a4e3f459aab97e122e8",
-      "bytes": 1008,
+      "sha256": "7882ce75d7f40081b4be9fc4425001d84aa5258a54cbfa4ee052b8914cef4cc6",
+      "bytes": 1886,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/RPC/Methods/Subscribe.swift",
@@ -28640,8 +28663,11 @@
       "sha256": "7c4edc80bc0b3f09a0578d7ced8b494520528ec7e71d1b36b7e6aa6c233dee13",
       "bytes": 16278,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/RelayClientFactory.swift",
@@ -28800,8 +28826,11 @@
       "sha256": "50493da50d8b9d6d94423b5bcfd1faa5ce75cc7fd8b3ee4479d475a88ad5c19a",
       "bytes": 3182,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/tvf/CosmosTVFCollector.swift",
@@ -28856,8 +28885,11 @@
       "sha256": "6295620f15920a3ebf725c9090031ae0a20854161d9258833f4f62cdd034e92d",
       "bytes": 2592,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/tvf/StacksTVFCollector.swift",
@@ -28888,8 +28920,11 @@
       "sha256": "dcfbd5ac0471ff236f34496e54b8f889857be2b6c0c206ec48742e93c12751fa",
       "bytes": 3894,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/tvf/TonTVFCollector.swift",
@@ -29286,8 +29321,11 @@
       "sha256": "66de5326ad97fd755c440aba2e3e12887f4f23f7a5188ab3c38f80e1ccf7c2a5",
       "bytes": 2732,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/ApproveSessionAuthenticateDispatcher.swift",
@@ -29318,8 +29356,11 @@
       "sha256": "d29c064ecc367f826fc8c41b5fd54d0f99cfcea7ebcfc7146526cfb2fe437151",
       "bytes": 3130,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/SessionRequestDispatcher.swift",
@@ -30251,8 +30292,11 @@
       "sha256": "c77310775128b45d380772b3a601d3b5790c4a8301608f2fb900bddf718582ac",
       "bytes": 1585,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/TimeInterval+Extension.swift",
@@ -30821,8 +30865,11 @@
       "sha256": "efae84f652bf5c5b497fa85fe8859d67c15d40b68706a4233fd41a273e4bd7ef",
       "bytes": 4746,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Tests/RelayerTests/StacksTVFCollectorTests.swift",
@@ -31733,8 +31780,11 @@
       "sha256": "150b5b4ba3f1cc265b875613f2c097c089c832fb271cec0cac44f514683425c8",
       "bytes": 981,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/RELAY-METADATA-REVIEW.md",
+        "findings/OW-2026-015.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Tests/WalletConnectUtilsTests/String+ExtensionTests.swift",

@@ -1,0 +1,36 @@
+{
+  "check": "relay-metadata",
+  "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+  "baseline_commit": "0c466ea73d0875bdb46ce37a9bfcf6c702ee3639",
+  "status": "failed",
+  "fixture_sha256": "687ec2eff559f2a3954b72b2f910086563653bc5b461d6ecced04947a67ec37f",
+  "executions": [
+    {
+      "phase": "before",
+      "source_commit": "0c466ea73d0875bdb46ce37a9bfcf6c702ee3639",
+      "status": "failed",
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 1.757,
+      "source_archive_sha256": "50a7fa4d3fb2da52a9fd3cb47d888f07b3ab217d83ebea18ccbe4bbf067ad56e",
+      "log": "before.log",
+      "log_sha256": "2e518c31f5420b693ee9074c37116ed1df1b25f2f799758e7c7008eb90f1a3a8"
+    },
+    {
+      "phase": "after",
+      "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+      "status": "failed",
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.878,
+      "source_archive_sha256": "cfbf21a44c99b811d2e1f2852f05800d17aafe6697fa137791d1d0d868cd5094",
+      "log": "after.log",
+      "log_sha256": "a2b8f5ccb7a76d14a740afd956f13e90407abd55e9916006437addbac5bc0c62"
+    }
+  ],
+  "duration_seconds": 3.478,
+  "scope": "Exact production relay encoder, collector and encrypted serializer; same four synthetic host tests; all build/test processes deny network",
+  "limits": "No live relay, simulator, physical device, production transaction or App Store validation. Harness changes only its isolated scratch path.",
+  "log": "relay-metadata.log",
+  "log_sha256": "19a13fead410b7570de0b6163f72ab94c2e97a8dd66ff01d9d079b35362668f3"
+}

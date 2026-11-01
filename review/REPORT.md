@@ -7,23 +7,28 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1`**.
-[Progress 29](SOLANA-VECTOR-ISOLATION.md) isolates the 76 unchanged Solana
-multisig SDK vectors and reproduces their complete bytes with pinned SDK tools.
-Current-target host tests report 1,296 networking passes/194 skips and 118
-diagnostics passes/two skips; unsigned Release compilation and source checks
-pass. The original CI timeout and SDK-tool advisories remain in the record.
-The source-pinned final-target GitHub matrix is not yet verified.
+Current review target: **`e7aed8c9d08357df10a4f85be7d069a66fad07f8`**.
+[OW-2026-015](../findings/OW-2026-015.md) removes four optional transaction
+metadata fields from relay publish JSON while retaining the encrypted peer
+message and routing. The same four-case corpus reproduces 11 metadata assertions
+before and passes afterward; the encrypted-response control passes both phases.
+The full SDK host suite reports 60 passes/one skip; diagnostics reports 118
+passes/two skips; public-source checks and unsigned Release compilation pass.
+[Relay review](RELAY-METADATA-REVIEW.md) retains scope, failed attempts and the
+separate outstanding SDK-event initialization lead. No App Store operation occurred.
 
-The prior target `e46fff5686db48a40103c9dbffe5e830cfc5548a` retains the following
-findings and its original evidence:
-[OW-2026-014](../findings/OW-2026-014.md) repairs omitted router commands on the
-first approval screen. The identical host-model fixture retains 30 expected
-assertion failures before and nine passing executions after; ten independent
-ABI cross-checks pass. [Approval review](SWAP-APPROVAL-REVIEW.md) gives the source
-trace and execution limits. Prior findings and failed attempts remain visible.
-[PR 21](https://github.com/devdasx/oath-wallet/pull/21) is merged with the tested source tree.
-No App Store upload or submission is included.
+[Progress 29](SOLANA-VECTOR-ISOLATION.md) at
+`f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1` isolated all 76 unchanged Solana
+multisig SDK vectors and regenerated their bytes with pinned SDK tools. Its
+1,296 networking passes/194 skips, original CI timeout and tool advisories remain
+bound to that earlier source. [PR 22](https://github.com/devdasx/oath-wallet/pull/22)
+is merged. The final-target GitHub matrix is not yet verified.
+
+The prior [router-approval repair](../findings/OW-2026-014.md) at
+`e46fff5686db48a40103c9dbffe5e830cfc5548a` retains 30 expected assertions before,
+nine passing executions after and ten ABI cross-checks. Its
+[review and limits](SWAP-APPROVAL-REVIEW.md) and merged
+[PR 21](https://github.com/devdasx/oath-wallet/pull/21) remain available.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
 [application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
@@ -41,8 +46,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,808 files: 246 reviewed, 31 partially reviewed,
-11 generated artifacts verified, 4,520 outstanding. The inventory also includes
+The application ledger contains 4,809 files: 256 reviewed, 35 partially reviewed,
+11 generated artifacts verified, 4,507 outstanding. The inventory also includes
 website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
@@ -80,6 +85,11 @@ No new production defect was confirmed. The new CI job is configured but its
 GitHub execution remains unverified; no app source was changed.
 
 ## Findings and repair status
+
+- [OW-2026-015](../findings/OW-2026-015.md), low: optional transaction metadata
+  was relay-readable outside the encrypted peer message. Fixed at the final
+  encoder and retested with 11 before assertions/four after passes. This does
+  not demonstrate private-key exposure or resolve all SDK telemetry boundaries.
 
 - [OW-2026-001](../findings/OW-2026-001.md), low: missing object-collection limit in
   the production WalletConnect JSON decoder. Baseline reproduction failed exactly

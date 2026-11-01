@@ -335,5 +335,17 @@
     "retest_scope": "Same three-method corpus in three network-denied processes per phase: 30 omission/semantic assertion failures across six failing executions and three passing controls before, all nine pass after. Ten ABI vectors independently cross-checked with ethers 6.15.0. UI source reviewed/compiled, no runtime interaction or on-chain loss demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/21"
+  },
+  {
+    "id": "OW-2026-015",
+    "severity": "low",
+    "title": "Optional transaction metadata bypassed the encrypted relay payload",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-015.md",
+    "fix_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "regression_only_commit": "0c466ea73d0875bdb46ce37a9bfcf6c702ee3639",
+    "retest_scope": "Same four production-code host tests: 11 expected metadata exposure assertions across three failed cases and one passing encryption/routing control before; all four pass after. Network denied. Not a live relay or private-key leak proof.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/23"
   }
 ]

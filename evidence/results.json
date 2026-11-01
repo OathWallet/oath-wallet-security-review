@@ -10035,5 +10035,189 @@
     "runtime_scope": "compile-only",
     "live_network_tests_enabled": false,
     "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/validation/build.json"
+  },
+  {
+    "check": "relay-metadata",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "baseline_commit": "0c466ea73d0875bdb46ce37a9bfcf6c702ee3639",
+    "status": "passed",
+    "fixture_sha256": "687ec2eff559f2a3954b72b2f910086563653bc5b461d6ecced04947a67ec37f",
+    "executions": [
+      {
+        "phase": "before",
+        "source_commit": "0c466ea73d0875bdb46ce37a9bfcf6c702ee3639",
+        "status": "metadata-disclosure-reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 19.111,
+        "source_archive_sha256": "50a7fa4d3fb2da52a9fd3cb47d888f07b3ab217d83ebea18ccbe4bbf067ad56e",
+        "log": "before.log",
+        "log_sha256": "476971b38d4de56ae1e86ff2378aa5036a68d8902e867743c5e5226f3491a4d4"
+      },
+      {
+        "phase": "after",
+        "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 17.379,
+        "source_archive_sha256": "cfbf21a44c99b811d2e1f2852f05800d17aafe6697fa137791d1d0d868cd5094",
+        "log": "after.log",
+        "log_sha256": "b80b8ae669735b14f76d878c1dba1d8e858d6b462b9d721f8c38bdd824adf7fb"
+      }
+    ],
+    "duration_seconds": 37.488,
+    "scope": "Exact production relay encoder, collector and encrypted serializer; same four synthetic host tests; all build/test processes deny network",
+    "limits": "No live relay, simulator, physical device, production transaction or App Store validation. Harness changes only its isolated scratch path.",
+    "log": "relay-metadata.log",
+    "log_sha256": "2855e29e69be934c1656afde7e71f0d8e12a9641f3230c309b7c00eef31b0c44",
+    "evidence_path": "evidence/relay-metadata/oath-relay-metadata-evidence/paired-outer-network-denial/relay-metadata.json"
+  },
+  {
+    "check": "walletconnect-sdk",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 9.42,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.003 (0.004) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.071 (0.071) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.180 (0.180) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "/private<TEMP>/T/oath-sdk-validation-ytgbf2me/Tests/SDKTests/VerifyAbsenceTests.swift:24: -[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure] : Test skipped - Fresh process for production diagnostics reporter",
+      "Test Case '-[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure]' skipped (0.000 seconds).",
+      "\t Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.000 (0.000) seconds",
+      "\t Executed 13 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 61 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.271 (0.273) seconds",
+      "\t Executed 61 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.271 (0.274) seconds",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "7b25c39af813361ce4732e8a0a7879f9af1e156b9911c7501243bbfb0e5f5d15",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 60,
+      "skipped": 1,
+      "failed": 0
+    },
+    "evidence_path": "evidence/relay-metadata/oath-relay-metadata-evidence/validation/walletconnect-sdk.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-relay-metadata-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 8.55,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "34fbddd9838980edea19c7931410d3b8eb20fbaadd5acb79a56529e7af08a92a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "f68f2b33ea5b28b122de80db747d75847a2784bdb66207112ab0031ce6ee4827"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/relay-metadata/oath-relay-metadata-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 28.06,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "f97e70b74c52971be116b2a3f1c1d11f931c17c3f0a71640908c3cade1b2148a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/relay-metadata/oath-relay-metadata-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.39,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/relay-metadata/oath-relay-metadata-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 148.0,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "78f9237d487ec9aac4575b8a69900750bb201ccad346db223e368a1d37d8357f",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/relay-metadata/oath-relay-metadata-evidence/validation/build.json"
   }
 ]

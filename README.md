@@ -20,12 +20,18 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
+Latest application finding: [optional relay transaction metadata](findings/OW-2026-015.md).
+The encoder now preserves routing and encrypted peer content while omitting four
+optional metadata fields. The same four host cases retain 11 expected assertions
+before and pass afterward. [The source review](review/RELAY-METADATA-REVIEW.md)
+keeps SDK initialization and other privacy boundaries explicitly outstanding.
+
 Latest test repair: [Solana multisig vector isolation](review/SOLANA-VECTOR-ISOLATION.md).
 All 76 unchanged vectors pass as separate network-denied cases, and the pinned
 SDK reproduces the entire fixture byte-for-byte. The original CI timeout,
 audit-tool dependency advisories and remote-validation gaps remain visible.
 
-Latest application finding: [router operations omitted from first approval](findings/OW-2026-014.md).
+Earlier application finding: [router operations omitted from first approval](findings/OW-2026-014.md).
 The identical production-model corpus retains 30 expected assertion failures
 before and nine passing executions after. Ten ABI fixtures also pass an
 independent ethers cross-check. [Approval source review](review/SWAP-APPROVAL-REVIEW.md)
