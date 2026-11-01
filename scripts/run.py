@@ -47,12 +47,13 @@ def main():
     p.add_argument('check', choices=PACKAGES + MODES + SDK_MODES + list(SCANNER_MODES) + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
     p.add_argument('--output', type=Path, default=ROOT/'evidence/local')
     p.add_argument('--expected-commit', help='Exact clean candidate commit; does not change the published review target')
+    p.add_argument('--scratch', type=Path, help='Explicit isolated build directory to reuse; source pin/cleanliness checks still apply')
     a = p.parse_args()
     source, out = a.source.resolve(), a.output.resolve()
     pin = a.expected_commit or json.loads((ROOT/'scope/source.json').read_text())['reviewed_commit']
     sha = require_source_state(source, pin)
     out.mkdir(parents=True, exist_ok=True)
-    scratch = Path(tempfile.gettempdir())/'oath-security-review-builds'/sha/a.check
+    scratch = a.scratch.absolute() if a.scratch else Path(tempfile.gettempdir())/'oath-security-review-builds'/sha/a.check
     # Deliberately do not inherit OATH_* flags, provider credentials or release secrets.
     env = {k:v for k,v in os.environ.items() if k in ['HOME','PATH','TMPDIR','DEVELOPER_DIR','SDKROOT','LANG','LC_ALL','CI']}
     env['OATH_VALIDATION_SCRATCH'] = str(scratch)

@@ -1,0 +1,24 @@
+{
+  "check": "refresh-cancellation",
+  "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+  "phase": "after",
+  "status": "failed",
+  "runs": [],
+  "race_reproduced": 0,
+  "tests_passed": 0,
+  "build": {
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 5.851,
+    "log": "build.log",
+    "log_sha256": "9607c76d0cdd9755a92c178996cc16df3987a89d73057217fac9d3d94cf99bec"
+  },
+  "duration_seconds": 5.915,
+  "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+  "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+  "test_binary_sha256": null,
+  "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+  "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+  "log": "refresh-cancellation.log",
+  "log_sha256": "795b1719cacbd5debab0b112a9f3fdcd92361a77c55a940dec7ad50d0a0c1399"
+}

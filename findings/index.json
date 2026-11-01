@@ -74,6 +74,18 @@
     "retest_scope": "Identical restoration fixture fails before and passes 140 checks after; actual Core simulator framework confirms 112 key equivalences. Host derivation is substituted; no app UI, real credentials, transactions or App Store verification."
   },
   {
+    "id": "OW-2026-008",
+    "severity": "low",
+    "title": "Queued refresh reads start during cancellation",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-008.md",
+    "before_commit": "70b86d4af234412aa8fe49a24935fcdb17aa4e2d",
+    "fix_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "retest_scope": "Same fixture: 10/10 specific admission failures before, 10/10 passes on the production fix, and 10/10 passes on the final test-corrected commit, in fresh network-denied host processes. Final database: 704 pass/71 skip; networking: 1210 pass/194 skip; diagnostics: 118 pass/2 skip. Unsigned generic iOS Release build passed. Initial unsuccessful runs retained. No signing bypass, secret disclosure or fund loss demonstrated.",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/12",
+    "validation_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e"
+  },
+  {
     "id": "DEP-CORE-001",
     "severity": "dependency-api-defect",
     "title": "Invalid curve dereference in dependency extended-key deserializer",

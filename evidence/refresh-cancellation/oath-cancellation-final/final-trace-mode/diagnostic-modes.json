@@ -1,0 +1,56 @@
+{
+  "check": "diagnostic-trace-mode",
+  "package": "OathDiagnostics",
+  "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+  "status": "passed",
+  "duration_seconds": 2.633,
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+  },
+  "network_guard": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.041,
+    "log": "network-guard.log",
+    "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+  },
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.73,
+    "log": "build.log",
+    "log_sha256": "663215265cf898d410d20bfddced8f51c99c456c634c021446cfa703a3f66d93"
+  },
+  "cases": [
+    {
+      "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+      "flag": "OATH_TRACE_OUTBOX_TEST",
+      "source_sha256": "aa2d95b8ee2f1c52b619ae1fcf77fd3a56d29cf7218f486fe833060d3edb0e68",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.078,
+        "log": "DiagnosticTraceTests-control.log",
+        "log_sha256": "83b27c43037b22b742c03ffd7c4ee76f11b4bc1d4d3c20eab24241a68f24a0dd",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.134,
+        "log": "DiagnosticTraceTests-enabled.log",
+        "log_sha256": "92608d1c98d1601769150d0cb0fe04f66acd0cc6c50027ac8f878802f3e80728",
+        "status": "passed",
+        "expected": "passed"
+      }
+    }
+  ],
+  "tests_passed": 1,
+  "controls_skipped": 1,
+  "package_resolved_sha256": null,
+  "test_binary_sha256": "ac46be8b92bf0f682bb942ae4cd92d249dff47202072051ef4f263b3935a3e92",
+  "sandbox_profile": "(version 1) (allow default) (deny network*)",
+  "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies"
+}

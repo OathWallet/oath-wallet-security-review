@@ -103,6 +103,53 @@ jobs:
           name: host-${{ matrix.check }}
           path: evidence/ci
           retention-days: 90
+  diagnostic-modes:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        package: [OathAnkr, OathDiagnostics]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - run: python3 scripts/diagnostic-modes.py .work/source --package '${{ matrix.package }}' --output evidence/ci --scratch '.work/diagnostic-modes/${{ matrix.package }}'
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: 'diagnostic-modes-${{ matrix.package }}', path: evidence/ci, retention-days: 90}
+  refresh-cancellation:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Check out the regression before the production repair
+        run: |
+          git -C .work/source worktree add --detach ../cancellation-before 70b86d4af234412aa8fe49a24935fcdb17aa4e2d
+      - name: Preserve baseline race reproduction
+        run: python3 scripts/refresh-cancellation.py .work/cancellation-before --before --output evidence/ci/before --scratch .work/cancellation-before-build
+      - name: Verify the same regression after the repair
+        if: '!cancelled()'
+        run: python3 scripts/refresh-cancellation.py .work/source --output evidence/ci/after --scratch .work/cancellation-after-build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: refresh-cancellation-evidence, path: evidence/ci, retention-days: 90}
   ton-properties:
     if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27

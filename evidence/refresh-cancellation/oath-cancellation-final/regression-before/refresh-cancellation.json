@@ -1,0 +1,105 @@
+{
+  "check": "refresh-cancellation",
+  "source_commit": "70b86d4af234412aa8fe49a24935fcdb17aa4e2d",
+  "phase": "before",
+  "status": "expected-failure",
+  "runs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 3.155,
+      "log": "case-01.log",
+      "log_sha256": "7b02bd19d638c4f2342937aa3780b8f7751e280b268d9727f123547d0f39e2db",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.843,
+      "log": "case-02.log",
+      "log_sha256": "17af7f84c90e8760acaa0f3066f3f69e30352101a1e525dfa56446e07bf82ca3",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.838,
+      "log": "case-03.log",
+      "log_sha256": "e164d298ef6864759329906b5da2e7531f58005c6cf3022d02ffdb84f849e714",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.836,
+      "log": "case-04.log",
+      "log_sha256": "63e64512d89c61b6e3b666772824451c2261387aa56bb38b38329c2dd700caf9",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.837,
+      "log": "case-05.log",
+      "log_sha256": "84f613722648e875aeb2d0ba3c928d30fc2f6f98a5e230206bac01fb19f4872f",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.838,
+      "log": "case-06.log",
+      "log_sha256": "f84f3a6b8542b21ac20b6958ed97aaa86839c5278ac207129116896d1cc07d27",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.839,
+      "log": "case-07.log",
+      "log_sha256": "212bd1efd9cdb6dcf98bcc504f5e0e2291b69c8e53169f0e71b487252c82dc9e",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.84,
+      "log": "case-08.log",
+      "log_sha256": "acbd66e297d890200fa2c8dad60d5384eb2c1aa01e78aa39ffac0bb7ce49df87",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.833,
+      "log": "case-09.log",
+      "log_sha256": "5ebf1bed4c93e6e6bd8ceb11b654ebc5017bdf25d0ff35b353dda076c3c8fc8b",
+      "status": "race-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.84,
+      "log": "case-10.log",
+      "log_sha256": "44cece4bbf96356412d73733379488e2dfbb87a99f5c5bed0ac97a66738ae542",
+      "status": "race-reproduced"
+    }
+  ],
+  "race_reproduced": 10,
+  "tests_passed": 0,
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 362.758,
+    "log": "build.log",
+    "log_sha256": "eeab778489c01db0bfcbfb3c350b9c2d74abc29d5b41a502887a8fa4e5905e87"
+  },
+  "duration_seconds": 374.013,
+  "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+  "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+  "test_binary_sha256": "1b182c71cf545d5a17e839055c029f23a16398a176112c56fe75759c58bc64cc",
+  "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+  "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+  "log": "refresh-cancellation.log",
+  "log_sha256": "134a5c833b6cbe5b40b5f6ff8ae18ec9b0467ee3135dec8954ecffcd9084f57e"
+}

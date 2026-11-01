@@ -7,15 +7,21 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`27fcf5f58f6169e1a40fb6afced883bc736d124d`**.
-Merged in [application PR 11](https://github.com/devdasx/oath-wallet/pull/11),
-merge `99742291d6124fd2628bbf1653ec0ba5f121456f`, with an identical source tree.
-All eight confirmed Core findings now have source-built Apple artifacts selected
-by the public app. The three earlier aezeed repairs remain included.
-[Final integration evidence](CORE-APP-INTEGRATION.md) records the original
-manifest failure, corrected build, host tests, asset hashes and framework identity.
-These are public-source repairs; no App Store upload or submission was performed.
-Later revisions do not inherit these results automatically.
+Current review target: **`2eef5a4912ce1680cd174c7596471620ffcf129e`**.
+The new [cancellation finding](../findings/OW-2026-008.md) retains the original
+CI failure and a regression-only revision before its public-source repair.
+Merged in [application PR 12](https://github.com/devdasx/oath-wallet/pull/12),
+merge `f57a3e27a6f075fb3fa422b217e55138792381fe`, with an identical source tree.
+Final validation is recorded below and in the machine-readable results; no App
+Store upload or submission is included.
+
+The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
+[application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
+`99742291d6124fd2628bbf1653ec0ba5f121456f`, with an identical source tree.
+All eight confirmed Core findings have source-built Apple artifacts selected
+by the public app; the three aezeed repairs remain included. Their original
+[integration evidence](CORE-APP-INTEGRATION.md) stays bound to that earlier
+commit. Results do not automatically transfer to later revisions.
 
 ## Scope and coverage
 
@@ -25,8 +31,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,675 files: 175 reviewed, 17 partially reviewed,
-10 generated artifacts verified, 4,473 outstanding. The Wallet Core upstream
+The application ledger contains 4,676 files: 186 reviewed, 22 partially reviewed,
+10 generated artifacts verified, 4,458 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -43,7 +49,7 @@ established for these dependency APIs. The combined eight-repair native build
 passes 2,363 C++ tests and 113 C cryptography checks; both generic Apple
 framework archives and packaging also pass.
 
-[Public app integration](CORE-APP-INTEGRATION.md) now passes unsigned generic
+At the prior `27fcf5f` target, [public app integration](CORE-APP-INTEGRATION.md) passes unsigned generic
 iOS Release compilation, 158 targeted security checks, diagnostics coverage,
 public-source scanning, and 118 diagnostics tests with two explicit skips.
 The two embedded Core framework executable files match the published repaired
@@ -532,3 +538,36 @@ The earlier corrected gate also passed in GitHub run
 on target 02a6e8a. That prior-target result is preserved separately. The current
 completion gate reports 7,679 outstanding items; new required exact-target
 checks remain pending even where an earlier target passed them.
+
+
+## Progress 22: cancellation repair and offline diagnostic coverage
+
+[OW-2026-008](../findings/OW-2026-008.md) closes a queued refresh admission race.
+The identical regression failed in ten of ten baseline runs and passed in ten
+of ten fixed runs, with network denied and public synthetic responses. The
+original CI failure, exploratory non-reproduction and compiler-cache path-alias
+failure remain published. The final production fix is merged in app PR 12.
+A separate TRON test wait-predicate correction preserves both assertions and
+the original time budget; ten additional isolated repetitions pass.
+
+On exact final target `2eef5a4912ce1680cd174c7596471620ffcf129e`, OathAnkr has
+1,210 passes/194 skips, OathDatabase 704 passes/71 skips, and OathDiagnostics
+118 passes/two skips. Unsigned generic iOS Release compilation, source/Gitleaks
+validation and diagnostic coverage pass. The final checks explicitly reuse
+isolated build directories. The preceding fresh build at `66e60330` and proof
+that only a test predicate changed are retained separately. Nine failures in
+the first networking run and one in the second are not erased or relabeled.
+
+Eight enabled offline diagnostic modes and eight control skips pass under a
+network-denial profile; all eight also ran on the final target. Ninety audit
+helper tests pass. [Diagnostic source dispositions](DIAGNOSTIC-MODES.md) mark
+privacy filtering and runtime integration partial, not universally verified.
+The completion checker still reports 7656 outstanding items. Full source/dependency
+review, remaining final-target checks, historical binary provenance and fresh
+GitHub execution remain gaps. Run 41270221065 on `92423215` finished 42 jobs
+successfully and failed two; the report distinguishes its cancellation failure
+from its protected-startup prerequisite DNS error. Local passes are not a
+claim of a successful current-target GitHub matrix.
+
+No simulator, physical device or App Store operation occurred. See the
+[durable raw evidence](../evidence/refresh-cancellation) and acceptance checklist.

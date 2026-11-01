@@ -1,5 +1,5 @@
 {
-  "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+  "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -6926,8 +6926,10 @@
       "sha256": "960043fe041543ab745d6ea442ba309e9af715778697b94831762697cd8dc349",
       "bytes": 5204,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Home/OathAboutPage.swift",
@@ -9447,11 +9449,13 @@
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/AnkrClient.swift",
-      "sha256": "f70d4d337a9e5171d929f8749c146dfecaa7ed5b2c873c33a8794bc1dcca8038",
-      "bytes": 11710,
+      "sha256": "030124b5958b5af11b7379388ecc5c7690d77fc9f5fb27fcddd68c2995563777",
+      "bytes": 12781,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "findings/OW-2026-008.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/AnkrModels.swift",
@@ -9586,8 +9590,10 @@
       "sha256": "e755f2a3296206a2065ca5d25c5eb611cc273c8bb64eada0e430bd7ff20efea6",
       "bytes": 7364,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMHistoryBridge.swift",
@@ -10137,8 +10143,10 @@
       "sha256": "d51d57966e6b44126c074e712b56f43ef88e203578f026e04b5a9c9db543cfc6",
       "bytes": 1489,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/SendFeeFundingRecovery.swift",
@@ -11055,6 +11063,16 @@
       "category": "test",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/AnkrRequestScopeTests.swift",
+      "sha256": "9341f2691393897fc2b11194ff6d43e6ca56a3afc5ee0025d3bb91bbab5c68ad",
+      "bytes": 2856,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "findings/OW-2026-008.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/AnkrTests.swift",
@@ -13977,8 +13995,8 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/TronReadRecoveryTests.swift",
-      "sha256": "4141058048c737137046694bc88cfc01ecbf21657270a236ea6abcbb241bd97b",
-      "bytes": 14081,
+      "sha256": "fc306de69ec20f9f9959eb6b2a19db6fa81f7d8faf2d2f593953e96de44e34b3",
+      "bytes": 14389,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -15635,11 +15653,13 @@
     },
     {
       "path": "Packages/OathDatabase/Sources/OathDatabase/AnkrSynchronizer.swift",
-      "sha256": "d592d1ce59d09f8119584e11a6f314ff8e53e1d81d68fb5bb943a4c98e150f81",
-      "bytes": 15946,
+      "sha256": "c01fcbb0c79d9173f19cae26485ef34d8591c37399a283911ca9644c957d00c9",
+      "bytes": 16509,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "findings/OW-2026-008.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Sources/OathDatabase/AppAppearance.swift",
@@ -16459,8 +16479,8 @@
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/AnkrSynchronizerTests.swift",
-      "sha256": "b5451171be5f4419a942eb1be9352ee0d25740338d2b97b4938df0cac8571d38",
-      "bytes": 20139,
+      "sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+      "bytes": 23955,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -17330,8 +17350,10 @@
       "sha256": "829eecbb112354a3530c63f9a74672277cfbb27e48631dc27abc9ed5ae350644",
       "bytes": 2136,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticAvailabilityPolicy.swift",
@@ -17340,7 +17362,8 @@
       "category": "application",
       "status": "reviewed",
       "evidence": [
-        "review/READ-NOTES.md"
+        "review/READ-NOTES.md",
+        "review/DIAGNOSTIC-MODES.md"
       ]
     },
     {
@@ -17348,72 +17371,90 @@
       "sha256": "35ae78ca80a784e4b95190607188173db9844926acf123b5eb3ec4d72f1359e3",
       "bytes": 2753,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticEvent.swift",
       "sha256": "a0bbea4039d06d1ca63f7869269a47887b494cbd7b9173d6fcae6d6cf028387a",
       "bytes": 8475,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticHTTP.swift",
       "sha256": "7a386f466f05559dfa29bae78fbbf0711492375d073566fed15359bc1b4871a1",
       "bytes": 35766,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticOutbox.swift",
       "sha256": "942fc379a6440a9ff348eab666c379377abd8048cba5f69d5cb67168e95fb9ab",
       "bytes": 8137,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticPrivacy.swift",
       "sha256": "6891dc299aad81812f1d680beef975ecdb7e7a4fe36f2b057f8bbe7d3d5487ba",
       "bytes": 14389,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticTrace.swift",
       "sha256": "742a4b1fe34654c3f5044ad198a501fd846cfce1dcd187ff18eedda406495954",
       "bytes": 5799,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticUploadPolicy.swift",
       "sha256": "349d893a69a6d76fec2e718db0f77f3b128a7825cd7b6f837a0d6df66946d11b",
       "bytes": 2066,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticWatchdog.swift",
       "sha256": "05f1d8262e8f6505b2c45a2fe14aff36e8f2d7eb7bc9e77f3bfed6179949cf92",
       "bytes": 3998,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/OathDiagnostics.swift",
       "sha256": "eca4ec2bc20ee2b0588c20f59ad41dc60f58577e6f0ab785dd642060cd41c864",
       "bytes": 10228,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/DIAGNOSTIC-MODES.md"
+      ]
     },
     {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/Resources/app_source_files.json",

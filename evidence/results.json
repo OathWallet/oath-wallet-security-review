@@ -5219,5 +5219,1647 @@
     "original_log_sha256": "f4b6bbf29ec6271b29d9d3f69845e71278c083d0683cde9805fbb12da4a26ed1",
     "log": "evidence/tron-send-trace/oath-tron-review-progress21/database/OathDatabase.log.gz",
     "log_compression": "gzip; log_sha256 hashes decompressed published bytes"
+  },
+  {
+    "check": "diagnostic-modes",
+    "package": "OathAnkr",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "status": "passed",
+    "duration_seconds": 5.755,
+    "toolchain": {
+      "xcode": "Xcode 27.0\nBuild version 27A266a",
+      "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+    },
+    "network_guard": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.038,
+      "log": "network-guard.log",
+      "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+    },
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.531,
+      "log": "build.log",
+      "log_sha256": "45802b147afa5c19649d5c7495689b6cfd5839450eca1d8bdaba5f5cd732024c"
+    },
+    "cases": [
+      {
+        "selector": "OathAnkrTests.ArcTests/testOptionalLabelReportingThroughActualArcBatchAndOutbox",
+        "flag": "OATH_ARC_LABEL_OUTBOX_TEST",
+        "source_sha256": "a3ba9dea254317ea2b400ca2312c6843e3ddba704074711f58ccee69d97eb599",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.129,
+          "log": "ArcTests-control.log",
+          "log_sha256": "f90f01156846e3d6ab3fe36abcb64aad648aa270c617c65de0b57a8ae8cb285f",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.236,
+          "log": "ArcTests-enabled.log",
+          "log_sha256": "54c2e5eba176f8d40d57bf89aeacc28b966ccb436341bb1fc0559269de5a481a",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReceiptLookupFailureRetainsPrivacyFilteredDiagnostics",
+        "flag": "OATH_EVM_RECOVERY_DIAGNOSTICS",
+        "source_sha256": "c8b542a0a62b8188d79fdc69340c2a176806a5a3562ef9ff7c01aec08f0b667a",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.13,
+          "log": "EVMBroadcastRecoveryTests-control.log",
+          "log_sha256": "440e32cdae58381be1caea60fb5adc8b87b503b3fbf367cb0e2644a0244ee3a3",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.133,
+          "log": "EVMBroadcastRecoveryTests-enabled.log",
+          "log_sha256": "991b12ba8c3dafc47f7a72efa769e1b3f300302510d8f75b153e4d6f810c10ab",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testReconciledDuplicateIsSilentButUnverifiedDuplicateReportsItsCause",
+        "flag": "OATH_EVM_DUPLICATE_DIAGNOSTICS",
+        "source_sha256": "db8b90e260b90eeb32624e0e7a793bb98d6990562cc2212722637c92d28629f9",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.133,
+          "log": "EVMDuplicateBroadcastTests-control.log",
+          "log_sha256": "49248e7d1a8649e4a6ec0a8610d2853ac92c00ca2024f6f5ea0e9cfa0e097666",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.183,
+          "log": "EVMDuplicateBroadcastTests-enabled.log",
+          "log_sha256": "70bfca04198ae95560dfdd0664cbcd6a0ca6c7d500c5c3a53674899e418076d8",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.SendFeeFundingTests/testExpectedFeeValidationKeepsSendBlockedWithoutUploadingAppErrors",
+        "flag": "OATH_FEE_VALIDATION_DIAGNOSTICS_TEST",
+        "source_sha256": "f54f4188bccb9ed64755e7a0f146a0ccedd63d795a2964934cfd11f41b407ba6",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.133,
+          "log": "SendFeeFundingTests-control.log",
+          "log_sha256": "e8344678ea7116c9be0e5c5b58a412a426cf948be3895140df980cfb66dc1153",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.242,
+          "log": "SendFeeFundingTests-enabled.log",
+          "log_sha256": "0955a3f74ac761f792b1e28b2abd6e5b1b7ff4068339fb33366a9737be0995f3",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.SendQuoteExpiryTests/testExpiredQuoteIsNotUploadedButProviderExpiryAndLookalikesRemain",
+        "flag": "OATH_QUOTE_EXPIRY_DIAGNOSTICS_TEST",
+        "source_sha256": "dc8f851eddcadca5d8e8c4afe46665812b9245b9562469b88feab9847ac45879",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.128,
+          "log": "SendQuoteExpiryTests-control.log",
+          "log_sha256": "b301079d4a7575558606d0899a892878b1d3f452232fab50a7863b66f591c779",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.237,
+          "log": "SendQuoteExpiryTests-enabled.log",
+          "log_sha256": "2aa284200eacc7ded049d11510847404bb6bbeec9a41f5c8e0a6a1a9685566c0",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.XrplFailureCauseTests/testSendAndValidatedFailureCodesSurviveSharedPrivacyFiltering",
+        "flag": "OATH_XRPL_FAILURE_CAUSE_TEST",
+        "source_sha256": "a1310deb6e165f5f0d42547ee44dbb358a018a09f05bbc76db41de00c3075b0b",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.128,
+          "log": "XrplFailureCauseTests-control.log",
+          "log_sha256": "24453f4b9636ab33f807d5ac1685d58a88ccc0710cc6379de1e3d2904ecca636",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.241,
+          "log": "XrplFailureCauseTests-enabled.log",
+          "log_sha256": "a06bcc02a04e63e6e9c1badfb88e42f6700eb50948201de11b6bba061766c95d",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.XrplSendPreparationTests/testAccountRequirementsKeepQuotesBlockedWithoutHidingRealFailures",
+        "flag": "OATH_XRPL_PREPARATION_DIAGNOSTICS_TEST",
+        "source_sha256": "3b1d41faa7ed3269083e811c96e9ef3f66a8ff6dfa7b5673f345d26da4e62b9c",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.133,
+          "log": "XrplSendPreparationTests-control.log",
+          "log_sha256": "29811e689774905a7fe9421f9f85c4d5639429aed174babbf9a586bff1eb3f37",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.35,
+          "log": "XrplSendPreparationTests-enabled.log",
+          "log_sha256": "e9941c832f43a948b935374d087fabb60161d6ac4ec6106653532d26c00ead05",
+          "status": "passed",
+          "expected": "passed"
+        }
+      }
+    ],
+    "tests_passed": 7,
+    "controls_skipped": 7,
+    "package_resolved_sha256": "8e82dd98788442e8d321b2c8077f9c6a4e9f2fa1799ccb9b77f97201120b97f5",
+    "test_binary_sha256": "d7cbeafd6929b5ef30da8dda5412171dfc1653b9fc17f000b0237512a2226322",
+    "sandbox_profile": "(version 1) (allow default) (deny network*)",
+    "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies",
+    "evidence_path": "diagnostic-modes/oath-diagnostic-progress22-network-guard/OathAnkr/diagnostic-modes.json"
+  },
+  {
+    "check": "diagnostic-trace-mode",
+    "package": "OathDiagnostics",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "status": "passed",
+    "duration_seconds": 1.887,
+    "toolchain": {
+      "xcode": "Xcode 27.0\nBuild version 27A266a",
+      "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+    },
+    "network_guard": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.038,
+      "log": "network-guard.log",
+      "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+    },
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.564,
+      "log": "build.log",
+      "log_sha256": "76429f955c87aedb65e4e0f2521bcd402b7d64de665b92e62be9f1f7108dc6ff"
+    },
+    "cases": [
+      {
+        "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+        "flag": "OATH_TRACE_OUTBOX_TEST",
+        "source_sha256": "aa2d95b8ee2f1c52b619ae1fcf77fd3a56d29cf7218f486fe833060d3edb0e68",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.078,
+          "log": "DiagnosticTraceTests-control.log",
+          "log_sha256": "575208ff3e4eddf995c9bb7b32dd354f591a6be4f380ba02862c1d6833d8b076",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.13,
+          "log": "DiagnosticTraceTests-enabled.log",
+          "log_sha256": "dae832d5958404197e7649fb5c3c9e1390bc7c14f2df01878e4cdb0de2519e15",
+          "status": "passed",
+          "expected": "passed"
+        }
+      }
+    ],
+    "tests_passed": 1,
+    "controls_skipped": 1,
+    "package_resolved_sha256": null,
+    "test_binary_sha256": "ccab398436a20a74e5831c781c45edb7487f2ac939f2ad7346d0845e70fa6947",
+    "sandbox_profile": "(version 1) (allow default) (deny network*)",
+    "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies",
+    "evidence_path": "diagnostic-modes/oath-diagnostic-progress22-network-guard/OathDiagnostics/diagnostic-modes.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/ankr"
+    ],
+    "status": "failed",
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 462.17,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1404 selected; 1201 passed; 194 skipped; 9 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "e6503845df4894a28b6762df7b47dbf1430eaecfcaaa93e22cbda6ac39867304",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1404,
+      "failures": 9,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "b56125e6293e68fcf1d9fc57ff47ea410249366b9840f2ec907ba22e1be7ab12"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/ankr/OathAnkr.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/ankr-repeat"
+    ],
+    "status": "failed",
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 253.9,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1404 selected; 1209 passed; 194 skipped; 1 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "70b5b541e1e7b6f7b8f48aeed26e3d216112e7cbe189647813357a7be403cc01",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1404,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "622e5d4dcd1a35623e8e69d485cfdcf1317f5b9bd8f9cd955ebc0dd93a9ef989"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/ankr-repeat/OathAnkr.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 624.23,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "c80d7f8ef44d789cc98c39e8524e6cad630de85cf60142ead6eb759078ce88b2",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/build/build.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.43,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/checks/diagnostics-coverage.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 31.65,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "2611dbd5744d47a0cd115c9f497420ea40aed7cf3b0ab1e1bd4c8e34ec3150cd",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/checks/public.json"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDatabase",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/database"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 402.92,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 775 selected; 704 passed; 71 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.003 seconds."
+    ],
+    "log_sha256": "17e858ae338c52bb9c2978a8d7b47461f1c84b9b5476258c71ea486c7560bfa0",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 775,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 71,
+      "sha256": "267afe27b0ac6aa906c45fb7f3d8297b7320dc59805c48e0642862617816c28d"
+    },
+    "swift_testing": {
+      "log_sha256": "8c40108aa80444e1683f1c5d6dfb981dcdd24508b139b1733745088e008887b3",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.003 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/database/OathDatabase.json"
+  },
+  {
+    "check": "diagnostic-trace-mode",
+    "package": "OathDiagnostics",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "status": "passed",
+    "duration_seconds": 50.474,
+    "toolchain": {
+      "xcode": "Xcode 27.0\nBuild version 27A266a",
+      "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+    },
+    "network_guard": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.084,
+      "log": "network-guard.log",
+      "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+    },
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 43.887,
+      "log": "build.log",
+      "log_sha256": "ad8e54d131e14667f147c61535b60290af86dad0a719eceb22c6c6b8e74afbf6"
+    },
+    "cases": [
+      {
+        "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+        "flag": "OATH_TRACE_OUTBOX_TEST",
+        "source_sha256": "aa2d95b8ee2f1c52b619ae1fcf77fd3a56d29cf7218f486fe833060d3edb0e68",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.193,
+          "log": "DiagnosticTraceTests-control.log",
+          "log_sha256": "c9e27bb817b8922dc7132d757e35df2077877d6aeea7e1c8bef83c614ee08ca7",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 1.305,
+          "log": "DiagnosticTraceTests-enabled.log",
+          "log_sha256": "16d8b593aac51b1460b1a72f8203646082ae7e0b440f3efc05d33c9ef8a03fd1",
+          "status": "passed",
+          "expected": "passed"
+        }
+      }
+    ],
+    "tests_passed": 1,
+    "controls_skipped": 1,
+    "package_resolved_sha256": null,
+    "test_binary_sha256": "ac46be8b92bf0f682bb942ae4cd92d249dff47202072051ef4f263b3935a3e92",
+    "sandbox_profile": "(version 1) (allow default) (deny network*)",
+    "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/diagnostic-mode-trace/diagnostic-modes.json"
+  },
+  {
+    "check": "diagnostic-modes",
+    "package": "OathAnkr",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "status": "passed",
+    "duration_seconds": 7.098,
+    "toolchain": {
+      "xcode": "Xcode 27.0\nBuild version 27A266a",
+      "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+    },
+    "network_guard": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.041,
+      "log": "network-guard.log",
+      "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+    },
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 2.353,
+      "log": "build.log",
+      "log_sha256": "b46504c9cad84aa09019a1552ebc2d274f60f0945342bf20239b6a3a687f9a53"
+    },
+    "cases": [
+      {
+        "selector": "OathAnkrTests.ArcTests/testOptionalLabelReportingThroughActualArcBatchAndOutbox",
+        "flag": "OATH_ARC_LABEL_OUTBOX_TEST",
+        "source_sha256": "a3ba9dea254317ea2b400ca2312c6843e3ddba704074711f58ccee69d97eb599",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.131,
+          "log": "ArcTests-control.log",
+          "log_sha256": "cbd0d2f32e21af57ad2f67c7ca5d39ea7f2545c320825b160c2393fd7af0576d",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.241,
+          "log": "ArcTests-enabled.log",
+          "log_sha256": "717431ff601c7423c070cd07c411907b59cb661bd3e89f3612154715819a5b75",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReceiptLookupFailureRetainsPrivacyFilteredDiagnostics",
+        "flag": "OATH_EVM_RECOVERY_DIAGNOSTICS",
+        "source_sha256": "c8b542a0a62b8188d79fdc69340c2a176806a5a3562ef9ff7c01aec08f0b667a",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.132,
+          "log": "EVMBroadcastRecoveryTests-control.log",
+          "log_sha256": "a8a39b44b6be0da3ed0615d35b3daffe4e09088b647d02df55337955d3e3ce5a",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.188,
+          "log": "EVMBroadcastRecoveryTests-enabled.log",
+          "log_sha256": "1f61d9de2154c84a2bc6f9c80a281803c45678a5275d87dc31813e0dae265a37",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testReconciledDuplicateIsSilentButUnverifiedDuplicateReportsItsCause",
+        "flag": "OATH_EVM_DUPLICATE_DIAGNOSTICS",
+        "source_sha256": "db8b90e260b90eeb32624e0e7a793bb98d6990562cc2212722637c92d28629f9",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.132,
+          "log": "EVMDuplicateBroadcastTests-control.log",
+          "log_sha256": "23935ca251d0cbb4ec751f1f86c6a23ff36dc00bf08c1226b1f312edbb2485e3",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.188,
+          "log": "EVMDuplicateBroadcastTests-enabled.log",
+          "log_sha256": "ce6cba3d712cf2a1dbf956cfd278e5644f009587403e3c4fd0fcb9f2ba7802ce",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.SendFeeFundingTests/testExpectedFeeValidationKeepsSendBlockedWithoutUploadingAppErrors",
+        "flag": "OATH_FEE_VALIDATION_DIAGNOSTICS_TEST",
+        "source_sha256": "f54f4188bccb9ed64755e7a0f146a0ccedd63d795a2964934cfd11f41b407ba6",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.132,
+          "log": "SendFeeFundingTests-control.log",
+          "log_sha256": "e5236b24a1b8a13ea3392e18e17eeb972a23fa036ad8a389276ec8d28ab0040e",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.242,
+          "log": "SendFeeFundingTests-enabled.log",
+          "log_sha256": "c8f53abeab814a1df9a28876d820663afc3941191d0b2c4e37be94afb42835c3",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.SendQuoteExpiryTests/testExpiredQuoteIsNotUploadedButProviderExpiryAndLookalikesRemain",
+        "flag": "OATH_QUOTE_EXPIRY_DIAGNOSTICS_TEST",
+        "source_sha256": "dc8f851eddcadca5d8e8c4afe46665812b9245b9562469b88feab9847ac45879",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.131,
+          "log": "SendQuoteExpiryTests-control.log",
+          "log_sha256": "4b7702d03cb5c2550e37afda0122b9a4fd6f63e34773f13aaa7577cf81dfd662",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.236,
+          "log": "SendQuoteExpiryTests-enabled.log",
+          "log_sha256": "bc407c7ec45d1000e275f63febcaa58e5364a08935338622f703c33bd3a0aaf1",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.XrplFailureCauseTests/testSendAndValidatedFailureCodesSurviveSharedPrivacyFiltering",
+        "flag": "OATH_XRPL_FAILURE_CAUSE_TEST",
+        "source_sha256": "a1310deb6e165f5f0d42547ee44dbb358a018a09f05bbc76db41de00c3075b0b",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.126,
+          "log": "XrplFailureCauseTests-control.log",
+          "log_sha256": "73505416616ea884d7814db7d1ffb5c110824d63d203513f11bb72e31c4df46e",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.24,
+          "log": "XrplFailureCauseTests-enabled.log",
+          "log_sha256": "88edfe80656946fd755b2dcea30bb1a2a9174c153903ae215632702cbb7cc80c",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.XrplSendPreparationTests/testAccountRequirementsKeepQuotesBlockedWithoutHidingRealFailures",
+        "flag": "OATH_XRPL_PREPARATION_DIAGNOSTICS_TEST",
+        "source_sha256": "3b1d41faa7ed3269083e811c96e9ef3f66a8ff6dfa7b5673f345d26da4e62b9c",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.132,
+          "log": "XrplSendPreparationTests-control.log",
+          "log_sha256": "3fc30c87db0ef7e98efdd7cc163220606aab00a5980ce033f9772fc7a682effe",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.351,
+          "log": "XrplSendPreparationTests-enabled.log",
+          "log_sha256": "f5feba9339fe07437a845c09fecc9e7487c903b849c29d919b685d552679ec5a",
+          "status": "passed",
+          "expected": "passed"
+        }
+      }
+    ],
+    "tests_passed": 7,
+    "controls_skipped": 7,
+    "package_resolved_sha256": "8e82dd98788442e8d321b2c8077f9c6a4e9f2fa1799ccb9b77f97201120b97f5",
+    "test_binary_sha256": "d2ce688ba09541aae2909f0be18543f99b5b65e2dd53340db3f7523eb75c0682",
+    "sandbox_profile": "(version 1) (allow default) (deny network*)",
+    "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/diagnostic-modes-ankr/diagnostic-modes.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/diagnostics"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 24.32,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "7b519890417dee07e8e2e424930a1ebf3a388151a1a7bab47f54d386913b74c8",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "0204e0791c72e6cf44e42d7ae23a59c823447a6758e625d792b13a94b8555a9a"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/diagnostics/OathDiagnostics.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/final-ankr"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 230.27,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1404 selected; 1210 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "c7ae2d51f43906f029eeaa8600994c140e438ed3ce7c2f1625295b33e1dc04d6",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1404,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "2746fc6da0cab2a881cf87e2e4180574a9d0dd0379942ff80d5b73e1f9cef724"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-ankr/OathAnkr.json"
+  },
+  {
+    "check": "diagnostic-modes",
+    "package": "OathAnkr",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "status": "passed",
+    "duration_seconds": 10.64,
+    "toolchain": {
+      "xcode": "Xcode 27.0\nBuild version 27A266a",
+      "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+    },
+    "network_guard": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.079,
+      "log": "network-guard.log",
+      "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+    },
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 4.471,
+      "log": "build.log",
+      "log_sha256": "928041f7e5e7b0c3ee4a990101b2522318efe1f04751d9b9f44f5c39b19f313a"
+    },
+    "cases": [
+      {
+        "selector": "OathAnkrTests.ArcTests/testOptionalLabelReportingThroughActualArcBatchAndOutbox",
+        "flag": "OATH_ARC_LABEL_OUTBOX_TEST",
+        "source_sha256": "a3ba9dea254317ea2b400ca2312c6843e3ddba704074711f58ccee69d97eb599",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.36,
+          "log": "ArcTests-control.log",
+          "log_sha256": "d76216bdec36053669ddf01112d5e57d50330364ecf96a4f75bab3beee88f7fd",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.242,
+          "log": "ArcTests-enabled.log",
+          "log_sha256": "e760bca743e72f3c7653e558c20592e2c59b39e396d57abf62445b9d692dd4e3",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReceiptLookupFailureRetainsPrivacyFilteredDiagnostics",
+        "flag": "OATH_EVM_RECOVERY_DIAGNOSTICS",
+        "source_sha256": "c8b542a0a62b8188d79fdc69340c2a176806a5a3562ef9ff7c01aec08f0b667a",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.126,
+          "log": "EVMBroadcastRecoveryTests-control.log",
+          "log_sha256": "6198318be94947059cde3879e0a7a6efd7f490e17d834b22c13664b8ab4671cc",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.183,
+          "log": "EVMBroadcastRecoveryTests-enabled.log",
+          "log_sha256": "680b13d8b347f65d647e89890d504f87146019afd59f96200a4c73ea30b98648",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testReconciledDuplicateIsSilentButUnverifiedDuplicateReportsItsCause",
+        "flag": "OATH_EVM_DUPLICATE_DIAGNOSTICS",
+        "source_sha256": "db8b90e260b90eeb32624e0e7a793bb98d6990562cc2212722637c92d28629f9",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.133,
+          "log": "EVMDuplicateBroadcastTests-control.log",
+          "log_sha256": "fe1dece85004cca395a04052f273bb6a585a9659c0600ecb80c36d544b499d2b",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.186,
+          "log": "EVMDuplicateBroadcastTests-enabled.log",
+          "log_sha256": "6aea4d29ae585254c355e72eeeda0d71acc535f1619b7a74045c46ac85607fbf",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.SendFeeFundingTests/testExpectedFeeValidationKeepsSendBlockedWithoutUploadingAppErrors",
+        "flag": "OATH_FEE_VALIDATION_DIAGNOSTICS_TEST",
+        "source_sha256": "f54f4188bccb9ed64755e7a0f146a0ccedd63d795a2964934cfd11f41b407ba6",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.133,
+          "log": "SendFeeFundingTests-control.log",
+          "log_sha256": "44ce66eaf7fd8d12d680c54a3115fa1b339726cf27df1a0f9d82fc6ab884d1dc",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.243,
+          "log": "SendFeeFundingTests-enabled.log",
+          "log_sha256": "cc6bffda53a17074fcf68cabc753dd830a58a3a0df05792ea96ec6303cf212a5",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.SendQuoteExpiryTests/testExpiredQuoteIsNotUploadedButProviderExpiryAndLookalikesRemain",
+        "flag": "OATH_QUOTE_EXPIRY_DIAGNOSTICS_TEST",
+        "source_sha256": "dc8f851eddcadca5d8e8c4afe46665812b9245b9562469b88feab9847ac45879",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.135,
+          "log": "SendQuoteExpiryTests-control.log",
+          "log_sha256": "6ea26c3216070eeed292f72e17641e56ffa7bf5f9ab8be689c7ab2a3288b73da",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.242,
+          "log": "SendQuoteExpiryTests-enabled.log",
+          "log_sha256": "93ed31bf350067f2653de98dbdfd7de34c632009060cdf11d4039b8ea08e57d3",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.XrplFailureCauseTests/testSendAndValidatedFailureCodesSurviveSharedPrivacyFiltering",
+        "flag": "OATH_XRPL_FAILURE_CAUSE_TEST",
+        "source_sha256": "a1310deb6e165f5f0d42547ee44dbb358a018a09f05bbc76db41de00c3075b0b",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.129,
+          "log": "XrplFailureCauseTests-control.log",
+          "log_sha256": "d2ecce6326505f4185c38318dadf6e6c8d31f9d4dd01c361aeec37c2fe33a804",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.395,
+          "log": "XrplFailureCauseTests-enabled.log",
+          "log_sha256": "261d33080b3e406126f325e87bc10eb9ed35893220d03f3764ab2a13937d6335",
+          "status": "passed",
+          "expected": "passed"
+        }
+      },
+      {
+        "selector": "OathAnkrTests.XrplSendPreparationTests/testAccountRequirementsKeepQuotesBlockedWithoutHidingRealFailures",
+        "flag": "OATH_XRPL_PREPARATION_DIAGNOSTICS_TEST",
+        "source_sha256": "3b1d41faa7ed3269083e811c96e9ef3f66a8ff6dfa7b5673f345d26da4e62b9c",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.135,
+          "log": "XrplSendPreparationTests-control.log",
+          "log_sha256": "1a21df71d8a0b09ce275d1ea491c87a38e89109125414e1be4de6b63970a85fd",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.569,
+          "log": "XrplSendPreparationTests-enabled.log",
+          "log_sha256": "08b45c6f3ac3fa24bc058f486ccbd1f3499e8b49118b3bb38a2ff4a0a3199aa5",
+          "status": "passed",
+          "expected": "passed"
+        }
+      }
+    ],
+    "tests_passed": 7,
+    "controls_skipped": 7,
+    "package_resolved_sha256": "8e82dd98788442e8d321b2c8077f9c6a4e9f2fa1799ccb9b77f97201120b97f5",
+    "test_binary_sha256": "15f161bc3e5a45c6f73832af81de9c3b1b245efe29682a8130792f47540b99d8",
+    "sandbox_profile": "(version 1) (allow default) (deny network*)",
+    "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-ankr-modes/diagnostic-modes.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 15.2,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "657a85560624355d7bf3dc1de6e52dd381c94b307e8178d230d7100be04b2b6d",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-build/build.json"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDatabase",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/final-checks"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 184.14,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 775 selected; 704 passed; 71 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "3391b59644be4ee461e5f97391b56d743764dcdc87f3db5f4e2ea4ed91f48883",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 775,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 71,
+      "sha256": "a50d7089078a3cf4ab9b6850760aab6273b1c3f33eda804ba9fab985ef021d66"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-checks/OathDatabase.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cancellation-final/final-checks"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 6.31,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "f967df45967b6256e66137c4e9d8cd797a5ec4ebd15be1ad06298a714fced2cc",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "6af21043df9a70104cc71ab670f8d661d70d19dee4e835d5e1a5e4448186c6e2"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-checks/OathDiagnostics.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.29,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-checks/diagnostics-coverage.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 25.7,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "29f2639ec078dcb3ba243b8424c1d4e61601d22adc3db368453e72defd15e622",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-checks/public.json"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "phase": "after",
+    "status": "passed",
+    "runs": [
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.882,
+        "log": "case-01.log",
+        "log_sha256": "8b8b2ea1ced9e92f13ca64f568bd71992d11598e84d5db750106a331e8cfd540",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.837,
+        "log": "case-02.log",
+        "log_sha256": "48cdf71656a334f4e0f799426dfe3a341e35bfe5dec41070d093a07e1938a6a5",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.838,
+        "log": "case-03.log",
+        "log_sha256": "37c96ff16423d3af7a6b5aa533d71fdf88ee060ae1e3707738752de094ce0ea7",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.825,
+        "log": "case-04.log",
+        "log_sha256": "b309528feff417a8fd5c1e0e0ffae336218e051ff421a565376f01a334c3cf14",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.833,
+        "log": "case-05.log",
+        "log_sha256": "c130bd5432b8e22d406573b446e02cb6efbd266bcb660202be955f15ec489e42",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.825,
+        "log": "case-06.log",
+        "log_sha256": "ffcb3c2d64d881d73ca011134b1e218b935b6c79ecf6031a8d8cb13f410ee9c3",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.837,
+        "log": "case-07.log",
+        "log_sha256": "ecd599bb86aa2b853a32a7a4f69b19eaecf6c9e18b33edb920253e91b5b067bc",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.833,
+        "log": "case-08.log",
+        "log_sha256": "fae790cc6d3e212d344d11fed7c270e90b4b7e55f6538ddad7baf79d31a00f78",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.832,
+        "log": "case-09.log",
+        "log_sha256": "454d6c518e8e7fb836ab854a88147011866e1a8a181cdcf0cb80428600bcf248",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.832,
+        "log": "case-10.log",
+        "log_sha256": "1c1d1778f5b35f732a8cb97024512625eea8a27d5cd78ae838c8cb835ec69c2a",
+        "status": "passed"
+      }
+    ],
+    "race_reproduced": 0,
+    "tests_passed": 10,
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.702,
+      "log": "build.log",
+      "log_sha256": "fd790b8b88d0e590c67c4cad98c7ed925d9ac4f58a42b8d267d50d316231875a"
+    },
+    "duration_seconds": 10.641,
+    "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+    "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+    "test_binary_sha256": "379523e1f8a09874d7cb95f9184eb9d39d108df90aac3d02821f938dec87b1b2",
+    "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+    "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+    "log": "refresh-cancellation.log",
+    "log_sha256": "c4624b7a29aceddbdab73971da514e19e6b4a14586e477d17f69a7feb73bb8e0",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-regression/refresh-cancellation.json"
+  },
+  {
+    "check": "diagnostic-trace-mode",
+    "package": "OathDiagnostics",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "status": "passed",
+    "duration_seconds": 2.633,
+    "toolchain": {
+      "xcode": "Xcode 27.0\nBuild version 27A266a",
+      "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+    },
+    "network_guard": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.041,
+      "log": "network-guard.log",
+      "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+    },
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.73,
+      "log": "build.log",
+      "log_sha256": "663215265cf898d410d20bfddced8f51c99c456c634c021446cfa703a3f66d93"
+    },
+    "cases": [
+      {
+        "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+        "flag": "OATH_TRACE_OUTBOX_TEST",
+        "source_sha256": "aa2d95b8ee2f1c52b619ae1fcf77fd3a56d29cf7218f486fe833060d3edb0e68",
+        "control": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.078,
+          "log": "DiagnosticTraceTests-control.log",
+          "log_sha256": "83b27c43037b22b742c03ffd7c4ee76f11b4bc1d4d3c20eab24241a68f24a0dd",
+          "status": "skipped",
+          "expected": "skipped"
+        },
+        "enabled": {
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_seconds": 0.134,
+          "log": "DiagnosticTraceTests-enabled.log",
+          "log_sha256": "92608d1c98d1601769150d0cb0fe04f66acd0cc6c50027ac8f878802f3e80728",
+          "status": "passed",
+          "expected": "passed"
+        }
+      }
+    ],
+    "tests_passed": 1,
+    "controls_skipped": 1,
+    "package_resolved_sha256": null,
+    "test_binary_sha256": "ac46be8b92bf0f682bb942ae4cd92d249dff47202072051ef4f263b3935a3e92",
+    "sandbox_profile": "(version 1) (allow default) (deny network*)",
+    "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/final-trace-mode/diagnostic-modes.json"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "phase": "after",
+    "status": "failed",
+    "runs": [],
+    "race_reproduced": 0,
+    "tests_passed": 0,
+    "build": {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 5.851,
+      "log": "build.log",
+      "log_sha256": "9607c76d0cdd9755a92c178996cc16df3987a89d73057217fac9d3d94cf99bec"
+    },
+    "duration_seconds": 5.915,
+    "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+    "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+    "test_binary_sha256": null,
+    "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+    "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+    "log": "refresh-cancellation.log",
+    "log_sha256": "795b1719cacbd5debab0b112a9f3fdcd92361a77c55a940dec7ad50d0a0c1399",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/regression-after/refresh-cancellation.json"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "phase": "after",
+    "status": "passed",
+    "runs": [
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 3.418,
+        "log": "case-01.log",
+        "log_sha256": "1d439f4dac81255726e2ad87b0e6364d77d75dcd8ff7235d6837f3831e8f7ab9",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.834,
+        "log": "case-02.log",
+        "log_sha256": "749b697ca15cd4da921cbf8189aa41340c76683850ebb8a693300db9c1bc4ddb",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.828,
+        "log": "case-03.log",
+        "log_sha256": "d43cc3900decbc4a52cf268b409bbf3eafe93ac731b56d07a0a9542c23c50c96",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.83,
+        "log": "case-04.log",
+        "log_sha256": "f864c6a645092a15c44c83188de97761fc9bb7697355a4d4fd669546ccd8c920",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.83,
+        "log": "case-05.log",
+        "log_sha256": "d062ed03519898d07bb34c7cd1b5277ac584d0c18a5cd1e6070eeb6ee7a83ee8",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.839,
+        "log": "case-06.log",
+        "log_sha256": "80571a48f6e0133e391877cb0bb297ead88115f77cf52b2126e73fdb1e4b8b95",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.846,
+        "log": "case-07.log",
+        "log_sha256": "e38222b0e1e2c2e8a2a0f8a9a4b97da98141970e5afdfc37c2bc69775669d78d",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.842,
+        "log": "case-08.log",
+        "log_sha256": "aed430069b16a5e84ce4542def902a09112f9c097f2c02893c269f7e42147efb",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.837,
+        "log": "case-09.log",
+        "log_sha256": "31451939f334ecfc38db68e905fcb8a647dfd1e55d6629ec78e8a2d7de05d137",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.831,
+        "log": "case-10.log",
+        "log_sha256": "9f88c1d5707ed5f1ece440588ca325378ebbbade80b88d5507c80fd230d1d147",
+        "status": "passed"
+      }
+    ],
+    "race_reproduced": 0,
+    "tests_passed": 10,
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 354.992,
+      "log": "build.log",
+      "log_sha256": "c3ff95b095768f72e999a72de33cd6c7d3159f3c92051f3be57d42540c42eb67"
+    },
+    "duration_seconds": 366.459,
+    "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+    "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+    "test_binary_sha256": "379523e1f8a09874d7cb95f9184eb9d39d108df90aac3d02821f938dec87b1b2",
+    "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+    "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+    "log": "refresh-cancellation.log",
+    "log_sha256": "da818124a312cf94a70c143d5d6f4a7a38ec07ec61e6ed90d5e56d29fccef13e",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/regression-after-fresh/refresh-cancellation.json"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "70b86d4af234412aa8fe49a24935fcdb17aa4e2d",
+    "phase": "before",
+    "status": "expected-failure",
+    "runs": [
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 3.155,
+        "log": "case-01.log",
+        "log_sha256": "7b02bd19d638c4f2342937aa3780b8f7751e280b268d9727f123547d0f39e2db",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.843,
+        "log": "case-02.log",
+        "log_sha256": "17af7f84c90e8760acaa0f3066f3f69e30352101a1e525dfa56446e07bf82ca3",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.838,
+        "log": "case-03.log",
+        "log_sha256": "e164d298ef6864759329906b5da2e7531f58005c6cf3022d02ffdb84f849e714",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.836,
+        "log": "case-04.log",
+        "log_sha256": "63e64512d89c61b6e3b666772824451c2261387aa56bb38b38329c2dd700caf9",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.837,
+        "log": "case-05.log",
+        "log_sha256": "84f613722648e875aeb2d0ba3c928d30fc2f6f98a5e230206bac01fb19f4872f",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.838,
+        "log": "case-06.log",
+        "log_sha256": "f84f3a6b8542b21ac20b6958ed97aaa86839c5278ac207129116896d1cc07d27",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.839,
+        "log": "case-07.log",
+        "log_sha256": "212bd1efd9cdb6dcf98bcc504f5e0e2291b69c8e53169f0e71b487252c82dc9e",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.84,
+        "log": "case-08.log",
+        "log_sha256": "acbd66e297d890200fa2c8dad60d5384eb2c1aa01e78aa39ffac0bb7ce49df87",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.833,
+        "log": "case-09.log",
+        "log_sha256": "5ebf1bed4c93e6e6bd8ceb11b654ebc5017bdf25d0ff35b353dda076c3c8fc8b",
+        "status": "race-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.84,
+        "log": "case-10.log",
+        "log_sha256": "44cece4bbf96356412d73733379488e2dfbb87a99f5c5bed0ac97a66738ae542",
+        "status": "race-reproduced"
+      }
+    ],
+    "race_reproduced": 10,
+    "tests_passed": 0,
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 362.758,
+      "log": "build.log",
+      "log_sha256": "eeab778489c01db0bfcbfb3c350b9c2d74abc29d5b41a502887a8fa4e5905e87"
+    },
+    "duration_seconds": 374.013,
+    "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+    "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+    "test_binary_sha256": "1b182c71cf545d5a17e839055c029f23a16398a176112c56fe75759c58bc64cc",
+    "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+    "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+    "log": "refresh-cancellation.log",
+    "log_sha256": "134a5c833b6cbe5b40b5f6ff8ae18ec9b0467ee3135dec8954ecffcd9084f57e",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/regression-before/refresh-cancellation.json"
+  },
+  {
+    "check": "protected-startup",
+    "source_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--protected-startup"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 374.02,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Protected wallet startup: 27/27 host checks passed; 0 failed. No simulator, device, user Keychain or network used."
+    ],
+    "log_sha256": "4771fdedee0deb9ec4d46b80d9261aef5ceec411a99dd35448323e345b4eca7a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/startup/protected-startup.json"
+  },
+  {
+    "check": "tron-diagnostic-order",
+    "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "status": "passed",
+    "runs": [
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.599,
+        "log": "case-01.log",
+        "log_sha256": "bbee332a4ea70b06619f68bb5fd1f550a1caccf8095cece968cd64c7822f7150"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.582,
+        "log": "case-02.log",
+        "log_sha256": "29c16d32a0a86e38759480d3cfadc75706d5b5b22b1f31b23016594e67c3ca3d"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.482,
+        "log": "case-03.log",
+        "log_sha256": "3f4d69010b13953992aad74e9dfe0cb1ec58c39b097b5d406cd8c1a6e04008c9"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.577,
+        "log": "case-04.log",
+        "log_sha256": "69c98abf26485c5eb0d6a58566b47fcd97f0adce9ff7fe244950d62866ce6fdd"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.593,
+        "log": "case-05.log",
+        "log_sha256": "444e4d7c5ba6074112bb7a1e84137ec62ba5e76547edfea00d5191f1b2309adc"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.479,
+        "log": "case-06.log",
+        "log_sha256": "74a29ba16831a1abdf4a4d727dd310a57b95da9acd48fb50d345bb3168ec99e1"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.571,
+        "log": "case-07.log",
+        "log_sha256": "041b546705d499b55ceada728abe4bd1ece74b5510e9191b0cf40a0d9eb10a6f"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.572,
+        "log": "case-08.log",
+        "log_sha256": "82c7204f6ac99ff923053af570d076f4dcaf1ad600ee02729213cff47e079a1e"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.572,
+        "log": "case-09.log",
+        "log_sha256": "a12c3138e5319cbb2ffdd3a38b6604ad215275007891e00916bdd1e621dbdc66"
+      },
+      {
+        "status": "passed",
+        "exit_code": 0,
+        "duration_seconds": 5.564,
+        "log": "case-10.log",
+        "log_sha256": "b67e05f4397384bf6e809c6ec4874d78cd52c418e66ef9bfde4bcd49645aaad4"
+      }
+    ],
+    "selector": "OathAnkrTests.TronReadRecoveryDiagnosticsTests/testOriginalTLSAndRecoveryKeepKeysAndWalletsOutOfReports",
+    "test_source_sha256": "fc306de69ec20f9f9959eb6b2a19db6fa81f7d8faf2d2f593953e96de44e34b3",
+    "runtime_scope": "network-denied macOS host synthetic transport; no simulator or device",
+    "log_sha256": "c6ecd0083669a45c179ba1df63c7fdeec2b0fb3d7d44cb6c1877cb366e32bc7b",
+    "evidence_path": "refresh-cancellation/oath-cancellation-final/tron-diagnostic-repeat/result.json"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDatabase",
+      "<SCRATCH>-native",
+      "<AUDIT>/evidence/ci"
+    ],
+    "status": "failed",
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 881.81,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 774 selected; 702 passed; 71 skipped; 1 failed",
+      "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "2e280ef1ce4cf252afda95fb4a88a703ad459698b45a6bdf4e265f81e8f8741b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 774,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 71,
+      "sha256": "af8f8b39d98b9b22ab6ecd01e4e292e7cd87c96d430592f02bff73fd5829d2d4"
+    },
+    "swift_testing": {
+      "log_sha256": "d3ce6a6a769fe39ad4bab1cda911242398a704f0fd23360fde9c7eba3925bd8b",
+      "summaries": [
+        "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "refresh-cancellation/oath-progress22-ci-db/OathDatabase.json"
   }
 ]

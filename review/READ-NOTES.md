@@ -406,3 +406,30 @@ UI were read in this increment. HD derivation, WalletConnect context, provider
 trust, service lifecycle and migration/index assumptions remain open. Scope and
 finite test coverage are explicit in [TRON-SEND-TRACE.md](TRON-SEND-TRACE.md).
 No new production vulnerability was established; no app behavior was changed.
+
+
+## Progress 22 — diagnostic modes and refresh cancellation
+
+On `27fcf5f`, read all diagnostic package Swift sources and selected typed
+OathAnkr error adapters. The hash-bound dispositions and limitations are
+explained in [DIAGNOSTIC-MODES.md](DIAGNOSTIC-MODES.md). Eight reviewed offline
+cases now have separate enabled/control process runs with networking denied.
+The original broad skips remain in their original records.
+
+Read the complete `AnkrClient` and `AnkrSynchronizer` implementations, the
+new scope tests and the cancellation regression. On `66e60330`, client and
+synchronizer remain partially reviewed: cancellation/admission is traced,
+but catalog fetching, every database commit path, provider contracts and all
+consumer lifecycles are separate open boundaries. Adapter call sites in
+`OathAnkrSync` and `OathWalletSession` were inspected; these partial call-site
+reads do not grant full-file reviewed status. The new 61-line scope test file
+has a reviewed fixture/expectation disposition. Full tests passing alone do
+not expand that disposition.
+
+The original CI cancellation failure, first exploratory non-reproduction,
+regression-only commit, ten repeated baseline failures, unchanged fixed-fixture
+passes, and compiler-cache path-alias failure are preserved. The report also
+retains the first broad networking run's nine failures and any subsequent
+repeat as separate results. No timeout or assertion threshold was relaxed.
+No simulator, physical device, production transaction or App Store action
+was used in this increment.

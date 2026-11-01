@@ -1,0 +1,194 @@
+{
+  "check": "diagnostic-modes",
+  "package": "OathAnkr",
+  "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+  "status": "passed",
+  "duration_seconds": 5.755,
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+  },
+  "network_guard": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.038,
+    "log": "network-guard.log",
+    "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+  },
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.531,
+    "log": "build.log",
+    "log_sha256": "45802b147afa5c19649d5c7495689b6cfd5839450eca1d8bdaba5f5cd732024c"
+  },
+  "cases": [
+    {
+      "selector": "OathAnkrTests.ArcTests/testOptionalLabelReportingThroughActualArcBatchAndOutbox",
+      "flag": "OATH_ARC_LABEL_OUTBOX_TEST",
+      "source_sha256": "a3ba9dea254317ea2b400ca2312c6843e3ddba704074711f58ccee69d97eb599",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.129,
+        "log": "ArcTests-control.log",
+        "log_sha256": "f90f01156846e3d6ab3fe36abcb64aad648aa270c617c65de0b57a8ae8cb285f",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.236,
+        "log": "ArcTests-enabled.log",
+        "log_sha256": "54c2e5eba176f8d40d57bf89aeacc28b966ccb436341bb1fc0559269de5a481a",
+        "status": "passed",
+        "expected": "passed"
+      }
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReceiptLookupFailureRetainsPrivacyFilteredDiagnostics",
+      "flag": "OATH_EVM_RECOVERY_DIAGNOSTICS",
+      "source_sha256": "c8b542a0a62b8188d79fdc69340c2a176806a5a3562ef9ff7c01aec08f0b667a",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.13,
+        "log": "EVMBroadcastRecoveryTests-control.log",
+        "log_sha256": "440e32cdae58381be1caea60fb5adc8b87b503b3fbf367cb0e2644a0244ee3a3",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.133,
+        "log": "EVMBroadcastRecoveryTests-enabled.log",
+        "log_sha256": "991b12ba8c3dafc47f7a72efa769e1b3f300302510d8f75b153e4d6f810c10ab",
+        "status": "passed",
+        "expected": "passed"
+      }
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testReconciledDuplicateIsSilentButUnverifiedDuplicateReportsItsCause",
+      "flag": "OATH_EVM_DUPLICATE_DIAGNOSTICS",
+      "source_sha256": "db8b90e260b90eeb32624e0e7a793bb98d6990562cc2212722637c92d28629f9",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.133,
+        "log": "EVMDuplicateBroadcastTests-control.log",
+        "log_sha256": "49248e7d1a8649e4a6ec0a8610d2853ac92c00ca2024f6f5ea0e9cfa0e097666",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.183,
+        "log": "EVMDuplicateBroadcastTests-enabled.log",
+        "log_sha256": "70bfca04198ae95560dfdd0664cbcd6a0ca6c7d500c5c3a53674899e418076d8",
+        "status": "passed",
+        "expected": "passed"
+      }
+    },
+    {
+      "selector": "OathAnkrTests.SendFeeFundingTests/testExpectedFeeValidationKeepsSendBlockedWithoutUploadingAppErrors",
+      "flag": "OATH_FEE_VALIDATION_DIAGNOSTICS_TEST",
+      "source_sha256": "f54f4188bccb9ed64755e7a0f146a0ccedd63d795a2964934cfd11f41b407ba6",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.133,
+        "log": "SendFeeFundingTests-control.log",
+        "log_sha256": "e8344678ea7116c9be0e5c5b58a412a426cf948be3895140df980cfb66dc1153",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.242,
+        "log": "SendFeeFundingTests-enabled.log",
+        "log_sha256": "0955a3f74ac761f792b1e28b2abd6e5b1b7ff4068339fb33366a9737be0995f3",
+        "status": "passed",
+        "expected": "passed"
+      }
+    },
+    {
+      "selector": "OathAnkrTests.SendQuoteExpiryTests/testExpiredQuoteIsNotUploadedButProviderExpiryAndLookalikesRemain",
+      "flag": "OATH_QUOTE_EXPIRY_DIAGNOSTICS_TEST",
+      "source_sha256": "dc8f851eddcadca5d8e8c4afe46665812b9245b9562469b88feab9847ac45879",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.128,
+        "log": "SendQuoteExpiryTests-control.log",
+        "log_sha256": "b301079d4a7575558606d0899a892878b1d3f452232fab50a7863b66f591c779",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.237,
+        "log": "SendQuoteExpiryTests-enabled.log",
+        "log_sha256": "2aa284200eacc7ded049d11510847404bb6bbeec9a41f5c8e0a6a1a9685566c0",
+        "status": "passed",
+        "expected": "passed"
+      }
+    },
+    {
+      "selector": "OathAnkrTests.XrplFailureCauseTests/testSendAndValidatedFailureCodesSurviveSharedPrivacyFiltering",
+      "flag": "OATH_XRPL_FAILURE_CAUSE_TEST",
+      "source_sha256": "a1310deb6e165f5f0d42547ee44dbb358a018a09f05bbc76db41de00c3075b0b",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.128,
+        "log": "XrplFailureCauseTests-control.log",
+        "log_sha256": "24453f4b9636ab33f807d5ac1685d58a88ccc0710cc6379de1e3d2904ecca636",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.241,
+        "log": "XrplFailureCauseTests-enabled.log",
+        "log_sha256": "a06bcc02a04e63e6e9c1badfb88e42f6700eb50948201de11b6bba061766c95d",
+        "status": "passed",
+        "expected": "passed"
+      }
+    },
+    {
+      "selector": "OathAnkrTests.XrplSendPreparationTests/testAccountRequirementsKeepQuotesBlockedWithoutHidingRealFailures",
+      "flag": "OATH_XRPL_PREPARATION_DIAGNOSTICS_TEST",
+      "source_sha256": "3b1d41faa7ed3269083e811c96e9ef3f66a8ff6dfa7b5673f345d26da4e62b9c",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.133,
+        "log": "XrplSendPreparationTests-control.log",
+        "log_sha256": "29811e689774905a7fe9421f9f85c4d5639429aed174babbf9a586bff1eb3f37",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.35,
+        "log": "XrplSendPreparationTests-enabled.log",
+        "log_sha256": "e9941c832f43a948b935374d087fabb60161d6ac4ec6106653532d26c00ead05",
+        "status": "passed",
+        "expected": "passed"
+      }
+    }
+  ],
+  "tests_passed": 7,
+  "controls_skipped": 7,
+  "package_resolved_sha256": "8e82dd98788442e8d321b2c8077f9c6a4e9f2fa1799ccb9b77f97201120b97f5",
+  "test_binary_sha256": "d7cbeafd6929b5ef30da8dda5412171dfc1653b9fc17f000b0237512a2226322",
+  "sandbox_profile": "(version 1) (allow default) (deny network*)",
+  "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies"
+}

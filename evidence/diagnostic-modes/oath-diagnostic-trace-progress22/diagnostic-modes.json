@@ -1,0 +1,49 @@
+{
+  "check": "diagnostic-trace-mode",
+  "package": "OathDiagnostics",
+  "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+  "status": "passed",
+  "duration_seconds": 2.131,
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+  },
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.609,
+    "log": "build.log",
+    "log_sha256": "c2abe37c33fadcbb65e06e202367e13d1123638b42d1a0944e0f6f251819b34d"
+  },
+  "cases": [
+    {
+      "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+      "flag": "OATH_TRACE_OUTBOX_TEST",
+      "source_sha256": "aa2d95b8ee2f1c52b619ae1fcf77fd3a56d29cf7218f486fe833060d3edb0e68",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.09,
+        "log": "DiagnosticTraceTests-control.log",
+        "log_sha256": "2d502d4eae69b34b4e1efb9ed311074a4617f31333860858c48a191653f03010",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.145,
+        "log": "DiagnosticTraceTests-enabled.log",
+        "log_sha256": "1a8572b07c0520845c395e286cf9e6801b9f31a6b75da484a29faed370baf356",
+        "status": "passed",
+        "expected": "passed"
+      }
+    }
+  ],
+  "tests_passed": 1,
+  "controls_skipped": 1,
+  "package_resolved_sha256": null,
+  "test_binary_sha256": "ccab398436a20a74e5831c781c45edb7487f2ac939f2ad7346d0845e70fa6947",
+  "sandbox_profile": "(version 1) (allow default) (deny network*)",
+  "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies"
+}
