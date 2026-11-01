@@ -107,3 +107,9 @@ operation, real wallet material, Keychain access or external URL opening occurre
 [merge identity](../evidence/link-metadata-merge-identity.json). This is not
 full-tree or installed-binary equivalence. The full CI matrix on this new source
 pin is not yet verified; earlier results keep their original pins.
+
+## Follow-up
+
+[Progress 41](SESSION-RESPONSE-ROUTING.md) repairs session responder topic,
+origin and method validation. Generic transport contracts, history concurrency,
+URL trust and queued subscriber lifetime remain distinct unfinished areas.

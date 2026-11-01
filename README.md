@@ -20,7 +20,13 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [link metadata and transport state](findings/OW-2026-025.md).
+Latest dependency finding: [session response routing](findings/OW-2026-026.md).
+Eight invalid cases reproduce 18 assertions before; four controls pass, and all
+12 pass after. SDK checks pass 229/one skip and diagnostics 118/two skips.
+[Routing review](review/SESSION-RESPONSE-ROUTING.md) distinguishes link encryption
+and history effects from relay endpoint recording and Oath app reachability.
+
+Earlier dependency finding: [link metadata and transport state](findings/OW-2026-025.md).
 Three nil-unwrap crashes and five rejected-input state assertions reproduce
 before repair; eight controls pass and all 16 cases pass after. SDK checks pass
 217/one skip and diagnostics 118/two skips. [Metadata review](review/LINK-SESSION-METADATA.md)
@@ -138,6 +144,7 @@ python3 scripts/cleanup-lifetime.py .work/source --output .work/cleanup-lifetime
 python3 scripts/auth-boundary.py .work/source --output .work/auth-boundary --scratch .work/auth-build
 python3 scripts/link-boundary.py .work/source --output .work/link-boundary --scratch .work/link-build
 python3 scripts/link-metadata.py .work/source --output .work/link-metadata --scratch .work/link-metadata-build
+python3 scripts/response-routing.py .work/source --output .work/response-routing --scratch .work/response-routing-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build

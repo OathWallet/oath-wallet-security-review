@@ -467,5 +467,17 @@
     "retest_scope": "Identical 16 production cases: three nil-unwrap crashes, five state assertions and eight controls before; all 16 pass after. Memory-only stores and host UIKit callback. Incoming tests exercise synchronous subscriber state directly, not async error delivery or peer domain association.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/35"
+  },
+  {
+    "id": "OW-2026-026",
+    "severity": "low",
+    "title": "Session responses were not bound to the pending remote request",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-026.md",
+    "fix_commit": "8508d02deaf965dbe6f46b3c0ca637074234e5da",
+    "regression_only_commit": "42846f9f9b9ff66ff8407700aa77539e70f963c5",
+    "retest_scope": "Twelve identical production cases: 18 assertions across eight invalid routing cases and four controls before; all pass after. Link response encryption/history and relay endpoint recording; no live relay or app signing exploit.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/36"
   }
 ]

@@ -7,7 +7,23 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`57893f12d80eea8203a7e235733f055f5dbd7902`**.
+Current review target: **`8508d02deaf965dbe6f46b3c0ca637074234e5da`**.
+[OW-2026-026](../findings/OW-2026-026.md) binds session responses to the pending
+remote request's topic and protocol method. Eighteen assertions across eight
+invalid cases reproduce before; four controls pass and all 12 pass after.
+SDK checks pass 229/one skip, diagnostics 118/two skips, 154 audit helper tests,
+source/secret checks, diagnostics coverage and unsigned generic iOS Release
+compilation (160.63 seconds) pass.
+
+[Source repair](https://github.com/devdasx/oath-wallet/pull/36) merged as `0d0f31e4c1f2c77263742d3c796ceb3788634166`. Tested application source matches;
+97 website-only differences are in [merge identity](../evidence/response-routing-merge-identity.json).
+[Scope](SESSION-RESPONSE-ROUTING.md) documents endpoint substitutes and Oath's
+original-topic callers. No remote signing exploit or fund loss is established.
+Generic transport routing and concurrent history replacement remain partial;
+RPCHistory and the relay responder are reopened for these remaining concerns.
+Full current-target CI remains unverified.
+
+Previous target: `57893f12d80eea8203a7e235733f055f5dbd7902`.
 [OW-2026-025](../findings/OW-2026-025.md) repairs missing-link-metadata traps
 and transport changes made before incoming request validation. Sixteen identical
 production cases retain three nil-unwrap crashes, five state assertions and
