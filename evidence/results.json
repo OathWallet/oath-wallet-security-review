@@ -25952,5 +25952,1041 @@
     "log_sha256": "ba6d6aa6a58c48ee3d8ac7b2aa77f020d9eb894e1b6326f13c07ddbc5f635b9e",
     "ci_run_id": 41345235526,
     "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/swap-progress-evidence/after/swap-progress.json"
+  },
+  {
+    "check": "OathTokenImages",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathTokenImages",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-artwork-host-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 8.06,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 102 selected; 92 passed; 10 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "fd984e81325f3305c1acf3f7519d53313a67b8179154a2f3c90bc67094ea0c75",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 102,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 10,
+      "sha256": "2cb738e6096395fbff1d616a70efd518857b45a48973c35d75eb254dbb732543"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/OathTokenImages.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-artwork-host-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 6.55,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "89198fda230310e00eba98528354b6a7fd9bd63dd0e13ef7090f33506808a298",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "b3ea8b5772241fee1169220f182cde71fe4747c79a239308cb3250ba6f21fc03"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-artwork-host-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 390.5,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "63c86e18a94d6f1f949ec844c1b084c3daf0ecdaf4d30888db754d80c975de47",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "fec31bea9fb8afe20b38daba7187f0b1d6ab67ec31136cc7680bacc83e49203d"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/OathAnkr.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-artwork-host-evidence/validation"
+    ],
+    "status": "failed",
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 96.33,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 328 selected; 267 passed; 60 skipped; 1 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "8aebcbd62601b25e6869093e6758c071bf213b94735a291e0be56fcf1c1f158f",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 328,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 60,
+      "sha256": "cb137720ac896586353a7e404c9bd0d0cb105f9d324315951ce4633198adb33e"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/OathBitcoin.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 25.67,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "34de64902d7157f3d5f2d615723691b2061583b5ab9498c919e4ecc01e09be54",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.35,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 258.06,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "899fa0505a6a322fbb836344fa6fbe60ac088b73e7bea9b990b1b9ded080c8b5",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/validation/build.json"
+  },
+  {
+    "check": "artwork-host-policy",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "baseline_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "fixture_sha256": "f5e0912b22bdb0db5b264ce5f8cb96b8e1960791ec2f4b51bc412c3ef3e32541",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testResolverRecognizedIPv4SpellingsAreRejected",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testResolverRecognizedIPv4SpellingsAreRejected.log",
+        "log_sha256": "009c1605a482b87f1892610aa93d0fc518290b992a72757036e76660271609a9"
+      },
+      {
+        "phase": "before",
+        "case": "testEscapedDelimitersAndMalformedLabelsAreRejected",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testEscapedDelimitersAndMalformedLabelsAreRejected.log",
+        "log_sha256": "e81fb432ed3d9b118b6ee3e8bc48dfbf5bcbe81d0ce7bdb89b8efcf6ad23e5a3"
+      },
+      {
+        "phase": "before",
+        "case": "testHomeZoneIsRejected",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testHomeZoneIsRejected.log",
+        "log_sha256": "9043cd81e57988cca35d17722de3625a682ab3a56ba3a5371649c65134e52091"
+      },
+      {
+        "phase": "before",
+        "case": "testSignedThumbnailCannotIntroduceNumericOriginal",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testSignedThumbnailCannotIntroduceNumericOriginal.log",
+        "log_sha256": "c5cc8ff02d604f3f04fbd232ca4e8c895d476e76470859d0df4b4aac9397bf00"
+      },
+      {
+        "phase": "before",
+        "case": "testUntrustedLogoNeverReachesLoaderTransport",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testUntrustedLogoNeverReachesLoaderTransport.log",
+        "log_sha256": "8e206e6d3dda690c9231eb7744e8c9cf1a9bd588b43d5df001d1e55a41f5065a"
+      },
+      {
+        "phase": "before",
+        "case": "testRedirectRejectsNumericHost",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testRedirectRejectsNumericHost.log",
+        "log_sha256": "ff314f4c4d57bf351511b3d859e18cab5d6739bc561c151640f0647654bb967a"
+      },
+      {
+        "phase": "before",
+        "case": "testPublicDNSAndGatewayCompatibility",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testPublicDNSAndGatewayCompatibility.log",
+        "log_sha256": "4bf823ab2de2a01530287bb293d99d5a1f966e91dfdf43fa7e4c4e8d84545240"
+      },
+      {
+        "phase": "before",
+        "case": "testRedirectPreservesPublicDestination",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testRedirectPreservesPublicDestination.log",
+        "log_sha256": "8c55dad98ffb57af983c011cfa5aa40bd7ede636f7c164803b7c9e2afdd72afb"
+      },
+      {
+        "phase": "after",
+        "case": "testResolverRecognizedIPv4SpellingsAreRejected",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testResolverRecognizedIPv4SpellingsAreRejected.log",
+        "log_sha256": "165ee9781f26f7c1df6cecc872d821c098a4d99243b5fd80491416124d25c9ae"
+      },
+      {
+        "phase": "after",
+        "case": "testEscapedDelimitersAndMalformedLabelsAreRejected",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testEscapedDelimitersAndMalformedLabelsAreRejected.log",
+        "log_sha256": "cb3d0142ee33a6ec8172bcbd370df34722229416176b045a2c39ee8ab58606a6"
+      },
+      {
+        "phase": "after",
+        "case": "testHomeZoneIsRejected",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testHomeZoneIsRejected.log",
+        "log_sha256": "b0234890c4b2fdbcc27bc6fefb0b900fcfe4ebd4a27ac5e790fafc692e8b265e"
+      },
+      {
+        "phase": "after",
+        "case": "testSignedThumbnailCannotIntroduceNumericOriginal",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSignedThumbnailCannotIntroduceNumericOriginal.log",
+        "log_sha256": "ba825d3808816dfd5dc8efc89e8817558fdfdbd7a504a9e73c99db51531b1ec4"
+      },
+      {
+        "phase": "after",
+        "case": "testUntrustedLogoNeverReachesLoaderTransport",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testUntrustedLogoNeverReachesLoaderTransport.log",
+        "log_sha256": "bec16b55e44f8530db4f816e539cbe7668e0f57d5e3c800724f9d04b879b5159"
+      },
+      {
+        "phase": "after",
+        "case": "testRedirectRejectsNumericHost",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testRedirectRejectsNumericHost.log",
+        "log_sha256": "a98c12ef9f3c9a46914b0d58c471a6c545675d68f340e3a069a47882193d1771"
+      },
+      {
+        "phase": "after",
+        "case": "testPublicDNSAndGatewayCompatibility",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testPublicDNSAndGatewayCompatibility.log",
+        "log_sha256": "44f2970c8aa96424b7c44e69f5c53a3a41c8723899d1b5c7ae65af008e452449"
+      },
+      {
+        "phase": "after",
+        "case": "testRedirectPreservesPublicDestination",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testRedirectPreservesPublicDestination.log",
+        "log_sha256": "9c5e3e16632b5cdc9c7fa4853ce093941a37aebfae930086875ea2948e5a0dd1"
+      }
+    ],
+    "duration_seconds": 39.692,
+    "scope": "Eight offline cases per revision. Darwin numeric parser, production artwork gate, thumbnail expansion, injected loader transport and unresumed URLSession redirect delegate. No TLS, DNS or private service contact.",
+    "log": "artwork-host-policy.log",
+    "log_sha256": "dfdb3a2bc4f771eed6a26cac6b06e7d7be36c56492963db10b1181a86489e5c0",
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/reproduction/artwork-host-policy.json"
+  },
+  {
+    "check": "svg-reference-graph",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "baseline_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "fixture_sha256": "055b20e3ebcfdada7dd78c5ebe554cb1ea273a7de7a413c8f0fe08135039b683",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testSharedLeafFirstCannotBypassDepthBudget",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "expected-depth-assertion",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testSharedLeafFirstCannotBypassDepthBudget.log",
+        "log_sha256": "1260a442478e49e953d7c7816b427e23acdfc9a51bfd2cb5405d8628712e36f8"
+      },
+      {
+        "phase": "before",
+        "case": "testShadowedCycleCannotReachRenderer",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "expected-signal-11",
+        "exit_code": -11,
+        "timed_out": false,
+        "log": "before-testShadowedCycleCannotReachRenderer.log",
+        "log_sha256": "a9ddbf82677444dfa723e1083625253ece2117be4d24e0a03e079958dec8204f"
+      },
+      {
+        "phase": "before",
+        "case": "testSharedRootFirstCannotBypassDepthBudget",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSharedRootFirstCannotBypassDepthBudget.log",
+        "log_sha256": "a3ed327070562c74485155c331714229b5fc3dd4b35dec3a00e5ed90948a7f9b"
+      },
+      {
+        "phase": "before",
+        "case": "testExactlyAtDepthBudgetInBothOrders",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testExactlyAtDepthBudgetInBothOrders.log",
+        "log_sha256": "7e4ea94421cd58b0cd5a6b13a47b77c4456d937c0faf804f938427fad3ffa9b5"
+      },
+      {
+        "phase": "before",
+        "case": "testSiblingReferencesMayShareOneID",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSiblingReferencesMayShareOneID.log",
+        "log_sha256": "dbdd30cc6ef4b0a0297c98d3d9054735d0656a8ba32595070d72a218d00e1b6d"
+      },
+      {
+        "phase": "after",
+        "case": "testSharedLeafFirstCannotBypassDepthBudget",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSharedLeafFirstCannotBypassDepthBudget.log",
+        "log_sha256": "321c826b2ceeda7b586e9f2b7a9bc64b6bac930c9a6621bf15f7ab31bd5c7334"
+      },
+      {
+        "phase": "after",
+        "case": "testShadowedCycleCannotReachRenderer",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testShadowedCycleCannotReachRenderer.log",
+        "log_sha256": "54e27b5d4dadbfb33297e7763c608e4636ed7c31a2be0b418de7b84020343a52"
+      },
+      {
+        "phase": "after",
+        "case": "testSharedRootFirstCannotBypassDepthBudget",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSharedRootFirstCannotBypassDepthBudget.log",
+        "log_sha256": "bbaf856f2a0299c5069e191b1208d2c0baa3a301118e73b287373652fadf6cd0"
+      },
+      {
+        "phase": "after",
+        "case": "testExactlyAtDepthBudgetInBothOrders",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testExactlyAtDepthBudgetInBothOrders.log",
+        "log_sha256": "1567109f4917340a4e9d6485b60e29eae20025bee4535cd4dbce2e8e0d66d0da"
+      },
+      {
+        "phase": "after",
+        "case": "testSiblingReferencesMayShareOneID",
+        "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSiblingReferencesMayShareOneID.log",
+        "log_sha256": "a566f222f12cd1c4e82bb86d2828237092cdd0d6d5a06115a2335b3d07759312"
+      }
+    ],
+    "duration_seconds": 16.113,
+    "scope": "Production token decoder and pinned drawing dependency; five synthetic images/cases per revision. Separate offline host XCTest process per case.",
+    "log": "svg-reference-graph.log",
+    "log_sha256": "d6cdf6a6cdf0ee9688dbcc8904be1f2921c36057f8a4ddc8859f157605d86896",
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/svg-regression/svg-reference-graph.json"
+  },
+  {
+    "check": "bundled-artwork",
+    "status": "passed",
+    "source_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "log": "bundled-artwork.log",
+    "log_sha256": "94ce4ab87ac0cb40ced9528d788bf40db41c92335cc95231441b676c1d1fa07d",
+    "evidence_path": "evidence/artwork-host/oath-artwork-host-evidence/resources/bundled-artwork.json"
+  },
+  {
+    "check": "OathTokenImages",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathTokenImages",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-fee-final-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 34.8,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 102 selected; 92 passed; 10 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "babbea629ba57b4e576eefc1bde4d0c0f2a1c7943577513200ce1e7c922b850a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 102,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 10,
+      "sha256": "0b980c65fca90329504497607cac222635ad9d34e23fbae60919ef42b47c838f"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/OathTokenImages.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-fee-final-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 26.86,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "31927ed35919a10f4bd9bc1891da1f4b4e87f4a9c403d119e14a106c438a3cfd",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "fc0941e85cad5d85924ed5960f2b3ccd768e7625c5ed50f11d27c7b32e891d2b"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-fee-final-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 239.93,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "04db4802b8ab0b92a89ce1b016cd4e5f5cb09d0c83b39a93f901d08fb7231211",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "a68994c77467316306b0347abe11e941ede782ace4e8ccc0a2462af2a0112667"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/OathAnkr.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-fee-final-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 65.71,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 328 selected; 268 passed; 60 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "a7ff0666109680a65d48432b4a7b59ebc657b541ec3e6e6fb4a62989b9de5210",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 328,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 60,
+      "sha256": "81e4708878295cbe7c7becf4f30585577e7e1b7d72b9e16607ca5a17baa947a5"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/OathBitcoin.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 43.71,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "b21a48142a2e9da2ba539110ff7c32f3107192c07405271b6a39aa2d8e48c35a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.3,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 21.29,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "b04d1bb5a1e7487841c4b1e8bc6bcdd69268d78c93a0a55d62efbaecb7f70ef8",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/validation/build.json"
+  },
+  {
+    "check": "artwork-host-policy",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "baseline_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "fixture_sha256": "f5e0912b22bdb0db5b264ce5f8cb96b8e1960791ec2f4b51bc412c3ef3e32541",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testResolverRecognizedIPv4SpellingsAreRejected",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testResolverRecognizedIPv4SpellingsAreRejected.log",
+        "log_sha256": "11a17e6e41440b2ac54cd9a138b8f037723fa64304df19eefdb207954f085d77"
+      },
+      {
+        "phase": "before",
+        "case": "testEscapedDelimitersAndMalformedLabelsAreRejected",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testEscapedDelimitersAndMalformedLabelsAreRejected.log",
+        "log_sha256": "732219cd784da1067c2571521fef07abfa0c67a7165892d8973a206919ad32b0"
+      },
+      {
+        "phase": "before",
+        "case": "testHomeZoneIsRejected",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testHomeZoneIsRejected.log",
+        "log_sha256": "34fa43e05901691c0d06076c44ed2d809ac00aacf6abe9a21f46d8c187146cd0"
+      },
+      {
+        "phase": "before",
+        "case": "testSignedThumbnailCannotIntroduceNumericOriginal",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testSignedThumbnailCannotIntroduceNumericOriginal.log",
+        "log_sha256": "9b68652d75b3c9aae9de95af1c6c23d0308ec121995487446654403486b773b1"
+      },
+      {
+        "phase": "before",
+        "case": "testUntrustedLogoNeverReachesLoaderTransport",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testUntrustedLogoNeverReachesLoaderTransport.log",
+        "log_sha256": "a590a1dae1434c5fcac60721ef0071673b0bdb538cc9d3cec565bbf10e82dc6b"
+      },
+      {
+        "phase": "before",
+        "case": "testRedirectRejectsNumericHost",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "expected-admission-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testRedirectRejectsNumericHost.log",
+        "log_sha256": "c01defd77d3ff587a49cfeabb1364101b1405ea309afac5e83a082e1a01c125b"
+      },
+      {
+        "phase": "before",
+        "case": "testPublicDNSAndGatewayCompatibility",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testPublicDNSAndGatewayCompatibility.log",
+        "log_sha256": "6bed61ee5c80aecaf116cb2fa525c217a240c8d4cceb9dd0b12458e884e4f6e2"
+      },
+      {
+        "phase": "before",
+        "case": "testRedirectPreservesPublicDestination",
+        "source_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testRedirectPreservesPublicDestination.log",
+        "log_sha256": "f171cce510af010eabd82d92c30416f3bcee9c03c2fc70b0a74acaded5673cd2"
+      },
+      {
+        "phase": "after",
+        "case": "testResolverRecognizedIPv4SpellingsAreRejected",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testResolverRecognizedIPv4SpellingsAreRejected.log",
+        "log_sha256": "593f1951a80686159df7b73ac1a880021a0170de8611e48c8a446d6554f08590"
+      },
+      {
+        "phase": "after",
+        "case": "testEscapedDelimitersAndMalformedLabelsAreRejected",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testEscapedDelimitersAndMalformedLabelsAreRejected.log",
+        "log_sha256": "3f497f8fd321399f51dabce306cfe07c00d9e4fab4186fe982bb1998de1b7a01"
+      },
+      {
+        "phase": "after",
+        "case": "testHomeZoneIsRejected",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testHomeZoneIsRejected.log",
+        "log_sha256": "026d9ba5abe783b644ccb4fe5516e17a60c03fc03423844caa2923223ea0c861"
+      },
+      {
+        "phase": "after",
+        "case": "testSignedThumbnailCannotIntroduceNumericOriginal",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSignedThumbnailCannotIntroduceNumericOriginal.log",
+        "log_sha256": "071add0476fcc1c9fbb8e5a5cd3fdcecc3ede781c78eae9db3349f7eff279f42"
+      },
+      {
+        "phase": "after",
+        "case": "testUntrustedLogoNeverReachesLoaderTransport",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testUntrustedLogoNeverReachesLoaderTransport.log",
+        "log_sha256": "3953bd6eddbe9e240ddfb975dd672727e54def10f92c3372ce311d781ea41082"
+      },
+      {
+        "phase": "after",
+        "case": "testRedirectRejectsNumericHost",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testRedirectRejectsNumericHost.log",
+        "log_sha256": "0a063d9156babfa54fd9ffe3f0a03134846e6113a43fa7bbfb058218583427e5"
+      },
+      {
+        "phase": "after",
+        "case": "testPublicDNSAndGatewayCompatibility",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testPublicDNSAndGatewayCompatibility.log",
+        "log_sha256": "18c6e5d3c5ddd2db31345c23e3766caca52fd25014b7ada76203c2d8a4d3b4b2"
+      },
+      {
+        "phase": "after",
+        "case": "testRedirectPreservesPublicDestination",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testRedirectPreservesPublicDestination.log",
+        "log_sha256": "cf3b483d4a7539e454dcba1bf2a4ccc3780ca0be5cf3526930550c9b518c9b95"
+      }
+    ],
+    "duration_seconds": 28.024,
+    "scope": "Eight offline cases per revision. Darwin numeric parser, production artwork gate, thumbnail expansion, injected loader transport and unresumed URLSession redirect delegate. No TLS, DNS or private service contact.",
+    "log": "artwork-host-policy.log",
+    "log_sha256": "006270db32e285ff2383e0a6f4e84040eb0201be7232f702c2686e1796a6125b",
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/reproduction/artwork-host-policy.json"
+  },
+  {
+    "check": "svg-reference-graph",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "baseline_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "fixture_sha256": "055b20e3ebcfdada7dd78c5ebe554cb1ea273a7de7a413c8f0fe08135039b683",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testSharedLeafFirstCannotBypassDepthBudget",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "expected-depth-assertion",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testSharedLeafFirstCannotBypassDepthBudget.log",
+        "log_sha256": "763c3fc40de78806ce8fa46c8584a4e53d810dffdf5e5c4fb506ebffd0e0d8be"
+      },
+      {
+        "phase": "before",
+        "case": "testShadowedCycleCannotReachRenderer",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "expected-signal-11",
+        "exit_code": -11,
+        "timed_out": false,
+        "log": "before-testShadowedCycleCannotReachRenderer.log",
+        "log_sha256": "15198a21a4822b248a8b5ba2221da762e49186ef9b745f5216787eb1997fdc32"
+      },
+      {
+        "phase": "before",
+        "case": "testSharedRootFirstCannotBypassDepthBudget",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSharedRootFirstCannotBypassDepthBudget.log",
+        "log_sha256": "bfebd74a8540ecbe88d82997687c8c637092de831eeb5451cdae7c7260f8ab0a"
+      },
+      {
+        "phase": "before",
+        "case": "testExactlyAtDepthBudgetInBothOrders",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testExactlyAtDepthBudgetInBothOrders.log",
+        "log_sha256": "4996779154b28ea664d51377615207d8d838ece91b47da660c7e823da0391d79"
+      },
+      {
+        "phase": "before",
+        "case": "testSiblingReferencesMayShareOneID",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSiblingReferencesMayShareOneID.log",
+        "log_sha256": "c3d6893983ce467e3ff8597dca72d71cfe4c2acf978bdd1526a76a330f04f3bf"
+      },
+      {
+        "phase": "after",
+        "case": "testSharedLeafFirstCannotBypassDepthBudget",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSharedLeafFirstCannotBypassDepthBudget.log",
+        "log_sha256": "cdb3108d7da252a972b4bb5bceb285de8f5590c0db1dccfdabfbedd90011fa9b"
+      },
+      {
+        "phase": "after",
+        "case": "testShadowedCycleCannotReachRenderer",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testShadowedCycleCannotReachRenderer.log",
+        "log_sha256": "4e5a6f13a0de570f38636620e89d799d5d3730e86cb5047b3e0a25fad5832e2b"
+      },
+      {
+        "phase": "after",
+        "case": "testSharedRootFirstCannotBypassDepthBudget",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSharedRootFirstCannotBypassDepthBudget.log",
+        "log_sha256": "bbb16b3d59c28fb95dfe404056db009157b00c591983a2061b2b53218ffd5a25"
+      },
+      {
+        "phase": "after",
+        "case": "testExactlyAtDepthBudgetInBothOrders",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testExactlyAtDepthBudgetInBothOrders.log",
+        "log_sha256": "1d55eb49ba2dc01fd5a557ae4dac7bcfd02f85a34a37b065ed124229072e3a63"
+      },
+      {
+        "phase": "after",
+        "case": "testSiblingReferencesMayShareOneID",
+        "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSiblingReferencesMayShareOneID.log",
+        "log_sha256": "d347b245e38a2882efe0e6e2cfb14f6d396deff1ca6aefa4ae9db1b00fdded8c"
+      }
+    ],
+    "duration_seconds": 19.03,
+    "scope": "Production token decoder and pinned drawing dependency; five synthetic images/cases per revision. Separate offline host XCTest process per case.",
+    "log": "svg-reference-graph.log",
+    "log_sha256": "55307c33c6939a17eb6cc68bcaa4a0f98b29922ca41e479fcbed2fa7fdea159f",
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/svg-regression/svg-reference-graph.json"
+  },
+  {
+    "check": "bundled-artwork",
+    "status": "passed",
+    "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
+    "log": "bundled-artwork.log",
+    "log_sha256": "94ce4ab87ac0cb40ced9528d788bf40db41c92335cc95231441b676c1d1fa07d",
+    "evidence_path": "evidence/artwork-host/oath-fee-final-evidence/resources/bundled-artwork.json"
   }
 ]

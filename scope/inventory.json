@@ -1,5 +1,5 @@
 {
-  "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+  "source_commit": "eb8239ad3be4c0b0650e2e34334982ac54c15b42",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -11472,8 +11472,10 @@
       "sha256": "4a86a430bf899506b9d3888c94363a03a3561e3a2ccaf4e718f798e8c07d09da",
       "bytes": 2429,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/ARTWORK-HOSTS-AND-DOM.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/PublicCheckProviders.swift",
@@ -16143,16 +16145,20 @@
       "sha256": "3edcdb3111e3e53b78c6b3df7722a51c1629b53c1fcdf0d289aa56d8d0b313f1",
       "bytes": 14405,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-PSBT-REVIEW.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectRequest.swift",
       "sha256": "b6d648d76023fed517c30e2f01f87f706d6d4decdd4cbadc0f6235874b47e943",
       "bytes": 7991,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/BITCOIN-PSBT-REVIEW.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinDataOutput.swift",
@@ -16840,11 +16846,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/UTXOFeeProviderTests.swift",
-      "sha256": "449ec820b8f51e3b2d3138497d01b82ef071039eb2b256a4d18a39858947cc46",
-      "bytes": 11443,
+      "sha256": "ab13cc66086d85ddac66601d9f7b5a23e77a2461312faa004f32bb6cc794fc81",
+      "bytes": 12023,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-FEE-DIAGNOSTICS.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/UTXOHTTPTests.swift",
@@ -19862,11 +19870,13 @@
     },
     {
       "path": "Packages/OathTokenImages/Sources/OathArtworkSource/ArtworkSource.swift",
-      "sha256": "fd925ca18f2e04df6bd49e522fc56c0d3524d2de1a4fb81d9a2bb5911c156133",
-      "bytes": 4710,
+      "sha256": "b84c605c5dace453c4538129fcde3954881b094d3e516ff97681dc3368a5ffa5",
+      "bytes": 5942,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ARTWORK-HOSTS-AND-DOM.md"
+      ]
     },
     {
       "path": "Packages/OathTokenImages/Sources/OathTokenImages/ArtworkFallbackCatalog.swift",
@@ -19935,6 +19945,16 @@
       "category": "test",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Packages/OathTokenImages/Tests/OathTokenImagesTests/ArtworkHostPolicyTests.swift",
+      "sha256": "f5e0912b22bdb0db5b264ce5f8cb96b8e1960791ec2f4b51bc412c3ef3e32541",
+      "bytes": 4517,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "review/ARTWORK-HOSTS-AND-DOM.md"
+      ]
     },
     {
       "path": "Packages/OathTokenImages/Tests/OathTokenImagesTests/ArtworkLiveTests.swift",

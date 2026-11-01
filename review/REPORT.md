@@ -7,7 +7,15 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`1dbe6cbabb7397ad86be917e034fb88884fbca8d`**.
+Current review target: **`eb8239ad3be4c0b0650e2e34334982ac54c15b42`**.
+
+[OW-2026-031](../findings/OW-2026-031.md) reproduced an unintended token-artwork destination. Darwin recognizes `0x7f.1` as loopback. Both initial loads and the redirect gate accepted this spelling before the repair. Six of eight offline cases failed before the change (16 specific assertions); all eight passed after it. The [app repair](https://github.com/devdasx/oath-wallet/pull/42) merged before the [Bitcoin fixture repair](https://github.com/devdasx/oath-wallet/pull/43). The latter merged as `865c41b3a56ff2c741ace8588a97394433adfbc7` with the same tree as the final tested commit. Resolving a permitted domain to a private IP remains an open boundary. No private endpoint was contacted.
+
+The [SwiftDraw review](ARTWORK-HOSTS-AND-DOM.md) added 19 reviewed files and six partial dispositions. Its pinned DOM suite ran 167 tests across 22 suites. The [resolved package inventory](RESOLVED-PACKAGES.md) adds 5,692 work items across eleven other Xcode checkouts, including two nested repository pointers. All ten members of the compiled project's BitcoinDevKit framework matched the vendor's distribution archive. The [public build log](https://github.com/bitcoindevkit/bdk-swift/actions/runs/36735728184) records the Rust bridge input. Independent binary reproduction is outstanding.
+
+The [Bitcoin fee fixture](BITCOIN-FEE-DIAGNOSTICS.md) had two intermittent assertion failures during the initial full package run. Its test now separates timeouts from malformed quotes and observes correlated background events. Both attempts are retained. The [PSBT review](BITCOIN-PSBT-REVIEW.md) traces request, input, fee and transaction checks and links twelve existing host cases. Exact-source host checks also covered the Bitcoin package (268 passed, 60 skipped) and provider package (1296 passed, 194 skipped), artwork (92 passed, ten skipped) and diagnostics (118 passed, two skipped). The earlier SVG crash regression still passed, all 174 audit helper tests passed, and the generic unsigned iOS Release build succeeded. [Logs and checksums](../evidence/artwork-host/manifest.json). Full GitHub CI and the whole-wallet review remain open.
+
+Previous target: `1dbe6cbabb7397ad86be917e034fb88884fbca8d`.
 
 [OW-2026-030](../findings/OW-2026-030.md) documents a process crash while rendering a synthetic token logo and a second depth-limit bypass. The paired isolated host corpus reproduced signal 11 and one failed assertion before the fix. All five cases passed after it. The full artwork suite passed 84 cases with ten opt-in skips, diagnostics passed 118 with two skips, and the unsigned generic iOS Release build passed (305.2 s). The [source repair](https://github.com/devdasx/oath-wallet/pull/41) merged as `e3c0bc5921492349dad1aaacb90d02eebe366a43` with a tree identical to the tested commit.
 

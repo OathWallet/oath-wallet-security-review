@@ -16,6 +16,12 @@ def main():
     decisions={'Package.swift':'reviewed','DOM/Sources/DOM.Use.swift':'reviewed',
                'SwiftDraw/Sources/LayerTree/LayerTree.Builder.swift':'partially-reviewed',
                'SwiftDraw/Sources/LayerTree/LayerTree.Builder.Layer.swift':'partially-reviewed'}
+    dom_models = ['DOM.swift','DOM.Element.swift','DOM.Filter.swift','DOM.FontFace.swift','DOM.Image.swift','DOM.LinearGradient.swift','DOM.Path.swift','DOM.Pattern.swift','DOM.RadialGradient.swift','DOM.SVG.swift','DOM.Switch.swift','DOM.Text.swift','XML.Element.swift']
+    dom_facades = ['DOM.SVG+Parse.swift','Parser.XML.Image.swift','Parser.XML.Use.swift','Parser.XML.Text.swift','Parser.XML.Pattern.swift','URL+Data.swift']
+    partial = ['DOM+Extensions.swift','Parser.XML.Filter.swift','Parser.XML.LinearGradient.swift','Parser.XML.RadialGradient.swift','Parser.XML.Transform.swift','XML.SAXParser.swift']
+    dom_evidence = {'DOM/Sources/'+name: 'reviewed' for name in dom_models+dom_facades}
+    dom_evidence.update({'DOM/Sources/'+name: 'partially-reviewed' for name in partial})
+    decisions.update(dom_evidence)
     rows=[]
     for entry in filter(None,entries):
         meta,name=entry.split('\t',1);mode,kind,oid=meta.split()
@@ -24,7 +30,7 @@ def main():
         row=dict(path=name,sha256=hashlib.sha256(data).hexdigest(),bytes=len(data),mode=mode,
                  library_target_source=name.startswith(('SwiftDraw/Sources/','DOM/Sources/')),
                  status=decisions.get(name,'outstanding'))
-        if name in decisions: row['evidence']=['review/TOKEN-ARTWORK.md']
+        if name in decisions: row['evidence']=['review/ARTWORK-HOSTS-AND-DOM.md' if name in dom_evidence else 'review/TOKEN-ARTWORK.md']
         rows.append(row)
     if set(decisions)-{r['path'] for r in rows}: raise ValueError('Missing reviewed input')
     a.output.write_text(json.dumps(dict(repository='https://github.com/swhitty/SwiftDraw',commit=PIN,tag='0.29.0',

@@ -527,5 +527,17 @@
     "retest_scope": "Five synthetic host cases per revision in isolated, network-denied processes. Baseline signal 11 and failed depth assertion. All five pass after.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/41"
+  },
+  {
+    "id": "OW-2026-031",
+    "title": "Noncanonical numeric hosts bypassed artwork source and redirect admission",
+    "severity": "low",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-031.md",
+    "fix_commit": "d0c6b3a73ec794d7b768bb71454ba17c0063af98",
+    "regression_only_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
+    "retest_scope": "Eight host cases with synthetic sources, an injected transport and unresumed redirect tasks. Six fail before and eight pass after; no DNS resolution or real endpoint used.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/42"
   }
 ]

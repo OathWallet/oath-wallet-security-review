@@ -49,3 +49,5 @@ Vulnerability-database answers are timestamped observations and can change.
 Release evidence is bundled with checksums. A progress release is not an audit
 completion release. A final verdict requires resolved coverage, findings,
 required tests and compilation on the exact final commit.
+
+The 46th checkpoint configures the shared full-run queue to retain up to 100 pending runs. Earlier settings let a newer checkpoint displace an already pending run, as happened to [progress 43](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41353398907). A canceled workflow supplies no passing verdict. See [GitHub's queue semantics](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency).

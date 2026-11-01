@@ -1,0 +1,2626 @@
+[
+  {
+    "selector": "OathBitcoinTests.AezeedBitcoinTests/testBalancesAndSpentHistoryFromAllLNDScopes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.189,
+    "log": "OathBitcoin-cases/d7f2b4e6f7f88b29.log",
+    "log_sha256": "5309738da774ce2bd00364826dbaccc8ba3bff56fc452c1ab571a66be20222aa"
+  },
+  {
+    "selector": "OathBitcoinTests.AezeedBitcoinTests/testBIP49PlusDoesNotConfuseChangeWithBIP84",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.126,
+    "log": "OathBitcoin-cases/6d4f1cd3c35c5ad4.log",
+    "log_sha256": "e610b8bbe89a465bedff755b534d5fb8687f46f6784df5139c4517e990c1c900"
+  },
+  {
+    "selector": "OathBitcoinTests.AezeedBitcoinTests/testCoreFundedRecoveryAndMixedInputTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.096,
+    "log": "OathBitcoin-cases/bfa0a26f147227f7.log",
+    "log_sha256": "03456b5b5ab5025399574763d4fbaca91f3525f9162a3f614b2593ea95add739"
+  },
+  {
+    "selector": "OathBitcoinTests.AezeedBitcoinTests/testLNDReferenceAddressesAndSigningKeysAcrossAccounts",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.765,
+    "log": "OathBitcoin-cases/36d482cf5a1b3fcf.log",
+    "log_sha256": "fffd896965eab0b7450c3cc2ce1beef3c877774a3c205b428527f7dca3990bc3"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testActualAdapterTransportForAllFourChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.322,
+    "log": "OathBitcoin-cases/d26e002e9fffb727.log",
+    "log_sha256": "8a76474ff840db003fd1511013a4dfe90dddedcfb8194bff6f29cb3d992d1db2"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testAllFourMainnetRoutesAndExactRPCParameters",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.1,
+    "log": "OathBitcoin-cases/6b4767de86ea948a.log",
+    "log_sha256": "95ae4886a3546e7b3307b13c00cad51d9617ee71f5dea78eb1ff0c842acf27d4"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testBothHTTPAndRPC429BackOffAllAlchemyChainsButKeepOtherProvidersAvailable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.141,
+    "log": "OathBitcoin-cases/a3435a58d92df27c.log",
+    "log_sha256": "26a429d662a8563f0bbeebe68b1b9c558704019022380d7e4d842a6c617b2551"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testBroadcastAndLookupStrictlyDecodeSuccessAndExpectedAbsence",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.131,
+    "log": "OathBitcoin-cases/7ff76c5980eea966.log",
+    "log_sha256": "590eb50a2c2ca6bac53e7e93f8f1fdb70e13985945c32fc60ed7005f6f77fa68"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testExpectedPropagationAbsenceAndHTTP503NeverBecomeAcceptance",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.368,
+    "log": "OathBitcoin-cases/d51d44acf2e0c00b.log",
+    "log_sha256": "8a3f237780cd0719aaeb7a6af6621c5441075822536838786af67042ba5059cf"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testFeesUseExactDecimalUnitsAndRelayFloorForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.101,
+    "log": "OathBitcoin-cases/6f2ca3b41ec2a470.log",
+    "log_sha256": "ef2a4372702dff7b3a3ce998559a61e5c8acbab89418a70d12a9e01de348b14a"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testLiveBroadcastProbeUsesOnlyImpossibleSyntheticSpend",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.107,
+    "log": "OathBitcoin-cases/6170e017a008925b.log",
+    "log_sha256": "95220314818dc312daab4f0529c97e395f0ea996646fc96f7589b48977f5ae70"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testLiveConfiguredAlchemyFeesAndCacheOnAllChains",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.182,
+    "log": "OathBitcoin-cases/e448ad17a70f229f.log",
+    "log_sha256": "04710bc60127df77cca035a9984480d9a218e8b86bbcd8351ae3d0382a7b2755"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testMalformedWrongChainAndUncorrelatedFeeEnvelopesAreRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.206,
+    "log": "OathBitcoin-cases/f8e83ccd8c318403.log",
+    "log_sha256": "9a89d1e2bf7021a427d7c629daea1a96667363ea082c7c5b217d77a40e2da770"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testProviderCodesSurviveWhileCredentialAndTransactionEchoesAreRedacted",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.214,
+    "log": "OathBitcoin-cases/9a94f6d26ae49744.log",
+    "log_sha256": "aacba1a00a2facb49a5e8543e8e684f4319724005f25a53d673bd1c77cff11af"
+  },
+  {
+    "selector": "OathBitcoinTests.AlchemyUTXOTests/testSharedAlchemyBudgetSpacesStartsAcrossDifferentChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.475,
+    "log": "OathBitcoin-cases/d5ce3457c14b84ac.log",
+    "log_sha256": "fc54164c6aa0e6b075528515f75048a974cd283c8fb1ea874c1e1a6d4643b4d3"
+  },
+  {
+    "selector": "OathBitcoinTests.AnkrUTXOFeeTests/testCredentialEchoInProviderErrorIsFilteredBeforePersistence",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.207,
+    "log": "OathBitcoin-cases/9691a70945f2e81f.log",
+    "log_sha256": "780d5ab4eb61715f18997d23817619b5932e995a7808c78d4d411989f8722f61"
+  },
+  {
+    "selector": "OathBitcoinTests.AnkrUTXOFeeTests/testExactFeeUnitsCeilingAndRelayFloor",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.189,
+    "log": "OathBitcoin-cases/5ef02b9973bda4e1.log",
+    "log_sha256": "3502fe018d877a08dcab24a0ef5f2e4ed962d0af5e17d1eeee173df8fe9397a5"
+  },
+  {
+    "selector": "OathBitcoinTests.AnkrUTXOFeeTests/testInvalidAndUncorrelatedResponsesNeverBecomeFees",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.166,
+    "log": "OathBitcoin-cases/a41f0f3c9e818724.log",
+    "log_sha256": "1cc5976e7765c323ddec1673ec2d6289aabe835de56782b37f5037b548f26a4c"
+  },
+  {
+    "selector": "OathBitcoinTests.AnkrUTXOFeeTests/testLiveConfiguredAnkrAndAllChainFallbacks",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.175,
+    "log": "OathBitcoin-cases/3e1560c2a0c4a811.log",
+    "log_sha256": "01321b012ef420e1d43411ea1a4ebff064c505500806cfcf29e82820680a93da"
+  },
+  {
+    "selector": "OathBitcoinTests.AnkrUTXOFeeTests/testOriginalProviderErrorsReachTheSharedSourceBoundary",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.134,
+    "log": "OathBitcoin-cases/6921b257a14068ca.log",
+    "log_sha256": "f18e70d355da8d6267dd77da4ac03f886d905ee6009852bd2a597ed2c4101654"
+  },
+  {
+    "selector": "OathBitcoinTests.AnkrUTXOFeeTests/testRequestIsReadOnlyBitcoinRPCAndNeverEnabledForUnverifiedChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.132,
+    "log": "OathBitcoin-cases/4ba664b4f24adb88.log",
+    "log_sha256": "a109f29ad0248e9feb43909193767dd2f03af909a3f3d1d7c3c2d359ed9fcb85"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests/testSigningFailureReportsOnlySafeCodeAndOperationContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.715,
+    "log": "OathBitcoin-cases/48bf93976c09d6ec.log",
+    "log_sha256": "02e497e3b4fc361b4e5d1001fc8e1d449997ec9a61ef1e482fbfea463aea16c3"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigPublicTests/testPreparePublicWallet",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.132,
+    "log": "OathBitcoin-cases/412be1d38f904fe7.log",
+    "log_sha256": "7053faf136506a6ece1ba457ba619124f9779d83390b598c1566b550055f098b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigPublicTests/testSignPublicTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.26,
+    "log": "OathBitcoin-cases/a8110af615970963.log",
+    "log_sha256": "7f19795aed138bc53f35a77e03b093f2fc8d4d3ffd517f8c8945ecdaaedc10b9"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigTests/testBitcoinCashCoreMultisigConsensus",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.152,
+    "log": "OathBitcoin-cases/7bd12a241e3bf876.log",
+    "log_sha256": "83a5c1ca59e0969a78bab687374428ef9aefc6834071e1ee34c658cc6dab51c7"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigTests/testEveryThresholdSignsWithBoundedFeesAndRejectsWrongChange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 24.585,
+    "log": "OathBitcoin-cases/972335daf3798fcd.log",
+    "log_sha256": "75d860b269c10901f8ceddd9c701927abb293658d71da01e73374bc40477cf24"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigTests/testMixedAndHDKeysUseSeparateReceiveAndChangeBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.146,
+    "log": "OathBitcoin-cases/8fb2aca0eada6fe3.log",
+    "log_sha256": "1095b17f2a8788fb658e3b02e8764181add3829d7f49ce06996ee752ba51536c"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigTests/testSortedPolicyAndPublicOnlyDescriptors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.17,
+    "log": "OathBitcoin-cases/220d42c876c420cd.log",
+    "log_sha256": "a8a56da487e8f6a7dc6016fa35b8e959b6769a2746814f2ae88a1005e8cd3b52"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashMultisigTests/testThresholdDuplicatesAndWIFValidation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.186,
+    "log": "OathBitcoin-cases/90340d8b980d5c05.log",
+    "log_sha256": "9e6f4f35f90758471e7d09b2112df1ddf5c5e52f0eb0ae7f017b120cbf94f8ed"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testBCHBroadcastRejectsWrongTransactionIDAndRetriesIdenticalPayload",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.243,
+    "log": "OathBitcoin-cases/494d3ca666b5ba7e.log",
+    "log_sha256": "546fb8af46707fba277a4c3fa9d0d3a6ced8583eb14965ba3075300ba8b21b21"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testBCHFeeFallbackRelayFloorAndMalformedProviderFailover",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.176,
+    "log": "OathBitcoin-cases/282e8ed5ed56735d.log",
+    "log_sha256": "2b8bd2e5b4c6d4e34e6a9d7220bd6a168bbec129418c728d94c316ef408ee50e"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testBCHNAcceptsMinesAddressAndFeeMatrix",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.154,
+    "log": "OathBitcoin-cases/dcc6ae2d20ec3078.log",
+    "log_sha256": "3c2c49b13b66556412f69dd633ac758ec16772081d81e38b4e3fc36d32310bed"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testBCHNRejectsNonForkIDSignatureAndModifiedRecipientAmount",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.129,
+    "log": "OathBitcoin-cases/ae36866ad1e3b1cc.log",
+    "log_sha256": "30c7f33a4f6f402a1756de4ef76293882a4dfe1f706c6bb1664a3596fb517f3b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testCashAddrAndLegacyChecksumsNetworkAndScriptTypes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.163,
+    "log": "OathBitcoin-cases/c8cb21379da99538.log",
+    "log_sha256": "eedf2aba439e3bae627fce7f2e0eb89df2699deaafe68f75857b65c1d040e612"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testExtendedPrivateImportsAcrossAllScopesCanSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.381,
+    "log": "OathBitcoin-cases/ee596b2b3013b30d.log",
+    "log_sha256": "b158ac1541822c58c284d88deacc58a3702145111c018816e5cc6d2b653005f8"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testFeesFromRemainderThenAmountDustAndTinyWalletRemainder",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.158,
+    "log": "OathBitcoin-cases/d84e23b76a327ec7.log",
+    "log_sha256": "d6d467f82fc944f1dcdb8828f84be67113d646bd9ed8aacdfaa82c2b4699c82a"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testLiveBCHMainnetFeeReadOnly",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.105,
+    "log": "OathBitcoin-cases/0f222f1ab4ca1485.log",
+    "log_sha256": "f032f1d8f2e18819976d1f68de9ecbaa8612896dd824bc7c156db57f0d7c6253"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testMixedAccountsReceiveChangeAndImportedKeysSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.144,
+    "log": "OathBitcoin-cases/74796ca787d447b0.log",
+    "log_sha256": "68a59374971fb706f3ae770e48f9398f955ca69d5b783fe314513fe4a8e5e7db"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testOldBitcoinPlanStillDecodesAndSigns",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.125,
+    "log": "OathBitcoin-cases/b7b3cc97e93b68d7.log",
+    "log_sha256": "e8626cb7aaf68bea21b89de93c4db0d04b574a78377da33da6e44fe7269fec27"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testPrepareIsolatedPublicTestWallet",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.201,
+    "log": "OathBitcoin-cases/ca4e88c8930c6ee7.log",
+    "log_sha256": "4fc08907e2d24a786b8a1339803e456ed3126e804836b9494ef44f5fd71b8c2b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testSignPublicChipnetTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.173,
+    "log": "OathBitcoin-cases/9498712580984e41.log",
+    "log_sha256": "6f42b2ffabea394d2a6e08bcce6cd3fdaf43f2e3e8d048b904c92176b5a9dba6"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashSendTests/testTokenBurnForgedParentWrongKeyAndModifiedReviewRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.32,
+    "log": "OathBitcoin-cases/8ae3d0324bcfba3b.log",
+    "log_sha256": "7ce673fe33e3877ae2a0b021c472cc738ddd4f810c3fc0c5911958379d51bee0"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testBatchedGap20ContinuesAfterSpentReceiveAndChangeHistory",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.29,
+    "log": "OathBitcoin-cases/4148329613b6f54a.log",
+    "log_sha256": "0cf7be609d7211400d8d874b85801d52a9c5978dc894358c52cf11647f41eeaa"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testBCHNWIFCompressedUncompressedHexBase64MiniAndInvalidImports",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.244,
+    "log": "OathBitcoin-cases/719f4e3c32faa5da.log",
+    "log_sha256": "86b0da1aae7db2b2bec2c1ecf0528fb94d83935f7ab887eea54e91a0bcd16828"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testBIP44HDReceiveChangeAndAllExtendedScopesMatchIndependentReference",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.467,
+    "log": "OathBitcoin-cases/fc05c2cfb60e8c09.log",
+    "log_sha256": "975f7066964495b75a15943a620aa0f41769a071245caa3da6a449f6e13bdcc2"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testCashTokenSpecificationVectorsAndFundingCommitment",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.206,
+    "log": "OathBitcoin-cases/e55ac414cebbde92.log",
+    "log_sha256": "8c6d6c8b501c1f2b50523f5a49dd30f44aab8027e0e9a437084c36df7ffba475"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testLiveBitcoinCashPeersBatchesHistoryRawTransactionsAndFallback",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.217,
+    "log": "OathBitcoin-cases/8f6ba5fb8953e370.log",
+    "log_sha256": "920c6bcd248b0ac5e4dda413f497611a2290253257b9d78b5580c967a3a00a39"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testPublishedCashAddrAndLegacyRepresentTheSameScript",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.144,
+    "log": "OathBitcoin-cases/3e1745cfb84d1548.log",
+    "log_sha256": "af4b1e2bab8be0143a47fb2b81fa248e0b384f45454bfea2b7efdf962ec4f4b9"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinCashTests/testRejectsBitcoinPeerDespiteSharedGenesisAndRecovers",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.118,
+    "log": "OathBitcoin-cases/483b4afc86329bb7.log",
+    "log_sha256": "7288066c8fdc5cc42f008802c0eb14d5fbdcc9b888e32ec0fba99a2cf05cf335"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testAccountAuthorizationAcceptsStoredAndNegotiatedEncodings",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.161,
+    "log": "OathBitcoin-cases/4525a838283dcd5e.log",
+    "log_sha256": "e94c3f7b0f5e72ceb88e7d71b55aa0348967d4de6b455d897655d4adfc91a7f3"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testAllAddressTypesAndNetworks",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.758,
+    "log": "OathBitcoin-cases/458d5322c85ebe92.log",
+    "log_sha256": "528a6f5a8aabde340fa8b27056b29fe5e49ebd7e6a2eb2f0a510e1d59e4317ad"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testDecodedRequestsRetainParameterBounds",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.186,
+    "log": "OathBitcoin-cases/059e64402f182328.log",
+    "log_sha256": "b7865e9c01a67dbaa42cb450615acb02d6776c3b33005b715f5020c646e046c0"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testForeignChangeAndInsufficientFundsRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.293,
+    "log": "OathBitcoin-cases/f67058d0e5f4c661.log",
+    "log_sha256": "637a89a8af448d1616d19a8eccf4c536c0d6fc690089c2c94342a93271de1491"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testMalformedAndWrongNetworkRequests",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.329,
+    "log": "OathBitcoin-cases/dad915bba1106332.log",
+    "log_sha256": "f91f7ea2e2e6929ee4a56180a21eaa2c37084773a934d58b8444a42b9b152e99"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testMemoMustMatchReviewedRequestAndUnsignedPacketsCannotPassVerification",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.263,
+    "log": "OathBitcoin-cases/93aa78d1dbd26c34.log",
+    "log_sha256": "e95254d914d508c3ac3003bf6a316745574c20debb18863b15d41ff3e9108a96"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testMessageSignatures",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.229,
+    "log": "OathBitcoin-cases/a8dbba8dc5578ed2.log",
+    "log_sha256": "64b3e868d319f50d6f96ef5883f9d99016bc03e14a26ddeb52fdcc0dfb58126f"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testMixedInputPSBTPreservesUnrequestedInputs",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.227,
+    "log": "OathBitcoin-cases/0704695d8d7c0728.log",
+    "log_sha256": "f0ef1af4e52ff41d2bdc1d5f395848e3d10bfa9ff7015b5b286d292a279175ec"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testParentsSighashesAndFinalizedInputsAreValidated",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.228,
+    "log": "OathBitcoin-cases/53d97cb568c3f1ec.log",
+    "log_sha256": "c800a10b36eea5418bcce6b0a2fc4633387903e7d9033eb3795cbfb92f8eacdc"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testSignOnlyPSBTPreservesTransaction",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.235,
+    "log": "OathBitcoin-cases/50200c68474d2d94.log",
+    "log_sha256": "05fc2744efdf85a2d8bac1500080e9b87535cdd8e4d6a9865396eb5c9d627b10"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testTamperedPlanAndWrongKeyRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.206,
+    "log": "OathBitcoin-cases/dfc27e7ea8cdb41a.log",
+    "log_sha256": "98b810a67c0f793f7c090ca23cb08fd9ffab0a2e9335cd27b9fada03e6f69d58"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinConnectTests/testUncompressedLegacyImportHasEnoughFeeSpace",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.241,
+    "log": "OathBitcoin-cases/a290c967300fe56d.log",
+    "log_sha256": "ca45dd84ab0bb2154c8be8c89cb6f1fd5b892eb433006617a48ffe1657304ba2"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinDataOutputTests/testAllPushdataLengthsRoundTripWithoutSendPolicyLimits",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.716,
+    "log": "OathBitcoin-cases/bcc0ac69ea21379d.log",
+    "log_sha256": "4c4b5337c9ccc01b957a70d241c9fa87bb29e21e97dc68830b20c9755dd3dd3a"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinDataOutputTests/testBinaryEmptyAndMalformedScriptsRetainExactHex",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.244,
+    "log": "OathBitcoin-cases/81be02be5954675e.log",
+    "log_sha256": "9bb93ce7d515b40d351ff2d8924d837e3b99a1ff5157418208c87adc74c655ce"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinDataOutputTests/testOrdinaryAndUnknownLockingScriptsAreNotMessages",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.204,
+    "log": "OathBitcoin-cases/faec705a4f6b55ad.log",
+    "log_sha256": "82a4059f021061da55d0aca8d8855c433249dedc5c252b41ddd70e15c0c85255"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinDataOutputTests/testUTF8NewlinesAndSeparatePushes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.4,
+    "log": "OathBitcoin-cases/d1e0ec94f4c13fc8.log",
+    "log_sha256": "dbab26813f10954158d9940ac928531e1818af9c96c3db6d17a0aab968e3bab0"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testBadMempoolRotatesToBlockstreamAndCannotUseLongerTarget",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.299,
+    "log": "OathBitcoin-cases/d9dcfc2854cc1396.log",
+    "log_sha256": "ceaef8beb38b866e6ca8ba12b1af2bb59b653ca091d05373c39f84c904332f12"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testCancellationNeverStartsOrContinuesFallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.387,
+    "log": "OathBitcoin-cases/23db8e3d9fa3c93a.log",
+    "log_sha256": "b69bb3344fb7d77866ba50c9e2b71dd37d9b575cbc4b0fced8836874d0b6d091"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testCompleteOutageFailsInsteadOfInventingFee",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.323,
+    "log": "OathBitcoin-cases/93fa97b931fdd9be.log",
+    "log_sha256": "50c8b7eb767c7c75678b79d98030db4684633ba2915b9faf67b1af910af72d7b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testExcessiveZeroNegativeMalformedAndMissingQuotesAreRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.13,
+    "log": "OathBitcoin-cases/540facad0c8e2d37.log",
+    "log_sha256": "9294aae302b80ad4bbfb524a2be375af509381d679934e6e8b14300d1a38a737"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testHealthyElectrumDoesNotCallHTTP",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.123,
+    "log": "OathBitcoin-cases/0208a15c9456c1bf.log",
+    "log_sha256": "9f6783920d3d6c18a4731610a895db660aadbab5e55a5eec9350a9d3f2b1f81c"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testLivePublicHTTPFeeSources",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.128,
+    "log": "OathBitcoin-cases/dc9818a36cb7a271.log",
+    "log_sha256": "1b7c877bebdc507e640b5dc5192628719841d7b6589842878dfa711cc5e95853"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinFeeFallbackTests/testMempoolRecoveryUsesRelayMinimumAndRoundsUp",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.123,
+    "log": "OathBitcoin-cases/8706e1d24e03740b.log",
+    "log_sha256": "6319d83a913b8b6eb5afb40d04c7be7d7257fbedb7020c4f56ecb82d086a4d52"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testBIP39SeedMatchesAllPublishedAddresses",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.328,
+    "log": "OathBitcoin-cases/ca9286593dfa8830.log",
+    "log_sha256": "66439e2763e2bf05e67379f1be13667a31a49009434d17d563f1c1a02b80d60f"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testCompressedKeyHasAllFourTypes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.206,
+    "log": "OathBitcoin-cases/11911e05ab89c7b6.log",
+    "log_sha256": "14e8de3d69884faebeeb8dea7189771aeda7f12edf51b7e924d851886974283b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testExtendedPrivateAndPublicVersionFamiliesRoundTrip",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.725,
+    "log": "OathBitcoin-cases/40235c62b0f21fb1.log",
+    "log_sha256": "7f34a898a58302b26dffa7a11bbfe23a2f8e0e719faf0782806bf326ab883721"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testInvalidKeysAndUnsupportedNetworksFailClosed",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.234,
+    "log": "OathBitcoin-cases/bb85d62254b6f8f2.log",
+    "log_sha256": "caa6107ef18c885b6c983c4cd97f9dd8eb53cb0c97bfc3a5a461220dea1ee0cc"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testLegacyImportOwnershipPublicKeyMatchesPublishedBIP84Address",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.183,
+    "log": "OathBitcoin-cases/896a2e725a02d397.log",
+    "log_sha256": "19536e8aec900f460591f628cda090ac7638023d246a97560dde08a17fed6d7d"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testPublishedBIPAddresses",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.126,
+    "log": "OathBitcoin-cases/dfceac2c718cfbbd.log",
+    "log_sha256": "3fe09b7ce097b145bf82c9d24bba8a44c4f255acf0c1f9d845045c85122f6aff"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinKeysTests/testUncompressedKeyIsFiniteLegacyOnly",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.134,
+    "log": "OathBitcoin-cases/547bb0c279a0f996.log",
+    "log_sha256": "ab926cf3e113dbb24d10e9245ef04677d79371602d76831b67ef0b56fcc51efa"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests/testSigningFailureReportsOnlySafeCodeAndOperationContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.656,
+    "log": "OathBitcoin-cases/8aa508cfdc74085e.log",
+    "log_sha256": "bce65522355949f934ff2264ccacdfb9379fa4194373543d99872a757fa85aef"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinMultisigTests/testBitcoinCoreMultisigConsensus",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.116,
+    "log": "OathBitcoin-cases/ad4231b32624994b.log",
+    "log_sha256": "93c3f1493ca3389d7a59a1a83fc566f3e14f2d4a2d1185d1d7aeaf3c853e3e83"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinMultisigTests/testEveryThresholdSignsWithBoundedFeesAndRejectsWrongChange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 5.929,
+    "log": "OathBitcoin-cases/7fd33a13265402e6.log",
+    "log_sha256": "79b231a4d567708ffdadf1dd43ca72ee6a2e9e7a58ed23468d625d27e1023265"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinMultisigTests/testMixedAndHDKeysUseSeparateReceiveAndChangeBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.204,
+    "log": "OathBitcoin-cases/e35136f67a8cd84c.log",
+    "log_sha256": "9a06d1b7a68acedf52077d57747f9790954a9badf8c56975263162f57c287751"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinMultisigTests/testSortedPolicyAndPublicOnlyDescriptors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.178,
+    "log": "OathBitcoin-cases/3b00ddd502293398.log",
+    "log_sha256": "b821026cdde18cdd8ab88222ac5e8650966b6c6b22a1a45b2032013c3d15c89e"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinMultisigTests/testThresholdDuplicatesAndWIFValidation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.121,
+    "log": "OathBitcoin-cases/27470a4ec0a741c0.log",
+    "log_sha256": "50e64b830933ab6b66030736a2720b1755ff7954a45cb4dadd8de7a2fd48b85b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinPrivateKeysTests/testExtendedRootAndScopedImportsExportLeafInsteadOfParent",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 3.331,
+    "log": "OathBitcoin-cases/ef5cb3b3813b235d.log",
+    "log_sha256": "37f5721e12c4508346d781119bc7ec605e3b1d2ff0c878b20e79e43da8f2bcbd"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinPrivateKeysTests/testIndependentLeafWIFVectorsForAllNetworksTypesAndBothPaths",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.208,
+    "log": "OathBitcoin-cases/b670685e29dae9d2.log",
+    "log_sha256": "b8e7f88270f5956c18cb8fd789e953e2d3e5c4c9b1a723a9c94538ee7ce5c054"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinPrivateKeysTests/testMismatchedAddressPathIndexTypeWalletAndNetworkAreRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.223,
+    "log": "OathBitcoin-cases/9e332cab1eea9599.log",
+    "log_sha256": "a301ff1c090c9a80bded777e8729730995a80395308430981bed9bb4a07197e8"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinPrivateKeysTests/testSingleCompressedAndUncompressedKeyScopes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.145,
+    "log": "OathBitcoin-cases/3a4dbd2c618256d8.log",
+    "log_sha256": "c3af3692146cdbff507dccde68480ff166cc608189e07107da93663e65981752"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsNodeTests/testNodesAcceptMessagesAndEnforceRBF",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.099,
+    "log": "OathBitcoin-cases/8e1b974eaae9d169.log",
+    "log_sha256": "7bbef3f01a81843966d08df80f684b7ea5f7b4e5352b66c19c777f58a89d0ff1"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testAllChainsDataFeeSweepAndMaximumMessages",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.148,
+    "log": "OathBitcoin-cases/3a67e61c6e3ff2a2.log",
+    "log_sha256": "c7e0319d45c0777ca51d4b8837bef301ce59f03c7d9e47b25930934544a12d64"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testBitcoinRBFAndMessageForEveryAddressTypeAndBothBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.357,
+    "log": "OathBitcoin-cases/78c3bb7e8f548f0b.log",
+    "log_sha256": "7d69aab4aa6eb3e4fd1436d383a231b2df62fe6a05f5ba850faf9dafad50567f"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testByteLimitsAndPushdataBoundaries",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.116,
+    "log": "OathBitcoin-cases/79c30d11eb33f5c7.log",
+    "log_sha256": "57523c96540bf8e8c7c8254e93cc7827c49088684f913dbd3a57d5250c6c814c"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testDogecoinRBFWithCompressedUncompressedAndHDChange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.285,
+    "log": "OathBitcoin-cases/2faf3dbe40a7d569.log",
+    "log_sha256": "47b2c72e0d0441f1506145a67319d55c628c30a86a8d95d2dd7ca34c610e4a0b"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testMixedInputsAndScriptHashRecipientsWithMessages",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.589,
+    "log": "OathBitcoin-cases/178524f0fff55591.log",
+    "log_sha256": "dafd635fdcc5b0a4b7dbce56d91be5ad2981d53efb1799b4375f1801a19fda37"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testSignedMessageAndSequenceCannotDifferFromReview",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.171,
+    "log": "OathBitcoin-cases/3cc8ec4c7b4c6e33.log",
+    "log_sha256": "732ed5fe7207062c42bd70964c86914c75c01f837c70209a3d9b4c7f52648315"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendOptionsTests/testWholeTransactionLimitAndOldJournalCompatibility",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.164,
+    "log": "OathBitcoin-cases/94bacac0b182e3ca.log",
+    "log_sha256": "61a8a39b0102ad6ad19d165fc5a3119e5b4d8f46bb3b2addd391cf6fec4687a5"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testAmountFeeAndDustInvariantsAcrossVaryingPools",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.595,
+    "log": "OathBitcoin-cases/fbf186dd9f7d8ed6.log",
+    "log_sha256": "dcb04e50622f5a8aedfcdd1311a0c7a3ad6fc4e0c0cacc0e00033a628fc05ac4"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testBitcoinCoreAcceptsAndMinesRealTypeMatrix",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.217,
+    "log": "OathBitcoin-cases/beac487a4fb2bc3e.log",
+    "log_sha256": "6d9081b3b9a27ac16f3ddbf08ed3ffd25f333367f0f2406c0b16c5f9fb4cfe24"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testBitcoinCoreMixedPoolSweepsDustAndImportedKey",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.109,
+    "log": "OathBitcoin-cases/f04af47892db998e.log",
+    "log_sha256": "caa02c85a00cc247d51f2ff66abf882c8b619a56bc905941eaafd22c7324d3b1"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testBroadcastRequiresMatchingLocallyComputedTransactionID",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.144,
+    "log": "OathBitcoin-cases/1639d8f8b4af1d9f.log",
+    "log_sha256": "c85956eede3e3f3f24c19864077d869ed08582c8d0ddb6f1bd3c3756b4b71208"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testDuplicateForgedAndWrongNetworkRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.2,
+    "log": "OathBitcoin-cases/4808a927f4b55944.log",
+    "log_sha256": "1e1190b27d539aa032dfc531d9159c2504018163e08b5f9ed55443b7768361db"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testDustChangeFoldedIntoFeeAndDustRecipientRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.179,
+    "log": "OathBitcoin-cases/1ff811dd225f0b79.log",
+    "log_sha256": "f985bd5ab7a4d08d3febbde7733d42b4a421e7414c50c31d7f44fe4586efe22a"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testExactMatchingCoinAvoidsUnnecessaryInputs",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.181,
+    "log": "OathBitcoin-cases/cae1d42033a1a0ad.log",
+    "log_sha256": "8bf0b71dff96b146fc6021a5761932a53ee27283db12a18b0341e966920d7671"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testExpiredAndWrongKeyRejected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.179,
+    "log": "OathBitcoin-cases/9083794f27066e85.log",
+    "log_sha256": "3cea94690f6386265503671e0195d8ce3913861e2f3ecbe6dd7e1099c28cb859"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testFeeProviderFallbackAndRelayMinimum",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.162,
+    "log": "OathBitcoin-cases/0f3e104013341c46.log",
+    "log_sha256": "45c7541fe7bb33a1de2558f453e8e37e922146df95404cec4186302e7927dc75"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testFeeUsesRemainderBeforeRecipient",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.176,
+    "log": "OathBitcoin-cases/086a8c6da9f25b81.log",
+    "log_sha256": "ce936dec96890a5bf26767798c8568f083cd807fa82a0cd2c57835fde5ca9ace"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testLiveMainnetFeeQuoteIsReadOnly",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.124,
+    "log": "OathBitcoin-cases/d561e74caf1d05f1.log",
+    "log_sha256": "76acb44bade8611aab5c7d21c2e7860b4f1fd9efbab38db0eacd9ab8ecd30832"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testManyInputsAndCompactSizeBoundary",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 3.291,
+    "log": "OathBitcoin-cases/320d95d754d776dc.log",
+    "log_sha256": "7672d091e72c447850760caf251f80cf281938d7236e5e4c2fb63f57544e41b0"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testMixedTypesBothPathsAndAllRecipientsSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.527,
+    "log": "OathBitcoin-cases/3551468c871e0636.log",
+    "log_sha256": "114ea846c0c050ac2042c6892ad9d0bd48a90ab56e0514411bebd5c01865eb64"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testPublicTestnet4RoundTrip",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.113,
+    "log": "OathBitcoin-cases/8ac18bf97a280ef0.log",
+    "log_sha256": "c297a8e14d413640eaa2e42edb95577dafb723020397d2d4770c30d1d887bb41"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testSweepAndInsufficientRemainderDeductOnlyRequiredFee",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.183,
+    "log": "OathBitcoin-cases/66b0d5209d4dc525.log",
+    "log_sha256": "a3fff6353c5dfe69b037dd011acc2baec1357e2af52d7861d0e9abe74ea25b48"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testTamperedReviewCannotSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.169,
+    "log": "OathBitcoin-cases/32fa8224a7bc60e0.log",
+    "log_sha256": "93ac7100af62a4565e64fc8860ad1b28971e46048e054405d75593f0145bd365"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testTinyUnspentWalletRemainderIsAllowed",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.164,
+    "log": "OathBitcoin-cases/e8083c1153045386.log",
+    "log_sha256": "e9f307baaad3bf645cc0a5a2c6d83110a05a3148960ae3abf44852aaa6d6c793"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinSendTests/testUncompressedImportedLegacyKey",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.168,
+    "log": "OathBitcoin-cases/703fa3ff9f190d3c.log",
+    "log_sha256": "f94824a74650f391a63bb4c1f5a245997d31d3e06a5050bb440c1ccd9fe3c5b6"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinTransactionFallbackTests/testCancellationAndWrongChainCannotFallBack",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.125,
+    "log": "OathBitcoin-cases/b7f793eda0d992ca.log",
+    "log_sha256": "21c4753c64a1800f45bc2fba071b493339b08dbba365fa0da4fa98663e40e412"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinTransactionFallbackTests/testLivePublicBitcoinArchiveWithElectrumUnavailable",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.148,
+    "log": "OathBitcoin-cases/0cf9d808cb8b03a3.log",
+    "log_sha256": "cd3ef1e9ba6f51592caf9ee219ae1c5bb86d99125e2eec8275b4f016d5c7396e"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinTransactionFallbackTests/testMissingElectrumTransactionRecoversOnlyVerifiedBytes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.106,
+    "log": "OathBitcoin-cases/336cf71061cc794e.log",
+    "log_sha256": "5eff2410db74d0ee512e77adb93fab6cace137c7a841eca05df9570ab52e8465"
+  },
+  {
+    "selector": "OathBitcoinTests.BitcoinTransactionFallbackTests/testWrongHashRetriesIndependentSourceAndCannotPoisonCache",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.1,
+    "log": "OathBitcoin-cases/63e97d3b8e505a43.log",
+    "log_sha256": "d8f29608d28a9ea0d4ba6bcebf29dec8e88b9a8c6827893bcf81f35c89f46da6"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testBalancesAndOutputsFromEveryScriptAreCombined",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.221,
+    "log": "OathBitcoin-cases/ade9ccfe523c27bb.log",
+    "log_sha256": "73eb2e9a555cf8f81e1b5667c7fbfd3e5e3c6b5244862b4575f69b95a46ba085"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testCancellationDoesNotCompleteDiscovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.165,
+    "log": "OathBitcoin-cases/91b28e78727eb854.log",
+    "log_sha256": "db8ca33e5f5517e22a54d5c751fe769d2c3f3f0f56b6dc834f7480b5d836aeed"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testDeepIssuedAddressWithHistoryExtendsUntilFullUnusedGap",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.511,
+    "log": "OathBitcoin-cases/dc08c2539d9f4c82.log",
+    "log_sha256": "e09742723275af72122f96d6fd3475afd2bc175b0e344676df9de78500dc0407"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testDiscoveryLimitIsExplicitFailure",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.145,
+    "log": "OathBitcoin-cases/fe903094a5d49545.log",
+    "log_sha256": "7a34367b592606d91213bd53b74bf57cf2409653fcb2c3fbf5b938b8eafcd200"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testFinitePrivateKeyScanDoesNotInventTwentyAddresses",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.122,
+    "log": "OathBitcoin-cases/ffc4be8b137f8234.log",
+    "log_sha256": "82f940da0069cc4f3ab429331c17384c234a215c761f37138df6b4d85794aad3"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testGapTwentyOnBothBranchesAndEveryType",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.135,
+    "log": "OathBitcoin-cases/e6909e7213ef6eee.log",
+    "log_sha256": "6967a1c5fcd295897d9f7b77a59c08108bf82e4cf066fdcea332989f9b8cb046"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testKnownDeepRangesAreQueriedTogetherAcrossEveryType",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.62,
+    "log": "OathBitcoin-cases/83700ef0fd8ed799.log",
+    "log_sha256": "c76d8a5f628837ef99bee5aec6c83ca73fcbd7897c97c978d7b1358bf6b6c1ff"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testLargerWindowsPreserveFirstGapAndContinueSpentChangeHistory",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.23,
+    "log": "OathBitcoin-cases/7c1077aac783e71f.log",
+    "log_sha256": "a5e830ceb66f0dcb58a75f9e338beb54efdefec0a395ae774e0d303d557dd1c6"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testOneFailedTypeNeverReturnsPartialZero",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.103,
+    "log": "OathBitcoin-cases/e9277ec140099730.log",
+    "log_sha256": "14d11a6264378fbf2170a835cac464ec1f4b0de05241e2e59fdc6c148fc3b589"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testPersistenceRejectsContradictoryPendingOutputHeights",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.362,
+    "log": "OathBitcoin-cases/e42f7af1c35db0c9.log",
+    "log_sha256": "f1776d7a173e3e645d118efcb1c7fcbeed11c8a7f6afa12a41f9f5fe940e05d9"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testPersistenceValidationRejectsPartialGapAndForgedAddress",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.155,
+    "log": "OathBitcoin-cases/6b0d17c468d9d854.log",
+    "log_sha256": "359cf8c32c8f1eb447bd9fdb626cabb6f337c719edbcaac1b8a5e746340563ff"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testPriorIssuedAddressIsNotForgottenAfterRestart",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.137,
+    "log": "OathBitcoin-cases/eeb1ed05fdcf2b30.log",
+    "log_sha256": "09c37fdb347bb5bb5592e5c90983d4e61b2e86ffc3bf4d5e597fe6787f7e7aaa"
+  },
+  {
+    "selector": "OathBitcoinTests.DiscoveryTests/testSpentHistoryExtendsGapAtBoundaryIncludingChange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.22,
+    "log": "OathBitcoin-cases/72156bd26665dbbd.log",
+    "log_sha256": "f2e829bdf156cfe4ad29b245f49816e14d61191dfd1f7c1e1a0b747c693e6c77"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests/testSigningFailureReportsOnlySafeCodeAndOperationContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.246,
+    "log": "OathBitcoin-cases/07eb5244822d10c0.log",
+    "log_sha256": "9755c7280d366a6335bad8fa038e72a3a2f0d972f7f832d5c099ec93a4ae4df3"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigPublicTests/testPrepareOrdinaryFundingAddress",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.213,
+    "log": "OathBitcoin-cases/bc28f5dac8db85b1.log",
+    "log_sha256": "26b6419dc9a7e5045416ba6cc03d4e54db7f50377f81dff1bcaf7b881251eba5"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigPublicTests/testPreparePublicWallet",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.192,
+    "log": "OathBitcoin-cases/d6abe5f9a1f5f230.log",
+    "log_sha256": "bac4ffb32e1c4fca8ee0544f305949aa398629bc4fecba89e85ac43489174980"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigPublicTests/testSignPublicTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.125,
+    "log": "OathBitcoin-cases/e6efa2d1ad1d2244.log",
+    "log_sha256": "89f4897077e8f9b5b968c9fec2fbbb5d7b7efa3a4d2a2faf79463e7b53e9e9f1"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testDiscoveryRetainsSpentHistoryAndAggregatesMultisigBalances",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.301,
+    "log": "OathBitcoin-cases/30c891bc44216e4d.log",
+    "log_sha256": "1f152320eac481fd2fb92e8565df163e72a07aeb77d6492d7f3a525d315a3d45"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testDogecoinCoreMultisigConsensus",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.121,
+    "log": "OathBitcoin-cases/13f92282a88a887f.log",
+    "log_sha256": "d5f5fad097a3dc2f7d3f4911056811261059eaa2a0c5018634ab85cbf55d7195"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testEveryThresholdSignsWithBoundedFeesAndRejectsWrongChange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 23.988,
+    "log": "OathBitcoin-cases/fe6cb5246c0f8551.log",
+    "log_sha256": "eeaae4d17a2da664e84e7ef3d2aef177d2a16b733fb2e7348703f9bf0e2184ae"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testMaximumPolicySignsAcrossDogecoinFeeRange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.707,
+    "log": "OathBitcoin-cases/16a5330fef949c8f.log",
+    "log_sha256": "c01dd8eeda57f6010cccc7b176fad5ae1d4b1a59ce89ec3b1c408f3e184f87c0"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testMixedAndHDKeysUseSeparateReceiveAndChangeBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.116,
+    "log": "OathBitcoin-cases/0847323be0db6b8b.log",
+    "log_sha256": "73c4ae82d79807db047612a371bf1d9413208294502836da13f9fd41ca82c09c"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testSortedPolicyAndPublicOnlyDescriptors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.121,
+    "log": "OathBitcoin-cases/12322b72e997d061.log",
+    "log_sha256": "8eb1825b9802fa192bca5007ada7428d8e70a2b54c7f3069ee647276013d273b"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinMultisigTests/testThresholdDuplicatesAndWIFValidation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.136,
+    "log": "OathBitcoin-cases/0264dab7fe1d750a.log",
+    "log_sha256": "d436a850d1201d3b48751eeae24e286793af4e494d7ed687f6f8d81d53ed1259"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testCoreMinesP2PKHAndP2SHMixedPathsCompressionAndDust",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.109,
+    "log": "OathBitcoin-cases/b522af730f9058f9.log",
+    "log_sha256": "68a79b15613ff7f7164c63adbc9b8b5d54b4ca5cb5c8fc88127f56c97f4fee90"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testDuplicateForgedExpiredWrongKeyAndMutatedReviewCannotSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.181,
+    "log": "OathBitcoin-cases/eec93a498b5d46da.log",
+    "log_sha256": "a015be9e811548b428ff91fcd21c8f7ff059939ea9eca366684359fc3e0a24e2"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testFeeUsesRemainderThenAdjustedAmountAndKeepsTinyUnspentBalance",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.146,
+    "log": "OathBitcoin-cases/fda653c9f9219207.log",
+    "log_sha256": "11abab4316d6d406c95507d4130573d0fd5e920a9ec565b84241f4b2e7286575"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testHardDustSoftDustFeesAndBoundaryAfterDeduction",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.162,
+    "log": "OathBitcoin-cases/421900f4640b391d.log",
+    "log_sha256": "59b3e47fb8d014bcedfbe8068df9ca6f522f22509b4b65162f06333384069cd0"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testImportedCompressionAndExtendedScopes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.421,
+    "log": "OathBitcoin-cases/e2d1f8c66f3eb4de.log",
+    "log_sha256": "d7419bf8e78a20584fbd82e773fa6881c40a2a1d96f948ac0c24dc703d5c5e2d"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testLiveDogecoinMainnetFeeReadOnly",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.113,
+    "log": "OathBitcoin-cases/5da210d94b3f557b.log",
+    "log_sha256": "8783399bc0fb60701991f8c96bae2779417439b5758e5fcc729bc24fc8033278"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testLiveFeeCanSignReviewedDogecoinTransactionOffline",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.126,
+    "log": "OathBitcoin-cases/6a0d57957a8ad65a.log",
+    "log_sha256": "bb277443f141217d8da5d9339f3f5d756bcca4ff489939f74f568991036062d9"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testManyInputsMixedReceiveChangeAndCompressionSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 4.039,
+    "log": "OathBitcoin-cases/438b9432fc0e7860.log",
+    "log_sha256": "85fbd81c2cbfdd71c7d03ffb4174cc13dd43f6ee11b8647b3cd8c31ebfe4f550"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testNetworkPrefixesChecksumsAndWitnessRejection",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.112,
+    "log": "OathBitcoin-cases/72e374fd84c62940.log",
+    "log_sha256": "babdc902bb519a4fab70050acb6590cea46b8d4ce8f682070d2497e2dde5f2be"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testObservedHighDogecoinRatesSignWithoutBitcoinsFeeCeiling",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.228,
+    "log": "OathBitcoin-cases/e36917197bcf2a56.log",
+    "log_sha256": "6c33181180aa7eb09051dda3ace52bc3338cccea319d1cfbc874e156ceb01792"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testPrepareIsolatedPublicTestWallet",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.135,
+    "log": "OathBitcoin-cases/8813f47dbf2f8cdd.log",
+    "log_sha256": "ff98072842060379e26445402bf496a444755b40ec3ca9b97839d0da79c30257"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testProviderFeeFallbackFloorRoundingAndIdenticalBroadcast",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.154,
+    "log": "OathBitcoin-cases/66685fef440caac9.log",
+    "log_sha256": "3befac83bf58ad405eb0e856dc05968e9ff52ef121bacfb0a0e8ec04f00c7e2d"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testSignPublicTestnetTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.314,
+    "log": "OathBitcoin-cases/e2ad16e2a265ccd9.log",
+    "log_sha256": "163a8de38877385b7fa8138edaf45b036a66da92030c49a2b1ebb2a9d57b6368"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinSendTests/testWalletAggregateExceedsTransactionBoundAndRejectsOverflow",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.318,
+    "log": "OathBitcoin-cases/b67351b0ca5109c3.log",
+    "log_sha256": "1e69a3017605eff162c42f1e03e5e4cd4401f328206e0938f487acde82c38abf"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinTests/testCoreWIFVectorsCompressionAndRawFormats",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.161,
+    "log": "OathBitcoin-cases/e0ff11d5e045b247.log",
+    "log_sha256": "8518a83a85f16b84ea162e184b6cb46a8f692eb8c43199e12f29ce9ca8f93428"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinTests/testDogecoinGapSpentHistoryAndLargeAmountsOnBothBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.175,
+    "log": "OathBitcoin-cases/ca2644281eeb963e.log",
+    "log_sha256": "4aebfb24b11bb0c39aa58ad21253f0bb40e4695dbe05153d2dc314792f0b48d8"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinTests/testDogecoinWalletTotalsCanExceedSingleTransactionLimitWithoutOverflow",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.225,
+    "log": "OathBitcoin-cases/ee7c3037a3249e1a.log",
+    "log_sha256": "831db06d73292393733f4e96e055f40bd47b20d5d527fc1045ecd2cabee1fe05"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinTests/testLegacyBitcoinDescriptorDecodingStaysBitcoin",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.159,
+    "log": "OathBitcoin-cases/5d35b8b37f36e783.log",
+    "log_sha256": "6049b8f5a7e67410eb44f94179f2cb3eebc17f0a186ee6ba34bc6b2a524ac328"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinTests/testLiveDogecoinBatchPeersHeadersAndHistory",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.286,
+    "log": "OathBitcoin-cases/d7e2002ebdce29ae.log",
+    "log_sha256": "76013fe4cd9ef3a8a4f765abfedbae53a33e29a5a2367f13b4f9643a561b366b"
+  },
+  {
+    "selector": "OathBitcoinTests.DogecoinTests/testMnemonicSeedRootAndAccountExtendedKeysMatchIndependentVectors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.268,
+    "log": "OathBitcoin-cases/ad5599dd44c56d2d.log",
+    "log_sha256": "c18c88ee62c7fd632b4012d5a1cb9d30b349329caba1dfd2836d502b41e4b150"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testCancellationStopsSchedulingRemainingBatches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.129,
+    "log": "OathBitcoin-cases/35291058a05502d4.log",
+    "log_sha256": "3389344b497be5b2b50e7ec50a0adfe7aeca8a9607bf96bb613b27d9a671f1a2"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testExplicitLargePeerSupportsFiveThousandCompleteAddressChecks",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.337,
+    "log": "OathBitcoin-cases/ca647c18878eac10.log",
+    "log_sha256": "f9d21bfef9b770a36452cdcf79a69f07c395fc688e91c38fb451320da00153c6"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testFailedPartialPeerResultsAreDiscarded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.236,
+    "log": "OathBitcoin-cases/1b89208b239d5ce6.log",
+    "log_sha256": "fa24bd4d5fedfa253e1b0fb011208db2e33bfc256054d2f6522f14cceb46997b"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testFailoverRechunksToSmallPeerWithoutLosingOrReorderingAddresses",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.431,
+    "log": "OathBitcoin-cases/6def0e7ed2925dca.log",
+    "log_sha256": "10d00283e4260784e013189473158675e6b45625b87442c0cef96658f950d55c"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testFullFrontierReducesPinnedSnapshotExchanges",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.593,
+    "log": "OathBitcoin-cases/733c15d20b7a9695.log",
+    "log_sha256": "0891eff5a99b251ff1a100cd2a2d670d6872441bf40eed2cc84641e6075423c7"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testNetworkBatchesRunConcurrentlyWithinPoolLimitAndStayOrdered",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.272,
+    "log": "OathBitcoin-cases/f1be87d1156b6636.log",
+    "log_sha256": "2165039b33ecb41f5ce2f3f6a693ff70fc0b8a2cbb30072a72730c8ef60761bf"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBatchingTests/testSmallFallbackDoesNotThrottleLargePeer",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.138,
+    "log": "OathBitcoin-cases/2ab5a1871e7a1221.log",
+    "log_sha256": "13f96bad8e58eafa5f59d75d0323cc2ad175c6e889f7c53975ea7e24db4ed96d"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBroadcastRecoveryTests/testAlreadyConfirmedOrInMempoolAcknowledgesOnlySubmittedHash",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.152,
+    "log": "OathBitcoin-cases/5dc7af6a44dded3d.log",
+    "log_sha256": "7b1e69e513cc954bd9d4646dfedbfd0f0f1782baca261c42060aa0be3f705fc0"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBroadcastRecoveryTests/testLastResortModeRequiresLookupInsteadOfTrustingKnownError",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.137,
+    "log": "OathBitcoin-cases/17f24651d9728917.log",
+    "log_sha256": "90bffb9a4a55b5853a153320a1123dbcec67881dd99b9a48f1f305e8ad5942fe"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBroadcastRecoveryTests/testRejectionStaysFailureButDoesNotBlockReconciliation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.13,
+    "log": "OathBitcoin-cases/2915e61914be6216.log",
+    "log_sha256": "d6f74f14376c9c07719d496407b280228c247eb7f5baeab0547857b7a88033b4"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumBroadcastRecoveryTests/testUnrelatedRequestCannotUseAlreadyKnownAcknowledgement",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.114,
+    "log": "OathBitcoin-cases/5a30eece9bc5b161.log",
+    "log_sha256": "4bd369213ba97dd2c5a67de4438828badc98fcb49e766cc919c9f2e31f33fc14"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumCloseCancellationTests/testExplicitCloseDoesNotTurnCancelledReadIntoFallbackSuccess",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.115,
+    "log": "OathBitcoin-cases/de8197fc31cdc7e8.log",
+    "log_sha256": "2af7035efe70936a130b3c243d7f2f4834d8103cc2efdd86498d5e49f381cae3"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumCloseCancellationTests/testExplicitCloseReleasesLeaseWithoutPoisoningHealthyPeerCooldown",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.128,
+    "log": "OathBitcoin-cases/7edbf333ca686eff.log",
+    "log_sha256": "936d13b27d116ce17ef5ea52adb2397a08cf210ad423c7371e3de406948c66ca"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumCloseDiagnosticsTests/testLateTeardownFailureIsQuietButMalformedResponseRemainsReported",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.655,
+    "log": "OathBitcoin-cases/14f8c9c438204611.log",
+    "log_sha256": "60354d2ba279a078c4c1ea893137932c3758237283dc8fd8804348d53066e241"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumHistoryLiveTests/testPublicUsedDogecoinAddressesAgreeAcrossEveryConfiguredPeer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.189,
+    "log": "OathBitcoin-cases/460daf3088e7dd6b.log",
+    "log_sha256": "8b0a752bdfbc14c305cf8ebae98e878f3baafaf0a6efef1c256c1a9f7f89f4d8"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumHistoryNormalizationTests/testCapturedPublicDogecoinHistoryMatchesBothIndependentPeers",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.135,
+    "log": "OathBitcoin-cases/95d07099f7e036f9.log",
+    "log_sha256": "10969a1d508f55159e5ad2f1159977b1d0d96025f8628c93db78f038994aa81b"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumHistoryNormalizationTests/testConflictingHistoryHeightsStillRejectWholeBatchForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.118,
+    "log": "OathBitcoin-cases/d04f53dbfa637063.log",
+    "log_sha256": "51bbd4f574a1b78d4997685f49b0fc2e15ae6b6bd107307203cfaaa8628314ce"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumHistoryNormalizationTests/testDifferentMempoolFeesAreNotTreatedAsIdenticalRecords",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.205,
+    "log": "OathBitcoin-cases/cb91f8021d30a92b.log",
+    "log_sha256": "de8dc3312b9d6a5d22f64c8d39b6186d2e7d7b3a5308e8cf435a9258943f6c14"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumHistoryNormalizationTests/testDuplicateUnspentOutputsStillFailEvenWhenInflatedBalanceMatches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.112,
+    "log": "OathBitcoin-cases/1dc7484070ed45af.log",
+    "log_sha256": "b74ae61adb48f63666139c1727cb8a96be2055848d31c0e44060498bea7a0d8b"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumHistoryNormalizationTests/testRepeatedHistoryDoesNotDoubleCountFundsAndPreservesOrderForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.104,
+    "log": "OathBitcoin-cases/ca5745b36aa8f8dc.log",
+    "log_sha256": "806e5e8abcff0143b2fb837022ce776e692595901e7ed130d6dffff89dde2ea9"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumMnemonicTests/testCoreFundedRecoveryAndTransfersForEverySeedType",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.093,
+    "log": "OathBitcoin-cases/8057b2695450df92.log",
+    "log_sha256": "90079639b99258d18a57716a3ee317e55b06001ecc66c3b2b5db546b07dbb548"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumMnemonicTests/testDiscoveryKeepsReceiveChangeAndSpentHistory",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.131,
+    "log": "OathBitcoin-cases/98cad7409cd8c464.log",
+    "log_sha256": "97e4516f151c68a18c974ce139b58a958a3497fe92b7d8e700e64c62a562bdae"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumMnemonicTests/testExtensionsNormalizationAndIsolation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.104,
+    "log": "OathBitcoin-cases/18cc3cb0cfbf2dae.log",
+    "log_sha256": "e4708a7897193f3dd72edf618ce60eda2b521f2a1e42beda6324f73ad89e9c0d"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumMnemonicTests/testUpstreamAddressesAndPrivateKeys",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.621,
+    "log": "OathBitcoin-cases/a0e1104b9f705c0d.log",
+    "log_sha256": "8a728e63628f4ab89c14bf82ddea3bbfd15cccbf7ff9e0aedf7bee4b791610aa"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupDiagnosticsTests/testOnlyOptionalAbsenceIsQuietAndRequiredFailurePreservesSafeContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.429,
+    "log": "OathBitcoin-cases/b2aa4e136f70c90b.log",
+    "log_sha256": "8f9685507f5c0002710212c411dda46afc3152dc47528dec24b04c88ffc3c2a8"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testExactDaemonAbsenceIsOptionalButRequiredHistoryStillFails",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.094,
+    "log": "OathBitcoin-cases/761bf92ec134252b.log",
+    "log_sha256": "adabdc9cb2e2ff57e0bc6d333cc1637ced32f504c552ff3b2616143f18770fbf"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testKnownBytesStillRequireMatchingHashAndRecoverWithoutResubmission",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.102,
+    "log": "OathBitcoin-cases/902c39a1a649ef55.log",
+    "log_sha256": "ec1ba624a03883cefda3a9a126ce94bbae4de566fd80bf5611faafabb5852825"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testLivePublicPeersAgreeOnAbsentOptionalTransaction",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.091,
+    "log": "OathBitcoin-cases/aecd9399c06eeef6.log",
+    "log_sha256": "00c94a579e3726c5ec747edcc1c8cdc817d247351410de64a2ff60ee725ccafa"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testMissingOptionalLookupNeverAcknowledgesFailedBroadcast",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.141,
+    "log": "OathBitcoin-cases/009136aeaba488b0.log",
+    "log_sha256": "96a8b5658e77abde12306861f05499467f628b5f209d595d5107f71f235802ac"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testOptionalMissingTransactionIsAbsentWithoutPoisoningPeer",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.118,
+    "log": "OathBitcoin-cases/4f5829b4181c4bed.log",
+    "log_sha256": "397af13c2a6ea94f613abd92b4cad7cd1df405bfee8a1c6589af37b4f4bfdbc3"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testOtherDaemonFailuresNeverBecomeOptionalAbsence",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.091,
+    "log": "OathBitcoin-cases/f74c36492bfacdd0.log",
+    "log_sha256": "805ed386c34ab1477f53545ae9891400e306643585ae436ebc4bc8ddded01355"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testOtherFailuresAndMalformedRepliesRemainErrors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.11,
+    "log": "OathBitcoin-cases/4d9dd1cb9833d335.log",
+    "log_sha256": "397c418af254da9b648b1e98c8e6e262a4c4fa82907089da325bfd9502342064"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumOptionalLookupTests/testRequiredHistoryStillFailsForMissingTransaction",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.104,
+    "log": "OathBitcoin-cases/ec184d59464f376f.log",
+    "log_sha256": "4a24e1e2a74d691c15e51d19c284945ed389e210a2e61c2cdf2d020eda6af3c0"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumProbeDeadlineDiagnosticsTests/testDeadlineRetainsPeerBackoffWhileAvailabilityAndCancelledRetryStayQuiet",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 5.592,
+    "log": "OathBitcoin-cases/a61fe7e71299a151.log",
+    "log_sha256": "fe4af48a5616797badb4e93d9addc2493e269dc1a5a2392e3de37506fca93b32"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumProviderLiveTests/testEachDefaultPeerReadsVerifiedPublicTransactionBatchWithoutHTTPRecovery",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.088,
+    "log": "OathBitcoin-cases/c3c59a7e40406908.log",
+    "log_sha256": "f0b5a23f571bd3267d33847efd60eb867f0cf08b4b09480df6af9277f50d70d2"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testBatchSplittingAndOrderedResults",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.146,
+    "log": "OathBitcoin-cases/94db9ff900f1f93b.log",
+    "log_sha256": "47220eedf93c1bd4a812950bb61a074f354a3bdc2c71d7396a5ca2151dd9315a"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testBothNetworksDecodeIncomingAndOutgoingMempoolBalances",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.09,
+    "log": "OathBitcoin-cases/61bf7368c7b9443b.log",
+    "log_sha256": "f99da352695b732b1ba17d3dc34c3db0098aae95c13686d147432f228ab35e61"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testCancellationReleasesConnectionLease",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.099,
+    "log": "OathBitcoin-cases/f4ab16c3a5e0f5bb.log",
+    "log_sha256": "bbcc2a2e28839c8bcc8b24d2e7b729ea5af267481490d4cef6b032835f12afb3"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testConfirmationRaceRetriesEvenWhenAmountsStillMatch",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.098,
+    "log": "OathBitcoin-cases/7b731dc721247bb2.log",
+    "log_sha256": "16ebc98cfd35e2f2dcfcd232e747b73463d9d689b3a7ea332549620b1d759935"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testDogecoinRejectsBitcoinPeerAndOverflowThenRecovers",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.073,
+    "log": "OathBitcoin-cases/bfd878f33fada440.log",
+    "log_sha256": "c03afc5b0277b219145d05d97f34a0bb6f0440b378a58c868a6600d57b38338f"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testOutageIsFailureNeverAnEmptyBalance",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.072,
+    "log": "OathBitcoin-cases/0646e8d0cd86861f.log",
+    "log_sha256": "dd94aa54badb23c8d7fe758e79a7d1cc125cb8a99db92f6883271751a0dc55ef"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testRawTransactionValidationParticipatesInFallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.079,
+    "log": "OathBitcoin-cases/c0f4c563fc9f8d97.log",
+    "log_sha256": "9696533b7113436d47f05ec06b7442a2694bf46155bd9166a90d9c323b76821c"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumRecoveryTests/testSemanticFailuresTimeoutsAndUnsupportedPeersRotate",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.087,
+    "log": "OathBitcoin-cases/144e2ca9ee6e1df5.log",
+    "log_sha256": "97d33cb49d2c154914412c56c1fb8ada05635bad805a0e5a692b984475b213eb"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotProviderRecoveryLiveTests/testRepeatedSnapshotsUseLiveHealthyPeerAfterReportedFailures",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.078,
+    "log": "OathBitcoin-cases/c97e6342ea5fa315.log",
+    "log_sha256": "035ac56dacc05f8970877f28ede34198d094e4b7f40c83a467e25e6dc520bdb8"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testAllPeerOutageIsBoundedAndNextRefreshCanRecoverForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.591,
+    "log": "OathBitcoin-cases/bf7404b8099dc692.log",
+    "log_sha256": "92c7b51ea6e9342bb615aac3b8aa831ce2a833a1147c6feea907d8805ec7df01"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testAllPeersRecoverAfterTwoSimultaneousTimeoutRoundsForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.589,
+    "log": "OathBitcoin-cases/3260e087cf6db886.log",
+    "log_sha256": "c292ff62f5c6565bef517526b3a504ea82b4c1fdf4f2c06a7dbd5807729d6b38"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testBlockstreamBatchCapCompletesAllHDReceiveAndChangeBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.176,
+    "log": "OathBitcoin-cases/671c8970a030e962.log",
+    "log_sha256": "42c761ee07336de4cf479055a9592d67482445f8a406328274b6ab4ef86bff9e"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testCancelledProbeRaceDoesNotCreateFalseBackoff",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.884,
+    "log": "OathBitcoin-cases/30c650660dd84bfd.log",
+    "log_sha256": "fdf266081616166a90de625645eb0fcf638c54431b2f33056aaeca7d2a44a6f5"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testDeferredPeerCanRecoverIfPreferredPeerFailsWithoutLosingSnapshotChecks",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.731,
+    "log": "OathBitcoin-cases/336f2b5b197f186f.log",
+    "log_sha256": "e4098c8245a349b174ded83141b020c14d7e7be727fd8a760df013b9a82cf2e8"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testExpiredSnapshotBackoffRetriesPeer",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.16,
+    "log": "OathBitcoin-cases/d78fc2bb72d5ff4c.log",
+    "log_sha256": "17188fdb7203605f8ac0de40c1ab5c4ea62b66767c5c469ec6e855e84c742e85"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testFailedCurrentPeerUsesOtherCurrentPeerNotLaggingData",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.129,
+    "log": "OathBitcoin-cases/178666b06a50c21f.log",
+    "log_sha256": "e06bbb72692ce4a0a28935f008930d8606a15d14cd73bef900d93fbbb4029e6e"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testFailedFreshPeerCannotFallBackToPreviouslyObservedOlderTip",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.749,
+    "log": "OathBitcoin-cases/cfc65eb56b4e0654.log",
+    "log_sha256": "52dd2da1d9129629db63e8ce9d7c80aabe2df4ece56412a1e7a8fe4cc4cd61ee"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testLaggingPeerCannotMixHeightsAcrossScanForAnyChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.135,
+    "log": "OathBitcoin-cases/3a37e40e433f17bf.log",
+    "log_sha256": "30599bf02d6019a1e4b1903267968ded2d41fcb34fba2659b80d82e90ba459ed"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testLiveAllFamilySnapshotsWithIndependentPeers",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.097,
+    "log": "OathBitcoin-cases/b419bafdec005eb4.log",
+    "log_sha256": "848eaf393974d298fe1a58940dd89937282737d24fcfdfc059d901b169e9962e"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testLiveBlockstreamHDScan",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.094,
+    "log": "OathBitcoin-cases/8dee164710b85a92.log",
+    "log_sha256": "91bea2cdcc7d2ec6c2ae931689c73fc5f09e5d6806fce396edd7237f8b6d2181"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testLiveFeesAndFundingDiscoveryForAllChains",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.09,
+    "log": "OathBitcoin-cases/6c80329cf1f253ef.log",
+    "log_sha256": "48ac5929f8001ead703f7be22a9e4383f2e2c0a219ba990267188b036f52cfb0"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testNewBlockRetriesEntireOperationAndNeverCommitsOldResult",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.295,
+    "log": "OathBitcoin-cases/bc52a991155ecc40.log",
+    "log_sha256": "dcebc4bfbf13b49ebdfe7e7296837fb6974c73d241191aacade5e0d4edad0e31"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testNewerTipDuringRaceDiscardsOlderConcurrentSnapshot",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.494,
+    "log": "OathBitcoin-cases/598c580f3ff1aa8b.log",
+    "log_sha256": "d971cd8c1f3daa0405068d15b755cbf1bf740c953ef9b836bd59e46f183e3084"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testPersistentProbeDisconnectRemainsFailureForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.578,
+    "log": "OathBitcoin-cases/03874bccec08d627.log",
+    "log_sha256": "312f3ea40b991c38bdea59fc6d2c55844c188d7e39a06c99cea2226c5e7f56c0"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testProbeDeadlineBackoffSurvivesCancelledRetryAndSubsequentRefreshes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 5.623,
+    "log": "OathBitcoin-cases/96e869bf190e6efa.log",
+    "log_sha256": "baf4e632fdd65d3cadda820ae32610922784c0430fbb31be42e55f427da799c0"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testReportedDisconnectAndStalledProbeCannotBlockHealthySnapshot",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.149,
+    "log": "OathBitcoin-cases/aeae765102823923.log",
+    "log_sha256": "cf2ccde5d5145d154de07ba788460c9c813e13df4ed467b2387edae958c883d5"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testSnapshotNeverRetriesTLSOrWrongNetworkAsTransient",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.123,
+    "log": "OathBitcoin-cases/06b9bed1f4889000.log",
+    "log_sha256": "8c35734ab8c07a6ce149b228fdc1c508565441de9f3cf2e6d0b68d470425087b"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testSnapshotReconnectsAfterProbeOrScanTransportFailureForAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 3.435,
+    "log": "OathBitcoin-cases/23ef4c14ace2af23.log",
+    "log_sha256": "9729b6cf1a68a3575a80e2ad6b7483bbde8471a92051f8c31f201530a91d3852"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testStalledCurrentPeerDoesNotDelayHealthySnapshotForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.291,
+    "log": "OathBitcoin-cases/21da777c30948d90.log",
+    "log_sha256": "bd1aa891628013f02bd61066023d269ee9a71972bf354e35c71fe20dab3149f6"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testStalledProbeDoesNotHoldHealthyDiscoveryForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.127,
+    "log": "OathBitcoin-cases/0f141e4d9718f65a.log",
+    "log_sha256": "5425e23284cb75decf35e4fb034b6bcbba9e99591dd5c5c9cd5323d950c6edae"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testSuccessfulProbeClearsEarlierCoordinatorTimeout",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 5.304,
+    "log": "OathBitcoin-cases/eb84cefc3d06e995.log",
+    "log_sha256": "6ebe6cb5ec045b2b99f864d8b47cdcb998f4edb67dc65ad72731e162cff74193"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testSuccessfulRefreshRetainsFailedPeerBackoffAcrossSnapshots",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.14,
+    "log": "OathBitcoin-cases/5c9eb9712f3ed2d2.log",
+    "log_sha256": "7eb2cb837f51c7643bdc3b2f3b1fac67420da50562dbb22b916789033248fb73"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTests/testUnstableNetworkIsBoundedAndCancellationIsPreserved",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.713,
+    "log": "OathBitcoin-cases/9a7798e16414b514.log",
+    "log_sha256": "91ce6ba893f9147d16755029cd386eef70a01538dcbd944d5264541f9f167188"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testArchiveRecoveryDoesNotBypassProtocolCooldownOrPermitOtherRPCs",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.586,
+    "log": "OathBitcoin-cases/83bcccf1c5f4f49b.log",
+    "log_sha256": "7ef423693e7cab170fa17866faa5370a75ea016f0698fdd5026a20db032a39cb"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testCancellationDuringArchiveRecoveryDoesNotReconnect",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.101,
+    "log": "OathBitcoin-cases/be018b718da5c18f.log",
+    "log_sha256": "0e45e1930b53dbfafd259a56cf7659895df5abc63ad453852e12078c47baedae"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testInvalidArchiveCannotEnableSnapshotReconnect",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.341,
+    "log": "OathBitcoin-cases/ffa7865e41738430.log",
+    "log_sha256": "5526dcca91726ca89b796fbdd5e0a2033629e3a9daa15dd30a077354d69d6af2"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testLivePublicArchiveCanFinishSnapshotAfterInjectedElectrumTimeout",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.078,
+    "log": "OathBitcoin-cases/24fede015cd1a19b.log",
+    "log_sha256": "5d2c7d9a8b3ae8cc6c0a96014ca5841149713946f9a00bf4d8b7f2ed16725d93"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testOrdinaryPoolRetainsOutageCooldownAfterArchiveRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.083,
+    "log": "OathBitcoin-cases/0570ae04fbf6e792.log",
+    "log_sha256": "3510ea28dc43a570f98af6fc842a472848905f061ac9ac3b901680d66a43fd41"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testReconnectMustAuthenticateNetworkAndPersistentOutageStaysBounded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.329,
+    "log": "OathBitcoin-cases/95569c1112562d41.log",
+    "log_sha256": "9cdebc0c6767ffb7910c50ba202cdf5b545802c25cb16dc922a55073a388bb96"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testRecoveredBytesCannotPublishSnapshotAcrossChangedTip",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.295,
+    "log": "OathBitcoin-cases/ff75512a444ecf9d.log",
+    "log_sha256": "9a44d3ec5de701ffdc150c857593988d7fc4e1e2655336fa9e6b08cf882404f1"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumSnapshotTransactionRecoveryTests/testVerifiedArchiveRecoveryCanFinishSamePeerSnapshotAndReadBlockTime",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.074,
+    "log": "OathBitcoin-cases/ebe8040cce8e18c5.log",
+    "log_sha256": "f15e641860a8760b5807f69df0d7cd56a52301bd7408565623560a2d6932c62c"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testLiveLargeBatchAllTypesAndChangeBranches",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/b98b833132fea967.log",
+    "log_sha256": "3589a350e10094bd4731c258305c9dff2b27044df9c41436927efe02c2505ec7"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testLivePublicPeersBatchesAndFallback",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.066,
+    "log": "OathBitcoin-cases/2f5c8c3523aa1910.log",
+    "log_sha256": "0adf9ecff7f4d1d485d99d8d3126eb35a75a84ff582976ed92ce918f13e05816"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testLivePublishedAddressHistoryAndFundingTransactions",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/426ed14513169af0.log",
+    "log_sha256": "f8f42411ca97c3d9dd39796acc32e94854e7b92fc81f0b15016767d12ed61bc4"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testMalformedIncompleteAndUnsupportedBatchesFail",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/e7690fd6190276f4.log",
+    "log_sha256": "0813bec16d967891b3d87dda9d8f44ee5c2137584a0b28d62390441456f1ccea"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testNotificationFilterNeverSwallowsResponsesOrMalformedEnvelopes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.067,
+    "log": "OathBitcoin-cases/4a3540311c3a1e34.log",
+    "log_sha256": "c1b534e96ea01ffc03ca39c9fcdef42e30366f7a1b99e8c2be4dfe2bc0fae640"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testSubscriptionNotificationsDoNotConsumePendingBatch",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.067,
+    "log": "OathBitcoin-cases/48949dabe5ab433d.log",
+    "log_sha256": "84ec06a0a31917490cd7a61884f8a095530d427667e1f5b94611b8ea13fab42f"
+  },
+  {
+    "selector": "OathBitcoinTests.ElectrumTests/testUnorderedBatchAndEmptySuccess",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/3f7e0c3470d01eea.log",
+    "log_sha256": "48f0be9f317cd62d155ac7bc24ef3654f5176d013887c45bc732f3658e408616"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests/testSigningFailureReportsOnlySafeCodeAndOperationContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.107,
+    "log": "OathBitcoin-cases/cf46547afd3f18f6.log",
+    "log_sha256": "077d9660419f7e5d1893afa7932dfc80b8e38c7c2d9c89d844df61ee6e3fc4e7"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigPublicTests/testPreparePublicWallet",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.066,
+    "log": "OathBitcoin-cases/0d56c1687cb17243.log",
+    "log_sha256": "937258688e1f1dbf04a45f21ae319f4bc58af8fe5258b41d1e1558d257e6e426"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigPublicTests/testSignPublicTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.066,
+    "log": "OathBitcoin-cases/916543c2c93c8e9e.log",
+    "log_sha256": "ea15289077269e30b6a556dfbb97b39fe92391b8682d0970ab85dd54d3005ce2"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigTests/testEveryThresholdSignsWithBoundedFeesAndRejectsWrongChange",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 14.681,
+    "log": "OathBitcoin-cases/8cd111f0801cc0dc.log",
+    "log_sha256": "abe975ba1b04edca200682e0f3a35eb0219c71d721c7fb2a80015b65e26e75d0"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigTests/testLitecoinCoreMultisigConsensus",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/0a498750b8e53c1d.log",
+    "log_sha256": "eda973fa9ce5e9752b8950cbb37b32dc83115582ed578d7911ba23fbd894bc2a"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigTests/testMixedAndHDKeysUseSeparateReceiveAndChangeBranches",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.078,
+    "log": "OathBitcoin-cases/d15b95c21fc6eba4.log",
+    "log_sha256": "966e0d5f48c0383ed1901035fa55c554e940a424685727accfc0cca8fa3a6e7c"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigTests/testSortedPolicyAndPublicOnlyDescriptors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.076,
+    "log": "OathBitcoin-cases/fa4534f1d91a86d5.log",
+    "log_sha256": "a17ea36101a5462f6adabc98338cf766a933badfc5c053dc5f0cb11c92ea286e"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinMultisigTests/testThresholdDuplicatesAndWIFValidation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.076,
+    "log": "OathBitcoin-cases/c1e634e9867edeb0.log",
+    "log_sha256": "6baab53e0162c589aaa0eda58ab25c70ab905e86b054faf97edcab49b2e12eba"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testAddressesAllTypesNetworksAliasesAndChecksums",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.083,
+    "log": "OathBitcoin-cases/53cf864e64f46c72.log",
+    "log_sha256": "c6dc537405a07799ef2573417ae94c12fcacf60a7a351461f25d05932eb6761f"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testCoreAcceptsMinesMixedAddressAndDustMatrix",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.067,
+    "log": "OathBitcoin-cases/b270bc1f65428466.log",
+    "log_sha256": "07f26ebf12921a8ed63f5a383257060a799d09004a758cc5f78e4aab6c9a6a41"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testExtendedPrivateImportsAcrossSupportedScopesSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 11.031,
+    "log": "OathBitcoin-cases/eba9b354b973c3fc.log",
+    "log_sha256": "dcef9eb09dd827a3d7ea173f63b58615d30b9a589f1632b700f319ba8e38e40b"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testFeeAndBroadcastProvidersMustMatchChainAndTransaction",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.084,
+    "log": "OathBitcoin-cases/271475a384af6990.log",
+    "log_sha256": "2c38cf572ebc7803efc74306b5d40b4f2a58ed0dc3da53294eb6659baa957718"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testLitecoinDustAndFeeFromRemainderThenAmount",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.155,
+    "log": "OathBitcoin-cases/1e3c5b2c050d6ca7.log",
+    "log_sha256": "984cbbb8d2e3af6d94ab48634e31af1e4a2f76eaa133df22066e0ca3f53daa91"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testLiveLitecoinMainnetFeeReadOnly",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/2b19e152519a9331.log",
+    "log_sha256": "97997d3dc34ff05499d0dd9cbeb59c24ba84e79a8e6add32a73e0f75f4f84a8d"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testManyMixedInputsAndUncompressedImport",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 2.458,
+    "log": "OathBitcoin-cases/082b0e228754f278.log",
+    "log_sha256": "912cfefeec4b83ca97c3481559aaf8505a356e843b4fe4e7a3ca345a1336d986"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testMixedTypesBothPathsAndAllRecipientsSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.307,
+    "log": "OathBitcoin-cases/3549d39e4f41be61.log",
+    "log_sha256": "5e7c61332cc2a452e245c65472b77bfbb62ec24b7071c02b73466093cb568b2f"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testMWEBParentIsNormalizedWithoutChangingTransparentCommitment",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.112,
+    "log": "OathBitcoin-cases/f3c9f61f4488d026.log",
+    "log_sha256": "d536ce982e0f42d95fc658d1db0ef000d05173222b7afb2232069e1f74019b05"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testPrepareIsolatedPublicTestWallet",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.099,
+    "log": "OathBitcoin-cases/11556652dd5bd39d.log",
+    "log_sha256": "c9856475cc296b9696e7edae69832b6bcdeab2a25f0c7fd18cb29859a3065929"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testSignPublicTestnetTransfer",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.103,
+    "log": "OathBitcoin-cases/615e9381b4e84608.log",
+    "log_sha256": "0709961abf8b1041c93090dd62a8de696d09fba605b122ce3be622304d74c549"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testSupplyLimitDoesNotUseBitcoinsTwentyOneMillion",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.115,
+    "log": "OathBitcoin-cases/a44945f2051ab714.log",
+    "log_sha256": "bd0b701a7100395a6948094f73c253ae2099026809e01c6db69e0523c7672134"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinSendTests/testWrongKeyForgedParentExpiredAndTamperedReviewCannotSign",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.096,
+    "log": "OathBitcoin-cases/93dc3b903eb9d677.log",
+    "log_sha256": "5949f353c1f05b9563ecaf126c60c90a18adc8c5287933fd19bd905bbc86affa"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testAllHDTypesBothBranchesMatchIndependentReference",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.369,
+    "log": "OathBitcoin-cases/d4dccf331304d62f.log",
+    "log_sha256": "3e79ecbf4c43eae718112fc70e7e04bd74096f2ba0084df061657a34aa141d78"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testCoreWIFCompressedUncompressedRawAndElectrumFormats",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.084,
+    "log": "OathBitcoin-cases/e29977e6827553d1.log",
+    "log_sha256": "841aa7552d707ea4484f00c550df7fc448d44524667e1098ab44c5f9af4938e8"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testGap20BatchesSpentAddressesAndChangeAcrossEveryType",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.191,
+    "log": "OathBitcoin-cases/50c55ca1e44a2eba.log",
+    "log_sha256": "aae3930013aa1a57aff7625242d8c1dfa935867eab691161651a294d1075aade"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testLitecoinPeerIdentityAndAmountLimitsRecover",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.085,
+    "log": "OathBitcoin-cases/1c38a3144dc7e1ec.log",
+    "log_sha256": "0f6b74a5e2012c0323d21124095dab80be1e4046f915be677fb3098accafe3bd"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testLiveLitecoinBatchesEveryPeerAndPublicHistory",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.072,
+    "log": "OathBitcoin-cases/6817e0af781dd182.log",
+    "log_sha256": "1036a55f6cee0110feaa1321e15bb6dc03e5a74cedd4925bab28f00e70987702"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testPublishedMWEBWithdrawalWithStrippedFlag",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.085,
+    "log": "OathBitcoin-cases/b9ba20de7a8541b4.log",
+    "log_sha256": "48d72f177d1ba004dda402483f0ccc7c092532234df7e6bcc51974c7ecdd2746"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testPurposeCoinAccountBranchAndLeafPrivatePublicScopes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.536,
+    "log": "OathBitcoin-cases/87c8cd667d8fc2a1.log",
+    "log_sha256": "adc55fe18297630df38d827faa9df0ff6dd798c304ef72f48862bc1bc77f9a4b"
+  },
+  {
+    "selector": "OathBitcoinTests.LitecoinTests/testTransparentMWEBHogExAndWitnessTxids",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.076,
+    "log": "OathBitcoin-cases/9c513e13e099cc32.log",
+    "log_sha256": "a24bf17505bc7f969a0eb7e2781c8fd9d408ea6845f0fddcf1c9a5ab7b1c4c8f"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOCapabilityTests/testExplicitCapabilityIsScopedToItsNetworkAndPreservesAnkrFallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.077,
+    "log": "OathBitcoin-cases/1e0060b961d45666.log",
+    "log_sha256": "f93364158157d90415048676ab95da2808d6735d4f49d4a75438c9c5c7a06b91"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOCapabilityTests/testGeneralAlchemyKeyDoesNotImplyUTXOCapability",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.071,
+    "log": "OathBitcoin-cases/54c08a6bf2b3d40a.log",
+    "log_sha256": "c07ed464980358e0f3c09f1cf6802513ddbf26c5fa08a86765065447df4ca034"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOCapabilityTests/testLiveConfiguredAnkrFeeAndPublicBitcoinLookup",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/80bb0299af35429a.log",
+    "log_sha256": "13df5417a877e25ef2b10cb61aae813250274587966552939190a65a507ec824"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOCapabilityTests/testUnconfiguredPaidRouteStillReconcilesWithoutRebroadcasting",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/8bb8ac880812a9af.log",
+    "log_sha256": "3be4672ba0999ba1a995fe9b84357a076aad2664044723bc0e9446d43140defb"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testBlockcypherValidatesIdentityFreshnessAndAtomicUnits",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.074,
+    "log": "OathBitcoin-cases/8979f5680d35858b.log",
+    "log_sha256": "0c5686bccd5e13550f09db417b65922b764009013f0e05839abd12a224305a8a"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testCanceledWaiterDoesNotCancelOtherWalletsFee",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.121,
+    "log": "OathBitcoin-cases/393eca1d100fab60.log",
+    "log_sha256": "c5a44b9742bf89d81a53a879db9dbb5ec0683fc47ac570b1ae317309725835a0"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testConcurrentRequestsCoalesceCacheExpiresAndChainsStaySeparate",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.216,
+    "log": "OathBitcoin-cases/a1febbf9e3a4e237.log",
+    "log_sha256": "18365b10d4218d4401855fe0e973a522e4490481078b63b3a1015f785fb51253"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testExhaustedProvidersKeepGenuineRejectionInsteadOfAvailability",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.094,
+    "log": "OathBitcoin-cases/bdedc5260fefa2dd.log",
+    "log_sha256": "b2d5a1fdd86fc7a05dac301d3cd9d74d10c0d5f9dc0224800f396414ee823b36"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testFailedOrInvalidPreferredFallsBackImmediately",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.086,
+    "log": "OathBitcoin-cases/07f1c30cdf260bdf.log",
+    "log_sha256": "1b69d28de810faac96b71df71e5a1cc5303596fc20ccea67dcec6e29ebc825e7"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testHungPreferredIsCanceledAndCannotDelayPublicFallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.12,
+    "log": "OathBitcoin-cases/a43effda7c989273.log",
+    "log_sha256": "ae628b8fc9e2d04e58b27691fabc133312daa7f4db7c3bceadf7b92c54b96ac2"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testLiveAllChainsRepeatedColdAndCachedQuotes",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.07,
+    "log": "OathBitcoin-cases/9fe841f4a66cd605.log",
+    "log_sha256": "b7f148d15c279be4f86d79cee5aa86edbe06538b2676c6d662d4091c20421c58"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testOutageHasDeadlineAndDoesNotCacheFailure",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.14,
+    "log": "OathBitcoin-cases/6231cc0095aca952.log",
+    "log_sha256": "e50ca5a721f855b81a315a63cc1c0ddc3af5784937d04e31a7f186c7673c4c33"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testPreferredFailoverPreservesAvailabilityAndInvalidQuoteDiagnostics",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.321,
+    "log": "OathBitcoin-cases/a5f428a61b52f04d.log",
+    "log_sha256": "a4e00e971c54083ab9263c2f92467eaacf18250e0bac6750ac333d1441d9ab02"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testPreferredSuccessAvoidsPublicAPIsAndServersAndIsCached",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.096,
+    "log": "OathBitcoin-cases/cf6c784a63ae37df.log",
+    "log_sha256": "c68c22c1160148310bd88f681b423efb7102226b986c9876f748c0c035d42add"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testServersRunOnlyAfterBothAPIStagesFailForEveryChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/78c9bf2f8c7238fd.log",
+    "log_sha256": "fa92246c65a5afee61fcc3f3bf9317b785da67770dddb93e119e612e983f3817"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOFeeProviderTests/testSlowFailedAndInvalidSourcesCannotBlockHealthyFee",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.163,
+    "log": "OathBitcoin-cases/c46d41b1e4c355bc.log",
+    "log_sha256": "04c1699d8548b7a1e6c1a811bbd020f0032f30a18496ae6e0ea33ee83795dd88"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testCanceledBroadcastNeverStartsServerFallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.079,
+    "log": "OathBitcoin-cases/9d817b214207c9ac.log",
+    "log_sha256": "977d2f773c53756036a4f138c157a9c54b583223ab7c82963521d1f35bfeee69"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testDeadlineAndCancellationStopOutstandingRequests",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.14,
+    "log": "OathBitcoin-cases/1803155b125b9f7d.log",
+    "log_sha256": "51e5fa49ff6822bed088ad03e4fca0a80590f55107028624a70544d6051e8099"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testDefaultPrimaryHeadStartDoesNotAddOneSecondToAnyChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.149,
+    "log": "OathBitcoin-cases/5da1317806d4d54d.log",
+    "log_sha256": "8f3f6a6e2d22f35ca5c839bab4d84733bcfeaf790ecca10c93a473e4be905cdd"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testDefaultReconciliationAvoidsDeniedBlockbookHostsWithoutRebroadcasting",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.227,
+    "log": "OathBitcoin-cases/d15e595d9f27c004.log",
+    "log_sha256": "630058c864dd6fa66d7bb609df21b58fadf7b498d59aea756811846c0e5e52eb"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testEveryProviderUsesCorrectHTTPSPostBodyAndResponseSchema",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.118,
+    "log": "OathBitcoin-cases/d2c77ab75ca38f3a.log",
+    "log_sha256": "6d8100fb6b3501c0f37c269547e884cae85afe851c9bd131a4a0b6b9637f2acd"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testFeeUnitConversionBoundsFreshnessAndMalformedProviderResults",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.093,
+    "log": "OathBitcoin-cases/ceddc9c0addb2a13.log",
+    "log_sha256": "16d54323cc76f2e6b51253d912e87ed982d017842b37b56d99137a501ce82a8c"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testHedgedSubmissionBeatsSlowPrimaryAndUsesIdenticalBytesOnAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.199,
+    "log": "OathBitcoin-cases/e56d5f85b56f3138.log",
+    "log_sha256": "f6e465cd1bfdfb898f1ce28155bb6c7224a6803024cd789386c57473dfde7471"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testHTTPFailuresAndExpectedPropagationAbsence",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.074,
+    "log": "OathBitcoin-cases/649e26b967241643.log",
+    "log_sha256": "077ff9ffd66889ba54d2fdbeffcf3a951eb1c7cf2c68e87ac9fa4bdb9701dad5"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testLiveReadOnlyTransactionLookupAcrossAllChains",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.07,
+    "log": "OathBitcoin-cases/348be1b7779af1d9.log",
+    "log_sha256": "61179ef03632ad18194691fdfa0d40f92e58880a32c6cf6406eb8574eb0fce8c"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testLiveServerFallbackAfterSimulatedAPIOutageForAllChains",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/22d7c255582a85d9.log",
+    "log_sha256": "e5a085a437d9bbccfb8f0407bd23936540e2dad3baced651da5c04bbbe3e75c7"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testLostResponseOrAlreadyKnownNeedsExactLookupOnAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.208,
+    "log": "OathBitcoin-cases/4ed66c053b42990c.log",
+    "log_sha256": "cc9e413bdf777cc77b79965de0cba998c749395ddd7b4ff7f9a6cddbb9b95afa"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testNestedProviderErrorsArePrivacyFilteredBeforePersistence",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.089,
+    "log": "OathBitcoin-cases/83e41a7847b581d3.log",
+    "log_sha256": "aed7a27cbed26f50ccee765d2349074841ef9b790eba3773d9bc63d95b2e1592"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testPreferredBroadcastSuccessSkipsEveryFallbackOnAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.103,
+    "log": "OathBitcoin-cases/c464da7fc28b5164.log",
+    "log_sha256": "79b8698ae823eaa0d067ad0fe6e33e29b1dd9d8c1f00a9d8c8c25941a5949a13"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testPrimaryAndAPIFailureStillReachServerAndCancellationNeverDoes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.171,
+    "log": "OathBitcoin-cases/fdfba2c01643e1c1.log",
+    "log_sha256": "658a22600fd74d8744fa43f26d116eecfcde807ab77b23c21be8cb778fa45bd1"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testPrimaryLostResponseCanReconcileWithoutSubmittingToFallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.154,
+    "log": "OathBitcoin-cases/f642429ec043d64a.log",
+    "log_sha256": "dbe9180456b0037c6fe8a616a2a1724e6c1fcdccc95554185ef090080700c461"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testPrimaryOutageWrongResultOrStallUsesSameBytesInFastFallbackOnAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.52,
+    "log": "OathBitcoin-cases/49544552fce5be42.log",
+    "log_sha256": "32d562e0c705f78cf9c4c8fc0ade0c858aa216d3490736e634affb22bc135359"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testPublicAPIBudgetHonorsCooldownWithoutBlockingOtherProviders",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.109,
+    "log": "OathBitcoin-cases/edadfde5484d202e.log",
+    "log_sha256": "1119c2a7b02abd59b0f62ea711b909dd1dbe0d40daeb51359124f65d0b7da964"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testReconciliationChecksIndependentTLSReadersBeforeAnyRebroadcast",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.142,
+    "log": "OathBitcoin-cases/826894abdb034951.log",
+    "log_sha256": "d54dd63aa164b07ae07ffda969a74902d82d780c3d5b0f973cbe8f96732c3fd4"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testServersAreUnusedWhenAnyAPISucceedsOnAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.275,
+    "log": "OathBitcoin-cases/aa9cd3974383c71b.log",
+    "log_sha256": "0533de02a70f819ea5b749d1a72f8786da4277e79598f534f1250d175d6f9c3f"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testServersStartOnlyAfterEveryAPIAttemptAndLookupFailsOnAllChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.417,
+    "log": "OathBitcoin-cases/d8eab15a5083041c.log",
+    "log_sha256": "f1776805b49e2ed9ac0da14f933671c8962285ae74b736c8d399460e1fd5858e"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOHTTPTests/testWrongHashOrBytesNeverBecomeSuccessAndAllFailuresRemainPending",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.159,
+    "log": "OathBitcoin-cases/a7ac0909cb2ad2ce.log",
+    "log_sha256": "1333182b1aeb6806744e7efdd39f18358b2940841cf5298e204c71b94b566dd8"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOPrivateKeyImportTests/testHexNormalizationNeverAcceptsInvalidScalarOrChangesNetworkValidation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.131,
+    "log": "OathBitcoin-cases/b58ffc90a2f68eb7.log",
+    "log_sha256": "a0ab1144c925dd0ceed3b7cc15c40f1ecea55437b5f4d72669ba56b3fe26d57f"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXOPrivateKeyImportTests/testHexPrefixCasePreservesExactScalarAndWalletIdentityForEveryFamily",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.22,
+    "log": "OathBitcoin-cases/d6914fda67537ea5.log",
+    "log_sha256": "653fdb4fb386c7beddb1cf125bc0240647cb877d1449de0565d20ef8c6ff009f"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryDiagnosticsTests/testDeadlineIsExcludedButInvalidTransactionRetainsSafeContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.853,
+    "log": "OathBitcoin-cases/9e12eb395a3b814b.log",
+    "log_sha256": "9c01c1297960708ffaf09adf5506507cedd92ccf44f48b50a1cf4cd74b105d65"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryLiveTests/testLiveBitcoinCashTLSReconciliationDuringHTTPOutageNeverRebroadcasts",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.194,
+    "log": "OathBitcoin-cases/c6900fae346b6313.log",
+    "log_sha256": "e2af01cb29b3326167f68e17a96aa7a3cb71851527b3dc47d65fb88522499901"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryLiveTests/testLiveBitcoinMainnetRecoveryUsesExactReadWithoutRebroadcast",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.105,
+    "log": "OathBitcoin-cases/539c74ca92efb2c0.log",
+    "log_sha256": "a44417eedcc8feb6f9a6a6d9f513c6e9a8e59087c958cc1b7292a550f132a6b2"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryLiveTests/testLiveBitcoinTestnet4Recovery",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.114,
+    "log": "OathBitcoin-cases/020f2c9f4f8dbe48.log",
+    "log_sha256": "a99a198859c827167c5e63070a130e340066cbd035ab208e210fab79b182d906"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryLiveTests/testLiveDogecoinMainnetRecoveryUsesExactReadWithoutRebroadcast",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.089,
+    "log": "OathBitcoin-cases/cf7c309e6da1a860.log",
+    "log_sha256": "ee7a79714d071ff8873d87cca37513ff288c433889e142d44934167988b4d90b"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryLiveTests/testLiveDogecoinTestnetRecovery",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.067,
+    "log": "OathBitcoin-cases/f8a24f4e8b30e64f.log",
+    "log_sha256": "9a0eff8a1af63321d0842d316b0c31d0b5aa99ef615711ec25e9391009c1b74d"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testCancelDuringRecoveryNeverBroadcasts",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.103,
+    "log": "OathBitcoin-cases/4c0be2b746e14892.log",
+    "log_sha256": "99f52566164c62fda39ed9ca159d68320373c8e1e3d4737090d5d313640a6aac"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testCancelledRecoveryDoesNotReadOrPost",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/4d8918b3dc2652c1.log",
+    "log_sha256": "f1dac771c9572f9ca1620120878d529d4d5878ed0547bf18f63e3b0201885ca8"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testExpiredReadWindowStillAttemptsOnlyPersistedBytes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.132,
+    "log": "OathBitcoin-cases/8f6fa654f5e7a3a4.log",
+    "log_sha256": "7793f0cfe951395d9f4e43c361015e0767a5311df5370e6062fe44667a897e06"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testKnownErrorWithoutMatchingBytesIsStillUnknown",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/b701a8e5e740ac37.log",
+    "log_sha256": "136d6ae169c994dd3274ae108c77a33ca040b72f6cdb640e1d187e77c1c075b1"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testLastFallbackReadIsNotDelayedByItsBroadcastStagger",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.174,
+    "log": "OathBitcoin-cases/79e5e96d1781fe52.log",
+    "log_sha256": "9083534d0e1fc807268e88df2d38154c6ebe60cf36da9784384abebe7ebb9f64"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testMissingOrDifferentBytesStillSubmitOnlyThePersistedTransaction",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathBitcoin-cases/53333186ae46a410.log",
+    "log_sha256": "9778b45ee986a4c7c02c63cfc656847c0b90c16d7d382085c5fac8cb5419073d"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testNormalReadLatencyDoesNotCauseRecoveryRebroadcastOnAnyChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.946,
+    "log": "OathBitcoin-cases/bbbb35d11cbf365e.log",
+    "log_sha256": "85eaed873b4201fb1e0655384c9191b666ddda4a42957775e8ff31fa1769a688"
+  },
+  {
+    "selector": "OathBitcoinTests.UTXORecoveryPreflightTests/testRecoveryAlreadyPresentOnAnyProviderDoesNotRebroadcast",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.068,
+    "log": "OathBitcoin-cases/b0d6fe6de5606c31.log",
+    "log_sha256": "55d455ed7a4ba7d0921fe87fb848557ad74f4bb91bec5b6aee9fcf52b5fec27c"
+  }
+]

@@ -14,6 +14,8 @@ permissions:
   contents: read
 concurrency:
   group: review-${{ github.ref }}-${{ inputs.validation_kind || 'full' }}
+  # Keep earlier checkpoints queued while a full matrix is using the runners.
+  queue: max
   cancel-in-progress: false
 jobs:
   inventory:
@@ -433,6 +435,26 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: svg-reference-graph-boundary, path: evidence/ci, retention-days: 90}
+  artwork-host-policy:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - run: python3 scripts/artwork-host-policy.py .work/source --scratch .work/artwork-host-policy-build --output evidence/ci
+      - name: Run the pinned SwiftDraw document parser tests on the host
+        run: sh scripts/swiftdraw-dom.sh .work/artwork-host-policy-build/after/checkouts/SwiftDraw .work/swiftdraw-dom-build evidence/ci/upstream
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: artwork-host-policy-boundary, path: evidence/ci, retention-days: 90}
   diagnostic-modes:
     if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
@@ -857,7 +879,19 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: python3 scripts/checkout.py
-      - run: python3 scripts/run.py .work/source build --output evidence/ci
+      - run: python3 scripts/run.py .work/source build --output evidence/ci --scratch .work/release-build
+      - name: Verify the resolved package ledger and the BDK distribution
+        run: |
+          packages=.work/release-build/SourcePackages
+          python3 scripts/resolved-package-inventory.py .work/source "$packages/checkouts" --output evidence/ci/resolved-packages.json
+          cmp scope/upstream-xcode-packages.json evidence/ci/resolved-packages.json
+          git init -q .work/bdk-ffi
+          git -C .work/bdk-ffi fetch --depth=1 https://github.com/bitcoindevkit/bdk-ffi.git 1c5f4863c6a53cc9d063d34c4e13c91fea5c58de
+          git -C .work/bdk-ffi checkout -q --detach FETCH_HEAD
+          python3 scripts/bdk-bridge-ledger.py .work/bdk-ffi --output evidence/ci/bdk-ffi.json
+          cmp scope/upstream-bdk-ffi.json evidence/ci/bdk-ffi.json
+          curl --fail --silent --show-error --location --retry 3 https://github.com/bitcoindevkit/bdk-swift/releases/download/3.1.1/bdkFFI.xcframework.zip -o .work/bdk.zip
+          python3 scripts/bdk-distribution.py .work/bdk.zip "$packages/artifacts/bdk-swift/bdkFFI/bdkFFI.xcframework" evidence/ci/bdk-distribution.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: unsigned-ios-release-build, path: evidence/ci, retention-days: 90}

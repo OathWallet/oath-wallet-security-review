@@ -20,7 +20,9 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-**Latest checkpoint.** [Token logo crash and depth bypass](findings/OW-2026-030.md), [bundled asset and SwiftDraw review](review/TOKEN-ARTWORK.md), and [historical CI evidence](evidence/ci-progress38/manifest.json).
+**Latest checkpoint.** [Artwork URL admission and redirects](findings/OW-2026-031.md), [SwiftDraw document model](review/ARTWORK-HOSTS-AND-DOM.md), and [resolved package and BitcoinDevKit provenance](review/RESOLVED-PACKAGES.md).
+
+**Earlier checkpoint.** [Token logo crash and depth bypass](findings/OW-2026-030.md), [bundled asset and SwiftDraw review](review/TOKEN-ARTWORK.md), and [historical CI evidence](evidence/ci-progress38/manifest.json).
 
 **Earlier checkpoint.** [Early relay replies](findings/OW-2026-029.md) and [Wallet Core path API boundaries](review/CORE-PATH-C-API.md). The three relay operations timed out before the repair and completed after it.
 
@@ -165,6 +167,7 @@ python3 scripts/history-atomicity.py .work/source --output .work/history-atomici
 python3 scripts/history-generation.py .work/source --output .work/history-generation --scratch .work/history-generation-build
 python3 scripts/relay-early-replies.py .work/source --output .work/early --scratch .work/early-build
 python3 scripts/svg-reference-graph.py .work/source --output .work/svg --scratch .work/svg-build
+python3 scripts/artwork-host-policy.py .work/source --output .work/hosts --scratch .work/hosts-build
 python3 scripts/bundled-artwork.py .work/source --output .work/resources
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
