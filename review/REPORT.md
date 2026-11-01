@@ -7,12 +7,13 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b`**.
-[OW-2026-011](../findings/OW-2026-011.md) repairs permission-grant revocation
-across asynchronous preparation in EVM, TRON and Solana signing. The same
-84-assertion corpus runs three times before and after: 27 expected failures
-before, all 252 assertions pass after. [PR 15](https://github.com/devdasx/oath-wallet/pull/15) is merged with the same
-source tree. Prior findings and failed attempts remain visible below. No App Store upload or submission is included.
+Current review target: **`8f5c27c030fdd85e1d5c3c18d9da8aa92ac04c79`**.
+[OW-2026-012](../findings/OW-2026-012.md) repairs inconsistent permission history
+and batch results after a duplicate readback callback. The identical fixture
+produces six expected failures and three passing reorganization controls before;
+all nine executions pass after. [PR 16](https://github.com/devdasx/oath-wallet/pull/16) is merged with the same source tree.
+Normal-app duplicate scheduling is not demonstrated. Prior findings and failed
+attempts remain visible below. No App Store upload or submission is included.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
 [application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
@@ -30,8 +31,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,679 files: 202 reviewed, 29 partially reviewed,
-10 generated artifacts verified, 4,438 outstanding. The Wallet Core upstream
+The application ledger contains 4,680 files: 224 reviewed, 29 partially reviewed,
+10 generated artifacts verified, 4,417 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -703,3 +704,61 @@ sanitized logs, original/published hashes, seeds implicit in the synthetic
 fixtures, source pins, durations and toolchain/binary hashes. No App Store
 upload, submission, simulator or physical device operation occurred. The whole
 wallet review remains incomplete and is not independent certification.
+
+
+## Progress 26 — permission readback consistency and discovery review
+
+[OW-2026-012](../findings/OW-2026-012.md) is an informational API consistency
+finding. A late opposite readback preserved verified history but overwrote the
+batch result, potentially misleading a presentation that trusts both. The fix
+requires the same successful pending-history transition before batch/job writes.
+No normal-app duplicate callback sequence, signing bypass or fund loss was
+established. The status worker already excludes overlapping checks for a send.
+
+Regression-only baseline: `b7ff1f5eab70b244ba64a68da10addf3a4d8c4c4`.
+Fix: `8f5c27c030fdd85e1d5c3c18d9da8aa92ac04c79`. [PR 16](https://github.com/devdasx/oath-wallet/pull/16)
+merged as `fd84ae5679a5833fa7fc294bff5cf657fff603f5`; both have tree
+`c735d78f179e78a1138efe86d9566609bd842cc7`. No database migration or stored identity changed.
+
+- Paired host regression: three methods, each in three network-denied processes.
+  Before: six exact batch/history failures and three passing reorganization
+  controls. After: all nine pass. Fixture hashes match; binaries differ.
+  Production SQL, imported-key signing, durable journals and database restart
+  are exercised. Reorganization permits a fresh result in both directions.
+- Final-target OathDatabase: **707 passed, 71 skipped, zero failures** (324.35 s).
+  OathDiagnostics: **118 passed, two skipped, zero failures** (19.14 s).
+  Public-source/Gitleaks and diagnostics coverage checks pass.
+- Generic unsigned iOS Release build passes in **411.78 seconds**, reusing the
+  isolated build cache. This is not a fresh-from-empty build or runtime test.
+- Earlier-target `da7a88a` broad suites also completed: database 704 passed/71
+  skipped; OathAnkr 1,217 passed/194 skipped; zero failures. Their results retain
+  their earlier source pin and are not counted as validation of the new commit.
+- Audit tooling: 99 helper tests pass. Workflow lint has only the known custom
+  `xcode-27` runner-label warning; filtering that exact warning passes. The new
+  paired CI job pins inputs/actions and has no deployment credentials.
+
+[Discovery/source review](PERMISSION-DISCOVERY-REVIEW.md) records 22 whole-file
+reads, including eight production discovery/history/UI/status-worker files and
+related fixtures. Optional provider and local-chain fixtures were inspected but
+not enabled. The local-chain generators' external dependency lock/provenance
+and deployed-contract equivalence remain gaps, not silently passed checks.
+
+A live GitHub metadata refresh now records run
+[41277015374](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41277015374)
+as successful with 49 jobs, for the earlier target `6124254d43ee7a98d4a364639671ccfc52155396`.
+This is workflow metadata, not a transfer of its results to the current commit.
+Run 41281531851 is cancelled with zero jobs; run 41282913488 was queued with
+50 jobs at the recorded check. Their records supersede the earlier status
+observations without erasing them. New-target CI remains separately assessed.
+
+The application ledger contains **4,680 files: 224 reviewed, 29 partial,
+10 generated-verified and 4,417 outstanding**. The completion gate reports
+**7,627 outstanding items**, including old-target-only required checks and
+upstream/provenance gaps. The review remains in progress.
+
+The 3,153-file evidence bundle is under
+[`evidence/permission-discovery`](../evidence/permission-discovery), with original
+and published hashes, sanitized logs, source/fixture/binary pins, durations and
+explicit skips. No simulator, device, funded account, broadcast, App Store
+upload or submission occurred. This is not independent certification or a
+whole-wallet completion verdict.

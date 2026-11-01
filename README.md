@@ -20,9 +20,12 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [permission-grant revocation during preparation](findings/OW-2026-011.md),
-with identical before/after tests on EVM, TRON and Solana. The
-[permission source review](review/PERMISSION-BATCH-REVIEW.md) records exact file scope.
+Latest application finding: [duplicate readback contradicts verified permission history](findings/OW-2026-012.md).
+The same database fixture has six expected failures and three passing controls before,
+and all nine executions pass after. [Discovery, history and presentation review](review/PERMISSION-DISCOVERY-REVIEW.md)
+records exact read scope and the limit: normal-app duplicate scheduling is not established.
+The previous [permission-grant revocation fix](findings/OW-2026-011.md) and
+[batch source review](review/PERMISSION-BATCH-REVIEW.md) remain available.
 The previous [delegation nonce serialization finding](findings/OW-2026-010.md) remains,
 with retained arithmetic-trap evidence and identical passing post-fix tests.
 The [Safe contract cross-check](review/SAFE-CONTRACT-CROSSCHECK.md) records
@@ -46,6 +49,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 ```sh
 python3 scripts/checkout.py
 python3 scripts/permission-batch-races.py .work/source --output .work/batch-after --scratch .work/batch-after-build
+python3 scripts/permission-readback.py .work/source --output .work/readback-after --scratch .work/readback-after-build
 python3 scripts/evm-response-boundary.py .work/source --output .work/evm-evidence/after --scratch .work/evm-after-build
 python3 scripts/inventory.py .work/source --output scope/inventory.json
 python3 -m unittest discover -s tests -p 'test_*.py'
@@ -112,7 +116,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress25)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress26)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot

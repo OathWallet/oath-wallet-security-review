@@ -298,5 +298,17 @@
     "retest_scope": "Same 84-assertion, 21-scenario, three-chain corpus in three network-denied processes: 27 expected failures before; all 252 assertions pass after. Controls preserve valid grants, single use, lock and cancellation. No arbitrary-transfer bypass or live fund loss demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/15"
+  },
+  {
+    "id": "OW-2026-012",
+    "severity": "informational",
+    "title": "Duplicate readback contradicts verified permission history",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-012.md",
+    "fix_commit": "8f5c27c030fdd85e1d5c3c18d9da8aa92ac04c79",
+    "regression_only_commit": "b7ff1f5eab70b244ba64a68da10addf3a4d8c4c4",
+    "retest_scope": "Same three test methods in three network-denied processes each: six expected batch/history mismatch failures and three reorganization controls before, all nine pass after. Real SQL, imported-key signatures, journal, restart and reorg triggers. Normal-app duplicate scheduling, UI effect and fund loss not demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/16"
   }
 ]

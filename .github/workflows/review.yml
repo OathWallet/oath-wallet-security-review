@@ -225,6 +225,31 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: permission-batch-races-evidence, path: evidence/ci, retention-days: 90}
+  permission-readback:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Check out the regression before the production repair
+        run: |
+          git -C .work/source worktree add --detach ../permission-readback-before b7ff1f5eab70b244ba64a68da10addf3a4d8c4c4
+      - name: Preserve baseline boundary reproduction
+        run: python3 scripts/permission-readback.py .work/permission-readback-before --before --output evidence/ci/before --scratch .work/permission-readback-before-build
+      - name: Verify the same regression after the repair
+        if: '!cancelled()'
+        run: python3 scripts/permission-readback.py .work/source --output evidence/ci/after --scratch .work/permission-readback-after-build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: permission-readback-evidence, path: evidence/ci, retention-days: 90}
   ton-properties:
     if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27
