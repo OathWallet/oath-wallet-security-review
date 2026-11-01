@@ -407,5 +407,17 @@
     "retest_scope": "Same 11 production requester cases with transport spies: six assertions across four cases and seven passing controls before; all 11 pass after. Network denied, no actual service/relay operation or incoming Oath bypass shown.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/30"
+  },
+  {
+    "id": "OW-2026-021",
+    "severity": "low",
+    "title": "Session timers and storage callbacks could outlive their owners",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-021.md",
+    "fix_commit": "d13c1979398ab3dc51d9af18f5bf23821e18262f",
+    "regression_only_commit": "5522b5ff7c30279151ee2a4d88b6d9a8c0fd400e",
+    "retest_scope": "Same ten production cases: four unowned-reference crashes, two duplicate-timer assertions and four passing controls before; all ten pass after. Actual Foundation run loop and memory-only stores in network-denied host processes. No remotely triggered Oath teardown demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/31"
   }
 ]

@@ -7,7 +7,22 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`05f1f349938c3281810241513bae8beceab35ffd`**.
+Current review target: **`d13c1979398ab3dc51d9af18f5bf23821e18262f`**.
+[OW-2026-021](../findings/OW-2026-021.md) repairs watcher timers and storage
+callbacks that outlived their owners. Ten identical production cases retain
+four unowned-reference aborts, two duplicate-timer assertions and four passing
+controls before; all ten pass after. SDK checks pass 157/one skip, diagnostics
+pass 118/two skips, and source/secret checks, diagnostics coverage, 134 audit
+helper tests and unsigned generic iOS Release compilation (145.54 seconds) pass.
+
+[PR 31](https://github.com/devdasx/oath-wallet/pull/31) merged as `413b70fbeca15b24e572f7c7f993a62d11a8184e`.
+Application source matches the tested pin; 97 concurrent website-only
+differences are recorded in [merge evidence](../evidence/watcher-lifetime-merge-identity.json).
+
+[Review scope and remaining work](WATCHER-LIFETIME-REVIEW.md) preserve SDK
+lifetime/reachability limits and separate cleanup/concurrency gaps.
+
+Previous target: `05f1f349938c3281810241513bae8beceab35ffd`.
 [OW-2026-020](../findings/OW-2026-020.md) repairs discarded relay TTL and skipped
 wallet-service expiry validation. The identical eleven-case production corpus
 retains six expected assertions across four cases before and seven passing
