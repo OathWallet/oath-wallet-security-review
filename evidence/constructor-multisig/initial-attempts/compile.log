@@ -1,0 +1,15 @@
+Undefined symbols for architecture arm64:
+  "TW::HDWallet<32ul>::getExtendedPublicKeyAccount(TWPurpose, TWCoinType, TWDerivation, TWHDVersion, unsigned int) const", referenced from:
+      TW::HDWallet<32ul>::getExtendedPublicKeyDerivation(TWPurpose, TWCoinType, TWDerivation, TWHDVersion) const in Constructors-68a3c7.o
+      TW::HDWallet<32ul>::getExtendedPublicKey(TWPurpose, TWCoinType, TWHDVersion) const in Constructors-68a3c7.o
+  "TW::HDWallet<32ul>::getExtendedPrivateKeyAccount(TWPurpose, TWCoinType, TWDerivation, TWHDVersion, unsigned int) const", referenced from:
+      TW::HDWallet<32ul>::getExtendedPrivateKeyDerivation(TWPurpose, TWCoinType, TWDerivation, TWHDVersion) const in Constructors-68a3c7.o
+      TW::HDWallet<32ul>::getExtendedPrivateKey(TWPurpose, TWCoinType, TWHDVersion) const in Constructors-68a3c7.o
+  "TW::HDWallet<64ul>::getExtendedPublicKeyAccount(TWPurpose, TWCoinType, TWDerivation, TWHDVersion, unsigned int) const", referenced from:
+      TW::HDWallet<64ul>::getExtendedPublicKeyDerivation(TWPurpose, TWCoinType, TWDerivation, TWHDVersion) const in Constructors-68a3c7.o
+      TW::HDWallet<64ul>::getExtendedPublicKey(TWPurpose, TWCoinType, TWHDVersion) const in Constructors-68a3c7.o
+  "TW::HDWallet<64ul>::getExtendedPrivateKeyAccount(TWPurpose, TWCoinType, TWDerivation, TWHDVersion, unsigned int) const", referenced from:
+      TW::HDWallet<64ul>::getExtendedPrivateKeyDerivation(TWPurpose, TWCoinType, TWDerivation, TWHDVersion) const in Constructors-68a3c7.o
+      TW::HDWallet<64ul>::getExtendedPrivateKey(TWPurpose, TWCoinType, TWHDVersion) const in Constructors-68a3c7.o
+ld: symbol(s) not found for architecture arm64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)

@@ -28,6 +28,10 @@
   Progress 11 adds mnemonic, derivation-path, HMAC/PBKDF2 and passphrase boundary
   evidence, with 7,692 outstanding completion items. Child-derivation failure
   propagation and secret-copy lifetime remain explicit open review leads.
+  Progress 14 adds 23 hash-bound file dispositions, 197 multisig serialization
+  checks, a passing current-source backup suite, and constructor/lifetime
+  characterizations. Four Core API/hygiene limitations remain unrepaired and
+  qualified separately from established application vulnerabilities.
 
 Progress 12 includes a minimal simulator-hosted C ABI check of the shipped Core
 framework for 112 restored-path key equivalences. This resolves that stated

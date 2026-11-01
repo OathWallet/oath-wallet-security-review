@@ -1,0 +1,20 @@
+[
+  "clang++",
+  "-std=c++17",
+  "-O1",
+  "-g",
+  "-fsanitize=address,undefined",
+  "-fno-omit-frame-pointer",
+  "-I",
+  "<UPSTREAM>/src",
+  "-I",
+  "/tmp/oath-hdwallet-constructor-probe/include",
+  "-I",
+  "<UPSTREAM>/trezor-crypto/include",
+  "/tmp/oath-hdwallet-constructor-probe/probe.cpp",
+  "/tmp/oath-hdwallet-constructor-probe/Constructors.cpp",
+  "<UPSTREAM>/src/Mnemonic.cpp",
+  "/tmp/oath-upstream-bip32-probe/libtrezor.a",
+  "-o",
+  "/tmp/oath-hdwallet-constructor-probe/probe"
+]

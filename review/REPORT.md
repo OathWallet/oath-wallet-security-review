@@ -22,8 +22,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,669 files: 135 reviewed, 8 partially reviewed,
-10 generated artifacts verified, 4,516 outstanding. The Wallet Core upstream
+The application ledger contains 4,669 files: 158 reviewed, 8 partially reviewed,
+10 generated artifacts verified, 4,493 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 14 reviewed, 5 partially reviewed, 3,922 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 unrepaired defects in Go dependency APIs outside the traced Oath call path;
@@ -31,6 +31,9 @@ unrepaired defects in Go dependency APIs outside the traced Oath call path;
 Two additional unrepaired Core C API hazards are documented in the
 [child-derivation review](CHILD-DERIVATION-REVIEW.md); no reachable Oath
 vulnerability was established for those calls.
+The [constructor/lifetime experiment](CONSTRUCTOR-LIFETIME-RESULTS.md) also
+confirms direct misuse of the 32-byte constructor and entropy remaining at
+deallocation; their app reachability and broader exposure limitations are explicit.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
@@ -388,3 +391,31 @@ cryptography and other caller contracts remain open. No new application source
 change, simulator/device use, App Store upload or submission occurred in this
 increment. The completion ledger still reports 7,695 outstanding items; it does
 not convert passing derivation tests into complete file coverage.
+
+## Progress 14 — multisig recovery and constructor lifetime
+
+Twenty-three additional files now have hash-bound source-review dispositions,
+covering the multisig recovery documents, wallet adapters, dispatch and two
+backup test files. Three already-reviewed files received additional scope notes.
+The current-target backup package passed 58 XCTest cases plus one Swift Testing
+case, with zero skips. The new production-package mutation harness passed 197
+serialization checks across eleven recovery families. It does not substitute
+fake identities for crypto validation and then claim signing was tested; its
+scope is strictly serialization. See [review notes](MULTISIG-RECOVERY-REVIEW.md).
+
+An isolated compilation of exact upstream constructor/destructor bodies, their
+real class header and production mnemonic/KDF implementations passed 22 positive
+checks in each of two assertion configurations. Separate deterministic cases
+reproduce the invalid 32-byte mnemonic/entropy API behavior and an entropy
+allocation that remains unwiped immediately before free. These unrepaired
+dependency limitations are not newly fixed app vulnerabilities. Source call
+tracing still selects the safe 64-byte specialization for Oath's creation paths.
+See [method and qualifications](CONSTRUCTOR-LIFETIME-RESULTS.md) and
+[complete retained results](../evidence/constructor-multisig).
+
+No application source changed; the existing exact-target generic iOS build
+remains the build evidence. The new audit workflows need their own GitHub run.
+The full matrix, transitive dependency review, broader secret lifetime and
+binary-provenance gaps remain open. The completion ledger now has 7,671
+outstanding items. No simulator, device or App Store operation occurred in this
+audit increment.

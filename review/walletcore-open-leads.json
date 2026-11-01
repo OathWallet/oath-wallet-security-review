@@ -21,28 +21,34 @@
     },
     {
       "id": "WC-LEAD-002",
-      "status": "source-path-narrowed-runtime-unproven",
+      "status": "confirmed-upstream-api-hazard-not-established-reachable-in-app",
       "summary": "32-byte HDWallet template and 64-byte mnemonic seed output",
       "upstream_source": [
         "src/HDWallet.cpp:50",
         "src/HDWallet.h:28"
       ],
-      "next_evidence": "C wrappers use HDWallet<64>; the only explicit HDWallet<32> caller uses the size-checked raw-data overload. No reachable Oath overflow established. A faithful sanitizer test of direct 32-byte mnemonic-constructor misuse remains outstanding.",
+      "next_evidence": "Deterministic 32-byte mnemonic/entropy constructors fail in debug and return empty entropy with NDEBUG; 64-byte and raw-seed controls pass. Pinned dependency is unrepaired; exposed Oath wrappers select 64 bytes.",
       "evidence": [
         "review/HDWALLET-CONSTRUCTOR-REACHABILITY.md",
-        "evidence/constructor-reachability/source-references.json"
-      ]
+        "evidence/constructor-reachability/source-references.json",
+        "review/CONSTRUCTOR-LIFETIME-RESULTS.md"
+      ],
+      "finding": "DEP-CORE-003"
     },
     {
       "id": "WC-LEAD-003",
-      "status": "open-lifetime-review",
+      "status": "entropy-deallocation-confirmed-broader-lifetime-review-open",
       "summary": "Uncleared entropy and intermediate secret copies",
       "upstream_source": [
         "src/HDWallet.cpp:102",
         "src/PrivateKey.cpp",
         "trezor-crypto/crypto/pbkdf2.c"
       ],
-      "next_evidence": "Trace ownership/copies and observable lifetime; distinguish source erasure gaps from a demonstrated attacker-accessible path."
+      "next_evidence": "Synthetic entropy remains at its allocation immediately before free in both constructor configurations. No attacker-accessible read established; all other copies and ownership paths remain open.",
+      "finding": "DEP-CORE-004",
+      "evidence": [
+        "review/CONSTRUCTOR-LIFETIME-RESULTS.md"
+      ]
     }
   ]
 }

@@ -832,7 +832,8 @@
     "sha256": "ebcc2f9e73738584da2a1419388e12cfe7117f65ffbbdcef3d7799d9fe3356a5",
     "status": "reviewed",
     "evidence": [
-      "review/TON-BOUNDARIES.md"
+      "review/TON-BOUNDARIES.md",
+      "review/MULTISIG-RECOVERY-REVIEW.md"
     ]
   },
   "OathAtmosphere/Send/OathTonSendService.swift": {
@@ -874,7 +875,8 @@
     "sha256": "302cc7dd831d60210f8f43f0ff6c1eab9e4be3b7e354dca8176285f355b7bdd3",
     "status": "reviewed",
     "evidence": [
-      "review/TON-BOUNDARIES.md"
+      "review/TON-BOUNDARIES.md",
+      "review/MULTISIG-RECOVERY-REVIEW.md"
     ]
   },
   "Packages/OathDatabase/Tests/OathDatabaseTests/TonSendJournalTests.swift": {
@@ -916,7 +918,8 @@
     "sha256": "6a4d173edb1ab0f9b71f41b82d90116134f9967dc8718cd67d68dc7f1123fa0f",
     "status": "reviewed",
     "evidence": [
-      "review/SOLANA-BOUNDARIES.md"
+      "review/SOLANA-BOUNDARIES.md",
+      "review/MULTISIG-RECOVERY-REVIEW.md"
     ]
   },
   "OathAtmosphere/Wallet/OathSolanaWallet.swift": {
@@ -1103,6 +1106,167 @@
     "evidence": [
       "review/RESTORED-PATHS.md",
       "findings/OW-2026-007.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/XrplMultisigRecovery.swift": {
+    "sha256": "24629146a456444e7fe653d25ff43c3ddcf8a799867d8398a98c69a02fdc25f0",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/SolanaMultisigRecovery.swift": {
+    "sha256": "f90ef77e69bbe2a4aa4a460b242f52891104ac68fea4de71d26d0193d5ddbb49",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/NearMultisigRecovery.swift": {
+    "sha256": "421527d5b7d36104e074a375b61746fe9cce0dbdf6047d1f74eeffbe2852adfe",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/StellarMultisigRecovery.swift": {
+    "sha256": "40676b5abe42f02a6f29596aeee7307d3d68e137c974c75c81b30934291a6f5f",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/AptosMultisigRecovery.swift": {
+    "sha256": "4e8458833c3c7b48959bc8d32d004f20c2e950324320a71b06a9f720ee8aad42",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/ThorchainMultisigRecovery.swift": {
+    "sha256": "0f97f7580c50784c3a3866324c4d565d83b21e1749fdd4b4d5fe693d523a67e6",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/BitcoinMultisigRecovery.swift": {
+    "sha256": "c8623c805c88b6a7d8ed2fa7fc39b11a8693e936550afec2dcb1bf5e2e346bb5",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/EVMMultisigRecovery.swift": {
+    "sha256": "2adbacb7016b3588da3a57425bb4e9ca31d7c55b07371fa3ca5f628c17b0ea61",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/SuiMultisigRecovery.swift": {
+    "sha256": "a41acba1eb589f414d901d98d50f3b61f1dc288e619c9e2fb1e83cfae01259a3",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/TronMultisigRecovery.swift": {
+    "sha256": "008824a68e09e97e0801b87063920ba190965c4c37d38fbc907a5940010f1b3d",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Sources/OathCloudBackup/MultisigCredential.swift": {
+    "sha256": "84592e87f4683cf7ea7b290b8e8f97c93daeb45d896d22346693b0fac0a6160b",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathXrplMultisig.swift": {
+    "sha256": "9ec8c38d13a7560e758bed86f34f9c4642037c0cd50a334968354d0d9f14acbd",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathAptosMultisig.swift": {
+    "sha256": "6b7b7e77055c155db8d3c0f822a16b0ebbc7453becc6aea714b0dd287ea50969",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathNearMultisig.swift": {
+    "sha256": "1ca2ccd985e9bbc1bb1997a18c7553ebf042d6c0e4812ca4e4bf41106400a851",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathStellarMultisig.swift": {
+    "sha256": "e812fecdb97e5aa99b81014988827168689cb64790f3334aba1f32c325b16e67",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathThorchainMultisig.swift": {
+    "sha256": "9dd08a31fccc4b1e6f036150063629f475678b9a9ee23edabe77fcbf46615a18",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathSuiMultisig.swift": {
+    "sha256": "bca0d423cfd974839fb7eb949ef41e10d7c764e8934e014bf16ebb2b55e31323",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathBitcoinMultisig.swift": {
+    "sha256": "9b5a6fd23e0028047da2363d7273e34573674737a96f39eaa30a17749c631e2f",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathTronMultisig.swift": {
+    "sha256": "97a728b0afbd97353ba643da11f29e80d9d8ac422db8040d496e9466b400be4f",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathEVMMultisig.swift": {
+    "sha256": "6ffd3b2da522154b1c040f9ed5c60cde4285a7983967f934b7b3eb44cc7a85d1",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathMultisigCreation.swift": {
+    "sha256": "8a7e7bdd8f1c2d3951c405439c6498ddbcd8e3efb9cf1bb8531881df5a8b7dcb",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Tests/OathCloudBackupTests/BitcoinMultisigBackupTests.swift": {
+    "sha256": "d3e095b2116467977f772e07f8faefe2d55925352a2f4c592976771aa2215a82",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
+    ]
+  },
+  "Packages/OathCloudBackup/Tests/OathCloudBackupTests/EVMMultisigBackupTests.swift": {
+    "sha256": "30917f79d69b15d2deaa97bf65a018fee3cc6201cc39e905f8f2b7cc1539dc8f",
+    "status": "reviewed",
+    "evidence": [
+      "review/MULTISIG-RECOVERY-REVIEW.md"
     ]
   }
 }

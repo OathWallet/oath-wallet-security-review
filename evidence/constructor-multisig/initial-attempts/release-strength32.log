@@ -1,0 +1,22 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==95614==ERROR: AddressSanitizer: SEGV on unknown address 0x0d220e7ed898 (pc 0x000104f55a7c bp 0x00016aeb1490 sp 0x00016aeb1340 T0)
+==95614==The signal is caused by a READ memory access.
+    #0 0x000104f55a7c in mnemonic_to_bits bip39.c:117
+    #1 0x000104f515f0 in TW::HDWallet<32ul>::updateSeedAndEntropy(bool) Constructors.cpp:28
+    #2 0x000104f51238 in TW::HDWallet<32ul>::HDWallet(int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) Constructors.cpp:44
+    #3 0x000104f4d894 in main probe.cpp:19
+    #4 0x00018d3f3e7c in start+0x1a1c (dyld:arm64e+0x31e7c)
+
+==95614==Register values:
+ x[0] = 0x0000000000000000   x[1] = 0x0000604000000450   x[2] = 0x0000000000000000   x[3] = 0x00000c880002008e
+ x[4] = 0x0000000000000001   x[5] = 0x0000000000000001   x[6] = 0x000000016a6b8000   x[7] = 0x0000000000000001
+ x[8] = 0x18018ca20e7cd898   x[9] = 0xf3f3f3f8f8f8f8f8  x[10] = 0x000000016aeb1340  x[11] = 0x0000000000000000
+x[12] = 0x0000000000000007  x[13] = 0xffffffffffffffff  x[14] = 0x0000000000000000  x[15] = 0x00007fffffffffff
+x[16] = 0x000010800001ffff  x[17] = 0x000000010591d008  x[18] = 0x0000000000000000  x[19] = 0x000000016aeb13e0
+x[20] = 0x0000008000020000  x[21] = 0x0000000000000000  x[22] = 0xc60c651073e6c4c7  x[23] = 0x0000000000000000
+x[24] = 0x000000016aeb1360  x[25] = 0x0000000104f81e50  x[26] = 0x0000000104f81e60  x[27] = 0xc60c651073e6c4c7
+x[28] = 0xc60c651073e6c4c7     fp = 0x000000016aeb1490     lr = 0x0000000104f515f4     sp = 0x000000016aeb1340
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV bip39.c:117 in mnemonic_to_bits
+==95614==ABORTING

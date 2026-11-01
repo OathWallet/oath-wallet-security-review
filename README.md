@@ -85,7 +85,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress13)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress14)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
@@ -127,3 +127,8 @@ HMAC/integer oracle, and pinned public SLIP-0010 vectors. It separates passing
 derivation cases from two unrepaired API hazards and gives a clean-checkout
 command. Neither source tests nor constructor reachability establish distributed
 binary equivalence or a completed wallet audit.
+
+Progress 14 adds [multisig recovery review and mutations](review/MULTISIG-RECOVERY-REVIEW.md)
+and [constructor/entropy-lifetime experiments](review/CONSTRUCTOR-LIFETIME-RESULTS.md).
+Their expected dependency failures remain explicitly unrepaired and distinct
+from the passing positive tests.

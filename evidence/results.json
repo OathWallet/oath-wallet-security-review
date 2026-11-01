@@ -3651,5 +3651,190 @@
       "Compiled files are not automatically marked reviewed."
     ],
     "evidence_path": "child-derivation/result.json"
+  },
+  {
+    "check": "upstream-constructors",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "status": "passed",
+    "cases": [
+      {
+        "configuration": "assertions",
+        "case": "positive",
+        "exit_code": 0,
+        "timed_out": false,
+        "observed": true,
+        "classification": "positive-constructor-checks"
+      },
+      {
+        "configuration": "assertions",
+        "case": "mnemonic32",
+        "exit_code": -6,
+        "timed_out": false,
+        "observed": true,
+        "classification": "unrepaired-api-characterization"
+      },
+      {
+        "configuration": "assertions",
+        "case": "entropy32",
+        "exit_code": -6,
+        "timed_out": false,
+        "observed": true,
+        "classification": "unrepaired-api-characterization"
+      },
+      {
+        "configuration": "assertions",
+        "case": "entropy-lifetime",
+        "exit_code": 0,
+        "timed_out": false,
+        "observed": true,
+        "classification": "unrepaired-api-characterization"
+      },
+      {
+        "configuration": "release",
+        "case": "positive",
+        "exit_code": 0,
+        "timed_out": false,
+        "observed": true,
+        "classification": "positive-constructor-checks"
+      },
+      {
+        "configuration": "release",
+        "case": "mnemonic32",
+        "exit_code": 1,
+        "timed_out": false,
+        "observed": true,
+        "classification": "unrepaired-api-characterization"
+      },
+      {
+        "configuration": "release",
+        "case": "entropy32",
+        "exit_code": 1,
+        "timed_out": false,
+        "observed": true,
+        "classification": "unrepaired-api-characterization"
+      },
+      {
+        "configuration": "release",
+        "case": "entropy-lifetime",
+        "exit_code": 0,
+        "timed_out": false,
+        "observed": true,
+        "classification": "unrepaired-api-characterization"
+      }
+    ],
+    "duration_seconds": 5.184,
+    "ruby": "ruby 4.0.5 (2026-05-20 revision 64336ffd0e) +PRISM [arm64-darwin25]",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "source_hashes": {
+      "src/HDWallet.cpp": "a1a30c0bfc850c5baaf3b83fbc4beacc7d767842b5ce23c7e91b1ec98eb86e29",
+      "src/HDWallet.h": "5c08f4b860f54edc5c4b00b7162d5514bbbc8f0058592e6300e2d8d76c225d33",
+      "src/Mnemonic.cpp": "4599c6d3a7208ea0ec267d728931685ff48655ddf8037d53e357bbbc3425b56c",
+      "src/Mnemonic.h": "beff711494b0c4711c7620f524fbbc4c0e7d13f3cafad9143b7050a6d6a8c8d8",
+      "src/Data.h": "a4aad9bae051e000500f1fce5c81b19190267ca073d825d0a8cb7c9d39e77950",
+      "src/memory/memzero_wrapper.h": "ea18e8594e846c35a0070a9ebd30a63e527a91da1cfc1d388d66b4e2791a667c",
+      "trezor-crypto/crypto/bip39.c": "bd3900318aec14386da390e030f50e311036ddda8ce764b744fa70676af35e33",
+      "trezor-crypto/crypto/sha2.c": "49d1c1efd653f6434a4ea64972a24711abea227d9766e633f13403a2b1a6ee53",
+      "trezor-crypto/crypto/hmac.c": "97ddd64b6100a34d7c380b31c964d671916752d19d958b150173bcfc35cc00b8",
+      "trezor-crypto/crypto/pbkdf2.c": "3cc55736b36a4ebee9be551504f22e196c426a98c919884f70dcda2c13724755",
+      "trezor-crypto/crypto/memzero.c": "1d5534da0a5686f84d867bfb11ae750a5396ffb615f12381b7cd22c25e8104ac",
+      "trezor-crypto/crypto/rand.c": "cf432ca318af6d9896eb1ba96db11c7e5de13088c156a4c4aedb6ae4495d5875"
+    },
+    "extraction": {
+      "start_line": 39,
+      "end_line": 107,
+      "sha256": "cfd692d51fc334bb27aea197b261a2eda97be0611d185432efd682ecca227b0c",
+      "qualification": "Exact contiguous production constructor/destructor bodies and real class header; unrelated methods not compiled."
+    },
+    "fixture_sha256": "92697d2a7224982d9ab58f4e63caae837d5176778a232e2acb39135f74fa0837",
+    "log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182",
+    "limitations": [
+      "Expected failures are not fixes.",
+      "32-byte mnemonic constructor not established reachable in Oath.",
+      "Deallocation observer reads synthetic entropy before free, not attacker-accessible memory.",
+      "Not a full upstream build or binary-equivalence proof."
+    ],
+    "original_log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182",
+    "evidence_path": "constructor-multisig/constructors/result.json"
+  },
+  {
+    "check": "multisig-recovery",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "assertion_count": 197,
+    "duration_seconds": 10.126,
+    "command": [
+      "swift",
+      "run",
+      "--package-path",
+      "<TEMP>/T/oath-multisig-recovery-a5xs1g_x",
+      "Probe"
+    ],
+    "compiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0\n",
+    "fixture_sha256": "a969d6fa0f5cdf5d8d4777a1095be0a228ba8423a00926ad4de67ffd6338319f",
+    "log_sha256": "d09814bebc7d070c824fd6bf183794fb803c5bae2352be466dac43d29b038427",
+    "source_hashes": {
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/XrplMultisigRecovery.swift": "24629146a456444e7fe653d25ff43c3ddcf8a799867d8398a98c69a02fdc25f0",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudRestore.swift": "238b6ebe7268383c121d4b8e0ef53bc1c33050afb94c5a59cfb63e13ad04bf59",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/RecoveryPassphrase.swift": "29b924e56aad266591752b2dbafbedd966fe628a6a88647127104d2b71bae17a",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/SolanaMultisigRecovery.swift": "f90ef77e69bbe2a4aa4a460b242f52891104ac68fea4de71d26d0193d5ddbb49",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/NearMultisigRecovery.swift": "421527d5b7d36104e074a375b61746fe9cce0dbdf6047d1f74eeffbe2852adfe",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/BackupDocument.swift": "fb791336a451172f0f66bf10000cda2aef7dd43f613493a8113619ab5c61bf72",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudDrive.swift": "3efff55c14609c39038e16cc70429165750240031e93675415507e647f8263b8",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/StellarMultisigRecovery.swift": "40676b5abe42f02a6f29596aeee7307d3d68e137c974c75c81b30934291a6f5f",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/AptosMultisigRecovery.swift": "4e8458833c3c7b48959bc8d32d004f20c2e950324320a71b06a9f720ee8aad42",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/ThorchainMultisigRecovery.swift": "0f97f7580c50784c3a3866324c4d565d83b21e1749fdd4b4d5fe693d523a67e6",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/MultisigCredential.swift": "84592e87f4683cf7ea7b290b8e8f97c93daeb45d896d22346693b0fac0a6160b",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/BitcoinMultisigRecovery.swift": "c8623c805c88b6a7d8ed2fa7fc39b11a8693e936550afec2dcb1bf5e2e346bb5",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/BackupBatch.swift": "46a0380ddf1f70d5252f2107bb6c24e61e756912e69483571035c219dfcb5e05",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/TonMultisigRecovery.swift": "302cc7dd831d60210f8f43f0ff6c1eab9e4be3b7e354dca8176285f355b7bdd3",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/EVMMultisigRecovery.swift": "2adbacb7016b3588da3a57425bb4e9ca31d7c55b07371fa3ca5f628c17b0ea61",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/SuiMultisigRecovery.swift": "a41acba1eb589f414d901d98d50f3b61f1dc288e619c9e2fb1e83cfae01259a3",
+      "Packages/OathCloudBackup/Sources/OathCloudBackup/TronMultisigRecovery.swift": "008824a68e09e97e0801b87063920ba190965c4c37d38fbc907a5940010f1b3d"
+    },
+    "runtime_scope": "macOS host; production package; serialization only, not cryptographic identity or live-chain validation",
+    "original_log_sha256": "d09814bebc7d070c824fd6bf183794fb803c5bae2352be466dac43d29b038427",
+    "evidence_path": "constructor-multisig/multisig/result.json"
+  },
+  {
+    "check": "OathCloudBackup",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathCloudBackup",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-review-cloud-multisig-20261101"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 22.39,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 58 selected; 58 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "68fd84cf02e28a0d81bc3897436b263f1cc46622d6686ec653fa13c4e293bb33",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 58,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "d029b16d5d46b986fe1bc3a31b3928620533dc8a323415ed15ae61af80366ed1"
+    },
+    "swift_testing": {
+      "log_sha256": "a884e4bf70823509ed6180e8a4a3ebf56516796285d766ec91bfe35e4c74b5e0",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_log_sha256": "285b896d86586d756687a9dd7fd56a51dc3b33064ea4b49c3d66b000b69cd5b9",
+    "evidence_path": "constructor-multisig/cloud-suite/OathCloudBackup.json"
   }
 ]
