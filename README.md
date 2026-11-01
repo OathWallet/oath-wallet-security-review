@@ -20,7 +20,9 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [history identity across sends](findings/OW-2026-028.md).
+**Latest checkpoint.** [Early relay replies](findings/OW-2026-029.md) and [Wallet Core path API boundaries](review/CORE-PATH-C-API.md). The three relay operations timed out before the repair and completed after it.
+
+Earlier dependency finding: [history identity across sends](findings/OW-2026-028.md).
 Six stale-completion cases reproduce 10 assertions before; eight controls pass,
 and all 14 pass after. SDK checks pass 254/one skip; diagnostics 118/two skips.
 [Generation review](review/HISTORY-SEND-GENERATIONS.md) explains the optional local
@@ -159,6 +161,7 @@ python3 scripts/link-metadata.py .work/source --output .work/link-metadata --scr
 python3 scripts/response-routing.py .work/source --output .work/response-routing --scratch .work/response-routing-build
 python3 scripts/history-atomicity.py .work/source --output .work/history-atomicity --scratch .work/history-atomicity-build
 python3 scripts/history-generation.py .work/source --output .work/history-generation --scratch .work/history-generation-build
+python3 scripts/relay-early-replies.py .work/source --output .work/early --scratch .work/early-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build

@@ -1,5 +1,5 @@
 {
-  "source_commit": "4cb121a588583b9b0adef626c05cbedafce3a759",
+  "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -11,8 +11,8 @@
     },
     {
       "path": ".github/workflows/deploy-website.yml",
-      "sha256": "32667efbd517f014d45ccf568f4bc7c962bf33c2886392921f9d97e0b26fbe52",
-      "bytes": 1811,
+      "sha256": "9121918bd769aca77662d8582c18396ec40dd217e254ad60008e3e91497a8c92",
+      "bytes": 1816,
       "category": "build-or-documentation",
       "status": "outstanding",
       "evidence": []
@@ -21144,6 +21144,16 @@
       ]
     },
     {
+      "path": "Tools/WalletConnectSDKValidation/RelayEarlyResponseTests.swift",
+      "sha256": "705587ab86906bc523d2eb7e33e0787e96ff8ab6b56a2665b9da8b46849bd78b",
+      "bytes": 5231,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "findings/OW-2026-029.md"
+      ]
+    },
+    {
       "path": "Tools/WalletConnectSDKValidation/RelayEnvelopeAuthenticationTests.swift",
       "sha256": "576192d27054a545fde917b47a15b818997e2caf8f1c17edf80633fce662fb60",
       "bytes": 5781,
@@ -28828,13 +28838,14 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectRelay/RelayClient.swift",
-      "sha256": "7c4edc80bc0b3f09a0578d7ced8b494520528ec7e71d1b36b7e6aa6c233dee13",
-      "bytes": 16278,
+      "sha256": "b8a169b6510b82e584781e79d2cb8b51846b1b17319fd34b4c30814f44766285",
+      "bytes": 14867,
       "category": "dependency",
       "status": "partially-reviewed",
       "evidence": [
         "review/RELAY-METADATA-REVIEW.md",
-        "findings/OW-2026-015.md"
+        "findings/OW-2026-015.md",
+        "findings/OW-2026-029.md"
       ]
     },
     {
@@ -32105,17 +32116,25 @@
       "evidence": []
     },
     {
+      "path": "Website/AGENTS.md",
+      "sha256": "bb8be8f8a4a7b966cc53ed2d72d9676d78172873169119a99dd78d96036bb171",
+      "bytes": 474,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
       "path": "Website/EXPORT-README.txt",
-      "sha256": "293d6e6e5b9106d16368130892fd53eab943a871a337ab313ef9b4cbf9d70fab",
-      "bytes": 4148,
+      "sha256": "fd03224f42728b4b574752971e8e6f713806cb33dd4bc78fd10905603503a74e",
+      "bytes": 4092,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/README.md",
-      "sha256": "d8db85be66cec7315a1a8c290e7e41b04bf051dc682d23fba1fc9abf00cff4ef",
-      "bytes": 14951,
+      "sha256": "5a8360cd2dbf0090a0f4b19976479c55bb5363a941ab8fb0d6de60877051bb89",
+      "bytes": 15149,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32124,6 +32143,54 @@
       "path": "Website/content/article-covers.json",
       "sha256": "535567569c16ccb045af10b24118c2aed5d29ec8e7ad9f7121e48c7eab6ac44e",
       "bytes": 19066,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/content/articles/README.md",
+      "sha256": "fc2975b26dfb42fca0aac61b6069c873d6533087638f6b3514356907c7311ce2",
+      "bytes": 2408,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/content/articles/binance-withdrawals-who-signed/article.md",
+      "sha256": "d1e93c24734d5dd76ef8a9ac745e1e974fbb7493a2e8d0b4b21ee6d33d079e85",
+      "bytes": 9364,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/content/articles/binance-withdrawals-who-signed/chart-authority.png",
+      "sha256": "c7b592fd93ed2b9186d03c0fdb92605f72ba82afcef16d9ea2f3171ebce120d3",
+      "bytes": 119937,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/content/articles/binance-withdrawals-who-signed/chart-losses.png",
+      "sha256": "08aae344fc4c2340bbd803c77181ef64c79eb0f25397aa2a6c54f22476e959f4",
+      "bytes": 166875,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/content/articles/binance-withdrawals-who-signed/cover.png",
+      "sha256": "d1511fee376ae78c61753ad51b325b1727ea6ca4cc72b968aa855f2ee05fc303",
+      "bytes": 122746,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/content/articles/binance-withdrawals-who-signed/metadata.json",
+      "sha256": "8052aa43a7368e1effc6feeef900ab293de8c098f0d2884c58f685a1cbd9c282",
+      "bytes": 520,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32202,8 +32269,8 @@
     },
     {
       "path": "Website/content/bug-bounty.json",
-      "sha256": "773b0af21c07de08a50c77d3fa7af117262ee2c94a86fa9c9042e37904770655",
-      "bytes": 9116,
+      "sha256": "25fe9896b9925e6bb936f713182b78d24c1bdae696267592627e67cf45b2ca57",
+      "bytes": 9154,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32418,8 +32485,8 @@
     },
     {
       "path": "Website/package.json",
-      "sha256": "d917d2c2ae8e6d5a56df467053564e1d14f542d4ba6509f1d1b9fae8f378a662",
-      "bytes": 1671,
+      "sha256": "13bf8a8c2f1ca0bcf8f0dff51e845ff88aaaf17205b44503507194dc7e9481d2",
+      "bytes": 1708,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32554,8 +32621,8 @@
     },
     {
       "path": "Website/public/ar/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "c758d4813cd326a2ad4b356f65701348016fd777786079b247290b80c18cecd6",
-      "bytes": 76925,
+      "sha256": "a4db48ed803640077d750603f5db021b2ff06fb23d96811a5c8e04df747f2d9e",
+      "bytes": 76904,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32594,8 +32661,8 @@
     },
     {
       "path": "Website/public/articles/add-bip39-passphrase-oath-wallet.html",
-      "sha256": "ec1760d39e0f6f01b916d4f4099633a66306df67e95dee42dde92f8317321900",
-      "bytes": 25390,
+      "sha256": "50e0a20b7abf52de2cabc86104cb333b9a4922597fc88c01dc5f6e09cd313f9a",
+      "bytes": 25386,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32610,8 +32677,8 @@
     },
     {
       "path": "Website/public/articles/add-custom-token-without-trusting-name-symbol.html",
-      "sha256": "d077a977deb8f708e14396174fff2d49033d89530976d71f8f7bc32aeb5e4c12",
-      "bytes": 44069,
+      "sha256": "8424b6963ff610ca568f08b6f471d0973f73af6f271dda7e99bf2cc2a95c7ed3",
+      "bytes": 44048,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32626,8 +32693,8 @@
     },
     {
       "path": "Website/public/articles/backup-restore-oath-wallet.html",
-      "sha256": "7f2cd10f7878cec1bba9c857c34ccebffa1c6fe258f1eed35db538a0cf14bce7",
-      "bytes": 26358,
+      "sha256": "3868ae9e788f96e41ba35d8a035b6fa6ce7ed9539f93b68daf25dc343735be0a",
+      "bytes": 26354,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32642,8 +32709,8 @@
     },
     {
       "path": "Website/public/articles/bitcoin-settings-oath-address-types-indexes-complete-guide.html",
-      "sha256": "4cb213076266ca60b8c721680175e300b25fef2b733eda6e7777b92f91aeae5d",
-      "bytes": 28176,
+      "sha256": "d9fd7116e2d4525ad845b9408ed9d85f431e0eeab90db448be914aac21b58a16",
+      "bytes": 28172,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32658,8 +32725,8 @@
     },
     {
       "path": "Website/public/articles/bitget-388-million-hack-self-custody.html",
-      "sha256": "c007e200cf40b5bb85e131bfa7b0269ba7817d218b035045ebd68f119e497d8f",
-      "bytes": 50183,
+      "sha256": "ce1c6ece98fa677aed912b52923523e52e8e1d83a31a5fcf7179bafb292469de",
+      "bytes": 50162,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32674,8 +32741,8 @@
     },
     {
       "path": "Website/public/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "2a3825ab78e64fa98414f37934bcf94f40f3fddd89dd36ca300d6209479c694a",
-      "bytes": 59646,
+      "sha256": "6d6a3c5ea4f9cb3cdf3d08fc143ca9a0633a2ea944df52051e63302aebdff751",
+      "bytes": 59625,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32706,8 +32773,8 @@
     },
     {
       "path": "Website/public/articles/lock-oath-down-passcode-face-id-auto-lock-app-switcher-privacy.html",
-      "sha256": "c2a9dfcbf5739dab1b28a691938d4d61a27d14fc32466cb9108b46dc755c04de",
-      "bytes": 25469,
+      "sha256": "478c7fbfeb028ee0ba7e95e87e71831898a5a63e2720454eddf4c8a3dc948dd5",
+      "bytes": 25465,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32722,8 +32789,8 @@
     },
     {
       "path": "Website/public/articles/one-wallet-many-mainnets-accounts-networks-separate.html",
-      "sha256": "d673f7fb458bc23ec6aaa41599dcac2533a666180d7329242af18df3ad1b12e4",
-      "bytes": 41439,
+      "sha256": "ade69d669f9676f249575444d594a23cdb5acad631726691f920ef550a2788a3",
+      "bytes": 41418,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32738,8 +32805,8 @@
     },
     {
       "path": "Website/public/articles/open-source-wallets-verifiable-builds.html",
-      "sha256": "7d4259cfca07a24096d3bbb8425ee02dc5ddb11f48ba70c1083f0556533ddfa7",
-      "bytes": 37457,
+      "sha256": "f6f0e3beab820ec15298104909fef907027d51d65eecca7aab3faa67db657a6b",
+      "bytes": 37436,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32754,8 +32821,8 @@
     },
     {
       "path": "Website/public/articles/receive-crypto-safely-network-address-qr-requested-amounts.html",
-      "sha256": "b4b2c92cd6bb680b03471ddada9f7d39707b2fd171818f2283ed3d3b25661e8a",
-      "bytes": 25509,
+      "sha256": "981927ab042ed7352eb2c22ac3fa7ba30c12bf44ec207712873f176977275b33",
+      "bytes": 25505,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32770,8 +32837,8 @@
     },
     {
       "path": "Website/public/articles/recovery-phrase-private-key-icloud-iphone-transfer-import.html",
-      "sha256": "a95ab712f305e5dafedbba0e214b088aef3674bdec9b389b20f856046347097d",
-      "bytes": 26082,
+      "sha256": "0067c9d7ca77a0a9f01ce901717d0bc1c4a688d76412dc06d5f2bd58c38b41a4",
+      "bytes": 26078,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32794,8 +32861,8 @@
     },
     {
       "path": "Website/public/articles/what-never-leaves-iphone-oath-self-custody-security-model.html",
-      "sha256": "9f1791ba2f9363a4ac2629b782e46322ef66294a3381536e3d6016014efeb42a",
-      "bytes": 26147,
+      "sha256": "15bd4b72c5cec6cd681e57881696356a990c6202b434185b58a7b520af6b7217",
+      "bytes": 26143,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32810,8 +32877,8 @@
     },
     {
       "path": "Website/public/articles/where-crypto-network-fees-actually-go.html",
-      "sha256": "ad5082e9801d9ea86e001fd364c8cc8cee1587db8e290fb7a9d45641a62e6147",
-      "bytes": 43696,
+      "sha256": "ca6c55da6bea416ee0e3294372eda076c3f221ffa428926bd330b45e33280c02",
+      "bytes": 43675,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32826,8 +32893,8 @@
     },
     {
       "path": "Website/public/articles/why-bitcoin-wallets-generate-fresh-receiving-addresses.html",
-      "sha256": "6d20f43043879f26615df6586bbe4394f43779ce499ca43d88a0fd408271a3b2",
-      "bytes": 25622,
+      "sha256": "a021d5e588f4549c8546c4c62c109f3cfd494a3d40f69a8b9da52912aaa664b1",
+      "bytes": 25618,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -32842,8 +32909,8 @@
     },
     {
       "path": "Website/public/articles/why-oath-has-no-swaps-perps-web3-walletconnect.html",
-      "sha256": "da660b78e02d493f139f5c34a78c612fdd8f88d7e18c3bec1aed35bd7b65fdd6",
-      "bytes": 25862,
+      "sha256": "42c3fee5811b633332731e61169b8a7587c34f0ccb935780ee28ce0ffb177aa8",
+      "bytes": 25858,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -36218,8 +36285,8 @@
     },
     {
       "path": "Website/public/bn/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "9e819441acc61851d2a0ac4689361310e0b39fb3ce30e9eea49031d01082b860",
-      "bytes": 106791,
+      "sha256": "70de6caec8a4b30200ad7474cdbd0cad13fc6ad8f279d2e92b8d1a385bd5e4a2",
+      "bytes": 106770,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -36234,7 +36301,7 @@
     },
     {
       "path": "Website/public/bug-bounty-report-template.txt",
-      "sha256": "af51891e7919a3d6269b3a7ba4496a5c8d5213e9e4c2b42851a8fb0b3ffefc22",
+      "sha256": "6eb53c93d4eeae42cd9eeb8712790c13bb522d69e40874ac9b3d2e7e1f0f8689",
       "bytes": 625,
       "category": "website",
       "status": "outstanding",
@@ -36242,32 +36309,32 @@
     },
     {
       "path": "Website/public/bug-bounty.css",
-      "sha256": "d8f6493ebd8ca91a34479d911707cb3d297b4a962ee9b471972f450e10ee05d2",
-      "bytes": 11364,
+      "sha256": "c9383b375b55b5c9a927532550f5ddea5c68fea8ba2eb03404ac6b13693a0b49",
+      "bytes": 12123,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/public/bug-bounty.html",
-      "sha256": "b3837bc3779e5fb89c699d54bb638d1fe7f2df1a62094750502ca6fba73368a9",
-      "bytes": 35065,
+      "sha256": "71463789f1f5526b889d794bf7b63bb22167eb8ef3c2045b69b696778cbd4f78",
+      "bytes": 35583,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/public/bug-bounty.js",
-      "sha256": "c3905e07ba8ac21a18fbed2ff777c82b7eb4c645b3c284e60d77e90cc9a01194",
-      "bytes": 608,
+      "sha256": "1f8297b2804c0ad685bfa882fe152cedcbdbbffef244ef7bfa769315eff47c02",
+      "bytes": 1684,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/public/bug-bounty.md",
-      "sha256": "5072d43dcb272e48ac8db0142c9b581cb5bf7e0a755f0255a6aff7ca64600435",
-      "bytes": 9024,
+      "sha256": "a5df23f8d709a7530319310c66052dd75812b4cae0da13ad46d56da1ca6be815",
+      "bytes": 9130,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -36282,8 +36349,8 @@
     },
     {
       "path": "Website/public/de/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "37fc1deb9c16658433e5e3ad52a72af8f6b9811709b5e53c88e1e6f3075d69ac",
-      "bytes": 67003,
+      "sha256": "beac0f556014ac6a4505af3f5f1c3639a85bbcb8e1e5c8e4f6588643e585900f",
+      "bytes": 66982,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -36298,8 +36365,8 @@
     },
     {
       "path": "Website/public/es/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "ef91a3145243630e2d8fbc67714d9d4f473ff5549cdc8d1dd66b6ca201642e27",
-      "bytes": 66999,
+      "sha256": "fc97d9130a81df461b65cd13dd0d16203f65cba75ab4617e42cc29bc6034b609",
+      "bytes": 66978,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -36346,8 +36413,8 @@
     },
     {
       "path": "Website/public/features.html",
-      "sha256": "f52c0cbb6811c044dbc10d58c71612b58ec3f189409283fd9650161da20dfc7a",
-      "bytes": 63241,
+      "sha256": "2dd02dfc9af92439019af34fcf92f8dbfa8184d6905417c849c8d4e3b3ba01c0",
+      "bytes": 63237,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -36362,8 +36429,8 @@
     },
     {
       "path": "Website/public/fr/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "980729ef64cfd3bd4b7a5ad9fec4192cabbc4a255b85e550a8417e9eb92aaa37",
-      "bytes": 69991,
+      "sha256": "62714fc7149b74c8d42d6fb34e4f4ceef898378243e5106c42327f740ea78680",
+      "bytes": 69970,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37250,8 +37317,8 @@
     },
     {
       "path": "Website/public/hi/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "f79e33550181f859afa197d2526b09fa1f514d5d315be080064e5d5cee64f114",
-      "bytes": 105528,
+      "sha256": "062b0ec281edd89c1155dda2f400e3524a0223d7ad7a68ea22e18509b8282a0e",
+      "bytes": 105507,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37282,8 +37349,8 @@
     },
     {
       "path": "Website/public/id/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "66a482390ab0c28d833b306675af7136535ac2fe748be92075abc8f0cb9962a0",
-      "bytes": 64303,
+      "sha256": "ddc5a785907d2c1ec1ed5fb55427caf09bd6711c437a6af2591bac0ff3d38922",
+      "bytes": 64282,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37314,8 +37381,8 @@
     },
     {
       "path": "Website/public/ja/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "22f9907d35201c5dbe8012d640a028e82d4448354c08590727e9b610793303ff",
-      "bytes": 70910,
+      "sha256": "ec18788a3fd0291da9b4d1e5265948f3c68b013e863d9d08668bcd52518ec07a",
+      "bytes": 70889,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37330,8 +37397,8 @@
     },
     {
       "path": "Website/public/ko/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "619969e644c8b4abdffa66bd6f8ef09ee4ac54cc73ab4504756e267a19a1db35",
-      "bytes": 65898,
+      "sha256": "28fb1c8ffc417f079d43783a0dd90b7fe65832b63c9ad2b8c9908fef38a9e1af",
+      "bytes": 65877,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37346,8 +37413,8 @@
     },
     {
       "path": "Website/public/llms-full.txt",
-      "sha256": "7a2c55819dcd7b0b36f661508ddb11e8fb455f1c42b5521e8f56f84c3cb1fcd8",
-      "bytes": 1310474,
+      "sha256": "fc91e050fa1dfd5a3c79ebc6101a6a1214188bf464cecd89287b18d2c41c8719",
+      "bytes": 1310580,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37378,8 +37445,8 @@
     },
     {
       "path": "Website/public/networks.html",
-      "sha256": "abf53236d7607c240ee964935b1910f6d1459d839bac188df97bc255594a7f4b",
-      "bytes": 52812,
+      "sha256": "ebfdfe4e793dbf75b40469cf818830d183efe10aa8626171edba505c619ff25b",
+      "bytes": 50310,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37394,8 +37461,8 @@
     },
     {
       "path": "Website/public/networks/0g.html",
-      "sha256": "62e12470b8635a7a646db810b2863bff53f20f3e6f2df62b8f057ba5b715b13f",
-      "bytes": 23907,
+      "sha256": "e0dad21ae3f21b6b0f1964c2ec833885a86af95850d6c9a2f124a4e16a2b0dbf",
+      "bytes": 23895,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37410,8 +37477,8 @@
     },
     {
       "path": "Website/public/networks/aptos.html",
-      "sha256": "39c5830d2733b4efddb0c242e15eccb4ed787e30f6f919361d7e734b005f077a",
-      "bytes": 23697,
+      "sha256": "13f4950dd7afc9adaa8bd5e4a91a17d2562138f6fbfde84577171471c29effba",
+      "bytes": 23681,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37426,8 +37493,8 @@
     },
     {
       "path": "Website/public/networks/arbitrum.html",
-      "sha256": "faf666123d903dc403efc492d69b192f0a3c55d57b644b9f0511ae6e77ea0654",
-      "bytes": 24079,
+      "sha256": "476692e584e5566b5e7231525262f0f5dd27d596a9e7781fa5d27631adf77a1f",
+      "bytes": 24067,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37442,8 +37509,8 @@
     },
     {
       "path": "Website/public/networks/arc.html",
-      "sha256": "4162389242b5be26ed712e13a995064ffbefdfdbbd6e6707b187570ceed71218",
-      "bytes": 23968,
+      "sha256": "d989a871a014bc48cde42c9e15d1f5719e9b0cac94868abac45dd364f71a9748",
+      "bytes": 23952,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37458,8 +37525,8 @@
     },
     {
       "path": "Website/public/networks/avalanche.html",
-      "sha256": "0330e6675f8cc50c770e4d9b63d381a2ca2829fb8b163d8754d4f68d6d22fa3a",
-      "bytes": 24328,
+      "sha256": "52e60583648a5ad8df10c9c1258de3d96aa57b9b0a38dd387711b614c2248bc2",
+      "bytes": 24316,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37474,8 +37541,8 @@
     },
     {
       "path": "Website/public/networks/base.html",
-      "sha256": "ded6d0a9f46bf26297dc15bf6da7b67ac7a1b4dde63359f67a78f7da1b7bc95e",
-      "bytes": 24035,
+      "sha256": "2b96928012b37f8f06b7c16c950681e942cfae6999d50a67fb29e52dd04a56ab",
+      "bytes": 24023,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37490,8 +37557,8 @@
     },
     {
       "path": "Website/public/networks/bitcoin-cash.html",
-      "sha256": "2fc31599ac6b57b7a1d61f16de8f9446fcd0882b3fa094a95f849e17dec5cc9f",
-      "bytes": 24041,
+      "sha256": "c72ff1c0c509e93d9a997ad3a22d25f3fc1824bda845e29b94c3afeb79b2d18a",
+      "bytes": 24025,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37506,8 +37573,8 @@
     },
     {
       "path": "Website/public/networks/bitcoin.html",
-      "sha256": "625ad559d96d8165a9fd7f1816c785f0b70cc4eb856aed4dcd98329bab09132e",
-      "bytes": 24262,
+      "sha256": "a3fbcf40ecab00de44677d8fead66a16e9625250e22fd5289218b234e21516d0",
+      "bytes": 24250,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37522,8 +37589,8 @@
     },
     {
       "path": "Website/public/networks/bnb-smart-chain.html",
-      "sha256": "94c20de0db0fcc84e32a149d57753b533acd62258ac21fe58e29de33747eab3d",
-      "bytes": 24219,
+      "sha256": "6cbb1f691862ada2fb80b2326bc2869b63823f001fb9c143283cf68c7ca227e1",
+      "bytes": 24207,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37538,8 +37605,8 @@
     },
     {
       "path": "Website/public/networks/celo.html",
-      "sha256": "5ec6b825a958090f048abdad280199a892c19484e13bea8e70af9c9202430022",
-      "bytes": 23957,
+      "sha256": "22a9e003024570c303f35cf7350c9132c851c6fb02abc0638f393110388ac5ed",
+      "bytes": 23945,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37554,8 +37621,8 @@
     },
     {
       "path": "Website/public/networks/chiliz.html",
-      "sha256": "a7ae2799b195b9ed1176ef2bbae875ce169dcf2bf6465ca6dfa8a1c8622cb9b1",
-      "bytes": 24055,
+      "sha256": "c677c2190a722c455c0dc4c5dd5bff0d26e66df135a1bb68eff37c750e46e8c3",
+      "bytes": 24043,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37570,8 +37637,8 @@
     },
     {
       "path": "Website/public/networks/dogecoin.html",
-      "sha256": "dea3bbaaae2f5129149a3a07ca494d54069e51ddf35b440da8787f48e136134e",
-      "bytes": 23930,
+      "sha256": "f9e4a0cd196375d7e3e88f648cf8036b52d906107bc3652d9afcf4d0b5d0ac2b",
+      "bytes": 23914,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37586,8 +37653,8 @@
     },
     {
       "path": "Website/public/networks/ethereum.html",
-      "sha256": "92e3280df0d63681c9e6746feb4a6b7e27c5bf1dd48140ddf95d7a5a78429b29",
-      "bytes": 24160,
+      "sha256": "cda928ddae9338fda5384a1eff9abc42d3149b94cc21a7dae15cdfb7d5ba4bd8",
+      "bytes": 24148,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37602,8 +37669,8 @@
     },
     {
       "path": "Website/public/networks/fantom.html",
-      "sha256": "14a54a4ff9d85346f9583470db978e641515aff038fcf39709b50767d0f4f583",
-      "bytes": 24097,
+      "sha256": "831135db4e2c2fe775739f2972f4d1516ebbd74e3ebba35304a3c549438b4169",
+      "bytes": 24085,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37618,8 +37685,8 @@
     },
     {
       "path": "Website/public/networks/filecoin.html",
-      "sha256": "f6d424b7e36ebb756ae006f78bb08ebd375d7b7e1cbca99553e340476855d923",
-      "bytes": 24351,
+      "sha256": "be08e5912b88ddac0f499cda141579cb5a584cbdbaf1002a3cf6f8be316c44a5",
+      "bytes": 24339,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37634,8 +37701,8 @@
     },
     {
       "path": "Website/public/networks/flare.html",
-      "sha256": "fd192ca2901da3e2cd097e6b07c6e9a97b27174556961b00ffa7690ab53e5a06",
-      "bytes": 23928,
+      "sha256": "b6422521f168248bf5e7bdd27a85ed0c3c92ebcc72ea32118cbc866ca72a3692",
+      "bytes": 23916,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37650,8 +37717,8 @@
     },
     {
       "path": "Website/public/networks/gnosis.html",
-      "sha256": "1cb8e2f6dacecd262a0742d7223a59cf4794210acfb19cc4c2435809e3bdd343",
-      "bytes": 23995,
+      "sha256": "4bcc26d41aa824bcb99618b8f9f2ade30fff5bddbc56eb22706b47adc50185cb",
+      "bytes": 23983,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37666,8 +37733,8 @@
     },
     {
       "path": "Website/public/networks/gram.html",
-      "sha256": "62ceda022f79758044170d64d32ef1e0102579330c0d13593081f2ae44ccf007",
-      "bytes": 24902,
+      "sha256": "9fa9afc26460b9e7d59797a7ab2f696faa85bde3f3de8c3b184c1c3de0944240",
+      "bytes": 24882,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37682,8 +37749,8 @@
     },
     {
       "path": "Website/public/networks/hyperevm.html",
-      "sha256": "cb47c1a83255e63552b98bbd3b3ddae2b15165f33bde13049cd462b1e33b7e41",
-      "bytes": 24087,
+      "sha256": "aeb04758d9f6f020121c487444bea934ee7b6cef5da56964a70577abbdfc094f",
+      "bytes": 24075,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37698,8 +37765,8 @@
     },
     {
       "path": "Website/public/networks/iotex.html",
-      "sha256": "895ee25228ace9e370384478f10b0ca34e74745352c931d6ee62efbce0fbb255",
-      "bytes": 24111,
+      "sha256": "5e79b1c494a6e89654afb42122a7b6d228811c7a1a0461326229f81f2b9643a7",
+      "bytes": 24099,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37714,8 +37781,8 @@
     },
     {
       "path": "Website/public/networks/linea.html",
-      "sha256": "5427b3a00d3e8743712d3fea319ee471ec6bd531d975781acdb7bf1a5a00c729",
-      "bytes": 24003,
+      "sha256": "aafbcded3e787af851d32bab4ab0631895cf48815e7e96541ca2cb6fbcf04192",
+      "bytes": 23991,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37730,8 +37797,8 @@
     },
     {
       "path": "Website/public/networks/litecoin.html",
-      "sha256": "92fab67a190d586e08763988219180c4650e5497ba670ac868be9e024325b25c",
-      "bytes": 23927,
+      "sha256": "0c9fa311e4ea9b92131781f8d99fef690a9dc567d7d27b91a09d7e140ac44429",
+      "bytes": 23911,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37746,8 +37813,8 @@
     },
     {
       "path": "Website/public/networks/monad.html",
-      "sha256": "9093ea5e29ae3652dad2dfdd0e2e56254ac45e58c0091dbaddc4fae285669903",
-      "bytes": 23973,
+      "sha256": "b09b240786c1a2c8e4034ec7b5277aac1f296974d74f1ce9b7088b5b5ef2ee98",
+      "bytes": 23961,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37762,8 +37829,8 @@
     },
     {
       "path": "Website/public/networks/near.html",
-      "sha256": "6273ce8d63567c8d0b66f54645e12af882c62c1493f9a1b6724f62e717c14226",
-      "bytes": 24245,
+      "sha256": "af17b84a15dc58d66921767e2b7aa54e375181f5cf087aff91d470a8e2258ce4",
+      "bytes": 24233,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37778,8 +37845,8 @@
     },
     {
       "path": "Website/public/networks/optimism.html",
-      "sha256": "84768076e0942848f734ca997ee461534763acea45adeee7b830b5a5b72de281",
-      "bytes": 24039,
+      "sha256": "883c97006267008c657af98c1f9fb2ad576dc44f4225a1e2be07eb76a22c614f",
+      "bytes": 24027,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37794,8 +37861,8 @@
     },
     {
       "path": "Website/public/networks/polkadot.html",
-      "sha256": "0feafcaec5902fb68dc16606aabdb5d745cb2a5510e518b920a6a238dead25dc",
-      "bytes": 24072,
+      "sha256": "093390bcfe1cab04ae0ae7a4b70738cd899b37a306e6ea2f294cefc89bc308af",
+      "bytes": 24060,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37810,8 +37877,8 @@
     },
     {
       "path": "Website/public/networks/polygon.html",
-      "sha256": "164b4a6bc8ad7d319047f11ed8754d72888ba4f7995b814eae3555c8a5c16e19",
-      "bytes": 24059,
+      "sha256": "0db6989922760580fe0afdefac7d2641a47ed5d1af884fb39e60cba66dd8aa78",
+      "bytes": 24047,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37826,8 +37893,8 @@
     },
     {
       "path": "Website/public/networks/robinhood-chain.html",
-      "sha256": "aef1a5e4701adee7dc92241555686ee1cdf3a08a96f234d03c4bd77cace4b7f6",
-      "bytes": 24430,
+      "sha256": "3ca15f46353f05bf0b61ff0649413ba3f052ad421a589554a107500790d0cbda",
+      "bytes": 24418,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37842,8 +37909,8 @@
     },
     {
       "path": "Website/public/networks/scroll.html",
-      "sha256": "3443bf8fe27bda025db6891f19f313836f38039e0788c4d2eea2d2cf272d20d5",
-      "bytes": 24004,
+      "sha256": "02b6243d6535417f42c280e813e7fd309ea6bbfcc090cc62545e401d04a8ba8c",
+      "bytes": 23992,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37858,8 +37925,8 @@
     },
     {
       "path": "Website/public/networks/sei.html",
-      "sha256": "f11e43706b738deffaf12013cfe9dbd317c52227e3247547ff8096256755fbc0",
-      "bytes": 23998,
+      "sha256": "61e18b808a6f55b85b69695d2fd7e623c98b3f70c6a69f2f80dc539878381c6d",
+      "bytes": 23986,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37874,8 +37941,8 @@
     },
     {
       "path": "Website/public/networks/solana.html",
-      "sha256": "e8a247c4de4e859cd1e7013effa39e5457f93beae280f6f2a6d8f65f4630ee15",
-      "bytes": 24174,
+      "sha256": "095289715fb63528d0a034d34f3a137b03de3e9d4b4fc94f3e773cc34aee20bc",
+      "bytes": 24162,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37890,8 +37957,8 @@
     },
     {
       "path": "Website/public/networks/somnia.html",
-      "sha256": "b49db4e7892c1c17591e850e5ee4b5df33803a773367ddedebe3c524621898f9",
-      "bytes": 23965,
+      "sha256": "54531a30392efda9972f300e14c236413a5b4147adfb7f8ebd944dd0012c58cb",
+      "bytes": 23953,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37906,8 +37973,8 @@
     },
     {
       "path": "Website/public/networks/stellar.html",
-      "sha256": "3ebd797d37217554df707c9e7f089fa0c7c9b9a2482f9bc9905deb8760391493",
-      "bytes": 24129,
+      "sha256": "928779bf24d70f244390bd8712195a59985015e2c7fa6a2e9596e42904a54546",
+      "bytes": 24117,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37922,8 +37989,8 @@
     },
     {
       "path": "Website/public/networks/story.html",
-      "sha256": "9327e26664ef81bf6aca109c9c5e4ac13bf97039ca8f71ab40887d5d1edf5897",
-      "bytes": 24318,
+      "sha256": "6da60bc72ff2edcb5682c5cc06224c15d85b2830268db25aea701b5131bdcd0e",
+      "bytes": 24306,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37938,8 +38005,8 @@
     },
     {
       "path": "Website/public/networks/sui.html",
-      "sha256": "9ac9ecd4c424a68a01e9312a663db52ce4e9bc598bad31f10ff6bca26ffa8aa9",
-      "bytes": 24285,
+      "sha256": "36cd6e53ff4d346ca1831c40aea7f04e91fc4a36b0d73a54afea7c2da279b504",
+      "bytes": 24273,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37954,8 +38021,8 @@
     },
     {
       "path": "Website/public/networks/taiko.html",
-      "sha256": "ef7501be9e3e66bc7fabd80548a3af42eb45f4c139d04a28b7f4ce73631b1c31",
-      "bytes": 23964,
+      "sha256": "2c160a7e5bcdf7284eb03134ad72008fc9e11831931363a2dd6211208565f4ec",
+      "bytes": 23952,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37970,8 +38037,8 @@
     },
     {
       "path": "Website/public/networks/telos.html",
-      "sha256": "ec1baa9288d3fe38515ab775d8dd9237903aad39ffe409a4ba0c5004b92b6dcf",
-      "bytes": 23982,
+      "sha256": "d53616945dcc4d9bf7439fa1a3b11c4349ebbe94d3d8056c0055eaf0a569f2e7",
+      "bytes": 23970,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -37986,8 +38053,8 @@
     },
     {
       "path": "Website/public/networks/thorchain.html",
-      "sha256": "3047aab7c7c21399f91f7da752511841a2efb77e969e7240cf511490feeec881",
-      "bytes": 24212,
+      "sha256": "ef5d7b30ca009b610b5bfdde004846a5e5c909e32c824f0bf4409f313cee4c2e",
+      "bytes": 24200,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38002,8 +38069,8 @@
     },
     {
       "path": "Website/public/networks/tron.html",
-      "sha256": "e561a74c331fac362dbd1a7c8a8cd44ae780e57aab88e4c914c037acef949d75",
-      "bytes": 24020,
+      "sha256": "d6c68a7b04b0885318704c7c8611cb2e49f97ae5120c13a43ca47013d9ed04ce",
+      "bytes": 24008,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38018,8 +38085,8 @@
     },
     {
       "path": "Website/public/networks/unichain.html",
-      "sha256": "1829fd4d1b740d81bf9ce1ec78970d6682a965dc8ef44ac3d534cb725e31cbd9",
-      "bytes": 24084,
+      "sha256": "359ea041cd8a627fad51877d04c402c584a087215a04ca1bcd68ee9dc374d850",
+      "bytes": 24072,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38034,8 +38101,8 @@
     },
     {
       "path": "Website/public/networks/x-layer.html",
-      "sha256": "4d09f6f19a18371bec26f90c38520fa9a3c912fb41298a36f6e87484024b3b6a",
-      "bytes": 24007,
+      "sha256": "ed300b5777f8c7d70cfa12e226f6850571ffaafd593556b3d7e9951d9418e07a",
+      "bytes": 23995,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38050,8 +38117,8 @@
     },
     {
       "path": "Website/public/networks/xrp-ledger.html",
-      "sha256": "4b8ddfc788d9a35140469d05c4077b85510e2f455d27efc47ab2fb3e96f6d6a4",
-      "bytes": 24164,
+      "sha256": "c8b40be02b791904d70795075b118474d1f3419bd01821eb197bf0ca5aebd94b",
+      "bytes": 24152,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38074,32 +38141,32 @@
     },
     {
       "path": "Website/public/news/admin.html",
-      "sha256": "3f43f70c5b79ad89ddc8635b49364048334b48d355e03e6b2c5c667bbbd7a07f",
-      "bytes": 1354,
+      "sha256": "82460295e9662b8732b0239a0fbb5f8c55d32c04e7e869e67f8cebfe7e9d6f83",
+      "bytes": 1318,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/public/news/admin.js",
-      "sha256": "32abc152481a9425378e2b6c3977331b0611a29f2e9c361b86f835f57e28790a",
-      "bytes": 40962,
+      "sha256": "c21e6f815c387af3a6783b59bb8a80a38491d030fc863f9781f9515accfd0181",
+      "bytes": 40950,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/public/news/index.html",
-      "sha256": "e1e012ae0970d3a119181b711904315ad5bad163fb81954e6adb3e3d35d0c69e",
-      "bytes": 17551,
+      "sha256": "57b7cd7f68e07e1898ada761b32867136dd9e480d90eb8747d6f714f1b7e0c0f",
+      "bytes": 17515,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/public/news/preferences.html",
-      "sha256": "902d20254a2c10d82cbd1b832d300cbd1d24e177f58f953e112e3247be2110c9",
-      "bytes": 870,
+      "sha256": "2f690a89a2b0251b88aff0f1d5bdb9c23562ad6812c1b3d02d0025770757848d",
+      "bytes": 866,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38122,8 +38189,8 @@
     },
     {
       "path": "Website/public/newsletter.js",
-      "sha256": "5daa304daffb93ea3acfec275b87a74f53a5714335489c6cffb22647e51fb5fc",
-      "bytes": 5955,
+      "sha256": "5ccf597673e6b9c7b603fde219a007c5735bc43fbd5cc88656e7d721e51a49f4",
+      "bytes": 5883,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38234,8 +38301,8 @@
     },
     {
       "path": "Website/public/ousd/app.js",
-      "sha256": "87d341d1cfc262422af210966ff3a9b6f02e6cae82ce1e94c2d7c0e3ed496aae",
-      "bytes": 687616,
+      "sha256": "e938f0ad279a1c4a7c528e39e16e99cde49aa8588f79d8e4f6b80aeaea8f23dc",
+      "bytes": 687609,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38250,8 +38317,8 @@
     },
     {
       "path": "Website/public/ousd/index.html",
-      "sha256": "bdcba7d1e75e40b640ea86f99745e49b6a41e7e50a7134dd23095df4626cd7ce",
-      "bytes": 22267,
+      "sha256": "ac5213186949b7aeb2a49cb64d9d22a90a122d2a7bab7e3defb77a72d22be10b",
+      "bytes": 22219,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38282,8 +38349,8 @@
     },
     {
       "path": "Website/public/press.html",
-      "sha256": "28173c74dabee3e83e15382e8cce4eb0c9f76dc1e4e7d48d55d2286ae2c8d746",
-      "bytes": 38586,
+      "sha256": "c7aaaa8a7fc20790392f2c1766ad8fd8aab014c926c8a77f78f3f657f47fbcab",
+      "bytes": 38554,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38322,8 +38389,8 @@
     },
     {
       "path": "Website/public/pt-BR/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "3f64a8417d381b66345b8145de828395045d3a2df70b2af9beda8ebb55d222fb",
-      "bytes": 66188,
+      "sha256": "7fa42a0e83320613f19c83db66e2870537f79b0a568474a6cdb9810e143b9bb7",
+      "bytes": 66167,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38346,8 +38413,8 @@
     },
     {
       "path": "Website/public/ru/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "13688e295b54e5d43c99c23f37c027a3b5d8a3f413d3ddaf9317d956e4699774",
-      "bytes": 93659,
+      "sha256": "126a7829580c7ca0ddd6a0cbcd759d86f6ada38c2426ee79445576b4d5c394fb",
+      "bytes": 93638,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38362,8 +38429,8 @@
     },
     {
       "path": "Website/public/security.html",
-      "sha256": "06d85d7c7543063657b7ed963a66a099aebcc2196291577ad87406a8b6122402",
-      "bytes": 83214,
+      "sha256": "0093c637b6fb287e646a47a2441ed67f84e9dacc1077ec15c0a000776514335e",
+      "bytes": 83022,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38458,8 +38525,8 @@
     },
     {
       "path": "Website/public/tr/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "28b0900dab45f200038292975f92d1592c0a78e26e4c1ff339791bd5b7bd097e",
-      "bytes": 66241,
+      "sha256": "e54426e895aa37d3a162da5cca2e6b6ac7adaec9e529b9305c0eb910e5ff7b34",
+      "bytes": 66220,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38474,8 +38541,8 @@
     },
     {
       "path": "Website/public/ur/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "c1ab1f7b14bba4917a69e339913f72c2913ba73cdd92cb60b38c961f73af63ad",
-      "bytes": 79493,
+      "sha256": "625a9ca41ef17c24038e2fdc44aa88ba93ed35309ed256e2a764523cd909ee91",
+      "bytes": 79472,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38490,8 +38557,8 @@
     },
     {
       "path": "Website/public/vi/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "8c891c4536ba4884635cac74499cbe94fc4a2fda989d2e9bee57b7e5ce38d65b",
-      "bytes": 73555,
+      "sha256": "0fe3278799b486a57f8db27cf69c07eaa9f186bcc2ef2e03b778cbc3ef75f51e",
+      "bytes": 73534,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38554,8 +38621,8 @@
     },
     {
       "path": "Website/public/zh-Hans/articles/coldcard-weak-seed-crisis-complexity-verifiable-wallet-security.html",
-      "sha256": "81798b70619a5e8328339b417b883e1a0bd86ea92254984a1ce6c93cf12af132",
-      "bytes": 57644,
+      "sha256": "7450146419f0620f73ced0b5a3c692eb4ea5426daa9dff951f8ad7bc9bd6f6c1",
+      "bytes": 57623,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38572,14 +38639,6 @@
       "path": "Website/scripts/acquisition-summary.sql",
       "sha256": "8a8c93911093b7f0024082a34b12f3a090dff972c2e3130d95ae974b040fc7db",
       "bytes": 1850,
-      "category": "website",
-      "status": "outstanding",
-      "evidence": []
-    },
-    {
-      "path": "Website/scripts/add-editorial-article.py",
-      "sha256": "f6ad31ba9b7d88ef40953adf9c00ad2a6f5d0ec692f1fda0be3282662206ee99",
-      "bytes": 8832,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38650,8 +38709,16 @@
     },
     {
       "path": "Website/scripts/build-bug-bounty.mjs",
-      "sha256": "95707457ba155584886c047d2e7129ac30815f8a8de2427f09c64086035ac743",
-      "bytes": 12467,
+      "sha256": "3ddf8564f3609821c48d19564a74696d84add927804fcd501f0e79821635c660",
+      "bytes": 13377,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/scripts/build-editorials.mjs",
+      "sha256": "15759e9c4ea70c2041ea0a95d55eb4f2f34f2cb61167635a5a7aef4302d7fc3b",
+      "bytes": 9663,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38674,24 +38741,24 @@
     },
     {
       "path": "Website/scripts/build-network-guides.mjs",
-      "sha256": "21719d24184108cd209e0c240a97b13ec425d96e4577d83fb78ca1c1a5bdfe2d",
-      "bytes": 17784,
+      "sha256": "0b3c091a7334a8d1172f5e3908b461c54049d0899889d136fdfbe6d3b8b48542",
+      "bytes": 17677,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/scripts/build-press.mjs",
-      "sha256": "513eedee98561d0f6761d7e462833d3bc943b1b52a7a81a64548c579912fbbec",
-      "bytes": 19300,
+      "sha256": "497749c73763b1ed94e15ac5fca9b5012dc9b1b99f11264e2f11fcc7de57a1bb",
+      "bytes": 19268,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/scripts/build-search-content.mjs",
-      "sha256": "7011ebdf8fe0015994ba709bcd44193d9666d9d452501333f6f07b89f7bab315",
-      "bytes": 8275,
+      "sha256": "36c4983e63e3188b3261a7573ff293742b35bedcd6076d932f9fc4fad00d6cb6",
+      "bytes": 6681,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -38801,6 +38868,14 @@
       "evidence": []
     },
     {
+      "path": "Website/scripts/markdown.mjs",
+      "sha256": "3b1b37354973ccd859db2013f5338ac9c5317596972a38695c98ba7704662d59",
+      "bytes": 1799,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
       "path": "Website/scripts/prepare-help-images-2026-10-16.py",
       "sha256": "9eb8d401883174be8089472b3d9c81e513fba292a250d062237a256979c8c5ea",
       "bytes": 1766,
@@ -38850,8 +38925,8 @@
     },
     {
       "path": "Website/scripts/verify-live-deployment.mjs",
-      "sha256": "d9a5c5092b12f4fbc22a57a9e85bfbb06945628f7bdaec2ba33766f908fdf53e",
-      "bytes": 593,
+      "sha256": "0237b800a777d0df97862099e35d61de341b4f2bc9630b59160b48211e196f52",
+      "bytes": 1471,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -39050,8 +39125,8 @@
     },
     {
       "path": "Website/src/article-routes.js",
-      "sha256": "f5ec09e01bac10a7446b271c533841ffeb49caff0cb4fb9ea70a2e06ac96693b",
-      "bytes": 5467,
+      "sha256": "66fe149d40fc12c4e52a4b6afd5d023666cedbbb63d1301d8462ca0a41d45b1b",
+      "bytes": 5763,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -39186,16 +39261,16 @@
     },
     {
       "path": "Website/tests/article-index.test.mjs",
-      "sha256": "e1d22b2967ebca9d75a636f54bbc0c1a673bf4d3787dfd37b9dc3e6379b16aad",
-      "bytes": 3786,
+      "sha256": "8c223c39303ab8a862a53543f4eaa20110816f8e54ff03b182798f7a400e2091",
+      "bytes": 3892,
       "category": "website",
       "status": "outstanding",
       "evidence": []
     },
     {
       "path": "Website/tests/articles.test.mjs",
-      "sha256": "7a85464ca04db03cd81c9fbcb16a5d4d0cde81ae4b0c25caeb7d4e4a3905e46e",
-      "bytes": 3287,
+      "sha256": "8a07ec7b62170cdd44e15ed8d97db900139f34e40b434627c34dcd7921c72a07",
+      "bytes": 3419,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -39210,8 +39285,8 @@
     },
     {
       "path": "Website/tests/bug-bounty.test.mjs",
-      "sha256": "8a8a6b11c108eb95958bc19c8a7a7e2aae510cd2466df6023292911d72d6542c",
-      "bytes": 3173,
+      "sha256": "d7c914438da30769274144b2c4cf7ad5d7a2936d79cd739836742f1eb4eabd68",
+      "bytes": 5236,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -39252,6 +39327,14 @@
       "path": "Website/tests/fixtures/wallet-native-palettes.md",
       "sha256": "cfd958d8040678fc9479a66be8d0767a87908340e0f8e6f1ee34e37d28a64e15",
       "bytes": 579,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
+      "path": "Website/tests/github-editorials.test.mjs",
+      "sha256": "73f415c1c98d2dc1b3c3712a40c242bffc84a868552bad0d59fb8dc4e0407566",
+      "bytes": 2636,
       "category": "website",
       "status": "outstanding",
       "evidence": []
@@ -39361,6 +39444,14 @@
       "evidence": []
     },
     {
+      "path": "Website/tests/no-external-arrows.test.mjs",
+      "sha256": "4db25d552c9f629910f3cbec4819c834da848c2b8b9c16b7dd7e341f194ab307",
+      "bytes": 1207,
+      "category": "website",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
       "path": "Website/tests/press.test.mjs",
       "sha256": "97359c288a49142a709ed12b3c790b6f420bc0521182e93e0894b2846951826e",
       "bytes": 4624,
@@ -39402,8 +39493,8 @@
     },
     {
       "path": "Website/tests/site-chrome.test.mjs",
-      "sha256": "92c1cfe908ea99d99ea3be3fd0d4a5499b561a740e1737b920d4be22b3c23cc0",
-      "bytes": 3177,
+      "sha256": "1bc47b30933c3c4855c3f27e14f72b6d609fbf6559f59c28c341d2003aa316da",
+      "bytes": 3302,
       "category": "website",
       "status": "outstanding",
       "evidence": []

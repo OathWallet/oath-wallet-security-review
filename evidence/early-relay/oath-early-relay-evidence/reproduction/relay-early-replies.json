@@ -1,0 +1,33 @@
+{
+  "check": "relay-early-replies",
+  "status": "passed",
+  "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+  "baseline_commit": "439011c1774a5b5e22e75388ab59b67b3443b7a6",
+  "fixture_sha256": "705587ab86906bc523d2eb7e33e0787e96ff8ab6b56a2665b9da8b46849bd78b",
+  "executions": [
+    {
+      "phase": "before",
+      "source_commit": "439011c1774a5b5e22e75388ab59b67b3443b7a6",
+      "matched_expected_outcomes": true,
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before.log",
+      "log_sha256": "9a71ad96eae324385ed65627eabd6e8b3b73845c35245bbdae48573f72b211b2",
+      "source_archive_sha256": "6d02a202bfc70067a8b5a677f21b53db528416288d2d5b06fe0a4f53770bac1f"
+    },
+    {
+      "phase": "after",
+      "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+      "matched_expected_outcomes": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after.log",
+      "log_sha256": "aae7429be882c0a5858cd37b2fe23c14eb28938badec31cb3d8cf95e90984f2c",
+      "source_archive_sha256": "d474da732272283d1b9185c62aee774f018cca163fa0d3f52955864f6e8294e4"
+    }
+  ],
+  "duration_seconds": 226.776,
+  "scope": "Three real SDK timeouts and three send-error controls on the baseline; all six must pass on the repair. Single matching reply inside the synthetic write. No live socket.",
+  "log": "relay-early-replies.log",
+  "log_sha256": "94bf69b4f14bf55b1670c0131d8eb88684ebf365086190eda6592683cc69a96a"
+}

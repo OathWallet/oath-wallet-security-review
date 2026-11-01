@@ -24911,5 +24911,203 @@
     "log": "history-generation.log",
     "log_sha256": "88965868bb5c984fab0f8e804107336d8b29db94687f4a113414ab50e170a9a5",
     "evidence_path": "evidence/history-generation/oath-history-generation-evidence/paired/history-generation.json"
+  },
+  {
+    "check": "walletconnect-sdk",
+    "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 32.53,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.001 (0.002) seconds",
+      "\t Executed 20 tests, with 0 failures (0 unexpected) in 0.007 (0.008) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds",
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.109 (0.109) seconds",
+      "\t Executed 9 tests, with 0 failures (0 unexpected) in 0.946 (0.946) seconds",
+      "\t Executed 14 tests, with 0 failures (0 unexpected) in 0.010 (0.011) seconds",
+      "\t Executed 16 tests, with 0 failures (0 unexpected) in 0.009 (0.009) seconds",
+      "\t Executed 16 tests, with 0 failures (0 unexpected) in 0.007 (0.008) seconds",
+      "\t Executed 15 tests, with 0 failures (0 unexpected) in 0.015 (0.015) seconds",
+      "\t Executed 21 tests, with 0 failures (0 unexpected) in 0.001 (0.002) seconds",
+      "\t Executed 11 tests, with 0 failures (0 unexpected) in 1.535 (1.535) seconds",
+      "\t Executed 6 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.008 (0.011) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.069 (0.070) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 3.109 (3.110) seconds",
+      "\t Executed 13 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "\t Executed 11 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds",
+      "\t Executed 12 tests, with 0 failures (0 unexpected) in 0.010 (0.010) seconds",
+      "\t Executed 10 tests, with 0 failures (0 unexpected) in 13.425 (13.426) seconds",
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.170 (0.170) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-sdk-validation-e3wzmyg4/Tests/SDKTests/VerifyAbsenceTests.swift:24: -[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure] : Test skipped - Fresh process for production diagnostics reporter",
+      "Test Case '-[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure]' skipped (0.002 seconds).",
+      "\t Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 13 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds",
+      "\t Executed 261 tests, with 1 test skipped and 0 failures (0 unexpected) in 19.453 (19.467) seconds",
+      "\t Executed 261 tests, with 1 test skipped and 0 failures (0 unexpected) in 19.453 (19.467) seconds",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "48d11f5aaf1620108786a7c43e4957def181ed4bc15e1957f0b89c804204c5d1",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 260,
+      "skipped": 1,
+      "failed": 0
+    },
+    "evidence_path": "evidence/early-relay/oath-early-relay-evidence/validation/walletconnect-sdk.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-early-relay-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 24.08,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "7ffab63e499c2f34b760345744a73f98b1ec294a7d03633d803d749b7ce41d84",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "9a480e711ccca70d193b2e26f5c9e3e002e52e2e25190e9fb3cb92a1b43a27ea"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/early-relay/oath-early-relay-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 38.86,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "2549f86c397752882ce9c2c9e73292898164d7fddaa37ede412166fd5e296c11",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/early-relay/oath-early-relay-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.43,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/early-relay/oath-early-relay-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 528.36,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "d5819e4bf8a5d00c1cc742751594c8e24c6597cbc20ffc47b8a1a591c94ee907",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/early-relay/oath-early-relay-evidence/validation/build.json"
+  },
+  {
+    "check": "relay-early-replies",
+    "status": "passed",
+    "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+    "baseline_commit": "439011c1774a5b5e22e75388ab59b67b3443b7a6",
+    "fixture_sha256": "705587ab86906bc523d2eb7e33e0787e96ff8ab6b56a2665b9da8b46849bd78b",
+    "executions": [
+      {
+        "phase": "before",
+        "source_commit": "439011c1774a5b5e22e75388ab59b67b3443b7a6",
+        "matched_expected_outcomes": true,
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before.log",
+        "log_sha256": "9a71ad96eae324385ed65627eabd6e8b3b73845c35245bbdae48573f72b211b2",
+        "source_archive_sha256": "6d02a202bfc70067a8b5a677f21b53db528416288d2d5b06fe0a4f53770bac1f"
+      },
+      {
+        "phase": "after",
+        "source_commit": "25bcf5bd3418c574d92d63c7d5d5acef39d7d75c",
+        "matched_expected_outcomes": true,
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after.log",
+        "log_sha256": "aae7429be882c0a5858cd37b2fe23c14eb28938badec31cb3d8cf95e90984f2c",
+        "source_archive_sha256": "d474da732272283d1b9185c62aee774f018cca163fa0d3f52955864f6e8294e4"
+      }
+    ],
+    "duration_seconds": 226.776,
+    "scope": "Three real SDK timeouts and three send-error controls on the baseline; all six must pass on the repair. Single matching reply inside the synthetic write. No live socket.",
+    "log": "relay-early-replies.log",
+    "log_sha256": "94bf69b4f14bf55b1670c0131d8eb88684ebf365086190eda6592683cc69a96a",
+    "evidence_path": "evidence/early-relay/oath-early-relay-evidence/reproduction/relay-early-replies.json"
   }
 ]

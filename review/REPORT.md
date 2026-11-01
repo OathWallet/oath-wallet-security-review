@@ -7,7 +7,13 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`4cb121a588583b9b0adef626c05cbedafce3a759`**.
+Current review target: **`25bcf5bd3418c574d92d63c7d5d5acef39d7d75c`**.
+
+[OW-2026-029](../findings/OW-2026-029.md) repairs the loss of early relay replies. Publishing and both subscription paths timed out on the baseline after receiving the correct response. Three write-error controls passed. All six cases passed after the fix. The paired corpus uses the real response timers and a synthetic socket dispatcher. The SDK passed 260 tests with one skip, diagnostics passed 118 with two skips and 164 audit helper tests passed. Public-source checks, diagnostics coverage and generic unsigned iOS Release compilation (528.36 seconds) passed. [Merged source fix](https://github.com/devdasx/oath-wallet/pull/40). The merge tree matches the tested commit.
+
+Four upstream [path/index interface files](CORE-PATH-C-API.md) have additional source dispositions and sanitizer evidence, including 512 deterministic typed/text path comparisons. Numeric and textual constructors have different upper-bound behavior. The pinned upstream test and its build setup failure are archived separately. Complete CI and dependency review at this application target remain outstanding.
+
+Previous target: `4cb121a588583b9b0adef626c05cbedafce3a759`.
 [OW-2026-028](../findings/OW-2026-028.md) binds send completion and rollback
 to the original local history entry. Ten assertions across six stale-completion
 cases reproduce before; eight controls pass and all 14 pass after. SDK checks
