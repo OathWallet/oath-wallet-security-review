@@ -1922,10 +1922,12 @@
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/WalletConnectCallDetails.swift": {
-    "sha256": "e9488f047cfd82364963ba45121b810614765a99146184c6fc9d66c7b1ae5021",
+    "sha256": "2c93ad09aa1eaeb97e20403eb30cded30425c69a44b4a2b36a023ca3da5835b6",
     "status": "reviewed",
     "evidence": [
-      "review/SWAP-REVIEW.md"
+      "review/SWAP-REVIEW.md",
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/ThorchainSwapReview.swift": {
@@ -1957,17 +1959,21 @@
     ]
   },
   "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectCallDetailsTests.swift": {
-    "sha256": "c70d2043a02ce0b5a872ebe16f4427abbcb89d5f8d7095106fe4aea48f610f58",
+    "sha256": "434bc9e05d94d5e12c51a97ced8961242a4037350592da6fa10e9ee5ce5510b7",
     "status": "reviewed",
     "evidence": [
-      "review/SWAP-REVIEW.md"
+      "review/SWAP-REVIEW.md",
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   },
   "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectSwapReviewTests.swift": {
-    "sha256": "6a5e037bac3de05340a48bc757f256eada15adaddf49fc669eaca65bf23f11b6",
+    "sha256": "478d56d60c65979fb69987e847964dabffdf1856ad8568d291747e16de7d9acf",
     "status": "reviewed",
     "evidence": [
-      "review/SWAP-REVIEW.md"
+      "review/SWAP-REVIEW.md",
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   },
   "Packages/OathAnkr/Tests/OathAnkrTests/ThorchainSwapReviewTests.swift": {
@@ -1999,24 +2005,30 @@
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSwapReview.swift": {
-    "sha256": "25a1878ebe3aa4ceec228ad71c67ecf4fd0a0c839ed7dbafaee130a694bd751b",
-    "status": "partially-reviewed",
+    "sha256": "65ecb5c125c371bede34102630f932e54b1e7c189a0d02d49a3c4838559b16e9",
+    "status": "reviewed",
     "evidence": [
-      "review/SWAP-REVIEW.md"
+      "review/SWAP-REVIEW.md",
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   },
   "OathAtmosphere/Scanner/OathWalletConnectCallDetails.swift": {
-    "sha256": "0cb805a7c53c2e8b41dd13575e0b7acadc3a77bc8da5addc9a2fb299ccb61140",
-    "status": "partially-reviewed",
+    "sha256": "4140d944bf2d4574ff3f18823451a1190b44921492560deb1d7653c63b3c1259",
+    "status": "reviewed",
     "evidence": [
-      "review/SWAP-REVIEW.md"
+      "review/SWAP-REVIEW.md",
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   },
   "OathAtmosphere/Scanner/OathWalletConnectEVMViews.swift": {
-    "sha256": "65bd6029a086250caed7652a3ded382da7772be90f309aecc8b0d71ebf03c87d",
-    "status": "partially-reviewed",
+    "sha256": "db5d379944f60e6952b17703eb3155ea634ab9df6933365a46014d8c14c2e892",
+    "status": "reviewed",
     "evidence": [
-      "review/SWAP-REVIEW.md"
+      "review/SWAP-REVIEW.md",
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   },
   "OathAtmosphere/Assets/OathTransactionDetailScreen.swift": {
@@ -2031,6 +2043,30 @@
     "status": "partially-reviewed",
     "evidence": [
       "review/SWAP-REVIEW.md"
+    ]
+  },
+  "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectApprovalOperationsTests.swift": {
+    "sha256": "cb73c33329f9f5c331ad867f6f3848332ef8c06623af2154600d1e805c88ff3a",
+    "status": "reviewed",
+    "evidence": [
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
+    ]
+  },
+  "Packages/OathAnkr/Tests/OathAnkrTests/Fixtures/WalletConnect/approval-operations.json": {
+    "sha256": "99300d00c96fec49b16352742c7d6fa86fb3fab1d99c397d59d861f29cfdc6e4",
+    "status": "reviewed",
+    "evidence": [
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
+    ]
+  },
+  "Tools/GenerateWalletConnectApprovalVectors.py": {
+    "sha256": "607c50e5c3bdd46cba85debe558babe73831d4cc17167b9f9811b6d2b38eb090",
+    "status": "reviewed",
+    "evidence": [
+      "review/SWAP-APPROVAL-REVIEW.md",
+      "findings/OW-2026-014.md"
     ]
   }
 }

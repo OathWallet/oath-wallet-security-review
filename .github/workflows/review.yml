@@ -275,6 +275,40 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: swap-progress-evidence, path: evidence/ci, retention-days: 90}
+  swap-approval:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '26.5.0'}
+      - name: Verify fixture ABI with an independently pinned library
+        run: |
+          mkdir -p evidence/ci
+          npm ci --prefix fixtures/approval-abi --ignore-scripts
+          node --version > evidence/ci/abi-toolchain.txt
+          npm --version >> evidence/ci/abi-toolchain.txt
+          node fixtures/approval-abi/verify.cjs .work/source > evidence/ci/abi-verification.log
+      - name: Check out the regression before the production repair
+        run: |
+          git -C .work/source worktree add --detach ../swap-approval-before fe6d866751636da183a5de01b90c0f92ea4c5102
+      - name: Preserve baseline boundary reproduction
+        run: python3 scripts/swap-approval.py .work/swap-approval-before --before --output evidence/ci/before --scratch .work/swap-approval-before-build
+      - name: Verify the same regression after the repair
+        if: '!cancelled()'
+        run: python3 scripts/swap-approval.py .work/source --output evidence/ci/after --scratch .work/swap-approval-after-build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: swap-approval-evidence, path: evidence/ci, retention-days: 90}
   ton-properties:
     if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
     runs-on: xcode-27

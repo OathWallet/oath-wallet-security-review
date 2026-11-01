@@ -85,3 +85,8 @@ No swap transaction, public-network quote, provider truth check, simulator,
 physical device or App Store action was performed. A decoded intent is not a
 transaction simulation or proof of contract behavior. Dependency and protocol
 review gaps remain visible in the overall ledger.
+
+
+Follow-up: the mixed-operation approval lead above was reproduced and repaired
+in [progress 28](SWAP-APPROVAL-REVIEW.md), [OW-2026-014](../findings/OW-2026-014.md).
+The original progress-27 scope and observations above remain unchanged.

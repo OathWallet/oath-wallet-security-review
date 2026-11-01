@@ -20,11 +20,13 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [Polygon swap destination capitalization](findings/OW-2026-013.md).
-The same production-decoder fixture has 12 expected assertion failures and six
-passing control executions before, and all nine executions pass after.
-[Swap source review](review/SWAP-REVIEW.md) retains the separate open question
-about mixed swap-and-transfer visibility on the first approval screen.
+Latest application finding: [router operations omitted from first approval](findings/OW-2026-014.md).
+The identical production-model corpus retains 30 expected assertion failures
+before and nine passing executions after. Ten ABI fixtures also pass an
+independent ethers cross-check. [Approval source review](review/SWAP-APPROVAL-REVIEW.md)
+distinguishes host-model tests and compilation from UI or on-chain execution.
+The previous [Polygon swap destination repair](findings/OW-2026-013.md) and
+[swap review](review/SWAP-REVIEW.md) retain their original evidence.
 The prior [duplicate permission readback finding](findings/OW-2026-012.md) and
 [discovery review](review/PERMISSION-DISCOVERY-REVIEW.md) retain their evidence.
 The previous [permission-grant revocation fix](findings/OW-2026-011.md) and
@@ -51,6 +53,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/swap-approval.py .work/source --output .work/approval-after --scratch .work/approval-after-build
 python3 scripts/swap-progress.py .work/source --output .work/swap-after --scratch .work/swap-after-build
 python3 scripts/permission-batch-races.py .work/source --output .work/batch-after --scratch .work/batch-after-build
 python3 scripts/permission-readback.py .work/source --output .work/readback-after --scratch .work/readback-after-build

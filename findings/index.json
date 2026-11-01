@@ -322,5 +322,18 @@
     "retest_scope": "Same three-method corpus in three network-denied processes per phase: 12 expected Polygon destination assertion failures and six passing control executions before; all nine executions pass after. Production decoder, synthetic provider observations. False pending status, no signing bypass or fund loss demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/17"
+  },
+  {
+    "id": "OW-2026-014",
+    "severity": "medium",
+    "title": "Router transfers omitted from first approval summary",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-014.md",
+    "fix_commit": "e46fff5686db48a40103c9dbffe5e830cfc5548a",
+    "implementation_commit": "3e553d55caf22a3dbed7baaa65473d2a8d5e109b",
+    "regression_only_commit": "fe6d866751636da183a5de01b90c0f92ea4c5102",
+    "retest_scope": "Same three-method corpus in three network-denied processes per phase: 30 omission/semantic assertion failures across six failing executions and three passing controls before, all nine pass after. Ten ABI vectors independently cross-checked with ethers 6.15.0. UI source reviewed/compiled, no runtime interaction or on-chain loss demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/21"
   }
 ]

@@ -7,12 +7,14 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`8dcc9c4c50eae2010b648782c0582c3db70c6357`**.
-[OW-2026-013](../findings/OW-2026-013.md) repairs false pending Polygon swap
-progress when equivalent EVM addresses use different capitalization. The same
-fixture retains 12 expected assertions before and nine passing executions after.
-[PR 17](https://github.com/devdasx/oath-wallet/pull/17) is merged with the tested source tree.
-Prior findings and failed attempts remain visible. No App Store upload or submission is included.
+Current review target: **`e46fff5686db48a40103c9dbffe5e830cfc5548a`**.
+[OW-2026-014](../findings/OW-2026-014.md) repairs omitted router commands on the
+first approval screen. The identical host-model fixture retains 30 expected
+assertion failures before and nine passing executions after; ten independent
+ABI cross-checks pass. [Approval review](SWAP-APPROVAL-REVIEW.md) gives the source
+trace and execution limits. Prior findings and failed attempts remain visible.
+[PR 21](https://github.com/devdasx/oath-wallet/pull/21) is merged with the tested source tree.
+No App Store upload or submission is included.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
 [application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
@@ -30,8 +32,9 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,681 files: 236 reviewed, 34 partially reviewed,
-10 generated artifacts verified, 4,401 outstanding. The Wallet Core upstream
+The application ledger contains 4,808 files: 242 reviewed, 31 partially reviewed,
+10 generated artifacts verified, 4,525 outstanding. The inventory also includes
+website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -799,3 +802,22 @@ The **1,589-file** bundle [evidence/swap-review](../evidence/swap-review) preser
 source/fixture/binary hashes, sanitized logs, actual durations, skips and paired
 results. No local Oath/Vault edits, simulator, physical device, production
 transaction, App Store upload or submission occurred in this increment.
+
+
+## Progress 28 — complete router operations before approval
+
+The final source `e46fff5686db48a40103c9dbffe5e830cfc5548a` passes 1,224 networking
+host cases with 194 explicit skips, 118 diagnostics cases with two skips, source
+and secret checks, diagnostic coverage, and unsigned generic iOS Release build.
+The paired approval-model corpus passes all nine process executions after the
+repair; the before source retains 30 assertion failures across six executions
+and three passing controls. All ten ABI vectors pass the independent pinned
+ethers verifier. Audit helper tests: 104 passed.
+
+The initial broader run on `3e553d5` had one failure because a decoder test used
+a positional recipient index. The final test selects recipient/source/amount
+by labels; both runs remain in the evidence. The SDK vector timeout in older
+GitHub run 41282913488 is preserved separately and remains unresolved. No UI
+runtime, live contract, physical-device or App Store result is claimed.
+See [the finding](../findings/OW-2026-014.md), [source trace](SWAP-APPROVAL-REVIEW.md)
+and [durable evidence](../evidence/swap-approval/manifest.json).

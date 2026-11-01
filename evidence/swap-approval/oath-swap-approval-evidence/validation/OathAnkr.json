@@ -1,0 +1,37 @@
+{
+  "check": "OathAnkr",
+  "source_commit": "3e553d55caf22a3dbed7baaa65473d2a8d5e109b",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathAnkr",
+    "<SCRATCH>-native",
+    "/private/tmp/oath-swap-approval-evidence/validation"
+  ],
+  "status": "failed",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 353.42,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 1418 selected; 1223 passed; 194 skipped; 1 failed",
+    "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "4f86641fd488ec1e8a43cf79636b9de1b931ca753c4e13a9184fc9e9845f50d9",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 1418,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 194,
+    "sha256": "68995626102c9e9e5cc01a9dc7d5eb925c385da771401d48d4d6f2360e8d124b"
+  },
+  "swift_testing": {
+    "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+    "summaries": [
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ]
+  }
+}
