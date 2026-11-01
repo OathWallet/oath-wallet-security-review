@@ -7,15 +7,22 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`fd002d9272a767352c114e8b752a21f65f0694cc`**.
-[OW-2026-017](../findings/OW-2026-017.md) repairs mixed-unit session expiry
-validation and unchecked timestamp conversions. The same 13 production cases
-retain seven expected assertions, three crashes and six passing controls before;
-all 13 pass after. SDK checks report 82 passes/one skip; diagnostics report
-118 passes/two skips; source/secret checks, diagnostics coverage and unsigned
-generic iOS Release compilation pass. The controlled reproduction is at the
-SDK API boundary, not a demonstrated remote Oath attack. See the exact
-[reachability and unresolved work](SESSION-EXPIRY-REVIEW.md).
+Current review target: **`2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4`**.
+[OW-2026-018](../findings/OW-2026-018.md) repairs namespace requirement loss,
+malformed-key handling and optional-unwrapping traps. The identical 15-case
+corpus retains 13 assertion failures, two errors rejecting valid inputs and
+two crashes before repair, with four passing controls; all 15 pass after.
+SDK checks report 118 passes/one skip, diagnostics report 118 passes/two skips,
+and source/secret scanning, diagnostics coverage, unsigned generic iOS Release
+compilation and 124 audit helpers pass. [Review scope and limitations](NAMESPACE-BOUNDARY-REVIEW.md)
+keep parser, lifecycle and remote reachability work explicit.
+[PR 26](https://github.com/devdasx/oath-wallet/pull/26) is merged with the
+identical tested source tree.
+
+The prior [expiry repair](../findings/OW-2026-017.md) at
+`fd002d9272a767352c114e8b752a21f65f0694cc` retains its original 13-case
+before/after record. [PR 25](https://github.com/devdasx/oath-wallet/pull/25)
+merged that tested tree. Its evidence and limitations remain available.
 
 The previous [event lifecycle repair](../findings/OW-2026-016.md) at
 `4cfeb14ce9bd85ca2d10017cb053ab421df30cf2` retains its original nine-case proof
@@ -62,8 +69,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,811 files: 276 reviewed, 36 partially reviewed,
-11 generated artifacts verified, 4,488 outstanding. The inventory also includes
+The application ledger contains 4,812 files: 278 reviewed, 42 partially reviewed,
+11 generated artifacts verified, 4,481 outstanding. The inventory also includes
 website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
@@ -101,6 +108,11 @@ No new production defect was confirmed. The new CI job is configured but its
 GitHub execution remains unverified; no app source was changed.
 
 ## Findings and repair status
+
+- [OW-2026-018](../findings/OW-2026-018.md), low: namespace validation lost
+  required entries or trapped on optional values. Fixed and retested with the
+  identical 15-case corpus, including bounded dictionary-order testing. No
+  end-to-end Oath exploit or unauthorized signature was demonstrated.
 
 - [OW-2026-017](../findings/OW-2026-017.md), low: session expiry unit mismatch
   and unchecked conversion bounds. Seven expected assertions and three crashes

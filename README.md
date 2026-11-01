@@ -20,7 +20,14 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [session expiry bounds](findings/OW-2026-017.md).
+Latest dependency finding: [chain-scoped namespace validation](findings/OW-2026-018.md).
+The same 15 production cases retain two crashes and 15 expected test failures
+before repair, with four passing controls; all 15 pass after. SDK checks pass
+118/one skip, diagnostics pass 118/two skips and unsigned iOS Release compilation
+passes. [Review notes](review/NAMESPACE-BOUNDARY-REVIEW.md) distinguish these
+SDK model results from an end-to-end Oath exploit and retain parser/lifecycle gaps.
+
+Earlier dependency finding: [session expiry bounds](findings/OW-2026-017.md).
 The same 13 production cases reproduce seven expected assertions and three
 conversion crashes before repair, with six passing controls; all 13 pass after.
 SDK checks pass 82/one skip, diagnostics pass 118/two skips, and unsigned iOS
@@ -77,6 +84,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build
 python3 scripts/swap-approval.py .work/source --output .work/approval-after --scratch .work/approval-after-build
 python3 scripts/swap-progress.py .work/source --output .work/swap-after --scratch .work/swap-after-build

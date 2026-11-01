@@ -1,5 +1,5 @@
 {
-  "source_commit": "fd002d9272a767352c114e8b752a21f65f0694cc",
+  "source_commit": "2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -20214,14 +20214,15 @@
     },
     {
       "path": "Tools/CheckWalletConnectSDK.py",
-      "sha256": "bdb1b28546de198d46bec16734b7d582252b05170946fd8dbff8204d89cdb5a2",
-      "bytes": 4201,
+      "sha256": "bb957ebe2726e1fac58c45b244187de8e8e130062cc915bb2aa05de629527282",
+      "bytes": 4390,
       "category": "test",
       "status": "reviewed",
       "evidence": [
         "review/INPUT-BOUNDARIES.md",
         "review/EVENTS-LIFECYCLE-REVIEW.md",
-        "review/SESSION-EXPIRY-REVIEW.md"
+        "review/SESSION-EXPIRY-REVIEW.md",
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -21063,6 +21064,16 @@
       "status": "reviewed",
       "evidence": [
         "review/EVENTS-LIFECYCLE-REVIEW.md"
+      ]
+    },
+    {
+      "path": "Tools/WalletConnectSDKValidation/NamespaceBoundaryTests.swift",
+      "sha256": "4af39268805d96381e1fd3a284b96d3220650b537925f88b6f8925ff2cf7b264",
+      "bytes": 9022,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -29360,16 +29371,20 @@
       "sha256": "56a24966a3c34bf6c1c33e10e68b7f66ab769ad1e8e0af33a6f967c4b59c092d",
       "bytes": 3263,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Engine/Wallet/ControllerSessionStateMachine.swift",
       "sha256": "319565a78566eb0c382cce98e17506026c0c0ed471f1d1ce5805fabe376113fd",
       "bytes": 2990,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Engine/Wallet/SessionResponder.swift",
@@ -29473,11 +29488,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Namespace.swift",
-      "sha256": "1f7812077be31d1563a43866b0644145fbe6acdb2a100d63f20f8fd0121609ea",
-      "bytes": 18000,
+      "sha256": "74464422bff48bd3243db4e7f9b31a7c7d61a53394c0e28f327ac0eb1e421866",
+      "bytes": 17570,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/RejectionReason.swift",
@@ -29761,12 +29778,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Types/Session/WCSession.swift",
-      "sha256": "956265c550a88b606a944d7c4bbfd1b4d6c0267a3f44584568a5df6c772bab07",
-      "bytes": 10643,
+      "sha256": "1988d1c3ad498dc3cba3315706491d3fe38f8671847fdf2f61d101f8601aa8f9",
+      "bytes": 10330,
       "category": "dependency",
       "status": "partially-reviewed",
       "evidence": [
-        "review/SESSION-EXPIRY-REVIEW.md"
+        "review/SESSION-EXPIRY-REVIEW.md",
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
       ]
     },
     {
@@ -29990,16 +30008,20 @@
       "sha256": "1f05f310cf0b9975aea1827928fe91a8e5013b73dbd344fa7eb60ec32d06daf8",
       "bytes": 4011,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/Blockchain.swift",
       "sha256": "3154bab76a0c84c7dda7c7cbf16e8e7f3503bc62f0e20f454afc939eae8fe12d",
       "bytes": 2832,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/Cacao/Cacao.swift",
@@ -30157,8 +30179,10 @@
       "sha256": "bfdc2e170d2445ae7a532b910386eee604497a1257360674558123d5750b4758",
       "bytes": 1583,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/Extensions/String.swift",
@@ -31636,8 +31660,10 @@
       "sha256": "68ecd1cf2db0febbe5c6ca74d992a0405824b044d42645743dc66f412f369aea",
       "bytes": 11711,
       "category": "dependency",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/NAMESPACE-BOUNDARY-REVIEW.md"
+      ]
     },
     {
       "path": "Vendor/Reown/Tests/WalletConnectSignTests/NonControllerSessionStateMachineTests.swift",

@@ -371,5 +371,17 @@
     "retest_scope": "Same 13 production-code cases in isolated network-denied processes: seven expected assertions across four cases, three conversion crashes and six passing controls before; all 13 pass after. Dependency API proof only; no remote Oath exploit or fund loss demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/25"
+  },
+  {
+    "id": "OW-2026-018",
+    "severity": "low",
+    "title": "Namespace validation lost chain requirements and trapped on optional values",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-018.md",
+    "fix_commit": "2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4",
+    "regression_only_commit": "4fdb1653b925ff6c58af5c07cb256ee2e0897c79",
+    "retest_scope": "Identical 15-case production corpus: 13 assertion failures and two rejected-valid-case errors, two optional-unwrapping crashes, four controls before; all 15 pass after. Fixed hashing, 128 references and four dictionary capacities. Network denied; no end-to-end Oath exploit or signature bypass shown.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/26"
   }
 ]

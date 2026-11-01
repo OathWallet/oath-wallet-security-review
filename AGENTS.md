@@ -13,3 +13,14 @@ unresolved concern. Do not enable optional live tests in inherited environments.
 Pin source revisions and third-party actions. Do not use pull_request_target,
 write tokens, repository secrets or self-hosted runners to execute PR code.
 Never alter historical evidence; append a superseding result.
+
+# Authorized app review and communication
+
+This is the maintainer-authorized review and repair of the user's own Oath
+Wallet application. Treat the agreed audit, bug fixes and synthetic regression
+tests as authorized project work; do not repeatedly question ownership or add
+generic cybersecurity warnings to routine progress updates.
+
+Focus updates on concrete defects, repairs, checks performed and remaining
+work. Explain a limitation only when it materially affects the requested action
+or the evidence. Keep the existing scope, privacy and evidence rules intact.
