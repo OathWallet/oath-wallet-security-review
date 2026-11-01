@@ -7,7 +7,15 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`55f4e809ba46881b1d6d454cdce3ef62a627df85`**.
+Current review target: **`0e611a5408cfa02c8463b4bcd74a0164522cf7a3`**.
+
+[OW-2026-033](../findings/OW-2026-033.md) documents a wallet signing-result integrity bug. A peer-supplied ECDSA or Taproot partial signature for a different transaction survived signing and the original journal verification. The [app repair](https://github.com/devdasx/oath-wallet/pull/45) regenerates the requested signature and asks BDK's script interpreter to verify the unlocking data against the approved transaction. The nine-case host corpus recorded eight specific failures and one passing control before the change. All nine passed afterward.
+
+The independent [Bitcoin Core comparison](../evidence/core-signatures/oath-core48-evidence/walletconnect/bitcoin-connect-core-proof.json) rejected both contaminated spends before repair and mined both controls. It mined all four transactions from the fixed source. Five separately enabled Core tests also passed, covering 32 source/destination combinations, a 255-input sweep, multisig up to 15-of-15, aezeed recovery, and 11 Electrum fixtures across five seed kinds. The isolated funding and mining use regtest only.
+
+The current exact app commit passed 280 Bitcoin tests (60 skips), 707 database tests (71 skips), 118 diagnostics tests (two skips), source and coverage checks, the previous two PSBT boundary corpora and unsigned iOS Release compilation. The [build ledger](../evidence/core-signatures/oath-core48-evidence/build-inputs/release-inputs.json) identifies 2,353 compiler and dependency inputs plus four processed XCFrameworks. The [dependency review](BITCOIN-SIGNER-AND-CORE.md) adds exact source inventories for the two relevant Rust crates. All 182 audit helper tests passed. The merge `bb3cc41a87d26ba299c27b1888d949e5c84ede5f` has the same tree as the tested source. Full CI, outstanding code and binary provenance remain open.
+
+Previous target: `55f4e809ba46881b1d6d454cdce3ef62a627df85`.
 
 [OW-2026-032](../findings/OW-2026-032.md) documents a Bitcoin WalletConnect request that expanded during review. Eight inputs referenced different outputs of one funding transaction. Review returned a 509,260-byte packet, then the signer rejected that same packet at its 500,000-byte limit. In a separate intercepted URLSession test, the original collector retained more than the limit across six unique funding transactions. The [public source fix](https://github.com/devdasx/oath-wallet/pull/44) bounds retained parents, accounts for repeated parents, and checks field prefixes and map terminators during serialization. All five paired host cases passed after the fix. The smaller request and two-parent control passed before and after.
 

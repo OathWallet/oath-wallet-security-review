@@ -1,0 +1,48 @@
+{
+  "check": "bitcoin-connect-core-proof",
+  "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+  "baseline_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+  "fixture_sha256": "4f9dbd4cb5c393a18b0ad681f6b33c28722275f666e5e919b28368d75f98d7eb",
+  "binary_sha256": {
+    "bitcoin-cli": "5310684b6028bdc48e2155645408f02bd2b46e0ee0799317168e74ce9b823aba",
+    "bitcoind": "58f9e3b5b8cf0cecd268cc6bf02993f3244e1a93fe8d67949ced6b52c2fdd9fb"
+  },
+  "status": "passed",
+  "executions": [
+    {
+      "case": "testConfirmedWalletConnectSignatures",
+      "suite": "BitcoinConnectCoreTests",
+      "status": "failed",
+      "exit_code": 1,
+      "blocks": 107,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 19.194,
+      "log": "testConfirmedWalletConnectSignatures.log",
+      "log_sha256": "0e720fb57c6a74fdc730581a32d7260d95897ba8fca13cfb54bfc526cef5a22a",
+      "phase": "before",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "evidence_valid": true
+    },
+    {
+      "case": "testConfirmedWalletConnectSignatures",
+      "suite": "BitcoinConnectCoreTests",
+      "status": "passed",
+      "exit_code": 0,
+      "blocks": 109,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 15.486,
+      "log": "testConfirmedWalletConnectSignatures.log",
+      "log_sha256": "ba649b1f396943081b2512a70a692d2d0a0f1568ac59cef3d3845e448be4f437",
+      "phase": "after",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "evidence_valid": true
+    }
+  ],
+  "scope": "Synthetic signer and 4 locally funded scripts. WalletConnect signet address envelope, Core regtest consensus and mining. No public chain or relay.",
+  "log": "bitcoin-connect-core-proof.log",
+  "log_sha256": "1cc1189f590be586fb2981c292652909e633f45cddd42c23bdc1ee6e292c92ac"
+}

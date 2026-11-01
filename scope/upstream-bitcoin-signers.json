@@ -1,0 +1,1003 @@
+{
+  "cargo_lock_source": "https://github.com/bitcoindevkit/bdk-ffi/blob/1c5f4863c6a53cc9d063d34c4e13c91fea5c58de/bdk-ffi/Cargo.lock",
+  "crates": [
+    {
+      "name": "bdk_wallet",
+      "version": "3.1.0",
+      "url": "https://static.crates.io/crates/bdk_wallet/bdk_wallet-3.1.0.crate",
+      "archive_sha256": "1284fb23acc3e3022673712b55f4d5ce7e38aadc2c49bbef830dc3935f0a3289",
+      "entries": 81
+    },
+    {
+      "name": "miniscript",
+      "version": "12.3.7",
+      "url": "https://static.crates.io/crates/miniscript/miniscript-12.3.7.crate",
+      "archive_sha256": "b8343cc1ef1408bd9bdbf69f7aef47017dfab7e6349ec26fddf62e0e9fb5a4cf",
+      "entries": 80
+    }
+  ],
+  "files": [
+    {
+      "path": "bdk_wallet/.cargo_vcs_info.json",
+      "sha256": "608295361201ef9b1da015ef69ca24efb76f62d4c30884a019a322b5e3703ad2",
+      "bytes": 94,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/CODEOWNERS",
+      "sha256": "9d875dc18a5615a2c302d8adb41d9733fbde6dbb9d380eee2334ecffcd734f3f",
+      "bytes": 31,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "e3ebc95e400548be3a08f7dc73a0c362b0f7ccd51b556ec086bfa4b26ddc173f",
+      "bytes": 1077,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/ISSUE_TEMPLATE/enhancement_request.md",
+      "sha256": "ef8d2facddd8613a1743377e59473af18bfdb8ff579e051e3ec443fda61f0c6b",
+      "bytes": 972,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/ISSUE_TEMPLATE/minor_release.md",
+      "sha256": "eda6528ff0a3bfbe225895a31c94f0bcf6c18a7b847a6d3dd9637af25280fab4",
+      "bytes": 4553,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/ISSUE_TEMPLATE/patch_release.md",
+      "sha256": "bf34fc6cb60f8e4c918a10324009ef75719a475fa02ac1e45ec6731ceee21d4a",
+      "bytes": 2994,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/ISSUE_TEMPLATE/summer_project.md",
+      "sha256": "6d226606410251becb5005445519a360ccc0b12d24b3adf4a0a6b8a88e65ede6",
+      "bytes": 4365,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/dependabot.yml",
+      "sha256": "a2f0442a060c3714f13143e68b7ac0b38de43507e285eefefe63cde7b792e749",
+      "bytes": 214,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/pull_request_template.md",
+      "sha256": "7afaf16c36d926271338b3ee6729565c5505820d82504b6687c167aea2b0bad7",
+      "bytes": 708,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/workflows/audit.yml",
+      "sha256": "3f8c3d44a461f4baf99832dfadc560ee94967eccfcd64aba34bac3cbb5898759",
+      "bytes": 970,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/workflows/code_coverage.yml",
+      "sha256": "f014abc66d3476fd10083f27baa159e4ea5da66f8ce9f8e0127f96464512cfc3",
+      "bytes": 1706,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/workflows/cont_integration.yml",
+      "sha256": "e236545b843d1ca3c7935505da3b6136e6cc07cbe4e950597573dbc3288414a4",
+      "bytes": 5226,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/workflows/zizmor.yml",
+      "sha256": "0d4a869b3731a035aa45b4882f5b32d942f7f32e5a2686082678dc2ef887ac08",
+      "bytes": 1140,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.github/zizmor.yml",
+      "sha256": "e1bd385773f3ad2427644d005c646f5c35778dd0e38a4fc5cb530b9da3bbd67a",
+      "bytes": 222,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/.gitignore",
+      "sha256": "004b9d991a2b581b9bf75e64fbdaa406bf36160eac181eafc21536c1ccef7a45",
+      "bytes": 148,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/CHANGELOG.md",
+      "sha256": "2e385cec920b512954f59489b839354ee2f956b10da948c1cb1b0f506fb7f404",
+      "bytes": 75355,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/CONTRIBUTING.md",
+      "sha256": "2c1b022cdb3fa76fe745e5377cbbdf46b7e7b8841da55bcdeb11b7061b8e8e81",
+      "bytes": 7494,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/Cargo.lock",
+      "sha256": "42633fd7493ec6768facc7e2c64d23e27e6f1c3ee844fdb9d75908743d4d8747",
+      "bytes": 59360,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/Cargo.toml",
+      "sha256": "d2c95cb32e33da45ab33262e91a89a3c65dba5e60aa5311d0c481d995ee0ec88",
+      "bytes": 3998,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/Cargo.toml.orig",
+      "sha256": "5e6984951829917533fd409d1a7bcd8f311422112fea456fbfb2bbaf90c276f8",
+      "bytes": 2405,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/DEVELOPMENT_CYCLE.md",
+      "sha256": "c4ae0e9fe6538fe5d2d0cbc84567b5a75bc31c3604d2136540ad901db041146f",
+      "bytes": 1708,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/LICENSE",
+      "sha256": "031dbd187e6e01b8b0ab57250038c3810633323e61a0a4d1d0c171760dba38c7",
+      "bytes": 693,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/LICENSE-APACHE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/LICENSE-MIT",
+      "sha256": "638da3722c9e102ccd8011d82f61ae3b611174e4a0f8da185c582df137b60a8c",
+      "bytes": 1023,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/README.md",
+      "sha256": "daddb0777434fba76093cfa548fe8aecd232b9e900d51be97d5651d1abf132ed",
+      "bytes": 6773,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/SECURITY.md",
+      "sha256": "b1fee7d4121426d96cecf8bf2a27854a8075f5c8f5d1c919e7b9332b214267e0",
+      "bytes": 603,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/ci/pin-msrv.sh",
+      "sha256": "ac503b64f7d6ab3140ffe589d6924bda966f51455020d7bced8f92c13687d489",
+      "bytes": 371,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/ci/start-core.sh",
+      "sha256": "123d456e50850ad72a5cd7fcd9527472da0229f4e3195b855e3920093087ff74",
+      "bytes": 732,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/clippy.toml",
+      "sha256": "0941cc62c1b9d79a0e17b4da5374880757e040deca6877b43851eed3a2f7eca4",
+      "bytes": 101,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/docs/adr/0001_persist.md",
+      "sha256": "38a5f4882acd62bc94ea3677619ee7d3bdd237f7d88ccfcb5cfd4ee95318b8d5",
+      "bytes": 4102,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/docs/adr/0002_persisted.md",
+      "sha256": "0f570c709c4267d0ecd333f8bfbbab47b44a038de1df60fdfdb5847573a5eb89",
+      "bytes": 3311,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/docs/adr/0003_events.md",
+      "sha256": "ab8e9d781e0fe483974326dbf401abd959216b5e59e35096139df92bbafe5c27",
+      "bytes": 5323,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/docs/adr/template.md",
+      "sha256": "956f1ba4b9f2e674a946df7ac67232f0c53c140427444affd24eb6c21a5adf48",
+      "bytes": 1622,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/README.md",
+      "sha256": "1ff2cb5c17d25be4985d15a5e19c142db99bc9b6a79c3e54817152a868c3d310",
+      "bytes": 639,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/bitcoind_rpc.rs",
+      "sha256": "efd8fd5cefe550e72a5bfdca6f3502a36f19f428ad91100bdc85b9e5836a28dd",
+      "bytes": 6679,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/compiler.rs",
+      "sha256": "fe91dcc4197c386128ceb6efc54099d51bd91b855fb85feaea2a6ea02c34ba79",
+      "bytes": 3230,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/electrum.rs",
+      "sha256": "a222e98ce7634106ad52930fe7e28351f1abc03248962c62e9ab88fb5e616a94",
+      "bytes": 6734,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/esplora_async.rs",
+      "sha256": "46da6930a7db9b30b8f41fa5bc89ab4c0f1c1d175566ec5856f1918e4b6ee468",
+      "bytes": 6892,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/esplora_blocking.rs",
+      "sha256": "481bacf298c5cc5ce3e867387aa52b18e47691081047b2fa253a8ccf2d5dd4fb",
+      "bytes": 6157,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/justfile",
+      "sha256": "c0855c31d17bbe8621b47f5617ce8ac63593ce1784aebf4857e00c57d5b5559a",
+      "bytes": 3982,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/mnemonic_to_descriptors.rs",
+      "sha256": "9696adbe14bac2bef29952c75452c5d0c1ddca0b711a4ef7ea4c8a5f7881884a",
+      "bytes": 2517,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/examples/policy.rs",
+      "sha256": "167a8fa6d265a3093051759cb33a6944848e1cf665209ec6df13b0832eb796ac",
+      "bytes": 2879,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/justfile",
+      "sha256": "ae05f664484bf278d8f73b6f8e3258b61344a3e3c6d8884bf8822af2b73a75db",
+      "bytes": 895,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/rust-toolchain.toml",
+      "sha256": "9e87a5aa3fa20f8853df37a25635f051850fca560b71ab9e2be4aa09857808fb",
+      "bytes": 66,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/rustfmt.toml",
+      "sha256": "a29b5c68cad96ad741a8226c7154f64898345a9926dec0d6fac77a59c8afb408",
+      "bytes": 76,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/descriptor/checksum.rs",
+      "sha256": "2d33ccde2efc83546e92fcce9da5ece82358bf09eaeebfb2a36792d46265accf",
+      "bytes": 3777,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/descriptor/dsl.rs",
+      "sha256": "437c4c6d39311ef2336694ba172e76687987519316626efa008c398ac3f981b9",
+      "bytes": 49296,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/descriptor/error.rs",
+      "sha256": "bed2398e911f8610c72475a2bca78154e7f4996d1121425e5c5701ad1fcdc863",
+      "bytes": 4831,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/descriptor/mod.rs",
+      "sha256": "44628d4bf56b8059950ca0a88b35f7e5c1dc12745b77797e4d42877cef9ae31d",
+      "bytes": 42482,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/descriptor/policy.rs",
+      "sha256": "88089d3eb9df10a1ac08223ed9827550549a36730d186b3188d5e6d1ee8c15f4",
+      "bytes": 80000,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/descriptor/template.rs",
+      "sha256": "03e404fc890e2e33d91d9709698723dfe9701bb57c5475abaf65958cec0e7f2d",
+      "bytes": 41092,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/keys/bip39.rs",
+      "sha256": "8bef66f98d5b2c5761c6f3cab8603832cd60c36966f42f15443715bb69892cb7",
+      "bytes": 8561,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/keys/mod.rs",
+      "sha256": "5255174307e3fb9bc381258614f4d866d76838162f598e607a2f81bd99ea80dd",
+      "bytes": 38934,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/lib.rs",
+      "sha256": "4d1765bb93de76d53afdc1c6486ea19b02ff846a55afb67c421136f2716a183b",
+      "bytes": 1457,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/persist_test_utils.rs",
+      "sha256": "f191846d518d879950a110de462453fbec3564f8efd2642feba62c8c97ebe50c",
+      "bytes": 16158,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/psbt/mod.rs",
+      "sha256": "dc8a6f23883a60e4e834e533bf6730587042de2030737d6374ca28c856dc2c30",
+      "bytes": 5741,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/test_utils.rs",
+      "sha256": "b3a0321de432ba2d7d004c608afaa753ae9e597f461f47fadf9d25076c48246c",
+      "bytes": 13679,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/types.rs",
+      "sha256": "56b1f701e03e7609406ff02c430b1df8c2acfeaa07ea0749d7550ea4fa71f3ef",
+      "bytes": 7361,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/changeset.rs",
+      "sha256": "dc2789b5887fc9218a58ddf94f1c915410e1c713bcc537bc3577f2634af6ea64",
+      "bytes": 17771,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/coin_selection.rs",
+      "sha256": "9a8d9d85d0d1124d3690c0ea625ebae4291b6d0cbc38a6c5150d6ddbb89e3782",
+      "bytes": 65303,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/error.rs",
+      "sha256": "1ddbaf70c58e7b45dedcac51095f76e18f6d1e985ad3ad7c9327ef9c2149f140",
+      "bytes": 13323,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/event.rs",
+      "sha256": "cc29a8be5f1fb6b12a5f3c897a897c550097619bfb1505a50cb9709cb4332248",
+      "bytes": 6695,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/export.rs",
+      "sha256": "1ce84ec9cbb8fa257bdbcaad99da4954968003ec25c52d74227efd6ed3152ccc",
+      "bytes": 48389,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/locked_outpoints.rs",
+      "sha256": "50186358b66ea69c976b5157fca4fdc282f4205571170a9a8bf35e1dde38376c",
+      "bytes": 728,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/migration.rs",
+      "sha256": "ebb361e939b215280c7213453638d6a49608d86816f1e01aea3735c6c40787f8",
+      "bytes": 8338,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/mod.rs",
+      "sha256": "eaf7fba6a580a14de48ab195a3d5544cc6ed29ca5fffb7736f77af3e294dcad9",
+      "bytes": 130054,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "bdk_wallet/src/wallet/params.rs",
+      "sha256": "b145eb05c833120a541c454e794c5f304045200877d918c013e73f85f82c440c",
+      "bytes": 12845,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/persisted.rs",
+      "sha256": "abb7ff1958ef27661d100895fa4be15d9082c2a274ce3da3c1e67f7df7487968",
+      "bytes": 15430,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/signer.rs",
+      "sha256": "5ddb43b8e955b0d1a9d012dc6339873c2bd1fcdcd6ff15d8e61f00eb346c771a",
+      "bytes": 41840,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "bdk_wallet/src/wallet/tx_builder.rs",
+      "sha256": "65e1d3388dd7e9d3c41afc7c8299de7ec7fcbc13fa2cc8cb959369b12bbd5991",
+      "bytes": 55793,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/src/wallet/utils.rs",
+      "sha256": "0d45062f1c85ba19f0ab3f3af68fe9cd3a4b6a42cfce4c5cf73a0b79b1904655",
+      "bytes": 9155,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/static/bdk.png",
+      "sha256": "095411a560f9d8b5da6fc2724776f953184a8d08a420cce3f3b5807afe7f444a",
+      "bytes": 5661,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/static/bdk.svg",
+      "sha256": "802bed788819c34fef0f88dfaabdd083f11c9127973bc5b198a867c2be5397dd",
+      "bytes": 13104,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/add_foreign_utxo.rs",
+      "sha256": "16677acad8beb92364f2e37841508c1025700be01f45d92ae0ced98d40411156",
+      "bytes": 10619,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/build_fee_bump.rs",
+      "sha256": "bf57a5bd2256efd5f855ceb0aeeda44ae853ef7855dfc0805a040b1009494257",
+      "bytes": 36035,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/common.rs",
+      "sha256": "e3ce35c04f3357f29c7c241e37a20f3d0770bd3a5cc24ad28ef1832a841071ed",
+      "bytes": 4299,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/descriptor_macro.rs",
+      "sha256": "fe30bb7cc846f62520752a03ce6383ce36c29b4bdd0d70c7b943daa406c6219e",
+      "bytes": 6891,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/persisted_wallet.rs",
+      "sha256": "09cdd9add11b674a1c7198de08dccd4ce64fe31e1acd27f80ebb631a8909c1d1",
+      "bytes": 20867,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/psbt.rs",
+      "sha256": "d71691777a7ded494a2eb08c59202ca028e6261a385e9a69063d50c126fd68bb",
+      "bytes": 9507,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/wallet.rs",
+      "sha256": "f3cb54c866363f0201496f427b20ca1aa200eb4e0ccd6dc2726b36c0818c5b9b",
+      "bytes": 108221,
+      "status": "outstanding"
+    },
+    {
+      "path": "bdk_wallet/tests/wallet_event.rs",
+      "sha256": "881a96b60ddabaad5e8f05da2850dc3af1dc760b7c52712a5f7027b57db45c92",
+      "bytes": 19252,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/CHANGELOG.md",
+      "sha256": "ab581eb7a8704edd71bca64e473d541ad9550c948f4b674616aba76314d28f9d",
+      "bytes": 12489,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/Cargo-minimal.lock",
+      "sha256": "90e0bd8209e494bd6cb79ba9dcf205530c817c15aafd2e17016b77fb7d9db43b",
+      "bytes": 14991,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/Cargo-recent.lock",
+      "sha256": "24a3b77a648dd954655cb0d308cbe3ec8a7c375a4bf30b9e0bbd863b69aaea1f",
+      "bytes": 14266,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/Cargo.lock",
+      "sha256": "f13188c574a3593edb53ca0fb6230a813af58922a4f0a59eb6f06173bff715d8",
+      "bytes": 7740,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/Cargo.toml",
+      "sha256": "fa0cfcbfe64473f0a69b25f361ae15efc8391eec960c19ccf0124d8c088401a9",
+      "bytes": 2668,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/Cargo.toml.orig",
+      "sha256": "b0a6a1ea7dc2af5a7ff0e920cedd8e79af77a9ddcc08a39a213daa225eba3b51",
+      "bytes": 1746,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309",
+      "bytes": 7049,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/README.md",
+      "sha256": "20743b66294ec5ef495cab3f5542cb2e35a57ad3b67da07dffb7edd720cd57e4",
+      "bytes": 3043,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/clippy.toml",
+      "sha256": "66539b8d7662c99c08cf39a1bcd0c6abb01eab39c0938e2e4fe96a02bb2d6657",
+      "bytes": 107,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/contrib/crates.sh",
+      "sha256": "5ea5325cc6e709f414b1308a4f5efaf8cda46de6433c2dd8442dd3ebcdb7b153",
+      "bytes": 324,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/contrib/integration_test.sh",
+      "sha256": "acd1222441dbfc9e3981d5eec6f714da5823a3f3d720a7b64c51e5719139886b",
+      "bytes": 299,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/contrib/pin.sh",
+      "sha256": "9b9792a404df09a2539a58b8d78f50f38dea566bc1ea15f739bf826ae24da148",
+      "bytes": 121,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/contrib/test_vars.sh",
+      "sha256": "6c3460cd8eac6b0726d0dced9ec4de0ecaa5291fe7f258aa170e601a82263c43",
+      "bytes": 755,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/contrib/update-lock-files.sh",
+      "sha256": "4d52df54b92c95daa291158c86cedb04489f4096baa284430a82d8316845f10b",
+      "bytes": 222,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/contrib/whitelist_deps.sh",
+      "sha256": "63f920911a9aa0ad14b0e121d3f1400be97a4965735c9a954cd53ef00e772963",
+      "bytes": 259,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/doc/ReasoningAboutMultipartyMiniscript.pdf",
+      "sha256": "eb2638c5a10a6188c733d45abc902f19640d3614d5fada35643fe4e13159f3e5",
+      "bytes": 65499,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/doc/compiler.md",
+      "sha256": "59bb5ebd7b468b309ddf2c240f32a9640377d176c2c903c7ace3205c956d3fec",
+      "bytes": 3908,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/doc/resource_limitations.md",
+      "sha256": "d81b691ab85443658eee30381f406d95bc16cd9919a8e82dd9910ff6edb37199",
+      "bytes": 3741,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/doc/security_report_2022_04_20.md",
+      "sha256": "f9b996a3a006758bc1fc386afff23ca0fbd3bda569c3ef2b5a01f7526d9ead70",
+      "bytes": 2929,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/doc/taproot_compiler.pdf",
+      "sha256": "fee9fb722603da90a90051d8084706bfbe3f969eab5ecf14806bc1f0e8c2a50f",
+      "bytes": 98845,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/big.rs",
+      "sha256": "031952629c6849933114ae44a787ae9b47f5a3d3b645acf0cec3092e17c3b16c",
+      "bytes": 3323,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/htlc.rs",
+      "sha256": "9ca9e9ddee097fc30b58107be30bd9ba43678bcb398dbfcddc99bcb71e28a5f7",
+      "bytes": 3123,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/parse.rs",
+      "sha256": "211e7a9ae86c0d33573dee517035a283064b150bd074c092011cc2f1a56b9d08",
+      "bytes": 2190,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/psbt_sign_finalize.rs",
+      "sha256": "77d8ddcdda107c0e328b4cdb8f58114ed7971ab9362fb4b73be3128dd3fd28c8",
+      "bytes": 6365,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/sign_multisig.rs",
+      "sha256": "c66498d2b00d22c97bb74b0b9e58d5a68f120fcbd0e43b0164458c356b065411",
+      "bytes": 4973,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/taproot.rs",
+      "sha256": "11fc3621efc1af998c40256e8698dae0fa45720896eb981fa2b90527b9deffc6",
+      "bytes": 5570,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/verify_tx.rs",
+      "sha256": "5e40d2aa1c21764f10f3efd02f955bf41150e5b3fdcdeb7d2d3b646033b0a3f1",
+      "bytes": 7953,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/examples/xpub_descriptors.rs",
+      "sha256": "6c6bd7cab612c157bffae7044aadc8409e0dfc1e40b6661882ab765b7aae5b9d",
+      "bytes": 2415,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/justfile",
+      "sha256": "4327548f91a9b98311d8f2c88f2828a52068b18b6e0f756a30c6da6f04a8f179",
+      "bytes": 1115,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/nightly-version",
+      "sha256": "7c7e7579fc7d6125d5087a67cf21564862d5806041c4ca8e57cca961e55b81d4",
+      "bytes": 19,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/rustfmt.toml",
+      "sha256": "aacffc010ded9ce4a6d2e918b352ebf933b9dd8c8fc26524a4d5c670c904fd8a",
+      "bytes": 1964,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/blanket_traits.rs",
+      "sha256": "2233b0c194aab1477c6b36cacb48c499dc61ddcb9723e5dafa0ad140cda6fa1d",
+      "bytes": 3308,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/bare.rs",
+      "sha256": "e97e8b46a13104a6eaee55b054c0f8c55bc804cd0f30bf6fd0805e9bcb69c2f5",
+      "bytes": 14811,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/checksum.rs",
+      "sha256": "4c7f98f522d6789a7c48f8876f9a8e5d3445426507f31d47260dddcb228e1810",
+      "bytes": 9344,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/key.rs",
+      "sha256": "bdc822dace9922a2939cffe5f5277f38b11bd2866264c1c2b3e4bd4753fc6931",
+      "bytes": 64882,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/key_map.rs",
+      "sha256": "0d02120c66775a2b6f9d534d9c752d6cca6088ca61ab8b65cd75420d3a9a95ea",
+      "bytes": 14762,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/mod.rs",
+      "sha256": "6be8657c0477c9b2000a6f206c114d625145ea267c602d82cddf2b0d567c1b55",
+      "bytes": 94639,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/segwitv0.rs",
+      "sha256": "96808049e2d1ad3f255e18c216530f3e4d2c71bf99c468325d21e7b860091b37",
+      "bytes": 19260,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/sh.rs",
+      "sha256": "e264a0aaf3382af7a1f8301fbb8196df7c970c5bb142bda20c2cbddc058787f6",
+      "bytes": 18656,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/sortedmulti.rs",
+      "sha256": "a8169e1433bc59105666bd489d8fb3785078adfd5ff116a2e861d431355ad912",
+      "bytes": 9247,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/descriptor/tr.rs",
+      "sha256": "19e1f52475addf147e65efa6d3409c08ab2736c3dc10be759ef6907ea8a42fac",
+      "bytes": 29125,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/expression/error.rs",
+      "sha256": "d355221fed432e43efa97424dc02964cb6c485ff9a3b855572d572fb1c896a7f",
+      "bytes": 1527,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/expression/mod.rs",
+      "sha256": "f8a48752e7e2fea1229ea69aa50690fdc2bc25db1f64de4cada15f6c2643a5b9",
+      "bytes": 11100,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/interpreter/error.rs",
+      "sha256": "252d92c7e6654477eb1bdc36724c38f4a10dd67597e1dd8ec94e5a84b5434dc7",
+      "bytes": 12921,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/interpreter/inner.rs",
+      "sha256": "e06a7f722e6afccef54bf02dcb60975f254cb08f2861d25aeac493d1e2d37c52",
+      "bytes": 36321,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/interpreter/mod.rs",
+      "sha256": "139b70676064b44b56bcd328ea6a32d83944944486510c5105a72ef26ca2df02",
+      "bytes": 69324,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "miniscript/src/interpreter/stack.rs",
+      "sha256": "98c15610324ddddc3581ad6488121ca4c9d75a3f6e69cfdaca9fb0f895fcfab3",
+      "bytes": 15403,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/iter/mod.rs",
+      "sha256": "36ad76923a20ddf646d9d875645c9c70e1754d0fbfa2f39c6c041ee251b83df7",
+      "bytes": 2717,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/iter/tree.rs",
+      "sha256": "819500c1d25b7229796d8a62831fd1e61180656b9cf50d2d460478d98bf80f49",
+      "bytes": 11922,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/lib.rs",
+      "sha256": "de2366a80118f7e268b4fa834299ddd674030c35782c68826be2e10f55317c29",
+      "bytes": 30663,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/macros.rs",
+      "sha256": "e2912977bdce45ec3cb81bf08e560de0f764f8d34b8a6b0830e92641c3709775",
+      "bytes": 3310,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/analyzable.rs",
+      "sha256": "fadd136ec54db24b5252e3c6c468136298cd8208945924c3836a6b9019b898f6",
+      "bytes": 9509,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/astelem.rs",
+      "sha256": "4f2d50e744011a337de04fc24ef041f8cf86cdeccd32ebcd1657d2c0d8c0a5b3",
+      "bytes": 21344,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/context.rs",
+      "sha256": "4e12f6a9c13790201a43afa29488bea4639e2629ee5452826f42fd88dac9b28d",
+      "bytes": 33714,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/decode.rs",
+      "sha256": "e34255dd2cdd46b751f520108d3cc42e10d26b579532f080d79381e4790f2392",
+      "bytes": 25544,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/iter.rs",
+      "sha256": "319beb6ecb7403fbb6a82190900455a3454c63027e7966fd07de0dcb311de226",
+      "bytes": 12915,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/lex.rs",
+      "sha256": "eb00501ef55d080bc8257ff1c19db9293876ab6e81d155bf736b93857d5f837a",
+      "bytes": 10353,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/limits.rs",
+      "sha256": "6886bd178b19fdd87df30ccd5839c65f57a660cb33466afda254e44315cfd0a1",
+      "bytes": 2167,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/mod.rs",
+      "sha256": "4c14d4757da05e15478ef8fe3adf1ddd5dd3763d53257d9ab89aea0350176df4",
+      "bytes": 102939,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/ms_tests.rs",
+      "sha256": "3cbc0c284dcbd5ffeaf1b6785ae8a55c0c9d531179a6958f437d221f4ec9d4d7",
+      "bytes": 3088190,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/satisfy.rs",
+      "sha256": "b9557819fc4723b0586cedfadee6d053dff2f2a66ef16354cb60b0c1ee746588",
+      "bytes": 68807,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/types/correctness.rs",
+      "sha256": "fbe31b925a9c9bfa758d096255ff4debf7bcb09c4c88fdfd2617af704da1d591",
+      "bytes": 19246,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/types/extra_props.rs",
+      "sha256": "e9c2388dd6117cdcffb78c28ae286ed7684d8ae1dab79049c03d8f8e202c7c21",
+      "bytes": 44680,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/types/malleability.rs",
+      "sha256": "197557d82dd0c675e2acfa159acb10520dd7b10fdfff292b8da31a5724e4d8bd",
+      "bytes": 11811,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/miniscript/types/mod.rs",
+      "sha256": "d58b60a86d774f10f1340c99777ff3f9ca159b5ada6a25e8972a7e51d014c2ea",
+      "bytes": 18234,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/plan.rs",
+      "sha256": "ea0dde27e2f9532e5195768ddd803802088b68f3f1d7ab69241b80d56fd5e7cb",
+      "bytes": 50141,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/policy/compiler.rs",
+      "sha256": "ec9779cad011175fa0eac72685e1f182827fec44e1e87e749bbf8c317fa8062d",
+      "bytes": 64896,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/policy/concrete.rs",
+      "sha256": "386f1cf87c9f2a8e534969fe88308847df305b3e0b3dc026528a1f3fd95c2bf8",
+      "bytes": 49661,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/policy/mod.rs",
+      "sha256": "40fbe2f6fcb23bc4218b3f3c15f3b0ed234a65df27f87cc13ee0c0fca56d60d1",
+      "bytes": 40433,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/policy/semantic.rs",
+      "sha256": "087815972ba2c56f254d97df3dc75507b52208660d1e139cd4ad05c9e4df9228",
+      "bytes": 40795,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/primitives/absolute_locktime.rs",
+      "sha256": "6d481d3254d2e1f9bfe37d37351be19ab9bc7efc6c6cbe6fd7c988eab303d4fa",
+      "bytes": 3021,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/primitives/mod.rs",
+      "sha256": "f3ba99e39e059ab6192bba84857a0ce460fefcde3b7da15410a2944b9a6fbc17",
+      "bytes": 619,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/primitives/relative_locktime.rs",
+      "sha256": "e7783650b3fc0444482818bc097b2566c6ba34f7754cac84bf0ab3fd19212b19",
+      "bytes": 3327,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/primitives/threshold.rs",
+      "sha256": "a0d6762b3268ea433c14a0ad989b3210a618404720abba55a3229398442be780",
+      "bytes": 10874,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/psbt/finalizer.rs",
+      "sha256": "4cc6b55c611f1ff5eb0f9c25176a87613f135c70587d6ebdb55f5b5783b87adc",
+      "bytes": 25011,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "miniscript/src/psbt/mod.rs",
+      "sha256": "6bf771f7894deff77385542af79fc9bfcc95b385700514448dc94f0396d37eea",
+      "bytes": 70298,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "miniscript/src/pub_macros.rs",
+      "sha256": "f9d88874ccc7984a885763cd1c0fdc35958d5f622c2d7e0c748a075d5017dea0",
+      "bytes": 4579,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/test_utils.rs",
+      "sha256": "715991d40f1628db8a6a5f803e95c7496659756f408f8c73f58dd1d660962231",
+      "bytes": 6474,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/src/util.rs",
+      "sha256": "e183495b8092df89aab6b27dd400aa4213798118605df2305613439a1389f65f",
+      "bytes": 3432,
+      "status": "outstanding"
+    },
+    {
+      "path": "miniscript/tests/bip-174.rs",
+      "sha256": "703c7c13d2441197c6076c4e6a7a01b50522a12984a61cfc74be4fd5d5aff5ee",
+      "bytes": 6894,
+      "status": "outstanding"
+    }
+  ],
+  "scope": "All files in these two pinned registry tarballs. Includes non-runtime files. File review applies only to scopes documented in the report. No independent binary-equivalence claim."
+}

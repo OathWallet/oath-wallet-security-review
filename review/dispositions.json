@@ -1397,7 +1397,8 @@
     "sha256": "cc79c925d4d4f482ca2fd7520c4db90942cd0a9cbbf535304558462f21906373",
     "status": "partially-reviewed",
     "evidence": [
-      "review/CORE-SIGNING-PARSE.md"
+      "review/CORE-SIGNING-PARSE.md",
+      "review/BITCOIN-SIGNER-AND-CORE.md"
     ]
   },
   "Tools/PrepareWalletCoreSymbols.py": {
@@ -7808,11 +7809,12 @@
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectPSBT.swift": {
+    "sha256": "b82e545cffba6ac4066fc3e4c6aac8cefe7572df6ee95ca3fae86117ddf9b314",
     "status": "partially-reviewed",
-    "sha256": "564655d090f5e1fd4c3d7cc368583163201b2c5cb623f27cb6930d1b182aa37e",
     "evidence": [
       "review/BITCOIN-PSBT-REVIEW.md",
-      "findings/OW-2026-032.md"
+      "findings/OW-2026-032.md",
+      "review/BITCOIN-SIGNER-AND-CORE.md"
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectClient.swift": {
@@ -7827,6 +7829,90 @@
     "sha256": "0546ce44b4a22e4a2683c3a23e00c6057daca303d1b03611984df411af6b0be4",
     "evidence": [
       "findings/OW-2026-032.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectProof.swift": {
+    "sha256": "e80ff8027510e81d5558c7680915387e7c19f8cd25092597f2e04dd7d237f998",
+    "status": "reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectMessage.swift": {
+    "sha256": "ee006b73e8de8f26a60d5209a4f1fc0ba79d1b6e87f23ffbbaf4a0a4b6c713f8",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinPrivateKeys.swift": {
+    "sha256": "d2ebea5a57d8c102beebb88ad79267b3c2ac196458caeed2bcc9c23e2bda87e5",
+    "status": "reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendPlan.swift": {
+    "sha256": "67a322c68e1bb1d22d73991fc8e9ba3bf73f41ac1600f560db60cb8ce7539b25",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinConnectSignatureProofTests.swift": {
+    "sha256": "8825fbee44b293513387af70fdf8e54085753c6a306b063d1b05e787cd34f869",
+    "status": "reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinConnectTests.swift": {
+    "sha256": "1f25012f084ddf30403cf9517fe9e875006a187b4ec459b3a7a5a01d2060abd6",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinSendTests.swift": {
+    "sha256": "24a9486cadb4aff20ee430ed38ae0efc1cb3ea1a0d7488fd03a58dff1065626d",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinMultisigTests.swift": {
+    "sha256": "ba44e55daa66a1c03a8f1be37bc1681b166628153940c00035c46706de998fe0",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/AezeedBitcoinTests.swift": {
+    "sha256": "4a4dc354ad7ea08cef6c23ae3f04231cc7f507a0a6518e5e14b84df5c412febb",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/ElectrumMnemonicTests.swift": {
+    "sha256": "d4668bedaa1ba8fdb62a2133db8942ecea6c1d7750d804487c620f30860bdaf8",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathDatabase/Sources/OathDatabase/WalletConnectBitcoin.swift": {
+    "sha256": "4d63f9ddc8880769efebc007d8f530d0f1cce51f7dea60746c52015fdee0d162",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
+    ]
+  },
+  "Packages/OathDatabase/Tests/OathDatabaseTests/WalletConnectBitcoinTests.swift": {
+    "sha256": "9afacceb8aa8c7c4b0ffc03c70375921c11a716a91ae2684e1c63e7ceee1cb52",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/BITCOIN-SIGNER-AND-CORE.md"
     ]
   }
 }

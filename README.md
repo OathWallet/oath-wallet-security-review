@@ -20,7 +20,9 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-**Latest checkpoint.** [Bitcoin WalletConnect packet and parent limits](findings/OW-2026-032.md), [host evidence](evidence/psbt-size/manifest.json), and [remaining review work](review/ACCEPTANCE.md).
+**Latest checkpoint.** [Bitcoin signature integrity](findings/OW-2026-033.md), [Bitcoin Core results and compilation inputs](review/BITCOIN-SIGNER-AND-CORE.md), and [remaining coverage](review/ACCEPTANCE.md).
+
+**Earlier checkpoint.** [Bitcoin WalletConnect packet and parent limits](findings/OW-2026-032.md), [host evidence](evidence/psbt-size/manifest.json), and [remaining review work](review/ACCEPTANCE.md).
 
 **Earlier checkpoint.** [Artwork URL admission and redirects](findings/OW-2026-031.md), [SwiftDraw document model](review/ARTWORK-HOSTS-AND-DOM.md), and [resolved package and BitcoinDevKit provenance](review/RESOLVED-PACKAGES.md).
 

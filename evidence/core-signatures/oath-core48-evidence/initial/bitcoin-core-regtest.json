@@ -1,0 +1,86 @@
+{
+  "check": "bitcoin-core-regtest",
+  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+  "status": "passed",
+  "core_version": "32.1",
+  "binary_sha256": {
+    "bitcoin-cli": "5310684b6028bdc48e2155645408f02bd2b46e0ee0799317168e74ce9b823aba",
+    "bitcoind": "58f9e3b5b8cf0cecd268cc6bf02993f3244e1a93fe8d67949ced6b52c2fdd9fb"
+  },
+  "executions": [
+    {
+      "case": "testBitcoinCoreAcceptsAndMinesRealTypeMatrix",
+      "suite": "BitcoinSendTests",
+      "status": "passed",
+      "exit_code": 0,
+      "blocks": 165,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 21.654,
+      "log": "testBitcoinCoreAcceptsAndMinesRealTypeMatrix.log",
+      "log_sha256": "36b406251306c0c79a01682de65242e4a6c153983f1774a7dc6dd2a9f4613f2b"
+    },
+    {
+      "case": "testBitcoinCoreMixedPoolSweepsDustAndImportedKey",
+      "suite": "BitcoinSendTests",
+      "status": "passed",
+      "exit_code": 0,
+      "blocks": 109,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 19.31,
+      "log": "testBitcoinCoreMixedPoolSweepsDustAndImportedKey.log",
+      "log_sha256": "e40c7a2092de42dd15b1a40037afdb8cd66bedf35a97ba54593a18c273c93f00"
+    },
+    {
+      "case": "testBitcoinCoreMultisigConsensus",
+      "suite": "BitcoinMultisigTests",
+      "status": "passed",
+      "exit_code": 0,
+      "blocks": 111,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 13.416,
+      "log": "testBitcoinCoreMultisigConsensus.log",
+      "log_sha256": "af030eab2a1e98eba46fd2b8c731db2f11f44114318105cb0b29a106c9b0b437"
+    },
+    {
+      "case": "testCoreFundedRecoveryAndMixedInputTransfer",
+      "suite": "AezeedBitcoinTests",
+      "status": "passed",
+      "exit_code": 0,
+      "blocks": 103,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 10.816,
+      "log": "testCoreFundedRecoveryAndMixedInputTransfer.log",
+      "log_sha256": "217945d04062b22a352fdd2129e1bbbd62f798053d3c635d087cf2dd679f2142"
+    },
+    {
+      "case": "testCoreFundedRecoveryAndTransfersForEverySeedType",
+      "suite": "ElectrumMnemonicTests",
+      "status": "passed",
+      "exit_code": 0,
+      "blocks": 123,
+      "chain": "regtest",
+      "peers": 0,
+      "network_active": false,
+      "duration_seconds": 16.409,
+      "log": "testCoreFundedRecoveryAndTransfersForEverySeedType.log",
+      "log_sha256": "fbe44eb331b886783dc2b5e7a2adc455bad0c59cf4dd469b1a955133d5f000c4"
+    }
+  ],
+  "fixture_sha256": {
+    "BitcoinSendTests.swift": "24a9486cadb4aff20ee430ed38ae0efc1cb3ea1a0d7488fd03a58dff1065626d",
+    "BitcoinMultisigTests.swift": "ba44e55daa66a1c03a8f1be37bc1681b166628153940c00035c46706de998fe0",
+    "AezeedBitcoinTests.swift": "4a4dc354ad7ea08cef6c23ae3f04231cc7f507a0a6518e5e14b84df5c412febb",
+    "ElectrumMnemonicTests.swift": "d4668bedaa1ba8fdb62a2133db8942ecea6c1d7750d804487c620f30860bdaf8"
+  },
+  "scope": "Five existing XCTest processes, ground-up regtest per case. Local cookie and ephemeral node wallet excluded. No public network for tests and no peers on the node.",
+  "log": "bitcoin-core-regtest.log",
+  "log_sha256": "b7ab07ba226e633107173547f94d5ad39245f4b3303550c8f0848561ad16d36e"
+}

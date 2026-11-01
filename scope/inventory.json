@@ -1,5 +1,5 @@
 {
-  "source_commit": "55f4e809ba46881b1d6d454cdce3ef62a627df85",
+  "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -16136,21 +16136,34 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectMessage.swift",
-      "sha256": "db19518ed7f76a62baab287e4a1fc94ac591c21f0b9e73e0b1b4c2e0e416db64",
-      "bytes": 6019,
+      "sha256": "ee006b73e8de8f26a60d5209a4f1fc0ba79d1b6e87f23ffbbaf4a0a4b6c713f8",
+      "bytes": 6197,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectPSBT.swift",
-      "sha256": "564655d090f5e1fd4c3d7cc368583163201b2c5cb623f27cb6930d1b182aa37e",
-      "bytes": 15340,
+      "sha256": "b82e545cffba6ac4066fc3e4c6aac8cefe7572df6ee95ca3fae86117ddf9b314",
+      "bytes": 15764,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
         "review/BITCOIN-PSBT-REVIEW.md",
-        "findings/OW-2026-032.md"
+        "findings/OW-2026-032.md",
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectProof.swift",
+      "sha256": "e80ff8027510e81d5558c7680915387e7c19f8cd25092597f2e04dd7d237f998",
+      "bytes": 4829,
+      "category": "application",
+      "status": "reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
       ]
     },
     {
@@ -16209,8 +16222,10 @@
       "sha256": "d2ebea5a57d8c102beebb88ad79267b3c2ac196458caeed2bcc9c23e2bda87e5",
       "bytes": 3991,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendOptions.swift",
@@ -16225,8 +16240,10 @@
       "sha256": "67a322c68e1bb1d22d73991fc8e9ba3bf73f41ac1600f560db60cb8ce7539b25",
       "bytes": 21322,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendSigner.swift",
@@ -16235,7 +16252,8 @@
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
-        "review/CORE-SIGNING-PARSE.md"
+        "review/CORE-SIGNING-PARSE.md",
+        "review/BITCOIN-SIGNER-AND-CORE.md"
       ]
     },
     {
@@ -16421,8 +16439,10 @@
       "sha256": "4a4dc354ad7ea08cef6c23ae3f04231cc7f507a0a6518e5e14b84df5c412febb",
       "bytes": 8857,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/AlchemyUTXOTests.swift",
@@ -16481,12 +16501,24 @@
       "evidence": []
     },
     {
-      "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinConnectTests.swift",
-      "sha256": "0c87b71a9e419b00cb7b0e1f6108c33afe5e28afb3ea1b5183bd2a15ea0de0f8",
-      "bytes": 11957,
+      "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinConnectSignatureProofTests.swift",
+      "sha256": "8825fbee44b293513387af70fdf8e54085753c6a306b063d1b05e787cd34f869",
+      "bytes": 6134,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
+    },
+    {
+      "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinConnectTests.swift",
+      "sha256": "1f25012f084ddf30403cf9517fe9e875006a187b4ec459b3a7a5a01d2060abd6",
+      "bytes": 12060,
+      "category": "test",
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinDataOutputTests.swift",
@@ -16525,8 +16557,10 @@
       "sha256": "ba44e55daa66a1c03a8f1be37bc1681b166628153940c00035c46706de998fe0",
       "bytes": 8933,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinPrivateKeysTests.swift",
@@ -16557,8 +16591,10 @@
       "sha256": "24a9486cadb4aff20ee430ed38ae0efc1cb3ea1a0d7488fd03a58dff1065626d",
       "bytes": 22609,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinTransactionFallbackTests.swift",
@@ -16663,8 +16699,10 @@
       "sha256": "d4668bedaa1ba8fdb62a2133db8942ecea6c1d7750d804487c620f30860bdaf8",
       "bytes": 11013,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/ElectrumOptionalLookupTests.swift",
@@ -17992,8 +18030,10 @@
       "sha256": "4d63f9ddc8880769efebc007d8f530d0f1cce51f7dea60746c52015fdee0d162",
       "bytes": 10232,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Sources/OathDatabase/WalletConnectNearJournal.swift",
@@ -18868,8 +18908,10 @@
       "sha256": "9afacceb8aa8c7c4b0ffc03c70375921c11a716a91ae2684e1c63e7ceee1cb52",
       "bytes": 9146,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BITCOIN-SIGNER-AND-CORE.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/WalletConnectNearJournalTests.swift",

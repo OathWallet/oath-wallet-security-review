@@ -1,0 +1,197 @@
+{
+  "check": "bitcoin-connect-signature",
+  "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+  "baseline_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "8825fbee44b293513387af70fdf8e54085753c6a306b063d1b05e787cd34f869",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testPeerECDSAPartialCannotReplaceWalletSignature",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testPeerECDSAPartialCannotReplaceWalletSignature.log",
+      "log_sha256": "9da05e9f83b4726ccbb57a1d1b17986253896098bf91d4ff455077b35a90524c"
+    },
+    {
+      "phase": "before",
+      "case": "testPeerTaprootPartialCannotReplaceWalletSignature",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testPeerTaprootPartialCannotReplaceWalletSignature.log",
+      "log_sha256": "06b94a05945116cafb9786b2364f208a5c2bf569a63d303f628515325b476398"
+    },
+    {
+      "phase": "before",
+      "case": "testEmptyFinalScriptCannotEnterJournalVerification",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testEmptyFinalScriptCannotEnterJournalVerification.log",
+      "log_sha256": "5a6967d7f9d920405508f3f463fe853f24c6eced3c7926b1503103f2e4c6e6cf"
+    },
+    {
+      "phase": "before",
+      "case": "testTaprootProofMustUseReviewedHashType",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testTaprootProofMustUseReviewedHashType.log",
+      "log_sha256": "6e2b8f7684a01fdf30b628f5fbdf30b61c18830290266f38f098daf96f73668e"
+    },
+    {
+      "phase": "before",
+      "case": "testForeignFinalLegacyProofRejected",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testForeignFinalLegacyProofRejected.log",
+      "log_sha256": "7f76e40c1049da6f14b766612b844573fe39b319c2e8be22fb83809469a50841"
+    },
+    {
+      "phase": "before",
+      "case": "testForeignFinalNestedProofRejected",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testForeignFinalNestedProofRejected.log",
+      "log_sha256": "3586f6aa04e9b149a438a4bbc27305cbc58d5a0c50189b0ee78f69fd1b26d2f7"
+    },
+    {
+      "phase": "before",
+      "case": "testForeignFinalNativeProofRejected",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testForeignFinalNativeProofRejected.log",
+      "log_sha256": "96e72c9f53f5352f7c5931f964be346ea53382d69d44c349ee32b9bada0a16e4"
+    },
+    {
+      "phase": "before",
+      "case": "testForeignFinalTaprootProofRejected",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "expected-signature-failure",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testForeignFinalTaprootProofRejected.log",
+      "log_sha256": "761d383d715e5879bb7e4a99dcbed0a8d6417ea43e664145ada0eaa32d668959"
+    },
+    {
+      "phase": "before",
+      "case": "testValidRequestedInputsRemainVerifiable",
+      "source_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testValidRequestedInputsRemainVerifiable.log",
+      "log_sha256": "4f77698dbe051d704bd865009196d52de5a545818d0ac99a4a35df02b246758e"
+    },
+    {
+      "phase": "after",
+      "case": "testPeerECDSAPartialCannotReplaceWalletSignature",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testPeerECDSAPartialCannotReplaceWalletSignature.log",
+      "log_sha256": "a329d4b8894c118639ffb700d4f2af6d4b73072020c996ae64e803a5d53f0d57"
+    },
+    {
+      "phase": "after",
+      "case": "testPeerTaprootPartialCannotReplaceWalletSignature",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testPeerTaprootPartialCannotReplaceWalletSignature.log",
+      "log_sha256": "bee6e88444ce2fbed2164c9f26931ff26a3bd71b7d44a33e9f37b67a643cce11"
+    },
+    {
+      "phase": "after",
+      "case": "testEmptyFinalScriptCannotEnterJournalVerification",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testEmptyFinalScriptCannotEnterJournalVerification.log",
+      "log_sha256": "1dce22e6a1520752ccbb972ffa8480c80b31050cff9c80e8b35df95a108abee9"
+    },
+    {
+      "phase": "after",
+      "case": "testTaprootProofMustUseReviewedHashType",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testTaprootProofMustUseReviewedHashType.log",
+      "log_sha256": "b6218c293697be43c49a4395910489adcfc07b9bee5477e4747114546d4d0e60"
+    },
+    {
+      "phase": "after",
+      "case": "testForeignFinalLegacyProofRejected",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testForeignFinalLegacyProofRejected.log",
+      "log_sha256": "37869f5fb22ce6d959f30c1d81c1f4e2b257d1c4142c024a13f8c7c818fd9ef3"
+    },
+    {
+      "phase": "after",
+      "case": "testForeignFinalNestedProofRejected",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testForeignFinalNestedProofRejected.log",
+      "log_sha256": "3c28aff971f2d55d0c7ab334d711ae7b270874b424eeca4ff88eed6b7d874fca"
+    },
+    {
+      "phase": "after",
+      "case": "testForeignFinalNativeProofRejected",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testForeignFinalNativeProofRejected.log",
+      "log_sha256": "3eed6dbed433a592cfe0b5dc9b877a8959bc311ca8c05570e2a7f5816e4251e0"
+    },
+    {
+      "phase": "after",
+      "case": "testForeignFinalTaprootProofRejected",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testForeignFinalTaprootProofRejected.log",
+      "log_sha256": "65fd41b3cd691a99a3a89ff17ce2b10621f58f0af9342ddf41f0d2db70883af2"
+    },
+    {
+      "phase": "after",
+      "case": "testValidRequestedInputsRemainVerifiable",
+      "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testValidRequestedInputsRemainVerifiable.log",
+      "log_sha256": "5b8c1dfcd581f268d612537ea98e39688a966054840d5342f2dddfabd8cd1fc2"
+    }
+  ],
+  "duration_seconds": 143.263,
+  "scope": "Nine synthetic host cases per revision. Peer partials, final-data substitution, empty unlocking and requested Taproot hash mode. No network during test execution.",
+  "log": "bitcoin-connect-signature.log",
+  "log_sha256": "e4806e62e0f1faf36f7546671cac984f8ed139e2b3956cd6ef61d3d58f2e8c7a"
+}

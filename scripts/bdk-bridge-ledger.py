@@ -32,6 +32,8 @@ def build(checkout):
         row=dict(path=name, bytes=len(blob), sha256=hashlib.sha256(blob).hexdigest(), mode=mode, status='outstanding')
         if name in REVIEWED:
             row.update(status='reviewed', evidence=['review/RESOLVED-PACKAGES.md'])
+        if name in {'bdk-ffi/src/wallet.rs','bdk-ffi/src/bitcoin.rs'}:
+            row.update(status='partially-reviewed', evidence=['review/BITCOIN-SIGNER-AND-CORE.md'])
         files.append(row)
     if {r['path'] for r in files if r['status']=='reviewed'} != REVIEWED:
         raise ValueError('Reviewed file missing')

@@ -551,5 +551,17 @@
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/44",
     "retest_scope": "Five paired cases across two offline suites. Packet encoding, plan revalidation, and intercepted URLSession parent collection on macOS."
+  },
+  {
+    "id": "OW-2026-033",
+    "title": "Untrusted Bitcoin partials and unrelated final signatures could be accepted",
+    "severity": "moderate",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-033.md",
+    "fix_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+    "regression_only_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/45",
+    "retest_scope": "Nine paired host cases plus independent Bitcoin Core regtest with four funded scripts on both revisions."
   }
 ]

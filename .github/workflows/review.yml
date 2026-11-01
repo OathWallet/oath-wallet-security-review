@@ -474,6 +474,29 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: bitcoin-psbt-size-boundary, path: evidence/ci, retention-days: 90}
+  bitcoin-signature-core:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - run: python3 scripts/bitcoin-core-tools.py --destination .work/bitcoin-core/bin --evidence evidence/ci/core-tools.json
+      - run: python3 scripts/bitcoin-signing-crates.py --cache .work/registry --output evidence/ci/signing-crates.json
+      - run: cmp scope/upstream-bitcoin-signers.json evidence/ci/signing-crates.json
+      - run: python3 scripts/bitcoin-connect-signature.py .work/source --scratch .work/signatures-build --output evidence/ci
+      - run: python3 scripts/bitcoin_core_regtest.py .work/source --core-bin .work/bitcoin-core/bin --scratch .work/bitcoin-core-build --output evidence/ci/regtest
+      - run: python3 scripts/bitcoin-connect-core-proof.py .work/source --core-bin .work/bitcoin-core/bin --scratch .work/core-proof-build --output evidence/ci/proof
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: bitcoin-signature-core-boundary, path: evidence/ci, retention-days: 90}
   diagnostic-modes:
     if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
@@ -899,6 +922,8 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 scripts/checkout.py
       - run: python3 scripts/run.py .work/source build --output evidence/ci --scratch .work/release-build
+      - name: Trace this build's Swift and C compiler inputs
+        run: python3 scripts/release-inputs.py .work/source --build-result evidence/ci/build.json --derived-data .work/release-build --output evidence/ci/build-inputs
       - name: Verify the resolved package ledger and the BDK distribution
         run: |
           packages=.work/release-build/SourcePackages
