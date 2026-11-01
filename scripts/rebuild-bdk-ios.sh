@@ -20,9 +20,10 @@ export RUSTUP_HOME="$scratch/toolchains" CARGO_HOME="$scratch/cargo" RUSTUP_INIT
 git -C "$bridge" archive --output="$scratch/bridge.tar" "$rev" bdk-ffi
 tar xf bridge.tar
 export RUSTUP_TOOLCHAIN=1.90.0
+export DEVELOPER_DIR="${DEVELOPER_DIR:-$(xcode-select -p)}"
 "$scratch/cargo/bin/rustc" -vV | grep -Fx 'commit-hash: 1159e78c4747b02ef996e55082b704c09b970588'
 cd bdk-ffi
 printf '%s\n' 'a7b22b8c0669d16ad11a3ea7af0c78f22185a91bd9c20ba59ecfd23468d4d9b9  Cargo.lock' | shasum -a 256 -c -
-env -i HOME="$HOME" PATH="$scratch/cargo/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin" RUSTUP_HOME="$RUSTUP_HOME" RUSTUP_TOOLCHAIN=1.90.0 CARGO_HOME="$CARGO_HOME" IPHONEOS_DEPLOYMENT_TARGET=15.0 "$scratch/cargo/bin/cargo" build --locked --package bdk-ffi --profile release-smaller --target aarch64-apple-ios --jobs 4 --message-format=json > "$scratch/artifacts.jsonl"
+env -i HOME="$HOME" DEVELOPER_DIR="$DEVELOPER_DIR" PATH="$scratch/cargo/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin" RUSTUP_HOME="$RUSTUP_HOME" RUSTUP_TOOLCHAIN=1.90.0 CARGO_HOME="$CARGO_HOME" IPHONEOS_DEPLOYMENT_TARGET=15.0 "$scratch/cargo/bin/cargo" build --locked --package bdk-ffi --profile release-smaller --target aarch64-apple-ios --jobs 4 --message-format=json > "$scratch/artifacts.jsonl"
 python3 "$scripts/bdk-build-packages.py" "$scratch/artifacts.jsonl" Cargo.lock "$CARGO_HOME" target "$scratch/packages.json"
 python3 "$scripts/compare-bdk-archives.py" "$published" target/aarch64-apple-ios/release-smaller/libbdkffi.a "$scratch/comparison.json"
