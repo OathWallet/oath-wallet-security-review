@@ -17,6 +17,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 
 Use an isolated machine with Xcode 27.1, Swift 6.4 and Python 3.14.7.
 Local exploratory runs used Xcode 27.0; each run records its actual toolchain.
+The optional aezeed `--rebuild` proof requires Xcode 27.0 (27A266a), matching
+the archive provenance. Omitting that flag verifies recorded hashes only.
 Package downloads require network access; opt-in live-chain tests are not enabled.
 No signing certificate, provider credential, real wallet or App Store access is needed.
 
@@ -38,6 +40,8 @@ python3 scripts/uri-boundary-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/pairing-link-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/ton-properties.py .work/source --output /tmp/ton-evidence --scratch .work/ton-properties
 python3 scripts/solana-properties.py .work/source --output /tmp/solana-evidence --scratch .work/solana-properties
+python3 scripts/aezeed-primitives.py .work/source --expected-commit f7441b85d5216b702dde490eb027aece1a6cfb5a --output /tmp/aezeed-primitives
+python3 scripts/aezeed-provenance.py .work/source --expected-commit f7441b85d5216b702dde490eb027aece1a6cfb5a --output /tmp/aezeed-provenance
 python3 scripts/ton-authorization.py .work/source --output /tmp/ton-authorization --scratch .work/ton-authorization
 python3 scripts/run.py .work/source scanner
 python3 scripts/run.py .work/source wallet-links
@@ -80,7 +84,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress8)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress9)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot

@@ -7,13 +7,13 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`90b5b28a6f3852319a24d74143863f2b57837c4d`**.
-Merged in [application PR 7](https://github.com/devdasx/oath-wallet/pull/7),
-merge `89ca689a5af845943da0269e5c84ae16972eb657`. This adds a test-fixture repair
-to the previously reviewed `a65601b` production source. Publication and CI evidence
-for this target are recorded in `scope/source.json`. These are public-source repairs;
-no App Store upload or submission was performed. Later source revisions do not
-automatically inherit these results.
+Current review target: **`f7441b85d5216b702dde490eb027aece1a6cfb5a`**.
+Merged in [application PR 8](https://github.com/devdasx/oath-wallet/pull/8),
+merge `15174cdf8378816cad58310206146deeeede546d`. This replaces the aezeed
+archives with reproducible outputs and adds C ABI regressions. Exact validation
+is recorded below and in `scope/source.json`. These are public-source repairs;
+no App Store upload or submission was performed. Later revisions do not
+inherit these results automatically.
 
 ## Scope and coverage
 
@@ -23,9 +23,9 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,639 files: 132 reviewed, 8 partially reviewed, 4,499 outstanding. The Wallet Core upstream
+The application ledger contains 4,641 files: 133 reviewed, 8 partially reviewed, 10 generated artifacts verified, 4,490 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: three reviewed, two partially reviewed, 3,936
-outstanding. The selected aezeed Go dependency ledger adds 28 files: 7 reviewed, 1 partially reviewed, 1 wordlist verified as data, 19 outstanding.
+outstanding. The selected aezeed Go dependency ledger adds 28 files: 13 reviewed, 1 partially reviewed, 1 wordlist verified as data, 13 outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
@@ -38,9 +38,10 @@ convert unread code into reviewed code. See the machine-readable ledgers under
   one of 6,016 checks; the repaired decoder passed the same corpus. Fixed and retested.
 - [OW-2026-002](../findings/OW-2026-002.md), assurance gap: the baseline omitted the
   bridge source needed to rebuild its aezeed archives. Source, pinned modules,
-  generators and tests are published. Reconstruction matches seed vectors and
-  archive sizes but **not archive hashes**. Historical source-to-binary equivalence
-  remains unresolved; bundled binaries were not replaced.
+  generators and tests are published. The new replacement archives now reproduce byte-for-byte across two isolated
+  builds with the recorded toolchain, while seed and import compatibility tests pass.
+  Historical source-to-binary equivalence remains unresolved; its failed comparisons
+  are preserved separately from the new artifacts.
 - [OW-2026-003](../findings/OW-2026-003.md), informational coverage defect: four EVM
   public account-policy adapters were absent. Fixed with mocked chain-ID and policy
   tests. No direct app caller or fund-loss exploit was established.
@@ -68,6 +69,23 @@ Original findings, failed runs and retests remain available. No finding is erase
 or downgraded merely to produce a passing summary.
 
 ## Current-target validation
+
+On `f7441b8`, seven OathAezeed host tests and 22 aezeed wallet-integration checks
+passed. The targeted Bitcoin subset passed 27 tests with one explicit skip;
+diagnostics passed 118 with two explicit skips. Public validation, secret scanning,
+diagnostics coverage, Go race/vet/module checks, regenerated seed-fixture equality,
+and unsigned generic iOS Release compilation passed. No full Bitcoin-suite or
+whole-wallet result is inferred from these targeted checks.
+
+The new [aezeed reproduction review](AEZEED-REPRODUCIBLE-BUILD.md) retains the
+before/after timestamp and plist-order failures and two matching final builds.
+Six additional Go files have source-review dispositions. Three independent ct64
+tests passed: all 16,384 S-box lane comparisons, 768 AES differential samples,
+a public known-answer vector, short-buffer rejection, and post-reset rejection.
+The audit helper suite passes 46 cases. New CI steps check artifact hashes and
+execute the primitive tests; the final-target full matrix has not yet completed.
+
+## Preserved 90b5b28 validation
 
 On `90b5b28`, all 14 send-status host tests and all five Solana property cases
 passed. Diagnostics reports 118 passes and two explicit skips. Public source,

@@ -222,6 +222,11 @@ jobs:
           cd .work/source/Tools/AezeedBridge
           GOWORK=off GOFLAGS=-mod=readonly go run ../../../../tests/GoDependencyVectors.go > ../../../../evidence/ci/go-dependency-vectors.json
           GOWORK=off GOFLAGS=-mod=readonly go test -race -count=1 github.com/Yawning/aez github.com/kkdai/bstream golang.org/x/crypto/scrypt golang.org/x/crypto/pbkdf2 golang.org/x/crypto/blake2b > ../../../../evidence/ci/upstream-go-tests.log
+      - name: Verify recorded aezeed artifacts and independent AES primitives
+        run: |
+          reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
+          python3 scripts/aezeed-provenance.py .work/source --expected-commit "$reviewed" --output evidence/ci/aezeed-provenance
+          python3 scripts/aezeed-primitives.py .work/source --expected-commit "$reviewed" --output evidence/ci/aezeed-primitives
       - name: Preserve and classify current module advisories against selected source
         run: |
           python3 scripts/tools.py

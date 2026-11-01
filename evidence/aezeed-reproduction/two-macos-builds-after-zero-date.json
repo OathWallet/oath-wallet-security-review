@@ -1,0 +1,40 @@
+[
+  {
+    "label": "first",
+    "exit_code": 0,
+    "duration": 2.89,
+    "command": [
+      "go",
+      "build",
+      "-mod=readonly",
+      "-buildvcs=false",
+      "-trimpath",
+      "-ldflags=-s -w -buildid=",
+      "-buildmode=c-archive",
+      "-o",
+      "<EXPERIMENT>/first/libOathAezeedCore.a",
+      "."
+    ],
+    "sha256": "ccd26b2ad5d9c35206ff118cb55c2bb56ac6494d392a5b25e08d873823942213",
+    "size": 2540312
+  },
+  {
+    "label": "second",
+    "exit_code": 0,
+    "duration": 2.54,
+    "command": [
+      "go",
+      "build",
+      "-mod=readonly",
+      "-buildvcs=false",
+      "-trimpath",
+      "-ldflags=-s -w -buildid=",
+      "-buildmode=c-archive",
+      "-o",
+      "<EXPERIMENT>/second/libOathAezeedCore.a",
+      "."
+    ],
+    "sha256": "ccd26b2ad5d9c35206ff118cb55c2bb56ac6494d392a5b25e08d873823942213",
+    "size": 2540312
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "source_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "status": "passed",
+  "go_version": "go1.26.5",
+  "commands": [
+    "go test -race -count=1 ./...",
+    "go vet ./...",
+    "go mod verify",
+    "go run -mod=readonly ./cmd/seedvectors"
+  ],
+  "production_seed_fixtures_equal": true,
+  "audit_helper_tests_passed": 46,
+  "files": {
+    "bridge-race.log": "ed8f742f06f1bbf771719081878b41d3e8e56f56a570defe80b76633e446148a",
+    "bridge-vet.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "module-verify.log": "b4537ed75f533f993f371954de47e42a793b8e5b0587577de7e27fb3e50696bd",
+    "production-seedvectors.json": "ca0d5f593699bc1b4def10d0122d89b05e140f129eab01cad49d6676695d12e7",
+    "audit-helper-tests.log": "ceeb10f094ced77270d430091d68cb667b97a1365ed4606c8d6827ee58336296"
+  }
+}
