@@ -1,0 +1,47 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project OathAtmosphere.xcodeproj -scheme OathAtmosphere -configuration Release -destination generic/platform=iOS -derivedDataPath <SCRATCH> CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Resolve Package Graph
+
+Package: walletcore
+
+binary target 'OathAezeedCore' could not be mapped to an artifact with expected name 'OathAezeedCore'
+Resolved source packages:
+  OathNativeLock: (null)
+  OathTokenImages: (null)
+  WalletCore: (null)
+  Reown: (null)
+  OathDiagnostics: (null)
+  OathMarketData: (null)
+  OathBitcoin: (null)
+  OathNativeRefresh: (null)
+  OathDatabase: (null)
+  OathExchangeRates: (null)
+  OathWalletHandoff: (null)
+  OathSecp256k1: (null)
+  OathCloudBackup: (null)
+  OathAezeed: (null)
+
+2026-11-01 05:43:45.816 xcodebuild[11997:102329821] Writing error result bundle to /tmp/REVIEWER_TEMP/ResultBundle_2026-01-11_05-43-0045.xcresult
+xcodebuild: error: Could not resolve package dependencies:
+  binary target 'OathAezeedCore' could not be mapped to an artifact with expected name 'OathAezeedCore'
+  'v15' is unavailable
+  /tmp/oath-core-apple-app/Packages/WalletCore/Package.swift:6:23: error: 'v15' is unavailable
+ 4 | let package = Package(
+ 5 |     name: "WalletCore",
+ 6 |     platforms: [.iOS(.v15)],
+   |                       `- error: 'v15' is unavailable
+ 7 |     products: [
+ 8 |         .library(name: "WalletCore", targets: ["WalletCore"]),
+
+PackageDescription.SupportedPlatform.IOSVersion.v15:4:23: note: 'v15' was introduced in PackageDescription 5.5
+2 |   struct IOSVersion {
+3 | @available(_PackageDescription 5.5)
+4 |     public static let v15: PackageDescription.SupportedPlatform.IOSVersion  }
+  |                       `- note: 'v15' was introduced in PackageDescription 5.5
+5 | }
+6 |
+

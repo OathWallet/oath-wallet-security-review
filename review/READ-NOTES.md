@@ -377,3 +377,14 @@ that generated-artifact disposition is not a source review of compiler output.
 The metadata-only final commit preserves all sixteen input and ten output hashes.
 No timing proof, whole-toolchain review, historical App Store equivalence or
 broader runtime coverage is inferred. See AEZEED-DEPENDENCY-REPAIRS.md.
+
+## Progress 20 — repaired Core application selection
+
+At `27fcf5f58f6169e1a40fb6afced883bc736d124d`, read the complete Core binary-target
+manifest, provenance JSON, debug-symbol downloader and symbol input list. Public
+artifact/symbol checksums, expected UUIDs, source pins and archive recipe agree.
+The final build embeds the selected framework binaries byte-for-byte. Scope and
+limitations are recorded in [CORE-APP-INTEGRATION.md](CORE-APP-INTEGRATION.md).
+`TronSendPlan.swift` was read completely for local guards but remains partial;
+producer/consumer binding, fee relations and delegated validators need further
+review. No new finding is asserted for that file.

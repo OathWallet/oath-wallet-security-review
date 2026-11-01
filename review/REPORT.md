@@ -7,11 +7,13 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`92423215ddd638b070c605a5911a9ebc7b15615f`**.
-Merged in [application PR 10](https://github.com/devdasx/oath-wallet/pull/10),
-merge `24e0fcedf4a55ba60345de77bed304e272b67dac`. Three aezeed dependency
-API defects now have tested source repairs and rebuilt Apple archives.
-The earlier restoration repair remains included.
+Current review target: **`27fcf5f58f6169e1a40fb6afced883bc736d124d`**.
+Merged in [application PR 11](https://github.com/devdasx/oath-wallet/pull/11),
+merge `99742291d6124fd2628bbf1653ec0ba5f121456f`, with an identical source tree.
+All eight confirmed Core findings now have source-built Apple artifacts selected
+by the public app. The three earlier aezeed repairs remain included.
+[Final integration evidence](CORE-APP-INTEGRATION.md) records the original
+manifest failure, corrected build, host tests, asset hashes and framework identity.
 These are public-source repairs; no App Store upload or submission was performed.
 Later revisions do not inherit these results automatically.
 
@@ -23,43 +25,31 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,675 files: 167 reviewed, 10 partially reviewed,
-10 generated artifacts verified, 4,488 outstanding. The Wallet Core upstream
+The application ledger contains 4,675 files: 170 reviewed, 11 partially reviewed,
+10 generated artifacts verified, 4,484 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
 [original reproductions](AEZEED-DEPENDENCY-REVIEW.md) and
 [verified source/archive repairs](AEZEED-DEPENDENCY-REPAIRS.md) remain public.
-Two Core C API hazards still present in the shipped dependency are documented in the
-[child-derivation review](CHILD-DERIVATION-REVIEW.md); no reachable Oath
-vulnerability was established for those calls.
-The [constructor/lifetime experiment](CONSTRUCTOR-LIFETIME-RESULTS.md) also
-confirms direct misuse of the 32-byte constructor and entropy remaining at
-deallocation; their app reachability and broader exposure limitations are explicit.
-All four now have [tested source patches](CORE-SOURCE-REPAIRS.md). Full native
-compilation and upstream suites pass; Apple framework/application integration
-is still outstanding. A [fifth source repair](CORE-NATIVE-AND-EXTENDED-KEY.md)
-rejects public extended keys at the private derivation API.
-A [sixth source repair](CORE-DATA-ALIAS.md) prevents aliased buffer appends
-from reading freed storage. Identical production-code sanitizer tests show the
-baseline failures and repaired passes; the combined six-repair native C++ suite
-passes all 2,363 tests. Application integration remains outstanding.
-A [seventh source repair](CORE-RESULT-STATE.md) clears stale payloads when
-Rust-result wrappers are reassigned an error or empty result and enforces the
-documented throwing unwrap behavior. The paired 8,000-check corpus has 4,000
-baseline failures and zero repaired failures; the combined seven-repair build
-passes 2,363 C++ and 113 C tests. Framework and application integration remain
-separate from these native results.
-An [eighth repair](CORE-SIGNING-PARSE.md) rejects malformed serialized signing
-and planning input before invoking the signer/planner. The same 18-case production
-C API corpus reports 12 failures before and none after. No tracked Oath AnySigner
-caller was established. The [fresh seven-repair Apple rebuild](CORE-APPLE-REPRODUCTION.md)
-passed unsigned generic iOS and universal simulator archives and packaging;
-it is not an eight-repair app integration result. Public app integration remains
-outstanding. The full eight-repair native build passes 2,363 C++ tests and
-113 C cryptography checks. The [eight-repair Apple rebuild](CORE-EIGHT-INTEGRATION.md)
-also passes both generic archives and artifact packaging. Application integration
-and its own validation remain outstanding.
+The Core findings retain their [child-derivation review](CHILD-DERIVATION-REVIEW.md),
+[constructor/lifetime reproductions](CONSTRUCTOR-LIFETIME-RESULTS.md),
+[first four source patches](CORE-SOURCE-REPAIRS.md),
+[extended-key repair](CORE-NATIVE-AND-EXTENDED-KEY.md),
+[buffer-alias repair](CORE-DATA-ALIAS.md),
+[result-state repair](CORE-RESULT-STATE.md) and
+[signing/parser repair](CORE-SIGNING-PARSE.md). No reachable Oath exploit was
+established for these dependency APIs. The combined eight-repair native build
+passes 2,363 C++ tests and 113 C cryptography checks; both generic Apple
+framework archives and packaging also pass.
+
+[Public app integration](CORE-APP-INTEGRATION.md) now passes unsigned generic
+iOS Release compilation, 158 targeted security checks, diagnostics coverage,
+public-source scanning, and 118 diagnostics tests with two explicit skips.
+The two embedded Core framework executable files match the published repaired
+artifacts byte-for-byte. This does not establish an App Store binary comparison
+or a complete final-target test matrix. Historical failures and the original
+integration-outstanding checkpoints remain available.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under

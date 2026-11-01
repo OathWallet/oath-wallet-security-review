@@ -1,5 +1,10 @@
 # Eight-repair Core integration checkpoint
 
+> Integration update: the eight repairs are now selected by public app commit
+> `27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged in PR 11.
+> [Final app checks and remaining gaps](CORE-APP-INTEGRATION.md). Earlier
+> integration-outstanding statements below describe their original checkpoints.
+
 Core source: `d40d24a63d92619167903369308bf0e2f7eb3a59` (4.8.4).
 Combined patch: [walletcore-4.8.4-combined-eight.patch](../patches/walletcore-4.8.4-combined-eight.patch),
 SHA-256 `2dc70e8dbfb31dee39d6e27ba54b92257ec742c2e594d46ee7e4d3bff68e0d18`.

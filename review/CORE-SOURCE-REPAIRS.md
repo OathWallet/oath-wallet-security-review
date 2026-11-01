@@ -1,5 +1,10 @@
 # Wallet Core source repairs — not yet incorporated into Oath
 
+> Integration update: the eight repairs are now selected by public app commit
+> `27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged in PR 11.
+> [Final app checks and remaining gaps](CORE-APP-INTEGRATION.md). Earlier
+> integration-outstanding statements below describe their original checkpoints.
+
 Baseline dependency: Wallet Core 4.8.4,
 `d40d24a63d92619167903369308bf0e2f7eb3a59`.
 Application call-path target: `02a6e8ab66c7629dcb9dd36637c683457e821d98`.

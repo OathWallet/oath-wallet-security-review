@@ -4855,5 +4855,248 @@
     "raw_advisory_occurrences": 40,
     "unresolved": 0,
     "scope": "Exact selected-source advisory gate; raw OSV evidence retained; govulncheck separately passes on prepared source."
+  },
+  {
+    "check": "public",
+    "source_commit": "74c971197ecad485a17575ce6c583a11151356b3",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 26.05,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "ecf8bac68dc4bc0e1e8b25e401c97709d64e6c101a76f0b5fe12578bf2dae819",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/core-app-integration/initial/public.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "74c971197ecad485a17575ce6c583a11151356b3",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.45,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/core-app-integration/initial/diagnostics-coverage.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "74c971197ecad485a17575ce6c583a11151356b3",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-core-eight-app-validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 19.71,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "651670e0f1431997ded40a4c92370f5561b4abfb3129a31fc74951f58ecf5b82",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "d2b4d932e6ba86aaa1eec84a374275091916fb5c1284deedfaa0b69d7b7ad990"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/core-app-integration/initial/OathDiagnostics.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "build",
+    "source_commit": "74c971197ecad485a17575ce6c583a11151356b3",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "failed",
+    "exit_code": 74,
+    "timed_out": false,
+    "duration_seconds": 3.46,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "4717b74cc1e3563486234ed80bb9dc9421c3ab780db3160a34ca5d389599bcff",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "015f550256b0c9c81127c6248a0f075613b21cef9710b3c20ad294e5fae5149b",
+    "evidence_path": "evidence/core-app-integration/initial/build.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "public",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 26.9,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "973b3bfe61f848acca7aa984575ea860e0e7c76e8314834b106737b122baa58b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/core-app-integration/final/public.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.35,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/core-app-integration/final/diagnostics-coverage.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-core-eight-app-final-validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 19.88,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "5142e48a9edf48229751e9c738cc8b39ef4bc1a6d1fc6aeb90d942604b5656a7",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "2185f318d6a0c73fb0774f726626e8dece9cfaf7c2d2b23d01e5c388c3479c3e"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/core-app-integration/final/OathDiagnostics.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "security",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--security"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 170.34,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "6d4d24d4686c9dd65eef0a06051d1f62ff47d936972b5d75206b6c78b984ba66",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/core-app-integration/final/security.log",
+    "log_compression": "none"
+  },
+  {
+    "check": "build",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 467.87,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "a39fe595b435d5f94000a4042e3ec9fc37d965b85c6d288e8bdaff684cd08f71",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "fbd06141cf77aa0a6a23bf1a1ca095cb7e7559135df23b7830010257833f0764",
+    "evidence_path": "evidence/core-app-integration/final/build.log.gz",
+    "log_compression": "gzip"
   }
 ]

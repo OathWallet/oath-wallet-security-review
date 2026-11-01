@@ -1,5 +1,10 @@
 # Repaired Core Apple artifact reproduction
 
+> Integration update: the eight repairs are now selected by public app commit
+> `27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged in PR 11.
+> [Final app checks and remaining gaps](CORE-APP-INTEGRATION.md). Earlier
+> integration-outstanding statements below describe their original checkpoints.
+
 This builds the Wallet Core 4.8.4 source at
 `d40d24a63d92619167903369308bf0e2f7eb3a59` with the seven published source
 repairs. It does not rebuild or prove equivalence with a historical App Store

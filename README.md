@@ -17,8 +17,8 @@ Latest dependency work: [result-wrapper state transitions](review/CORE-RESULT-ST
 and [malformed signing/planning inputs](review/CORE-SIGNING-PARSE.md), with real
 before/after tests. All eight source repairs pass the full native C/C++ suites.
 [Apple artifact reproduction](review/CORE-APPLE-REPRODUCTION.md) is recorded
-separately. Public app integration remains outstanding; a dependency build is
-not an App Store update or a whole-wallet completion verdict.
+separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
+That is not an App Store update or a whole-wallet completion verdict.
 
 ## Reproduce
 
@@ -92,7 +92,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress19)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress20)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot

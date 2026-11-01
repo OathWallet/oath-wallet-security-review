@@ -1,5 +1,10 @@
 # Native Core validation and extended-key type repair
 
+> Integration update: the eight repairs are now selected by public app commit
+> `27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged in PR 11.
+> [Final app checks and remaining gaps](CORE-APP-INTEGRATION.md). Earlier
+> integration-outstanding statements below describe their original checkpoints.
+
 Application scope: `02a6e8ab66c7629dcb9dd36637c683457e821d98`.
 Upstream: Wallet Core 4.8.4, `d40d24a63d92619167903369308bf0e2f7eb3a59`.
 This is a maintainer-commissioned Codex review increment, not an independent

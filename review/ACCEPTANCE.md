@@ -1,47 +1,47 @@
 # Acceptance checklist — not complete
 
-Progress 16 update: native Core compilation, 2,363 C++ tests and 113 C checks
-pass. Five Core defects have tested source patches, with Apple framework
-integration still outstanding. The three earlier unused Go API defects remain
-open and are now indexed explicitly. The new scanner gate preserves raw results;
-historical replay is not final-target GitHub validation. There are 7,679
-outstanding completion items. See [the latest report section](REPORT.md#progress-16--full-native-suites-fifth-dependency-patch-and-honest-scanner-gate).
+Progress 20 targets application commit
+`27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged by PR 11. The completion
+checker still reports **7,669 outstanding items**. This is an evidence checklist,
+not a score or security certificate.
 
-- **Full scope disposition:** incomplete. Application and upstream file inventories
-  exist, but most implementation files are still outstanding. Inventorying or
-  scanning a file is not a source review.
-- **Confirmed findings:** OW-2026-001, OW-2026-003, OW-2026-004 OW-2026-005 and OW-2026-006 have targeted source repairs and retests. OW-2026-002's absent
-  build source is repaired; historical binary equivalence remains unresolved.
-  OW-2026-007 additionally repairs restored Ed25519 path metadata with actual
-  failed-before/passed-after tests; unused dependency API hazards remain explicit.
-- **Required final validation:** incomplete. The current 02a6e8a target passed unsigned generic-iOS Release compilation; each new target needs its own build. The corrected Bitcoin suite passes with 60 explicit skips. OathAnkr now passes 1,208 host cases with 194 explicit skips on f23413c;
-  the complete current-target host matrix has not finished.
-- **Dependency provenance:** archive checksums and pinned source identities are
-  recorded. Wallet Core and historical aezeed source-to-binary relationships remain unproven.
-  Replacement aezeed archives match two isolated builds with the recorded toolchain;
-  module advisories and reachable-symbol results have different scopes.
-- **Clean reproducibility:** GitHub's disposable clean runners reproduced the
-  parser before/after result, bridge tests, several packages, security host checks
-  and unsigned compilation without private credentials. Whole-matrix success has
-  not been established.
-- **Publication:** public review repository, application repair and review links
-  are published. Progress tagged releases preserve explicitly incomplete progress
-  snapshots. A final audit release is not yet justified. Progress 9 adds reproducible replacement aezeed archives,
-  C ABI and AES primitive checks, and six additional dependency source reads.
-  Original failed jobs and historical archive gaps remain in the record. Progress 10
-  completes the selected third-party Go file dispositions, with three unrepaired
-  unused-API hazards explicitly documented and reproduced. This does not close
-  the standard-library or whole-application review gaps.
-  Progress 11 adds mnemonic, derivation-path, HMAC/PBKDF2 and passphrase boundary
-  evidence, with 7,692 outstanding completion items. Child-derivation failure
-  propagation and secret-copy lifetime remain explicit open review leads.
-  Progress 14 adds 23 hash-bound file dispositions, 197 multisig serialization
-  checks, a passing current-source backup suite, and constructor/lifetime
-  characterizations. Four Core API/hygiene limitations remain unrepaired and
-  qualified separately from established application vulnerabilities.
+- **Full scope disposition: incomplete.** App and upstream inventories are
+  hash-bound, but most implementations remain outstanding. The app ledger has
+  170 reviewed, 11 partial and 10 generated-verified files out of 4,675. Core has
+  21 reviewed and 20 partial files out of 3,941. Scanners/tests do not replace reads.
+- **Confirmed findings: repairs published, historical assurance gap remains.**
+  OW-2026-001 and OW-2026-003 through OW-2026-007 retain their verified source
+  fixes. All eight DEP-CORE and all three DEP-AEZEED repairs are integrated into
+  public source. OW-2026-002's missing build source is restored, but historical
+  binary equivalence remains unproven. Original reproductions and failed runs
+  stay published; no vulnerability-free verdict follows from these repairs.
+- **Required final-target validation: incomplete.** The current target passes
+  unsigned generic iOS Release compilation, 158 security host checks, public
+  validation/Gitleaks, diagnostics coverage and 118 diagnostics cases with two
+  explicit skips. The remaining required checks need current-target evidence.
+  Historical GitHub run 41264051930 passed all 44 jobs on `02a6e8a`; it does not
+  establish full-matrix success for the new target.
+- **Dependency provenance: bounded evidence, remaining gaps.** Fresh Core
+  source builds, exact patches, public inputs, command logs and artifact hashes
+  are recorded. The local app embeds the published repaired framework binaries
+  byte-for-byte. This does not establish historical App Store equivalence or
+  independent byte-identical Apple builds. Replacement aezeed archives have
+  two-isolated-build equality; historical aezeed/Core relationships and broader
+  dependency/standard-library review remain explicit gaps.
+- **Clean reproducibility: partial.** Existing GitHub jobs reproduce many
+  source tests without private credentials. The consolidated native Core and
+  Apple preparation scripts have local results; a fresh complete execution of
+  those preparation procedures on GitHub remains outstanding. Prepared input
+  hashes and copied inputs are disclosed, not treated as a fresh CI build.
+- **Publication: progress evidence complete for this increment.** Application
+  PR 11 is merged; progress 19 holds the repaired framework/symbol assets and
+  their source-build evidence. Progress 20 adds final integration checks and
+  the retained manifest failure. The full-scope final audit release is not yet
+  justified. The [report](REPORT.md) and [integration record](CORE-APP-INTEGRATION.md)
+  distinguish source repair, host tests, compilation and runtime evidence.
 
-Progress 12 includes a minimal simulator-hosted C ABI check of the shipped Core
-framework for 112 restored-path key equivalences. This resolves that stated
-runtime concern only; it is not whole-app runtime validation. No physical device,
-funded account, production transaction, App Store upload or submission was used
-for the audit. App Store equivalence remains unverified.
+This increment did not launch a simulator or physical device. Earlier progress
+12 contains only its stated minimal simulator C ABI test for 112 restored-path
+key equivalences, not whole-app runtime validation. No funded account,
+production transaction, physical-device operation, App Store upload or
+submission was used in this increment. App Store equivalence is unverified.
