@@ -25,18 +25,23 @@ def main():
     parser.add_argument('--app-source', type=Path, required=True)
     parser.add_argument('--app-commit', required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--repair-set', choices=['api-only', 'all-seven', 'all-eight'], default='api-only',
+                        help='Require exactly the selected published source patch; no arbitrary dirty checkout')
     args = parser.parse_args()
     source, out = args.prepared.resolve(), args.output.resolve()
     out.mkdir(parents=True, exist_ok=True)
     require_source_state(args.app_source, args.app_commit)
-    expected = (ROOT/'patches/walletcore-4.8.4-api-repairs.patch').read_bytes()
+    patch_name = {'api-only': 'walletcore-4.8.4-api-repairs.patch',
+                  'all-seven': 'walletcore-4.8.4-combined-seven.patch',
+                  'all-eight': 'walletcore-4.8.4-combined-eight.patch'}[args.repair_set]
+    expected = (ROOT/'patches'/patch_name).read_bytes()
 
     def check_source():
         git = lambda *a: subprocess.check_output(['git', '-C', str(source), *a])
         if git('rev-parse', 'HEAD').decode().strip() != PIN:
             raise ValueError('Wrong upstream revision')
         if git('diff', 'HEAD', '--binary') != expected:
-            raise ValueError('Expected exactly the four published API repairs')
+            raise ValueError('Expected exactly the selected published repair set')
         if git('ls-files', '--others', '--exclude-standard').strip():
             raise ValueError('Untracked source inputs present')
 
@@ -84,6 +89,7 @@ def main():
                   c_checks=113, c_failures=0, c_errors=0,
                   binary_sha256={'cpp': digest(placed), 'trezor': digest(trezor)},
                   patch_sha256=hashlib.sha256(expected).hexdigest(),
+                  repair_set=args.repair_set,
                   log_sha256=digest(out/'cpp.log'),
                   limitations=['Prepared native build, not an Apple framework or whole-application test.',
                                'Passing suites do not establish manual source coverage or historical binary equivalence.'])

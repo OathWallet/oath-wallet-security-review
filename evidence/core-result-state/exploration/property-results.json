@@ -1,0 +1,55 @@
+[
+  {
+    "stage": "before",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-Isrc",
+      "-Iinclude",
+      "-Wl,-dead_strip",
+      "/tmp/oath-core-result-state-review/result-properties.cpp",
+      "build/local/lib/libwallet_core_rs.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-lresolv",
+      "-liconv",
+      "-o",
+      "/tmp/oath-core-result-state-review/properties-before"
+    ],
+    "exit_code": 1,
+    "log_sha256": "af388ff515c521c9897389dc398c1cb0ce3976dd2a83a30eedc4ba900aabb8ca"
+  },
+  {
+    "stage": "after",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I/tmp/oath-core-result-state-review/include",
+      "-Isrc",
+      "-Iinclude",
+      "-Wl,-dead_strip",
+      "/tmp/oath-core-result-state-review/result-properties.cpp",
+      "build/local/lib/libwallet_core_rs.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-lresolv",
+      "-liconv",
+      "-o",
+      "/tmp/oath-core-result-state-review/properties-after"
+    ],
+    "exit_code": 0,
+    "log_sha256": "97a7b6c3c74155618700086e85a033721051755c19762047206d75a6217abb28"
+  }
+]

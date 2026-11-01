@@ -1,0 +1,127 @@
+[
+  {
+    "name": "reverse-eighth-repair",
+    "command": [
+      "git",
+      "apply",
+      "--reverse",
+      "/Volumes/REVIEW/oath-wallet-security-review/patches/walletcore-4.8.4-signing-parse.patch"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.011,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "before-build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-core",
+      "--target",
+      "TrustWalletCore",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 17.179,
+    "log_sha256": "9a70367b368f0d49c071f10e5bdb8d4d96d737e753c59804de4f83bc81e6cd05"
+  },
+  {
+    "name": "before-compile",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O2",
+      "-DNDEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-Ibuild/local/include",
+      "-I/opt/homebrew/opt/boost/include",
+      "/Volumes/REVIEW/oath-wallet-security-review/tests/UpstreamSigningParse.cpp",
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/libTrustWalletCore.a",
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/trezor-crypto/libTrezorCrypto.a",
+      "/private/tmp/oath-core-dependency-repairs/rust/target/release/libwallet_core_rs.a",
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/libprotobuf.a",
+      "-o",
+      "/private/tmp/oath-core-sign-parse-paired/before-fixture"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.829,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "before",
+    "command": [
+      "/private/tmp/oath-core-sign-parse-paired/before-fixture"
+    ],
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 0.561,
+    "log_sha256": "420ea6722a10500688fe4ff8a326c6012e7c4c10d3d78caaec8dc20a478d82a8"
+  },
+  {
+    "name": "apply-eighth-repair",
+    "command": [
+      "git",
+      "apply",
+      "/Volumes/REVIEW/oath-wallet-security-review/patches/walletcore-4.8.4-signing-parse.patch"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.01,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "after-build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-core",
+      "--target",
+      "TrustWalletCore",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 28.245,
+    "log_sha256": "1b922ff78098106fb7892a5fb4030a36c91000a6cf81a2cb5dd0de961940e444"
+  },
+  {
+    "name": "after-compile",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O2",
+      "-DNDEBUG",
+      "-Iinclude",
+      "-Isrc",
+      "-Ibuild/local/include",
+      "-I/opt/homebrew/opt/boost/include",
+      "/Volumes/REVIEW/oath-wallet-security-review/tests/UpstreamSigningParse.cpp",
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/libTrustWalletCore.a",
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/trezor-crypto/libTrezorCrypto.a",
+      "/private/tmp/oath-core-dependency-repairs/rust/target/release/libwallet_core_rs.a",
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/libprotobuf.a",
+      "-o",
+      "/private/tmp/oath-core-sign-parse-paired/after-fixture"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.883,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "after",
+    "command": [
+      "/private/tmp/oath-core-sign-parse-paired/after-fixture"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.404,
+    "log_sha256": "6f54696e33c64d26aa45315e596bf4436dff85f70730d34fc6f06de0e024ff5d"
+  }
+]

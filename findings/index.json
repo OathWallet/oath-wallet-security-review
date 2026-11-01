@@ -186,5 +186,31 @@
     "evidence": "evidence/core-data-alias",
     "fixed_in_shipped_framework": false,
     "reachable_oath_exploit_established": false
+  },
+  {
+    "id": "DEP-CORE-007",
+    "severity": "dependency-api-correctness",
+    "title": "Rust-result wrappers retain prior payloads after errors or empty results",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-RESULT-STATE.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-result-state.patch",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false,
+    "retest_scope": "Identical production-header and real Rust decode corpus: 8000 checks, 4000 failures before, zero after. All seven repairs: 2363 native C++ tests and 113 C cryptography checks pass.",
+    "evidence": "evidence/core-result-state"
+  },
+  {
+    "id": "DEP-CORE-008",
+    "severity": "dependency-input-validation",
+    "title": "Failed Protobuf parsing still permits signing and transaction planning",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-SIGNING-PARSE.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-signing-parse.patch",
+    "evidence": "evidence/core-signing-parse",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false,
+    "retest_scope": "Real C API, identical 18-case corpus: 12 malformed cases fail before, all 18 pass after. Three tested paths: Tron signing, Bitcoin signing and planning."
   }
 ]

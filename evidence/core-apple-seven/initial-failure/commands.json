@@ -1,0 +1,285 @@
+[
+  {
+    "name": "version-xcode",
+    "command": [
+      "xcodebuild",
+      "-version"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.184,
+    "log_sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+  },
+  {
+    "name": "version-xcodegen",
+    "command": [
+      "xcodegen",
+      "--version"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.04,
+    "log_sha256": "dc5e65dc4cafe61f8f95608b28addd827bf53c9afca65b9201adc97aca83757a"
+  },
+  {
+    "name": "version-protoc",
+    "command": [
+      "/private/tmp/oath-core-dependency-repairs/build/local/bin/protoc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.027,
+    "log_sha256": "e0eea9358188c013afbc197c7a5daeeb0a38a42591017e1f3a77110831bc15e5"
+  },
+  {
+    "name": "version-cargo",
+    "command": [
+      "/private/tmp/oath-core-native-toolchain/cargo/bin/cargo",
+      "+nightly-2025-12-11",
+      "--version"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.126,
+    "log_sha256": "dc9c4222c0890338b22436ebc6df63a644d92990d6ed088a5824c1ed80988b37"
+  },
+  {
+    "name": "clone",
+    "command": [
+      "git",
+      "clone",
+      "--no-hardlinks",
+      "--no-checkout",
+      "/private/tmp/oath-review-wallet-core-4.8.4",
+      "/private/tmp/oath-core-seven-reproducible-apple/source"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.544,
+    "log_sha256": "f1afa07258a11a30d720d05135813a1c6ffd010a5ef8a5f552942c6ba5250705"
+  },
+  {
+    "name": "checkout",
+    "command": [
+      "git",
+      "checkout",
+      "--detach",
+      "d40d24a63d92619167903369308bf0e2f7eb3a59"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.568,
+    "log_sha256": "cf754853b076d46ed9125f553a09eb1f26cf9c9b4495092c0e93cb8f80fe6197"
+  },
+  {
+    "name": "apply",
+    "command": [
+      "git",
+      "apply",
+      "/Volumes/REVIEW/oath-wallet-security-review/patches/walletcore-4.8.4-combined-seven.patch"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.011,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "swift-generator",
+    "command": [
+      "swift",
+      "build",
+      "--package-path",
+      "/private/tmp/oath-core-swift-protobuf-generator",
+      "--scratch-path",
+      "/private/tmp/oath-core-seven-reproducible-apple/generator-build",
+      "-c",
+      "release",
+      "--product",
+      "protoc-gen-swift",
+      "--jobs",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 28.381,
+    "log_sha256": "5e8d6dcdd94b53c331f989c01e7cb77ccac9dc75b49c729205be84c086a44b72"
+  },
+  {
+    "name": "swift-protobuf",
+    "command": [
+      "/private/tmp/oath-core-seven-reproducible-apple/source/build/local/bin/protoc",
+      "-I/private/tmp/oath-core-seven-reproducible-apple/source/build/local/include",
+      "-I/private/tmp/oath-core-seven-reproducible-apple/source/src/proto",
+      "--plugin=protoc-gen-swift=/private/tmp/oath-core-seven-reproducible-apple/generator-build/release/protoc-gen-swift",
+      "--swift_out=/private/tmp/oath-core-seven-reproducible-apple/source/swift/Sources/Generated/Protobuf",
+      "--swift_opt=Visibility=Public",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Aeternity.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Aion.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Algorand.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Aptos.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/BabylonStaking.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Barz.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Binance.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Bitcoin.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/BitcoinV2.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Biz.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/BizPasskeySession.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Cardano.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Common.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Cosmos.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Decred.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/DecredV2.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/EOS.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Ethereum.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/EthereumAbi.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/EthereumRlp.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Everscale.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/FIO.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Filecoin.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Greenfield.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Harmony.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Hedera.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/IOST.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Icon.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/InternetComputer.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/IoTeX.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/LiquidStaking.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/MultiversX.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/NEAR.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/NEO.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/NULS.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Nano.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Nebulas.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Nervos.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Nimiq.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Oasis.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Ontology.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Pactus.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Polkadot.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Polymesh.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Ripple.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Solana.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Stellar.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Sui.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/THORChainSwap.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Tezos.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/TheOpenNetwork.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Theta.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/TransactionCompiler.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Tron.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Utxo.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/VeChain.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/WalletConnect.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Waves.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Zcash.proto",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/src/proto/Zilliqa.proto"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.836,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "rust-src",
+    "command": [
+      "/private/tmp/oath-core-native-toolchain/cargo/bin/rustup",
+      "component",
+      "add",
+      "rust-src",
+      "--toolchain",
+      "nightly-2025-12-11"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.078,
+    "log_sha256": "6a156d3c35c99ed06d46a1fc526a1ccdbda67d49bdd6abcf43e89322c8f2a0df"
+  },
+  {
+    "name": "rust-apple",
+    "command": [
+      "/private/tmp/oath-core-native-toolchain/cargo/bin/cargo",
+      "+nightly-2025-12-11",
+      "build",
+      "--locked",
+      "-Z",
+      "build-std=std,panic_abort",
+      "--target",
+      "aarch64-apple-ios",
+      "--target",
+      "aarch64-apple-ios-sim",
+      "--target",
+      "x86_64-apple-ios",
+      "--release",
+      "--lib"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 109.918,
+    "log_sha256": "bc0285f70f9ea5eb78c8bfe5a8df45299c04d7081dbbf0839ca57e7c7ee0705b"
+  },
+  {
+    "name": "rust-lipo",
+    "command": [
+      "lipo",
+      "-create",
+      "/private/tmp/oath-core-seven-reproducible-apple/rust-target/aarch64-apple-ios-sim/release/libwallet_core_rs.a",
+      "/private/tmp/oath-core-seven-reproducible-apple/rust-target/x86_64-apple-ios/release/libwallet_core_rs.a",
+      "-output",
+      "/private/tmp/oath-core-seven-reproducible-apple/rust-simulator.a"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.076,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "rust-xcframework",
+    "command": [
+      "xcodebuild",
+      "-create-xcframework",
+      "-library",
+      "/private/tmp/oath-core-seven-reproducible-apple/rust-target/aarch64-apple-ios/release/libwallet_core_rs.a",
+      "-library",
+      "/private/tmp/oath-core-seven-reproducible-apple/rust-simulator.a",
+      "-output",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/swift/WalletCoreRs.xcframework"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.939,
+    "log_sha256": "de0b134bbac75f3b6f7113c9d9fd35fe6bb315c5547baf9c93f6b763c059113e"
+  },
+  {
+    "name": "upstream-project",
+    "command": [
+      "xcodegen",
+      "dump",
+      "--spec",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/swift/project.yml",
+      "--type",
+      "json"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.041,
+    "log_sha256": "af53e1c53d2ea02feaa6de87c0113c63132e352d2873bc36f16acd5bb5fc099a"
+  },
+  {
+    "name": "generate-project",
+    "command": [
+      "xcodegen",
+      "generate",
+      "--spec",
+      "/private/tmp/oath-core-seven-reproducible-apple/evidence/apple-project.json",
+      "--project-root",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/swift",
+      "--project",
+      "/private/tmp/oath-core-seven-reproducible-apple/source/swift"
+    ],
+    "exit_code": 1,
+    "timed_out": false,
+    "duration_seconds": 0.021,
+    "log_sha256": "83e72d267291d32a699df7d38854e057562d7a751218a2ddd057fda494c229f2"
+  }
+]

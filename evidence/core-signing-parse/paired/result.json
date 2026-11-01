@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "cases": [
+    {
+      "stage": "before",
+      "expected_outcome_observed": true,
+      "fixture_binary_sha256": "57109c8349f97b2781d4ab224fb3bbd8697695e8d02d3e0b6fcde62eb392d135",
+      "source_header_sha256": "9c76abc1b8940b1fe1ea7a920442c959cddc9db90c578ec130858ff8604899bb",
+      "patch_sha256": "9a73daf4c0105ea604f5c9a034004443122b138cce26b100d5b3ca37bcfe471a",
+      "library_sha256": {
+        "build/native-core/libTrustWalletCore.a": "9e87c963149eb98d30297d1bd92bbb54efd129131b6062406aec718e5085454e",
+        "build/native-core/trezor-crypto/libTrezorCrypto.a": "f399c37a88447ec3797189cf08953864f89943a189c2f2f5453d9f649ab0af3a",
+        "rust/target/release/libwallet_core_rs.a": "5bca602e07411f1f9da9ab45cd061ea6784219c7d01a41a24043fd39fbd4f769",
+        "build/native-core/libprotobuf.a": "bfb266ad9ee8620b592d97e53cd20536dd9ac9f0a88218855a5f1a6c8d6e6dd3"
+      },
+      "checks": 18,
+      "expected_failures": 12,
+      "exit_code": 1,
+      "timed_out": false
+    },
+    {
+      "stage": "after",
+      "expected_outcome_observed": true,
+      "fixture_binary_sha256": "3456bf988ac3bbd85cc9f08dc2eafd97265f9640f0dfbd4a11832e68faf9942d",
+      "source_header_sha256": "36d73feb69fcf97208a3b58009cc822cef51d3fcdb302a56e80e6134ce2fcc9e",
+      "patch_sha256": "2dc70e8dbfb31dee39d6e27ba54b92257ec742c2e594d46ee7e4d3bff68e0d18",
+      "library_sha256": {
+        "build/native-core/libTrustWalletCore.a": "7cc72f3be2a611e7aa1a61a40178ee2871570090c3856d38de239802b2136695",
+        "build/native-core/trezor-crypto/libTrezorCrypto.a": "f399c37a88447ec3797189cf08953864f89943a189c2f2f5453d9f649ab0af3a",
+        "rust/target/release/libwallet_core_rs.a": "5bca602e07411f1f9da9ab45cd061ea6784219c7d01a41a24043fd39fbd4f769",
+        "build/native-core/libprotobuf.a": "bfb266ad9ee8620b592d97e53cd20536dd9ac9f0a88218855a5f1a6c8d6e6dd3"
+      },
+      "checks": 18,
+      "expected_failures": 0,
+      "exit_code": 0,
+      "timed_out": false
+    }
+  ],
+  "input_hashes": {
+    "/Volumes/REVIEW/oath-wallet-security-review/patches/walletcore-4.8.4-signing-parse.patch": "518be38515c8067c23140f9af193e06fa9254dce4d3e571e1aaf16e4b30b7951",
+    "/Volumes/REVIEW/oath-wallet-security-review/tests/UpstreamSigningParse.cpp": "1c3c458929be34e1291cf3e237babba1964d3dbd2169b99e5ec96aa87f8e6edc"
+  },
+  "limitations": [
+    "Real TWAnySignerSign/Plan calls; synthetic keys, fake UTXO, no broadcast.",
+    "Optimized macOS native build; not a sanitizer, app runtime or Apple framework test.",
+    "Only three entry paths tested; other chains and greater-than-INT_MAX inputs not executed.",
+    "No tracked Oath AnySigner call site established; no reachable application exploit demonstrated."
+  ]
+}

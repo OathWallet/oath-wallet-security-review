@@ -1,0 +1,37 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-core",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 85.248,
+    "log_sha256": "16bc87838b05ef725a247206946a0b24faa8659cb13279279e0ce78e6eeaa995"
+  },
+  {
+    "name": "cpp",
+    "command": [
+      "/private/tmp/oath-core-dependency-repairs/build/tests/tests",
+      "--gtest_output=json:/private/tmp/oath-core-eight-native-tests/cpp-results.json"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 27.508,
+    "log_sha256": "5255ad4cfd976d9a60b410799ebb59d32ce4029e1ea3d309cade4e1e678e0556"
+  },
+  {
+    "name": "trezor",
+    "command": [
+      "/private/tmp/oath-core-dependency-repairs/build/native-core/trezor-crypto/crypto/tests/TrezorCryptoTests"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 5.229,
+    "log_sha256": "64f53d92bf1982edf1bffd13e0eb79735bd36c8ae58f3cdc4f18732c64068077"
+  }
+]

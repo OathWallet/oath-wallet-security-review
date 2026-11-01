@@ -23,9 +23,9 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,675 files: 167 reviewed, 8 partially reviewed,
-10 generated artifacts verified, 4,490 outstanding. The Wallet Core upstream
-ledger contains 3,941 files: 17 reviewed, 11 partially reviewed, 3,913 outstanding.
+The application ledger contains 4,675 files: 167 reviewed, 10 partially reviewed,
+10 generated artifacts verified, 4,488 outstanding. The Wallet Core upstream
+ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
 [original reproductions](AEZEED-DEPENDENCY-REVIEW.md) and
@@ -44,6 +44,22 @@ A [sixth source repair](CORE-DATA-ALIAS.md) prevents aliased buffer appends
 from reading freed storage. Identical production-code sanitizer tests show the
 baseline failures and repaired passes; the combined six-repair native C++ suite
 passes all 2,363 tests. Application integration remains outstanding.
+A [seventh source repair](CORE-RESULT-STATE.md) clears stale payloads when
+Rust-result wrappers are reassigned an error or empty result and enforces the
+documented throwing unwrap behavior. The paired 8,000-check corpus has 4,000
+baseline failures and zero repaired failures; the combined seven-repair build
+passes 2,363 C++ and 113 C tests. Framework and application integration remain
+separate from these native results.
+An [eighth repair](CORE-SIGNING-PARSE.md) rejects malformed serialized signing
+and planning input before invoking the signer/planner. The same 18-case production
+C API corpus reports 12 failures before and none after. No tracked Oath AnySigner
+caller was established. The [fresh seven-repair Apple rebuild](CORE-APPLE-REPRODUCTION.md)
+passed unsigned generic iOS and universal simulator archives and packaging;
+it is not an eight-repair app integration result. Public app integration remains
+outstanding. The full eight-repair native build passes 2,363 C++ tests and
+113 C cryptography checks. The [eight-repair Apple rebuild](CORE-EIGHT-INTEGRATION.md)
+also passes both generic archives and artifact packaging. Application integration
+and its own validation remain outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under

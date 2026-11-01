@@ -1,0 +1,19 @@
+action=tron_sign case=valid parsed=1 produced=1 error=0 passed=1
+action=tron_sign case=valid_unknown_field parsed=1 produced=1 error=0 passed=1
+action=tron_sign case=zero_tag parsed=0 produced=1 error=0 passed=0
+action=tron_sign case=truncated_tag parsed=0 produced=1 error=0 passed=0
+action=tron_sign case=invalid_wire_type parsed=0 produced=1 error=0 passed=0
+action=tron_sign case=truncated_unknown_field parsed=0 produced=1 error=0 passed=0
+action=bitcoin_plan case=valid parsed=1 produced=1 error=0 passed=1
+action=bitcoin_plan case=valid_unknown_field parsed=1 produced=1 error=0 passed=1
+action=bitcoin_plan case=zero_tag parsed=0 produced=1 error=0 passed=0
+action=bitcoin_plan case=truncated_tag parsed=0 produced=1 error=0 passed=0
+action=bitcoin_plan case=invalid_wire_type parsed=0 produced=1 error=0 passed=0
+action=bitcoin_plan case=truncated_unknown_field parsed=0 produced=1 error=0 passed=0
+action=bitcoin_sign case=valid parsed=1 produced=1 error=0 passed=1
+action=bitcoin_sign case=valid_unknown_field parsed=1 produced=1 error=0 passed=1
+action=bitcoin_sign case=zero_tag parsed=0 produced=1 error=0 passed=0
+action=bitcoin_sign case=truncated_tag parsed=0 produced=1 error=0 passed=0
+action=bitcoin_sign case=invalid_wire_type parsed=0 produced=1 error=0 passed=0
+action=bitcoin_sign case=truncated_unknown_field parsed=0 produced=1 error=0 passed=0
+checks=18 failures=12
