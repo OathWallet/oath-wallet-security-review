@@ -1,0 +1,56 @@
+{
+  "check": "diagnostic-trace-mode",
+  "package": "OathDiagnostics",
+  "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+  "status": "passed",
+  "duration_seconds": 49.104,
+  "toolchain": {
+    "xcode": "Xcode 27.1\nBuild version 27A9275",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+  },
+  "network_guard": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.068,
+    "log": "network-guard.log",
+    "log_sha256": "1ade00a5f587e2a2cea91bb049d97fefd2c6e1d7617afbe19844f7a1a41856ae"
+  },
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 43.082,
+    "log": "build.log",
+    "log_sha256": "aebd676c0c2bab4153d77f7c66d1af1675755bd9a127f02149392503003fb2d6"
+  },
+  "cases": [
+    {
+      "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+      "flag": "OATH_TRACE_OUTBOX_TEST",
+      "source_sha256": "aa2d95b8ee2f1c52b619ae1fcf77fd3a56d29cf7218f486fe833060d3edb0e68",
+      "control": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.271,
+        "log": "DiagnosticTraceTests-control.log",
+        "log_sha256": "2fc20ffa85b6f4d41b5f209e8a28852228f3cf1e4b15086b491347823019f457",
+        "status": "skipped",
+        "expected": "skipped"
+      },
+      "enabled": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.226,
+        "log": "DiagnosticTraceTests-enabled.log",
+        "log_sha256": "ab30237a2fbfa31721cce3abc43d28555720e390fe349d68cbd12063882eca83",
+        "status": "passed",
+        "expected": "passed"
+      }
+    }
+  ],
+  "tests_passed": 1,
+  "controls_skipped": 1,
+  "package_resolved_sha256": null,
+  "test_binary_sha256": "dcddcc498196c8bbb4f745e89fc401b2f31b9a1588f76a800821150fddbfeb36",
+  "sandbox_profile": "(version 1) (allow default) (deny network*)",
+  "runtime_scope": "macOS host; separate fresh XCTest processes; network denied during test execution; synthetic fixtures and in-memory diagnostic sinks; package build may download public dependencies"
+}

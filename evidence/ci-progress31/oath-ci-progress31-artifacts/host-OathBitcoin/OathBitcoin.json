@@ -1,0 +1,37 @@
+{
+  "check": "OathBitcoin",
+  "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathBitcoin",
+    "<SCRATCH>-native",
+    "<AUDIT>/evidence/ci"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 229.11,
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 328 selected; 268 passed; 60 skipped; 0 failed",
+    "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "d4a8e3200de6b9bedcc5225c3caeab5135cba815fcda7bf1f78f21643399e4fa",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 328,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 60,
+    "sha256": "02ec999986796e9ba75751ac3576f30a1ff212b41e9e9aea38b2df189a71a456"
+  },
+  "swift_testing": {
+    "log_sha256": "d3ce6a6a769fe39ad4bab1cda911242398a704f0fd23360fde9c7eba3925bd8b",
+    "summaries": [
+      "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ]
+  }
+}

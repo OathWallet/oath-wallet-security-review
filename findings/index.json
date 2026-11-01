@@ -443,5 +443,17 @@
     "retest_scope": "Identical 20-case production corpus: 32 assertions across eight failed cases, eight crashes and four controls before; all 20 pass after. Disclosed KMS/link interfaces permit memory-only spies; network denied. Outer switcher ordering is source-reviewed/compiled, not runtime tested; no incoming Oath authorization bypass shown.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/33"
+  },
+  {
+    "id": "OW-2026-024",
+    "severity": "medium",
+    "title": "Incoming links bypassed session encryption and response-topic binding",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-024.md",
+    "fix_commit": "f2019f3e752ee3fb1b57d7259abb8721779f0cc8",
+    "regression_only_commit": "18b1033433143f30eeedf5b29e1ab16ea4e12f88",
+    "retest_scope": "Same 16 production cases: 18 assertions across eight failed cases and eight controls before; all 16 pass after. Complete incoming dispatcher/serializer/history with synthetic memory-only keys and network denied. Host UIKit endpoint traps if reached. No enabled Oath app dispatch path or signing bypass demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/34"
   }
 ]

@@ -7,7 +7,27 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`a04bebfafd38f02a441c1a0ee81540882438a99c`**.
+Current review target: **`f2019f3e752ee3fb1b57d7259abb8721779f0cc8`**.
+[OW-2026-024](../findings/OW-2026-024.md) repairs incoming Link Mode message
+authentication and response-topic/local-origin binding. The same 16 production
+cases record 18 assertions across eight failed cases and eight passing controls
+before; all 16 pass after. SDK checks pass 201/one skip, diagnostics 118/two skips,
+146 audit helper tests, source/secret validation and diagnostics coverage pass.
+Unsigned generic iOS Release compilation passes in 452.21 seconds.
+
+[PR 34](https://github.com/devdasx/oath-wallet/pull/34) merged as `888fa6f53e117bc8b2591c8a6643426d58fa2462`.
+Application source matches the tested pin; 97 website-only differences are
+recorded in [merge identity](../evidence/link-boundary-merge-identity.json).
+[Link review](LINK-ENVELOPE-BOUNDARIES.md) discloses the host UIKit endpoint,
+current Oath reachability limits and remaining outgoing/async/metadata boundaries.
+
+The prior [GitHub run 41337776806](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41337776806)
+finished 57 successful jobs. [Downloaded evidence](../evidence/ci-progress31/manifest.json)
+retains 58 passing result records on `4cfeb14ce9bd85ca2d10017cb053ab421df30cf2`
+and seven expected historical failures, with every result log hash verified.
+It does not establish the full matrix on this checkpoint's new source pin.
+
+Previous target: `a04bebfafd38f02a441c1a0ee81540882438a99c`.
 [OW-2026-023](../findings/OW-2026-023.md) repairs authentication TTL decoding,
 expiry conversion and legacy sender chain validation before side effects.
 Twenty identical production cases retain 32 assertions across eight failed

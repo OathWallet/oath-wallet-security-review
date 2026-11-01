@@ -1,0 +1,128 @@
+{
+  "check": "permission-readback",
+  "source_commit": "b7ff1f5eab70b244ba64a68da10addf3a4d8c4c4",
+  "phase": "before",
+  "status": "expected-failure",
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 382.37,
+    "log": "build.log",
+    "log_sha256": "3aec91a5e6b4b1c60e30e65c3e8813229003e728fb7d597456031b8356f613c3"
+  },
+  "runs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 3.097,
+      "log": "run-1-1.log",
+      "log_sha256": "38d784e5f89b2d94724b6924f70e5bbc43874af9cc24166eeda5910cc61f4476",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testLateRemovedCallbackCannotReplaceActiveBatchResult",
+      "status": "contradiction-reproduced",
+      "expected": "contradiction-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.671,
+      "log": "run-1-2.log",
+      "log_sha256": "bb5655b35ff09301fbec23bae65d16092906876b858311a5a61928a0842fc706",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testLateActiveCallbackCannotReplaceRemovedBatchResult",
+      "status": "contradiction-reproduced",
+      "expected": "contradiction-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.872,
+      "log": "run-1-3.log",
+      "log_sha256": "833035edd71d009cf64414509c5a89c25e8126b99b90462241b3b29fe6e5a02e",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testReorgAllowsFreshReadbackInBothDirections",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.537,
+      "log": "run-2-1.log",
+      "log_sha256": "1e16710da8641e04440a1e00d01aae22409874739de7dd924aa5a887af2f6d30",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testLateRemovedCallbackCannotReplaceActiveBatchResult",
+      "status": "contradiction-reproduced",
+      "expected": "contradiction-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.579,
+      "log": "run-2-2.log",
+      "log_sha256": "49986782e927488a38c8876928266cfdcecd61fdb34336886160611fb81e591b",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testLateActiveCallbackCannotReplaceRemovedBatchResult",
+      "status": "contradiction-reproduced",
+      "expected": "contradiction-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.002,
+      "log": "run-2-3.log",
+      "log_sha256": "035a6342f99174aec4b967b5b6678b99586b7dbceb990543143f93ef35963cb1",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testReorgAllowsFreshReadbackInBothDirections",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.825,
+      "log": "run-3-1.log",
+      "log_sha256": "39fb038a7d685e947a4b02b0d233eac50d065ba6e0e60b31f83df848791d21e8",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testLateRemovedCallbackCannotReplaceActiveBatchResult",
+      "status": "contradiction-reproduced",
+      "expected": "contradiction-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.616,
+      "log": "run-3-2.log",
+      "log_sha256": "09d36e02eead1cecf4622ecff0d0c0b3543769cd9cc33e0acae64ef506752e49",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testLateActiveCallbackCannotReplaceRemovedBatchResult",
+      "status": "contradiction-reproduced",
+      "expected": "contradiction-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.798,
+      "log": "run-3-3.log",
+      "log_sha256": "33f66908df9c120197a4c6151747398adeed7b901adac1243d489eebcd00fd2c",
+      "selector": "OathDatabaseTests.PermissionReadbackIdempotencyTests/testReorgAllowsFreshReadbackInBothDirections",
+      "status": "passed",
+      "expected": "passed"
+    }
+  ],
+  "toolchain": {
+    "swift": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.293,
+      "log": "swift-version.log",
+      "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    "xcode": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.249,
+      "log": "xcode-version.log",
+      "log_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+    }
+  },
+  "fixture_sha256": "6239c00eef8762d93ff0eba0ecae1081f45402501c251d28eb25a31edd708607",
+  "test_binary_sha256": "ff7f681abe7b40bf8243efa1ff70c06af0e5f332dcd23654d4f7e4b1b1c72234",
+  "duration_seconds": 397.268,
+  "runtime_scope": "macOS host; actual SQL, imported-key signatures, journal, restart and reorg triggers; synthetic fixtures; test processes deny network",
+  "limitation": "No provider, UI, simulator, physical device, blockchain broadcast or App Store execution. Duplicate callbacks are invoked at the public database API boundary.",
+  "log": "permission-readback.log",
+  "log_sha256": "cc64bf3ec37cdbc2f9ac60d0559758e3913bdd0d2089e9b551b12bb6806c9caf"
+}

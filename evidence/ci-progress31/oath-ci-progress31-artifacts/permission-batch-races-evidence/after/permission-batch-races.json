@@ -1,0 +1,64 @@
+{
+  "check": "permission-batch-races",
+  "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+  "phase": "after",
+  "status": "passed",
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 629.673,
+    "log": "build-and-harness.log",
+    "log_sha256": "99dc14299917782feb923b246ce88e483da3a4efd6cb9030cfbc700109da0dcf",
+    "status": "passed"
+  },
+  "toolchain": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 5.172,
+    "log": "swift-version.log",
+    "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+  },
+  "xcode": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.08,
+    "log": "xcode-version.log",
+    "log_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+  },
+  "runs": [
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 13.509,
+      "log": "run-1.log",
+      "log_sha256": "0b14499357cd7a70f76d238106d9c3b0d4887fbb55516f4c78adbdad9b49c3f0",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 13.74,
+      "log": "run-2.log",
+      "log_sha256": "0b14499357cd7a70f76d238106d9c3b0d4887fbb55516f4c78adbdad9b49c3f0",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 13.12,
+      "log": "run-3.log",
+      "log_sha256": "0b14499357cd7a70f76d238106d9c3b0d4887fbb55516f4c78adbdad9b49c3f0",
+      "status": "passed"
+    }
+  ],
+  "fixture_sha256": {
+    "Tools/CheckPermissionBatchRaces.swift": "d05821b1c2c3a95129cd46f108b0346825e983e7c5d06f34e2057174abd8cf4e",
+    "Tools/CheckMultiWallet.py": "8873f5d6a9b78365004c702878f914f6151060b6f2b64d13ac6fd7a9da5b7ad4"
+  },
+  "test_binary_sha256": "e7c36f0aaf8e07ad5498f82c2a1593362ebad3f147888eca7cf234bc1a052682",
+  "duration_seconds": 676.769,
+  "runtime_scope": "macOS host; production vault, SQL and imported-key EVM/TRON/Solana signatures; substituted biometrics, HD derivation and grant clock; repeated executions deny network",
+  "limitation": "No UI, real biometric, simulator, physical device, broadcast or App Store execution. A controllable monotonic grant clock changes only the permission deadline in the expiry fixture.",
+  "log": "permission-batch-races.log",
+  "log_sha256": "924db4e7c1c14aafc2be56174f57ae95b0987957cbdc3f397f0697844e5e49e0"
+}

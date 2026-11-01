@@ -1,0 +1,156 @@
+{
+  "check": "evm-delegation-nonce",
+  "source_commit": "3cfa6168aac85b5e7c7c42daa4bf7b37e23276ce",
+  "phase": "before",
+  "status": "expected-failure",
+  "toolchain": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.595,
+    "log": "swift-version.log",
+    "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+  },
+  "xcode": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.267,
+    "log": "xcode-version.log",
+    "log_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+  },
+  "runs": [
+    {
+      "exit_code": -5,
+      "timed_out": false,
+      "duration_seconds": 1.396,
+      "log": "case-01-testMaximumNonceThrowsInsteadOfOverflowing.log",
+      "log_sha256": "91fb3aed88d761d32806883299fd9a0796ceb27f05c562fe24d54e6ffd13c636",
+      "case": "testMaximumNonceThrowsInsteadOfOverflowing",
+      "status": "trap-needs-stack-verification"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 2.693,
+      "log": "case-01-testReservedAuthorizationNonceIsRejected.log",
+      "log_sha256": "283824fcc5097cf97825ddbfdb6d3544c12f6171d17f8af32c0ec39fda15a225",
+      "case": "testReservedAuthorizationNonceIsRejected",
+      "status": "invalid-nonce-accepted"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.621,
+      "log": "case-01-testValidDelegationSizingDoesNotRequireFundedPlan.log",
+      "log_sha256": "044508dd7c512ba4f29cc0afd36e6b14cc39cbff3607b8fa6409c69f07a7e383",
+      "case": "testValidDelegationSizingDoesNotRequireFundedPlan",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.429,
+      "log": "case-01-testOrdinaryTransactionsDoNotAddAuthorizationNonce.log",
+      "log_sha256": "1d7766cb5bb643d39b252a61643b4cb6837b7ba7806d6bf05ca87ddce81b5d0e",
+      "case": "testOrdinaryTransactionsDoNotAddAuthorizationNonce",
+      "status": "passed"
+    },
+    {
+      "exit_code": -5,
+      "timed_out": false,
+      "duration_seconds": 0.357,
+      "log": "case-02-testMaximumNonceThrowsInsteadOfOverflowing.log",
+      "log_sha256": "df230fa6cf03e8b821bc700527a40361f34725f4975870d405d7864106722044",
+      "case": "testMaximumNonceThrowsInsteadOfOverflowing",
+      "status": "trap-needs-stack-verification"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.64,
+      "log": "case-02-testReservedAuthorizationNonceIsRejected.log",
+      "log_sha256": "1bae20487887ce88010748c5b40b46675ab0c6a165eb20ecaaa2c7a47b0c5f95",
+      "case": "testReservedAuthorizationNonceIsRejected",
+      "status": "invalid-nonce-accepted"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.654,
+      "log": "case-02-testValidDelegationSizingDoesNotRequireFundedPlan.log",
+      "log_sha256": "616356d2b13d08b0c7b5d4fa793b05300dd064e1b7d2d793f54b2d4b13dacde5",
+      "case": "testValidDelegationSizingDoesNotRequireFundedPlan",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.687,
+      "log": "case-02-testOrdinaryTransactionsDoNotAddAuthorizationNonce.log",
+      "log_sha256": "4a37587c05b4525cb0b28debc997d91e74c670873a4d7d9724362374c1474cdf",
+      "case": "testOrdinaryTransactionsDoNotAddAuthorizationNonce",
+      "status": "passed"
+    },
+    {
+      "exit_code": -5,
+      "timed_out": false,
+      "duration_seconds": 0.537,
+      "log": "case-03-testMaximumNonceThrowsInsteadOfOverflowing.log",
+      "log_sha256": "dac2201d96a9587b8d2ba63684a89d2b7bfbc238a6d54016d4be8642867cba6d",
+      "case": "testMaximumNonceThrowsInsteadOfOverflowing",
+      "status": "trap-needs-stack-verification"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 3.782,
+      "log": "case-03-testReservedAuthorizationNonceIsRejected.log",
+      "log_sha256": "f9770f8348b5841355ddd747f1738ed5fec2e8cac5569dcf72078deec518d441",
+      "case": "testReservedAuthorizationNonceIsRejected",
+      "status": "invalid-nonce-accepted"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 5.43,
+      "log": "case-03-testValidDelegationSizingDoesNotRequireFundedPlan.log",
+      "log_sha256": "ec2fd5a18f6fc1a71dc870fc553a743450465249953cdd061fa28e3b7cfd66da",
+      "case": "testValidDelegationSizingDoesNotRequireFundedPlan",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 6.418,
+      "log": "case-03-testOrdinaryTransactionsDoNotAddAuthorizationNonce.log",
+      "log_sha256": "bcb55f83675da11a12f715ee93deccb782a43d43945884fda01d0169af0f4d71",
+      "case": "testOrdinaryTransactionsDoNotAddAuthorizationNonce",
+      "status": "passed"
+    }
+  ],
+  "stack": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 32.707,
+    "log": "overflow-backtrace.log",
+    "log_sha256": "56bb1f23db1eaa39960f0ff9e41e15fb8cd4272907e1cd9ff4c5641ae3072c98",
+    "overflow_verified": true
+  },
+  "traps": 3,
+  "invalid_nonce_accepted": 3,
+  "tests_passed": 6,
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 507.164,
+    "log": "build.log",
+    "log_sha256": "aba48c22acb4d6ccaf08dc282ee1bc85e9a8865c9ca486baf2c0a9d1ccd5228b"
+  },
+  "duration_seconds": 572.923,
+  "selector": "OathAnkrTests.EVMDelegationNonceBoundaryTests",
+  "fixture_sha256": "1b7ec8fa032f29658bd217306d90b918ea02b74378fdda87544e0dc4ad8af007",
+  "test_binary_sha256": "93970d7e0d83ef85673386164bc15a4055ead9f4367c7b99d7339aca4dd12ffe",
+  "runtime_scope": "macOS host; synthetic direct serialization calls; network denied; no simulator or device",
+  "limitation": "The public helper crashes on a direct malformed call. Existing app quote/sign/verify paths already validate the nonce; no reachable application exploit established.",
+  "log": "evm-delegation-nonce.log",
+  "log_sha256": "98b03e150f38231a4f57b0a35fd673a397623aa57ef89bbdc4d8f822bc2cdbeb"
+}

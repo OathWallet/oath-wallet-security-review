@@ -96,3 +96,9 @@ logging boundaries require their own controlled proof; this corpus replaces the
 link endpoint with a spy and does not claim to test those behaviors. Modern
 multichain authentication, complete peer flows and actual relay retention remain
 separate work. No simulator, device, transaction or App Store operation occurred.
+
+## Follow-up
+
+[Progress 39](LINK-ENVELOPE-BOUNDARIES.md) adds a controlled proof and repair for
+the incoming link encryption and response-topic gap noted above. Outgoing
+transport cleanup and the other listed limitations remain separate work.

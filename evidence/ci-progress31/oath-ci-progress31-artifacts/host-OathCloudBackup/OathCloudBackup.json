@@ -1,0 +1,37 @@
+{
+  "check": "OathCloudBackup",
+  "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathCloudBackup",
+    "<SCRATCH>-native",
+    "<AUDIT>/evidence/ci"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 45.2,
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 58 selected; 58 passed; 0 skipped; 0 failed",
+    "\u2714 Test run with 1 test in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "e353f375ca4cc97906001079c5298d0db946f74868df03a05811d6bf1577c88c",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 58,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "sha256": "f27be5fe3752ba62fd019e9f5a64a9cef54b6958816df483906ac7ce4b1d3dcb"
+  },
+  "swift_testing": {
+    "log_sha256": "9fdc1242adb69d5f44a87506c0ad17eee391f77eeada458bace6f8b95a641bac",
+    "summaries": [
+      "\u2714 Test run with 1 test in 0 suites passed after 0.001 seconds."
+    ]
+  }
+}
