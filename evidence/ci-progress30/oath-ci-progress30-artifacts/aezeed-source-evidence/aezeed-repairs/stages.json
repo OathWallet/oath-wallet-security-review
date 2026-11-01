@@ -1,0 +1,116 @@
+[
+  {
+    "stage": "before",
+    "exit_code": 1,
+    "timed_out": false,
+    "expected_outcome_observed": true,
+    "duration_seconds": 119.227,
+    "outcomes": {
+      "pass": [
+        "TestBlakeValidStateRoundTrips"
+      ],
+      "fail": [
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/1",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/15",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/17",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/31",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/33",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/63",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/65",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/129",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/1",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/15",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/17",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/31",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/33",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/63",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/65",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/129",
+        "TestCBCRejectsPartialBlocksWithoutMutation",
+        "TestCBCRejectsShortOutputWithoutMutation",
+        "TestBlakeRejectsInvalidStateWithoutMutation/83/0",
+        "TestBlakeRejectsInvalidStateWithoutMutation/83/65",
+        "TestBlakeRejectsInvalidStateWithoutMutation/83/255",
+        "TestBlakeRejectsInvalidStateWithoutMutation/212/129",
+        "TestBlakeRejectsInvalidStateWithoutMutation/212/255",
+        "TestBlakeRejectsInvalidStateWithoutMutation",
+        "TestGCMLargeLengthEncoding/aad-ct32",
+        "TestGCMLargeLengthEncoding/aad-ct64",
+        "TestGCMLargeLengthEncoding/nonce-ct64",
+        "TestGCMLargeLengthEncoding/plaintext-ct64",
+        "TestGCMLargeLengthEncoding"
+      ],
+      "skip": [],
+      "top_level": {
+        "pass": [
+          "TestBlakeValidStateRoundTrips"
+        ],
+        "fail": [
+          "TestBlakeRejectsInvalidStateWithoutMutation",
+          "TestCBCRejectsPartialBlocksWithoutMutation",
+          "TestCBCRejectsShortOutputWithoutMutation",
+          "TestGCMLargeLengthEncoding"
+        ],
+        "skip": []
+      }
+    },
+    "fixture_sha256": "6c5b6c62aad8b3937c1df378d08873572fef18d028e6ff6ac17dd5edf8f78647",
+    "log_sha256": "f20ee6c942fb69c4b983c82b80f6b6663dc50066a4eeacdde94b0b36bce4708d"
+  },
+  {
+    "stage": "after",
+    "exit_code": 0,
+    "timed_out": false,
+    "expected_outcome_observed": true,
+    "duration_seconds": 267.857,
+    "outcomes": {
+      "pass": [
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/1",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/15",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/17",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/31",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/33",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/63",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/65",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct32/129",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/1",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/15",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/17",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/31",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/33",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/63",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/65",
+        "TestCBCRejectsPartialBlocksWithoutMutation/ct64/129",
+        "TestCBCRejectsPartialBlocksWithoutMutation",
+        "TestCBCRejectsShortOutputWithoutMutation",
+        "TestBlakeRejectsInvalidStateWithoutMutation/83/0",
+        "TestBlakeRejectsInvalidStateWithoutMutation/83/65",
+        "TestBlakeRejectsInvalidStateWithoutMutation/83/255",
+        "TestBlakeRejectsInvalidStateWithoutMutation/212/129",
+        "TestBlakeRejectsInvalidStateWithoutMutation/212/255",
+        "TestBlakeRejectsInvalidStateWithoutMutation",
+        "TestBlakeValidStateRoundTrips",
+        "TestGCMLargeLengthEncoding/aad-ct32",
+        "TestGCMLargeLengthEncoding/aad-ct64",
+        "TestGCMLargeLengthEncoding/nonce-ct64",
+        "TestGCMLargeLengthEncoding/plaintext-ct64",
+        "TestGCMLargeLengthEncoding"
+      ],
+      "fail": [],
+      "skip": [],
+      "top_level": {
+        "pass": [
+          "TestBlakeRejectsInvalidStateWithoutMutation",
+          "TestBlakeValidStateRoundTrips",
+          "TestCBCRejectsPartialBlocksWithoutMutation",
+          "TestCBCRejectsShortOutputWithoutMutation",
+          "TestGCMLargeLengthEncoding"
+        ],
+        "fail": [],
+        "skip": []
+      }
+    },
+    "fixture_sha256": "6c5b6c62aad8b3937c1df378d08873572fef18d028e6ff6ac17dd5edf8f78647",
+    "log_sha256": "cd5fab0fd5f15f0bcc0cd1228bd1607d7d241e6ff1332e57260a5b903e41eafc"
+  }
+]

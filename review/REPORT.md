@@ -7,15 +7,23 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`e7aed8c9d08357df10a4f85be7d069a66fad07f8`**.
-[OW-2026-015](../findings/OW-2026-015.md) removes four optional transaction
-metadata fields from relay publish JSON while retaining the encrypted peer
-message and routing. The same four-case corpus reproduces 11 metadata assertions
-before and passes afterward; the encrypted-response control passes both phases.
-The full SDK host suite reports 60 passes/one skip; diagnostics reports 118
-passes/two skips; public-source checks and unsigned Release compilation pass.
-[Relay review](RELAY-METADATA-REVIEW.md) retains scope, failed attempts and the
-separate outstanding SDK-event initialization lead. No App Store operation occurred.
+Current review target: **`4cfeb14ce9bd85ca2d10017cb053ab421df30cf2`**.
+[OW-2026-016](../findings/OW-2026-016.md) repairs SDK event opt-out across
+initialization, collection, queue cleanup, retry cancellation and stale response
+acknowledgement. The same nine production cases retain 14 expected assertions
+before and pass afterward. SDK checks report 69 passes/one skip; diagnostics
+reports 118 passes/two skips; source/secret checks, diagnostics coverage and
+unsigned generic iOS Release compilation pass. [PR 24](https://github.com/devdasx/oath-wallet/pull/24)
+is merged with an identical tested source tree. No App Store operation occurred.
+
+The prior [relay metadata repair](../findings/OW-2026-015.md) at
+`e7aed8c9d08357df10a4f85be7d069a66fad07f8` retains its separate four-case
+before/after proof. Its full [GitHub run](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41291217273)
+now has **56 successful jobs**, with downloaded artifacts preserved in
+[the evidence manifest](../evidence/ci-progress30/manifest.json). These are
+verified prior-target results, not final-target or whole-wallet completion.
+[Event lifecycle review](EVENTS-LIFECYCLE-REVIEW.md) records the new source reads,
+reproduction limits and prior CI source pins.
 
 [Progress 29](SOLANA-VECTOR-ISOLATION.md) at
 `f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1` isolated all 76 unchanged Solana
@@ -46,8 +54,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,809 files: 256 reviewed, 35 partially reviewed,
-11 generated artifacts verified, 4,507 outstanding. The inventory also includes
+The application ledger contains 4,810 files: 271 reviewed, 32 partially reviewed,
+11 generated artifacts verified, 4,496 outstanding. The inventory also includes
 website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
@@ -85,6 +93,10 @@ No new production defect was confirmed. The new CI job is configured but its
 GitHub execution remains unverified; no app source was changed.
 
 ## Findings and repair status
+
+- [OW-2026-016](../findings/OW-2026-016.md), low: SDK telemetry opt-out missed
+  initialization/message queues and unfinished deliveries. Fixed and retested:
+  14 before assertions, nine passing cases after; no secret or fund-loss claim.
 
 - [OW-2026-015](../findings/OW-2026-015.md), low: optional transaction metadata
   was relay-readable outside the encrypted peer message. Fixed at the final

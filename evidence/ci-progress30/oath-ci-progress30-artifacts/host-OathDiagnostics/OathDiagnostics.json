@@ -1,0 +1,37 @@
+{
+  "check": "OathDiagnostics",
+  "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathDiagnostics",
+    "<SCRATCH>-native",
+    "<AUDIT>/evidence/ci"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 49.68,
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+    "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "9cc682b4f77b4187fdc9890896717002e59332fa824e9143c5664299addbc852",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 120,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 2,
+    "sha256": "fd22dbf5367df52d517dff415aac5ae968875f69dfc7c2364330401ef2228af2"
+  },
+  "swift_testing": {
+    "log_sha256": "315a107f8d738a24fb589b50ce92c001291f45eff2b0be35941b2dbf99587ab2",
+    "summaries": [
+      "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ]
+  }
+}

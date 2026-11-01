@@ -1,0 +1,129 @@
+{
+  "check": "swap-approval",
+  "source_commit": "fe6d866751636da183a5de01b90c0f92ea4c5102",
+  "phase": "before",
+  "status": "expected-failure",
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 239.481,
+    "log": "build.log",
+    "log_sha256": "690770453feff1d2415bb41f39b552f50cb221339b3f086795a0d28ecf6fe4b9"
+  },
+  "runs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 1.263,
+      "log": "run-1-1.log",
+      "log_sha256": "1924cd8a6bf24231fc470891575de434b2023cf06cac7f0696b902d51ff68ef1",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testAdditionalOperationsCannotDisappearFromApprovalModel",
+      "status": "omitted-operations-reproduced",
+      "expected": "omitted-operations-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.178,
+      "log": "run-1-2.log",
+      "log_sha256": "b5c315c7dfb8fa319161cbf0484e43f8ea171c655fc0768939d5df3443e49932",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testExtraRecipientAmountAndExecutionOrderAffectApproval",
+      "status": "omitted-operations-reproduced",
+      "expected": "omitted-operations-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.175,
+      "log": "run-1-3.log",
+      "log_sha256": "3c41c8cb2660ff77b93ba764d9559aa679b4a8088afcee075f9ae40b19a2000d",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testDecoderAndStrictBoundaryControls",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.265,
+      "log": "run-2-1.log",
+      "log_sha256": "b281098714a973e88736631c3162f8fa62d5515f86dc4f8ee625bde03b865d25",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testAdditionalOperationsCannotDisappearFromApprovalModel",
+      "status": "omitted-operations-reproduced",
+      "expected": "omitted-operations-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.216,
+      "log": "run-2-2.log",
+      "log_sha256": "850f8c85b39647280ad67101c3d0653988689a799477312b13e558ea909a9c7e",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testExtraRecipientAmountAndExecutionOrderAffectApproval",
+      "status": "omitted-operations-reproduced",
+      "expected": "omitted-operations-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.144,
+      "log": "run-2-3.log",
+      "log_sha256": "bca6def5998ea5655840153bba642a3d88f6ed667942ace1650f6c27e26ce65a",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testDecoderAndStrictBoundaryControls",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.248,
+      "log": "run-3-1.log",
+      "log_sha256": "a3362cd6062018d07d9a112d96eeb64bd3ef72c9d2ac0592d26b8611f919a185",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testAdditionalOperationsCannotDisappearFromApprovalModel",
+      "status": "omitted-operations-reproduced",
+      "expected": "omitted-operations-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.219,
+      "log": "run-3-2.log",
+      "log_sha256": "e42ac5dbd1da1ce11bebc1011e7edb92139bf878a9652108af194f234ee4e3aa",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testExtraRecipientAmountAndExecutionOrderAffectApproval",
+      "status": "omitted-operations-reproduced",
+      "expected": "omitted-operations-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.19,
+      "log": "run-3-3.log",
+      "log_sha256": "5efe1a74ec4c0fff5bbd6fa1ca95222031961647272b3870c72fc72770e60e78",
+      "selector": "OathAnkrTests.WalletConnectApprovalOperationsTests/testDecoderAndStrictBoundaryControls",
+      "status": "passed",
+      "expected": "passed"
+    }
+  ],
+  "toolchain": {
+    "swift": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.268,
+      "log": "swift-version.log",
+      "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    "xcode": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.334,
+      "log": "xcode-version.log",
+      "log_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+    }
+  },
+  "fixture_sha256": "cb73c33329f9f5c331ad867f6f3848332ef8c06623af2154600d1e805c88ff3a",
+  "vector_sha256": "99300d00c96fec49b16352742c7d6fa86fb3fab1d99c397d59d861f29cfdc6e4",
+  "test_binary_sha256": "a03f17e889042843b9868b578a77dca2371f0376262832842079950fb82c089f",
+  "duration_seconds": 247.537,
+  "runtime_scope": "macOS host; production WalletConnect decoder and approval model; synthetic ABI inputs; test processes deny network",
+  "limitation": "No provider, UI, simulator, physical device, blockchain broadcast or App Store execution. Host checks cover the production approval model, not SwiftUI rendering or contract execution.",
+  "log": "swap-approval.log",
+  "log_sha256": "57e44a702b44e8f1e32bc5ca43ec8d9e278c55b5c1c0b16bc0f1ed3bb49331ff"
+}

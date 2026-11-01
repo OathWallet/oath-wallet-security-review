@@ -722,10 +722,11 @@
     ]
   },
   "Tools/CheckWalletConnectSDK.py": {
-    "sha256": "3654a52a8b1d73965d2debc59c040c6cacfee8183a8970b3dcfd74b71721c5ae",
+    "sha256": "01bc45315d2aaba9c8e30b506f3a58967fa7c4680be0984afbfebc3f973b3721",
     "status": "reviewed",
     "evidence": [
-      "review/INPUT-BOUNDARIES.md"
+      "review/INPUT-BOUNDARIES.md",
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/TonAmount.swift": {
@@ -2193,27 +2194,114 @@
     ]
   },
   "Vendor/Reown/Sources/Events/EventsClient.swift": {
-    "sha256": "c9b61ed4ff19bd4252ba61be40717a19dc1b550908a8b2754d7f41dab1dffde0",
-    "status": "partially-reviewed",
+    "sha256": "dc3f3d6189bf3cb6fb2c22eff2c0a5c84654676a74c3d481f350a2e797f3f5a7",
+    "status": "reviewed",
     "evidence": [
       "review/RELAY-METADATA-REVIEW.md",
-      "findings/OW-2026-015.md"
+      "findings/OW-2026-015.md",
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
     ]
   },
   "Vendor/Reown/Sources/Events/EventsClientFactory.swift": {
-    "sha256": "e3360dbde71d1f90e6be777149d6d6671b86516943d68698732273f886e866aa",
-    "status": "partially-reviewed",
+    "sha256": "d12886f6523b23992db6b93a7043db1c604d5a7399bb927fb33ec964b1033c40",
+    "status": "reviewed",
     "evidence": [
       "review/RELAY-METADATA-REVIEW.md",
-      "findings/OW-2026-015.md"
+      "findings/OW-2026-015.md",
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
     ]
   },
   "Vendor/Reown/Sources/Events/Events.swift": {
     "sha256": "0062ed1e4d96e8c3cd08e15677e2067aab8cde6045aefde9740195e5d8c941e9",
-    "status": "partially-reviewed",
+    "status": "reviewed",
     "evidence": [
       "review/RELAY-METADATA-REVIEW.md",
-      "findings/OW-2026-015.md"
+      "findings/OW-2026-015.md",
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/EventsDispatcher.swift": {
+    "sha256": "6b7ba77ab7d81b726dda7d559f949a633572906b8f3b88af2b14d01357a83e48",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/NetworkingService.swift": {
+    "sha256": "20240980696abfabc5098fe10c1b6b6485b02b8f828018ae9ad09629def73bc2",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/UserDefaultsStateStorage.swift": {
+    "sha256": "cbe7bd4bb0eb00853cc23da666f49010d8c6a22d1103574c67d2c0e239f3087e",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/EventStorage.swift": {
+    "sha256": "0aa139a187093d8ecae1e909d942ed7fc98ecae107fa25ef0201597f43b35fac",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/EventsCollector.swift": {
+    "sha256": "500a8ced845dcffa307b3e80b40fea54466c45d85a0144968fe9147df54f8c3d",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/InitEventsStorage.swift": {
+    "sha256": "ed92a2a299dd47d4939f165b3d26ce886a92ac174b981568055f7bf42133ec00",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/MessageEventProperties.swift": {
+    "sha256": "0f686365a6f9b91bd4f5160beae1f1221e27c7761ba1ea7f8c8d0d987d72ce03",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/MessageEventType.swift": {
+    "sha256": "29bafbb3bc64c978f17cae179322270f09a573ce32c916d65fd8b60cd830f03d",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/MessageEvent.swift": {
+    "sha256": "35c3134a509dfe4c3ddfc85ec6cfe17340204e48dc85ad6e46335cca65a0a85b",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/InitEvent.swift": {
+    "sha256": "b267779f287f564ace13ab3cf19a8d79a9f6eb821fe141648f19602e5c80c053",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Vendor/Reown/Sources/Events/EventsImports.swift": {
+    "sha256": "87d52a316b97af4e0a49f88d50bf867134014b9e6f7eab656669724a7297c9bc",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
+    ]
+  },
+  "Tools/WalletConnectSDKValidation/EventsPrivacyLifecycleTests.swift": {
+    "sha256": "7a38a51201f3abb3a0c7f90e0aaac1185a64d932d557173daf2872477cf43fea",
+    "status": "reviewed",
+    "evidence": [
+      "review/EVENTS-LIFECYCLE-REVIEW.md"
     ]
   }
 }

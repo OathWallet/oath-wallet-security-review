@@ -347,5 +347,17 @@
     "retest_scope": "Same four production-code host tests: 11 expected metadata exposure assertions across three failed cases and one passing encryption/routing control before; all four pass after. Network denied. Not a live relay or private-key leak proof.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/23"
+  },
+  {
+    "id": "OW-2026-016",
+    "severity": "low",
+    "title": "SDK event opt-out did not cover collection and unfinished delivery",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-016.md",
+    "fix_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+    "regression_only_commit": "95e557d389413daa4dc03b8c7f7b3d4803507a7c",
+    "retest_scope": "Same nine production-code host tests under network denial: 14 expected assertions across seven failed cases and two passing controls before; all nine pass after. Memory stores, cancellation-resistant fake transport and intercepted URLSession. Bounded 0.3-second negative observations; no real telemetry delivery or fund-loss claim.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/24"
   }
 ]

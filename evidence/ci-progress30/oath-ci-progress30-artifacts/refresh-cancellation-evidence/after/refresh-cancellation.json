@@ -1,0 +1,105 @@
+{
+  "check": "refresh-cancellation",
+  "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+  "phase": "after",
+  "status": "passed",
+  "runs": [
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 2.255,
+      "log": "case-01.log",
+      "log_sha256": "c0b31a48e3bd681d2c0111b56d8f2bf811dcd5d00384aaa4f99c9d15d279e281",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.508,
+      "log": "case-02.log",
+      "log_sha256": "2b684905398e54786c636ec4e46518766190a3a06f97172b92134285e20f27b8",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.267,
+      "log": "case-03.log",
+      "log_sha256": "f77c5e090e7eb37e76b66d01741f1e4a15fc1f9cb04df5cee21c9d27b4c27862",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.487,
+      "log": "case-04.log",
+      "log_sha256": "2154d5297aad8d568d900b54b30fdfaadfaf559d90addd12d4d45f95e4dc6e48",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.25,
+      "log": "case-05.log",
+      "log_sha256": "b3e6a0e99dfd49d65b000ced682428d60236d04442a20d36d02bde36168658d2",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.056,
+      "log": "case-06.log",
+      "log_sha256": "b41476a630da9818849816aee0a3809229e562a754b312dee0e5a60ec478a0bf",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.377,
+      "log": "case-07.log",
+      "log_sha256": "bdc75df7c07d5b23ccce1b288fc99b19ff8d17e687ed22327b3608ed0df5d357",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.387,
+      "log": "case-08.log",
+      "log_sha256": "2390d95d648c65ece505187cd1ce0a805556866641d73da8d99c4162309d9b90",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.471,
+      "log": "case-09.log",
+      "log_sha256": "7ce63ec664c54ebb93fc37b8a75ba2565f0577d7b2bd87978784fcfb43d3a67c",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.253,
+      "log": "case-10.log",
+      "log_sha256": "57526c0cb118745d8598253d6ffa481b82a7df4d4ca438b6e04ac3d1c405ffed",
+      "status": "passed"
+    }
+  ],
+  "race_reproduced": 0,
+  "tests_passed": 10,
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 270.562,
+    "log": "build.log",
+    "log_sha256": "694a79da68ce8cdf429052f768297ad8de20a47ed38098eab9e868f57f9ce2fd"
+  },
+  "duration_seconds": 286.026,
+  "selector": "OathDatabaseTests.AnkrSynchronizerTests/testCancellationClosesQueuedAdmissionBeforeIndividualWorkersUnwind",
+  "fixture_sha256": "b07e4637ee0598614412016c4f05bd7c662e976f7f817e6ee4ee251e8087c3a0",
+  "test_binary_sha256": "2c6f4131bead2b07372dd26820ab36038f9b11514cefae82508b9446fea7d20e",
+  "runtime_scope": "macOS host; synthetic cancellation/permit scheduling; network denied; no simulator or device",
+  "limitation": "Finite scheduler samples; baseline need not fail every time. Only the specific admission assertion counts as reproduction.",
+  "log": "refresh-cancellation.log",
+  "log_sha256": "6482398b07885dd7eac21b46ed59ae59a386291f7b600fe0fa818619ccf0cd05"
+}

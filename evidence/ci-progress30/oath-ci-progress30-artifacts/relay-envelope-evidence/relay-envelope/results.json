@@ -1,0 +1,64 @@
+[
+  {
+    "stage": "before",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "baseline_commit": "c7cdbde5e9f136b595500e92fbc904b107dcd8ee",
+    "reproduction_tree": "final source with only the production ingress file restored from baseline",
+    "production_sha256": "02557722fbebada8281aef1b1671273f8a6fc9df651f47b3789c3c096dd30728",
+    "test_sha256": "576192d27054a545fde917b47a15b818997e2caf8f1c17edf80633fce662fb60",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "RelayEnvelopeAuthenticationTests"
+    ],
+    "exit_code": 1,
+    "cases": {
+      "passed": 2,
+      "skipped": 0,
+      "failed": 2
+    },
+    "expected_cases": {
+      "passed": 2,
+      "skipped": 0,
+      "failed": 2
+    },
+    "duration_seconds": 90.374,
+    "log_sha256": "9034150c10531ecde87995aac051e2ab95c01cb1db97291f74f9cd67cca0a0ec",
+    "runtime_scope": "host; synthetic relay dispatcher and memory key storage; no live relay or wallet",
+    "reproduced": true
+  },
+  {
+    "stage": "after",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "baseline_commit": "c7cdbde5e9f136b595500e92fbc904b107dcd8ee",
+    "reproduction_tree": "exact final source",
+    "production_sha256": "96473191026bf009f2932af9646b34ffece5a9c07668d199a7837d57693d6144",
+    "test_sha256": "576192d27054a545fde917b47a15b818997e2caf8f1c17edf80633fce662fb60",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "RelayEnvelopeAuthenticationTests"
+    ],
+    "exit_code": 0,
+    "cases": {
+      "passed": 4,
+      "skipped": 0,
+      "failed": 0
+    },
+    "expected_cases": {
+      "passed": 4,
+      "skipped": 0,
+      "failed": 0
+    },
+    "duration_seconds": 29.932,
+    "log_sha256": "2984ea8053667c41c3cefe982be6451d1708ddd8e73a2d83e2fb6e79b305de7c",
+    "runtime_scope": "host; synthetic relay dispatcher and memory key storage; no live relay or wallet",
+    "reproduced": true
+  }
+]

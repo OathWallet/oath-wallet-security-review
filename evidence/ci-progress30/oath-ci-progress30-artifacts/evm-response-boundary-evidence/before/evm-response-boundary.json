@@ -1,0 +1,64 @@
+{
+  "check": "evm-response-boundary",
+  "source_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
+  "phase": "before",
+  "status": "expected-failure",
+  "toolchain": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.245,
+    "log": "swift-version.log",
+    "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+  },
+  "xcode": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.15,
+    "log": "xcode-version.log",
+    "log_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+  },
+  "runs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 1.155,
+      "log": "case-01.log",
+      "log_sha256": "172933a8dd172daae53598c57877754e55d151d04205661c85753934ac300235",
+      "status": "boundary-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.226,
+      "log": "case-02.log",
+      "log_sha256": "ba9e78f71a2a8faf866d1a75a54fc3604fad0bb0609b44a9e705119486b20a16",
+      "status": "boundary-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.271,
+      "log": "case-03.log",
+      "log_sha256": "20b5b0fa99543e310e4b6e5537b59e488e750ce6b146fe067fa987ccbef021aa",
+      "status": "boundary-reproduced"
+    }
+  ],
+  "boundary_reproduced": 3,
+  "process_runs_passed": 0,
+  "tests_passed": 6,
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 252.312,
+    "log": "build.log",
+    "log_sha256": "d9b23324d065d4ebf22a520fd890023d08fcb8519fc8fb0db3463def714efa28"
+  },
+  "duration_seconds": 258.528,
+  "selector": "OathAnkrTests.EVMSendResponseBoundaryTests",
+  "fixture_sha256": "500387c6be0d8c5a9a1fd72eb47d2e0792a85c4b74f1e41e6164d45261d443ef",
+  "test_binary_sha256": "5be3d887b408f7b14b3d7fcfdf9bec4f27927530f99d457b2ea102e94e814a6b",
+  "runtime_scope": "macOS host; synthetic oversized RPC responses; network denied; no simulator or device",
+  "limitation": "Three deterministic repetitions. Does not demonstrate fund loss, denial of service, or a streaming transport memory limit; default transport separately caps replies at 64 MiB.",
+  "log": "evm-response-boundary.log",
+  "log_sha256": "9f7624a7edab10e961ff21b7a6804e62e74b6c1c51fa1aed9c2d11a1b8fe6e22"
+}

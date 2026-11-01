@@ -1,0 +1,466 @@
+[
+  {
+    "selector": "OathCloudBackupTests.AptosMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.747,
+    "log": "OathCloudBackup-cases/3ae9617ee842475a.log",
+    "log_sha256": "64895ff1787f4b043aaf8798ef4f4f2d0bc790f8c4c567490e82e031d0ef4933"
+  },
+  {
+    "selector": "OathCloudBackupTests.AptosMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.131,
+    "log": "OathCloudBackup-cases/6df93327e2478bc3.log",
+    "log_sha256": "a0795f5c230965af6f217bd398eba9ffd54c2832616aa7e751750af050bd0c2d"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupBatchTests/testCancellationStopsPreparingRemainingWallets",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.132,
+    "log": "OathCloudBackup-cases/83bf0945b8678a99.log",
+    "log_sha256": "0f1d7f656ee256e774c1501802896a8697867f3c4f0583c32cd7f2b09fcf8b5f"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupBatchTests/testEmptyBatchDoesNotPrepareAnything",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.13,
+    "log": "OathCloudBackup-cases/dfbb86c9d8d6f78c.log",
+    "log_sha256": "4105f831dd5807c36e2eacb7948bd84948422bfeb9c014331dd5540e39fab3af"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupBatchTests/testEveryWalletAttemptedOnceAndFailureDoesNotSkipLaterWallets",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.104,
+    "log": "OathCloudBackup-cases/1356cc3cbf4055b2.log",
+    "log_sha256": "e8cd5371d1ee1fc4563b2d00a807fc4d659c3c892c4ad9091a20fb0036d6257e"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupBatchTests/testOnePasswordProducesIndependentRestorableBackupsForAllWalletKinds",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.603,
+    "log": "OathCloudBackup-cases/b55624a87f309116.log",
+    "log_sha256": "6f3056c7fbc5fbba128b0f295ad04bf5f19a927a46c29a1528b88fabfd44f552"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testBitcoinCashExtendedAndUncompressedEncryptedRoundTrips",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.962,
+    "log": "OathCloudBackup-cases/fb84f57f788e0694.log",
+    "log_sha256": "dcae54ef3d34c6ded67c0d613c2a4d81251e3f698ba42cba2104ac3f0a1254bc"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testBitcoinCompressionAndExtendedKeySurviveEncryptedBackup",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.89,
+    "log": "OathCloudBackup-cases/48086244e1e9a96c.log",
+    "log_sha256": "7b9d83be6203d32903d96833233872204c371f30ae3b1092c4cf9bebbcad9d7b"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testBoundsAndUnknownFormatsRejectedBeforeExpensiveKDF",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.201,
+    "log": "OathCloudBackup-cases/85ec31c4321b098b.log",
+    "log_sha256": "9a2d1b3685a1a6159153c74fa53bcae608731ade984752b02c28ea7557fa9cf4"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testCanonicalUnicodePasswordsMatchAcrossKeyboardEncodings",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.412,
+    "log": "OathCloudBackup-cases/992aaab34a8a9af7.log",
+    "log_sha256": "83a49943e64b3df0e08408e7a2efcac056ccabdae89f25557a38039b0eec8a0f"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testCoordinatedFileWriteIsAtomicIdempotentAndNeverOverwritesOtherBytes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.476,
+    "log": "OathCloudBackup-cases/6323e3a2ff95a09a.log",
+    "log_sha256": "91d128b4464e293fdf535306c91e530e336d1bd3da872339aad18e2521f8d748"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testDogecoinExtendedAndUncompressedEncryptedRoundTrips",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.362,
+    "log": "OathCloudBackup-cases/78406197092c5380.log",
+    "log_sha256": "0d417717018d5ffa457bbe472556a48802603787e3e451f922c134c8bfd3cf26"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testLitecoinExtendedAndUncompressedEncryptedRoundTrips",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.318,
+    "log": "OathCloudBackup-cases/8d440f41f5d8c076.log",
+    "log_sha256": "2cee671178eb2ba9c2d457d569c8707abc42dc4b77e5fe3f0269a43a224c76af"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testMalformedArtworkIsRejectedBeforeEncryption",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.105,
+    "log": "OathCloudBackup-cases/da86cfe333184a23.log",
+    "log_sha256": "2d4c24d7fe1fab4ba47bf48a87bc4a6878cf3f05c46836b68d622a063410a33e"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testNameAndCustomArtworkSurviveEncryptedRoundTrip",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.429,
+    "log": "OathCloudBackup-cases/61a05ac7520f9684.log",
+    "log_sha256": "2b6a6147bc7f6903ca67b55c19555b7d50b5db2db4d3dc5a0faacfe8bc4709c0"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testOlderBackupPayloadWithoutColorKeepsNameAndOriginalPalette",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.407,
+    "log": "OathCloudBackup-cases/42ea031805961139.log",
+    "log_sha256": "898511bf1b81adce4f8e0191965a9701511131d5f85bf7e6d0c98f54b59042c1"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testPrivateKeyBackupIsEncryptedAndRetainsScopeAndCustomization",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.615,
+    "log": "OathCloudBackup-cases/a00ab1adaa173d45.log",
+    "log_sha256": "43c6be3e4ea45771c247f05ecba315a44583551db9c4c88789829b5a76cfae53"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testPrivateKeyBackupRejectsAmbiguousMaterialAndMismatchedAccounts",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.105,
+    "log": "OathCloudBackup-cases/76c0b3df0d926c12.log",
+    "log_sha256": "fcc3f273b1db075f2df59f3b6bf0c32d1c5d050c5aca87367db867557d364893"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testRoundTripAndRandomizedCiphertextContainsNoPlaintext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.536,
+    "log": "OathCloudBackup-cases/a1461e7fac3794da.log",
+    "log_sha256": "f115bffe9df30a0ca0872f65769c245756f8ef2784bf1867d70e597ff732ef76"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testSpecialBitcoinKeyFlagsCannotBeAppliedToOtherNetworks",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.099,
+    "log": "OathCloudBackup-cases/1a3dae90a31f732b.log",
+    "log_sha256": "29723cbd9bba42d0542c0e7e9d19f532122fb87afd4c1d5c6be76e07c6b82476"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testUnicodeAndWhitespacePasswordsAreNotSilentlyAltered",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.575,
+    "log": "OathCloudBackup-cases/39860fd6c557d223.log",
+    "log_sha256": "b80326295b5b6f621f30f0070e77ca9022f6e802bd1811dbce753368d1b35e04"
+  },
+  {
+    "selector": "OathCloudBackupTests.BackupDocumentTests/testWrongPasswordAndTamperingFailClosed",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.742,
+    "log": "OathCloudBackup-cases/17df375f5c3ae674.log",
+    "log_sha256": "42abed5b27c58c1494d019ed1377ad8d0b462844e7406c52d3b295f80e9496bb"
+  },
+  {
+    "selector": "OathCloudBackupTests.BitcoinCashMultisigBackupTests/testEncryptedRoundTripPreservesThresholdAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.745,
+    "log": "OathCloudBackup-cases/a26da3a88ee06f10.log",
+    "log_sha256": "40af7ded9fdb17ff0dea434f68df6f25677c4892338019a1e610fc9b3938ac47"
+  },
+  {
+    "selector": "OathCloudBackupTests.BitcoinCashMultisigBackupTests/testRejectsMissingKeysImpossibleThresholdAndAmbiguousMaterial",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.145,
+    "log": "OathCloudBackup-cases/9009b602bfe4a612.log",
+    "log_sha256": "87d6c360c76ae8fead84c794be6030122373def413615d3b10069fc0c27f0b52"
+  },
+  {
+    "selector": "OathCloudBackupTests.BitcoinMultisigBackupTests/testEncryptedRoundTripPreservesThresholdAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.591,
+    "log": "OathCloudBackup-cases/36bd0f6d3d770fe8.log",
+    "log_sha256": "3c599f39bbf7bb99898272e180b2296fd7e39b680354b54c1c46146a7250e5ab"
+  },
+  {
+    "selector": "OathCloudBackupTests.BitcoinMultisigBackupTests/testRejectsMissingKeysImpossibleThresholdAndAmbiguousMaterial",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.096,
+    "log": "OathCloudBackup-cases/18e4ef9f8dfbf15d.log",
+    "log_sha256": "0ae0a35726f0717dfb9959ef2103b2d9195f13480660b1782e4e045be4d27562"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testCancelledReadDoesNotBeginCloudDownload",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.095,
+    "log": "OathCloudBackup-cases/b72da398bf9fc464.log",
+    "log_sha256": "0334be341c21e81b7074bdd849a0ffbab607aaa95d86bbfdb9db4c2dd81c6fff"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testCoordinatedReadReturnsDecryptableBackupAndPreservesMetadata",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.498,
+    "log": "OathCloudBackup-cases/c65011d16f8d8b57.log",
+    "log_sha256": "b43fd2321e12d6d87584b8eaff5c057604c892ed6f5c367669ca9cd0e27f0928"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testDiscoveryScopeAndNamesCannotEscapeBackupDirectory",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.122,
+    "log": "OathCloudBackup-cases/fab9315854ee94ba.log",
+    "log_sha256": "a99f416f977ecedad343f20349270c3ec6451931b4a24795568025886859e3d0"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testDownloadStatusDoesNotKeepCachedUbiquityValues",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.16,
+    "log": "OathCloudBackup-cases/cb0cfe69bc2aa01e.log",
+    "log_sha256": "b7633fb0eb19216ea7e312c74d7c3a7b830168d65c09b8ccf1197bf38d509c83"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testDownloadWaitsForCurrentVersionRatherThanStaleLocalCopy",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.125,
+    "log": "OathCloudBackup-cases/6a94bd6b49c8ddb6.log",
+    "log_sha256": "33c34ec51f9fde0ebbf2842638f8594ea32926ca802f08a61af94c0271a134ec"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testOfflineDownloadHasBoundedTimeoutAndCanBeCancelled",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.136,
+    "log": "OathCloudBackup-cases/4452c797f297cc82.log",
+    "log_sha256": "1f932baecc13bfea6e7487578babcc20ce4bcbcc573943ca9fe8f68dc2a615b1"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testReadRejectsEmptyOversizedDirectoriesAndSymlinks",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.118,
+    "log": "OathCloudBackup-cases/2a1db47ab438ce6a.log",
+    "log_sha256": "2e25a8061d3c556fcc8d9fcec335751453e761dc105186fba7cfef995cbc19d4"
+  },
+  {
+    "selector": "OathCloudBackupTests.CloudRestoreTests/testRevokedLocationRejectsRestoreBeforeAccessingICloud",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.12,
+    "log": "OathCloudBackup-cases/633438bc15547526.log",
+    "log_sha256": "bf84e0fecf5d61c9642e761d230a9009e9dee644b7fe5cd492f5dceb5fe357e1"
+  },
+  {
+    "selector": "OathCloudBackupTests.DogecoinMultisigBackupTests/testEncryptedRoundTripPreservesThresholdAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.701,
+    "log": "OathCloudBackup-cases/d89c4ddad1b09466.log",
+    "log_sha256": "53cba75d9de68ef7a0034a3dd4a123df5c917f35c188493328f6340fed951953"
+  },
+  {
+    "selector": "OathCloudBackupTests.DogecoinMultisigBackupTests/testRejectsMissingKeysImpossibleThresholdAndAmbiguousMaterial",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.097,
+    "log": "OathCloudBackup-cases/9aea419ffe8129ab.log",
+    "log_sha256": "19828ecb6cd5bc5e9c304f94d4d849504eb63a70a75f11a207be1a8a9ae9e154"
+  },
+  {
+    "selector": "OathCloudBackupTests.EVMMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.644,
+    "log": "OathCloudBackup-cases/e84acf87256aed40.log",
+    "log_sha256": "7f46382b3f03add10f5974a4eb39b6f7c9a9cab4be0cbeb509f4fa64b2675e85"
+  },
+  {
+    "selector": "OathCloudBackupTests.EVMMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.096,
+    "log": "OathCloudBackup-cases/5eee440616f98a74.log",
+    "log_sha256": "ccc9f1fa21a712bc1fe3cd89826697a87f32aff84c58421983d9f56bea0703d1"
+  },
+  {
+    "selector": "OathCloudBackupTests.LitecoinMultisigBackupTests/testEncryptedRoundTripPreservesThresholdAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.614,
+    "log": "OathCloudBackup-cases/03403515de01da1a.log",
+    "log_sha256": "5c4b38f29e07b247b78001126a15a0dbf31fcd47d8c74eda14ec3a9741bca6c0"
+  },
+  {
+    "selector": "OathCloudBackupTests.LitecoinMultisigBackupTests/testRejectsMissingKeysImpossibleThresholdAndAmbiguousMaterial",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.159,
+    "log": "OathCloudBackup-cases/54741aabafa615b6.log",
+    "log_sha256": "1f80fc7adfbb3d60e3478faf1f8caa85d981af45fe56ff5cb84aae557db2468d"
+  },
+  {
+    "selector": "OathCloudBackupTests.PassphraseTests/testLegacyLongPassphraseRoundTripRequiresCompatibilityVersion",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.526,
+    "log": "OathCloudBackup-cases/8c09163bae880dff.log",
+    "log_sha256": "4575eff5bcf9ecc09b829ad580c7234842920f7f76a43a338fc2ad0a2da2d158"
+  },
+  {
+    "selector": "OathCloudBackupTests.PassphraseTests/testNormalizationPreservesCaseSpacesAndSupportsUnicode",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.101,
+    "log": "OathCloudBackup-cases/321fb0d2f22e6063.log",
+    "log_sha256": "f92ba0f36a3a7fc37dc3fec2a6bef1d079464cee49901183569310a8df7d0b80"
+  },
+  {
+    "selector": "OathCloudBackupTests.PassphraseTests/testOldBackupCompatibilityAndInvalidMixedMaterial",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.33,
+    "log": "OathCloudBackup-cases/4924b258e8012772.log",
+    "log_sha256": "63e4b1430b31cd3531bbfa9ba6656a790a60cddff13ae77bd4a7d5d835240a71"
+  },
+  {
+    "selector": "OathCloudBackupTests.PassphraseTests/testPassphraseIsInsideAuthenticatedBackupAndRequiresNewVersion",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.456,
+    "log": "OathCloudBackup-cases/dba3cdf0bf940e7e.log",
+    "log_sha256": "2c2ac3e6e1c3783d949032264a632a181c70baf7ac6cb814dba619ee0c4992bf"
+  },
+  {
+    "selector": "OathCloudBackupTests.SolanaMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.629,
+    "log": "OathCloudBackup-cases/f81801d08a60a886.log",
+    "log_sha256": "7b6a7ddae0d2c52aae10a242ef83d5bfa4295ed757a26aef279706cf5c4af99d"
+  },
+  {
+    "selector": "OathCloudBackupTests.SolanaMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.153,
+    "log": "OathCloudBackup-cases/cdb13a30e3a95cb0.log",
+    "log_sha256": "36f4fe2af064605fb7164e9a7f15238814bbd73d3d22b49e040235a4b724e9e2"
+  },
+  {
+    "selector": "OathCloudBackupTests.StellarMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.736,
+    "log": "OathCloudBackup-cases/b7bc350dfb6ab199.log",
+    "log_sha256": "dde197c0d30fb51b2a8c42e5a762fc67a3915734ca0f4a7b8d8af74255606e9e"
+  },
+  {
+    "selector": "OathCloudBackupTests.StellarMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.131,
+    "log": "OathCloudBackup-cases/86442199c1d40e06.log",
+    "log_sha256": "d94fd35978a6293fba834655ba956e06495c31d70d37c5b568798ce49910ee12"
+  },
+  {
+    "selector": "OathCloudBackupTests.SuiMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.658,
+    "log": "OathCloudBackup-cases/34cc19db5b5f6ede.log",
+    "log_sha256": "833590490fe34d5e6fc698770cfd88923376bfc36540e2fcff7e76a0fa7c3a20"
+  },
+  {
+    "selector": "OathCloudBackupTests.SuiMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.095,
+    "log": "OathCloudBackup-cases/395fba15d5d96541.log",
+    "log_sha256": "5e087e9ff784f5945b316a3521006043b70d58f08bd4a3ef764ab03e0fe38258"
+  },
+  {
+    "selector": "OathCloudBackupTests.ThorchainMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.607,
+    "log": "OathCloudBackup-cases/f3ccaf8194f8798b.log",
+    "log_sha256": "0ff9182790de4333ce58c55791dab4ef51fb7c730e1f87e47e0cbf0e0b128a65"
+  },
+  {
+    "selector": "OathCloudBackupTests.ThorchainMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.097,
+    "log": "OathCloudBackup-cases/e18b8ee64774b8d3.log",
+    "log_sha256": "c9db613d5994121eb4673b4a5917c3b16a7ec769229528ef5867c39031c73d13"
+  },
+  {
+    "selector": "OathCloudBackupTests.TonMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.61,
+    "log": "OathCloudBackup-cases/48ab06d7686163c5.log",
+    "log_sha256": "57e10d51f91a25162204c6e3b147580fa6395ad08ef9da4a69ac6fad997178dd"
+  },
+  {
+    "selector": "OathCloudBackupTests.TonMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.096,
+    "log": "OathCloudBackup-cases/7316e2381d41cadd.log",
+    "log_sha256": "f7705dfa97a07cc3e80b93787675d0e70a720463a05fca31e2619954fdb59d76"
+  },
+  {
+    "selector": "OathCloudBackupTests.TronMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.514,
+    "log": "OathCloudBackup-cases/004c4f8d2cfd0f3d.log",
+    "log_sha256": "922d1fa9dfce6357f09c504083ce4c17c64174ed63701c55cf03d2af68907389"
+  },
+  {
+    "selector": "OathCloudBackupTests.TronMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.129,
+    "log": "OathCloudBackup-cases/400cfae766f5042c.log",
+    "log_sha256": "00c2615e36b8a5262b1e74fba14d1caa9474da631d030fedc449a3104ff2baea"
+  },
+  {
+    "selector": "OathCloudBackupTests.XrplMultisigBackupTests/testEncryptedRoundTripPreservesAccountAndEverySigner",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.528,
+    "log": "OathCloudBackup-cases/e6002c534e1d3242.log",
+    "log_sha256": "83469bdeb5bc48428d9dc447da9f0331276aee6bd6e82f57b2304d5f979a0959"
+  },
+  {
+    "selector": "OathCloudBackupTests.XrplMultisigBackupTests/testRejectsImpossibleAndAmbiguousRecovery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.098,
+    "log": "OathCloudBackup-cases/bfd06d14df556382.log",
+    "log_sha256": "afe381ebe764631137c83daf9c62707af702971f170540627508329dae79f66c"
+  }
+]

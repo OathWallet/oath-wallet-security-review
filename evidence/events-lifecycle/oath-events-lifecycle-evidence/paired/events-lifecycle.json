@@ -1,0 +1,36 @@
+{
+  "check": "events-lifecycle",
+  "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+  "baseline_commit": "95e557d389413daa4dc03b8c7f7b3d4803507a7c",
+  "status": "passed",
+  "fixture_sha256": "7a38a51201f3abb3a0c7f90e0aaac1185a64d932d557173daf2872477cf43fea",
+  "executions": [
+    {
+      "phase": "before",
+      "source_commit": "95e557d389413daa4dc03b8c7f7b3d4803507a7c",
+      "status": "opt-out-defects-reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 20.026,
+      "source_archive_sha256": "99a9d6d71c1a75d5c2cf5389ed2b5e1091baae11647f4b9dfecb33c3bf6689cd",
+      "log": "before.log",
+      "log_sha256": "20a3b256e7ceca1854f1e4b538b393f8a85511f330dddba8caf6de6bf0679878"
+    },
+    {
+      "phase": "after",
+      "source_commit": "4cfeb14ce9bd85ca2d10017cb053ab421df30cf2",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 18.953,
+      "source_archive_sha256": "341be41983845882152bd65b0c2802a0447c96706a660db66d5fa1a0e8d65c9c",
+      "log": "after.log",
+      "log_sha256": "e63f2c6601d2c6f02ab806aeaf464273cb72f0e0d235c642ffe52aefd505a070"
+    }
+  ],
+  "duration_seconds": 39.91,
+  "scope": "Actual EventsClient, dispatcher and HTTP service; same nine synthetic host tests; all build/test processes deny network",
+  "limits": "No live service, simulator, physical device, production transaction or App Store validation. Cancellation and negative assertions have explicit bounded observation windows; requests already received by a server cannot be recalled. Harness changes only its isolated scratch path.",
+  "log": "events-lifecycle.log",
+  "log_sha256": "60cf9582eb371cfd5d11832bf2e5a1a87868fc10b44ad2603fc883d0542e51cf"
+}

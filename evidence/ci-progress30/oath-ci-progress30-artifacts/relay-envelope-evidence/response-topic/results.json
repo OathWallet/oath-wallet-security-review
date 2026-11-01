@@ -1,0 +1,64 @@
+[
+  {
+    "stage": "before",
+    "source_commit": "f506dd8b820476296a6348c0ccbbdc42164c21f5",
+    "final_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "added_fixture": "Tools/WalletConnectSDKValidation/ResponseTopicAuthenticationTests.swift",
+    "fixture_sha256": "3ed82a5529029efea58694c4a2f862a2b3991cc45fa0acdbe524260692b19467",
+    "source_archive_sha256": "f2c7b5098bbe9a816fb86bc657905a9dc65c1d6017ef70ddba4f900fec80c2e9",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "ResponseTopicAuthenticationTests"
+    ],
+    "exit_code": 1,
+    "cases": {
+      "passed": 2,
+      "skipped": 0,
+      "failed": 2
+    },
+    "expected_cases": {
+      "passed": 2,
+      "skipped": 0,
+      "failed": 2
+    },
+    "duration_seconds": 27.633,
+    "log_sha256": "3a794e58ee3c78bac2294779c7610f37281f5163aa7daa33cf5ba7cc348ff91c",
+    "runtime_scope": "host; synthetic encrypted relay messages and memory history; no real wallet",
+    "reproduced": true
+  },
+  {
+    "stage": "after",
+    "source_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "final_commit": "e7aed8c9d08357df10a4f85be7d069a66fad07f8",
+    "added_fixture": "Tools/WalletConnectSDKValidation/ResponseTopicAuthenticationTests.swift",
+    "fixture_sha256": "3ed82a5529029efea58694c4a2f862a2b3991cc45fa0acdbe524260692b19467",
+    "source_archive_sha256": "cfbf21a44c99b811d2e1f2852f05800d17aafe6697fa137791d1d0d868cd5094",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "ResponseTopicAuthenticationTests"
+    ],
+    "exit_code": 0,
+    "cases": {
+      "passed": 4,
+      "skipped": 0,
+      "failed": 0
+    },
+    "expected_cases": {
+      "passed": 4,
+      "skipped": 0,
+      "failed": 0
+    },
+    "duration_seconds": 34.992,
+    "log_sha256": "f6c6dbead30603231cefa62f72bbb18c48dcf28616105202be62cae7624d01b9",
+    "runtime_scope": "host; synthetic encrypted relay messages and memory history; no real wallet",
+    "reproduced": true
+  }
+]

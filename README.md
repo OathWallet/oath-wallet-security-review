@@ -20,7 +20,13 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [optional relay transaction metadata](findings/OW-2026-015.md).
+Latest application finding: [SDK event opt-out lifecycle](findings/OW-2026-016.md).
+All nine identical production tests pass after reproducing 14 expected assertions
+before. Initialization, collection, cancellation and stale acknowledgements are
+covered. [Review notes](review/EVENTS-LIFECYCLE-REVIEW.md) also preserve the prior
+56-job successful GitHub run and distinguish it from the new target.
+
+Earlier application finding: [optional relay transaction metadata](findings/OW-2026-015.md).
 The encoder now preserves routing and encrypted peer content while omitting four
 optional metadata fields. The same four host cases retain 11 expected assertions
 before and pass afterward. [The source review](review/RELAY-METADATA-REVIEW.md)
