@@ -173,10 +173,12 @@
     ]
   },
   "OathAtmosphere/Wallet/OathPrivateKeyExport.swift": {
-    "sha256": "c0d0fad327f91063be69bb737aa0495f4b556f7bed5ba64dae319e2e524481b4",
-    "status": "reviewed",
+    "sha256": "56e979e1a78b61a3a47b531715f414b6639f563135bd4e28891b2e862dc7ad7d",
+    "status": "partially-reviewed",
     "evidence": [
-      "review/READ-NOTES.md"
+      "review/READ-NOTES.md",
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
     ]
   },
   "OathAtmosphere/Wallet/OathPrivateKeyImport.swift": {
@@ -187,10 +189,12 @@
     ]
   },
   "OathAtmosphere/Wallet/OathImportedPrivateKey.swift": {
-    "sha256": "d98bf74bcfd5d5123af60fb2b1ff339e560b513f145885da1891a1557f9844b4",
-    "status": "reviewed",
+    "sha256": "36f8f38e12b5394ca257ce31d01263fc806162bde33870657be82dc85b98f0b9",
+    "status": "partially-reviewed",
     "evidence": [
-      "review/READ-NOTES.md"
+      "review/READ-NOTES.md",
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
     ]
   },
   "OathAtmosphere/Wallet/OathWalletRestoration.swift": {
@@ -1784,10 +1788,12 @@
     ]
   },
   "Tools/CheckMultiWallet.py": {
-    "sha256": "8873f5d6a9b78365004c702878f914f6151060b6f2b64d13ac6fd7a9da5b7ad4",
+    "sha256": "a927898b61f636d6d3c9ba7a1823ffb8015ef20df96f8c465d6fe0299658ffef",
     "status": "partially-reviewed",
     "evidence": [
-      "review/PERMISSION-BATCH-REVIEW.md"
+      "review/PERMISSION-BATCH-REVIEW.md",
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/PermissionDiscovery.swift": {
@@ -7993,6 +7999,102 @@
     "evidence": [
       "review/HTTP-RESPONSE-BOUNDARIES.md",
       "findings/OW-2026-034.md"
+    ]
+  },
+  "OathAtmosphere/Wallet/OathBitcoinWallet.swift": {
+    "sha256": "0dabdeaddc025a7bf95281f293151ec16f4885a398a763bd3c7a3b43789bddf9",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinCashKeys.swift": {
+    "sha256": "b45a06e7632ce0c28a034619d0c19f4b097746f523fe1dccd4370d83ccbaa8ae",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinKeys.swift": {
+    "sha256": "6674fefe8cb749ec4976fbcc8aeb881b37a304b74db7e98101930a6934bc32b6",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/DogecoinKeys.swift": {
+    "sha256": "d94f5970e8d5d89da98892090c74ba3b37c6f3a3d70abe08f1b600c76ed155ab",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/UTXONetwork.swift": {
+    "sha256": "15fd2feb1b12eb36fe03fea2abc8b299ef45d58d627386afe441be6a82886b1a",
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinCashMultisigDiagnosticsTests.swift": {
+    "sha256": "49d931a27292df14922cf759950f5fac971599cffcbed1eeababc0d490d1aade",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinMultisigDiagnosticsTests.swift": {
+    "sha256": "1012d7a67a4208b9c74405625c67029b68e144f044a745ac89a892b51516bab5",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/DogecoinMultisigDiagnosticsTests.swift": {
+    "sha256": "00fb7cb169d190876963e1d08bb5ae4ae8162835b3613ad7e1accb9ff186c662",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/ExtendedKeyWireTests.swift": {
+    "sha256": "0fb0fb04b3e56a5f46140b0f15ed8cb4a1a4ca213ae37a67e1deeb6a0246c6b6",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/LitecoinMultisigDiagnosticsTests.swift": {
+    "sha256": "fa3c94b8849e83d808a9184f65d3f90cedfe6f47b353ce7961238201c22cd1ad",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/MultisigSigningDiagnosticCapture.swift": {
+    "sha256": "b0807fcd3caa335cf1676fab1c690f9d59eeb7d7f0a61b35de0d40aeb53ceaeb",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Tests/OathBitcoinTests/StoredExtendedKeyRecoveryTests.swift": {
+    "sha256": "9b3458bf68838bea1be8b151535bbee62cd0dba84177ff78d78193de05743341",
+    "status": "reviewed",
+    "evidence": [
+      "review/EXTENDED-KEY-IMPORT.md",
+      "findings/OW-2026-035.md"
     ]
   }
 }

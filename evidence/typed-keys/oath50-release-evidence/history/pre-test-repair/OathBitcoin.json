@@ -1,0 +1,37 @@
+{
+  "check": "OathBitcoin",
+  "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathBitcoin",
+    "<SCRATCH>-native",
+    "/private/tmp/oath50-evidence/validation"
+  ],
+  "status": "failed",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 99.85,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 359 selected; 298 passed; 60 skipped; 1 failed",
+    "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "203232e39148fc574d8ae7181232980f2fcf95977d8109a13629e12140e573ba",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 359,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 60,
+    "sha256": "eb2d168235ad4b0b5ebaed5293ac4490291bfc917177251213add0f1e372285a"
+  },
+  "swift_testing": {
+    "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+    "summaries": [
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ]
+  }
+}

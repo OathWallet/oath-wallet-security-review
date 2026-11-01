@@ -20,7 +20,9 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-**Latest checkpoint.** [Provider response limits](findings/OW-2026-034.md), [Stellar decoder checks](review/STELLAR-XDR-BOUNDARIES.md) and [remaining scope](review/ACCEPTANCE.md).
+**Latest checkpoint.** [Typed extended-key imports](findings/OW-2026-035.md), [encrypted recovery and BDK device-slice reproduction](review/EXTENDED-KEY-IMPORT.md), and [remaining coverage](review/ACCEPTANCE.md).
+
+**Earlier checkpoint.** [Provider response limits](findings/OW-2026-034.md), [Stellar decoder checks](review/STELLAR-XDR-BOUNDARIES.md) and [remaining scope](review/ACCEPTANCE.md).
 
 **Earlier checkpoint.** [Bitcoin signature integrity](findings/OW-2026-033.md), [Bitcoin Core results and compilation inputs](review/BITCOIN-SIGNER-AND-CORE.md), and [remaining coverage](review/ACCEPTANCE.md).
 

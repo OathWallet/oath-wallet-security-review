@@ -1,0 +1,67 @@
+{
+  "check": "provider-event-order",
+  "source_commit": "5f92dc2a87334c0b4942dea1f6a47ad92770f4a3",
+  "status": "passed",
+  "baseline_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+  "executions": [
+    {
+      "phase": "before",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "case": "OathAnkrTests.TokenDiscoveryArtworkTests/testArtworkDiagnosticsPreserveFailureAndCorrelationWithoutBodyOrContract",
+      "expected_outcome_observed": true,
+      "exit_code": 1,
+      "log": "before-testArtworkDiagnosticsPreserveFailureAndCorrelationWithoutBodyOrContract.log",
+      "log_sha256": "bac7ddb1c12ae08c8e0863df7367b8e722e8369f0061714cf2cc143d910f5af0"
+    },
+    {
+      "phase": "before",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "case": "OathAnkrTests.TonReadRecoveryDiagnosticsTests/testOriginalTLSAndRecoveryReportsRemainPrivacyFiltered",
+      "expected_outcome_observed": true,
+      "exit_code": 1,
+      "log": "before-testOriginalTLSAndRecoveryReportsRemainPrivacyFiltered.log",
+      "log_sha256": "97840a3a1179e07c2da1f68b0428ae2cd739f8ca4b2198cc16fd0c5ae881ad14"
+    },
+    {
+      "phase": "after",
+      "source_commit": "5f92dc2a87334c0b4942dea1f6a47ad92770f4a3",
+      "case": "OathAnkrTests.TokenDiscoveryArtworkTests/testArtworkDiagnosticsPreserveFailureAndCorrelationWithoutBodyOrContract",
+      "expected_outcome_observed": true,
+      "exit_code": 0,
+      "log": "after-testArtworkDiagnosticsPreserveFailureAndCorrelationWithoutBodyOrContract.log",
+      "log_sha256": "87dd53f16c0fe4c7932363a93e6a6ce18df2fa081bcc23b4cec3b7cd26b9833e"
+    },
+    {
+      "phase": "after",
+      "source_commit": "5f92dc2a87334c0b4942dea1f6a47ad92770f4a3",
+      "case": "OathAnkrTests.TonReadRecoveryDiagnosticsTests/testOriginalTLSAndRecoveryReportsRemainPrivacyFiltered",
+      "expected_outcome_observed": true,
+      "exit_code": 0,
+      "log": "after-testOriginalTLSAndRecoveryReportsRemainPrivacyFiltered.log",
+      "log_sha256": "d60b5ddd09d3e856cc2560f3557da741c39a361b2199f4d96a414dece4050047"
+    }
+  ],
+  "fixture_edits": [
+    {
+      "phase": "before",
+      "path": "TokenDiscoveryArtworkTests.swift",
+      "source_sha256": "2a5354b6f2e266d7c4b47ea7183698d6da0d0c8a9794fb8a225f0b06de938d81",
+      "instrumented_sha256": "8ba29e8016091c00602b53ebcdb70285e453438464cd5ccaaa7c8599596696e4"
+    },
+    {
+      "phase": "before",
+      "path": "TonReadRecoveryTests.swift",
+      "source_sha256": "9b6ccf99c187babf5e2d7ff2859e55fe851d8068f43f95d914b62389f43fc951",
+      "instrumented_sha256": "bbb6323b3c2d6af63a6d2d30ccf4858e3367163f6d008cf8b5afaff0c87a6ab8"
+    },
+    {
+      "phase": "after",
+      "path": "CorrelatedDiagnosticTestCapture.swift",
+      "source_sha256": "44ff5087752d545b3ca468ab0d587836d4d291303ee6e255b8b22d4968f9342f",
+      "instrumented_sha256": "311ba8ba83d0b0ced741ec8241da08febd1fe278d7bebe6b40a338e7658b3132"
+    }
+  ],
+  "scope": "Delay only the secondary HTTP 401 / TON boundary event at the isolated synthetic consumer. The original assertions and all production files are unmodified. Two offline cases per revision.",
+  "log": "provider-event-order.log",
+  "log_sha256": "aef0cb572b9f17216947cdb88a0f75861fa776e82a238a6b7ffdd66c7ce5c2ab"
+}

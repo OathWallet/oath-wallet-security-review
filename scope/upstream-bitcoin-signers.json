@@ -14,6 +14,20 @@
       "url": "https://static.crates.io/crates/miniscript/miniscript-12.3.7.crate",
       "archive_sha256": "b8343cc1ef1408bd9bdbf69f7aef47017dfab7e6349ec26fddf62e0e9fb5a4cf",
       "entries": 80
+    },
+    {
+      "name": "bitcoin",
+      "version": "0.32.102",
+      "url": "https://static.crates.io/crates/bitcoin/bitcoin-0.32.102.crate",
+      "archive_sha256": "bb0ce8bd5baaa0d303a19915a6d93afed161f528654e42da2a7a97d05c59499a",
+      "entries": 81
+    },
+    {
+      "name": "secp256k1",
+      "version": "0.29.1",
+      "url": "https://static.crates.io/crates/secp256k1/secp256k1-0.29.1.crate",
+      "archive_sha256": "9465315bc9d4566e1724f0fffcbcc446268cb522e60f9a27bcded6b19c108113",
+      "entries": 43
     }
   ],
   "files": [
@@ -510,6 +524,495 @@
       "status": "outstanding"
     },
     {
+      "path": "bitcoin/CHANGELOG.md",
+      "sha256": "1ec6c9dc21a7a31efe0c3e256d9cd52a1748f189055a684a7ce53d5c49a287f0",
+      "bytes": 54311,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/Cargo.lock",
+      "sha256": "d2ab27f16aa6c27e5bb15345ac2707507fcd0942bc66ad0f632c4ab69b5ed69e",
+      "bytes": 10095,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/Cargo.toml",
+      "sha256": "8abf38f45d22937499b43267eda7516bad3ba2ac3af94beb675a9a1fe4ecf8b9",
+      "bytes": 4851,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/Cargo.toml.orig",
+      "sha256": "4d355357b155da2fc278b4de26b1c533298a7e3eaacfd4c2265b00fc61f87d7a",
+      "bytes": 3967,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/README.md",
+      "sha256": "e822a3d618819094fa6a41ed503e86337b1a489c77528c297542b4d99702d61c",
+      "bytes": 9015,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/build.rs",
+      "sha256": "a29d078d61bfcf077a55e664b112183adac2ad564a6005cc6e57a445da10fb59",
+      "bytes": 1348,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/bip32.rs",
+      "sha256": "49c82b975d04102294dc194b333e35a69c20eb4743d6970f8c26a3d692e98bac",
+      "bytes": 2139,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/ecdsa-psbt.rs",
+      "sha256": "7711a600e56f34ca9f71957113733ddf84b3d8766a9461e74dba91fa41f5e75a",
+      "bytes": 11289,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/handshake.rs",
+      "sha256": "a8b1c32d81b62dcadea685e85430ce9df288cec25aebc830bbd35064e63f49a3",
+      "bytes": 3999,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/sighash.rs",
+      "sha256": "3055863e1852b13553ea1177c2251bfa7d431bf3bb974ca6bdb18cd5f8f821a3",
+      "bytes": 12341,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/sign-tx-segwit-v0.rs",
+      "sha256": "351f70425ca41b0f776a54ca32b8affb9e10707abff1cf0ca8e82da48c87f59c",
+      "bytes": 4857,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/sign-tx-taproot.rs",
+      "sha256": "8498119fc98af41d3cf50190e762c138deb59f46addf4e5f0f3a9081651fa64d",
+      "bytes": 5092,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/examples/taproot-psbt.rs",
+      "sha256": "3a36965b75a288dbe1e1bcc07f9bc8d95673e01e452479f4d0f81eb037e2621c",
+      "bytes": 30759,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/include/decoder_newtype.rs",
+      "sha256": "5743d5acb724d2d049e3a56776949e9835545101d76a70865e887977c892dc8e",
+      "bytes": 8353,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/address/error.rs",
+      "sha256": "6d675eb66d7940c86f869737fdbec56c0b7f4d90ecabb48de95cf5f878371695",
+      "bytes": 9907,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/address/mod.rs",
+      "sha256": "e529e505c07a1a204258fb8873426623d80a7bae875aba4d4e87dc646a5af17a",
+      "bytes": 58755,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/array_vec.rs",
+      "sha256": "6457b5d9bcd9945e5e5386dcd3a731a85d814a1daffb0a07ee38c028312ffb02",
+      "bytes": 6286,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/bip152.rs",
+      "sha256": "120053ba00c392da770379753ff83c457e8925e74b495471f711f02a844b02e6",
+      "bytes": 45952,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/bip158.rs",
+      "sha256": "dc6e46648b35e7b44cdc16c4cf917a844bb88ab076e4731e430698f47dc4ae1f",
+      "bytes": 29265,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/bip32.rs",
+      "sha256": "a6ecd3d1eb92237625f94db9bc502c53cd2af1fbb70af15e90d56b7f40a93900",
+      "bytes": 49004,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EXTENDED-KEY-IMPORT.md"
+      ]
+    },
+    {
+      "path": "bitcoin/src/blockdata/block.rs",
+      "sha256": "6901e1ac06adfebadddb6dc842c0fabe585832411e2c023caf7b85c3aaf67ac0",
+      "bytes": 48092,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/constants.rs",
+      "sha256": "2896e3e9b54d0465bad94cc5832ef29c2fd3af51e8739a8ef1394528ced8f63e",
+      "bytes": 16491,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/locktime/absolute.rs",
+      "sha256": "0bc3e654ec43f45c1d9d2e99e4ccd81ccedc3eb110160d7154a072454d910029",
+      "bytes": 22035,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/locktime/mod.rs",
+      "sha256": "3a37e1e520ad6ddef2d029cc641f3e633da33edf40b84a63cf3a9a97e7a3d390",
+      "bytes": 124,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/locktime/relative.rs",
+      "sha256": "74a043250935dd0a4e09cb5edb4086205acb5a08561df83f2eab5e447d5d360d",
+      "bytes": 18501,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/mod.rs",
+      "sha256": "a9721ed899b3efb15c2db6ad2ab4ba943bfae4401b3f679bacf232f2c9ac51fd",
+      "bytes": 1814,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/opcodes.rs",
+      "sha256": "f69ae8a42c9d5e1df15e5a50e0ccf07a618929c8864ff9d5fea406214123be89",
+      "bytes": 43032,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/borrowed.rs",
+      "sha256": "6fd833ab22fd7af470056404c5bffeff6829a238cabffa2f333ce513eed35298",
+      "bytes": 29392,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/builder.rs",
+      "sha256": "3c84c262e199feb506d1de15abd1897aff562c6f8321c06b8e85ce9844834cdf",
+      "bytes": 5254,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/instruction.rs",
+      "sha256": "07c9675536a0533c23d4fc4c64ba10046ad4d7220fb9d7b9050007933e4059ec",
+      "bytes": 9201,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/mod.rs",
+      "sha256": "3452824549d10e8745508bf2209ad82d728cd28792b776fa5809a642f2df8c53",
+      "bytes": 24380,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/owned.rs",
+      "sha256": "a6b59927309dd78625e95d763a943bab7226ddb2252127195ab0acf5ffc37082",
+      "bytes": 17237,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/push_bytes.rs",
+      "sha256": "f5fadb098d3d77249a82dd7e4dad851ac48e3bb20261df1d59858b83570c9a94",
+      "bytes": 13702,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/tests.rs",
+      "sha256": "b44d33e2ad8733eed890217c775c817c458d2c1b0b5bf650cc4d576c17dbce8f",
+      "bytes": 38576,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/witness_program.rs",
+      "sha256": "f928a0288273555c8963d96d2274deba3739b5c61fac6195a7e91b0cfe87bfbb",
+      "bytes": 6663,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/script/witness_version.rs",
+      "sha256": "c968a637a84a9da04b808f5c92fffbd174ae82d7967028d2ae84929cf3f715b5",
+      "bytes": 8666,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/transaction.rs",
+      "sha256": "ef3a1f552dc92f240f810380ca2a51e52eeb6ac5588c7680f26a53c1cec4057e",
+      "bytes": 154826,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/blockdata/witness.rs",
+      "sha256": "558cf35dd0c1b3c2bcf261b3ebac3b5e71862809a2a3e4f1d20398a0238b3b2f",
+      "bytes": 56819,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/consensus/encode.rs",
+      "sha256": "cc724af4c39d201863227393bdcdeb376f77d3ebd67354a595c0817227e117b6",
+      "bytes": 47014,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/consensus/mod.rs",
+      "sha256": "ca7d1cab43c81655eecbeaf67fbb5c0189b77e4e2bb33eb6113598942d9f163f",
+      "bytes": 5321,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/consensus/params.rs",
+      "sha256": "4a9eb24b58e9a64ee73e94599f4095a5de10ff5af5d9241389fbff71b50f3f04",
+      "bytes": 9448,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/consensus/serde.rs",
+      "sha256": "51d433848b1fe49fa0a38a275438631d57845e7892672fe5da64358294b05b58",
+      "bytes": 16635,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/consensus/validation.rs",
+      "sha256": "9279d104dcdea50ca32b1599864a2ecd885fd0d15b02a446d31696de1449e0b2",
+      "bytes": 8446,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/const_tools.rs",
+      "sha256": "1379c6a62679dc3c62978736e34bc6ae7bf03a745dacad7c8743a8c6343a7142",
+      "bytes": 1464,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/crypto/ecdsa.rs",
+      "sha256": "a6b8f0eedf3bea0279a8f14b9f397288c67a507ecd5a9081e380a27ce3ae93d0",
+      "bytes": 10284,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/crypto/key.rs",
+      "sha256": "fd5747fc9b1eb85f74de9342a44d1666a9b0b2033704f84666c12693f89a5861",
+      "bytes": 60625,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/crypto/mod.rs",
+      "sha256": "49b9ad7d99c9ed4f346d12f8d59c4394de7e603253c5a8a3781b7e255cf50fc9",
+      "bytes": 240,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/crypto/sighash.rs",
+      "sha256": "19f963fb474f1653bb863b316e567c046adfd3d7d87639522898f78a6d1a518b",
+      "bytes": 90913,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/crypto/taproot.rs",
+      "sha256": "d22969ce715f6419fa63ce10209ba9451c820fccb7ef86345a5ebd91dc59bf88",
+      "bytes": 5217,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/error.rs",
+      "sha256": "14133ae4997c70e53839935092486042b932870c0df6d05f9aa980f961662705",
+      "bytes": 3730,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/hash_types.rs",
+      "sha256": "6eb1c61f9a6f7b3bbb1527294d4452ea95ccd34b43180d44212b0fbb5da27dc5",
+      "bytes": 2997,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/internal_macros.rs",
+      "sha256": "dd7748eda915f42a7ae0200d160c691ad7b4a6bce55387723aeef582df015fe9",
+      "bytes": 12327,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/lib.rs",
+      "sha256": "3891334b9bcb21d254b5784e2adbfd0c78dd5c033b7e7b4cd0e6c629870ae7f5",
+      "bytes": 7562,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/merkle_tree/block.rs",
+      "sha256": "44a147ab7ca2c94dcd56e985f325c79e0e7fc18f69813b3b8fd306ce2d53f2e9",
+      "bytes": 33061,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/merkle_tree/mod.rs",
+      "sha256": "053ed9969f5f9314c2e360858c1e96c5a507d253eeb8bf9e8ea49cba5f2244fa",
+      "bytes": 4804,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/network.rs",
+      "sha256": "7203a99f0596645508a8c4941abfc50804b281aaa1c96b166cd488cc47b82c34",
+      "bytes": 15848,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/address.rs",
+      "sha256": "f0b7d4d58cbfd926f6fb23f3ac6c05ef3309eda1a33c5d288cb4c42a7622b37e",
+      "bytes": 36211,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/message.rs",
+      "sha256": "73225364a120fbe9aa5672866f92a2bd402c627b12c662fba65de89a3a49c5e0",
+      "bytes": 44526,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/message_blockdata.rs",
+      "sha256": "973fabc6b790f001a436a5edf9403fcf5bacfced5ef668ba29b7a257aad7c295",
+      "bytes": 16982,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/message_bloom.rs",
+      "sha256": "82196e2123322909eb33d3ebdb14b8a1f2deb5a59dc133d342c76df43499bb8f",
+      "bytes": 9675,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/message_compact_blocks.rs",
+      "sha256": "032f405c7fb305719bd4e81486a698edcb05f7a21cbf21bc3b43dd3e1b583813",
+      "bytes": 4873,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/message_filter.rs",
+      "sha256": "9ccdd0a3c33592cdc082c0b8650c749be56020264fbf04c651ec6a344eba7986",
+      "bytes": 18578,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/message_network.rs",
+      "sha256": "0a801d780ba839ebfd47ef9e4273932240e09cedfffdf5529565c29316b4266d",
+      "bytes": 19101,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/p2p/mod.rs",
+      "sha256": "0064ae2a956df1ecdef827ea555b59569343a570eeec537f31efaefd01c6736e",
+      "bytes": 18511,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/policy.rs",
+      "sha256": "297f4606519f911ad485eb1c650412a5b805a189496f8a6d498ec861b941e14c",
+      "bytes": 2166,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/pow.rs",
+      "sha256": "a87cfc36da4143189e47ae2cf056e7064fdc29ee5813967c091da21746d9a2b8",
+      "bytes": 76657,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/error.rs",
+      "sha256": "98fcdcfa74a9526ae41a9f02b74e988a9c45a1574ee13528e7e10d9f2bc8f122",
+      "bytes": 8752,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/macros.rs",
+      "sha256": "2039d9005c3a7db566ee9487b3e2afc8ffd32da156d716caa0c02a4f10d4f5a2",
+      "bytes": 5639,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/map/global.rs",
+      "sha256": "a0555d03e0e72429ee229b781fe0bcd3763587060545e81b26f7f9df3c44abd2",
+      "bytes": 10201,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/map/input.rs",
+      "sha256": "3057a10ec887cc0ee14aa228c7f9b71c2fc860ab6d2215d5f9f3a399ff798ad9",
+      "bytes": 22786,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/map/mod.rs",
+      "sha256": "6b36b5e47683c3d8118825623e0ae4930552368008ffa9262c9d9f2865c7799c",
+      "bytes": 1176,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/map/output.rs",
+      "sha256": "cd3469bd0750591301c87821607590916531b4e615f377990955fb3c20b583b5",
+      "bytes": 6374,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/mod.rs",
+      "sha256": "8dd0b03a9a8ea20c81bdd1db7ff5a496353aa97144f028f167dbcdccaf37ec1d",
+      "bytes": 123682,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/raw.rs",
+      "sha256": "bb99bde4ff40f35c35fdc1d2fe7eedb9332a41c08cfbe95ac0ab7248823e910b",
+      "bytes": 6865,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/psbt/serialize.rs",
+      "sha256": "e64641d70bff2c4b04a27f8f59e33140ae6def16db96ad2e9baf881e0839ea9e",
+      "bytes": 16014,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/serde_utils.rs",
+      "sha256": "fc3570b69c07a99a08290772fb3aef4f323ecedc28ec2b274c94bf42e8393ce6",
+      "bytes": 18070,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/sign_message.rs",
+      "sha256": "a2d8692a95016ae5f7d76d71d546dd42755ea443f0b141836f09324ff73106ef",
+      "bytes": 11420,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/taproot/merkle_branch.rs",
+      "sha256": "c8a0f1a088dfd4c0b385886f6e4cb58e78736b89d384387b321876203093d7c0",
+      "bytes": 8776,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/taproot/mod.rs",
+      "sha256": "76a66ac3649b82476b8c36dfa8f5cf17cc7916ad1eda7d4a12a90898aed6d489",
+      "bytes": 87224,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/taproot/serialized_signature.rs",
+      "sha256": "bfa481b2c6c85e422aece4d23ac60e168574c780c6d2af8ac614b8c21ec629d3",
+      "bytes": 9061,
+      "status": "outstanding"
+    },
+    {
+      "path": "bitcoin/src/test_macros.rs",
+      "sha256": "e13805bced0ae5d97a4115018a48ac627facbcfd61c23c9132bb3c97e093ed69",
+      "bytes": 408,
+      "status": "outstanding"
+    },
+    {
       "path": "miniscript/CHANGELOG.md",
       "sha256": "ab581eb7a8704edd71bca64e473d541ad9550c948f4b674616aba76314d28f9d",
       "bytes": 12489,
@@ -717,7 +1220,10 @@
       "path": "miniscript/src/descriptor/key.rs",
       "sha256": "bdc822dace9922a2939cffe5f5277f38b11bd2866264c1c2b3e4bd4753fc6931",
       "bytes": 64882,
-      "status": "outstanding"
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EXTENDED-KEY-IMPORT.md"
+      ]
     },
     {
       "path": "miniscript/src/descriptor/key_map.rs",
@@ -997,7 +1503,268 @@
       "sha256": "703c7c13d2441197c6076c4e6a7a01b50522a12984a61cfc74be4fd5d5aff5ee",
       "bytes": 6894,
       "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/.cargo_vcs_info.json",
+      "sha256": "e794383dc0c86aaf168e6fa79fae3b6c847632225287b2c74f965cc66ebb1053",
+      "bytes": 94,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/.github/workflows/cross.yml",
+      "sha256": "8c194d3e2f70044da327d0e36f5efa221f023fbc48176e651cf76a7899e9f918",
+      "bytes": 1993,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/.github/workflows/rust.yml",
+      "sha256": "05f6e66aac72f67efaa72de7f6971c40a64b8c8c032eefd0b7cc41da68008bb1",
+      "bytes": 3619,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/.gitignore",
+      "sha256": "12cc0f91b51fedf41ae1670d1624ee1d78a284bdb101645b60a06a12de16c069",
+      "bytes": 19,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/CHANGELOG.md",
+      "sha256": "11e7b04694770f8dbf86455176eca4a605a911ef56501acbdb61cf744c2fd156",
+      "bytes": 20022,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/Cargo-minimal.lock",
+      "sha256": "06479ba6452c7eede5a02d941406bfa37151d3f3dc2ecdaf3a3c3b07f012a48f",
+      "bytes": 15020,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/Cargo-recent.lock",
+      "sha256": "7b207d91331685f2086d1e47984456f21f6c08d829af8044a792e2c56b6346c0",
+      "bytes": 8941,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/Cargo.lock",
+      "sha256": "af432bbd146a4f551ef5dac6dc82f52de4211d22b295d99751b83ad7431f71ac",
+      "bytes": 13537,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/Cargo.toml",
+      "sha256": "a5608124f9f028d01028e7ee33f3875019261d90f2a66eb53049d1d4d1a57a5e",
+      "bytes": 2646,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/Cargo.toml.orig",
+      "sha256": "01374244f398aa83ae4b8c434b1379a6b69372edd7ee9c8dd07456009087da3f",
+      "bytes": 2700,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309",
+      "bytes": 7049,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/README.md",
+      "sha256": "10b7872b670b81731ae3b946e83af14ecb7956a0d72110ebac3553f8dfcc403b",
+      "bytes": 3766,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/api/all-features.txt",
+      "sha256": "6012bdf47c2cd9139345f3ca34ee8d68533675199e7af28a73b0095e77572d02",
+      "bytes": 85834,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/api/alloc.txt",
+      "sha256": "6da74fd3836805cf8b211a60e2848e2c89c4dd98072db2833e5d1b2c5c131c9a",
+      "bytes": 73016,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/api/default-features.txt",
+      "sha256": "411fbe9268e68cad91b9255e53afec93bf4da11c8b78aa4d67ddb9b2cbf4c5ad",
+      "bytes": 73282,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/api/global-context.txt",
+      "sha256": "350cfc6578d5c6a86e11a29cec68e08c9ec973c79c0bf5e3f956f7a0894c34df",
+      "bytes": 75138,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/api/no-default-features.txt",
+      "sha256": "a301ff5ccd713fc734e91e83b260715a2884026afad74377b7c5e6f2f99647e4",
+      "bytes": 67396,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/clippy.toml",
+      "sha256": "89cd5d45d34652463cedfae1ac5fc2602f80e4d99688772f94a80bdeead90ed1",
+      "bytes": 16,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/contrib/_test.sh",
+      "sha256": "fecfaa95358e467567424121e3a87171a1315d12c41b108ce2f36dfa8b9bd56e",
+      "bytes": 5042,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/contrib/check-for-api-changes.sh",
+      "sha256": "0c874a543cc718bd09591181531fa08b642f232a6c645b0e1b71fe78065960c2",
+      "bytes": 1233,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/contrib/test.sh",
+      "sha256": "cc8b621896588398edd688fa1fc3a0a252fe209350f3988ad9feae09be6bee79",
+      "bytes": 1041,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/contrib/update-lock-files.sh",
+      "sha256": "4d52df54b92c95daa291158c86cedb04489f4096baa284430a82d8316845f10b",
+      "bytes": 222,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/examples/generate_keys.rs",
+      "sha256": "0e7758a59265806ee060c3fb01ed9bd5d361697008b14ff620896fc4e21ea231",
+      "bytes": 439,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/examples/sign_verify.rs",
+      "sha256": "012ebbffcf243ce38dfbf6dac64005bcc42208ede5ae08ffe515ab60f72625be",
+      "bytes": 1514,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/examples/sign_verify_recovery.rs",
+      "sha256": "7936685de02220c1cc2f5f0f4abd5d467f13a30bb8239e7d98a1f97857503717",
+      "bytes": 1648,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/githooks/pre-commit",
+      "sha256": "1ec425f3ceed8123390c35522e90f4c334564c8abfba93a2ccd1b7c92a7782c4",
+      "bytes": 1798,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/justfile",
+      "sha256": "785d108c18121f0b4ca5d7965e39f04cc244e6b9ec692964d3dbcc73c7a85571",
+      "bytes": 1007,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/rustfmt.toml",
+      "sha256": "777378c09ed03c603577d5c30d1b2e954d2923cbb742e1c75bdfde1aef3e0999",
+      "bytes": 2385,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/constants.rs",
+      "sha256": "b731982fed3921dd7b391c5185cfb80a9bac3519147fe760fe9af10d012e3b56",
+      "bytes": 2446,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/context.rs",
+      "sha256": "8564edbd8274e1b4721263c428c5329f7a13bd8e79780e50a5686b45bf8d2661",
+      "bytes": 16241,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/ecdh.rs",
+      "sha256": "3c2ba81eae549d45ff0729266bbf41404958aea15f5d1049fdba9cd50e90302a",
+      "bytes": 9583,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/ecdsa/mod.rs",
+      "sha256": "22221e60e33801c224bdf8fa15c56106af78e8c7204de1b53092330e2154459d",
+      "bytes": 15233,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/ecdsa/recovery.rs",
+      "sha256": "2426f98a84e45bdbeac5aaf46c13b6db620cb654810a39d0be4f3430ef46e5f0",
+      "bytes": 15860,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/ecdsa/serialized_signature.rs",
+      "sha256": "1b2ba81e04a4929a61b27956833a78a6cac35dca43616437c9ad144575d113cd",
+      "bytes": 9082,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/ellswift.rs",
+      "sha256": "605a8579b1ff96604f683d0ca275dcd5f268d0bb1c8ef3c7252b3cf50200d2bc",
+      "bytes": 45565,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/key.rs",
+      "sha256": "afc9ffe8f83abc995258197ebc41804c6a109324f28e79857257d06642a98403",
+      "bytes": 85092,
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EXTENDED-KEY-IMPORT.md"
+      ]
+    },
+    {
+      "path": "secp256k1/src/lib.rs",
+      "sha256": "284c99e99124f104af554db4b0e855078dfb75c8533abbb6f19abe729e150a89",
+      "bytes": 43721,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/macros.rs",
+      "sha256": "31ece8ad2fa96786df7cc5498e455f454dee353c6a0383c2a282f87a034d0b7b",
+      "bytes": 4164,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/scalar.rs",
+      "sha256": "3850bb13c5dd35a5107eed56227c8f2a490c09fd13564cc0bdb198290922987a",
+      "bytes": 4634,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/schnorr.rs",
+      "sha256": "0c8b1f981aec3557a7a2981102c14ef90b119f8242d6ca317adcd7d046078d36",
+      "bytes": 18762,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/secret.rs",
+      "sha256": "dab094b6408d89374152eeb08378076c6c797d3a455bf1d1092ac46889a835bd",
+      "bytes": 7751,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/src/serde_util.rs",
+      "sha256": "30f6b3c66aa9b0df1567b3675190947ab7b793c48f426fbf814be2e746bf2c3c",
+      "bytes": 3020,
+      "status": "outstanding"
+    },
+    {
+      "path": "secp256k1/tests/serde.rs",
+      "sha256": "64c1c49dff839b0c366b44cb4228fe9941ffdfc2bc8810de3f3e65f7becf8e00",
+      "bytes": 2551,
+      "status": "outstanding"
     }
   ],
-  "scope": "All files in these two pinned registry tarballs. Includes non-runtime files. File review applies only to scopes documented in the report. No independent binary-equivalence claim."
+  "scope": "All files in these four pinned registry tarballs. Includes non-runtime files. File review applies only to scopes documented in the report. No independent binary-equivalence claim."
 }

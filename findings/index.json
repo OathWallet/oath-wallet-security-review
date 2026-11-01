@@ -575,5 +575,18 @@
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/46",
     "retest_scope": "Fifteen paired isolated host cases, eight reproduced failures. Real production transport and fallback paths with synthetic URLProtocol responses."
+  },
+  {
+    "id": "OW-2026-035",
+    "title": "Private extended-key imports accepted public point data as a secret",
+    "severity": "moderate",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-035.md",
+    "fix_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+    "regression_only_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+    "retested_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/47",
+    "retest_scope": "Four networks, private-version alias rejection, independently derived scripts, encrypted cold-reopen and re-backup, and the published BIP32 invalid-key corpus."
   }
 ]

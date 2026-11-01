@@ -1,0 +1,132 @@
+{
+  "check": "multisig-diagnostic-delivery",
+  "status": "passed",
+  "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+  "baseline_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+  "executions": [
+    {
+      "phase": "before",
+      "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+      "suite": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 1,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "before-Bitcoin.log",
+      "log_sha256": "2005deee6447cfe9e39f5463cccac5d455bc2b59a94db4e4546fcc3bc16c42c2"
+    },
+    {
+      "phase": "before",
+      "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+      "suite": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 1,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "before-BitcoinCash.log",
+      "log_sha256": "6a64be472ff0fade0e5eeee58734706ef23173d9d6759e2b28f09d9e85963a0b"
+    },
+    {
+      "phase": "before",
+      "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+      "suite": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 1,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "before-Dogecoin.log",
+      "log_sha256": "e8d4e7a5105917fcaff7a340efda3180b3c94c9a44d82b9b5f21e206ce0ee14f"
+    },
+    {
+      "phase": "before",
+      "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+      "suite": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 1,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "before-Litecoin.log",
+      "log_sha256": "654c7306eeb585ce259e177e98b4289b77a87c80319a1c27797c4672694d032f"
+    },
+    {
+      "phase": "after",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "suite": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 0,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "after-Bitcoin.log",
+      "log_sha256": "c6e5fe109754bde2bdd105e8fa83147157ff58604937915e76b363ac5390ce9c"
+    },
+    {
+      "phase": "after",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "suite": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 0,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "after-BitcoinCash.log",
+      "log_sha256": "d3a5decd9f57dda98a8ee86fcbddbce3bdab9e3dc55ed8d7b119a358a182b994"
+    },
+    {
+      "phase": "after",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "suite": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 0,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "after-Dogecoin.log",
+      "log_sha256": "8b3212dd58654fda081a20e13806da4434202ed465552ad408d5ccd6764cf3a8"
+    },
+    {
+      "phase": "after",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "suite": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests",
+      "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+      "exit_code": 0,
+      "expected_outcome_observed": true,
+      "timed_out": false,
+      "log": "after-Litecoin.log",
+      "log_sha256": "08e1c16b6806451f28b88831f3d91fc35e974681a2d5bb4e556772f1546f9441"
+    }
+  ],
+  "instrumentation": [
+    {
+      "phase": "before",
+      "path": "BitcoinMultisigDiagnosticsTests.swift",
+      "original_sha256": "287fb1aca0f6045f36f6346b71091559cf5a3c2dc9ec9d833ed905f41d582cf3",
+      "instrumented_sha256": "eb071a23d95e49090711e2c8dc225ff8affa192d0afff7a4208492a9919971a6"
+    },
+    {
+      "phase": "before",
+      "path": "BitcoinCashMultisigDiagnosticsTests.swift",
+      "original_sha256": "a35e2416b19ebbcf31cdda2b979f133fdf4ae45fbe38da248c1a910d7867dedf",
+      "instrumented_sha256": "30b2232d7f2baf506c73e6a9528aa6ec5d745deab082a849c193ff6013d128b4"
+    },
+    {
+      "phase": "before",
+      "path": "DogecoinMultisigDiagnosticsTests.swift",
+      "original_sha256": "9ce9105948204f2153bb6fb6d6f883f3499dcbfe9607bbc2a53e4ded8f4fbef0",
+      "instrumented_sha256": "8560e44d87b1103c1e7304c125d7bbb25ce0586753c37006d10632053d41e7be"
+    },
+    {
+      "phase": "before",
+      "path": "LitecoinMultisigDiagnosticsTests.swift",
+      "original_sha256": "a98f3605357e1383c72673b6d484084c1d27941f5b733cd1eaafb6a5eb564e0e",
+      "instrumented_sha256": "a497583ad2057f4f182cb1486d295f26634f0454f95fdc9d2ed3fd3f97397b7c"
+    },
+    {
+      "phase": "after",
+      "path": "MultisigSigningDiagnosticCapture.swift",
+      "original_sha256": "b0807fcd3caa335cf1676fab1c690f9d59eeb7d7f0a61b35de0d40aeb53ceaeb",
+      "instrumented_sha256": "9b7038b910576ca46f2501de1ab4f64f1e2ece952f45d8c82b085145b5aabdbc"
+    }
+  ],
+  "duration_seconds": 76.51,
+  "scope": "Only each test transport receives the two-second delay; each production library and actual test assertion is unchanged. Network denied during all eight XCTest executions.",
+  "log": "multisig-diagnostic-delivery.log",
+  "log_sha256": "a35b5efe1a2aed716a36f12377cd537fc0f25f9809cb14e81ee7b7fc73ce09d5"
+}

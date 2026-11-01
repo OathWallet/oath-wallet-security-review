@@ -34,6 +34,8 @@ def build(checkout):
             row.update(status='reviewed', evidence=['review/RESOLVED-PACKAGES.md'])
         if name in {'bdk-ffi/src/wallet.rs','bdk-ffi/src/bitcoin.rs'}:
             row.update(status='partially-reviewed', evidence=['review/BITCOIN-SIGNER-AND-CORE.md'])
+        if name=='bdk-ffi/src/keys.rs':
+            row.update(status='partially-reviewed',evidence=['review/EXTENDED-KEY-IMPORT.md'])
         files.append(row)
     if {r['path'] for r in files if r['status']=='reviewed'} != REVIEWED:
         raise ValueError('Reviewed file missing')

@@ -1,0 +1,47 @@
+{
+  "check": "utxo-key-recovery",
+  "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+  "baseline_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "9b3458bf68838bea1be8b151535bbee62cd0dba84177ff78d78193de05743341",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "after",
+      "case": "testRecoveryRestoresEachOriginalScript",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testRecoveryRestoresEachOriginalScript.log",
+      "log_sha256": "9c5ef37ecf3ebc9fe227c21caddfa7ff4021a582964ba73cedfa2db275d650e1"
+    },
+    {
+      "phase": "after",
+      "case": "testRecoveryRefusesMismatchedStoredScalar",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testRecoveryRefusesMismatchedStoredScalar.log",
+      "log_sha256": "62d4a9d8909bf1c5fe131b9e48a69d0c24f32338a5e55cde7edb000476876969"
+    },
+    {
+      "phase": "after",
+      "case": "testRecoveryRefusesPublicAndWrongNetworkVersions",
+      "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testRecoveryRefusesPublicAndWrongNetworkVersions.log",
+      "log_sha256": "2006dd0ecb651e2756a271bd846c7aab6b2a06e1b842a9e379284f4d351b92ad"
+    }
+  ],
+  "duration_seconds": 21.016,
+  "scope": "Synthetic public point and chain codes. Each fixture runs in a network-denied XCTest process. The four-network recovery control compares derived scripts and leaf exports with independent BIP44 vectors.",
+  "log": "utxo-key-recovery.log",
+  "log_sha256": "b8d4b22faa8aaa30b50e248bf4c52351c8364427dd836e3a8a0568727617e752"
+}

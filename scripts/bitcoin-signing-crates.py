@@ -8,11 +8,13 @@ import subprocess
 import tarfile
 
 ROOT=Path(__file__).resolve().parents[1]
-CRATES=('bdk_wallet','miniscript')
+CRATES=('bdk_wallet','miniscript','bitcoin','secp256k1')
 PARTIAL={
  'bdk_wallet/src/wallet/signer.rs','bdk_wallet/src/wallet/mod.rs',
  'miniscript/src/psbt/finalizer.rs','miniscript/src/psbt/mod.rs','miniscript/src/interpreter/mod.rs',
 }
+
+KEY_PATHS={'bitcoin/src/bip32.rs','miniscript/src/descriptor/key.rs','secp256k1/src/key.rs'}
 
 def inventory(cache):
     lock=json.loads((ROOT/'scope/upstream-bdk-ffi.json').read_bytes())['locked_packages']
@@ -36,11 +38,12 @@ def inventory(cache):
                 with tar.extractfile(item) as f: digest=hashlib.file_digest(f,'sha256').hexdigest()
                 row=dict(path=relative,sha256=digest,bytes=item.size,status='outstanding')
                 if relative in PARTIAL: row.update(status='partially-reviewed',evidence=['review/BITCOIN-SIGNER-AND-CORE.md'])
+                if relative in KEY_PATHS: row.update(status='partially-reviewed',evidence=['review/EXTENDED-KEY-IMPORT.md'])
                 rows.append(row)
         crates.append(dict(name=name,version=version,url=source,archive_sha256=expected,entries=len(names)))
-    assert {r['path'] for r in rows if r['status']=='partially-reviewed'}==PARTIAL
+    assert {r['path'] for r in rows if r['status']=='partially-reviewed'}==PARTIAL|KEY_PATHS
     return dict(cargo_lock_source='https://github.com/bitcoindevkit/bdk-ffi/blob/1c5f4863c6a53cc9d063d34c4e13c91fea5c58de/bdk-ffi/Cargo.lock',
-                crates=crates,files=sorted(rows,key=lambda r:r['path']),scope='All files in these two pinned registry tarballs. Includes non-runtime files. File review applies only to scopes documented in the report. No independent binary-equivalence claim.')
+                crates=crates,files=sorted(rows,key=lambda r:r['path']),scope='All files in these four pinned registry tarballs. Includes non-runtime files. File review applies only to scopes documented in the report. No independent binary-equivalence claim.')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--cache',required=True,type=Path);p.add_argument('--output',required=True,type=Path)
