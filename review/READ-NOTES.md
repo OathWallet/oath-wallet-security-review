@@ -388,3 +388,21 @@ limitations are recorded in [CORE-APP-INTEGRATION.md](CORE-APP-INTEGRATION.md).
 `TronSendPlan.swift` was read completely for local guards but remains partial;
 producer/consumer binding, fee relations and delegated validators need further
 review. No new finding is asserted for that file.
+
+## Progress 21 — TRON send trace and adversarial corpus
+
+At the unchanged application target 27fcf5f, read the complete TRON plan, crypto,
+identity/models, multisig policy and permission-control sources. Trace amount
+limits and resource-based fee reservations into signed bytes; inspect signature
+membership, exact envelope reconstruction, threshold preservation and integer
+overflow guards. Six audit-only property cases call the production package.
+Known-answer fixtures are existing TronWeb 6.2.2 outputs, not a freshly executed
+JavaScript generator. Read the new Python runner and Swift test fixture in full.
+
+The complete receipt decoder, client, app service, signing adapter and database journal were read,
+but retain partial dispositions. Only TRON-specific methods in the shared vault,
+reconciliation and permissions files and fee/total access sites in the review
+UI were read in this increment. HD derivation, WalletConnect context, provider
+trust, service lifecycle and migration/index assumptions remain open. Scope and
+finite test coverage are explicit in [TRON-SEND-TRACE.md](TRON-SEND-TRACE.md).
+No new production vulnerability was established; no app behavior was changed.

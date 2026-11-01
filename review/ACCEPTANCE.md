@@ -1,13 +1,13 @@
 # Acceptance checklist — not complete
 
-Progress 20 targets application commit
+Progress 21 targets application commit
 `27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged by PR 11. The completion
-checker still reports **7,669 outstanding items**. This is an evidence checklist,
+checker still reports **7,661 outstanding items**. This is an evidence checklist,
 not a score or security certificate.
 
 - **Full scope disposition: incomplete.** App and upstream inventories are
   hash-bound, but most implementations remain outstanding. The app ledger has
-  170 reviewed, 11 partial and 10 generated-verified files out of 4,675. Core has
+  175 reviewed, 17 partial and 10 generated-verified files out of 4,675. Core has
   21 reviewed and 20 partial files out of 3,941. Scanners/tests do not replace reads.
 - **Confirmed findings: repairs published, historical assurance gap remains.**
   OW-2026-001 and OW-2026-003 through OW-2026-007 retain their verified source
@@ -18,7 +18,8 @@ not a score or security certificate.
 - **Required final-target validation: incomplete.** The current target passes
   unsigned generic iOS Release compilation, 158 security host checks, public
   validation/Gitleaks, diagnostics coverage and 118 diagnostics cases with two
-  explicit skips. The remaining required checks need current-target evidence.
+  explicit skips. TRON properties, authorization, OathAnkr and OathDatabase now also pass on this
+  target; all explicit skips are retained. Remaining required checks need current-target evidence.
   Historical GitHub run 41264051930 passed all 44 jobs on `02a6e8a`; it does not
   establish full-matrix success for the new target.
 - **Dependency provenance: bounded evidence, remaining gaps.** Fresh Core
@@ -36,7 +37,8 @@ not a score or security certificate.
 - **Publication: progress evidence complete for this increment.** Application
   PR 11 is merged; progress 19 holds the repaired framework/symbol assets and
   their source-build evidence. Progress 20 adds final integration checks and
-  the retained manifest failure. The full-scope final audit release is not yet
+  the retained manifest failure. Progress 21 adds the TRON source trace, six new
+  property cases and current-target package results. The full-scope final audit release is not yet
   justified. The [report](REPORT.md) and [integration record](CORE-APP-INTEGRATION.md)
   distinguish source repair, host tests, compilation and runtime evidence.
 

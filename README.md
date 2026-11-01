@@ -20,6 +20,10 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
+Latest application trace: [TRON sends and adversarial tests](review/TRON-SEND-TRACE.md),
+including exact signed-intent binding, authorization and durable recovery.
+No new production defect was confirmed in this increment.
+
 ## Reproduce
 
 Use an isolated machine with Xcode 27.1, Swift 6.4 and Python 3.14.7.
@@ -47,8 +51,9 @@ python3 scripts/uri-boundary-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/pairing-link-check.py .work/source --output /tmp/uri-evidence
 python3 scripts/ton-properties.py .work/source --output /tmp/ton-evidence --scratch .work/ton-properties
 python3 scripts/solana-properties.py .work/source --output /tmp/solana-evidence --scratch .work/solana-properties
-python3 scripts/aezeed-primitives.py .work/source --expected-commit 02a6e8ab66c7629dcb9dd36637c683457e821d98 --output /tmp/aezeed-primitives
-python3 scripts/aezeed-provenance.py .work/source --expected-commit 02a6e8ab66c7629dcb9dd36637c683457e821d98 --output /tmp/aezeed-provenance
+python3 scripts/tron-properties.py .work/source --output /tmp/tron-evidence --scratch .work/tron-properties
+python3 scripts/aezeed-primitives.py .work/source --expected-commit 27fcf5f58f6169e1a40fb6afced883bc736d124d --output /tmp/aezeed-primitives
+python3 scripts/aezeed-provenance.py .work/source --expected-commit 27fcf5f58f6169e1a40fb6afced883bc736d124d --output /tmp/aezeed-provenance
 python3 scripts/ton-authorization.py .work/source --output /tmp/ton-authorization --scratch .work/ton-authorization
 python3 scripts/run.py .work/source scanner
 python3 scripts/run.py .work/source wallet-links
@@ -92,7 +97,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress20)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress21)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot

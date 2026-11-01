@@ -5098,5 +5098,126 @@
     "original_log_sha256": "fbd06141cf77aa0a6a23bf1a1ca095cb7e7559135df23b7830010257833f0764",
     "evidence_path": "evidence/core-app-integration/final/build.log.gz",
     "log_compression": "gzip"
+  },
+  {
+    "check": "tron-send",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--tron-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 249.21,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Tron send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "e6949c3b264d10f70280b3e90029bdc7345cb10f530cf1edddb5008b59e0c212",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "e6949c3b264d10f70280b3e90029bdc7345cb10f530cf1edddb5008b59e0c212",
+    "log": "evidence/tron-send-trace/oath-tron-review-progress21/tron-send.log.gz",
+    "log_compression": "gzip; log_sha256 hashes decompressed published bytes"
+  },
+  {
+    "check": "tron-properties",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "tests_passed": 6,
+    "duration_seconds": 119.18,
+    "seed": "0x4f41544854524f4e",
+    "fixture_sha256": "831c944805ef12d2d9975021d4cd9056e89bf9ab0a77b751bcdda75837215eb6",
+    "vectors_sha256": "0f9dc4638841c889c16596ef00338bda1a69c035ceca13a6d7a9811fa9fe079a",
+    "sdk_vector_sha256": "72b4707b9b8348d52ef24812f027ec5f8b2212637b3423cc18fe72bc121a71f3",
+    "log": "evidence/tron-send-trace/oath-tron-review-progress21/properties/tron-properties.log.gz",
+    "log_sha256": "ea310228d7fe4875f2c37efb414a69358891c9bf206432dc37533a3bfd08c503",
+    "runtime_scope": "macOS host; production OathAnkr module; synthetic inputs; no blockchain, simulator or device",
+    "original_log_sha256": "ea310228d7fe4875f2c37efb414a69358891c9bf206432dc37533a3bfd08c503",
+    "log_compression": "gzip; log_sha256 hashes decompressed published bytes"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-tron-review-progress21/packages"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 390.19,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1402 selected; 1208 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "568abf9a3728c298989f1a390052b0c612dc91a2bca7615a7da96359b3d0e308",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1402,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "52cc66bfced5e6abecde4328d77ee3cbdd2d2f60e3c807e35fed73e02870bb39"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_log_sha256": "568abf9a3728c298989f1a390052b0c612dc91a2bca7615a7da96359b3d0e308",
+    "log": "evidence/tron-send-trace/oath-tron-review-progress21/packages/OathAnkr.log.gz",
+    "log_compression": "gzip; log_sha256 hashes decompressed published bytes"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDatabase",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-tron-review-progress21/database"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 315.11,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 774 selected; 703 passed; 71 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "f4b6bbf29ec6271b29d9d3f69845e71278c083d0683cde9805fbb12da4a26ed1",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 774,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 71,
+      "sha256": "edaace58e62a5451f4a13ed7053cf50931f9bd89d1183c6209617ba3369da401"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_log_sha256": "f4b6bbf29ec6271b29d9d3f69845e71278c083d0683cde9805fbb12da4a26ed1",
+    "log": "evidence/tron-send-trace/oath-tron-review-progress21/database/OathDatabase.log.gz",
+    "log_compression": "gzip; log_sha256 hashes decompressed published bytes"
   }
 ]

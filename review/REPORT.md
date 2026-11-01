@@ -25,8 +25,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,675 files: 170 reviewed, 11 partially reviewed,
-10 generated artifacts verified, 4,484 outstanding. The Wallet Core upstream
+The application ledger contains 4,675 files: 175 reviewed, 17 partially reviewed,
+10 generated artifacts verified, 4,473 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -54,6 +54,13 @@ Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
 [scope](../scope) and the exact [read notes](READ-NOTES.md).
+
+The [TRON trace and production-code corpus](TRON-SEND-TRACE.md) adds six passing
+property cases, nine existing authorization checks, and current-target package
+results: OathAnkr 1,208 passed/194 skipped, OathDatabase 703 passed/71 skipped,
+zero failures. These results do not establish live-provider or UI behavior.
+No new production defect was confirmed. The new CI job is configured but its
+GitHub execution remains unverified; no app source was changed.
 
 ## Findings and repair status
 
