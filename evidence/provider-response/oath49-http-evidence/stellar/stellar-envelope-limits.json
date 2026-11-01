@@ -1,0 +1,69 @@
+{
+  "check": "stellar-envelope-limits",
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+  "baseline_commit": null,
+  "dependency_commits": {
+    "SwiftDraw": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "stellar-ios-mac-sdk": "b5dac0a6e8ff312d597c9a3b4269b03131d66e0d",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "00c0d6bec038d572da443b41325e6e2a08fd387e38f9cf60fd2bcdfe8c29ec0c",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "after",
+      "case": "testNestedEnvelopeMatchesIndependentDigest",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testNestedEnvelopeMatchesIndependentDigest.log",
+      "log_sha256": "ebccc9579d9acb97e62a38b9dcb0f7dab883ef750a6c014604f3386a7b2da6e4"
+    },
+    {
+      "phase": "after",
+      "case": "testRecursiveVectorHitsDepthGuard",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testRecursiveVectorHitsDepthGuard.log",
+      "log_sha256": "3067665ab92b97269c458b47425ea33ea5c2648a400fd361b912b0024343c128"
+    },
+    {
+      "phase": "after",
+      "case": "testForgedArgumentCountHitsRemainingBytesGuard",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testForgedArgumentCountHitsRemainingBytesGuard.log",
+      "log_sha256": "cff4a78a1f9c3d0c9dcd44089c8aba6bff054fac12c6a58e2b6cc9e9a8e26050"
+    },
+    {
+      "phase": "after",
+      "case": "testNoncanonicalVectorPresenceRejectedByApp",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testNoncanonicalVectorPresenceRejectedByApp.log",
+      "log_sha256": "76c4576655e83f6ecf79b335a47c0d6acba59ef61bdc17a028b9386bcfc2d67c"
+    },
+    {
+      "phase": "after",
+      "case": "testTrailingWordRejectedByApp",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testTrailingWordRejectedByApp.log",
+      "log_sha256": "185bfea20ae16f82b85a360fd202c0e042d60ecd44999f223bb0d2e80af1378e"
+    }
+  ],
+  "duration_seconds": 205.663,
+  "scope": "Five network-denied synthetic Soroban XDR cases through Oath request construction, SDK decoding, canonical checks, signing and verification. No public chain or live transaction.",
+  "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+  "log": "stellar-envelope-limits.log",
+  "log_sha256": "6b02623c250064f817f3a6f01a75b3d6168b9ab0dedecc66202d686dc19ec45e"
+}

@@ -85,7 +85,7 @@ jobs:
       fail-fast: false
       max-parallel: 6
       matrix:
-        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "OathTokenImages"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "OathTokenImages", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "cloud-restore", "public", "diagnostics-coverage", "clipboard", "walletconnect-sdk", "walletconnect-verify", "scanner", "wallet-links", "scanner-lifecycle"]') }}
+        check: ${{ fromJSON(inputs.validation_kind == 'packages' && '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "OathTokenImages", "OathExchangeRates"]' || '["OathDiagnostics", "OathCloudBackup", "OathDatabase", "OathBitcoin", "OathAnkr", "OathAezeed", "OathWalletHandoff", "OathTokenImages", "OathExchangeRates", "security", "envelope", "authentication", "protected-startup", "lifecycle", "walletconnect", "evm-send", "solana-send", "tron-send", "xrpl-send", "stellar-send", "aptos-send", "sui-send", "near-send", "ton-send", "thorchain-send", "arc-send", "permission-batch", "cloud-restore", "public", "diagnostics-coverage", "clipboard", "walletconnect-sdk", "walletconnect-verify", "scanner", "wallet-links", "scanner-lifecycle", "app-updates", "token-lookup"]') }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}
@@ -474,6 +474,28 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: bitcoin-psbt-size-boundary, path: evidence/ci, retention-days: 90}
+  provider-response-budgets:
+    if: inputs.validation_kind != 'scanners'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - run: python3 scripts/stellar-xdr-vector.py | diff - fixtures/stellar/nested-testnet-vector.json
+      - run: python3 scripts/stellar-envelope-limits.py .work/source --scratch .work/stellar-xdr --output evidence/ci/stellar
+      - run: python3 scripts/provider-response-budget.py bitcoin .work/source --scratch .work/btc-response --output evidence/ci/bitcoin
+      - run: python3 scripts/provider-response-budget.py fallbacks .work/source --scratch .work/btc-response --output evidence/ci/fallbacks
+      - run: python3 scripts/provider-response-budget.py rates .work/source --scratch .work/rate-response --output evidence/ci/rates
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: provider-response-budgets-boundary, path: evidence/ci, retention-days: 90}
   bitcoin-signature-core:
     if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
@@ -924,6 +946,10 @@ jobs:
       - run: python3 scripts/run.py .work/source build --output evidence/ci --scratch .work/release-build
       - name: Trace this build's Swift and C compiler inputs
         run: python3 scripts/release-inputs.py .work/source --build-result evidence/ci/build.json --derived-data .work/release-build --output evidence/ci/build-inputs
+      - name: Compare embedded Wallet Core images with the resolved arm64 slices
+        run: python3 scripts/release-frameworks.py .work/source .work/release-build evidence/ci/build.json evidence/ci/build-inputs
+      - name: Index network entry point candidates in compiled sources
+        run: python3 scripts/transport-inputs.py .work/source .work/release-build evidence/ci/build-inputs/release-inputs.json evidence/ci/build-inputs/transport-inputs.json
       - name: Verify the resolved package ledger and the BDK distribution
         run: |
           packages=.work/release-build/SourcePackages
@@ -936,6 +962,11 @@ jobs:
           cmp scope/upstream-bdk-ffi.json evidence/ci/bdk-ffi.json
           curl --fail --silent --show-error --location --retry 3 https://github.com/bitcoindevkit/bdk-swift/releases/download/3.1.1/bdkFFI.xcframework.zip -o .work/bdk.zip
           python3 scripts/bdk-distribution.py .work/bdk.zip "$packages/artifacts/bdk-swift/bdkFFI/bdkFFI.xcframework" evidence/ci/bdk-distribution.json
+      - name: Record independent BDK iOS archive reconstruction
+        run: |
+          sh scripts/rebuild-bdk-ios.sh .work/bdk-ffi .work/bdk-ios-rebuild .work/release-build/SourcePackages/artifacts/bdk-swift/bdkFFI/bdkFFI.xcframework/ios-arm64/libbdkffi.a
+          cp .work/bdk-ios-rebuild/comparison.json evidence/ci/bdk-ios-reconstruction.json
+          cp .work/bdk-ios-rebuild/packages.json evidence/ci/bdk-ios-packages.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: unsigned-ios-release-build, path: evidence/ci, retention-days: 90}

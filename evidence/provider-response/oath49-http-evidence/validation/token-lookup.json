@@ -1,0 +1,35 @@
+{
+  "check": "token-lookup",
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+  "command": [
+    "python3",
+    "Tools/CheckTokenLookup.py"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 129.61,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "/private<TEMP>/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:626: -[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks] : Test skipped - Explicit all-network live lookup",
+    "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks]' skipped (0.006 seconds).",
+    "/private<TEMP>/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:162: -[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata] : Test skipped - Opt-in public Celo token metadata check",
+    "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata]' skipped (0.001 seconds).",
+    "/private<TEMP>/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:604: -[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract] : Test skipped - Opt-in public token RPC check",
+    "Test Case '-[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract]' skipped (0.001 seconds).",
+    "/private<TEMP>/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:125: -[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks] : Test skipped - Opt-in six-chain public metadata check",
+    "Test Case '-[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks]' skipped (0.001 seconds).",
+    "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 13.837 (13.840) seconds",
+    "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 13.837 (13.840) seconds",
+    "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 13.837 (13.841) seconds",
+    "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.011 seconds."
+  ],
+  "log_sha256": "55caee974968c0451a03fe158867a473e63bc78908386e9e1a9f70f76b8dfafe",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xctest_cases": {
+    "passed": 19,
+    "skipped": 4,
+    "failed": 0
+  }
+}

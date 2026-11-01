@@ -1,0 +1,57 @@
+{
+  "check": "fallbacks-response-budget",
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+  "baseline_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "d887bce1bdae6fd9814507bcba0070561015e8531022f6dcf07cd1c391cb4ae4",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testFeeFallbackMovesToNextHostAtLimit",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testFeeFallbackMovesToNextHostAtLimit.log",
+      "log_sha256": "6437d0a72376b26b1a48c8c22d627cdcce0de979b6e5110ca44c372b8fe5e656"
+    },
+    {
+      "phase": "before",
+      "case": "testParentFallbackAuthenticatesNextHostsTransaction",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testParentFallbackAuthenticatesNextHostsTransaction.log",
+      "log_sha256": "106909712604e107b7a9f7693fdee5bdaaa81be9d4501e982d74686e2e97d40e"
+    },
+    {
+      "phase": "after",
+      "case": "testFeeFallbackMovesToNextHostAtLimit",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testFeeFallbackMovesToNextHostAtLimit.log",
+      "log_sha256": "e87053fcc6b0f0ceeb52f549b14c04ee1a33207964b9e0564e617c09334fd488"
+    },
+    {
+      "phase": "after",
+      "case": "testParentFallbackAuthenticatesNextHostsTransaction",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testParentFallbackAuthenticatesNextHostsTransaction.log",
+      "log_sha256": "6b8259195bc7c633a70b8572062209b1649dca1008bc449e79aaae6111497ee5"
+    }
+  ],
+  "duration_seconds": 172.37,
+  "scope": "Synthetic URLProtocol stream against the production transport. Separate network-denied host process for each case and revision.",
+  "log": "fallbacks-response-budget.log",
+  "log_sha256": "d21c3c27fcc0cc22128f02952d0cc5e87087d846dd5580fbdd859ca7bf962d50"
+}

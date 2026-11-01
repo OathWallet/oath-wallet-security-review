@@ -1,0 +1,101 @@
+{
+  "check": "rates-response-budget",
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+  "baseline_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd",
+    "GRDB.swift": "533286eab041d826ed4a46c56b213fa3d2cebb7a",
+    "SwiftDraw": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "stellar-ios-mac-sdk": "b5dac0a6e8ff312d597c9a3b4269b03131d66e0d"
+  },
+  "fixture_sha256": "50425979e9b8d762fd8a86537d94f6e6ee63fda41f0abb71260167ac017c902f",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testOversizePrecedesRemoteDisconnect",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testOversizePrecedesRemoteDisconnect.log",
+      "log_sha256": "7afc7e25b51de6cf22719798e134b0b5c8dbb3abaf1b7cd581759e70023b6097"
+    },
+    {
+      "phase": "before",
+      "case": "testOversizedFailureKeepsHTTPStatus",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testOversizedFailureKeepsHTTPStatus.log",
+      "log_sha256": "df2ac0dc070901ae0a1e592c7793d6a598f652a6140ce9d6890e03ede1df60e1"
+    },
+    {
+      "phase": "before",
+      "case": "testBodyExactlyAtLimitIsComplete",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testBodyExactlyAtLimitIsComplete.log",
+      "log_sha256": "550b70667534ea6e5c4f100caaffa9fb504f484c5803e64ca8c6c75f78310249"
+    },
+    {
+      "phase": "before",
+      "case": "testInterruptedSmallBodyPreservesError",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testInterruptedSmallBodyPreservesError.log",
+      "log_sha256": "fa3d4f580da62fd3e3974746c1c57479957f27b4874fc47f8a4004888f20be3d"
+    },
+    {
+      "phase": "after",
+      "case": "testOversizePrecedesRemoteDisconnect",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testOversizePrecedesRemoteDisconnect.log",
+      "log_sha256": "c9c0741251fdefaf767468076ed9dc5937258af9e74529551297cd0544d8eb06"
+    },
+    {
+      "phase": "after",
+      "case": "testOversizedFailureKeepsHTTPStatus",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testOversizedFailureKeepsHTTPStatus.log",
+      "log_sha256": "059bb118a4e075f05e9ac9587312287b67ed98d8ecb03b47787f41f5c334174c"
+    },
+    {
+      "phase": "after",
+      "case": "testBodyExactlyAtLimitIsComplete",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testBodyExactlyAtLimitIsComplete.log",
+      "log_sha256": "251a10a56f2eb744296e949ef68c351d04b75d6d2c671ac29b71126b29774f12"
+    },
+    {
+      "phase": "after",
+      "case": "testInterruptedSmallBodyPreservesError",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testInterruptedSmallBodyPreservesError.log",
+      "log_sha256": "fe3290f9d9fd3e795173c2bb2a7d54cd1f837cb0a899f44abfa61d08670b6492"
+    }
+  ],
+  "duration_seconds": 389.487,
+  "scope": "Synthetic URLProtocol stream against the production transport. Separate network-denied host process for each case and revision.",
+  "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+  "log": "rates-response-budget.log",
+  "log_sha256": "5a8372b3abb23d50faacd68863cd9056cfad9fc9914896582c8dc580092490a1"
+}

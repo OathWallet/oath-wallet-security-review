@@ -7,7 +7,17 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`0e611a5408cfa02c8463b4bcd74a0164522cf7a3`**.
+Current review target: **`0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8`**.
+
+[OW-2026-034](../findings/OW-2026-034.md) documents continued downloads after the intended limit. The [source repair](https://github.com/devdasx/oath-wallet/pull/46) cancels oversized transfers while retaining status, retry and cancellation behavior. Fifteen cases exercised ordinary, oversized, interrupted or missing responses. Eight reproduced prior failures, seven were passing controls, and all fifteen passed after repair. This establishes response and cancellation behavior, without claiming a peak process memory figure.
+
+Five [Stellar envelope tests](STELLAR-XDR-BOUNDARIES.md) exercised the shipped request decoder and pinned SDK. The valid control matched an independently generated testnet digest and signed locally. The parser rejected excessive recursion and a forged element count. Oath rejected a noncanonical optional flag and trailing bytes. Seven upstream files have partial, hash-bound dispositions for this path.
+
+Host packages on the current app source: Bitcoin (289 passed, 60 skipped), diagnostics (118 passed, 2 skipped), rates (16 passed, 2 skipped), Ankr (1,296 passed, 194 skipped) and database (707 passed, 71 skipped). Token lookup passed 19 cases with four opt-in skips. The app update harness passed 23 assertions. [Historical failures](../evidence/provider-response/oath49-http-evidence/triage.json) map all 48 assertions from the original triage file to 23 passing current selectors or explicitly named successors.
+
+The unsigned iOS Release build selected 2,354 distinct non-toolchain compiler inputs. The [network entry point index](../evidence/provider-response/oath49-http-evidence/build-inputs/transport-inputs.json) reports 73 files with lexical candidates among 2,347 text inputs. Seven compiled modules were hashed separately. These matches do not prove symbol reachability. The new [transport review](HTTP-RESPONSE-BOUNDARIES.md) states which paths were inspected. The actual embedded WalletCore and WalletCoreSwiftProtobuf executable files were byte-identical to the two resolved arm64 XCFramework slices in this build; this does not establish independent upstream-source reproduction. The independently rebuilt BDK iOS static archive was different to the published archive (525 of 902 published members had identical payloads). All 187 audit helper tests passed. Production source tree `d11801ba6ee09eda6083caac4ffe440854ed29ee` is identical at the tested fix and public merge.
+
+Previous target: `0e611a5408cfa02c8463b4bcd74a0164522cf7a3`.
 
 [OW-2026-033](../findings/OW-2026-033.md) documents a wallet signing-result integrity bug. A peer-supplied ECDSA or Taproot partial signature for a different transaction survived signing and the original journal verification. The [app repair](https://github.com/devdasx/oath-wallet/pull/45) regenerates the requested signature and asks BDK's script interpreter to verify the unlocking data against the approved transaction. The nine-case host corpus recorded eight specific failures and one passing control before the change. All nine passed afterward.
 

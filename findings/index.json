@@ -563,5 +563,17 @@
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/45",
     "retest_scope": "Nine paired host cases plus independent Bitcoin Core regtest with four funded scripts on both revisions."
+  },
+  {
+    "id": "OW-2026-034",
+    "title": "Provider responses exceeded their byte budgets before validation",
+    "severity": "moderate",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-034.md",
+    "fix_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "regression_only_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/46",
+    "retest_scope": "Fifteen paired isolated host cases, eight reproduced failures. Real production transport and fallback paths with synthetic URLProtocol responses."
   }
 ]

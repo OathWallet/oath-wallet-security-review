@@ -1,0 +1,1147 @@
+{
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+  "build_description": "b194fb307545b656ac91525d9bf420f8",
+  "files_checked": 2347,
+  "hashed_precompiled_modules": [
+    "generated/ExplicitPrecompiledModules/_Builtin_limits-15RWT9QAMGYSIDOLZ4T4JQKYH.pcm",
+    "generated/ExplicitPrecompiledModules/_Builtin_stddef-6JZNBPCNKV9Y2JVRT507ZEJDD.pcm",
+    "generated/ExplicitPrecompiledModules/_Builtin_stddef-BBNHX1Q3J9LE9YFA8F232ONGR.pcm",
+    "generated/ExplicitPrecompiledModules/_Builtin_stdint-1TDFUJTCFYMPIAWUYKUZSJZFZ.pcm",
+    "generated/ExplicitPrecompiledModules/_DarwinFoundation2-1YSZ60DXVLRSVLICBIGU7Z589.pcm",
+    "generated/ExplicitPrecompiledModules/_DarwinFoundation2-6U2RD9FBGQ1AQVJUTN5GL48XO.pcm",
+    "generated/ExplicitPrecompiledModules/_DarwinFoundation3-6YYTWCXE7M2VSPKM6RCUL4R2I.pcm"
+  ],
+  "paths_with_matches": 73,
+  "patterns": {
+    "urlsession-task-or-stream": "\\b(?:dataTask|downloadTask|uploadTask|webSocketTask|bytes)\\s*\\(\\s*(?:with|for|from)\\s*:",
+    "async-data-or-download": "\\.(?:data|download|upload)\\s*\\(\\s*(?:for|from)\\s*:",
+    "network-framework": "\\b(?:NWConnection|NWListener|nw_connection_create|nw_listener_create)\\s*\\(",
+    "socket-api": "\\b(?:socket|connect|sendto|recvfrom|SSL_connect|CFStreamCreatePairWithSocketToHost)\\s*\\(",
+    "webview-load": "\\b(?:WKWebView|loadHTMLString|loadFileURL)\\s*\\(",
+    "synchronous-url-read": "\\b(?:Data|NSData|String)\\s*\\(\\s*contentsOf(?:URL)?\\s*:"
+  },
+  "entries": [
+    {
+      "path": "application/OathAtmosphere/Home/OathHelpArticleCatalog.swift",
+      "sha256": "9cbd9ffabbaeccb2e6e27fa323f95f393cb8be8c4306d0743c3791528ec5d8e0",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 166,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 167,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Home/OathReceiveNetworkGuide.swift",
+      "sha256": "6d133861df5b317f5dcf69769fad8859126f094233b4904d9aff7af955c29f90",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 91,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Import/OathMnemonicValidator.swift",
+      "sha256": "7a3c8548e4d1d8f5f489da3d12f76424d45a70d1af6758850f7a8ae4132e6d85",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 50,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 54,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Scanner/OathWalletConnectRelayFixture.swift",
+      "sha256": "80310f1335598fbc75793cde5b27f29361c8ff3f5c535f51fca31fb2fdfc5b9b",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 49,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "04ddf5cc9a50322cca0800ce991bada01dc8889294a0f4a301997140da349765",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 141,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Scanner/OathWalletConnectTransport.swift",
+      "sha256": "3f21baa814ba1655a571930a0edf2748c044a3e2b01849ac82e0ff8e465bd5e2",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 48,
+          "kind": "socket-api"
+        },
+        {
+          "line": 56,
+          "kind": "urlsession-task-or-stream"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Tokens/OathTokenNetwork.swift",
+      "sha256": "ca0efa810f4d7790b67aab14e73037179f9a12d10959ae0a2cbe85167c27e570",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 277,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/OathAtmosphere/Wallet/OathInstallationSecurity.swift",
+      "sha256": "71bab22497fc7ca5a0c290fbaa6ef49bc04cbce4945f6a4ee8550c99c0a1a71d",
+      "targets": [
+        "Oath Wallet"
+      ],
+      "matches": [
+        {
+          "line": 117,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAezeed/Sources/OathAezeed/Aezeed.swift",
+      "sha256": "27e01cd3c8ffa103cb2835b63de9cbd16348371aed9d723a9fe8bf8d1fcac6cb",
+      "targets": [
+        "OathAezeed"
+      ],
+      "matches": [
+        {
+          "line": 21,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/AnkrClient.swift",
+      "sha256": "030124b5958b5af11b7379388ecc5c7690d77fc9f5fb27fcddd68c2995563777",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 26,
+          "kind": "urlsession-task-or-stream"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/ArcModels.swift",
+      "sha256": "379442a5025c7d767faf8132a20033998e184e9aefd2692484ebca24109d1b78",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 105,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/ContractIdentity.swift",
+      "sha256": "024ea71caf270ffd5e18f1e8c83f2ef8efdadc0e54a8964784d55a3eb5086fc5",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 105,
+          "kind": "urlsession-task-or-stream"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/IndexedEVMMarkets.swift",
+      "sha256": "e93a08011b6d287cdcf5bcf5b48fada10d3a128ec02bbb99fd6c178e9538bb03",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 44,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/NearMultisig.swift",
+      "sha256": "e9aa95bbf65b89c1f58eb9889d2cd4a2e2c1121786f52603917a64443f8af118",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 28,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/PublicArtworkCatalogTransport.swift",
+      "sha256": "4a86a430bf899506b9d3888c94363a03a3561e3a2ccaf4e718f798e8c07d09da",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 29,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/TokenDiscoveryCatalog.swift",
+      "sha256": "6749da2bd9f160acb14f4fb5f76171a776ab653b98919c0266e44220209e7c4d",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 250,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 260,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 291,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 299,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/TonMultisig.swift",
+      "sha256": "cda6205bd89fb38370dd8927aff3bd1f9a4c9108dcd1c6e7a7ef919b4be12f90",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 26,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/TonSendCrypto.swift",
+      "sha256": "e7c4f639a904d0857886e69fd55b0ec1bc99b7a7df40144c17ab79c65f1f6557",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 8,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/VerifiedEVMTokenCatalog.swift",
+      "sha256": "01421b13bf07cee1f3e20a74c05ae147cc0b363ea7a5f6242ffc27c9b6040f2b",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 130,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathAnkr/Sources/OathAnkr/WalletConnectXrpl.swift",
+      "sha256": "62f083abab9956d37049ce6887f43693edee11c51917482d692b03761a579ed3",
+      "targets": [
+        "OathAnkr"
+      ],
+      "matches": [
+        {
+          "line": 138,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathBitcoin/Sources/OathBitcoin/Electrum.swift",
+      "sha256": "19a7d40332fe81e79f3644a5cc0a30906c1d5e5e348bc2b30403cad284f350c6",
+      "targets": [
+        "OathBitcoin"
+      ],
+      "matches": [
+        {
+          "line": 142,
+          "kind": "network-framework"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathBitcoin/Sources/OathBitcoin/ElectrumMnemonic.swift",
+      "sha256": "c89459959e98dc3b2449e1c01029c2240ea45dba399b743cd11ece63bfa013ca",
+      "targets": [
+        "OathBitcoin"
+      ],
+      "matches": [
+        {
+          "line": 51,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathBitcoin/Sources/OathBitcoin/UTXOAPIProvider.swift",
+      "sha256": "9a056cf8471a6a742c38810fab6b330b1697d28ba25c900d632d17bc668627b8",
+      "targets": [
+        "OathBitcoin"
+      ],
+      "matches": [
+        {
+          "line": 213,
+          "kind": "urlsession-task-or-stream"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathCloudBackup/Sources/OathCloudBackup/CloudDrive.swift",
+      "sha256": "3efff55c14609c39038e16cc70429165750240031e93675415507e647f8263b8",
+      "targets": [
+        "OathCloudBackup"
+      ],
+      "matches": [
+        {
+          "line": 96,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathDiagnostics/Sources/OathDiagnostics/BoundedHTTPBody.swift",
+      "sha256": "4f1c88058701380641819084a21ff21d8d7e1786f0eaebca4b303cef142d8712",
+      "targets": [
+        "OathDiagnostics"
+      ],
+      "matches": [
+        {
+          "line": 36,
+          "kind": "urlsession-task-or-stream"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticHTTP.swift",
+      "sha256": "7a386f466f05559dfa29bae78fbbf0711492375d073566fed15359bc1b4871a1",
+      "targets": [
+        "OathDiagnostics"
+      ],
+      "matches": [
+        {
+          "line": 459,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticOutbox.swift",
+      "sha256": "942fc379a6440a9ff348eab666c379377abd8048cba5f69d5cb67168e95fb9ab",
+      "targets": [
+        "OathDiagnostics"
+      ],
+      "matches": [
+        {
+          "line": 32,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticPrivacy.swift",
+      "sha256": "6891dc299aad81812f1d680beef975ecdb7e7a4fe36f2b057f8bbe7d3d5487ba",
+      "targets": [
+        "OathDiagnostics"
+      ],
+      "matches": [
+        {
+          "line": 13,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 20,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathDiagnostics/Sources/OathDiagnostics/DiagnosticUploadPolicy.swift",
+      "sha256": "349d893a69a6d76fec2e718db0f77f3b128a7825cd7b6f837a0d6df66946d11b",
+      "targets": [
+        "OathDiagnostics"
+      ],
+      "matches": [
+        {
+          "line": 32,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathExchangeRates/Sources/OathExchangeRates/ExchangeRateService.swift",
+      "sha256": "63604ab5372481952777814f3a9c5d7086d4a7fc28a0871a9da258f2372c1630",
+      "targets": [
+        "OathExchangeRates"
+      ],
+      "matches": [
+        {
+          "line": 106,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathMarketData/Sources/OathMarketData/MarketDataService.swift",
+      "sha256": "0e2c3bb556342e3d703503dbadd36ecd5bd8579084dab76930f1779f6736a83e",
+      "targets": [
+        "OathMarketData"
+      ],
+      "matches": [
+        {
+          "line": 161,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 167,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 235,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 251,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 252,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 287,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 319,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 356,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 370,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 373,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 385,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 400,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 420,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathMarketData/Sources/OathMarketData/MarketTransport.swift",
+      "sha256": "3a46e761bfe55ec2e5093beb3edda99732ffcb34b9e0b836b6fd0454ae9eb508",
+      "targets": [
+        "OathMarketData"
+      ],
+      "matches": [
+        {
+          "line": 55,
+          "kind": "urlsession-task-or-stream"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathTokenImages/Sources/OathTokenImages/ArtworkFallbackCatalog.swift",
+      "sha256": "cdf445ec184605a22bde43b3f698211d0fbdf59acefd8a451c149fffc88c42f5",
+      "targets": [
+        "OathTokenImages"
+      ],
+      "matches": [
+        {
+          "line": 107,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathTokenImages/Sources/OathTokenImages/ArtworkLoader.swift",
+      "sha256": "2642096aff0ac597e0d0e3b71b1e88de70b1993b8488a006d188afae62feda99",
+      "targets": [
+        "OathTokenImages"
+      ],
+      "matches": [
+        {
+          "line": 50,
+          "kind": "urlsession-task-or-stream"
+        },
+        {
+          "line": 190,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 234,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 264,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Packages/OathTokenImages/Sources/OathTokenImages/TokenArtworkResolver.swift",
+      "sha256": "954d6a727d310eeca8e6a0cff59c82824568797c3020934c6a15339effd9490f",
+      "targets": [
+        "OathTokenImages"
+      ],
+      "matches": [
+        {
+          "line": 190,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/Events/NetworkingService.swift",
+      "sha256": "20240980696abfabc5098fe10c1b6b6485b02b8f828018ae9ad09629def73bc2",
+      "targets": [
+        "Events"
+      ],
+      "matches": [
+        {
+          "line": 32,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/HTTPClient/HTTPNetworkClient.swift",
+      "sha256": "fc4d57bcb0729dc610fce692983115a121e1fc531b353a38a1e7f21db3f0b736",
+      "targets": [
+        "HTTPClient"
+      ],
+      "matches": [
+        {
+          "line": 40,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectNetworking/NetworkingClient.swift",
+      "sha256": "777c56b04fa857ac55fcf62f8575b7629ed0d5718a2c91d0da2c578261ff6c91",
+      "targets": [
+        "WalletConnectNetworking"
+      ],
+      "matches": [
+        {
+          "line": 8,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectNetworking/NetworkingInteractor.swift",
+      "sha256": "e97454d8915dae9ef741fb083c794ad166901e87e3dcb97ae4d1933757db30f6",
+      "targets": [
+        "WalletConnectNetworking"
+      ],
+      "matches": [
+        {
+          "line": 369,
+          "kind": "socket-api"
+        },
+        {
+          "line": 370,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/Dispatching.swift",
+      "sha256": "25daa4f84efcaf5bf12af8804d6ed24f22de6cfd0805f82f4db5e417e12f9d2a",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 13,
+          "kind": "socket-api"
+        },
+        {
+          "line": 153,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/EnvironmentInfo.swift",
+      "sha256": "0fc9b46eb6d51b90dde1112e45f8d8bb1a31fba54283e2d0e17b0c2d13066f10",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 27,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/RelayClient.swift",
+      "sha256": "b8a169b6510b82e584781e79d2cb8b51846b1b17319fd34b4c30814f44766285",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 121,
+          "kind": "socket-api"
+        },
+        {
+          "line": 122,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/SocketConnectionHandler/AutomaticSocketConnectionHandler.swift",
+      "sha256": "83824d8e5d050df6fb0620f2670bd5f5b859206b6a00921f0a22cb270de534b8",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 77,
+          "kind": "socket-api"
+        },
+        {
+          "line": 93,
+          "kind": "socket-api"
+        },
+        {
+          "line": 161,
+          "kind": "socket-api"
+        },
+        {
+          "line": 161,
+          "kind": "socket-api"
+        },
+        {
+          "line": 273,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/SocketConnectionHandler/ManualSocketConnectionHandler.swift",
+      "sha256": "a76788c24e4383e40717e95a1b189ab0a9ff1574fd6fc5d5dad726b962cd856b",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 89,
+          "kind": "socket-api"
+        },
+        {
+          "line": 129,
+          "kind": "socket-api"
+        },
+        {
+          "line": 166,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/SocketConnectionHandler/SocketConnectionWaiter.swift",
+      "sha256": "91fa1a8afab29ece0c042e9cd2cf0d57c66c74db892023b455149d095ecdfe32",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 34,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectRelay/SocketConnectionHandler/WebSocket.swift",
+      "sha256": "b8ac0a5d20146e964ef45eee3088514269dfa896ebb01862e4525382087a8c80",
+      "targets": [
+        "WalletConnectRelay"
+      ],
+      "matches": [
+        {
+          "line": 11,
+          "kind": "socket-api"
+        },
+        {
+          "line": 45,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectSign/Auth/Types/AuthRequestParams.swift",
+      "sha256": "9aebf56dbb468271e15c9d3797c70974c4e72c1440faceb7de69f6dc90d27fc3",
+      "targets": [
+        "WalletConnectSign"
+      ],
+      "matches": [
+        {
+          "line": 29,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectSign/LinkAndRelayDispatchers/WalletServiceSessionRequester.swift",
+      "sha256": "782744cec721d953fe06466e5fab151e36d6748f67232156da621df8da25a7b2",
+      "targets": [
+        "WalletConnectSign"
+      ],
+      "matches": [
+        {
+          "line": 48,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectSign/Sign/SignClient.swift",
+      "sha256": "c505fe59248cc75b117b20e89107cc394185efbb29fffb954cb3da8de929a8ed",
+      "targets": [
+        "WalletConnectSign"
+      ],
+      "matches": [
+        {
+          "line": 288,
+          "kind": "socket-api"
+        },
+        {
+          "line": 318,
+          "kind": "socket-api"
+        },
+        {
+          "line": 319,
+          "kind": "socket-api"
+        },
+        {
+          "line": 341,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectSign/Sign/SignClientProtocol.swift",
+      "sha256": "d992328c16eef8633e8285c2216bee6ebc6cbd862cca0de12ac410ae411549a6",
+      "targets": [
+        "WalletConnectSign"
+      ],
+      "matches": [
+        {
+          "line": 23,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "application/Vendor/Reown/Sources/WalletConnectVerify/PublicKeyFetcher.swift",
+      "sha256": "628913333858a99ff13db87ad8926a7ab95117f7e3393dae3362fc5b80f660c9",
+      "targets": [
+        "WalletConnectVerify"
+      ],
+      "matches": [
+        {
+          "line": 75,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/SwiftDraw/DOM/Sources/XML.SAXParser.swift",
+      "sha256": "54c257cb7b765f845b2882abf786e15379fd385ea37bb5d24bf21b48b212e8d1",
+      "targets": [
+        "SwiftDrawDOM"
+      ],
+      "matches": [
+        {
+          "line": 83,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/SwiftDraw/SwiftDraw/Sources/AsyncSVGView.swift",
+      "sha256": "ee1d2ad39c64b2d183939b45f58841c022713f27afd8666cad737094b07dc64a",
+      "targets": [
+        "SwiftDraw"
+      ],
+      "matches": [
+        {
+          "line": 259,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/SwiftDraw/SwiftDraw/Sources/WOFF/TTF.swift",
+      "sha256": "521096f760093466af17b5d98ae82208e933ff1a9d5fd9775505da7ddbbc1881",
+      "targets": [
+        "SwiftDraw"
+      ],
+      "matches": [
+        {
+          "line": 60,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/SwiftDraw/SwiftDraw/Sources/WOFF/WOFF.swift",
+      "sha256": "3e4715c3a95f067136e5a620ebea5d84bd740a71403e714878eacab076fbbb07",
+      "targets": [
+        "SwiftDraw"
+      ],
+      "matches": [
+        {
+          "line": 63,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/SwiftDraw/SwiftDraw/Sources/WOFF/WOFF2.swift",
+      "sha256": "9e0822a35683a6bb5257cdaa3a0525b0fd02d83997132a92aa13ce546f407058",
+      "targets": [
+        "SwiftDraw"
+      ],
+      "matches": [
+        {
+          "line": 57,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/bdk-swift/Sources/BitcoinDevKit/BitcoinDevKit.swift",
+      "sha256": "0b9f76a68ee6ce366e767e058f36c0bcf3a9e66cb3af1697f03643732cd03edd",
+      "targets": [
+        "BitcoinDevKit"
+      ],
+      "matches": [
+        {
+          "line": 1901,
+          "kind": "socket-api"
+        },
+        {
+          "line": 2049,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/interactive/InteractiveService.swift",
+      "sha256": "cda1edd06ea9009f2669afb503ae00d19e2655e9a527d617d1d04bffcc40bb78",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 251,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/kyc/KycService.swift",
+      "sha256": "c22f381ab5928ab0d9e6335a75808e7832faa867ed70b93852011fe41f90fd58",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 302,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/regulated_assets/RegulatedAssetsService.swift",
+      "sha256": "e932288c7851fc95ebe7fe92fb78c4138588b910b243edefc8dd6e9c0e5ccd07",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 194,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/service/AccountService.swift",
+      "sha256": "c26b6bb012109972986d3f230b8519315e894582a8937ce1f518a38024d05b0b",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 214,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 257,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/service/ServiceHelper.swift",
+      "sha256": "6c915be0c0ff8c96f38f014f709eb37fc1f8d010eefd591fcc65f62f3c126a32",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 311,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/smartaccount/oz/OZConstants.swift",
+      "sha256": "9f5240525e69f42b4d6b98ba5e6f51110509f1377f58a744631f88e74431499d",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 70,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/smartaccount/oz/OZIndexerClient.swift",
+      "sha256": "8d848301726ff5a076beb83db97be7f77c1cc1b68c4e89e605b0d6213ced5461",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 744,
+          "kind": "async-data-or-download"
+        },
+        {
+          "line": 822,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/smartaccount/oz/OZRelayerClient.swift",
+      "sha256": "bd99cc2bc1783445d4f9dccb17839493afd0600065accdd3b2896ba0175538f9",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 472,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/smartaccount/oz/OZStorageAdapter.swift",
+      "sha256": "6257c223faa508aa494e15bb569b89d72cd875a73192142a8cbf30946212648c",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 569,
+          "kind": "socket-api"
+        },
+        {
+          "line": 588,
+          "kind": "socket-api"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/smartaccount/oz/OZTransactionOperations.swift",
+      "sha256": "e4f2bbb3ace40f47a0c81762b5f4695d7df1a20b3a1ad4fb2abc5b4700d154a0",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 1799,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/soroban/SorobanServer.swift",
+      "sha256": "1a67c3d04bbcb899ea97ba71a0532d7771d7a1460b276fc10e6fa257c2556f81",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 1273,
+          "kind": "async-data-or-download"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/soroban/contract/InstallRequest.swift",
+      "sha256": "8b54f52d4ab48b83a321739024a2947404aa5b9826acfcb6cd8c2a23a3af9e7d",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 25,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/soroban/contract/SorobanClient.swift",
+      "sha256": "fcbe4ed8383518f35e7edcab93a108ecca472cc9bef6923e06778c8e47d085d1",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 312,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/toml/StellarToml.swift",
+      "sha256": "3cc571a53c9f76caac9934bb1c8c8e89dc63c90345e42b349e13888f2c2e1c03",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 171,
+          "kind": "synchronous-url-read"
+        },
+        {
+          "line": 192,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/transfer_server_protocol/TransferServerService.swift",
+      "sha256": "a0bc4c35bafb532db9d616480ab0db503dbc247eddd760024c6d44a0ab51046f",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 163,
+          "kind": "synchronous-url-read"
+        }
+      ]
+    },
+    {
+      "path": "package/stellar-ios-mac-sdk/stellarsdk/stellarsdk/utils/EventSource.swift",
+      "sha256": "1b5e0f9d46e96dc849aad964f488f123490e21a0173d61b08bd0cac3499d2781",
+      "targets": [
+        "stellarsdk"
+      ],
+      "matches": [
+        {
+          "line": 158,
+          "kind": "socket-api"
+        },
+        {
+          "line": 162,
+          "kind": "socket-api"
+        },
+        {
+          "line": 178,
+          "kind": "urlsession-task-or-stream"
+        },
+        {
+          "line": 391,
+          "kind": "socket-api"
+        }
+      ]
+    }
+  ],
+  "scope": "Lexical candidates in compiler-selected source and non-system Clang dependencies. Includes comments, wrappers and local file IO. Excludes opaque binaries, resources, dynamic dispatch and indirect or differently spelled calls. Does not confer manual review credit."
+}

@@ -17,6 +17,16 @@ REVIEWED = {
     'swift-qrcode-generator/Package.swift': 'cb912dfe68ad850395e65763848b5069b70730bac79408afd397a94870970d42',
 }
 
+PARTIAL_XDR = {
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/responses/xdr/InvokeContractArgsXDR.swift": "11c0db49bc6d0f9d6c967a740369a2e37c43bfb07c9756d881eee4534765fb9d",
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/responses/xdr/InvokeHostFunctionOpXDR.swift": "aad2a95792e8c9e9f781def4296926dc193fa926805d629c7c610feca876cde6",
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/responses/xdr/SCValXDR.swift": "2fa265a6d2d4c2003ce99eab37abd14a6c5128d0fc781f900207c1a1dea1aab2",
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/responses/xdr/TransactionEnvelopeXDR.swift": "77387a2fc6e50ccee9bf61421197e22ea7ecbaa7ead06b7334adff660106af51",
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/responses/xdr/TransactionXDR.swift": "fde8a00c4050eb67551303806bb71efca0cd40fa5a40b28b48f5784c9b51f27c",
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/utils/xdrCodable/XDRCodableExtensions.swift": "778d90a4dba09951ce333eaf6c5a78033675bd60b74a21775e5f16ac3c3012ba",
+    "stellar-ios-mac-sdk/stellarsdk/stellarsdk/utils/xdrCodable/XDRDecoder.swift": "6462325ba84f51925c5d7fb084deef748b37b7a6e9d21317b99c035357b3099b"
+}
+
 
 def git(root, *args):
     return subprocess.check_output(['git', '-C', root, *args])
@@ -51,6 +61,8 @@ def files(checkout, pin):
                 raise ValueError(f'Unknown Git entry at {name}')
             if name in REVIEWED and row.get('sha256') == REVIEWED[name]:
                 row.update(status='reviewed', evidence=['review/RESOLVED-PACKAGES.md'])
+            if name in PARTIAL_XDR and row.get('sha256') == PARTIAL_XDR[name]:
+                row.update(status='partially-reviewed', evidence=['review/STELLAR-XDR-BOUNDARIES.md'])
             rows.append(row)
         reader.stdin.close()
         if reader.wait():
@@ -81,6 +93,8 @@ def main():
         entries.extend(rows)
     if {r['path'] for r in entries if r['status'] == 'reviewed'} != set(REVIEWED):
         raise ValueError('Reviewed source missing')
+    if {r['path'] for r in entries if r['status'] == 'partially-reviewed'} != set(PARTIAL_XDR):
+        raise ValueError('Partially reviewed XDR source missing or changed')
     output = dict(lockfile=LOCK, lock_sha256=hashlib.sha256((a.source/LOCK).read_bytes()).hexdigest(),
                   scope='All tracked entries at the other Xcode package pins. Gitlinks are unresolved subtrees. Development files are included. No automatic reachability or review disposition.', packages=packages, files=entries)
     a.output.parent.mkdir(parents=True, exist_ok=True)

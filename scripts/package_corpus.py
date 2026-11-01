@@ -18,7 +18,7 @@ from source_state import require_source_state
 SWIFTDRAW = '82699f4bdf2f075793cfa0d392eb27c59b41a3fe'
 ROOT = Path(__file__).resolve().parents[1]
 def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
-        local_dependencies=('OathDiagnostics',), pins=None, overlay=None):
+        local_dependencies=('OathDiagnostics',), pins=None, overlay=None, compare=True):
     pins = {'SwiftDraw': SWIFTDRAW} if pins is None else pins
     pkg = 'Packages/' + package
     fixture_path = f"{pkg}/Tests/{package}Tests/{suite.split('.')[-1]}.swift"
@@ -38,7 +38,8 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
     out=args.output.resolve();out.mkdir(parents=True,exist_ok=True)
     start=time.monotonic();rows=[]
     resource.setrlimit(resource.RLIMIT_CORE,(0,0))
-    for phase,rev in [('before',base),('after',sha)]:
+    phases = [('before',base),('after',sha)] if compare else [('after',sha)]
+    for phase,rev in phases:
         archive=subprocess.check_output(['git','-C',source,'archive',rev,pkg,*['Packages/'+name for name in local_dependencies]])
         with tempfile.TemporaryDirectory(prefix='oath-package-review-') as tmp:
             with tarfile.open(fileobj=io.BytesIO(archive)) as tar: tar.extractall(tmp,filter='data')
@@ -63,7 +64,7 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
                 rows.append(dict(phase=phase,case=case,source_commit=rev,status=status,exit_code=code,timed_out=expired,log=log.name,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest()))
                 print(phase,case,status,flush=True)
     require_source_state(source,sha)
-    ok=len(rows)==2*len(cases) and all(x['status']!='failed' for x in rows)
+    ok=len(rows)==len(phases)*len(cases) and all(x['status']!='failed' for x in rows)
     result=dict(check=check,source_commit=sha,baseline_commit=base,dependency_commits=pins,
                 fixture_sha256=hashlib.sha256(fixture).hexdigest(),status='passed' if ok else 'failed',executions=rows,
                 duration_seconds=round(time.monotonic()-start,3),scope=scope)

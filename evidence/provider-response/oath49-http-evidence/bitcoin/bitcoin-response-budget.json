@@ -1,0 +1,197 @@
+{
+  "check": "bitcoin-response-budget",
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+  "baseline_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "59a501bbffb698b58f4203d9b2f0b9e4451356fc35d9f74b313fe23ad418b17a",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testUnknownLengthStopsAtTheLimit",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testUnknownLengthStopsAtTheLimit.log",
+      "log_sha256": "447f3297cc189ec34d03717506075141560e400d404a8fd87aaacf461ce3bedf"
+    },
+    {
+      "phase": "before",
+      "case": "testActualBytesOverrideShortLengthHeader",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testActualBytesOverrideShortLengthHeader.log",
+      "log_sha256": "508597b4c10ecba2ba0e323b86a31f53a0dc112505a01d09eda214b100307de6"
+    },
+    {
+      "phase": "before",
+      "case": "testOversizedThrottleStillAppliesCooldown",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testOversizedThrottleStillAppliesCooldown.log",
+      "log_sha256": "bcd3af84a915d5c16ca5cb7d8d3c56f341ea4f019e2e1edcf035e787d4d841b5"
+    },
+    {
+      "phase": "before",
+      "case": "testMissing404DoesNotConsumeTheBody",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testMissing404DoesNotConsumeTheBody.log",
+      "log_sha256": "419e9b263f8ea6155a52f56a552b2ac2dcfae8a8b32d8c1ff73fa92ce435d9ed"
+    },
+    {
+      "phase": "before",
+      "case": "testExactAndZeroLimitsAcceptCompleteBodies",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testExactAndZeroLimitsAcceptCompleteBodies.log",
+      "log_sha256": "b32dfd1c42ed3c06dbbd3815b2f2a41ec43d3a61531d1c3388dd5e9427b4b14e"
+    },
+    {
+      "phase": "before",
+      "case": "testCancelDuringBodyReleasesAdmission",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testCancelDuringBodyReleasesAdmission.log",
+      "log_sha256": "c4857450bc0f8dd4c7d2685b4f82e91ed431abfeeb2c3c03f02de31aae3a6af6"
+    },
+    {
+      "phase": "before",
+      "case": "testSmallThrottleEnvelopeStillAppliesCooldown",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSmallThrottleEnvelopeStillAppliesCooldown.log",
+      "log_sha256": "e60aa640fbeaf61cc3548f61ef4e416c0be1299e5116ee6ae881389d9656e703"
+    },
+    {
+      "phase": "before",
+      "case": "testSmallHTTPPolicyErrorKeepsItsClassification",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSmallHTTPPolicyErrorKeepsItsClassification.log",
+      "log_sha256": "1efdfc0cf49d6a51293d88d655700b86d44ba109eea7c41c6f5a0e53d24f52fe"
+    },
+    {
+      "phase": "before",
+      "case": "testInterruptedBodyPreservesCauseAndReleasesAdmission",
+      "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testInterruptedBodyPreservesCauseAndReleasesAdmission.log",
+      "log_sha256": "e2746c5723823b797eb2abfa835b28da6ad0869ad96ca8e2edce1209b3015ff9"
+    },
+    {
+      "phase": "after",
+      "case": "testUnknownLengthStopsAtTheLimit",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testUnknownLengthStopsAtTheLimit.log",
+      "log_sha256": "e64e75343c5869d4c299434667fc2276eeff935e4a7530f7605e10229fa24d8b"
+    },
+    {
+      "phase": "after",
+      "case": "testActualBytesOverrideShortLengthHeader",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testActualBytesOverrideShortLengthHeader.log",
+      "log_sha256": "87cb3cf0a08c5f4adf3fc6f7e9fd7351a5a2ebf739b2e2206148ae9af5486b23"
+    },
+    {
+      "phase": "after",
+      "case": "testOversizedThrottleStillAppliesCooldown",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testOversizedThrottleStillAppliesCooldown.log",
+      "log_sha256": "8fb9c97938ce2d944d60fa5bf1e2406cd348228ab417603a57fef23e848a99b0"
+    },
+    {
+      "phase": "after",
+      "case": "testMissing404DoesNotConsumeTheBody",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testMissing404DoesNotConsumeTheBody.log",
+      "log_sha256": "8d59e43cb21fe52f49bf4f6d3d341909c543e6077c648a951ed60f78e957ffa3"
+    },
+    {
+      "phase": "after",
+      "case": "testExactAndZeroLimitsAcceptCompleteBodies",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testExactAndZeroLimitsAcceptCompleteBodies.log",
+      "log_sha256": "fa6e613d16f6fc681e952581cd30b6ddfe7e651720bfe340c07abd8440b48b2b"
+    },
+    {
+      "phase": "after",
+      "case": "testCancelDuringBodyReleasesAdmission",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testCancelDuringBodyReleasesAdmission.log",
+      "log_sha256": "1aa165c54b08d950243ab919c160955043231fb2633eefabfce082d5245e5120"
+    },
+    {
+      "phase": "after",
+      "case": "testSmallThrottleEnvelopeStillAppliesCooldown",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSmallThrottleEnvelopeStillAppliesCooldown.log",
+      "log_sha256": "28e765c9ecfa6030fdf6fa0f2b3b4d134c69ad346902a9c50d56123706becda3"
+    },
+    {
+      "phase": "after",
+      "case": "testSmallHTTPPolicyErrorKeepsItsClassification",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSmallHTTPPolicyErrorKeepsItsClassification.log",
+      "log_sha256": "dd3ba4e58a0cef41fd3095874efa357910888f6cd01a30540cb9c0c1430033b3"
+    },
+    {
+      "phase": "after",
+      "case": "testInterruptedBodyPreservesCauseAndReleasesAdmission",
+      "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testInterruptedBodyPreservesCauseAndReleasesAdmission.log",
+      "log_sha256": "d538dc20dfeecd34311eac3682258265b30e2e2329806cc62423c3d9fb578872"
+    }
+  ],
+  "duration_seconds": 116.688,
+  "scope": "Synthetic URLProtocol stream against the production transport. Separate network-denied host process for each case and revision.",
+  "log": "bitcoin-response-budget.log",
+  "log_sha256": "e43f62658908bb0eb6e43eddb333df95169a691bd6d3d203f860850cfabe4ffd"
+}

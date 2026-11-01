@@ -1,5 +1,5 @@
 {
-  "source_commit": "0e611a5408cfa02c8463b4bcd74a0164522cf7a3",
+  "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -8365,11 +8365,14 @@
     },
     {
       "path": "OathAtmosphere/Home/OathAboutPage.swift",
-      "sha256": "d240fdcc6926b64e5a8e1221aafba7c05894a07341655f2499dccfec3a8d638a",
-      "bytes": 7736,
+      "sha256": "182f7ed3690dc628041b8a0ff9db8f91216fcb795c82f7965764ff3973d95f4c",
+      "bytes": 8114,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Home/OathAllWalletBackupPage.swift",
@@ -10126,11 +10129,14 @@
     },
     {
       "path": "OathAtmosphere/Tokens/OathTokenService.swift",
-      "sha256": "4b27418f31948b91b8c198a0e5300d3edf1fad9d820ca5119395016135cc1887",
-      "bytes": 19629,
+      "sha256": "9de482c39d6e59715cf33274d52aa5df4c578b1c8247332904058a4f33da018f",
+      "bytes": 19647,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Tokens/OathTokenViews.swift",
@@ -16195,11 +16201,14 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinFeeFallback.swift",
-      "sha256": "d260abf859c1cdd5dc3a3a29a8cd03a69dd78a799692a1028d8c9ee7ca1a89e4",
-      "bytes": 3543,
+      "sha256": "c7ecad1dec41cf7e3b4113ade894ccc5fb2d91703271a6ff59ee7fccecd803e1",
+      "bytes": 3560,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinKeys.swift",
@@ -16266,11 +16275,14 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinTransactionFallback.swift",
-      "sha256": "28849296b21bfe7513a7388e14b8891c5ccda841287a9a519c1b6483f6545285",
-      "bytes": 2890,
+      "sha256": "f6bd98ded9d74e0c2541a46830d3faa6ce95c43d693d002f0a7da3d23c40c27e",
+      "bytes": 2932,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinTransactions.swift",
@@ -16386,11 +16398,14 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/UTXOAPIProvider.swift",
-      "sha256": "38f9a7ad759042a31b81fda7cadc41e5ca8de2aaa5949e3446ef61ae65f0ebf2",
-      "bytes": 14698,
+      "sha256": "9a056cf8471a6a742c38810fab6b330b1697d28ba25c900d632d17bc668627b8",
+      "bytes": 15430,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/UTXOBroadcastProvider.swift",
@@ -16569,6 +16584,17 @@
       "category": "test",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinResponseBudgetTests.swift",
+      "sha256": "59a501bbffb698b58f4203d9b2f0b9e4451356fc35d9f74b313fe23ad418b17a",
+      "bytes": 9004,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinSendOptionsNodeTests.swift",
@@ -19044,6 +19070,17 @@
       "evidence": []
     },
     {
+      "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/BoundedHTTPBody.swift",
+      "sha256": "4f1c88058701380641819084a21ff21d8d7e1786f0eaebca4b303cef142d8712",
+      "bytes": 2223,
+      "category": "application",
+      "status": "reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
+    },
+    {
       "path": "Packages/OathDiagnostics/Sources/OathDiagnostics/ClioHolderAbsence.swift",
       "sha256": "829eecbb112354a3530c63f9a74672277cfbb27e48631dc27abc9ed5ae350644",
       "bytes": 2136,
@@ -19396,11 +19433,14 @@
     },
     {
       "path": "Packages/OathExchangeRates/Package.resolved",
-      "sha256": "c985f2d94cebeeae6b59a35a4911718ab936e7a7e9e10f6b9f5722edf3fe44bb",
-      "bytes": 1164,
+      "sha256": "d0f29a65baefb3792085976b4af8db31a3021ea492f41c27f4624ea2018a9749",
+      "bytes": 1449,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathExchangeRates/Package.swift",
@@ -19420,11 +19460,14 @@
     },
     {
       "path": "Packages/OathExchangeRates/Sources/OathExchangeRates/ExchangeRateService.swift",
-      "sha256": "d3e1dac0665f6bb05246f51e8a2dcc4e7c5ab0ba882502b03cb0f1b963dfd4ea",
-      "bytes": 6499,
+      "sha256": "63604ab5372481952777814f3a9c5d7086d4a7fc28a0871a9da258f2372c1630",
+      "bytes": 6516,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathExchangeRates/Tests/OathExchangeRatesTests/ExchangeRateServiceTests.swift",
@@ -19433,6 +19476,17 @@
       "category": "test",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Packages/OathExchangeRates/Tests/OathExchangeRatesTests/RateResponseBudgetTests.swift",
+      "sha256": "50425979e9b8d762fd8a86537d94f6e6ee63fda41f0abb71260167ac017c902f",
+      "bytes": 3347,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "review/HTTP-RESPONSE-BOUNDARIES.md",
+        "findings/OW-2026-034.md"
+      ]
     },
     {
       "path": "Packages/OathMarketData/Package.resolved",

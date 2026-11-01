@@ -6,8 +6,9 @@ from pathlib import Path
 from source_state import require_source_state
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff', 'OathTokenImages']
+PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff', 'OathTokenImages', 'OathExchangeRates']
 SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
+APP_MODES = {'app-updates':'Tools/CheckAppUpdates.py', 'token-lookup':'Tools/CheckTokenLookup.py'}
 SCANNER_MODES = {'scanner': [], 'wallet-links': ['--links'], 'scanner-lifecycle': ['--performance']}
 MODES = ['envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
          'evm-send', 'solana-send', 'tron-send', 'xrpl-send', 'stellar-send',
@@ -44,7 +45,7 @@ def sdk_case_counts(text):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('source', type=Path)
-    p.add_argument('check', choices=PACKAGES + MODES + SDK_MODES + list(SCANNER_MODES) + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
+    p.add_argument('check', choices=PACKAGES + list(APP_MODES) + MODES + SDK_MODES + list(SCANNER_MODES) + ['public', 'diagnostics-coverage', 'clipboard', 'build'])
     p.add_argument('--output', type=Path, default=ROOT/'evidence/local')
     p.add_argument('--expected-commit', help='Exact clean candidate commit; does not change the published review target')
     p.add_argument('--scratch', type=Path, help='Explicit isolated build directory to reuse; source pin/cleanliness checks still apply')
@@ -59,6 +60,8 @@ def main():
     env['OATH_VALIDATION_SCRATCH'] = str(scratch)
     if a.check in PACKAGES:
         command = ['python3',str(ROOT/'scripts/isolated_tests.py'),str(source),a.check,str(scratch)+'-native',str(out)]
+    elif a.check in APP_MODES:
+        command = ['python3', APP_MODES[a.check]]
     elif a.check in SCANNER_MODES:
         command = ['python3', 'Tools/CheckScanner.py'] + SCANNER_MODES[a.check]
     elif a.check in SDK_MODES:
@@ -93,15 +96,18 @@ def main():
     text = log.read_text(errors='replace').replace('\x00', '<NUL>').replace(str(source), '<SOURCE>').replace(str(ROOT), '<AUDIT>')
     text = text.replace(str(scratch), '<SCRATCH>').replace(os.path.expanduser('~'), '<HOME>')
     log.write_text(text)
-    sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES else None
+    sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES or a.check == 'token-lookup' else None
     scanner_cases = scanner_case_count(a.check, text) if a.check in SCANNER_MODES else None
     restore_cases = restore_case_count(text) if a.check == 'cloud-restore' else None
     if a.check == 'cloud-restore' and restore_cases is None:
         code = code or 1
     if a.check in SCANNER_MODES and scanner_cases is None:
         code = code or 1
+    app_update_counts = re.findall(r'^Passed (\d+) app update checks: actual bundle metadata,',text,re.M) if a.check == 'app-updates' else []
+    if a.check == 'app-updates' and (len(app_update_counts)!=1 or int(app_update_counts[0]) < 20):
+        code = code or 1
     if sdk_cases is not None:
-        minimum = 56 if a.check == 'walletconnect-sdk' else 1
+        minimum = 56 if a.check == 'walletconnect-sdk' else (10 if a.check == 'token-lookup' else 1)
         if sdk_cases['passed'] < minimum or sdk_cases['failed']:
             code = code or 1
     summaries = [line for line in text.splitlines() if re.search(r'XCTest:|Executed \d+ tests|Test run with|checks passed|Passed \d+|BUILD (SUCCEEDED|FAILED)|skipped',line)]
@@ -109,6 +115,7 @@ def main():
                   timed_out=timed_out,duration_seconds=round(time.time()-start,2),platform=platform.platform(),
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
                   runtime_scope='host' if a.check!='build' else 'compile-only',live_network_tests_enabled=False)
+    if app_update_counts: result['assertion_count'] = int(app_update_counts[0])
     if sdk_cases is not None: result['xctest_cases'] = sdk_cases
     if a.check == 'cloud-restore':
         result['assertion_count'] = restore_cases

@@ -28234,5 +28234,1081 @@
     "log": "bitcoin-parent-budget.log",
     "log_sha256": "4df2c69395dcbf6231fc4cda0a79f1005ea1e11c2b91e011ca41f50687f77da4",
     "evidence_path": "evidence/core-signatures/oath-core48-evidence/parents/bitcoin-parent-budget.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 50.35,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "70198abe40019f88de85ec38415ba876e52db1504f74f849cf246539da17c22b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.4,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "ddcff02113cd8daf5e3c7a635c267a4cf4af6ab205d374f172faf1fe033809fc",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 537.07,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "6bcff0cfbd5eba2906b4cb9db54c440bef8ff15cb765886e4fae3fa7bd7b94b3",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/build.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath49-http-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 13.06,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "d76da5c910dd8d4c74eaf5ef8f233070b874a1f3ffa9190ba133cfd2454eb254",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "92a775caa6226de7319c21fb22c0947e1d983ad7d201a6009154f9798fd0fda0"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>-native",
+      "/private/tmp/oath49-http-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 110.08,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 349 selected; 289 passed; 60 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "7d0ff7d32c87fb1674d7d1d11652df4c3a1d6f412893cea28c1a6df3b1965030",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 349,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 60,
+      "sha256": "f4d56809949c95bf6d13c3260b3ab9aa57ffe6a7c044e6a1745c7c4e702628a2"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/OathBitcoin.json"
+  },
+  {
+    "check": "OathExchangeRates",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathExchangeRates",
+      "<SCRATCH>-native",
+      "/private/tmp/oath49-http-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 248.13,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 18 selected; 16 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "175a2a43ea15dba137cd0de9daa31edc1c7922e74d230f103d6eda092aadd056",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "e001391ffd973f3d11f1c358f6a10c0dab59642343a1c27d7dbf6fe5c42d6f22"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/OathExchangeRates.json"
+  },
+  {
+    "check": "token-lookup",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "Tools/CheckTokenLookup.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 129.61,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:626: -[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks] : Test skipped - Explicit all-network live lookup",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks]' skipped (0.006 seconds).",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:162: -[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata] : Test skipped - Opt-in public Celo token metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata]' skipped (0.001 seconds).",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:604: -[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract] : Test skipped - Opt-in public token RPC check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract]' skipped (0.001 seconds).",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-u5a7j85g/Tests/TokenLookupTests/TokenLookupTests.swift:125: -[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks] : Test skipped - Opt-in six-chain public metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks]' skipped (0.001 seconds).",
+      "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 13.837 (13.840) seconds",
+      "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 13.837 (13.840) seconds",
+      "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 13.837 (13.841) seconds",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.011 seconds."
+    ],
+    "log_sha256": "55caee974968c0451a03fe158867a473e63bc78908386e9e1a9f70f76b8dfafe",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 19,
+      "skipped": 4,
+      "failed": 0
+    },
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/token-lookup.json"
+  },
+  {
+    "check": "app-updates",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "Tools/CheckAppUpdates.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 21.76,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 23 app update checks: actual bundle metadata, numeric versions, identity, absent listings, malformed data, HTTP/offline failure, cancellation and coalescing."
+    ],
+    "log_sha256": "7fa4509450c9f89fc2535f262d7b4ce6b336a6a4fa860940f7e1021c3cc1d2ba",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "assertion_count": 23,
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/validation/app-updates.json"
+  },
+  {
+    "check": "bitcoin-response-budget",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "baseline_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+    "dependency_commits": {
+      "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+    },
+    "fixture_sha256": "59a501bbffb698b58f4203d9b2f0b9e4451356fc35d9f74b313fe23ad418b17a",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testUnknownLengthStopsAtTheLimit",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testUnknownLengthStopsAtTheLimit.log",
+        "log_sha256": "447f3297cc189ec34d03717506075141560e400d404a8fd87aaacf461ce3bedf"
+      },
+      {
+        "phase": "before",
+        "case": "testActualBytesOverrideShortLengthHeader",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testActualBytesOverrideShortLengthHeader.log",
+        "log_sha256": "508597b4c10ecba2ba0e323b86a31f53a0dc112505a01d09eda214b100307de6"
+      },
+      {
+        "phase": "before",
+        "case": "testOversizedThrottleStillAppliesCooldown",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testOversizedThrottleStillAppliesCooldown.log",
+        "log_sha256": "bcd3af84a915d5c16ca5cb7d8d3c56f341ea4f019e2e1edcf035e787d4d841b5"
+      },
+      {
+        "phase": "before",
+        "case": "testMissing404DoesNotConsumeTheBody",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testMissing404DoesNotConsumeTheBody.log",
+        "log_sha256": "419e9b263f8ea6155a52f56a552b2ac2dcfae8a8b32d8c1ff73fa92ce435d9ed"
+      },
+      {
+        "phase": "before",
+        "case": "testExactAndZeroLimitsAcceptCompleteBodies",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testExactAndZeroLimitsAcceptCompleteBodies.log",
+        "log_sha256": "b32dfd1c42ed3c06dbbd3815b2f2a41ec43d3a61531d1c3388dd5e9427b4b14e"
+      },
+      {
+        "phase": "before",
+        "case": "testCancelDuringBodyReleasesAdmission",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testCancelDuringBodyReleasesAdmission.log",
+        "log_sha256": "c4857450bc0f8dd4c7d2685b4f82e91ed431abfeeb2c3c03f02de31aae3a6af6"
+      },
+      {
+        "phase": "before",
+        "case": "testSmallThrottleEnvelopeStillAppliesCooldown",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSmallThrottleEnvelopeStillAppliesCooldown.log",
+        "log_sha256": "e60aa640fbeaf61cc3548f61ef4e416c0be1299e5116ee6ae881389d9656e703"
+      },
+      {
+        "phase": "before",
+        "case": "testSmallHTTPPolicyErrorKeepsItsClassification",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSmallHTTPPolicyErrorKeepsItsClassification.log",
+        "log_sha256": "1efdfc0cf49d6a51293d88d655700b86d44ba109eea7c41c6f5a0e53d24f52fe"
+      },
+      {
+        "phase": "before",
+        "case": "testInterruptedBodyPreservesCauseAndReleasesAdmission",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testInterruptedBodyPreservesCauseAndReleasesAdmission.log",
+        "log_sha256": "e2746c5723823b797eb2abfa835b28da6ad0869ad96ca8e2edce1209b3015ff9"
+      },
+      {
+        "phase": "after",
+        "case": "testUnknownLengthStopsAtTheLimit",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testUnknownLengthStopsAtTheLimit.log",
+        "log_sha256": "e64e75343c5869d4c299434667fc2276eeff935e4a7530f7605e10229fa24d8b"
+      },
+      {
+        "phase": "after",
+        "case": "testActualBytesOverrideShortLengthHeader",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testActualBytesOverrideShortLengthHeader.log",
+        "log_sha256": "87cb3cf0a08c5f4adf3fc6f7e9fd7351a5a2ebf739b2e2206148ae9af5486b23"
+      },
+      {
+        "phase": "after",
+        "case": "testOversizedThrottleStillAppliesCooldown",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testOversizedThrottleStillAppliesCooldown.log",
+        "log_sha256": "8fb9c97938ce2d944d60fa5bf1e2406cd348228ab417603a57fef23e848a99b0"
+      },
+      {
+        "phase": "after",
+        "case": "testMissing404DoesNotConsumeTheBody",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testMissing404DoesNotConsumeTheBody.log",
+        "log_sha256": "8d59e43cb21fe52f49bf4f6d3d341909c543e6077c648a951ed60f78e957ffa3"
+      },
+      {
+        "phase": "after",
+        "case": "testExactAndZeroLimitsAcceptCompleteBodies",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testExactAndZeroLimitsAcceptCompleteBodies.log",
+        "log_sha256": "fa6e613d16f6fc681e952581cd30b6ddfe7e651720bfe340c07abd8440b48b2b"
+      },
+      {
+        "phase": "after",
+        "case": "testCancelDuringBodyReleasesAdmission",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testCancelDuringBodyReleasesAdmission.log",
+        "log_sha256": "1aa165c54b08d950243ab919c160955043231fb2633eefabfce082d5245e5120"
+      },
+      {
+        "phase": "after",
+        "case": "testSmallThrottleEnvelopeStillAppliesCooldown",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSmallThrottleEnvelopeStillAppliesCooldown.log",
+        "log_sha256": "28e765c9ecfa6030fdf6fa0f2b3b4d134c69ad346902a9c50d56123706becda3"
+      },
+      {
+        "phase": "after",
+        "case": "testSmallHTTPPolicyErrorKeepsItsClassification",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSmallHTTPPolicyErrorKeepsItsClassification.log",
+        "log_sha256": "dd3ba4e58a0cef41fd3095874efa357910888f6cd01a30540cb9c0c1430033b3"
+      },
+      {
+        "phase": "after",
+        "case": "testInterruptedBodyPreservesCauseAndReleasesAdmission",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testInterruptedBodyPreservesCauseAndReleasesAdmission.log",
+        "log_sha256": "d538dc20dfeecd34311eac3682258265b30e2e2329806cc62423c3d9fb578872"
+      }
+    ],
+    "duration_seconds": 116.688,
+    "scope": "Synthetic URLProtocol stream against the production transport. Separate network-denied host process for each case and revision.",
+    "log": "bitcoin-response-budget.log",
+    "log_sha256": "e43f62658908bb0eb6e43eddb333df95169a691bd6d3d203f860850cfabe4ffd",
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/bitcoin/bitcoin-response-budget.json"
+  },
+  {
+    "check": "rates-response-budget",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "baseline_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+    "dependency_commits": {
+      "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd",
+      "GRDB.swift": "533286eab041d826ed4a46c56b213fa3d2cebb7a",
+      "SwiftDraw": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+      "stellar-ios-mac-sdk": "b5dac0a6e8ff312d597c9a3b4269b03131d66e0d"
+    },
+    "fixture_sha256": "50425979e9b8d762fd8a86537d94f6e6ee63fda41f0abb71260167ac017c902f",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testOversizePrecedesRemoteDisconnect",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testOversizePrecedesRemoteDisconnect.log",
+        "log_sha256": "7afc7e25b51de6cf22719798e134b0b5c8dbb3abaf1b7cd581759e70023b6097"
+      },
+      {
+        "phase": "before",
+        "case": "testOversizedFailureKeepsHTTPStatus",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testOversizedFailureKeepsHTTPStatus.log",
+        "log_sha256": "df2ac0dc070901ae0a1e592c7793d6a598f652a6140ce9d6890e03ede1df60e1"
+      },
+      {
+        "phase": "before",
+        "case": "testBodyExactlyAtLimitIsComplete",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testBodyExactlyAtLimitIsComplete.log",
+        "log_sha256": "550b70667534ea6e5c4f100caaffa9fb504f484c5803e64ca8c6c75f78310249"
+      },
+      {
+        "phase": "before",
+        "case": "testInterruptedSmallBodyPreservesError",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testInterruptedSmallBodyPreservesError.log",
+        "log_sha256": "fa3d4f580da62fd3e3974746c1c57479957f27b4874fc47f8a4004888f20be3d"
+      },
+      {
+        "phase": "after",
+        "case": "testOversizePrecedesRemoteDisconnect",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testOversizePrecedesRemoteDisconnect.log",
+        "log_sha256": "c9c0741251fdefaf767468076ed9dc5937258af9e74529551297cd0544d8eb06"
+      },
+      {
+        "phase": "after",
+        "case": "testOversizedFailureKeepsHTTPStatus",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testOversizedFailureKeepsHTTPStatus.log",
+        "log_sha256": "059bb118a4e075f05e9ac9587312287b67ed98d8ecb03b47787f41f5c334174c"
+      },
+      {
+        "phase": "after",
+        "case": "testBodyExactlyAtLimitIsComplete",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testBodyExactlyAtLimitIsComplete.log",
+        "log_sha256": "251a10a56f2eb744296e949ef68c351d04b75d6d2c671ac29b71126b29774f12"
+      },
+      {
+        "phase": "after",
+        "case": "testInterruptedSmallBodyPreservesError",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testInterruptedSmallBodyPreservesError.log",
+        "log_sha256": "fe3290f9d9fd3e795173c2bb2a7d54cd1f837cb0a899f44abfa61d08670b6492"
+      }
+    ],
+    "duration_seconds": 389.487,
+    "scope": "Synthetic URLProtocol stream against the production transport. Separate network-denied host process for each case and revision.",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "log": "rates-response-budget.log",
+    "log_sha256": "5a8372b3abb23d50faacd68863cd9056cfad9fc9914896582c8dc580092490a1",
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/rates/rates-response-budget.json"
+  },
+  {
+    "check": "fallbacks-response-budget",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "baseline_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+    "dependency_commits": {
+      "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+    },
+    "fixture_sha256": "d887bce1bdae6fd9814507bcba0070561015e8531022f6dcf07cd1c391cb4ae4",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testFeeFallbackMovesToNextHostAtLimit",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testFeeFallbackMovesToNextHostAtLimit.log",
+        "log_sha256": "6437d0a72376b26b1a48c8c22d627cdcce0de979b6e5110ca44c372b8fe5e656"
+      },
+      {
+        "phase": "before",
+        "case": "testParentFallbackAuthenticatesNextHostsTransaction",
+        "source_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testParentFallbackAuthenticatesNextHostsTransaction.log",
+        "log_sha256": "106909712604e107b7a9f7693fdee5bdaaa81be9d4501e982d74686e2e97d40e"
+      },
+      {
+        "phase": "after",
+        "case": "testFeeFallbackMovesToNextHostAtLimit",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testFeeFallbackMovesToNextHostAtLimit.log",
+        "log_sha256": "e87053fcc6b0f0ceeb52f549b14c04ee1a33207964b9e0564e617c09334fd488"
+      },
+      {
+        "phase": "after",
+        "case": "testParentFallbackAuthenticatesNextHostsTransaction",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testParentFallbackAuthenticatesNextHostsTransaction.log",
+        "log_sha256": "6b8259195bc7c633a70b8572062209b1649dca1008bc449e79aaae6111497ee5"
+      }
+    ],
+    "duration_seconds": 172.37,
+    "scope": "Synthetic URLProtocol stream against the production transport. Separate network-denied host process for each case and revision.",
+    "log": "fallbacks-response-budget.log",
+    "log_sha256": "d21c3c27fcc0cc22128f02952d0cc5e87087d846dd5580fbdd859ca7bf962d50",
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/fallbacks/fallbacks-response-budget.json"
+  },
+  {
+    "check": "stellar-envelope-limits",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "baseline_commit": null,
+    "dependency_commits": {
+      "SwiftDraw": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+      "stellar-ios-mac-sdk": "b5dac0a6e8ff312d597c9a3b4269b03131d66e0d",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+    },
+    "fixture_sha256": "00c0d6bec038d572da443b41325e6e2a08fd387e38f9cf60fd2bcdfe8c29ec0c",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "after",
+        "case": "testNestedEnvelopeMatchesIndependentDigest",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testNestedEnvelopeMatchesIndependentDigest.log",
+        "log_sha256": "ebccc9579d9acb97e62a38b9dcb0f7dab883ef750a6c014604f3386a7b2da6e4"
+      },
+      {
+        "phase": "after",
+        "case": "testRecursiveVectorHitsDepthGuard",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testRecursiveVectorHitsDepthGuard.log",
+        "log_sha256": "3067665ab92b97269c458b47425ea33ea5c2648a400fd361b912b0024343c128"
+      },
+      {
+        "phase": "after",
+        "case": "testForgedArgumentCountHitsRemainingBytesGuard",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testForgedArgumentCountHitsRemainingBytesGuard.log",
+        "log_sha256": "cff4a78a1f9c3d0c9dcd44089c8aba6bff054fac12c6a58e2b6cc9e9a8e26050"
+      },
+      {
+        "phase": "after",
+        "case": "testNoncanonicalVectorPresenceRejectedByApp",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testNoncanonicalVectorPresenceRejectedByApp.log",
+        "log_sha256": "76c4576655e83f6ecf79b335a47c0d6acba59ef61bdc17a028b9386bcfc2d67c"
+      },
+      {
+        "phase": "after",
+        "case": "testTrailingWordRejectedByApp",
+        "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testTrailingWordRejectedByApp.log",
+        "log_sha256": "185bfea20ae16f82b85a360fd202c0e042d60ecd44999f223bb0d2e80af1378e"
+      }
+    ],
+    "duration_seconds": 205.663,
+    "scope": "Five network-denied synthetic Soroban XDR cases through Oath request construction, SDK decoding, canonical checks, signing and verification. No public chain or live transaction.",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "log": "stellar-envelope-limits.log",
+    "log_sha256": "6b02623c250064f817f3a6f01a75b3d6168b9ab0dedecc66202d686dc19ec45e",
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/stellar/stellar-envelope-limits.json"
+  },
+  {
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "check": "release-inputs",
+    "status": "passed",
+    "build_log_sha256": "6bcff0cfbd5eba2906b4cb9db54c440bef8ff15cb765886e4fae3fa7bd7b94b3",
+    "build_description": "b194fb307545b656ac91525d9bf420f8",
+    "manifest_sha256": "aefb8c403dc42338c83320c21a32d654afd8d850c8ef1de92bbf429cf969ad87",
+    "processed_xcframeworks": [
+      "application/Packages/OathAezeed/OathAezeedCore.xcframework",
+      "artifact/bdk-swift/bdkFFI/bdkFFI.xcframework",
+      "artifact/walletcore/WalletCore/WalletCore.xcframework",
+      "artifact/walletcore/WalletCoreSwiftProtobuf/WalletCoreSwiftProtobuf.xcframework"
+    ],
+    "scope": "Swift and C-family compile command inputs and Clang .d dependencies from this Release arm64 build. Source selection alone does not establish symbol reachability, resource behavior or App Store binary equivalence. Apple toolchain files are excluded.",
+    "log": "release-inputs.log",
+    "log_sha256": "090808fbf8174ef314ee7cbe1fe6dc420110982239cac9f897a23fcd41bd3c35",
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/build-inputs/release-inputs.json"
+  },
+  {
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "check": "release-frameworks",
+    "status": "passed",
+    "build_log_sha256": "6bcff0cfbd5eba2906b4cb9db54c440bef8ff15cb765886e4fae3fa7bd7b94b3",
+    "product": "com.aperture.wallet",
+    "embedded": {
+      "OathAtmosphere": {
+        "sha256": "8c8e3f8f0a8653348368e1f817eda05056223d7f8d81f29547b27fb1b531e6e1",
+        "uuid": "8603c2e7707535fdaebc69f72d79c917",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 32667356,
+            "sha256": "9f96b4ab90a36c51ad84543cccbe422d5cc0bcf003007c9613c60a38e8519cab"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 35748,
+            "sha256": "26857bdd401e4fbc5a819d8eb6c834c736c5d67bfa0611d18c0059695f3cfd49"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 27360,
+            "sha256": "e3e6a8d87b025a64cf8e2a6b39cab30838fed5c07bc04c4e641745338709e51d"
+          }
+        }
+      },
+      "OathBitcoin": {
+        "sha256": "b3d2841bfd5a74b9fd9d344bc6d86bcbf20e3c6ddf959b01f52a2a109a1352bb",
+        "uuid": "a602a59b51563845a62884a966778ace",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 9844836,
+            "sha256": "e1a86300755a6454bc34c352f9852293b040330354c74bb85c6018992a7b43f8"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 9684,
+            "sha256": "e6d8872e186a31d72de74a200c5a1034c51b6289d0b5e8f425b2da48d464f19e"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 736,
+            "sha256": "baedf5d7e96a7f193b18d7042f1ea644480052e5f0aa1d04ba35d764c572b929"
+          }
+        }
+      },
+      "OathDiagnostics": {
+        "sha256": "9706c10bb65c60ab42f880be48564d6c9490a6743a710cde146c772745e3a058",
+        "uuid": "1af452e9ea36349f9026b1bf25218642",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 319100,
+            "sha256": "0ef5d8c25adc396fd2edfd44f94190188ed186d87021c4cdc200b3608f92c448"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 5256,
+            "sha256": "469aed65cdf81c40891eba9e3097f04df702a690277c269f674f320f88d1fea4"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 1376,
+            "sha256": "cf8097b7b68be669e3cc64a0b36d72b02a7909cf3094243adcef487d5d6e038e"
+          }
+        }
+      },
+      "OathSecp256k1": {
+        "sha256": "2e54f6dbcba9a1c287950eec422a15aea1cc6bfc13906d5da17ddb5c23bdbec1",
+        "uuid": "71640bb508bc37acac5c98785e065dd3",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 101764,
+            "sha256": "ffb43ebe85ec2b901b77282b85ee0cc40a08ab40e4fa47c6e0c0b0d5f650d557"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 504,
+            "sha256": "583317e53da74b42b22a8cfa9b600f3d989b5044678789734970b2262e31d1df"
+          }
+        }
+      },
+      "WalletCore": {
+        "sha256": "9300e40afdfb0b42bb9280abf20d148da3830efe6ae6010b787fd305d2321d94",
+        "uuid": "08ffd60ae21d354bad70c02731d58624",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 13646560,
+            "sha256": "9ae28c616038727c1624aca36c2b382cbe0fa4e20c0c712f4b4bc955d7f8befd"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 9600,
+            "sha256": "3b68481457ab96c1fc2c0cced1ae67a420e136e83c9138fdf5f03eed08660483"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 192,
+            "sha256": "b3567d9fc80fc5119efac33402e5fcd62ea3eb2d80c7862693d4dcf3550a0b96"
+          }
+        }
+      },
+      "WalletCoreSwiftProtobuf": {
+        "sha256": "5c26febe5bc2967ad63d15072be307f4adbafe782f743156469fdd6828e3a16b",
+        "uuid": "2c12fa7ae54f3cfb9ba13f11ea73a18d",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 840488,
+            "sha256": "79ffc7ec0e0879cdf368013ad24fa0eb06838b574f52aee50aaeb509f45cd947"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 2916,
+            "sha256": "bc60e60d57a71377956254ad34659c52132d66096f19ec4fdc8ee225246bd41b"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 96,
+            "sha256": "28cd7d59136f9edf3111a9b553f15a1230163a1897cf457caaac77ea6d60e2a2"
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "OathAtmosphere": [
+        "/usr/lib/libresolv.9.dylib",
+        "@rpath/OathDiagnostics.framework/OathDiagnostics",
+        "@rpath/OathSecp256k1.framework/OathSecp256k1",
+        "@rpath/OathBitcoin.framework/OathBitcoin",
+        "@rpath/WalletCore.framework/WalletCore",
+        "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+        "/System/Library/Frameworks/AuthenticationServices.framework/AuthenticationServices",
+        "/System/Library/Frameworks/BackgroundTasks.framework/BackgroundTasks",
+        "/System/Library/Frameworks/Charts.framework/Charts",
+        "/System/Library/Frameworks/Combine.framework/Combine",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+        "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+        "/System/Library/Frameworks/CoreText.framework/CoreText",
+        "/System/Library/Frameworks/CoreTransferable.framework/CoreTransferable",
+        "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+        "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+        "/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore",
+        "/System/Library/Frameworks/LinkPresentation.framework/LinkPresentation",
+        "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+        "/System/Library/Frameworks/MessageUI.framework/MessageUI",
+        "/System/Library/Frameworks/Metal.framework/Metal",
+        "/System/Library/Frameworks/MetalKit.framework/MetalKit",
+        "/System/Library/Frameworks/MetricKit.framework/MetricKit",
+        "/System/Library/Frameworks/Network.framework/Network",
+        "/System/Library/Frameworks/Photos.framework/Photos",
+        "/System/Library/Frameworks/PhotosUI.framework/PhotosUI",
+        "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+        "/System/Library/Frameworks/SafariServices.framework/SafariServices",
+        "/System/Library/Frameworks/Security.framework/Security",
+        "/System/Library/Frameworks/SwiftUI.framework/SwiftUI",
+        "/System/Library/Frameworks/Symbols.framework/Symbols",
+        "/System/Library/Frameworks/UIKit.framework/UIKit",
+        "/System/Library/Frameworks/Vision.framework/Vision",
+        "/System/Library/Frameworks/_PhotosUI_SwiftUI.framework/_PhotosUI_SwiftUI",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/libcompression.dylib",
+        "/usr/lib/libsqlite3.dylib",
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftAccelerate.dylib",
+        "/usr/lib/swift/libswiftCompression.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMIDI.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftMetal.dylib",
+        "/usr/lib/swift/libswiftMetalKit.dylib",
+        "/usr/lib/swift/libswiftModelIO.dylib",
+        "/usr/lib/swift/libswiftOSLog.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftObservation.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib",
+        "/usr/lib/swift/libswiftSpatial.dylib",
+        "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftos.dylib",
+        "/usr/lib/swift/libswiftsimd.dylib",
+        "/usr/lib/swift/libswiftCoreGraphics.dylib"
+      ],
+      "OathBitcoin": [
+        "@rpath/OathBitcoin.framework/OathBitcoin",
+        "@rpath/OathDiagnostics.framework/OathDiagnostics",
+        "@rpath/OathSecp256k1.framework/OathSecp256k1",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+        "/System/Library/Frameworks/Network.framework/Network",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "OathDiagnostics": [
+        "@rpath/OathDiagnostics.framework/OathDiagnostics",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+        "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+        "/System/Library/Frameworks/Network.framework/Network",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "OathSecp256k1": [
+        "@rpath/OathSecp256k1.framework/OathSecp256k1",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib"
+      ],
+      "WalletCore": [
+        "@rpath/WalletCore.framework/WalletCore",
+        "/usr/lib/libc++.1.dylib",
+        "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/Security.framework/Security",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswiftFoundation.dylib"
+      ],
+      "WalletCoreSwiftProtobuf": [
+        "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftFoundation.dylib"
+      ]
+    },
+    "comparison": {
+      "WalletCore": {
+        "resolved": {
+          "sha256": "9300e40afdfb0b42bb9280abf20d148da3830efe6ae6010b787fd305d2321d94",
+          "uuid": "08ffd60ae21d354bad70c02731d58624",
+          "executable_sections": {
+            "__TEXT.__text": {
+              "bytes": 13646560,
+              "sha256": "9ae28c616038727c1624aca36c2b382cbe0fa4e20c0c712f4b4bc955d7f8befd"
+            },
+            "__TEXT.__stubs": {
+              "bytes": 9600,
+              "sha256": "3b68481457ab96c1fc2c0cced1ae67a420e136e83c9138fdf5f03eed08660483"
+            },
+            "__TEXT.__objc_stubs": {
+              "bytes": 192,
+              "sha256": "b3567d9fc80fc5119efac33402e5fcd62ea3eb2d80c7862693d4dcf3550a0b96"
+            }
+          }
+        },
+        "whole_file_identical": true,
+        "slice": "ios-arm64"
+      },
+      "WalletCoreSwiftProtobuf": {
+        "resolved": {
+          "sha256": "5c26febe5bc2967ad63d15072be307f4adbafe782f743156469fdd6828e3a16b",
+          "uuid": "2c12fa7ae54f3cfb9ba13f11ea73a18d",
+          "executable_sections": {
+            "__TEXT.__text": {
+              "bytes": 840488,
+              "sha256": "79ffc7ec0e0879cdf368013ad24fa0eb06838b574f52aee50aaeb509f45cd947"
+            },
+            "__TEXT.__stubs": {
+              "bytes": 2916,
+              "sha256": "bc60e60d57a71377956254ad34659c52132d66096f19ec4fdc8ee225246bd41b"
+            },
+            "__TEXT.__objc_stubs": {
+              "bytes": 96,
+              "sha256": "28cd7d59136f9edf3111a9b553f15a1230163a1897cf457caaac77ea6d60e2a2"
+            }
+          }
+        },
+        "whole_file_identical": true,
+        "slice": "ios-arm64"
+      }
+    },
+    "scope": "Exact embedded files, Mach-O UUIDs, instruction-bearing sections and dynamic library references for this generic unsigned iOS build. Only the two dynamic Wallet Core products are compared against resolved XCFramework device slices. This is not a rebuild of Wallet Core or a comparison with the App Store.",
+    "log": "release-frameworks.log",
+    "log_sha256": "44ac660c7777c89050749af34bb959a15705d5a55cc719bbeaea9042487abccb",
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/build-inputs/release-frameworks.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath49-wide-validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 328.98,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "5468de81ade8fb2686c7f22525252cf16d9e07e598cfd05699df582fccf34107",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "5f75c1e96c1ee3714c6e516f025dea5c322f9471adf53eb435b6c6531cc3487e"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/wide/OathAnkr.json"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "0e50b16ae1ced7934d57dba42d3e6e69ccf6cfc8",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDatabase",
+      "<SCRATCH>-native",
+      "/private/tmp/oath49-wide-validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 473.74,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 778 selected; 707 passed; 71 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "8b9b971456bc79b6bf98edabf5df32e4ebdc1c0eb8f564233a66a6c1c2a04824",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 778,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 71,
+      "sha256": "e72ffb1f0a084959083d80dad106feabdc3e4a593a0bb072cac29f54303993b5"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/provider-response/oath49-http-evidence/wide/OathDatabase.json"
   }
 ]
