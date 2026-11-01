@@ -1,0 +1,37 @@
+{
+  "check": "OathDiagnostics",
+  "source_commit": "05f1f349938c3281810241513bae8beceab35ffd",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathDiagnostics",
+    "<SCRATCH>-native",
+    "/private/tmp/oath-request-lifetime-evidence/validation"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 13.19,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+    "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.002 seconds."
+  ],
+  "log_sha256": "b816dc41d86ce957bec9935cd6e2f6ee4bc153d53d5950e6ecdc475aa22d78c0",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 120,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 2,
+    "sha256": "5c430a6e03b5ed3c8b067d0847ac3a7a4e99a1f9ae5b1a15706938ae50ca1189"
+  },
+  "swift_testing": {
+    "log_sha256": "97b390ae242d20540ff2b1a693a42d23183d2d57943e62c00ae5e3536597bbf5",
+    "summaries": [
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.002 seconds."
+    ]
+  }
+}

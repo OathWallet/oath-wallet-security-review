@@ -395,5 +395,17 @@
     "retest_scope": "Same seven cases: two expected assertions in one case and six passing controls before; all seven pass after. Network-denied production-model checks with character corpus, seeded inputs, Codable and bounds. Oath uses typed-chain constructor in inspected approval path; no app exploit shown.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/29"
+  },
+  {
+    "id": "OW-2026-020",
+    "severity": "low",
+    "title": "Outgoing requests lost relay lifetime and bypassed service expiry checks",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-020.md",
+    "fix_commit": "05f1f349938c3281810241513bae8beceab35ffd",
+    "regression_only_commit": "a90d99005f3b8476178a968ba1016c0347e0328e",
+    "retest_scope": "Same 11 production requester cases with transport spies: six assertions across four cases and seven passing controls before; all 11 pass after. Network denied, no actual service/relay operation or incoming Oath bypass shown.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/30"
   }
 ]

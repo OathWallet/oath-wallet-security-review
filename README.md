@@ -20,7 +20,14 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [separate-field CAIP account validation](findings/OW-2026-019.md).
+Latest dependency finding: [outgoing request lifetime routing](findings/OW-2026-020.md).
+Six assertions across four cases fail before repair; seven controls pass and
+all eleven cases pass after. SDK checks pass 147/one skip, diagnostics pass
+118/two skips and unsigned iOS Release compilation passes.
+[Transport review](review/REQUEST-LIFETIME-REVIEW.md) traces the outgoing SDK
+path and keeps link-mode, timer, service-response and cancellation gaps visible.
+
+Earlier dependency finding: [separate-field CAIP account validation](findings/OW-2026-019.md).
 Two expected assertions fail in one case before repair; all seven identical
 cases pass after. SDK checks pass 136/one skip; diagnostics pass 118/two skips;
 unsigned iOS Release compilation passes. [Parser review](review/CAIP-BOUNDARY-REVIEW.md)
@@ -91,6 +98,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/request-lifetime.py .work/source --output .work/request-lifetime --scratch .work/request-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build

@@ -7,7 +7,21 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`8e5b6b0f565026951d7cef9435258daa0b02b9b2`**.
+Current review target: **`05f1f349938c3281810241513bae8beceab35ffd`**.
+[OW-2026-020](../findings/OW-2026-020.md) repairs discarded relay TTL and skipped
+wallet-service expiry validation. The identical eleven-case production corpus
+retains six expected assertions across four cases before and seven passing
+controls; all eleven pass after. SDK checks pass 147/one skip, diagnostics pass
+118/two skips, and source/secret checks, diagnostics coverage, 130 audit helpers
+and unsigned generic iOS Release compilation (30.72 seconds) pass.
+[PR 30](https://github.com/devdasx/oath-wallet/pull/30) merged as
+`5ff8506b87d8ac773d30cc8f38a4c3aa939cc99c`. The application source matches the tested commit;
+97 concurrent website-only differences are excluded from the mobile-wallet
+verdict and listed in [merge evidence](../evidence/request-lifetime-merge-identity.json).
+[Review and remaining work](REQUEST-LIFETIME-REVIEW.md) distinguish the outgoing
+SDK API from Oath's incoming request/response path.
+
+Previous target: `8e5b6b0f565026951d7cef9435258daa0b02b9b2`.
 [OW-2026-019](../findings/OW-2026-019.md) repairs the SDK's separate-field
 account initializer. One case retains two expected assertions before; all seven
 identical cases pass after. The corpus includes byte/Unicode mutations, Codable,
@@ -84,8 +98,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,813 files: 284 reviewed, 39 partially reviewed,
-11 generated artifacts verified, 4,479 outstanding. The inventory also includes
+The application ledger contains 4,814 files: 288 reviewed, 48 partially reviewed,
+11 generated artifacts verified, 4,467 outstanding. The inventory also includes
 website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
@@ -123,6 +137,10 @@ No new production defect was confirmed. The new CI job is configured but its
 GitHub execution remains unverified; no app source was changed.
 
 ## Findings and repair status
+
+- [OW-2026-020](../findings/OW-2026-020.md), low: outgoing request lifetime was
+  discarded for relay routing and unchecked for wallet-service routing. Fixed
+  with eleven identical before/after cases. No incoming Oath bypass was shown.
 
 - [OW-2026-019](../findings/OW-2026-019.md), low: an invalid separate chain argument
   could borrow its missing component from the address. Fixed and retested with
