@@ -1,5 +1,5 @@
 {
-  "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+  "source_commit": "2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -9654,8 +9654,10 @@
       "sha256": "ddace3ee81404c336d6a60beeec1986a16e711bbeb5e66b81e6876c48079228f",
       "bytes": 14714,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/SAFE-CONTRACT-CROSSCHECK.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMMultisigPolicy.swift",
@@ -9681,13 +9683,13 @@
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendCrypto.swift",
-      "sha256": "38b6b67d58956fff594538968de7e0a83455355db7460c5d6f5ebc80e8b89798",
-      "bytes": 6630,
+      "sha256": "986da60629737782c3e0dc2348bf374dbd2d32a37708577af62541721395c4b4",
+      "bytes": 6868,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
         "review/EVM-SEND-TRACE.md",
-        "findings/OW-2026-009.md"
+        "findings/OW-2026-010.md"
       ]
     },
     {
@@ -11360,6 +11362,16 @@
       "evidence": []
     },
     {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/EVMDelegationNonceBoundaryTests.swift",
+      "sha256": "1b7ec8fa032f29658bd217306d90b918ea02b74378fdda87544e0dc4ad8af007",
+      "bytes": 2005,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "findings/OW-2026-010.md"
+      ]
+    },
+    {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/EVMDuplicateBroadcastLocalTests.swift",
       "sha256": "5d4131714de0e4fd4174ec4a48f7c125b6cd573100a86dd5aadbe10b92deb77a",
       "bytes": 4050,
@@ -11452,8 +11464,10 @@
       "sha256": "6bb12b75f3c3731adcf5604d50138e0097da6dc08e2a0b7448d9a6a4dbe76827",
       "bytes": 2343,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SAFE-CONTRACT-CROSSCHECK.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/EVMMultisigPublicTests.swift",
@@ -11468,8 +11482,10 @@
       "sha256": "ff3ae7acb5be61e8b0b49bc0d247f2737cfa2a9361067a1686e21e16401b9682",
       "bytes": 10743,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/SAFE-CONTRACT-CROSSCHECK.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/EVMPendingLocalSendIntegrationTests.swift",

@@ -7,13 +7,12 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`6124254d43ee7a98d4a364639671ccfc52155396`**.
-[OW-2026-009](../findings/OW-2026-009.md) repairs a missing EVM response-size
-check with retained before/after tests. It is merged in
-[application PR 13](https://github.com/devdasx/oath-wallet/pull/13), merge
-`eb78da3e7690a1ad3eca6a1e0970882600ac19eb`, whose source tree matches the
-reviewed commit. The preceding cancellation repair remains recorded in
-[OW-2026-008](../findings/OW-2026-008.md) and progress 22 below. No App Store
+Current review target: **`2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc`**.
+[OW-2026-010](../findings/OW-2026-010.md) repairs the public delegation-sizing
+helper's unchecked nonce increment. The existing app callers already validate
+that nonce; no reachable app exploit is established. [PR 14](https://github.com/devdasx/oath-wallet/pull/14)
+is merged with an identical source tree. The prior response-size
+and cancellation findings retain their original evidence below. No App Store
 upload or submission is included.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
@@ -32,8 +31,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,677 files: 189 reviewed, 28 partially reviewed,
-10 generated artifacts verified, 4,450 outstanding. The Wallet Core upstream
+The application ledger contains 4,678 files: 192 reviewed, 29 partially reviewed,
+10 generated artifacts verified, 4,447 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -596,3 +595,55 @@ The completion checker reports **7,655 outstanding items**. Current-target
 GitHub execution remains pending behind earlier queued work; previous-target
 successes do not establish a fresh full matrix. All historical failures remain
 in the evidence. No simulator, physical-device or App Store operation occurred.
+
+## Progress 24 — delegation nonce boundary and Safe cross-check
+
+Application target `2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc` is published in
+[PR 14](https://github.com/devdasx/oath-wallet/pull/14). Merge
+`76072b2a33bfa3a56ec295c60ed5e39c5bb6a955` has the same tree,
+`f96f482c8cf0355ed5b8bc89741b12560a854747`.
+
+[OW-2026-010](../findings/OW-2026-010.md) confirms an unchecked increment in the
+public delegation-sizing helper. Three baseline processes trap at the maximum
+nonce; LLDB identifies the production arithmetic-overflow line. Three more
+baseline runs accept the next invalid boundary, failing the rejection assertion.
+All six control executions pass. With the three-line guard, the identical four
+cases pass in each of three processes (12 passes). No reachable app exploit is
+established: existing quote/signing/verification callers already validate this
+bound. The helper remains usable for provisional, unfunded fee estimates.
+
+The [Safe source cross-check](SAFE-CONTRACT-CROSSCHECK.md) compares the app's
+policy, client and receipt behavior with selected Safe 1.4.1 contract semantics
+at an exact source commit. A suspected event-indexing mismatch was ruled out.
+The cross-check is not contract compilation, deployed-code verification, or
+local/mainnet EVM execution. Permission-batch follow-up reads and remaining
+connected authorization questions are recorded in READ-NOTES.
+
+Current-target local checks:
+
+- OathAnkr: 1,411 selected, 1,217 passed, 194 explicit skips, zero failures;
+  334.42 seconds including isolated host-package compilation.
+- OathDiagnostics: 118 passed, two explicit skips, zero failures; 7.59 seconds.
+- App EVM authorization harness: 22 checks passed, 67.80 seconds; production
+  vault/PIN/imported signer with substituted biometrics, no HD derivation.
+- Public/Gitleaks and diagnostic coverage checks passed.
+- Generic unsigned iOS Release build passed in 116.17 seconds using the
+  existing isolated build directory; OathAnkr was recompiled. This is not a
+  fresh-from-empty iOS build or a runtime test.
+- 95 audit-helper tests passed. Workflow lint passes when filtering only the
+  existing unknown `xcode-27` runner-label warning; both lint outputs are saved.
+
+The previous GitHub run
+[41272454184](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41272454184)
+completed with 44 successful jobs and one failed artifact-upload job. Its Aptos
+host test passed, then GitHub's artifact request failed with DNS ENOTFOUND. Raw
+job logs and metadata are preserved. It remains a failed run, not a source test
+failure or a green matrix. Current-target GitHub results remain pending and
+must be assessed separately from these local checks.
+
+Durable logs, fixture/binary/toolchain hashes and before/after results are in
+[`evidence/evm-delegation-nonce`](../evidence/evm-delegation-nonce). The application
+ledger now has 4,678 files: 192 reviewed, 29 partial, 10 generated-verified and
+4,447 outstanding. The completion gate still reports 7,654 outstanding items,
+including older-source-only required checks. No whole-wallet completion,
+independent certification or App Store binary-equivalence claim is made.

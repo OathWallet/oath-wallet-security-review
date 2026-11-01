@@ -20,8 +20,11 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [standalone EVM response-size validation](findings/OW-2026-009.md),
-with identical before/after tests and exact-limit controls. The [EVM source trace](review/EVM-SEND-TRACE.md)
+Latest application finding: [delegation nonce serialization](findings/OW-2026-010.md),
+with retained arithmetic-trap evidence and identical passing post-fix tests.
+The [Safe contract cross-check](review/SAFE-CONTRACT-CROSSCHECK.md) records
+source comparisons and remaining contract provenance gaps. The previous
+[response-size repair](findings/OW-2026-009.md) retains its exact-limit controls. The [EVM source trace](review/EVM-SEND-TRACE.md)
 keeps its remaining protocol, dependency and helper-API questions explicit.
 The earlier [refresh cancellation repair](findings/OW-2026-008.md) retains its original CI failure.
 [Offline diagnostic modes](review/DIAGNOSTIC-MODES.md) also cover eight cases

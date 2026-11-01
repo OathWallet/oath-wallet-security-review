@@ -275,5 +275,16 @@
     "regression_only_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
     "retest_scope": "Identical production RPC tests: oversized precheck rejected after repair in 3 network-denied processes; exact-limit and ordinary-batch controls pass before and after. No fund loss or denial of service demonstrated.",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/13"
+  },
+  {
+    "id": "OW-2026-010",
+    "severity": "informational",
+    "title": "Delegation sizing helper can overflow its authorization nonce",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-010.md",
+    "fix_commit": "2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc",
+    "regression_only_commit": "3cfa6168aac85b5e7c7c42daa4bf7b37e23276ce",
+    "retest_scope": "Identical four-case fixture in three network-denied processes: 3 arithmetic traps and 3 invalid acceptances before; all 12 cases pass after. Existing app callers already validate the nonce; no reachable app exploit established.",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/14"
   }
 ]

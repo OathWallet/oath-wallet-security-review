@@ -442,3 +442,33 @@ reviewed dispositions and six add partial dispositions. The partial statuses
 preserve explicit dependency/protocol/API questions rather than treating the
 passing package suite as a substitute for those reads. OW-2026-009 is the
 confirmed response-validation defect repaired in this increment.
+
+## Progress 24: delegation boundary and Safe source cross-check
+
+Read the complete EVMSendCrypto encoder and new four-case boundary fixture;
+traced its quote/sign/verify preconditions. Direct unsigned serialization traps
+before repair; the three-line guard rejects the invalid delegation nonce while
+preserving provisional fee sizing. See OW-2026-010 for exact commits and evidence.
+
+Read EVMMultisigClient, EVMMultisigPolicy, EVMMultisigTests and
+EVMMultisigInclusionTests. Compared the documented Safe event, domain, signature,
+execution/payment and CREATE2 initializer semantics against commit
+`bf943f80fec5ac647159d26161446ac5d716a294`. The suspected event-indexing mismatch
+was rejected. See SAFE-CONTRACT-CROSSCHECK.md for explicit inspected scope;
+no transitive dependency review or deployed-bytecode equivalence is claimed.
+
+Additional permission follow-up reads covered Permissions.swift,
+PermissionBatchExecutor.swift, PermissionBatchScope.swift and the app batch
+coordinator. These remain outstanding dispositions: batch journal transitions,
+decoded-scope validation at authorization boundaries, cancellation after durable
+signing and fee-cap consumption still need their connected implementations
+traced before a review verdict. No additional defect was confirmed by those
+reads alone.
+
+Followed the batch coordinator into OathDatabase/PermissionBatch.swift and
+OathWalletVault.swift lines 378-423. Status writes only affect queued/processing
+rows; reconciliation prefers confirmed removals and durable signed payloads.
+The vault grant expires on a monotonic clock, matches wallet/network/account/
+removal/fee scope and consumes each send id once. Initial scope validation,
+all signer consumption sites and concurrent interruption remain the next
+connected review boundary; the earlier broad outstanding disposition is retained.

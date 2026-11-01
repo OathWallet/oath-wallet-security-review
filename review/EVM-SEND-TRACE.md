@@ -97,3 +97,12 @@ The new GitHub job reproduces the regression-only and fixed revisions separately
 with pinned actions, read-only permissions, and no deployment secrets. Fresh
 GitHub execution remains pending; local passes do not establish a passing CI
 matrix. No simulator, physical-device or App Store operation occurred.
+
+## Follow-up: delegation nonce and Safe contract boundaries
+
+The previously open direct-helper nonce lead is now reproduced and repaired
+in [OW-2026-010](../findings/OW-2026-010.md). The original quote/signing caller
+checks remain intact; the finding does not establish a reachable app exploit.
+The [Safe cross-check](SAFE-CONTRACT-CROSSCHECK.md) extends source review into
+the multisig client and selected pinned upstream contract semantics. The earlier
+counts above remain historical results on their stated source, not new results.
