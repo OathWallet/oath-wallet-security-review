@@ -419,5 +419,17 @@
     "retest_scope": "Same ten production cases: four unowned-reference crashes, two duplicate-timer assertions and four passing controls before; all ten pass after. Actual Foundation run loop and memory-only stores in network-denied host processes. No remotely triggered Oath teardown demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/31"
+  },
+  {
+    "id": "OW-2026-022",
+    "severity": "low",
+    "title": "Queued cleanup could access a released owner and store timers remained registered",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-022.md",
+    "fix_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "regression_only_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+    "retest_scope": "Same eight production cases: one unowned-reference abort, one timer-validity assertion and six passing controls before; all eight pass after. Default-preserving queue injection is disclosed. Real timers, memory-only stores, network-denied host processes; no remotely triggered Oath teardown demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/32"
   }
 ]

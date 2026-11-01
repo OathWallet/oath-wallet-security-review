@@ -1,5 +1,5 @@
 {
-  "source_commit": "d13c1979398ab3dc51d9af18f5bf23821e18262f",
+  "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -21150,6 +21150,16 @@
       "evidence": []
     },
     {
+      "path": "Tools/WalletConnectSDKValidation/SessionCleanupLifetimeTests.swift",
+      "sha256": "e5413490d5d802d3162c24918180778feeeecb087471dd1824a273a4935153b5",
+      "bytes": 7688,
+      "category": "build-or-documentation",
+      "status": "reviewed",
+      "evidence": [
+        "review/CLEANUP-LIFETIME-REVIEW.md"
+      ]
+    },
+    {
       "path": "Tools/WalletConnectSDKValidation/SessionExpiryTests.swift",
       "sha256": "9a3061e5dac47984267242e278fd7c35825d71d3b550b48e8b5801444ff0e31f",
       "bytes": 4126,
@@ -29062,10 +29072,11 @@
       "sha256": "4adda8c3e6c4be52db178ae642af1e00744ca19d1a37c19d8ead3864a226d84d",
       "bytes": 3844,
       "category": "dependency",
-      "status": "reviewed",
+      "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "findings/OW-2026-005.md"
+        "findings/OW-2026-005.md",
+        "review/CLEANUP-LIFETIME-REVIEW.md"
       ]
     },
     {
@@ -29131,10 +29142,11 @@
       "sha256": "2fe8ab719deda44482629d5f7b5a44fa8dcd5384563e031838c5699dde403822",
       "bytes": 2896,
       "category": "dependency",
-      "status": "reviewed",
+      "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "findings/OW-2026-005.md"
+        "findings/OW-2026-005.md",
+        "review/CLEANUP-LIFETIME-REVIEW.md"
       ]
     },
     {
@@ -29262,10 +29274,11 @@
       "sha256": "0ffef25d1c6ffb1d9f79c12b35e2ba9dfef16bdb3d04de63846259fdb36e359d",
       "bytes": 699,
       "category": "dependency",
-      "status": "reviewed",
+      "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "findings/OW-2026-005.md"
+        "findings/OW-2026-005.md",
+        "review/CLEANUP-LIFETIME-REVIEW.md"
       ]
     },
     {
@@ -29607,12 +29620,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectSign/Services/HistoryService.swift",
-      "sha256": "d4b3261234fa753384f0565d888706cd424be35559c5545978ffe03b6beb562a",
-      "bytes": 4386,
+      "sha256": "e587b2c1f1c6dcd4fbed6c3d4368d68c8b7ec0428359850f57a93ef4fe2e2ca4",
+      "bytes": 4505,
       "category": "dependency",
       "status": "partially-reviewed",
       "evidence": [
-        "review/REQUEST-LIFETIME-REVIEW.md"
+        "review/REQUEST-LIFETIME-REVIEW.md",
+        "review/CLEANUP-LIFETIME-REVIEW.md"
       ]
     },
     {
@@ -30285,7 +30299,8 @@
       "status": "reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "findings/OW-2026-005.md"
+        "findings/OW-2026-005.md",
+        "review/CLEANUP-LIFETIME-REVIEW.md"
       ]
     },
     {
@@ -30422,12 +30437,13 @@
     },
     {
       "path": "Vendor/Reown/Sources/WalletConnectUtils/SequenceStore.swift",
-      "sha256": "941b6a7bc65feeea7c2308f2e51b2d91793b4b73bd10f4748f4ce5e6e13acc8c",
-      "bytes": 2125,
+      "sha256": "b8578343eb62bfb5aa34b86ddc040967a6f09334874145da62b47eb7552ce212",
+      "bytes": 2186,
       "category": "dependency",
-      "status": "partially-reviewed",
+      "status": "reviewed",
       "evidence": [
-        "review/REQUEST-LIFETIME-REVIEW.md"
+        "review/REQUEST-LIFETIME-REVIEW.md",
+        "review/CLEANUP-LIFETIME-REVIEW.md"
       ]
     },
     {

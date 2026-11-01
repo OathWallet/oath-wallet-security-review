@@ -7,7 +7,22 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`d13c1979398ab3dc51d9af18f5bf23821e18262f`**.
+Current review target: **`eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed`**.
+[OW-2026-022](../findings/OW-2026-022.md) repairs queued session cleanup and
+SequenceStore timer teardown. Eight identical production cases retain one
+unowned-reference abort, one timer-validity assertion and six passing controls
+before; all eight pass after. SDK checks pass 165/one skip, diagnostics pass
+118/two skips, and source/secret checks, diagnostics coverage, 138 audit helper
+tests and unsigned generic iOS Release compilation (168.75 seconds) pass.
+
+[PR 32](https://github.com/devdasx/oath-wallet/pull/32) merged as `7745d22b8333b71ea57cd7896067128285d06d5d`.
+Application source matches the tested pin; 97 concurrent website-only
+differences are recorded in [merge evidence](../evidence/cleanup-lifetime-merge-identity.json).
+
+[Cleanup review](CLEANUP-LIFETIME-REVIEW.md) discloses the default-preserving queue
+injection, initial fixture-assumption error and reopened authentication review gaps.
+
+Previous target: `d13c1979398ab3dc51d9af18f5bf23821e18262f`.
 [OW-2026-021](../findings/OW-2026-021.md) repairs watcher timers and storage
 callbacks that outlived their owners. Ten identical production cases retain
 four unowned-reference aborts, two duplicate-timer assertions and four passing

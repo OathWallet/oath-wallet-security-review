@@ -17084,5 +17084,369 @@
     "log": "watcher-lifetime.log",
     "log_sha256": "63e7c5887cf2b820daf8dfcf88ca340569252c97102b05d18eb2b5d283357148",
     "evidence_path": "evidence/watcher-lifetime/oath-watcher-lifetime-evidence/paired/watcher-lifetime.json"
+  },
+  {
+    "check": "walletconnect-sdk",
+    "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 30.5,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds",
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.162 (0.163) seconds",
+      "\t Executed 9 tests, with 0 failures (0 unexpected) in 0.937 (0.938) seconds",
+      "\t Executed 15 tests, with 0 failures (0 unexpected) in 0.015 (0.015) seconds",
+      "\t Executed 21 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.061 (0.062) seconds",
+      "\t Executed 4 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 3.105 (3.106) seconds",
+      "\t Executed 13 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "\t Executed 11 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 10 tests, with 0 failures (0 unexpected) in 13.418 (13.418) seconds",
+      "\t Executed 7 tests, with 0 failures (0 unexpected) in 0.162 (0.162) seconds",
+      "\t Executed 8 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-sdk-validation-e3nb12ht/Tests/SDKTests/VerifyAbsenceTests.swift:24: -[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure] : Test skipped - Fresh process for production diagnostics reporter",
+      "Test Case '-[SDKTests.VerifyAbsenceTests testMissingAttestationKeepsUnknownWithoutAnAppFailure]' skipped (0.000 seconds).",
+      "\t Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.000 (0.000) seconds",
+      "\t Executed 13 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds",
+      "\t Executed 166 tests, with 1 test skipped and 0 failures (0 unexpected) in 17.887 (17.893) seconds",
+      "\t Executed 166 tests, with 1 test skipped and 0 failures (0 unexpected) in 17.887 (17.897) seconds",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "305ce9f5f1a5a2806a8cdcf75b49b89f2d2244ff235d6d15087aa7f75d26fd6b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 165,
+      "skipped": 1,
+      "failed": 0
+    },
+    "evidence_path": "evidence/cleanup-lifetime/oath-cleanup-lifetime-evidence/validation/walletconnect-sdk.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-cleanup-lifetime-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 12.21,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "b1a9f2ffe0e4c88f0f29739f637922afaf3649d0de806da7caa89f3b6e78da2c",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "09fd5c72af7c2ce40d1a917846c4e4eedaf0a6430433547948744f59689782d0"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/cleanup-lifetime/oath-cleanup-lifetime-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 31.23,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "1e4a5f03680b112ce186265bb227e172d4b279b12071957f58250660a7e09476",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/cleanup-lifetime/oath-cleanup-lifetime-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.23,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/cleanup-lifetime/oath-cleanup-lifetime-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 168.75,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "5f376bdf73d00919ab9e9ec17fcb3b92fdcceb2d26a030bdd4fe00868b18ce40",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/cleanup-lifetime/oath-cleanup-lifetime-evidence/validation/build.json"
+  },
+  {
+    "check": "cleanup-lifetime",
+    "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+    "baseline_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+    "status": "passed",
+    "fixture_sha256": "e5413490d5d802d3162c24918180778feeeecb087471dd1824a273a4935153b5",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testLiveQueuedCleanupIsScopedAndNonblocking",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 22.874,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testLiveQueuedCleanupIsScopedAndNonblocking.log",
+        "log_sha256": "f721ac5147f70b7d1588b3b953743435dadf28c7af28dbdf1fec995831195147"
+      },
+      {
+        "phase": "before",
+        "case": "testRepeatedAndAbsentCleanupPreservesOtherTopics",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.427,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testRepeatedAndAbsentCleanupPreservesOtherTopics.log",
+        "log_sha256": "00ae9b1fbd8a2641a43dff690fe955812de7f33606ea60ae1c196861854e46d9"
+      },
+      {
+        "phase": "before",
+        "case": "testMultipleQueuedTopicsPreserveUnselectedTopic",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.372,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testMultipleQueuedTopicsPreserveUnselectedTopic.log",
+        "log_sha256": "3eaa9665bb0541f3d5664a259e20b867624152c64e3f96e9e3142574d3bfcc96"
+      },
+      {
+        "phase": "before",
+        "case": "testHistoryReadFiltersExpiredAndMalformedRequests",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.324,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testHistoryReadFiltersExpiredAndMalformedRequests.log",
+        "log_sha256": "1ab2ad43e0d2802ced3e97de483530906715b809371bb5b9d059523451e62b7e"
+      },
+      {
+        "phase": "before",
+        "case": "testLiveSequenceTimerExpiresOnlyExpiredItems",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 4.484,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testLiveSequenceTimerExpiresOnlyExpiredItems.log",
+        "log_sha256": "765027afe5071f01f60550158ba2cd2ce579765fc369c4c76e95ac477872f902"
+      },
+      {
+        "phase": "before",
+        "case": "testExplicitSequenceDeletionDoesNotEmitExpiry",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.634,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testExplicitSequenceDeletionDoesNotEmitExpiry.log",
+        "log_sha256": "29f732ccc1c0642cd205cb7c2a704377390a28e600144fd006f65b08ec35a32f"
+      },
+      {
+        "phase": "before",
+        "case": "testReleasedSequenceStoreInvalidatesTimer",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "expected-lifetime-failure",
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 1.416,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testReleasedSequenceStoreInvalidatesTimer.log",
+        "log_sha256": "0e42e119dd669654d0257f71b9ce18abb724899b8c00e49c34db89dd0346bf56"
+      },
+      {
+        "phase": "before",
+        "case": "testQueuedCleanupOutlivesReleasedService",
+        "source_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
+        "status": "expected-unowned-reference-trap",
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 1.483,
+        "source_archive_sha256": "4f17507fa18254f92ae2e274d0135e96fe8db941882c2b45d83d209f506aa0a8",
+        "log": "before-testQueuedCleanupOutlivesReleasedService.log",
+        "log_sha256": "1aec9480fd152610fc92ca45ae6a47a3b5438ae9eaa22cb5585cca88772fea11"
+      },
+      {
+        "phase": "after",
+        "case": "testLiveQueuedCleanupIsScopedAndNonblocking",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 20.756,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testLiveQueuedCleanupIsScopedAndNonblocking.log",
+        "log_sha256": "0572eaff003d4dba7a6e0ca6f8431f8ef52c6bf16dd3781d0ba73bb5f4629921"
+      },
+      {
+        "phase": "after",
+        "case": "testRepeatedAndAbsentCleanupPreservesOtherTopics",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.808,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testRepeatedAndAbsentCleanupPreservesOtherTopics.log",
+        "log_sha256": "54200207024660e989c49f13bb2b232a66a8585a4006457f5a1ec916a00b46f9"
+      },
+      {
+        "phase": "after",
+        "case": "testMultipleQueuedTopicsPreserveUnselectedTopic",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.374,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testMultipleQueuedTopicsPreserveUnselectedTopic.log",
+        "log_sha256": "12dbe5243767598edfdcd9e0b769a651e804a58bfd6f52114476de31afbb51f1"
+      },
+      {
+        "phase": "after",
+        "case": "testHistoryReadFiltersExpiredAndMalformedRequests",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.315,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testHistoryReadFiltersExpiredAndMalformedRequests.log",
+        "log_sha256": "5d4fcc51edd7f61914d641189fb16cd129de895f8099299e42a6daf99b2c10c8"
+      },
+      {
+        "phase": "after",
+        "case": "testLiveSequenceTimerExpiresOnlyExpiredItems",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 4.38,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testLiveSequenceTimerExpiresOnlyExpiredItems.log",
+        "log_sha256": "5785e73813b80a25c83ceca676c247743f5c211be18a4755098fc9748799e024"
+      },
+      {
+        "phase": "after",
+        "case": "testExplicitSequenceDeletionDoesNotEmitExpiry",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.314,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testExplicitSequenceDeletionDoesNotEmitExpiry.log",
+        "log_sha256": "a7ae29268e78543b6becbfa167152400e7152267159ceab312338afaac2b36fe"
+      },
+      {
+        "phase": "after",
+        "case": "testReleasedSequenceStoreInvalidatesTimer",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.305,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testReleasedSequenceStoreInvalidatesTimer.log",
+        "log_sha256": "112c066453c2e7c3d3f6504164db6f2b5e6582399b6b7200eed54432866bfd47"
+      },
+      {
+        "phase": "after",
+        "case": "testQueuedCleanupOutlivesReleasedService",
+        "source_commit": "eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.472,
+        "source_archive_sha256": "9a5b7d7bd7b167610abaf860cf0b3ecd0debe1ff07a48ef11041ed57ba91506f",
+        "log": "after-testQueuedCleanupOutlivesReleasedService.log",
+        "log_sha256": "a9426b19f6b77dde59daa52a983a21be3f8bc6fded8dc74d4b4d7f526efde103"
+      }
+    ],
+    "duration_seconds": 70.799,
+    "scope": "Production HistoryService, SequenceStore and RPC history; same eight synthetic cases in separate network-denied host processes. A default-preserving injectable dispatch queue holds cleanup until owner release. Real timer handle validity and actual Foundation expiry scheduling are checked; stores are memory-only.",
+    "limits": "Regression baseline introduces an internal queue parameter defaulting to the original global background queue, preserving the original unowned capture. No remotely triggered Oath teardown or concurrent same-topic replacement claim. No copied cleanup implementation, simulator, device or App Store operation.",
+    "log": "cleanup-lifetime.log",
+    "log_sha256": "25513a6632ac052a3b145016aeb24e56759c0e133783f0c2381c709bce64e133",
+    "evidence_path": "evidence/cleanup-lifetime/oath-cleanup-lifetime-evidence/paired/cleanup-lifetime.json"
   }
 ]

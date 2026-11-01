@@ -1,0 +1,962 @@
+[
+  {
+    "selector": "OathDiagnosticsTests.AccountAbsenceTests/testLiveRecordedUnfundedAccountEnvelopes",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.282,
+    "log": "OathDiagnostics-cases/dc29f12b97c129c6.log",
+    "log_sha256": "7573189be4890013bb85e2efb2137697e7c2ea99a5c2b0607a66ebe156b13b2e"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AccountAbsenceTests/testNearMissingAccountCannotHideContractFailureOrOtherAccount",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.285,
+    "log": "OathDiagnostics-cases/150b52d482254483.log",
+    "log_sha256": "747b04e2d9f5ec13ec311ca8d3f8a9232144f728c4b3f2281533732e969d93ac"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AccountAbsenceTests/testStellarOnlySuppressesHorizonAccountNotFound",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.232,
+    "log": "OathDiagnostics-cases/f82a3038f3f87460.log",
+    "log_sha256": "740cb33eb45905862e8cda1a024df815316819b0b6035ba042da359c936637f9"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AccountAbsenceTests/testStellarPendingTransactionAbsenceIsExpectedButProxyFailuresAreNot",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.219,
+    "log": "OathDiagnostics-cases/4bd35d958c2dc820.log",
+    "log_sha256": "618ba8eec0d00e19e98b872affdb7795c6b58e10931495ca6e693d18911d61b1"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AccountAbsenceTests/testXrplFallbackRecognizesAbsenceButStillReportsBusyAndWrongLedger",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.14,
+    "log": "OathDiagnostics-cases/9b23176ab980a1e2.log",
+    "log_sha256": "302922e6b96fbf8db60ad2bd53320f9d5ebe27649e031eb31aca327cbfdb22d3"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AccountAbsenceTests/testXrplRequiresExactAccountValidatedLedgerAndCorrectMethod",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.142,
+    "log": "OathDiagnostics-cases/174128084554cde8.log",
+    "log_sha256": "1147a16220b0ac356376b0787041db78cec2246b2547cbf1eedc862cfba45dc2"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AptosSendDiagnosticTests/testContextContainsNoCredentialTransactionOrWalletFields",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.147,
+    "log": "OathDiagnostics-cases/e9f0c598ed3a4674.log",
+    "log_sha256": "3d450dec8d91e466840e351385a9bb1f775dd1502439935a34238f2c562a52ae"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AptosSendDiagnosticTests/testOnlyExactPendingLookupAbsenceIsExcluded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.165,
+    "log": "OathDiagnostics-cases/60f8b9d5b43bac40.log",
+    "log_sha256": "0ab6b65e75740147f5e58bb75ead027b70d696fa4fd5989960a7a1ce67682aee"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ArcDiagnosticTests/testRPCContextDoesNotCopyPayloadSignatureOrKeys",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.126,
+    "log": "OathDiagnostics-cases/8f3d8e32730906f7.log",
+    "log_sha256": "2fab578d60b01ecca171f0724fc284c9536a02e090c1dd4fa66e117413617927"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testAdmissionUsesTypedCodesWithoutFormattingAndPreservesRuntimeFailures",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.128,
+    "log": "OathDiagnostics-cases/5c59efada320df8d.log",
+    "log_sha256": "1c76eb9735eeb3a23091f1ed7c0513f64438a135eb8e057aafd89b631e8dbdb8"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testChilizFinalSendOutagesAreRetainedWithoutChangingBackgroundExclusions",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.181,
+    "log": "OathDiagnostics-cases/a6e9e199e6938b03.log",
+    "log_sha256": "a923a827eeab001378c11b3153be788badcfb74da2a84da1e46739da7c62a2dc"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testExactStaleCoinbaseQuoteIsAvailabilityButUnrelated404sRemain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.156,
+    "log": "OathDiagnostics-cases/ecca8aa4e7ef6fb4.log",
+    "log_sha256": "d23875f12fe0201ba8df7150073a453db0fab17c766b2343003582e640978829"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testHTTPAndURLFailuresAreExcludedAcrossServicesAndChains",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.18,
+    "log": "OathDiagnostics-cases/5ece3f19ffd9ccbf.log",
+    "log_sha256": "640011ba71ad6af583c533cef438bce562ad8e13f7e22714324bcd53ad941424"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testKnownWrappersAndProviderEnvelopesDoNotLeakThrough",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.148,
+    "log": "OathDiagnostics-cases/3344d0b82d4a9388.log",
+    "log_sha256": "8a2e26f8389a8fc8e758a90f0d4ac8aebcb094a052bbd9b8d05f12261aa31d27"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testNetworkFrameworkPOSIXFailuresFollowSocketPolicyWithoutHidingOtherCases",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.277,
+    "log": "OathDiagnostics-cases/2261233c7574a10f.log",
+    "log_sha256": "7cc8d733b202311a67d6e1f4bfc6039af1f905be6ee625a726c187f41d5091df"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testNewAvailabilityReportsNeverPersistUploadOrProduceRetentionLoss",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.366,
+    "log": "OathDiagnostics-cases/204d7b03d74f167a.log",
+    "log_sha256": "9cd1cf3b9bca818a5bbb30f6aa3806bcab0e0ed8d1595ad1919c4ce4927cebaa"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testPolkadotSendFailuresRetainSafeContextAndRedactWalletAndTransactionData",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.229,
+    "log": "OathDiagnostics-cases/ee768f36898315b3.log",
+    "log_sha256": "102f36f943160bbf04f7e283c7faf22007c1b76fd7f2bafcbae744178ec0636c"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testRelayTimeoutIsExcludedButOtherSDKAndRuntimeFailuresRemain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.191,
+    "log": "OathDiagnostics-cases/37483520978df78a.log",
+    "log_sha256": "03480a453bf8bac16187b47985e1c631872d07a6c112218075444434dc375ff9"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testReopenedOutboxRemovesOldAvailabilityReportsButSendsActualBug",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.168,
+    "log": "OathDiagnostics-cases/9f31fb2802363476.log",
+    "log_sha256": "f258b49c849deaebbd9954ab80a5eb41141ad779a5dd3145bb801b14751400eb"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testRPCNormalizationNeverPreservesArbitraryQuotedText",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.161,
+    "log": "OathDiagnostics-cases/6734f81a9e3acf12.log",
+    "log_sha256": "493b982a9b3554804eb6e49eca94a5dce12073599b7f44cc533cbab8a958abda"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testSerializedRPC429IsExcludedWithoutHidingOtherCodesOrRuntimeReports",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.179,
+    "log": "OathDiagnostics-cases/adeaf618e3464a10.log",
+    "log_sha256": "db257c6549ac5c76698f7c1ffac2e69ba8a88f79a6df61b73c9f546f12857cc1"
+  },
+  {
+    "selector": "OathDiagnosticsTests.AvailabilityPolicyTests/testValidationAuthenticationStorageAndRuntimeErrorsStayReportable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.17,
+    "log": "OathDiagnostics-cases/38ddcfae4fcdeeeb.log",
+    "log_sha256": "dca0e46e74f120251c3cc0bdb10c1472821271397061757e77ad807c77124278"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ClioHolderAbsenceTests/testOnlyExactScopedValidatedHolderAbsenceIsExpected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.105,
+    "log": "OathDiagnostics-cases/e44fc305060d0867.log",
+    "log_sha256": "4fcd4c016533138abe63fffb07adde0dbdaef081db6882325c16a1cc04fe7595"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticAttemptCorrelationTests/testAsyncAttemptCorrelatesProviderAndChildTaskBeforeFailure",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.12,
+    "log": "OathDiagnostics-cases/9944beec6e9b72e7.log",
+    "log_sha256": "080019a69c4a7f44282c34d711c17fa3908044e898b9328acde2c5c618e5ed8a"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticAttemptCorrelationTests/testConcurrentIndependentAttemptsDoNotShareAnIdentifier",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.117,
+    "log": "OathDiagnostics-cases/62ee7590e59ffa13.log",
+    "log_sha256": "65bb25fe0e1fb6acfa715952366810f549993c69a47bdea0e40227d40a17b7a7"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticAttemptCorrelationTests/testNestedAttemptsKeepExistingScopeWithoutChangingChain",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.118,
+    "log": "OathDiagnostics-cases/c82ba05fd0e5c145.log",
+    "log_sha256": "a857ee1c932f686d597f2e755b701f227dbededea7432c422951371a28f5f780"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticAttemptCorrelationTests/testOptionalAttemptPreservesAbsenceAndCancellationSemantics",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.111,
+    "log": "OathDiagnostics-cases/10cab8ced98dac25.log",
+    "log_sha256": "b2a38ca9d40b6266575d98bc345052387a935146820b692e54aab331c2083891"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticAttemptCorrelationTests/testSyncAttemptCreatesScopeAndRestoresCaller",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.126,
+    "log": "OathDiagnostics-cases/6c3f92317e02e181.log",
+    "log_sha256": "cc7942312dcb5ad0747172d45999a05f4bd73a3bcfab76e6602d46c8c7eac598"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticCancellationTests/testCocoaFailuresAndWrappedCancellationRemainReportable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.121,
+    "log": "OathDiagnostics-cases/e9134e9dd07aff50.log",
+    "log_sha256": "f09f84d18f52ffb35972e375153ed734d6673ec040f1769d55b06ea3cc46bb72"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticCancellationTests/testCocoaUserCancellationFromNativeCallbacksIsExpected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.126,
+    "log": "OathDiagnostics-cases/f215e84aeca052bd.log",
+    "log_sha256": "02b5f89ef28d8a95facaf754fc720647df4ff8173f8b3234fc5d927a0eb52be1"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticCancellationTests/testExplicitTaskAndNetworkCancellationOnly",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.129,
+    "log": "OathDiagnostics-cases/fff258618dda8fd3.log",
+    "log_sha256": "a0ffcfdbf5c779fffcef084f0dc29712690bd0625a66b53f31b3e15d16e35ad1"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticCancellationTests/testNativeAuthenticationCancellationAndFallbackAreNotFailures",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.216,
+    "log": "OathDiagnostics-cases/f430332ebbacc5be.log",
+    "log_sha256": "bb9737380a3bb4ed4ea1eda0458cdf90009918b107946f4ab416caaf6edb1de1"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticCancellationTests/testRealAuthenticationErrorsAndUnrelatedDomainsStayReportable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.312,
+    "log": "OathDiagnostics-cases/0f08339297acb466.log",
+    "log_sha256": "13c60afed6545f777cfd39bb07cebce16540c102e8cb92e9613a26960057a332"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testAsyncStepPreservesCallingActorAndNonSendableResult",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.346,
+    "log": "OathDiagnostics-cases/333f030ff29bfda2.log",
+    "log_sha256": "3d1528b57b5ca3c8dd1058d42394aa1c3c695282ef0d681f935b410cf7cd6eb5"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testConcurrentActionsKeepOriginsAndNestedStepsAfterNavigation",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.35,
+    "log": "OathDiagnostics-cases/f2c232afb22bedfe.log",
+    "log_sha256": "e1a0b0d21f28f9e64e58bb2f3b12cadbc78fbf990c4f752056a4e36cf24d35b2"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testEveryCataloguedSourceSurvivesButLookalikesAndPrivatePathsDoNot",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.471,
+    "log": "OathDiagnostics-cases/0753c0b30af6391e.log",
+    "log_sha256": "b9d10e36cb576aef089f9af7af1a71b5ce08cc97c35cfbec16970fab2cd0dc46"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testEveryEventHasHonestDefaultsAndOriginalError",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.147,
+    "log": "OathDiagnostics-cases/46340882655f419d.log",
+    "log_sha256": "fa1876161e3016717909c5174bac7b2410094118b95ab80e48604911b7bc4b6b"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testExplicitStageAndHistoricalTimeAreNotMisattributed",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.149,
+    "log": "OathDiagnostics-cases/f6e4af4613939de5.log",
+    "log_sha256": "f7e9d5ea3eaaf7a994e3131057f30945bb582d5943f74dbde0156567bcb24944"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testExtendedContextIsBoundedFilteredAndNoPrivateKeysAreAccepted",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.31,
+    "log": "OathDiagnostics-cases/6206f2e97f28028a.log",
+    "log_sha256": "e31185a668fcf8aecc80ee47cc52afc4ed5bb595a271e6248e92b789eb82050d"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testKnownScreenSourceSurvivesContextFilteringWithoutTrustingArbitraryText",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.352,
+    "log": "OathDiagnostics-cases/049dceeb9194c30a.log",
+    "log_sha256": "233ba8c4a536b7b968ad3f20ec8771b16aea54535094d2d7653fad703f0dd7af"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testNamedAttemptsRetainStepAndRestoreOuterScope",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.324,
+    "log": "OathDiagnostics-cases/db550139c21ab992.log",
+    "log_sha256": "b73280d378bfb3b7c63fa171969d8ce93373b6166d5586030c14c3cfda2f4ab4"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testPresentationRestoresParentAndIgnoresOutOfOrderDetach",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.305,
+    "log": "OathDiagnostics-cases/4f06b706746a42cb.log",
+    "log_sha256": "60abf3370949506e023a146ae9bc4d1ebc4a91331f95d23b5a53a7a252499fb5"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testRecordCapturesContextBeforeDetachedUpload",
+    "status": "skipped",
+    "exit_code": 0,
+    "duration_seconds": 0.273,
+    "log": "OathDiagnostics-cases/40cdf8a68416d100.log",
+    "log_sha256": "6d9d0dc770c4ffd7e273a39642550ca4acf57caf4d01084424a3179a08d217a7"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testThrowingAsyncStepRestoresCallerContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.327,
+    "log": "OathDiagnostics-cases/d3551ee6299d82c3.log",
+    "log_sha256": "ac50b985c55c95124f05a60e753a3ad811ec120ae3ce53f1dc7ff9a90f5fbafa"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticTraceTests/testTypedCauseChainSurvivesWithoutCredentialsOrUnboundedRecursion",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.224,
+    "log": "OathDiagnostics-cases/0b3c7c0a16801dff.log",
+    "log_sha256": "3311123efa03e48c489e26ca26c1bdcd8dca2582424a864582e7f689357eff15"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticWatchdogTests/testBackgroundTimeIsNotCountedAsForegroundStall",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.156,
+    "log": "OathDiagnostics-cases/72134395d19da8ad.log",
+    "log_sha256": "e707b274f915fa3ce462cc1c7dba798d7603cac70a688e99fefd5ad404ccd6af"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticWatchdogTests/testInactiveAndSubthresholdHeartbeatsDoNotReport",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.143,
+    "log": "OathDiagnostics-cases/b481edee9b91ab3b.log",
+    "log_sha256": "03cb88c8f5be845749f7b82e07940b21049c83a6b7be060218c84c2e8ddb92ff"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticWatchdogTests/testReportsOncePerStallAndRearmsAfterHeartbeat",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.166,
+    "log": "OathDiagnostics-cases/55fadb03f371a83f.log",
+    "log_sha256": "297e087763ba7acb0571cb9894676a58fa3394aa173c47e9680f984dfc669626"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticWatchdogTests/testStartFromMainActorReportsOnBackgroundQueueEvenWhenMainActorIsBlocked",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.203,
+    "log": "OathDiagnostics-cases/991ea3b031ce8000.log",
+    "log_sha256": "7971308d33a85a783600a2e2a1901f8ec3fa3a39e272560b6f23e7e4f7b5d3ba"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticWatchdogTests/testStopAndRestartRearmsBackgroundCallback",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.329,
+    "log": "OathDiagnostics-cases/1594446f36f54b6c.log",
+    "log_sha256": "ee7952babe958c460523b3e93d2dcf6762298bab01bd7410e642c585e01ac49e"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticWatchdogTests/testTimerDoesNotRetainWatchdog",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.176,
+    "log": "OathDiagnostics-cases/85f515660bb2a43f.log",
+    "log_sha256": "449b0df03a352ab94cb1e62c20681ce2bae8298867683a468c3b27c27ed7a1cf"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testCocoaFileErrorsRedactIdentifiersAndLocalizedQuotedNames",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.193,
+    "log": "OathDiagnostics-cases/f0705ab800986678.log",
+    "log_sha256": "abab04eea3c61006a84b8710d5a37c74e2d6096b46dc3cf8989bf96c509e3d94"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testCorruptQueueRecoversWithoutLosingNewReport",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.174,
+    "log": "OathDiagnostics-cases/cf27c4a54c169ca1.log",
+    "log_sha256": "5a636284756aca26a38e00ba6489d174be5f039807d4b248360fcf0e192c1ae2"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testDuplicateEnqueueDoesNotClaimDurabilityAfterDiskFailure",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.152,
+    "log": "OathDiagnostics-cases/460d1587000a9cab.log",
+    "log_sha256": "ddac7beb220001f6d1d39f465d2f0d57936c8b7baaf7e8f125355947039c32ad"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testEnqueueDuringUploadDoesNotLoseNewEvents",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.186,
+    "log": "OathDiagnostics-cases/cd88f42a080b477b.log",
+    "log_sha256": "b62667b52568760ee233780b09669afb09fafacbe1c27e6fccd553792c600811"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testFilecoinAddressesAreRedactedFromProviderErrors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.136,
+    "log": "OathDiagnostics-cases/7cde4f6a7ad5d14f.log",
+    "log_sha256": "cf780d60a388ff8f6f2dfbb81b68830b89f01f298d153743c3807746db323a90"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testIdempotentLocalEnqueueAndRetentionBound",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.167,
+    "log": "OathDiagnostics-cases/ab004f96b6927bf0.log",
+    "log_sha256": "1df2d6c1c15a96a279545a6d83ca057566743d5d8941028d321618d938fc2773"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testLargeRuntimeReportStaysParseableAndKeepsAttributedStack",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 6.414,
+    "log": "OathDiagnostics-cases/74b77d6bcdbde166.log",
+    "log_sha256": "a0d1e0b230727491d1e77d7261cbd79b0b61c67f71843720849fc86730303d9c"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testLongPayloadIsExplicitlyTruncated",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.156,
+    "log": "OathDiagnostics-cases/435cae44b2f8877a.log",
+    "log_sha256": "cb25ff80f1cabcab390df978449ae53c9e59245af1de9ad8da76be817961f588"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testNewErrorsRespectBackoffUntilExplicitForegroundRetry",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.143,
+    "log": "OathDiagnostics-cases/4330dfafce0b0653.log",
+    "log_sha256": "d3b994892771018a00d4d4a2a795993dd047fb994c929ffdb1740537564e4c85"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testNSErrorWithoutMessageNeverFallsBackToArbitraryUserInfo",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.128,
+    "log": "OathDiagnostics-cases/4646a8c9ba1a3f14.log",
+    "log_sha256": "98b071781c3f0b5609e0b5fff58c0e7056170b873d32136446795621617d6e44"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testPreservesDomainCodeUnderlyingAndRejectsUnknownContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.128,
+    "log": "OathDiagnostics-cases/e731c0c9a3a32554.log",
+    "log_sha256": "24ccef3c7b495aba500b9bf005e0975d7defad651e43dbf14cd00fa29c06e6d2"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testQueueExpiresEventsEvenWithoutRelaunch",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.117,
+    "log": "OathDiagnostics-cases/6fa857f38fd509bb.log",
+    "log_sha256": "38dee63a9478857e04439db3394aab3ce1a3785dd3a9c2496f83a719bd11d412"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testQueueRoundTripsAndRetainsFailedUpload",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.11,
+    "log": "OathDiagnostics-cases/a164d2d3ff17b122.log",
+    "log_sha256": "8b494d839dfd0c31b4be8d713d4a4003b45713b1612be8827acee559cbfb60b8"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testRecoveryPhrasesAreRedactedAcrossSupportedLanguagesWithoutHidingNormalErrors",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.117,
+    "log": "OathDiagnostics-cases/3a2110d659b1d0c1.log",
+    "log_sha256": "ae6859b7b49e0877aa9870234eebe1f32e06c9d036bad73d65ef63e2ea1bb8b8"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testRedactsSecretsURLsMnemonicsAndUntrustedEchoes",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.181,
+    "log": "OathDiagnostics-cases/f50d40ec63361509.log",
+    "log_sha256": "ab4d4dd27f00f8372c927a6424b73f55ecbb08ef1c6ae9f2382da6409616d83e"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testRPCResponseCapturesOriginalErrorBeforeProviderFlattensIt",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.73,
+    "log": "OathDiagnostics-cases/64fb262e1c17d2da.log",
+    "log_sha256": "29fbea8a1436a0400cbbbe33eb72fce60979c1268c03a6c6877a5732f45173f4"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testRuntimeReportAllowsSymbolicationButRejectsPrivateFields",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.129,
+    "log": "OathDiagnostics-cases/576f721fd1e8f239.log",
+    "log_sha256": "e41ae8496295924ba5521f3ea0e4a3186e018be72a9251b6b5348997d49addbd"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testSchedulingFlushReturnsWithAnUnfinishedDelivery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.314,
+    "log": "OathDiagnostics-cases/8ff8d7b2d77db1af.log",
+    "log_sha256": "f86f572ac87a88f67f7cf537f6faa2fb7b13b202b2bbe885308a5ce62c994a23"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testShortAlchemyCredentialsAreRemovedFromErrorsAndContext",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.171,
+    "log": "OathDiagnostics-cases/b863b8bd514e9c37.log",
+    "log_sha256": "b56d82ba02e18ef0add9555ffe75ea825bb61c1edc6f1e8a2fe25fbe99e8e38c"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testTransportContextNeverCopiesCredentialsAddressesOrQuery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.25,
+    "log": "OathDiagnostics-cases/ef50dd33c5682a4b.log",
+    "log_sha256": "b40935d09bf2b60ca0f7bc85cb656689868a6c07e88fa1de8d7e76ee5940b6a5"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testWalletConnectPayloadIsEntirelyRedacted",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.283,
+    "log": "OathDiagnostics-cases/c64fc8a376574378.log",
+    "log_sha256": "7f981b44de04d6f29c9c6e0d0596a944fa98121580a0753d199c6fdeb6867ac7"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testWireSchemaUsesExpectedAcronymsAndNoUserInfo",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.221,
+    "log": "OathDiagnostics-cases/828bc4a3e78a709c.log",
+    "log_sha256": "5eff1b3ccc0ead92da155915b5acfdba8836080bb6216e35c0a6346659f3127b"
+  },
+  {
+    "selector": "OathDiagnosticsTests.DiagnosticsTests/testWorstCaseMultibyteEscapedEventFitsServerLimit",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.534,
+    "log": "OathDiagnostics-cases/7002f3d35448d33f.log",
+    "log_sha256": "82360a67d2a76dc7d246451d10aaccf788e98306bdbd1ba35dacbc3bbb72694f"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMDuplicateDiagnosticTests/testHistoricalAndUnresolvedDuplicatesRemainReportable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.139,
+    "log": "OathDiagnostics-cases/895e331b7c64eb56.log",
+    "log_sha256": "142b9f3cff31db96ee51256bc7dc2da0711a33b718adfe9adfa684dd5bdca9c1"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMDuplicateDiagnosticTests/testOnlyVerifiedAttemptScopeAllowsExactDuplicateControlFlow",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.089,
+    "log": "OathDiagnostics-cases/19748ccb57a3fd70.log",
+    "log_sha256": "0a1c02061e5f6d3f8e3f9a41142af71a1f2c3e37f255f4717bf0c9953ef2c51f"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMDuplicateDiagnosticTests/testWrongChainRequestResponseOrEnvelopeIsNotSilenced",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.087,
+    "log": "OathDiagnostics-cases/98c979558c5bfb46.log",
+    "log_sha256": "fb7ede97c60f2db50b18922ab43529cc634d59a4bb5dfb48f33a733b36969238"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMMetadataDiagnosticTests/testArcOptionalLabelsExcludeOnlyExactRevertsAtPinnedOrLatestBlock",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.072,
+    "log": "OathDiagnostics-cases/050b4cf9cb55ee7c.log",
+    "log_sha256": "e5ee7b7ee1ae5378cb47fd729058dc165f1342c184ca3be6b7443f55a66989fd"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMMetadataDiagnosticTests/testBatchFailureAttributionUsesReplyIDAndOnlyPublicConstantLabels",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.075,
+    "log": "OathDiagnostics-cases/68019fce8b8da328.log",
+    "log_sha256": "65145467b7b147de31fe0f8893738a2ff5e70b67649f8a3c9274ec07dd153067"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMMetadataDiagnosticTests/testOptionalProbeExclusionRequiresExactReadEnvelopeAndSelector",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.064,
+    "log": "OathDiagnostics-cases/a0e273365886203f.log",
+    "log_sha256": "f2e38ef8faa68c9e2fe04d17cc39620b16bffd70fb8ccbf62dcaa5eafe182386"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMMetadataDiagnosticTests/testRegistryDiagnosticContextDoesNotContainContractOrQuery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.063,
+    "log": "OathDiagnostics-cases/ceeeb2d3d11f7d15.log",
+    "log_sha256": "c1031d1698360398588b916003fd0384f2c3392ed11f995496754bb40865720e"
+  },
+  {
+    "selector": "OathDiagnosticsTests.EVMMetadataDiagnosticTests/testStringRequestIDsAndTotalSupplyProbeAreMatchedExactly",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.065,
+    "log": "OathDiagnostics-cases/d8b38df6f95d2833.log",
+    "log_sha256": "da1e0d22bf557a370db3c4ae9d65591bcb6dcf4b774cdcc4e35cf744136fa04f"
+  },
+  {
+    "selector": "OathDiagnosticsTests.HistoryAvailabilityTests/testExactTypedHistoryAvailabilityPreservesOtherFailuresAndFatalReports",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.113,
+    "log": "OathDiagnostics-cases/05d35a649c2176bf.log",
+    "log_sha256": "1bf7abe67a3f1438c0d38d1fb28bafc5df11a8ff98227e9250b91bf8a3d26cc9"
+  },
+  {
+    "selector": "OathDiagnosticsTests.HistoryAvailabilityTests/testLegacyStellarLagWithoutValidatedLedgerRemainsReportable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.418,
+    "log": "OathDiagnostics-cases/f6bc8135cfdbe89b.log",
+    "log_sha256": "46aed05ff723e185b3eaa34cd47c775d09c2343d7b7b3f278af2351827ee6b97"
+  },
+  {
+    "selector": "OathDiagnosticsTests.HistoryAvailabilityTests/testProviderEnvelopeRequiresExactChainHostCodeAndMessage",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.638,
+    "log": "OathDiagnostics-cases/185f64ffe15dfb34.log",
+    "log_sha256": "a825179adb02a9b21628ef67144488334a5b98b57d84def01a1c63e9b7d86227"
+  },
+  {
+    "selector": "OathDiagnosticsTests.HistoryAvailabilityTests/testSavedOutboxDiscardsAvailabilityButUploadsUnprovenIncompleteHistory",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.557,
+    "log": "OathDiagnostics-cases/6c92828debcb3ae8.log",
+    "log_sha256": "7971aceb2aa1351af8397a33b90ff59eecea1143b99e96ce560bfe651dca6e0e"
+  },
+  {
+    "selector": "OathDiagnosticsTests.IoTeXDiagnosticTests/testNativeAndEVMAccountsAreRemovedFromProviderMessages",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.686,
+    "log": "OathDiagnostics-cases/7e21e66083f61155.log",
+    "log_sha256": "66d09b7142ccbd78f7ea3e6f9acd9131e560b2fd1b9d81ddf597ba8b1786cb70"
+  },
+  {
+    "selector": "OathDiagnosticsTests.IoTeXDiagnosticTests/testProviderContextContainsNoKeyOrAccountQuery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.463,
+    "log": "OathDiagnostics-cases/bc7478afe2985b49.log",
+    "log_sha256": "3cae4bf05a6b76813bccdb0b06e117c17ed392c435fcdeafd54dd4a28291705f"
+  },
+  {
+    "selector": "OathDiagnosticsTests.IoTeXDiagnosticTests/testSendFailureStagesRetainSafeDiagnostics",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.428,
+    "log": "OathDiagnostics-cases/cfde73a1ba074659.log",
+    "log_sha256": "48ad02de8a733483abbcd472e431c9480f69e6d0b36dc991e034863fe1d7a7a4"
+  },
+  {
+    "selector": "OathDiagnosticsTests.MarketAbsenceTests/testCatalogFailuresProxyErrorsAndMalformedBodiesAreNotExcluded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.153,
+    "log": "OathDiagnostics-cases/575cc0121e3f72bf.log",
+    "log_sha256": "edcf1ec6cffa418aade51127f9e3a2a08faceb3a04c7fbb337ae4075308e5daf"
+  },
+  {
+    "selector": "OathDiagnosticsTests.MarketAbsenceTests/testOnlyExactReadOnlyMissingListingEnvelopesAreExcluded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.146,
+    "log": "OathDiagnostics-cases/5c54134e3cedd860.log",
+    "log_sha256": "ea7c3602700c76a633d0ed4f1620b0048667c9181aaef91d3c02ffc3172a8a99"
+  },
+  {
+    "selector": "OathDiagnosticsTests.MarketAbsenceTests/testStaleQuoteRequiresExactEnvelopeAndAnonymousSpotRead",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.128,
+    "log": "OathDiagnostics-cases/af8124746ce1345c.log",
+    "log_sha256": "0a4377b6042c4905c4d1f28db3b96e29b2763edd250c0c3729931ef627d99ea9"
+  },
+  {
+    "selector": "OathDiagnosticsTests.NearMetadataDiagnosticTests/testOnlyPinnedOptionalMetadataMethodAbsenceIsExcluded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.089,
+    "log": "OathDiagnostics-cases/bcb6fe9c6909625e.log",
+    "log_sha256": "3a765489f6b79fb05000c7f881649c764120857444ffd7134b173880f2866ca9"
+  },
+  {
+    "selector": "OathDiagnosticsTests.NearSendDiagnosticTests/testContractPanicAndArbitraryProviderTextCannotExposeInputs",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.081,
+    "log": "OathDiagnostics-cases/dae37d6744f2f17b.log",
+    "log_sha256": "0607a6cd0a96f817e9de6d4e03c451235a10fbfcf7affcffc3ed639143a14ab7"
+  },
+  {
+    "selector": "OathDiagnosticsTests.NearSendDiagnosticTests/testOptionalStorageProbeRequiresExactMethodErrorBlockAndEnvelope",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.168,
+    "log": "OathDiagnostics-cases/781cbd3e3ac6537c.log",
+    "log_sha256": "25af84e51cdf7f42dd34dd50bfc8bab07ae21447974d6b62567fba388ce5566a"
+  },
+  {
+    "selector": "OathDiagnosticsTests.NearSendDiagnosticTests/testPendingStateNeverHidesTimeoutInternalOrOtherMethodFailures",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.187,
+    "log": "OathDiagnostics-cases/7347e04d8a05e843.log",
+    "log_sha256": "cdd4a65199a3c62d82039f0a293d1fc95c386dd97f05152ad5521f970490b6a8"
+  },
+  {
+    "selector": "OathDiagnosticsTests.PolkadotImportedDiagnosticTests/testAcknowledgementRequiresExactScopedHashAndCorrelatedEnvelope",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.195,
+    "log": "OathDiagnostics-cases/b15c87ec79fcae56.log",
+    "log_sha256": "a1b9f86fdb003095a817a84b1f5ca911e5626c7165b89b86db0f3398aea795c5"
+  },
+  {
+    "selector": "OathDiagnosticsTests.PublicPolicyDiagnosticTests/testAbsentAptosPolicyOnlyExcludedForExactScopedPublicRead",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.122,
+    "log": "OathDiagnostics-cases/da417fbdd4cae317.log",
+    "log_sha256": "e3f2d5f5e7be18b97bc94b4b7eff7abb014d1610c40d19011890d7603c02f2f6"
+  },
+  {
+    "selector": "OathDiagnosticsTests.PublicPolicyDiagnosticTests/testXRPPolicyAbsenceRequiresMatchingValidatedAccount",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.098,
+    "log": "OathDiagnostics-cases/ffb54d8414f44419.log",
+    "log_sha256": "2a0de68d2a34a379cb13a59cb9d16a10c6fc79872b2e334014d75f628bfd8a28"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ReviewedUploadPolicyTests/testEveryReviewedRuleAndUnrelatedFailures",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.812,
+    "log": "OathDiagnostics-cases/2c10a7671c34589d.log",
+    "log_sha256": "71bc9d83dd6d1990370bb6d67b3c3fcbbe0fed2556400b5ad95119d91a41928c"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ReviewedUploadPolicyTests/testNewEventsAreConsumedWithoutDiskUploadOrLossReport",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.186,
+    "log": "OathDiagnostics-cases/13778ee9f9516733.log",
+    "log_sha256": "150f55927b9618bf503546c30ec385150f0dcc75af4bcb2208377d92b8a673cb"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ReviewedUploadPolicyTests/testReopenedQueueFiltersReviewedEventsAndRetainsUnrelatedReport",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.205,
+    "log": "OathDiagnostics-cases/3024d93f7b594e49.log",
+    "log_sha256": "78616a38d8ef20a103681175ef3fe0d491759353d4d511b32e42c9a98b948199"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testAdversarialDepthRemainsBoundedAndValidJSON",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.258,
+    "log": "OathDiagnostics-cases/15b0500287b9e710.log",
+    "log_sha256": "7d2fae1a33abf78f197f8b5b7932d1280c8836ca2dbfad43ecbf615fac9084b5"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testDeepFirstBranchCannotExhaustOtherStackNodeBudget",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.517,
+    "log": "OathDiagnostics-cases/c6b1cce3e6bb384f.log",
+    "log_sha256": "320750df61ef112f1f69acdd94250032dcb8f78d53f6b40f430c59e0ebb2956a"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testLargeAttributedStackKeepsItsAttributionWhenCompacted",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.817,
+    "log": "OathDiagnostics-cases/78325634c1f1f181.log",
+    "log_sha256": "9a4041387f1fc347d530d73ffdf56c6db2293b38f7af280fc04338b974971169"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testLargeFirstStackCannotEraseOtherAttributedStacks",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.708,
+    "log": "OathDiagnostics-cases/300432100d2da9a8.log",
+    "log_sha256": "ce385d7f8c7d0f1072939ea6f28a7db3e501dd2d7f66f73b468622df1a09d733"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testLargeStackTreeCannotConsumeDiagnosticMetadataBudget",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 1.226,
+    "log": "OathDiagnostics-cases/0fce81d23038df4e.log",
+    "log_sha256": "0dc255f7da2983f66a70ee75f4c2f383169adbfcb1ba4a925dfd856c7bbca1ce"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testNestedMetricKitStackKeepsAppFramesBeyondSystemAbortFrames",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.132,
+    "log": "OathDiagnostics-cases/6063c63557b967b0.log",
+    "log_sha256": "b173648bb907992f715d19e4432bfdfa684cc7ca8890284732d0c3b6a7b3099a"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testRefilteringPreservesTruncationAndStillRejectsPrivateFields",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.1,
+    "log": "OathDiagnostics-cases/82c603fa45d5fab5.log",
+    "log_sha256": "aca9691d13c5cb97fafeb6867e0f9de3d21c5136c435b6f302975f787850cc8a"
+  },
+  {
+    "selector": "OathDiagnosticsTests.RuntimeStackRegressionTests/testUnattributedThreadsDoNotStealAttributedStackBudget",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.171,
+    "log": "OathDiagnostics-cases/8eb675ba61c461b6.log",
+    "log_sha256": "5b7d5f98329b5c3977a8d749772f9cd5e30ce9828e802dbb17ffbeaded9c21de"
+  },
+  {
+    "selector": "OathDiagnosticsTests.SeiDiagnosticTests/testProviderContextKeepsChainWithoutCredentialsOrAddresses",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.097,
+    "log": "OathDiagnostics-cases/4003879fa313e37e.log",
+    "log_sha256": "5445092b30179568aaadb1070da2cdfe444f99a7507b47f90c02faee3f0d55af"
+  },
+  {
+    "selector": "OathDiagnosticsTests.SeiDiagnosticTests/testSendFailureStagesRetainSafeDiagnostics",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.123,
+    "log": "OathDiagnostics-cases/af4d2075d8a711e3.log",
+    "log_sha256": "5fe9f4c740f5c58b1fed7a4b92e61af19ce98e2eda50f4946d8bf21cdd0459de"
+  },
+  {
+    "selector": "OathDiagnosticsTests.SolanaDiagnosticTests/testRPCContextDoesNotCopyPayloadSignatureOrKeys",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.1,
+    "log": "OathDiagnostics-cases/a3ed1c5d0e00c5ac.log",
+    "log_sha256": "1e5dc19ec5df34394b7c79e52690ddae767681a0ad44d6ddf1dfa8730e1777aa"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ThorchainDiagnosticTests/testProviderContextAndErrorEchoesDoNotExposePublicAccounts",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.093,
+    "log": "OathDiagnostics-cases/1564fb935ec280ea.log",
+    "log_sha256": "68c1c535019fbe9e3891911815cf74e12841de3d214257212402e40dbeccb04a"
+  },
+  {
+    "selector": "OathDiagnosticsTests.TonSendDiagnosticTests/testOnlyMissingTraceIsExcluded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.078,
+    "log": "OathDiagnostics-cases/3d07ac1837f7f623.log",
+    "log_sha256": "f93765d75e174ebd4a91e3bef5e45f5d0ac6f04dfd8933d73f7d49cd7114c46d"
+  },
+  {
+    "selector": "OathDiagnosticsTests.WalletConnectAttestationTests/testAmbiguousStoredHTTP404RemainsReportable",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.097,
+    "log": "OathDiagnostics-cases/20b270bc7b36ed82.log",
+    "log_sha256": "f7bffdc42c43842b2a9c452e0b9fdbe06d91d6953e543ac1b1f2bda2f158069f"
+  },
+  {
+    "selector": "OathDiagnosticsTests.WalletConnectAttestationTests/testOnlyScopedWellFormedAttestationAbsenceIsExcluded",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.072,
+    "log": "OathDiagnostics-cases/ec36a0539ef2ac73.log",
+    "log_sha256": "ad5c8dd33b7b0d7041e3bbdb81c2471c2d6d37037a6d9d5ec1db2107427154a0"
+  },
+  {
+    "selector": "OathDiagnosticsTests.XrplPendingDiagnosticTests/testOnlyExactPendingTransactionAbsenceIsExpected",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.071,
+    "log": "OathDiagnostics-cases/a05677d618704136.log",
+    "log_sha256": "2637bb879af4a04fbbf07fd6972d8d73a8b5bf84b2b523ca394661f8b9d09fee"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ZeroGDiagnosticTests/testProviderContextExcludesCredentialsAndAccountQuery",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.069,
+    "log": "OathDiagnostics-cases/ba32a1a2fad9ad80.log",
+    "log_sha256": "a7f8f39ba3513d21ae62a9f0701a3b17bd1812f688d55f8a1836436e9c047927"
+  },
+  {
+    "selector": "OathDiagnosticsTests.ZeroGDiagnosticTests/testSendFailureStagesRetainSafeDiagnostics",
+    "status": "passed",
+    "exit_code": 0,
+    "duration_seconds": 0.082,
+    "log": "OathDiagnostics-cases/94151be043b1f0dc.log",
+    "log_sha256": "be151e0f4c866393695cca63292a9e2072518ce153a4032dd9c2c68be8ba2e9d"
+  }
+]

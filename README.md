@@ -20,7 +20,14 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest dependency finding: [session watcher and callback lifetimes](findings/OW-2026-021.md).
+Latest dependency finding: [queued cleanup and store timer lifetime](findings/OW-2026-022.md).
+One controlled cleanup crash and one timer assertion reproduce before repair;
+six controls pass and all eight cases pass after. SDK checks pass 165/one skip
+and diagnostics pass 118/two skips. [Cleanup review](review/CLEANUP-LIFETIME-REVIEW.md)
+discloses the queue test seam, preserves an initial fixture error, and reopens
+three authentication input-review gaps without changing prior evidence.
+
+Earlier dependency finding: [session watcher and callback lifetimes](findings/OW-2026-021.md).
 Four isolated crashes and two duplicate-timer assertions reproduce before;
 four controls pass and all ten cases pass after. SDK checks pass 157/one skip,
 diagnostics pass 118/two skips and unsigned iOS Release compilation passes.
@@ -107,6 +114,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 python3 scripts/checkout.py
 python3 scripts/request-lifetime.py .work/source --output .work/request-lifetime --scratch .work/request-build
 python3 scripts/watcher-lifetime.py .work/source --output .work/watcher-lifetime --scratch .work/watcher-build
+python3 scripts/cleanup-lifetime.py .work/source --output .work/cleanup-lifetime --scratch .work/cleanup-build
 python3 scripts/caip-boundary.py .work/source --output .work/caip-boundary --scratch .work/caip-build
 python3 scripts/namespace-boundary.py .work/source --output .work/namespace-boundary --scratch .work/namespace-boundary-build
 python3 scripts/session-expiry.py .work/source --output .work/session-expiry --scratch .work/session-expiry-build
