@@ -1,0 +1,43 @@
+[
+  {
+    "name": "check-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "build/local/src/check/check-0.15.2",
+      "-B",
+      "build/native-check",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_INSTALL_PREFIX=<PREPARED_CORE>/build/local",
+      "switch_unused=OFF"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 11.134
+  },
+  {
+    "name": "check-build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-check",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.354
+  },
+  {
+    "name": "check-install",
+    "command": [
+      "cmake",
+      "--install",
+      "build/native-check"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.04
+  }
+]

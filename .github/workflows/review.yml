@@ -63,7 +63,12 @@ jobs:
       - name: Preserve unfiltered Go dependency advisories
         if: always()
         run: |
+          set +e
           .work/tools/osv-scanner scan source --lockfile .work/source/Tools/AezeedBridge/go.mod --no-call-analysis=go --format json --output-file evidence/ci/osv-go.json > evidence/ci/osv-go.log 2>&1
+          result=$?
+          set -e
+          printf '%s\n' "$result" > evidence/ci/osv-go-exit-code.txt
+          test "$result" -le 1
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: scanner-evidence, path: evidence/ci, retention-days: 90}
@@ -190,7 +195,7 @@ jobs:
         if: always()
         with: {name: relay-envelope-evidence, path: evidence/ci, retention-days: 90}
   aezeed-source:
-    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
+    if: inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
     runs-on: xcode-27
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
@@ -245,6 +250,28 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: aezeed-source-evidence, path: evidence/ci, retention-days: 90}
+  advisory-gate:
+    if: inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
+    needs: [scanners, aezeed-source]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: python3 scripts/checkout.py
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with: {name: scanner-evidence, path: evidence/ci/raw-scanners}
+      - uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0
+        with: {name: aezeed-source-evidence, path: evidence/ci/aezeed-source}
+      - name: Gate raw scan against this run's exact selected-source inventory
+        run: |
+          reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
+          python3 scripts/advisory_gate.py .work/source evidence/ci/raw-scanners/osv-go.json evidence/ci/aezeed-source/aezeed-selected-sources.json evidence/ci/raw-scanners/osv-go-exit-code.txt evidence/ci/advisory-gate.json --commit "$reviewed"
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: advisory-gate-evidence, path: evidence/ci/advisory-gate.json, retention-days: 90}
   release-build:
     if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages' && inputs.validation_kind != 'boundaries'
     runs-on: xcode-27

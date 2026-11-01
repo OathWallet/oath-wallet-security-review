@@ -90,8 +90,10 @@ directories. The audit-only GitHub workflow runs both stages without secrets.
 
 ## Remaining work
 
-Full native dependency compilation, rebuilt Apple framework integration,
-application compatibility and generic iOS build verification remain outstanding.
+At this snapshot, full native dependency compilation, rebuilt Apple framework
+integration, application compatibility and generic iOS build verification
+remained outstanding. [Progress 16](CORE-NATIVE-AND-EXTENDED-KEY.md) subsequently
+completed native compilation and suites; Apple integration is still outstanding.
 The pinned upstream build requires generated protobuf/Rust interfaces and Rust
 libraries, not just the patched files. Broader secret lifetime, transient entropy
 buffers, default copy/move behavior, other curves and transitive cryptographic

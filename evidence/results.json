@@ -4450,5 +4450,89 @@
     ],
     "original_log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182",
     "evidence_path": "evidence/core-source-repairs/constructors/after/result.json"
+  },
+  {
+    "check": "upstream-native",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "status": "passed",
+    "runtime_scope": "native-macOS",
+    "cpp": {
+      "tests": 2363,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "time": "26.711s"
+    },
+    "c_checks": 113,
+    "c_failures": 0,
+    "c_errors": 0,
+    "binary_sha256": {
+      "cpp": "0d11ea9ca03275c8cbaa4310cf83c5bedfba06dc11bc7a1b33017ab592c0fde1",
+      "trezor": "8170752175e7cfc73623e95e21c6d0264b2d1706730341d345a3c2f1728efc1f"
+    },
+    "patch_sha256": "33c5b24c74d0251121f6b4678106c5cc7aa7efed4a6adc3db269e2e82484746f",
+    "log_sha256": "090be1aebe7d5642765cc920f724a2811ff05d6a935a026edb2a8abbaec3f042",
+    "limitations": [
+      "Prepared native build, not an Apple framework or whole-application test.",
+      "Passing suites do not establish manual source coverage or historical binary equivalence."
+    ],
+    "evidence_path": "evidence/core-native/native-repro/result.json",
+    "original_log_sha256": "e9eab4c457f79d657430c805fab012d78ad59bb9d4f535d90d507fb558c75c14"
+  },
+  {
+    "check": "upstream-extended-key-kind",
+    "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "status": "passed",
+    "cases": [
+      {
+        "stage": "before",
+        "exit_code": 1,
+        "timed_out": false,
+        "summary": "EXTENDED_KEY_CHECKS total=94 public_rejected=9 failures=21",
+        "source_sha256": "1a916b5b4a9018e9924b7b8c2406afae26f678acbd36f9d5fcd493e2697ef7fd",
+        "expected_outcome_observed": true
+      },
+      {
+        "stage": "after",
+        "exit_code": 0,
+        "timed_out": false,
+        "summary": "EXTENDED_KEY_CHECKS total=94 public_rejected=30 failures=0",
+        "source_sha256": "fa4a7cd206d2692d0a0c4ee681af257e98bd5170aed7f9918624a50a287282a1",
+        "expected_outcome_observed": true
+      }
+    ],
+    "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "duration_seconds": 32.069,
+    "fixture_sha256": "685c95fe1f71c4714f980177c4acd9e5d73b1c0e59c3bf2f38e0891d6c6fdbfc",
+    "patch_sha256": "ab720d18076ab12e640d2b2ef88a5e5e9ab60598712efa287c5b1118ae0f1ad5",
+    "base_patch_sha256": "33c5b24c74d0251121f6b4678106c5cc7aa7efed4a6adc3db269e2e82484746f",
+    "library_hashes": {
+      "build/native-core/libTrustWalletCore.a": "285cb82ff07a729d194ec0ada1e5ab715e4b4fcaf88786f2de63ce6f966c70dd",
+      "build/native-core/trezor-crypto/libTrezorCrypto.a": "f399c37a88447ec3797189cf08953864f89943a189c2f2f5453d9f649ab0af3a",
+      "rust/target/release/libwallet_core_rs.a": "5bca602e07411f1f9da9ab45cd061ea6784219c7d01a41a24043fd39fbd4f769",
+      "build/native-core/libprotobuf.a": "bfb266ad9ee8620b592d97e53cd20536dd9ac9f0a88218855a5f1a6c8d6e6dd3"
+    },
+    "log_sha256": "9a2be6e94e3eff44c0cc8737f3b9ef77d55abb392b8e4c13e58d21ce88c41c44",
+    "limitations": [
+      "Full production HDWallet translation units; complete native dependencies, no substituted implementations.",
+      "Native host test, not incorporated into Apple frameworks or the application.",
+      "No Oath application call to this C++ API established.",
+      "No App Store or historical binary equivalence proof."
+    ],
+    "full_upstream_suite": {
+      "tests": 2363,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "time": "26.737s",
+      "exit_code": 0,
+      "timed_out": false,
+      "binary_sha256": "c29f5ea02da49bc7e2c1d0599170065434f14e68a3bdae07b225101d6d96cfbb",
+      "report_sha256": "a81ff959a477239a2b2cbcecf5087ca362c4d0bac6aeafc1b7fa90c510d7d7fa"
+    },
+    "evidence_path": "evidence/core-native/extended-repro-full/result.json",
+    "original_log_sha256": "52db096b5d23a92243e153f6ecb923e74d37e089c1f310ef0289f2c7f2696b86"
   }
 ]

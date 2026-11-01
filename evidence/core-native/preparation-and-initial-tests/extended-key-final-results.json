@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "before",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O1",
+      "-I",
+      "src",
+      "-I",
+      "include",
+      "-I",
+      "trezor-crypto/include",
+      "<AUDIT>/tests/UpstreamExtendedKeyKind.cpp",
+      "build/native-core/libTrustWalletCore.a",
+      "build/native-core/trezor-crypto/libTrezorCrypto.a",
+      "rust/target/release/libwallet_core_rs.a",
+      "build/native-core/libprotobuf.a",
+      "-o",
+      "<NATIVE_OUTPUT>/extended-key-before"
+    ],
+    "exit_code": 1,
+    "expected_outcome_observed": true,
+    "summary": "EXTENDED_KEY_CHECKS total=94 public_rejected=9 failures=21",
+    "duration_seconds": 0.39,
+    "fixture_sha256": "685c95fe1f71c4714f980177c4acd9e5d73b1c0e59c3bf2f38e0891d6c6fdbfc",
+    "log_sha256": "d7d7b73fd8cb00b8aed02adf6f8b6a0b45bb6187eb7adac5bcd5a0054e3fedc8"
+  },
+  {
+    "stage": "after",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O1",
+      "-I",
+      "src",
+      "-I",
+      "include",
+      "-I",
+      "trezor-crypto/include",
+      "<AUDIT>/tests/UpstreamExtendedKeyKind.cpp",
+      "<NATIVE_OUTPUT>/fixed-extended/HDWallet.o",
+      "build/native-core/libTrustWalletCore.a",
+      "build/native-core/trezor-crypto/libTrezorCrypto.a",
+      "rust/target/release/libwallet_core_rs.a",
+      "build/native-core/libprotobuf.a",
+      "-o",
+      "<NATIVE_OUTPUT>/extended-key-after"
+    ],
+    "exit_code": 0,
+    "expected_outcome_observed": true,
+    "summary": "EXTENDED_KEY_CHECKS total=94 public_rejected=30 failures=0",
+    "duration_seconds": 0.585,
+    "fixture_sha256": "685c95fe1f71c4714f980177c4acd9e5d73b1c0e59c3bf2f38e0891d6c6fdbfc",
+    "log_sha256": "52db096b5d23a92243e153f6ecb923e74d37e089c1f310ef0289f2c7f2696b86"
+  }
+]

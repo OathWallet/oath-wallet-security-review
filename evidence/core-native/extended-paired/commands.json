@@ -1,0 +1,136 @@
+[
+  {
+    "name": "before-compile",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O2",
+      "-DNDEBUG",
+      "-I",
+      "<PREPARED_CORE>/src",
+      "-I",
+      "<PREPARED_CORE>/include",
+      "-I",
+      "<PREPARED_CORE>/trezor-crypto/include",
+      "-I",
+      "/opt/homebrew/opt/boost/include",
+      "-I",
+      "<PREPARED_CORE>/build/local/include",
+      "-c",
+      "<TEMP>/T/oath-extended-key-th7yledd/src/HDWallet.cpp",
+      "-o",
+      "<TEMP>/T/oath-extended-key-th7yledd/before.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "before-link",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O2",
+      "-DNDEBUG",
+      "-I",
+      "<PREPARED_CORE>/src",
+      "-I",
+      "<PREPARED_CORE>/include",
+      "-I",
+      "<PREPARED_CORE>/trezor-crypto/include",
+      "-I",
+      "/opt/homebrew/opt/boost/include",
+      "-I",
+      "<PREPARED_CORE>/build/local/include",
+      "<AUDIT>/tests/UpstreamExtendedKeyKind.cpp",
+      "<TEMP>/T/oath-extended-key-th7yledd/before.o",
+      "<PREPARED_CORE>/build/native-core/libTrustWalletCore.a",
+      "<PREPARED_CORE>/build/native-core/trezor-crypto/libTrezorCrypto.a",
+      "<PREPARED_CORE>/rust/target/release/libwallet_core_rs.a",
+      "<PREPARED_CORE>/build/native-core/libprotobuf.a",
+      "-o",
+      "<TEMP>/T/oath-extended-key-th7yledd/before"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "before",
+    "command": [
+      "<TEMP>/T/oath-extended-key-th7yledd/before"
+    ],
+    "exit_code": 1,
+    "timed_out": false
+  },
+  {
+    "name": "apply",
+    "command": [
+      "git",
+      "apply",
+      "<AUDIT>/patches/walletcore-4.8.4-extended-key-kind.patch"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "after-compile",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O2",
+      "-DNDEBUG",
+      "-I",
+      "<PREPARED_CORE>/src",
+      "-I",
+      "<PREPARED_CORE>/include",
+      "-I",
+      "<PREPARED_CORE>/trezor-crypto/include",
+      "-I",
+      "/opt/homebrew/opt/boost/include",
+      "-I",
+      "<PREPARED_CORE>/build/local/include",
+      "-c",
+      "<TEMP>/T/oath-extended-key-th7yledd/src/HDWallet.cpp",
+      "-o",
+      "<TEMP>/T/oath-extended-key-th7yledd/after.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "after-link",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O2",
+      "-DNDEBUG",
+      "-I",
+      "<PREPARED_CORE>/src",
+      "-I",
+      "<PREPARED_CORE>/include",
+      "-I",
+      "<PREPARED_CORE>/trezor-crypto/include",
+      "-I",
+      "/opt/homebrew/opt/boost/include",
+      "-I",
+      "<PREPARED_CORE>/build/local/include",
+      "<AUDIT>/tests/UpstreamExtendedKeyKind.cpp",
+      "<TEMP>/T/oath-extended-key-th7yledd/after.o",
+      "<PREPARED_CORE>/build/native-core/libTrustWalletCore.a",
+      "<PREPARED_CORE>/build/native-core/trezor-crypto/libTrezorCrypto.a",
+      "<PREPARED_CORE>/rust/target/release/libwallet_core_rs.a",
+      "<PREPARED_CORE>/build/native-core/libprotobuf.a",
+      "-o",
+      "<TEMP>/T/oath-extended-key-th7yledd/after"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "after",
+    "command": [
+      "<TEMP>/T/oath-extended-key-th7yledd/after"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  }
+]

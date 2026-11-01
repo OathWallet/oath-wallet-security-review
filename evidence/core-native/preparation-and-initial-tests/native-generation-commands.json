@@ -1,0 +1,69 @@
+[
+  {
+    "name": "native-coins",
+    "command": [
+      "ruby",
+      "codegen/bin/coins"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.185
+  },
+  {
+    "name": "native-rust-build",
+    "command": [
+      "<NATIVE_OUTPUT>/cargo/bin/cargo",
+      "build",
+      "--locked",
+      "--release",
+      "--lib"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 77.848
+  },
+  {
+    "name": "native-generation",
+    "command": [
+      "bash",
+      "tools/generate-files",
+      "native"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 20.221
+  },
+  {
+    "name": "native-core-configure",
+    "command": [
+      "cmake",
+      "-S",
+      ".",
+      "-B",
+      "build/native-core",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DCMAKE_C_COMPILER=clang",
+      "-DCMAKE_CXX_COMPILER=clang++",
+      "-DBoost_ROOT=/opt/homebrew/opt/boost",
+      "-DTW_UNIT_TESTS=ON",
+      "-DTW_BUILD_EXAMPLES=ON"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.101
+  },
+  {
+    "name": "native-core-build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-core",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 2,
+    "timed_out": false,
+    "duration_seconds": 21.961
+  }
+]

@@ -1,5 +1,12 @@
 # Acceptance checklist — not complete
 
+Progress 16 update: native Core compilation, 2,363 C++ tests and 113 C checks
+pass. Five Core defects have tested source patches, with Apple framework
+integration still outstanding. The three earlier unused Go API defects remain
+open and are now indexed explicitly. The new scanner gate preserves raw results;
+historical replay is not final-target GitHub validation. There are 7,679
+outstanding completion items. See [the latest report section](REPORT.md#progress-16--full-native-suites-fifth-dependency-patch-and-honest-scanner-gate).
+
 - **Full scope disposition:** incomplete. Application and upstream file inventories
   exist, but most implementation files are still outstanding. Inventorying or
   scanning a file is not a source review.

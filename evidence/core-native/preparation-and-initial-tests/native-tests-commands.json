@@ -1,0 +1,37 @@
+[
+  {
+    "name": "native-core-build-verify",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-core",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 7.577,
+    "log_sha256": "c9815b5cddf239c6b1afa60ee425f706508411c8abd6fb63b511eb192c2e2bfb"
+  },
+  {
+    "name": "native-gtest",
+    "command": [
+      "build/native-core/tests/tests",
+      "--gtest_output=json:<NATIVE_OUTPUT>/native-gtest-results.json"
+    ],
+    "exit_code": -11,
+    "timed_out": false,
+    "duration_seconds": 18.202,
+    "log_sha256": "02c33b1afdd6cf74f57bcb0dd81b4281097c5f34c29f6c2914da4ea9ce2a5bfc"
+  },
+  {
+    "name": "native-trezor-tests",
+    "command": [
+      "build/native-core/trezor-crypto/crypto/tests/TrezorCryptoTests"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 6.791,
+    "log_sha256": "64f53d92bf1982edf1bffd13e0eb79735bd36c8ae58f3cdc4f18732c64068077"
+  }
+]

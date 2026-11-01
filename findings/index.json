@@ -120,5 +120,44 @@
     "evidence": "evidence/core-source-repairs",
     "fixed_in_shipped_framework": false,
     "reachable_oath_exploit_established": false
+  },
+  {
+    "id": "DEP-CORE-005",
+    "severity": "dependency-api-defect",
+    "title": "Public extended keys accepted by private derivation API",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-NATIVE-AND-EXTENDED-KEY.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-extended-key-kind.patch",
+    "evidence": "evidence/core-native/extended-repro-full",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false
+  },
+  {
+    "id": "DEP-AEZEED-001",
+    "severity": "unused-dependency-api-defect",
+    "title": "CBC accepts a partial final block",
+    "status": "open",
+    "document": "../review/AEZEED-DEPENDENCY-REVIEW.md",
+    "reachable_oath_exploit_established": false,
+    "qualification": "Previously documented and reproduced; machine-readable index now includes this still-unrepaired source defect."
+  },
+  {
+    "id": "DEP-AEZEED-002",
+    "severity": "unused-dependency-api-defect",
+    "title": "Malformed BLAKE2b serialized state can panic",
+    "status": "open",
+    "document": "../review/AEZEED-DEPENDENCY-REVIEW.md",
+    "reachable_oath_exploit_established": false,
+    "qualification": "Previously documented and reproduced; machine-readable index now includes this still-unrepaired source defect."
+  },
+  {
+    "id": "DEP-AEZEED-003",
+    "severity": "unused-dependency-api-defect",
+    "title": "GCM truncates authenticated lengths to 32 bits",
+    "status": "open",
+    "document": "../review/AEZEED-DEPENDENCY-REVIEW.md",
+    "reachable_oath_exploit_established": false,
+    "qualification": "Previously documented and reproduced; machine-readable index now includes this still-unrepaired source defect."
   }
 ]

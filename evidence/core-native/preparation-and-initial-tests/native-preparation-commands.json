@@ -1,0 +1,119 @@
+[
+  {
+    "name": "downloads",
+    "command": [
+      "bash",
+      "tools/download-dependencies"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 4.858
+  },
+  {
+    "name": "protobuf-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "build/local/src/protobuf/protobuf-3.20.3/cmake",
+      "-B",
+      "build/native-protobuf",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-Dprotobuf_BUILD_TESTS=OFF",
+      "-Dprotobuf_MODULE_COMPATIBLE=ON",
+      "-Dprotobuf_BUILD_SHARED_LIBS=OFF",
+      "-DCMAKE_INSTALL_PREFIX=<PREPARED_CORE>/build/local"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 3.181
+  },
+  {
+    "name": "protobuf-build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-protobuf",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 27.469
+  },
+  {
+    "name": "protobuf-install",
+    "command": [
+      "cmake",
+      "--install",
+      "build/native-protobuf"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.181
+  },
+  {
+    "name": "protobuf-plugin-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "protobuf-plugin",
+      "-B",
+      "build/native-protobuf-plugin",
+      "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+      "-DProtobuf_DIR=<PREPARED_CORE>/build/local/lib/cmake/protobuf",
+      "-DCMAKE_INSTALL_PREFIX=<PREPARED_CORE>/build/local"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.657
+  },
+  {
+    "name": "protobuf-plugin-build",
+    "command": [
+      "cmake",
+      "--build",
+      "build/native-protobuf-plugin",
+      "--parallel",
+      "4"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.816
+  },
+  {
+    "name": "protobuf-plugin-install",
+    "command": [
+      "cmake",
+      "--install",
+      "build/native-protobuf-plugin"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.01
+  },
+  {
+    "name": "rust-version",
+    "command": [
+      "<NATIVE_OUTPUT>/cargo/bin/rustc",
+      "--version"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.605
+  },
+  {
+    "name": "cbindgen-install",
+    "command": [
+      "<NATIVE_OUTPUT>/cargo/bin/cargo",
+      "install",
+      "cbindgen",
+      "--version",
+      "0.29.2",
+      "--locked"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 19.698
+  }
+]

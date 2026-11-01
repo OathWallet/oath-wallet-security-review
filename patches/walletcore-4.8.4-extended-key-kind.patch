@@ -1,0 +1,39 @@
+--- a/src/HDWallet.cpp
++++ b/src/HDWallet.cpp
+@@ -32,7 +32,7 @@
+ 
+ uint32_t fingerprint(HDNode* node, Hash::Hasher hasher);
+ std::string serialize(const HDNode* node, uint32_t fingerprint, uint32_t version, bool use_public, Hash::Hasher hasher);
+-bool deserialize(const std::string& extended, TWCurve curve, Hash::Hasher hasher, HDNode* node);
++bool deserialize(const std::string& extended, TWCurve curve, Hash::Hasher hasher, HDNode* node, bool requirePrivate = false);
+ const char* curveName(TWCurve curve);
+ } // namespace
+ 
+@@ -320,7 +320,7 @@
+     const auto hasher = TW::base58Hasher(coin);
+ 
+     auto node = HDNode{};
+-    if (!deserialize(extended, curve, hasher, &node)) {
++    if (!deserialize(extended, curve, hasher, &node, true)) {
+         return {};
+     }
+     hdnode_private_ckd(&node, path.change());
+@@ -363,7 +363,7 @@
+     return Base58::encodeCheck(node_data, Rust::Base58Alphabet::Bitcoin, hasher);
+ }
+ 
+-bool deserialize(const std::string& extended, TWCurve curve, Hash::Hasher hasher, HDNode* node) {
++bool deserialize(const std::string& extended, TWCurve curve, Hash::Hasher hasher, HDNode* node, bool requirePrivate) {
+     TW::memzero(node);
+     const char* curveNameStr = curveName(curve);
+     if (curveNameStr == nullptr || std::string(curveNameStr).empty()) {
+@@ -379,6 +379,9 @@
+ 
+     uint32_t version = decode32BE(node_data.data());
+     if (TWHDVersionIsPublic(static_cast<TWHDVersion>(version))) {
++        if (requirePrivate) {
++            return false;
++        }
+         std::copy(node_data.begin() + 45, node_data.begin() + 45 + 33, node->public_key);
+     } else if (TWHDVersionIsPrivate(static_cast<TWHDVersion>(version))) {
+         if (node_data[45]) { // invalid data

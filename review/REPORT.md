@@ -24,7 +24,7 @@ secrets, funded accounts, live financial transactions or physical devices are us
 
 The application ledger contains 4,669 files: 158 reviewed, 8 partially reviewed,
 10 generated artifacts verified, 4,493 outstanding. The Wallet Core upstream
-ledger contains 3,941 files: 14 reviewed, 5 partially reviewed, 3,922 outstanding.
+ledger contains 3,941 files: 15 reviewed, 5 partially reviewed, 3,921 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 unrepaired defects in Go dependency APIs outside the traced Oath call path;
 [details and reproductions](AEZEED-DEPENDENCY-REVIEW.md) remain public.
@@ -34,8 +34,10 @@ vulnerability was established for those calls.
 The [constructor/lifetime experiment](CONSTRUCTOR-LIFETIME-RESULTS.md) also
 confirms direct misuse of the 32-byte constructor and entropy remaining at
 deallocation; their app reachability and broader exposure limitations are explicit.
-All four now have [tested source patches](CORE-SOURCE-REPAIRS.md), with full
-dependency build and application integration still outstanding.
+All four now have [tested source patches](CORE-SOURCE-REPAIRS.md). Full native
+compilation and upstream suites pass; Apple framework/application integration
+is still outstanding. A [fifth source repair](CORE-NATIVE-AND-EXTENDED-KEY.md)
+rejects public extended keys at the private derivation API.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
@@ -438,3 +440,37 @@ machine-readable findings index with integration outstanding. Source coverage
 counts are unchanged: testing does not establish review of unread components.
 Full dependency compilation, final-target CI, broader secret lifetime and
 binary provenance remain unfinished. No simulator/device or App Store use.
+
+## Progress 16 — full native suites, fifth dependency patch and honest scanner gate
+
+Complete native Core/Trezor/Rust/protobuf implementations were built from the
+pinned source with the four earlier repairs. The real upstream suites pass
+2,363 C++ tests (613 suites) and 113 C cryptography checks. This optimized host
+build is separate from the previous isolated sanitizer harnesses and from the
+distributed Apple frameworks. Build logs, tool versions, input hashes and failed
+setup/test attempts are preserved in [native evidence](../evidence/core-native).
+
+DEP-CORE-005 repairs a public/private extended-key type confusion in an unused
+C++ API. The unchanged 94-case regression reports 21 failures before and zero
+after; the full 2,363-case upstream suite also passes with that production
+translation unit repaired. The key incorrectly returned before repair is not
+the private key corresponding to the supplied xpub. No Oath application call or
+fund-loss exploit was established. [Detailed scope and recipe](CORE-NATIVE-AND-EXTENDED-KEY.md).
+
+The completed historical GitHub run 41257431422 has 41 successful jobs and one
+scanner failure on `f7441b8`. Its raw 40 advisory occurrences are retained.
+An exact-source gate now separates that raw output from selected-source
+classification; the historical replay has zero unresolved classifications.
+Wrong source/locks, malformed reports, execution errors and affected compiled
+packages remain failures. Ten added tests bring the helper suite to 72 passes.
+This replay does not turn the historical workflow green or prove a current-target
+CI pass. [Gate repair and evidence](ADVISORY-GATE.md).
+
+One additional upstream file has a manual hash-bound disposition. Compilation
+does not expand manual coverage. Three previously documented unused Go API
+defects are now also explicitly open in the findings index. The completion
+ledger has **7,679 outstanding items**; the increase includes these recorded
+findings and the required advisory gate, rather than hidden or waived work.
+The final-target matrix is still active at publication. Native CI preparation,
+Apple framework integration, dependency provenance and full source review remain
+unfinished. No simulator, physical device or App Store operation occurred.

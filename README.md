@@ -85,7 +85,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress14)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress16)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
@@ -124,14 +124,14 @@ identity or manually-reviewed coverage.
 The [upstream child-derivation review](review/CHILD-DERIVATION-REVIEW.md) includes
 actual C tests under memory/undefined-behavior sanitizers, an independently written
 HMAC/integer oracle, and pinned public SLIP-0010 vectors. It separates passing
-derivation cases from two unrepaired API hazards and gives a clean-checkout
+derivation cases from two API hazards (source repairs added in progress 15) and gives a clean-checkout
 command. Neither source tests nor constructor reachability establish distributed
 binary equivalence or a completed wallet audit.
 
 Progress 14 adds [multisig recovery review and mutations](review/MULTISIG-RECOVERY-REVIEW.md)
 and [constructor/entropy-lifetime experiments](review/CONSTRUCTOR-LIFETIME-RESULTS.md).
-Their expected dependency failures remain explicitly unrepaired and distinct
-from the passing positive tests.
+Their original dependency failures remain preserved and distinct from later
+source-repair regressions and the passing positive tests.
 
 ## Dependency source-repair follow-up
 
@@ -139,3 +139,11 @@ Four confirmed Core API/lifetime defects now have [tested source patches and
 identical before/after evidence](review/CORE-SOURCE-REPAIRS.md). They are not yet
 incorporated into Oath’s shipped frameworks; integration and the whole-wallet
 review remain incomplete. No App Store upload was performed.
+
+Progress 16 adds a [fifth tested Core repair and full native suites](review/CORE-NATIVE-AND-EXTENDED-KEY.md):
+the same 94-case extended-key corpus has 21 failures before repair and none after;
+2,363 upstream C++ tests and 113 C checks pass. Apple framework integration is
+still outstanding. The [advisory gate correction](review/ADVISORY-GATE.md) retains
+raw scanner findings and binds classification to the exact selected build graph.
+The completion ledger has 7,679 outstanding items, including three previously
+documented unused Go API defects now explicitly indexed as open findings.
