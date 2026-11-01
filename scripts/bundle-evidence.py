@@ -9,7 +9,7 @@ a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
 manifest=[]
 for base in a.input:
     for path in sorted(base.rglob('*')):
-        if not path.is_file() or path.name.startswith('._') or path.suffix not in ['.log','.json','.txt','.xml']: continue
+        if not path.is_file() or path.name.startswith('._') or (path.suffix not in ['.log','.json','.jsonl','.txt','.xml'] and path.name not in ['Package.resolved','TWHRP.h']): continue
         relative=Path(base.name)/path.relative_to(base)
         raw=path.read_bytes()
         text=raw.decode('utf-8',errors='replace')

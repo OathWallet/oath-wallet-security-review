@@ -6,7 +6,7 @@ from pathlib import Path
 from source_state import require_source_state
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff']
+PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin', 'OathAnkr', 'OathAezeed', 'OathWalletHandoff', 'OathTokenImages']
 SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
 SCANNER_MODES = {'scanner': [], 'wallet-links': ['--links'], 'scanner-lifecycle': ['--performance']}
 MODES = ['envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',

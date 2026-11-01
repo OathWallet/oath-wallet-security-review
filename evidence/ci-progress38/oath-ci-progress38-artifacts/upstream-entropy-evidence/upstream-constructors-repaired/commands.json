@@ -1,0 +1,322 @@
+[
+  {
+    "name": "headers",
+    "command": [
+      "ruby",
+      "codegen/bin/coins"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-0",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-c",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/crypto/bip39.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c0.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-1",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-c",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/crypto/sha2.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c1.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-2",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-c",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/crypto/hmac.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c2.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-3",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-c",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/crypto/pbkdf2.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c3.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-4",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-c",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/crypto/memzero.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c4.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-5",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-c",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/crypto/rand.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c5.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-compile",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/include",
+      "-c",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/Constructors.cpp",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-link",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/include",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/tests/UpstreamHDWalletConstructors.cpp",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions.o",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/src/Mnemonic.cpp",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c0.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c1.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c2.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c3.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c4.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c5.o",
+      "-Wl,-dead_strip",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-positive",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-mnemonic32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions",
+      "mnemonic32"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-entropy32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions",
+      "entropy32"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-entropy-lifetime",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions",
+      "entropy-lifetime"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-strength32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/assertions",
+      "strength32"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-compile",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/include",
+      "-DNDEBUG",
+      "-c",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/Constructors.cpp",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-link",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/trezor-crypto/include",
+      "-I",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/include",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/tests/UpstreamHDWalletConstructors.cpp",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release.o",
+      "<TEMP>/T/oath-core-patched-it_lr3nk/source/src/Mnemonic.cpp",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c0.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c1.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c2.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c3.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c4.o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/c5.o",
+      "-Wl,-dead_strip",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-positive",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-mnemonic32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release",
+      "mnemonic32"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-entropy32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release",
+      "entropy32"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-entropy-lifetime",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release",
+      "entropy-lifetime"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-strength32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-r7bg7l9i/release",
+      "strength32"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  }
+]

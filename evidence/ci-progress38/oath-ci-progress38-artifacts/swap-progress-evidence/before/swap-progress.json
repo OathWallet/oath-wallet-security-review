@@ -1,0 +1,128 @@
+{
+  "check": "swap-progress",
+  "source_commit": "8fa6ee3bf99caf78ab71997b5642e323cccb95da",
+  "phase": "before",
+  "status": "expected-failure",
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 398.2,
+    "log": "build.log",
+    "log_sha256": "6e326622c78b3bc713990db7c9100e176a7e48f272d1f4cfd10e6b31ff39399b"
+  },
+  "runs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 2.042,
+      "log": "run-1-1.log",
+      "log_sha256": "45bf144b7db6beb494714d455484b317b8de4ebff6a3786e227376f25e7afaeb",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testPolygonNativeAndTokenPayoutsMatchChecksumVariants",
+      "status": "destination-mismatch-reproduced",
+      "expected": "destination-mismatch-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.177,
+      "log": "run-1-2.log",
+      "log_sha256": "bf4b2da10c16e04e76172a798f5051a05b1822af49c9c87561a26849773d4250",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testOtherSupportedEVMChainsPreserveCaseInsensitiveMatching",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.277,
+      "log": "run-1-3.log",
+      "log_sha256": "3f8d6e28007d61327f6b17d1bbd2e3969309f31becbe7c750bfa4bf5a50d4426",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testMatchingNeverIgnoresDifferentAddressesChainsAssetsOrInboundIDs",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.32,
+      "log": "run-2-1.log",
+      "log_sha256": "a5dcbaed27894e8b9affaca8b3959cda1a98b8b5488cd8fd7ce335223b520611",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testPolygonNativeAndTokenPayoutsMatchChecksumVariants",
+      "status": "destination-mismatch-reproduced",
+      "expected": "destination-mismatch-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.223,
+      "log": "run-2-2.log",
+      "log_sha256": "6579bf73e94fbcc979dec808b74d4c04e5e2680ef0ef22a9c502a986b41f57f6",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testOtherSupportedEVMChainsPreserveCaseInsensitiveMatching",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.248,
+      "log": "run-2-3.log",
+      "log_sha256": "f0b9399a35f0eb224a741dc428e0d4e9b6585478b1895b7d1af7de70565eb5c1",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testMatchingNeverIgnoresDifferentAddressesChainsAssetsOrInboundIDs",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.196,
+      "log": "run-3-1.log",
+      "log_sha256": "0b9d3d057b32aac806cf6cf00033785bef8e39cc3b33a55a2a5641d7a4f513b8",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testPolygonNativeAndTokenPayoutsMatchChecksumVariants",
+      "status": "destination-mismatch-reproduced",
+      "expected": "destination-mismatch-reproduced"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.206,
+      "log": "run-3-2.log",
+      "log_sha256": "5ff1246cd00810b7ddf80f1ede3be5805f52aee94e6bc66a25d0025be1079e81",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testOtherSupportedEVMChainsPreserveCaseInsensitiveMatching",
+      "status": "passed",
+      "expected": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.27,
+      "log": "run-3-3.log",
+      "log_sha256": "6bde702b765de77372943c7dabacc63a53b99d92f239514cf4116f02c80766e2",
+      "selector": "OathAnkrTests.ThorchainSwapDestinationTests/testMatchingNeverIgnoresDifferentAddressesChainsAssetsOrInboundIDs",
+      "status": "passed",
+      "expected": "passed"
+    }
+  ],
+  "toolchain": {
+    "swift": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.339,
+      "log": "swift-version.log",
+      "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    "xcode": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.364,
+      "log": "xcode-version.log",
+      "log_sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+    }
+  },
+  "fixture_sha256": "62a7a5b29c80229b37ab7be98c1f7108ac677ecdfb4224743971cf55dea0c3dc",
+  "test_binary_sha256": "3450a12e5cf4eec661734c39eb64b1ccc3ac988a0b632120b90065a63d64a301",
+  "duration_seconds": 408.681,
+  "runtime_scope": "macOS host; production swap progress decoder and synthetic observations; test processes deny network",
+  "limitation": "No provider, UI, simulator, physical device, blockchain broadcast or App Store execution. Synthetic provider observations enter the production progress decoder.",
+  "log": "swap-progress.log",
+  "log_sha256": "09141da81d2e3033c2475db32ebaa5ba781ef03633334f61364bfaa69063fb51"
+}

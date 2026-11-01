@@ -25109,5 +25109,848 @@
     "log": "relay-early-replies.log",
     "log_sha256": "94bf69b4f14bf55b1670c0131d8eb88684ebf365086190eda6592683cc69a96a",
     "evidence_path": "evidence/early-relay/oath-early-relay-evidence/reproduction/relay-early-replies.json"
+  },
+  {
+    "check": "OathTokenImages",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathTokenImages",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-svg-depth-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 37.21,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 94 selected; 84 passed; 10 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "6be257be5513617ac52ba9b7c5fc907bbfd43a13210ba80c339370cbf049bb43",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 94,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 10,
+      "sha256": "560c63b08a7e6318e97328e822896c5fe4da159e104f85da31b6078e16071a86"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/validation/OathTokenImages.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-svg-depth-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 14.97,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "0476201dcce23f12349f0b2690645ec2638816154161977652fdfe25fbdf7883",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "0d5ad65a09e7eeb6169725b0847bbd8b452016365b252c5ba7e215aaaa894c80"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 35.12,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "363b09a6d673dda5f3eb754a3e1ebe60cf90c858748c075c3933e389d78d9372",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.42,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 305.2,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "039085fc25f86ea96eed30df0b176738048f1f8cf42c43303ecf159f3db6cbf1",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/validation/build.json"
+  },
+  {
+    "check": "svg-reference-graph",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "baseline_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+    "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+    "fixture_sha256": "055b20e3ebcfdada7dd78c5ebe554cb1ea273a7de7a413c8f0fe08135039b683",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testSharedLeafFirstCannotBypassDepthBudget",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "expected-depth-assertion",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testSharedLeafFirstCannotBypassDepthBudget.log",
+        "log_sha256": "89bf10bec3be8bfb799329b004d9ce6dfddf6439151a9758844a49f2b56361ff"
+      },
+      {
+        "phase": "before",
+        "case": "testShadowedCycleCannotReachRenderer",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "expected-signal-11",
+        "exit_code": -11,
+        "timed_out": false,
+        "log": "before-testShadowedCycleCannotReachRenderer.log",
+        "log_sha256": "56ea87dfd5e85cae20b9a0f9ce71567a3b9022a3e7eb1811f19ccfa23e240ea2"
+      },
+      {
+        "phase": "before",
+        "case": "testSharedRootFirstCannotBypassDepthBudget",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSharedRootFirstCannotBypassDepthBudget.log",
+        "log_sha256": "91f6dcffc9e09ec540e76afa2b80e69c42c3717adbc69f46836530296e1cb232"
+      },
+      {
+        "phase": "before",
+        "case": "testExactlyAtDepthBudgetInBothOrders",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testExactlyAtDepthBudgetInBothOrders.log",
+        "log_sha256": "945dc023476f25443a27da3fee7fa5eaba9b59cbc33422c346b4d5fb392f8da2"
+      },
+      {
+        "phase": "before",
+        "case": "testSiblingReferencesMayShareOneID",
+        "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testSiblingReferencesMayShareOneID.log",
+        "log_sha256": "c285f7eb24b0ec56e9dd57a8b91af3b1fab8259e36eb2f7e317caebc45a142d2"
+      },
+      {
+        "phase": "after",
+        "case": "testSharedLeafFirstCannotBypassDepthBudget",
+        "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSharedLeafFirstCannotBypassDepthBudget.log",
+        "log_sha256": "6397367aad8839e63fb331c5ffc28e6e12a63d6eea46ac26e5723700f1a7fe5e"
+      },
+      {
+        "phase": "after",
+        "case": "testShadowedCycleCannotReachRenderer",
+        "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testShadowedCycleCannotReachRenderer.log",
+        "log_sha256": "79bbc6fc2ae3169c9ebdce32082962d4b5050891c8b720f330530768b76623ce"
+      },
+      {
+        "phase": "after",
+        "case": "testSharedRootFirstCannotBypassDepthBudget",
+        "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSharedRootFirstCannotBypassDepthBudget.log",
+        "log_sha256": "3386b57a31c0819f01e499a57ff855c451c3300093c21f382f754d820169a68e"
+      },
+      {
+        "phase": "after",
+        "case": "testExactlyAtDepthBudgetInBothOrders",
+        "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testExactlyAtDepthBudgetInBothOrders.log",
+        "log_sha256": "3e49b4252e84050dc18f1c3135b0a4b5ecbc686a6998b1d7c8674f0851d9d751"
+      },
+      {
+        "phase": "after",
+        "case": "testSiblingReferencesMayShareOneID",
+        "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testSiblingReferencesMayShareOneID.log",
+        "log_sha256": "f6703004900c189f71c14811a4fa230b0ef57a970b667793a80532718367e888"
+      }
+    ],
+    "duration_seconds": 55.935,
+    "scope": "Production token decoder and pinned drawing dependency; five synthetic images/cases per revision. Separate offline host XCTest process per case.",
+    "log": "svg-reference-graph.log",
+    "log_sha256": "db629d5d4374ae78d9c784474ebe265aed52d1e8104be2536345547228046a74",
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/reproduction/svg-reference-graph.json"
+  },
+  {
+    "check": "bundled-artwork",
+    "status": "passed",
+    "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "log": "bundled-artwork.log",
+    "log_sha256": "94ce4ab87ac0cb40ced9528d788bf40db41c92335cc95231441b676c1d1fa07d",
+    "evidence_path": "evidence/svg-graph/oath-svg-depth-evidence/resources/bundled-artwork.json"
+  },
+  {
+    "check": "solana-vector-isolation",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "44da32d569247a442bf785a722efeec64bfc26006f7e3079759a079d254bebcd",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/solana-vector-isolation/solana-vector-isolation.json"
+  },
+  {
+    "check": "arc-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "c2e2cebf226c52d65529bd38102c6e2ddff37bf5536e82ce1ef3023573d3d907",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-arc-send/arc-send.json"
+  },
+  {
+    "check": "tron-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "c0c39489893ae9e30e81d6a21ba068b8f1362ca636cb87725f5927adeef76eca",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-tron-send/tron-send.json"
+  },
+  {
+    "check": "auth-boundary",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "df8e0305d81b932e4e75003755263e03d79a5a88bd2aa2abcbcef47e2f6ddae8",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/auth-boundary-boundary/auth-boundary.json"
+  },
+  {
+    "check": "authentication",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "21246a3ffa51d3da4593bf0e4d5376cab6705801438ab04ffa4f5cecefc45c57",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-authentication/authentication.json"
+  },
+  {
+    "check": "OathAezeed",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "61c256ec74649855a16b35d0f3fea9bcd46df51edf74083ba184ef9882966165",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathAezeed/OathAezeed.json"
+  },
+  {
+    "check": "xrpl-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "87a7defb4bd460db58fdc48d49a8c59bb5df370a111325da6c4a27d378691c7e",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-xrpl-send/xrpl-send.json"
+  },
+  {
+    "check": "security",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "d5303148322b195bcfa2eefddf3d948cdf4ca6e62f0d3b94add279b1897cb238",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-security/security.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "c695d50fc5fee7c80254d1cd422354b7c7a834ec35a1f361bbde1ef1e8a91df7",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathDiagnostics/OathDiagnostics.json"
+  },
+  {
+    "check": "walletconnect",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "13f7eaae5b7c99a052a97c3c128d90b107483be69c2ec50ca1473767485b2152",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-walletconnect/walletconnect.json"
+  },
+  {
+    "check": "caip-boundary",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "49550dfd1dfbdd0897826f729cd32d6abb1bd293bfa6cf530d71690364347faa",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/caip-boundary-boundary/caip-boundary.json"
+  },
+  {
+    "check": "scanner-lifecycle",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "4785a0531d80f18dc2e0731942f4e5438595e550046e684f422b7ae0c26a70c8",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-scanner-lifecycle/scanner-lifecycle.json"
+  },
+  {
+    "check": "protected-startup",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "dd8f89017608711bb925359f80ac4a67a99e546de61e426ebef21185b299b8f6",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-protected-startup/protected-startup.json"
+  },
+  {
+    "check": "permission-batch",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "35b0bde28a93680002cfda8a681ad230dfe96a8a5b64523b5d5fb9e8ddc04e2e",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-permission-batch/permission-batch.json"
+  },
+  {
+    "check": "near-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "732a716ab3a63d2a039abaac91a9faa7b4f791e6e74689b580545d3f342485b8",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-near-send/near-send.json"
+  },
+  {
+    "check": "solana-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "f3dbd745eaeef6f6957632cff1cd7495b0dee5b5166678130aa0cd42a852965c",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-solana-send/solana-send.json"
+  },
+  {
+    "check": "wallet-links",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "a6b50df4cba995a1175a50e6f93fe58c48081a5c737cf2f93e04e555c8fcb418",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-wallet-links/wallet-links.json"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "484d3c70e18058b9207b9e69b705cf6ae98ab39cc07d2c325edf0603d47cc04a",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathDatabase/OathDatabase.json"
+  },
+  {
+    "check": "cleanup-lifetime",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "ae9c21cc66b02627d8df0ee976258ef0d1d8a2bcbd4bf8a7f03d3324858d38ed",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/cleanup-lifetime-boundary/cleanup-lifetime.json"
+  },
+  {
+    "check": "sui-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "78b50554e635d04a85ed07394f1ec6dbb83fa07f10b83dda385b57730d28bc53",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-sui-send/sui-send.json"
+  },
+  {
+    "check": "lifecycle",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "00e54675da59a3a96232c2bec0ba513a96a5039927e892811b0527c3162c42d1",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-lifecycle/lifecycle.json"
+  },
+  {
+    "check": "scanner",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "4e51b64dec63eb1f6e3da1f9f42ce9376427013c88443b8d16ddba02af1f8996",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-scanner/scanner.json"
+  },
+  {
+    "check": "envelope",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "561a53ebb68daceeca12640f301751c492563b1514e24c67d4d6bff8658ec631",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-envelope/envelope.json"
+  },
+  {
+    "check": "solana-properties",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "b552d2aab11e24b942a809670e2b7eef843d30b8da111b0736c500191221e484",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/solana-properties-evidence/solana-properties.json"
+  },
+  {
+    "check": "ton-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "cbc574bf38410f18b6f7659dc31f4ac1b6e8e4537c0ddd0df1ad812efd33aaf7",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-ton-send/ton-send.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "02c5320e81b7e86e18d9591e3c264dd7b9dc6a22a288fda732c3ed146a392a12",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathAnkr/OathAnkr.json"
+  },
+  {
+    "check": "evm-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "6d565c16bf2f0d0eb7b6ba1fb7205860cc325ede940431c1b75b14b59015a98d",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-evm-send/evm-send.json"
+  },
+  {
+    "check": "watcher-lifetime",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "5d573dc954071d8d562ea69f022d5fb9ea557eca2d53e3d3f25c847cac06eaca",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/watcher-lifetime-boundary/watcher-lifetime.json"
+  },
+  {
+    "check": "ton-authorization",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "c490325ca776bba9b03353326401accd9d1d83a0ebae0464d26b05947149ff58",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/ton-properties-evidence/ton-authorization.json"
+  },
+  {
+    "check": "ton-properties",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "f77d29106086965d8b76d49b78dc58507bb2ee8e51ddafff55273c9ffd587436",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/ton-properties-evidence/ton-properties.json"
+  },
+  {
+    "check": "aptos-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "6c7e569e4ff8aa35cc804fb5bddbf867e0e5d372ecd981a3e6eaaaa4073a7449",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-aptos-send/aptos-send.json"
+  },
+  {
+    "check": "events-lifecycle",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "20aeab42c3490ea178006b28723783bfbaf1690f946ac6624df57a6c10e9e0bd",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/events-lifecycle-boundary/events-lifecycle.json"
+  },
+  {
+    "check": "request-lifetime",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "fe807f5a84ef1d0c32fcf28158378fba0e59497a06ab5222a2f7023e6f60d926",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/request-lifetime-boundary/request-lifetime.json"
+  },
+  {
+    "check": "thorchain-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "634a125020bef9291e63bccec3ae7b2b6457f1d13723bc3d5c9f13c1ce4f0357",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-thorchain-send/thorchain-send.json"
+  },
+  {
+    "check": "walletconnect-sdk",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "0b352fe0b425d1f3f820f884301a313a213276ae3aa88f117a96cd1954922fea",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-walletconnect-sdk/walletconnect-sdk.json"
+  },
+  {
+    "check": "OathCloudBackup",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "1e6710880cee189086f075f3c188c78559e2054f89ed75ea3c1b95492896218f",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathCloudBackup/OathCloudBackup.json"
+  },
+  {
+    "check": "OathWalletHandoff",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "25f15677d59f413645dbd2a8710197a4b03135238f299b66f00c981f5c11509c",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathWalletHandoff/OathWalletHandoff.json"
+  },
+  {
+    "check": "cloud-restore",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "7c19a686c9b6cd4fc13b63da0bc9a5f8fb2eace64b80dc722b25d793e308edbf",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-cloud-restore/cloud-restore.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "3c73da6ce12c56b9a2648cac6d81bd04bd5f16ec5fdc8b418abc364a9ab95df9",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-public/public.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "0fb5398f515b06a53f49a96f0c153bbc3e4e92cb677c61b221d334c949358799",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/unsigned-ios-release-build/build.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "1c034886bc98b2fb8f0c2735cf9464daef343cd7667bab7fbb07878e0651fa5c",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-OathBitcoin/OathBitcoin.json"
+  },
+  {
+    "check": "namespace-boundary",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "fb5de5c1a162d2f61be460682d94580c8549dcac6c8b2f903644074c1be97f26",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/namespace-boundary-boundary/namespace-boundary.json"
+  },
+  {
+    "check": "stellar-send",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "c0e6429c31dd40083c615f3f61e6b3d74ce2b13ac93d4548268af2971c1d7581",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-stellar-send/stellar-send.json"
+  },
+  {
+    "check": "session-expiry",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "2b25eed80746a2803712ac12714e528f99f54736c4ad6f6cf77328c8627b1a56",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/session-expiry-boundary/session-expiry.json"
+  },
+  {
+    "check": "clipboard",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "39a8c42f3db002d3f84bb80fcb184cd63834885b4da27fc0bd25461013984312",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-clipboard/clipboard.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-diagnostics-coverage/diagnostics-coverage.json"
+  },
+  {
+    "check": "relay-metadata",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "925d5d6268dca0e48f760fe16358cbf03ae706a425486d88945f86eba9af509a",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/relay-metadata-boundary/relay-metadata.json"
+  },
+  {
+    "check": "tron-properties",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "9ede101a64f0e5c51c1d4cbb4a0d8f04d89c9ad2df3c579b8f736d7679b7ced4",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/tron-properties-evidence/tron-properties.json"
+  },
+  {
+    "check": "walletconnect-verify",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "09a23064f8388cf416103c07be18efdaf324afa20114cc338774b6709e17bf80",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/host-walletconnect-verify/walletconnect-verify.json"
+  },
+  {
+    "check": "aezeed-primitives",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "bd52a321e7ef9c2d1a86c652ea74bdf1d26f53db97b987d34d5f7a2996bb7a8d",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/aezeed-source-evidence/aezeed-primitives/aezeed-primitives.json"
+  },
+  {
+    "check": "aezeed-repairs",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "a9c965b7ab59a0449ccdf602585f16ce7eda1b81e7e1f08348c346014146028c",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/aezeed-source-evidence/aezeed-repairs/result.json"
+  },
+  {
+    "check": "pairing-link-boundary",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "55e61daea1d989456c98b3268beafd2a9d3be8b3eaa325ff2e23638e2af4708d",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/relay-envelope-evidence/uri-boundary/app-boundary.json"
+  },
+  {
+    "check": "evm-response-boundary",
+    "source_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
+    "status": "expected-failure",
+    "log_sha256": "e728026423cb8d26ed7e357a8bd214264e23cdbf6eaecdd9b241c8c48bae25d0",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/evm-response-boundary-evidence/before/evm-response-boundary.json"
+  },
+  {
+    "check": "evm-response-boundary",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "cff5e8cb9bc59ead3370364b3ab2318bc323f6811bf75c046b21a483746bc4f8",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/evm-response-boundary-evidence/after/evm-response-boundary.json"
+  },
+  {
+    "check": "permission-batch-races",
+    "source_commit": "976971f0ca3362cfba8c63bc738bd80d15abf096",
+    "status": "expected-failure",
+    "log_sha256": "a85f1569451c8eafb329ff489d881f1c298256894eec4e7f383208a8737bad7f",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/permission-batch-races-evidence/before/permission-batch-races.json"
+  },
+  {
+    "check": "permission-batch-races",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "db549c6ea071f4e8bcfda9ada5e82bb3b225c8d18f1bbbe426681fa0128c822b",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/permission-batch-races-evidence/after/permission-batch-races.json"
+  },
+  {
+    "check": "evm-delegation-nonce",
+    "source_commit": "3cfa6168aac85b5e7c7c42daa4bf7b37e23276ce",
+    "status": "expected-failure",
+    "log_sha256": "9bc400545880f85f780618949568470a35613da22e0d251bb1e93af018a01008",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/evm-delegation-nonce-evidence/before/evm-delegation-nonce.json"
+  },
+  {
+    "check": "evm-delegation-nonce",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "1f4c3b35b0da14317e200d56893b1368932ea01589c48275da105ae8696a52f1",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/evm-delegation-nonce-evidence/after/evm-delegation-nonce.json"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "70b86d4af234412aa8fe49a24935fcdb17aa4e2d",
+    "status": "expected-failure",
+    "log_sha256": "4badb975c88e4133b3170d0b16a0d29b0d35a7a11831dde7de3f283f5c5161ed",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/refresh-cancellation-evidence/before/refresh-cancellation.json"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "ef9afcda55e2899929b9cb5af158b3800bde2ad93f3e626fc28bf1f614945d57",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/refresh-cancellation-evidence/after/refresh-cancellation.json"
+  },
+  {
+    "check": "permission-readback",
+    "source_commit": "b7ff1f5eab70b244ba64a68da10addf3a4d8c4c4",
+    "status": "expected-failure",
+    "log_sha256": "532e8d6010d7a198b0c087a7193cc1091d6d1186a9ca465b16533f7291146d06",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/permission-readback-evidence/before/permission-readback.json"
+  },
+  {
+    "check": "permission-readback",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "85081dfc5b377049886375e30ff84ec08da648b62712926d545a32c4e29dfa87",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/permission-readback-evidence/after/permission-readback.json"
+  },
+  {
+    "check": "swap-approval",
+    "source_commit": "fe6d866751636da183a5de01b90c0f92ea4c5102",
+    "status": "expected-failure",
+    "log_sha256": "0c8cd5321d620133a1ff22367327028ade6620d5a714c2a3fb5cafe796f8c734",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/swap-approval-evidence/before/swap-approval.json"
+  },
+  {
+    "check": "swap-approval",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "3a88fce93a8fd3cb216b9c0b1e2f9e7706142afbd2c7b5c95121d7a0dd90d310",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/swap-approval-evidence/after/swap-approval.json"
+  },
+  {
+    "check": "upstream-bip32",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "10b7bb0ce9ae5485f610a509e1091de1a9ff91d54203de8c11ef744409333af3",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/upstream-entropy-evidence/upstream-bip32/result.json"
+  },
+  {
+    "check": "upstream-constructors-repaired",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/upstream-entropy-evidence/upstream-constructors-repaired/result.json"
+  },
+  {
+    "check": "upstream-constructors",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/upstream-entropy-evidence/upstream-constructors/result.json"
+  },
+  {
+    "check": "upstream-mnemonic",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "6dd229a38ca5410d55750880a45d1f0ed75df54ea949d3df54423ed98573ab1b",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/upstream-entropy-evidence/upstream-mnemonic/result.json"
+  },
+  {
+    "check": "upstream-bip32-repaired",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "10b7bb0ce9ae5485f610a509e1091de1a9ff91d54203de8c11ef744409333af3",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/upstream-entropy-evidence/upstream-bip32-repaired/result.json"
+  },
+  {
+    "check": "multisig-recovery",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "a0d2f70223f745e18acd421969ea69756c2fd9053f6013e285be9c05da094314",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/upstream-entropy-evidence/multisig-recovery/result.json"
+  },
+  {
+    "check": "swap-progress",
+    "source_commit": "8fa6ee3bf99caf78ab71997b5642e323cccb95da",
+    "status": "expected-failure",
+    "log_sha256": "09141da81d2e3033c2475db32ebaa5ba781ef03633334f61364bfaa69063fb51",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/swap-progress-evidence/before/swap-progress.json"
+  },
+  {
+    "check": "swap-progress",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "status": "passed",
+    "log_sha256": "ba6d6aa6a58c48ee3d8ac7b2aa77f020d9eb894e1b6326f13c07ddbc5f635b9e",
+    "ci_run_id": 41345235526,
+    "evidence_path": "evidence/ci-progress38/oath-ci-progress38-artifacts/swap-progress-evidence/after/swap-progress.json"
   }
 ]

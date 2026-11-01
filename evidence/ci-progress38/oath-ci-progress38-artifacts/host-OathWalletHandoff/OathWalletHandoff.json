@@ -1,0 +1,37 @@
+{
+  "check": "OathWalletHandoff",
+  "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathWalletHandoff",
+    "<SCRATCH>-native",
+    "<AUDIT>/evidence/ci"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 30.0,
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 0 selected; 0 passed; 0 skipped; 0 failed",
+    "\u2714 Test run with 12 tests in 0 suites passed after 0.005 seconds."
+  ],
+  "log_sha256": "25f15677d59f413645dbd2a8710197a4b03135238f299b66f00c981f5c11509c",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 0,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "sha256": "eeb1244359196b9c1ef5c15c61e8b4a4e0245b21af8e85c602b7e7bb90bccc56"
+  },
+  "swift_testing": {
+    "log_sha256": "5b6befde20501f01b3314e42e0c8b72653c349fad511646616e5b5742593f607",
+    "summaries": [
+      "\u2714 Test run with 12 tests in 0 suites passed after 0.005 seconds."
+    ]
+  }
+}

@@ -7,7 +7,15 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`25bcf5bd3418c574d92d63c7d5d5acef39d7d75c`**.
+Current review target: **`1dbe6cbabb7397ad86be917e034fb88884fbca8d`**.
+
+[OW-2026-030](../findings/OW-2026-030.md) documents a process crash while rendering a synthetic token logo and a second depth-limit bypass. The paired isolated host corpus reproduced signal 11 and one failed assertion before the fix. All five cases passed after it. The full artwork suite passed 84 cases with ten opt-in skips, diagnostics passed 118 with two skips, and the unsigned generic iOS Release build passed (305.2 s). The [source repair](https://github.com/devdasx/oath-wallet/pull/41) merged as `e3c0bc5921492349dad1aaacb90d02eebe366a43` with a tree identical to the tested commit.
+
+The [artwork review](TOKEN-ARTWORK.md) includes all 714 bundled catalog files and the new 353-file pinned SwiftDraw ledger. Forty launcher/preview resources have a cosmetic disposition. Checks on the other assets cover structural integrity and leave semantic identity and renderer behavior open.
+
+[Run 41345235526](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41345235526) completed 64 successful jobs at the earlier application pin `a04bebfafd38f02a441c1a0ee81540882438a99c`. All 64 GitHub artifact ZIP digests and extracted members were verified. The [archived results](../evidence/ci-progress38/oath-ci-progress38-artifacts/verification.json) record 65 passes there, seven expected failures on historical baselines, and 72 verified result-log checksums. The bundler now preserves JSONL test transcripts, Package.resolved and the generated TWHRP header. A [seven-file supplement](../evidence/ci-progress31-supplement/manifest.json) restores these omitted file types from verified progress 31 artifacts. These runs retain their own application targets.
+
+Previous target: `25bcf5bd3418c574d92d63c7d5d5acef39d7d75c`.
 
 [OW-2026-029](../findings/OW-2026-029.md) repairs the loss of early relay replies. Publishing and both subscription paths timed out on the baseline after receiving the correct response. Three write-error controls passed. All six cases passed after the fix. The paired corpus uses the real response timers and a synthetic socket dispatcher. The SDK passed 260 tests with one skip, diagnostics passed 118 with two skips and 164 audit helper tests passed. Public-source checks, diagnostics coverage and generic unsigned iOS Release compilation (528.36 seconds) passed. [Merged source fix](https://github.com/devdasx/oath-wallet/pull/40). The merge tree matches the tested commit.
 

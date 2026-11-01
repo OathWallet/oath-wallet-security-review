@@ -515,5 +515,17 @@
     "retest_scope": "Three early-reply timeouts before, three send-error controls, six passes after. Synthetic host dispatcher and production RelayClient.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/40"
+  },
+  {
+    "id": "OW-2026-030",
+    "title": "Ambiguous SVG references crashed token artwork rendering and shared subtrees bypassed the path-depth limit",
+    "severity": "medium",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-030.md",
+    "fix_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+    "regression_only_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+    "retest_scope": "Five synthetic host cases per revision in isolated, network-denied processes. Baseline signal 11 and failed depth assertion. All five pass after.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/41"
   }
 ]

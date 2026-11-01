@@ -1,0 +1,64 @@
+[
+  {
+    "stage": "before",
+    "source_commit": "e352f56d0fb3be035c3600e646e3f9133adb9ef4",
+    "final_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "added_fixture": "Tools/WalletConnectSDKValidation/URIBoundaryTests.swift",
+    "fixture_sha256": "bad90ba99a89b9b871e4c9d7905c37589313757530c773c73e7c2992fe2d2c15",
+    "source_archive_sha256": "ab17558a0df384b33ba05dae1a67926d7d4b103b50cd2c23252a8cc377b0dfc4",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "URIBoundaryTests"
+    ],
+    "exit_code": 1,
+    "cases": {
+      "passed": 3,
+      "skipped": 0,
+      "failed": 5
+    },
+    "expected_cases": {
+      "passed": 3,
+      "skipped": 0,
+      "failed": 5
+    },
+    "duration_seconds": 18.585,
+    "log_sha256": "55edf898422a1d85b3ef5bb8b558b4e5c3d04c6d7162b47f1a9773b842b5a58f",
+    "runtime_scope": "host; synthetic URI strings through the production WalletConnectURI implementation; no relay or wallet",
+    "reproduced": true
+  },
+  {
+    "stage": "after",
+    "source_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "final_commit": "a04bebfafd38f02a441c1a0ee81540882438a99c",
+    "added_fixture": "Tools/WalletConnectSDKValidation/URIBoundaryTests.swift",
+    "fixture_sha256": "bad90ba99a89b9b871e4c9d7905c37589313757530c773c73e7c2992fe2d2c15",
+    "source_archive_sha256": "205bfa44134ae399c775fba2d04bfc74a1cf24b9315dc16e6e14fde3d0f20e4e",
+    "command": [
+      "python3",
+      "Tools/CheckWalletConnectSDK.py",
+      "--build-system",
+      "native",
+      "--filter",
+      "URIBoundaryTests"
+    ],
+    "exit_code": 0,
+    "cases": {
+      "passed": 8,
+      "skipped": 0,
+      "failed": 0
+    },
+    "expected_cases": {
+      "passed": 8,
+      "skipped": 0,
+      "failed": 0
+    },
+    "duration_seconds": 18.106,
+    "log_sha256": "dcc698658f840820d38d0a9f1602d7e9fc92e146b67fcd642971ed2660a285ce",
+    "runtime_scope": "host; synthetic URI strings through the production WalletConnectURI implementation; no relay or wallet",
+    "reproduced": true
+  }
+]

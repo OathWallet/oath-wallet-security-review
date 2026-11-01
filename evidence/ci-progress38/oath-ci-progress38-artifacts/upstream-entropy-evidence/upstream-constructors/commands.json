@@ -1,0 +1,304 @@
+[
+  {
+    "name": "headers",
+    "command": [
+      "ruby",
+      "codegen/bin/coins"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-0",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-c",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/crypto/bip39.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c0.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-1",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-c",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/crypto/sha2.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c1.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-2",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-c",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/crypto/hmac.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c2.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-3",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-c",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/crypto/pbkdf2.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c3.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-4",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-c",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/crypto/memzero.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c4.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "c-5",
+    "command": [
+      "clang",
+      "-std=c11",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-c",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/crypto/rand.c",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c5.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-compile",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/include",
+      "-c",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/Constructors.cpp",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-link",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/include",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/tests/UpstreamHDWalletConstructors.cpp",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions.o",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/src/Mnemonic.cpp",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c0.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c1.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c2.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c3.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c4.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c5.o",
+      "-Wl,-dead_strip",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-positive",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-mnemonic32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions",
+      "mnemonic32"
+    ],
+    "exit_code": -6,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-entropy32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions",
+      "entropy32"
+    ],
+    "exit_code": -6,
+    "timed_out": false
+  },
+  {
+    "name": "assertions-entropy-lifetime",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/assertions",
+      "entropy-lifetime"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-compile",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/include",
+      "-DNDEBUG",
+      "-c",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/Constructors.cpp",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-link",
+    "command": [
+      "clang++",
+      "-std=c++17",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/trezor-crypto/include",
+      "-I",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/src",
+      "-I",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/include",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/tests/UpstreamHDWalletConstructors.cpp",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release.o",
+      "<HOME>/work/oath-wallet-security-review/oath-wallet-security-review/.work/wallet-core/src/Mnemonic.cpp",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c0.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c1.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c2.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c3.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c4.o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/c5.o",
+      "-Wl,-dead_strip",
+      "-o",
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-positive",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  },
+  {
+    "name": "release-mnemonic32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release",
+      "mnemonic32"
+    ],
+    "exit_code": 1,
+    "timed_out": false
+  },
+  {
+    "name": "release-entropy32",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release",
+      "entropy32"
+    ],
+    "exit_code": 1,
+    "timed_out": false
+  },
+  {
+    "name": "release-entropy-lifetime",
+    "command": [
+      "<TEMP>/T/oath-hdwallet-cmx5xwhr/release",
+      "entropy-lifetime"
+    ],
+    "exit_code": 0,
+    "timed_out": false
+  }
+]

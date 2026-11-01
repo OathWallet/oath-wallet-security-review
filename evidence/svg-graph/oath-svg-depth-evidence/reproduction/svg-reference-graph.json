@@ -1,0 +1,114 @@
+{
+  "check": "svg-reference-graph",
+  "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+  "baseline_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+  "swiftdraw_commit": "82699f4bdf2f075793cfa0d392eb27c59b41a3fe",
+  "fixture_sha256": "055b20e3ebcfdada7dd78c5ebe554cb1ea273a7de7a413c8f0fe08135039b683",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testSharedLeafFirstCannotBypassDepthBudget",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "expected-depth-assertion",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testSharedLeafFirstCannotBypassDepthBudget.log",
+      "log_sha256": "89bf10bec3be8bfb799329b004d9ce6dfddf6439151a9758844a49f2b56361ff"
+    },
+    {
+      "phase": "before",
+      "case": "testShadowedCycleCannotReachRenderer",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "expected-signal-11",
+      "exit_code": -11,
+      "timed_out": false,
+      "log": "before-testShadowedCycleCannotReachRenderer.log",
+      "log_sha256": "56ea87dfd5e85cae20b9a0f9ce71567a3b9022a3e7eb1811f19ccfa23e240ea2"
+    },
+    {
+      "phase": "before",
+      "case": "testSharedRootFirstCannotBypassDepthBudget",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSharedRootFirstCannotBypassDepthBudget.log",
+      "log_sha256": "91f6dcffc9e09ec540e76afa2b80e69c42c3717adbc69f46836530296e1cb232"
+    },
+    {
+      "phase": "before",
+      "case": "testExactlyAtDepthBudgetInBothOrders",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testExactlyAtDepthBudgetInBothOrders.log",
+      "log_sha256": "945dc023476f25443a27da3fee7fa5eaba9b59cbc33422c346b4d5fb392f8da2"
+    },
+    {
+      "phase": "before",
+      "case": "testSiblingReferencesMayShareOneID",
+      "source_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testSiblingReferencesMayShareOneID.log",
+      "log_sha256": "c285f7eb24b0ec56e9dd57a8b91af3b1fab8259e36eb2f7e317caebc45a142d2"
+    },
+    {
+      "phase": "after",
+      "case": "testSharedLeafFirstCannotBypassDepthBudget",
+      "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSharedLeafFirstCannotBypassDepthBudget.log",
+      "log_sha256": "6397367aad8839e63fb331c5ffc28e6e12a63d6eea46ac26e5723700f1a7fe5e"
+    },
+    {
+      "phase": "after",
+      "case": "testShadowedCycleCannotReachRenderer",
+      "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testShadowedCycleCannotReachRenderer.log",
+      "log_sha256": "79bbc6fc2ae3169c9ebdce32082962d4b5050891c8b720f330530768b76623ce"
+    },
+    {
+      "phase": "after",
+      "case": "testSharedRootFirstCannotBypassDepthBudget",
+      "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSharedRootFirstCannotBypassDepthBudget.log",
+      "log_sha256": "3386b57a31c0819f01e499a57ff855c451c3300093c21f382f754d820169a68e"
+    },
+    {
+      "phase": "after",
+      "case": "testExactlyAtDepthBudgetInBothOrders",
+      "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testExactlyAtDepthBudgetInBothOrders.log",
+      "log_sha256": "3e49b4252e84050dc18f1c3135b0a4b5ecbc686a6998b1d7c8674f0851d9d751"
+    },
+    {
+      "phase": "after",
+      "case": "testSiblingReferencesMayShareOneID",
+      "source_commit": "1dbe6cbabb7397ad86be917e034fb88884fbca8d",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testSiblingReferencesMayShareOneID.log",
+      "log_sha256": "f6703004900c189f71c14811a4fa230b0ef57a970b667793a80532718367e888"
+    }
+  ],
+  "duration_seconds": 55.935,
+  "scope": "Production token decoder and pinned drawing dependency; five synthetic images/cases per revision. Separate offline host XCTest process per case.",
+  "log": "svg-reference-graph.log",
+  "log_sha256": "db629d5d4374ae78d9c784474ebe265aed52d1e8104be2536345547228046a74"
+}
