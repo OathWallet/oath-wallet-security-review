@@ -85,7 +85,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress16)
+The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress17)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
@@ -106,9 +106,9 @@ The workflow pins Go 1.26.5. From the audit root after checkout:
 reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
 python3 scripts/go-source-inventory.py .work/source "$reviewed" .work/aezeed-source-inputs.json
 python3 scripts/go_advisory_triage.py evidence/bridge/osv-go.json .work/aezeed-source-inputs.json .work/advisory-triage.json
-cd .work/source/Tools/AezeedBridge
-GOWORK=off GOFLAGS=-mod=readonly go run ../../../../tests/GoDependencyVectors.go
-GOWORK=off GOFLAGS=-mod=readonly go test -race -count=1 github.com/Yawning/aez github.com/kkdai/bstream golang.org/x/crypto/scrypt golang.org/x/crypto/pbkdf2 golang.org/x/crypto/blake2b
+python3 scripts/aezeed-repairs.py .work/source --expected-commit "$reviewed" --output .work/aezeed-paired
+python3 scripts/aezeed-primitives.py .work/source --expected-commit "$reviewed" --output .work/aezeed-primitives
+bash .work/source/Tools/AezeedBridge/test.sh
 ```
 
 The committed OSV snapshot makes that classification replayable; CI also obtains
@@ -145,5 +145,9 @@ the same 94-case extended-key corpus has 21 failures before repair and none afte
 2,363 upstream C++ tests and 113 C checks pass. Apple framework integration is
 still outstanding. The [advisory gate correction](review/ADVISORY-GATE.md) retains
 raw scanner findings and binds classification to the exact selected build graph.
-The completion ledger has 7,679 outstanding items, including three previously
-documented unused Go API defects now explicitly indexed as open findings.
+That progress-16 snapshot recorded 7,679 outstanding items.
+
+Progress 17 adds [three repaired aezeed dependency APIs and rebuilt archives](review/AEZEED-DEPENDENCY-REPAIRS.md),
+merged in application PR 10. Identical before/after regressions, independent
+primitive checks, host tests and generic iOS compilation pass. Current coverage
+and missing exact-target checks remain explicit in the completion ledger.

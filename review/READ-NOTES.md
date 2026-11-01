@@ -358,3 +358,22 @@ is claimed. WalletConnect session/runtime coverage remains incomplete.
 See [INPUT-BOUNDARIES.md](INPUT-BOUNDARIES.md) for the a65601b source reads,
 partial traces, new OW-2026-006 finding and explicit host/runtime limitations.
 Earlier findings, attempts and evidence remain unchanged.
+
+
+## Aezeed repaired-source and archive follow-up
+
+Read the complete disposable source preparer, archive build script, test script,
+paired regression file, production-vector test, repair manifest, patch, bridge
+README and provenance manifest in application commit 92423215. The copied LND
+fixture is byte-identical to the canonical package fixture. The three repaired
+upstream CBC/GCM/BLAKE2b implementations retain their earlier full-source reads;
+the changed validation ordering and length encodings were re-reviewed alongside
+the identical before/after regression corpus. New hashes are explicit in the
+upstream ledger, with original upstream hashes retained.
+
+All three target source inventories select the repaired hashes. The ten generated
+framework files have verified manifest hashes and two-isolated-build evidence;
+that generated-artifact disposition is not a source review of compiler output.
+The metadata-only final commit preserves all sixteen input and ten output hashes.
+No timing proof, whole-toolchain review, historical App Store equivalence or
+broader runtime coverage is inferred. See AEZEED-DEPENDENCY-REPAIRS.md.

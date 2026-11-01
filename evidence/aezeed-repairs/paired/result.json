@@ -1,0 +1,126 @@
+{
+  "check": "aezeed-repairs",
+  "source_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
+  "status": "passed",
+  "stages": [
+    {
+      "stage": "before",
+      "exit_code": 1,
+      "timed_out": false,
+      "expected_outcome_observed": true,
+      "duration_seconds": 66.165,
+      "outcomes": {
+        "pass": [
+          "TestBlakeValidStateRoundTrips"
+        ],
+        "fail": [
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/1",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/15",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/17",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/31",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/33",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/63",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/65",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/129",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/1",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/15",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/17",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/31",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/33",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/63",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/65",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/129",
+          "TestCBCRejectsPartialBlocksWithoutMutation",
+          "TestCBCRejectsShortOutputWithoutMutation",
+          "TestBlakeRejectsInvalidStateWithoutMutation/83/0",
+          "TestBlakeRejectsInvalidStateWithoutMutation/83/65",
+          "TestBlakeRejectsInvalidStateWithoutMutation/83/255",
+          "TestBlakeRejectsInvalidStateWithoutMutation/212/129",
+          "TestBlakeRejectsInvalidStateWithoutMutation/212/255",
+          "TestBlakeRejectsInvalidStateWithoutMutation",
+          "TestGCMLargeLengthEncoding/aad-ct32",
+          "TestGCMLargeLengthEncoding/aad-ct64",
+          "TestGCMLargeLengthEncoding/nonce-ct64",
+          "TestGCMLargeLengthEncoding/plaintext-ct64",
+          "TestGCMLargeLengthEncoding"
+        ],
+        "skip": [],
+        "top_level": {
+          "pass": [
+            "TestBlakeValidStateRoundTrips"
+          ],
+          "fail": [
+            "TestBlakeRejectsInvalidStateWithoutMutation",
+            "TestCBCRejectsPartialBlocksWithoutMutation",
+            "TestCBCRejectsShortOutputWithoutMutation",
+            "TestGCMLargeLengthEncoding"
+          ],
+          "skip": []
+        }
+      },
+      "fixture_sha256": "6c5b6c62aad8b3937c1df378d08873572fef18d028e6ff6ac17dd5edf8f78647",
+      "log_sha256": "a013f5eb329dea66410af6be8e7eda258ae0bab445271ddb85e9fbf9d132fe17"
+    },
+    {
+      "stage": "after",
+      "exit_code": 0,
+      "timed_out": false,
+      "expected_outcome_observed": true,
+      "duration_seconds": 134.381,
+      "outcomes": {
+        "pass": [
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/1",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/15",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/17",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/31",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/33",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/63",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/65",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct64/129",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/1",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/15",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/17",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/31",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/33",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/63",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/65",
+          "TestCBCRejectsPartialBlocksWithoutMutation/ct32/129",
+          "TestCBCRejectsPartialBlocksWithoutMutation",
+          "TestCBCRejectsShortOutputWithoutMutation",
+          "TestBlakeRejectsInvalidStateWithoutMutation/83/0",
+          "TestBlakeRejectsInvalidStateWithoutMutation/83/65",
+          "TestBlakeRejectsInvalidStateWithoutMutation/83/255",
+          "TestBlakeRejectsInvalidStateWithoutMutation/212/129",
+          "TestBlakeRejectsInvalidStateWithoutMutation/212/255",
+          "TestBlakeRejectsInvalidStateWithoutMutation",
+          "TestBlakeValidStateRoundTrips",
+          "TestGCMLargeLengthEncoding/aad-ct32",
+          "TestGCMLargeLengthEncoding/aad-ct64",
+          "TestGCMLargeLengthEncoding/nonce-ct64",
+          "TestGCMLargeLengthEncoding/plaintext-ct64",
+          "TestGCMLargeLengthEncoding"
+        ],
+        "fail": [],
+        "skip": [],
+        "top_level": {
+          "pass": [
+            "TestBlakeRejectsInvalidStateWithoutMutation",
+            "TestBlakeValidStateRoundTrips",
+            "TestCBCRejectsPartialBlocksWithoutMutation",
+            "TestCBCRejectsShortOutputWithoutMutation",
+            "TestGCMLargeLengthEncoding"
+          ],
+          "fail": [],
+          "skip": []
+        }
+      },
+      "fixture_sha256": "6c5b6c62aad8b3937c1df378d08873572fef18d028e6ff6ac17dd5edf8f78647",
+      "log_sha256": "7ac7f536996da9f22635eeccc74322cad5aeb349650152f7f34979d39eb415a1"
+    }
+  ],
+  "duration_seconds": 202.585,
+  "patch_sha256": "f07e90feceb2a11ccd9d871e9d5ffb92d6c4eba319d973224827ab8e4d1c5203",
+  "prepared_manifest_sha256": "8b68229caaea017d081bf5796a97ac5c905a552b84f8b96470e922612b05273b",
+  "log_sha256": "7ac7f536996da9f22635eeccc74322cad5aeb349650152f7f34979d39eb415a1",
+  "runtime_scope": "Go host race detector; real dependencies, public synthetic inputs; no App Store equivalence claim"
+}

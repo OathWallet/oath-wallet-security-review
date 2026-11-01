@@ -210,28 +210,45 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: python3 scripts/checkout.py
+      - name: Select the same dependency sources used by the archive build
+        run: |
+          mkdir -p evidence/ci
+          if test -f .work/source/Tools/AezeedBridge/prepare_source.py; then
+            python3 .work/source/Tools/AezeedBridge/prepare_source.py .work/aezeed-build-source > evidence/ci/aezeed-prepare.log 2>&1
+            cp .work/aezeed-build-source/prepared-source.json evidence/ci/aezeed-prepared-source.json
+            echo "AEZEED_SOURCE_DIRECTORY=$PWD/.work/aezeed-build-source/Tools/AezeedBridge" >> "$GITHUB_ENV"
+            echo "AEZEED_MODULE_MODE=vendor" >> "$GITHUB_ENV"
+          else
+            echo "AEZEED_SOURCE_DIRECTORY=$PWD/.work/source/Tools/AezeedBridge" >> "$GITHUB_ENV"
+            echo "AEZEED_MODULE_MODE=readonly" >> "$GITHUB_ENV"
+          fi
       - name: Test the bridge source with the race detector
-        working-directory: .work/source/Tools/AezeedBridge
+        working-directory: ${{ env.AEZEED_SOURCE_DIRECTORY }}
         run: |
           go version
-          go mod verify
-          go test -race -count=1 ./... > ../../../../evidence/ci/aezeed-go-tests.log 2>&1
-          go vet ./... > ../../../../evidence/ci/aezeed-go-vet.log 2>&1
-          go run ./cmd/seedvectors > ../../../../evidence/ci/aezeed-vectors.json
+          go test -mod="$AEZEED_MODULE_MODE" -race -count=1 ./... > ../../../../evidence/ci/aezeed-go-tests.log 2>&1
+          go vet -mod="$AEZEED_MODULE_MODE" ./... > ../../../../evidence/ci/aezeed-go-vet.log 2>&1
+          go run -mod="$AEZEED_MODULE_MODE" ./cmd/seedvectors > ../../../../evidence/ci/aezeed-vectors.json
       - name: Check public fixture equality
         run: python3 -c "import json; assert json.load(open('evidence/ci/aezeed-vectors.json')) == json.load(open('.work/source/Packages/OathAezeed/Tests/OathAezeedTests/Fixtures/lnd-production.json'))"
       - name: Inventory all aezeed source targets and exercise independent vectors
         run: |
           reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
           python3 scripts/go-source-inventory.py .work/source "$reviewed" evidence/ci/aezeed-selected-sources.json
-          cd .work/source/Tools/AezeedBridge
-          GOWORK=off GOFLAGS=-mod=readonly go run ../../../../tests/GoDependencyVectors.go > ../../../../evidence/ci/go-dependency-vectors.json
+          cd "$AEZEED_SOURCE_DIRECTORY"
+          GOWORK=off go run -mod="$AEZEED_MODULE_MODE" ../../../../tests/GoDependencyVectors.go > ../../../../evidence/ci/go-dependency-vectors.json
+          cd "$GITHUB_WORKSPACE/.work/source/Tools/AezeedBridge"
+          # These upstream test files come from the immutable original modules.
+          # Patched-source validation is the separate production regression job.
           GOWORK=off GOFLAGS=-mod=readonly go test -race -count=1 github.com/Yawning/aez github.com/kkdai/bstream golang.org/x/crypto/scrypt golang.org/x/crypto/pbkdf2 golang.org/x/crypto/blake2b > ../../../../evidence/ci/upstream-go-tests.log
       - name: Verify recorded aezeed artifacts and independent AES primitives
         run: |
           reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
           python3 scripts/aezeed-provenance.py .work/source --expected-commit "$reviewed" --output evidence/ci/aezeed-provenance
           python3 scripts/aezeed-primitives.py .work/source --expected-commit "$reviewed" --output evidence/ci/aezeed-primitives
+          if test -f .work/source/Tools/AezeedBridge/prepare_source.py; then
+            python3 scripts/aezeed-repairs.py .work/source --expected-commit "$reviewed" --output evidence/ci/aezeed-repairs
+          fi
       - name: Preserve and classify current module advisories against selected source
         run: |
           python3 scripts/tools.py
@@ -243,10 +260,10 @@ jobs:
           test "$result" -le 1
           python3 scripts/go_advisory_triage.py evidence/ci/aezeed-osv.json evidence/ci/aezeed-selected-sources.json evidence/ci/aezeed-advisory-triage.json
       - name: Check reachable Go advisories
-        working-directory: .work/source/Tools/AezeedBridge
+        working-directory: ${{ env.AEZEED_SOURCE_DIRECTORY }}
         run: |
           go install golang.org/x/vuln/cmd/govulncheck@v1.9.0
-          govulncheck -json ./... > ../../../../evidence/ci/govulncheck.json
+          GOFLAGS="-mod=$AEZEED_MODULE_MODE" govulncheck -json ./... > ../../../../evidence/ci/govulncheck.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: aezeed-source-evidence, path: evidence/ci, retention-days: 90}

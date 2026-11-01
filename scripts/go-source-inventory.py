@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import subprocess
 from source_state import require_source_state
+from aezeed_source import prepared_bridge
 
 
 def objects(text):
@@ -18,14 +19,14 @@ def objects(text):
         text = text[length:]
 
 
-def collect(source, commit):
+def collect_graph(source, commit, bridge, preparation):
     require_source_state(source, commit)
-    bridge = source / 'Tools/AezeedBridge'
+    original_bridge = source / 'Tools/AezeedBridge'
     version = subprocess.check_output(['go', 'version'], text=True).strip()
     if not version.startswith('go version go1.26.5 '):
         raise ValueError('Expected Go 1.26.5')
-    subprocess.run(['go', 'mod', 'verify'], cwd=bridge, check=True)
-    modules = list(objects(subprocess.check_output(['go', 'list', '-mod=readonly', '-m', '-json', 'all'], cwd=bridge, text=True)))
+    subprocess.run(['go', 'mod', 'verify'], cwd=original_bridge, check=True)
+    modules = list(objects(subprocess.check_output(['go', 'list', '-mod=readonly', '-m', '-json', 'all'], cwd=original_bridge, text=True)))
     module_graph = {m['Path']: m.get('Version', 'main') for m in modules}
     if any(m.get('Replace') for m in modules):
         raise ValueError('Unexpected replaced Go dependency')
@@ -39,7 +40,8 @@ def collect(source, commit):
         sdk_path = subprocess.check_output(['xcrun', '--sdk', sdk, '--show-sdk-path'], text=True).strip()
         env = {k: v for k, v in os.environ.items() if not k.startswith('OATH_')}
         env.update(GOOS=goos, GOARCH='arm64', CGO_ENABLED='1',
-                   CC=f'{clang} -target {triple} -isysroot {sdk_path}', GOFLAGS='-mod=readonly', GOWORK='off')
+                   CC=f'{clang} -target {triple} -isysroot {sdk_path}',
+                   GOFLAGS='-mod=vendor' if preparation else '-mod=readonly', GOWORK='off')
         rows = list(objects(subprocess.check_output(['go', 'list', '-deps', '-json', '.'], cwd=bridge, env=env, text=True)))
         packages = []
         for row in rows:
@@ -62,6 +64,7 @@ def collect(source, commit):
                         'clang_triple': triple, 'sdk': sdk, 'packages': packages})
     require_source_state(source, commit)
     return {'source_commit': commit, 'go_version': version, 'targets': targets,
+            'source_preparation': preparation,
             'module_graph': module_graph,
             'go_mod_sha256': hashlib.sha256((bridge/'go.mod').read_bytes()).hexdigest(),
             'go_sum_sha256': hashlib.sha256((bridge/'go.sum').read_bytes()).hexdigest(),
@@ -69,6 +72,12 @@ def collect(source, commit):
             'limitations': ['Go source selection only, not a linked-binary measurement.',
                             'Standard library sources remain a separate toolchain review boundary.',
                             'No source file is marked reviewed by this inventory.']}
+
+
+def collect(source, commit):
+    require_source_state(source, commit)
+    with prepared_bridge(source) as (bridge, preparation):
+        return collect_graph(source, commit, bridge, preparation)
 
 
 if __name__ == '__main__':

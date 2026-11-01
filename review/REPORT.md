@@ -7,10 +7,11 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`02a6e8ab66c7629dcb9dd36637c683457e821d98`**.
-Merged in [application PR 9](https://github.com/devdasx/oath-wallet/pull/9),
-merge `b3d70526734da9c69294cdb00fe2663387378b3c`. Restoration now records
-effective Ed25519 paths while preserving keys recovered from existing backups.
+Current review target: **`92423215ddd638b070c605a5911a9ebc7b15615f`**.
+Merged in [application PR 10](https://github.com/devdasx/oath-wallet/pull/10),
+merge `24e0fcedf4a55ba60345de77bed304e272b67dac`. Three aezeed dependency
+API defects now have tested source repairs and rebuilt Apple archives.
+The earlier restoration repair remains included.
 These are public-source repairs; no App Store upload or submission was performed.
 Later revisions do not inherit these results automatically.
 
@@ -22,12 +23,13 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,669 files: 158 reviewed, 8 partially reviewed,
-10 generated artifacts verified, 4,493 outstanding. The Wallet Core upstream
+The application ledger contains 4,675 files: 167 reviewed, 8 partially reviewed,
+10 generated artifacts verified, 4,490 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 15 reviewed, 5 partially reviewed, 3,921 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
-unrepaired defects in Go dependency APIs outside the traced Oath call path;
-[details and reproductions](AEZEED-DEPENDENCY-REVIEW.md) remain public.
+defects in Go dependency APIs outside the traced Oath call path; the
+[original reproductions](AEZEED-DEPENDENCY-REVIEW.md) and
+[verified source/archive repairs](AEZEED-DEPENDENCY-REPAIRS.md) remain public.
 Two Core C API hazards still present in the shipped dependency are documented in the
 [child-derivation review](CHILD-DERIVATION-REVIEW.md); no reachable Oath
 vulnerability was established for those calls.
@@ -474,3 +476,42 @@ findings and the required advisory gate, rather than hidden or waived work.
 The final-target matrix is still active at publication. Native CI preparation,
 Apple framework integration, dependency provenance and full source review remain
 unfinished. No simulator, physical device or App Store operation occurred.
+
+
+## Progress 17: integrated aezeed repairs
+
+Application PR 10 integrates DEP-AEZEED-001 through DEP-AEZEED-003 in public source.
+The identical paired regression corpus reports four failing top-level tests on
+original dependencies and all five passing after repair (25 nested cases; 30
+pass events total). The 512 MiB GCM tests exercise each truncated length field
+against standard Go GCM. Ten independent positive tests pass, including 24,576
+S-box lane comparisons, 1,536 AES differential samples, 514 GHASH lengths and
+220 independent BLAKE2b vectors.
+
+On the exact current target, seven aezeed host tests pass; diagnostics has 118
+passes and two explicit skips. Public-source and secret checks, diagnostics
+coverage, the prepared Go race/vet/vector script, and unsigned generic iOS
+Release compilation pass. Six new integrity-helper tests bring the helper
+suite to 78 passes. Original failures, preflight pin rejections, and actual
+before/after logs remain under `evidence/aezeed-repairs` with original and
+published hashes.
+
+Two isolated builds at `0d41065b` match all ten framework files. The final
+metadata-only commit has identical sixteen bridge inputs and ten framework
+hashes; that comparison is separate evidence, not a relabeled rebuild run.
+The previous 02a6e8a validation does not count as a complete matrix for this
+new target. Whole-wallet review and Core Apple integration remain incomplete.
+
+
+The fresh raw OSV scan retains 40 advisory occurrences. Their affected import
+paths are absent from all three selected target graphs, so the exact-source
+gate passes with zero unresolved dispositions. `govulncheck` separately exits
+zero on the prepared patched source. This is source-reachability evidence, not
+module-wide or historical-binary clearance. The complete raw responses remain
+under `evidence/aezeed-repairs/advisories`.
+
+The earlier corrected gate also passed in GitHub run
+[41264140940](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41264140940)
+on target 02a6e8a. That prior-target result is preserved separately. The current
+completion gate reports 7,679 outstanding items; new required exact-target
+checks remain pending even where an earlier target passed them.

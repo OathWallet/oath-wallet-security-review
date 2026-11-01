@@ -137,27 +137,42 @@
     "id": "DEP-AEZEED-001",
     "severity": "unused-dependency-api-defect",
     "title": "CBC accepts a partial final block",
-    "status": "open",
-    "document": "../review/AEZEED-DEPENDENCY-REVIEW.md",
+    "status": "fixed-and-retested",
+    "document": "../review/AEZEED-DEPENDENCY-REPAIRS.md",
     "reachable_oath_exploit_established": false,
-    "qualification": "Previously documented and reproduced; machine-readable index now includes this still-unrepaired source defect."
+    "qualification": "Identical regression fixture fails on original modules and passes on repaired sources; rebuilt archives integrated in public source. APIs remain outside the traced wallet decoding path.",
+    "fix_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
+    "fix_pr": "https://github.com/devdasx/oath-wallet/pull/10",
+    "evidence": "evidence/aezeed-repairs",
+    "fixed_in_public_framework": true,
+    "available_in_app_store_verified": false
   },
   {
     "id": "DEP-AEZEED-002",
     "severity": "unused-dependency-api-defect",
     "title": "Malformed BLAKE2b serialized state can panic",
-    "status": "open",
-    "document": "../review/AEZEED-DEPENDENCY-REVIEW.md",
+    "status": "fixed-and-retested",
+    "document": "../review/AEZEED-DEPENDENCY-REPAIRS.md",
     "reachable_oath_exploit_established": false,
-    "qualification": "Previously documented and reproduced; machine-readable index now includes this still-unrepaired source defect."
+    "qualification": "Identical regression fixture fails on original modules and passes on repaired sources; rebuilt archives integrated in public source. APIs remain outside the traced wallet decoding path.",
+    "fix_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
+    "fix_pr": "https://github.com/devdasx/oath-wallet/pull/10",
+    "evidence": "evidence/aezeed-repairs",
+    "fixed_in_public_framework": true,
+    "available_in_app_store_verified": false
   },
   {
     "id": "DEP-AEZEED-003",
     "severity": "unused-dependency-api-defect",
     "title": "GCM truncates authenticated lengths to 32 bits",
-    "status": "open",
-    "document": "../review/AEZEED-DEPENDENCY-REVIEW.md",
+    "status": "fixed-and-retested",
+    "document": "../review/AEZEED-DEPENDENCY-REPAIRS.md",
     "reachable_oath_exploit_established": false,
-    "qualification": "Previously documented and reproduced; machine-readable index now includes this still-unrepaired source defect."
+    "qualification": "Identical regression fixture fails on original modules and passes on repaired sources; rebuilt archives integrated in public source. APIs remain outside the traced wallet decoding path.",
+    "fix_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
+    "fix_pr": "https://github.com/devdasx/oath-wallet/pull/10",
+    "evidence": "evidence/aezeed-repairs",
+    "fixed_in_public_framework": true,
+    "available_in_app_store_verified": false
   }
 ]

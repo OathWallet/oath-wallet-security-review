@@ -1,5 +1,10 @@
 # Selected aezeed dependencies — progress 10
 
+Follow-up: these three originally reproduced defects now have [tested source
+repairs and rebuilt public app archives](AEZEED-DEPENDENCY-REPAIRS.md). The
+original review and failing evidence below are retained as historical evidence.
+
+
 Application target: `f7441b85d5216b702dde490eb027aece1a6cfb5a`.
 This maintainer-commissioned Codex source review follows progress 9. It is not
 independent certification, a timing proof, or clearance of the historical binaries.

@@ -1,6 +1,6 @@
 {
   "repository": "Pinned Go modules selected by the aezeed bridge",
-  "application_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2",
+  "application_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
   "files": [
     {
       "path": "gitlab.com/yawning/bsaes.git/ghash/ghash.go",
@@ -26,7 +26,7 @@
       "path": "gitlab.com/yawning/bsaes.git/internal/modes/cbc.go",
       "module": "gitlab.com/yawning/bsaes.git",
       "version": "v0.0.0-20190805113838-0a714cd429ec",
-      "sha256": "267823ab4de1731824daf9c0237d3dd4fb083b8ba15cc4da26123cecb0050f70",
+      "sha256": "eca40a4e1f57de1f3bdb850697735042ee33a37d33669c53d1d452be4ded8a60",
       "kind": "GoFiles",
       "targets": [
         "mac",
@@ -39,8 +39,12 @@
         "evidence/bridge/selected-sources.json",
         "review/AEZEED-DEPENDENCY-REVIEW.md",
         "evidence/aezeed-dependencies/verified-source-hashes.json",
-        "evidence/aezeed-dependencies/final/aezeed-primitives.json"
-      ]
+        "evidence/aezeed-dependencies/final/aezeed-primitives.json",
+        "review/AEZEED-DEPENDENCY-REPAIRS.md",
+        "evidence/aezeed-repairs/selected-sources.json"
+      ],
+      "upstream_sha256": "267823ab4de1731824daf9c0237d3dd4fb083b8ba15cc4da26123cecb0050f70",
+      "source_patch": "https://github.com/devdasx/oath-wallet/blob/92423215ddd638b070c605a5911a9ebc7b15615f/Tools/AezeedBridge/dependency-repairs.patch"
     },
     {
       "path": "gitlab.com/yawning/bsaes.git/internal/modes/ctr.go",
@@ -66,7 +70,7 @@
       "path": "gitlab.com/yawning/bsaes.git/internal/modes/gcm.go",
       "module": "gitlab.com/yawning/bsaes.git",
       "version": "v0.0.0-20190805113838-0a714cd429ec",
-      "sha256": "55e3ae5c68a7234bf5f3055ac64d3f9a50d6b372c1572b247efdb4a7cd8eecd4",
+      "sha256": "670aee5ef610230c06ce016ee3b8bea1f3dce9666b597f4bda6b6a97a24f8523",
       "kind": "GoFiles",
       "targets": [
         "mac",
@@ -79,8 +83,12 @@
         "evidence/bridge/selected-sources.json",
         "review/AEZEED-DEPENDENCY-REVIEW.md",
         "evidence/aezeed-dependencies/verified-source-hashes.json",
-        "evidence/aezeed-dependencies/final/aezeed-primitives.json"
-      ]
+        "evidence/aezeed-dependencies/final/aezeed-primitives.json",
+        "review/AEZEED-DEPENDENCY-REPAIRS.md",
+        "evidence/aezeed-repairs/selected-sources.json"
+      ],
+      "upstream_sha256": "55e3ae5c68a7234bf5f3055ac64d3f9a50d6b372c1572b247efdb4a7cd8eecd4",
+      "source_patch": "https://github.com/devdasx/oath-wallet/blob/92423215ddd638b070c605a5911a9ebc7b15615f/Tools/AezeedBridge/dependency-repairs.patch"
     },
     {
       "path": "gitlab.com/yawning/bsaes.git/internal/modes/modes.go",
@@ -223,7 +231,7 @@
       "path": "golang.org/x/crypto/blake2b/blake2b.go",
       "module": "golang.org/x/crypto",
       "version": "v0.22.0",
-      "sha256": "f370186a863f5ef09589b842c688747c480dfd4d3d6bb89661e08de78ed49bb8",
+      "sha256": "bc134a815697dcce10c84dee42dc06b9f2337bfce0409be6148e205362d48cf3",
       "kind": "GoFiles",
       "targets": [
         "mac",
@@ -236,8 +244,12 @@
         "evidence/bridge/selected-sources.json",
         "review/AEZEED-DEPENDENCY-REVIEW.md",
         "evidence/aezeed-dependencies/verified-source-hashes.json",
-        "evidence/aezeed-dependencies/final/aezeed-primitives.json"
-      ]
+        "evidence/aezeed-dependencies/final/aezeed-primitives.json",
+        "review/AEZEED-DEPENDENCY-REPAIRS.md",
+        "evidence/aezeed-repairs/selected-sources.json"
+      ],
+      "upstream_sha256": "f370186a863f5ef09589b842c688747c480dfd4d3d6bb89661e08de78ed49bb8",
+      "source_patch": "https://github.com/devdasx/oath-wallet/blob/92423215ddd638b070c605a5911a9ebc7b15615f/Tools/AezeedBridge/dependency-repairs.patch"
     },
     {
       "path": "golang.org/x/crypto/blake2b/blake2b_generic.go",
@@ -532,5 +544,6 @@
   ],
   "standard_library_review": "outstanding; versioned toolchain boundary",
   "historical_binary_match": false,
-  "follow_up_application_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a"
+  "follow_up_application_commit": "f7441b85d5216b702dde490eb027aece1a6cfb5a",
+  "previous_application_commit": "f23413c848d202c2b3c7061bdb349e07144ab0a2"
 }
