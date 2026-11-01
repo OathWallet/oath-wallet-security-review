@@ -9138,5 +9138,902 @@
     "runtime_scope": "host",
     "live_network_tests_enabled": false,
     "evidence_path": "swap-approval/oath-swap-approval-evidence/final/public.json"
+  },
+  {
+    "check": "solana-vector-isolation",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "baseline_commit": "e46fff5686db48a40103c9dbffe5e830cfc5548a",
+    "status": "passed",
+    "fixture_sha256": "33465bf994ceb215eadf6f7b1d03dff1a2664a7d9fa1eaaf62e12556dc1adbda",
+    "assertion_body_sha256": "34ea6aef0d739a9bf2116f61672aee4acfcf36fdd9249ab537cca9667fce6aa0",
+    "test_binary_sha256": "2b5038e1e4415be09c95fb5a887619ff25a3c36c92ee322048c8f8b30b63f7a0",
+    "production_source_unchanged": true,
+    "changed_paths_from_baseline": [
+      "Packages/OathAnkr/Tests/OathAnkrTests/SolanaMultisigTests.swift"
+    ],
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 1.42,
+      "log": "build.log",
+      "log_sha256": "2a32f6b73929d622ce2025f1aafd5911a2916dc363ba88f5af7403f50463e796"
+    },
+    "toolchain": {
+      "swift": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.141,
+        "log": "swift-version.log",
+        "log_sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+      },
+      "xcode": {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.084,
+        "log": "xcode-version.log",
+        "log_sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+      }
+    },
+    "cases": [
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.236,
+        "log": "testOfficialSquadsSetupVector00.log",
+        "log_sha256": "10f89793c1b9afa328e14ed1a231cc90db8328b56f199133d23202712c677b6f",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector00",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.259,
+        "log": "testOfficialSquadsSetupVector01.log",
+        "log_sha256": "223d20a836f121df572b518d4e3f3559a1661782597c96045d1ce534b2df1db1",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector01",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.237,
+        "log": "testOfficialSquadsSetupVector02.log",
+        "log_sha256": "276b1b4d3af13d0f6cd334d0a1f59588c1223151d3b377cc0f3ec3c0b9bd68b2",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector02",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.233,
+        "log": "testOfficialSquadsSetupVector03.log",
+        "log_sha256": "dd1d5dfffb4920da5b4fc1430913576538257d4cd524f05dc0669b519285a916",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector03",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.24,
+        "log": "testOfficialSquadsSetupVector04.log",
+        "log_sha256": "156319e2f9929360509582e9e0d3ca9a692cc313ca9a39ed448038fee8e87eec",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector04",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.171,
+        "log": "testOfficialSquadsSetupVector05.log",
+        "log_sha256": "673ba6cb07a9cd4c63b1b5ff17216a2908f9501740f352ccd2de6fd657700c1d",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector05",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.255,
+        "log": "testOfficialSquadsSetupVector06.log",
+        "log_sha256": "6f660985c98e6f4942280614d47a209321a3cdb70b21f8b045480749554e2f7b",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector06",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.133,
+        "log": "testOfficialSquadsSetupVector07.log",
+        "log_sha256": "bec04026d9d1ed8bea5f4c723bf95c4eaf05ee08c5053891ad6731fa701c6106",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector07",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.202,
+        "log": "testOfficialSquadsSetupVector08.log",
+        "log_sha256": "69721db57c50bb9218c79c07c614e44d4366af0a191e95c03b6ab1d6cdb69fa3",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector08",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.2,
+        "log": "testOfficialSquadsSetupVector09.log",
+        "log_sha256": "df6a499fcd651bc99fe343492dd94424d2d89946737c65c893e07a18e18e0d3d",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector09",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.187,
+        "log": "testOfficialSquadsSetupVector10.log",
+        "log_sha256": "eea1c5184b285fa4bd432ac6e2bf3e8a0d915c5cf6b3cafcfcab39cc78a57341",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector10",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.225,
+        "log": "testOfficialSquadsSetupVector11.log",
+        "log_sha256": "2429791f3dfa08c4fdbcf4dbf7ebb6f2315aa4a19200a5febae21a26b522740f",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector11",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.2,
+        "log": "testOfficialSquadsSetupVector12.log",
+        "log_sha256": "e7de117c080e6bdaa8ecd53ce9d53587a3576c3dad473346e799a37b61d11a26",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector12",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.239,
+        "log": "testOfficialSquadsSetupVector13.log",
+        "log_sha256": "2e3f1f7625d30c0fde8c0c606fa4bd78c9090fe1dadc188c2b763f36c3b03509",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector13",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.188,
+        "log": "testOfficialSquadsSetupVector14.log",
+        "log_sha256": "0957f9334b75d3d701ba89e2550cfd0a488466bd11f0015ab754ea6606c3be55",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector14",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.193,
+        "log": "testOfficialSquadsSetupVector15.log",
+        "log_sha256": "7950ba4629113221e0ec34f2ee55fcee966316916f230f03a67688aedd3aaf7a",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector15",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.187,
+        "log": "testOfficialSquadsSetupVector16.log",
+        "log_sha256": "12ac6912cecae9486bcc231a68406b6fff5528b3a130c61a33d5ebdd13ea2a08",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector16",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.194,
+        "log": "testOfficialSquadsSetupVector17.log",
+        "log_sha256": "2ce9a0a9dfacfd5b0e0e72e965147dc9b01d7c335422196866f7f89cd42f50e3",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector17",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.189,
+        "log": "testOfficialSquadsSetupVector18.log",
+        "log_sha256": "4f0863589dd505c804bc854f37642400d980576449a119f928e105491766c43f",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSetupVector18",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.65,
+        "log": "testOfficialSquadsNativeVector00.log",
+        "log_sha256": "9dab4607b77c5fa188127f4f25e131ebe937a3ad232a45b545101a1863d3d7d6",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector00",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.748,
+        "log": "testOfficialSquadsNativeVector01.log",
+        "log_sha256": "f5e1ad8f23e368162a4e9c88cda7c4902fdccac3716f0aa1ff13328c80cf2512",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector01",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.755,
+        "log": "testOfficialSquadsNativeVector02.log",
+        "log_sha256": "e60ef06c77e5e311abc88d187d967a8e4f5230d251dcf7e3c63e502ff3bce8e7",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector02",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.75,
+        "log": "testOfficialSquadsNativeVector03.log",
+        "log_sha256": "faca82c205e5e1610c9dd0d2344c89d50576e519a3a5297ed8dd50c4417f5f90",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector03",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.752,
+        "log": "testOfficialSquadsNativeVector04.log",
+        "log_sha256": "a89df23fdc68087f8f91f005001db58bd02a5fff24fcf05431aadbb98faf8ac3",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector04",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.747,
+        "log": "testOfficialSquadsNativeVector05.log",
+        "log_sha256": "bd89575051eb47ce781bfe4038c8d41f306ae0599d21032871a35656b31d10a0",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector05",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.81,
+        "log": "testOfficialSquadsNativeVector06.log",
+        "log_sha256": "c1dbb96aed71710712a267f71ba5860c170410958bb75e9b082ead0fe2d1b75d",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector06",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.816,
+        "log": "testOfficialSquadsNativeVector07.log",
+        "log_sha256": "c82f09a3c895ca0d8f900ed74e004aecdeab0d9b64f85cc15187ea98830d2743",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector07",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.785,
+        "log": "testOfficialSquadsNativeVector08.log",
+        "log_sha256": "a4fac8b17ea31ddf9decd0872d5532b70dc8d36c1a2c975e2f985bc04a6c479e",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector08",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.81,
+        "log": "testOfficialSquadsNativeVector09.log",
+        "log_sha256": "628cf68d162e6078eb16fa65408220254f679077792c59b6d87dc9ac97e7487c",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector09",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.779,
+        "log": "testOfficialSquadsNativeVector10.log",
+        "log_sha256": "76e420bc797e1f6e4067760c8ebfcb788a29fd8bd160bde691cf6a1746b03c3f",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector10",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.768,
+        "log": "testOfficialSquadsNativeVector11.log",
+        "log_sha256": "fff3a4d5903806c174974143f5fcecb3131823a1a91e95b5798b990315ce62e7",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector11",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.752,
+        "log": "testOfficialSquadsNativeVector12.log",
+        "log_sha256": "0b5a2a0401a770c353b4251e6f12f86649e1c8de5b90c206008c08fb72512400",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector12",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.662,
+        "log": "testOfficialSquadsNativeVector13.log",
+        "log_sha256": "af108011f71b24db94e9c5fe3eff805462d7ebd557a093140dd926ea1970cb21",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector13",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.762,
+        "log": "testOfficialSquadsNativeVector14.log",
+        "log_sha256": "6e82ba2c873be15d761ba70317feb16c9bc40097988039fb650295b089d072f9",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector14",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.704,
+        "log": "testOfficialSquadsNativeVector15.log",
+        "log_sha256": "6d0cb4bcc8adec0a261b752b25743d45f73484c030637acc2bf739f488e1087b",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector15",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.765,
+        "log": "testOfficialSquadsNativeVector16.log",
+        "log_sha256": "5990902e76f555c381e2e2d5829835d857a005384b7f75dcd8dd2f14bf56e153",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector16",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.763,
+        "log": "testOfficialSquadsNativeVector17.log",
+        "log_sha256": "532cb54960d18d1852acf3d57c8bbbbe10d4add7acefd51f1e1421f7e914e8df",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector17",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.757,
+        "log": "testOfficialSquadsNativeVector18.log",
+        "log_sha256": "61ac3d35fc0e2f83513d6ed58c4a67e0f6c889db87b0a4f2f9ba069784511018",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsNativeVector18",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.281,
+        "log": "testOfficialSquadsSPLVector00.log",
+        "log_sha256": "89f19ee2e5ce78be96910800fb85ae306236bd77c19ce7f5705df894fa6a8cd9",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector00",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.348,
+        "log": "testOfficialSquadsSPLVector01.log",
+        "log_sha256": "8d4b51d4169b399130c877fec6d8056ebf00260b302e18c02545bd75b117fb6d",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector01",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.31,
+        "log": "testOfficialSquadsSPLVector02.log",
+        "log_sha256": "5548a37f658096c98d3b83ec17138ac02e402007282cbaecb620b1edfb59c2fd",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector02",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.327,
+        "log": "testOfficialSquadsSPLVector03.log",
+        "log_sha256": "af950f29cf66dbbe40922e92f0401f74ce40b9812a98b12064b02be2129646bf",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector03",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.339,
+        "log": "testOfficialSquadsSPLVector04.log",
+        "log_sha256": "a1ced084c5e393b5aa5371e7736832d65fb9b71f99edfe93591f3559cfac4ae6",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector04",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.354,
+        "log": "testOfficialSquadsSPLVector05.log",
+        "log_sha256": "3181d26f76b75b89074d67e594652b5f543942fa2962ab341faab33f19f3a87e",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector05",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.323,
+        "log": "testOfficialSquadsSPLVector06.log",
+        "log_sha256": "9454fb050e29d7354b08fab238cadf9e3a2f38537f8de9677444f5097b8743b5",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector06",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.358,
+        "log": "testOfficialSquadsSPLVector07.log",
+        "log_sha256": "e4656cda42882a3fd90fa6bb905291c90afac5db9c793c55ec89270662585e86",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector07",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.291,
+        "log": "testOfficialSquadsSPLVector08.log",
+        "log_sha256": "874920f6c9644d54ebef7d1a14b5c06150de0829c09c3405843a1a3082448a2b",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector08",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.246,
+        "log": "testOfficialSquadsSPLVector09.log",
+        "log_sha256": "ee493d298bd36ebeaf9e4e3720866c05d981c832124687347175964c097776cc",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector09",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.373,
+        "log": "testOfficialSquadsSPLVector10.log",
+        "log_sha256": "47e82a22a3dc791455e700171d5ef34f590c7edf055fc6597bf32d48b1ab124e",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector10",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.403,
+        "log": "testOfficialSquadsSPLVector11.log",
+        "log_sha256": "25fe6ebad8093fce5b6dec17cca1f36e1323b01e004a3b638262b751c7aa761f",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector11",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.358,
+        "log": "testOfficialSquadsSPLVector12.log",
+        "log_sha256": "bfe73b7dd34f4a0b59e52367233b621c1ca6eb35a0e2f1c4c9bdb6049b792190",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector12",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.325,
+        "log": "testOfficialSquadsSPLVector13.log",
+        "log_sha256": "b6b8afcbd27de699f10a2883f16b26d878844246178305acf76fb2d486a3d20f",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector13",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.225,
+        "log": "testOfficialSquadsSPLVector14.log",
+        "log_sha256": "bbbc51691a1f859beea2358ff18c0ada6be555adbe088099e16c20f14658660b",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector14",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.272,
+        "log": "testOfficialSquadsSPLVector15.log",
+        "log_sha256": "3d925ef4cff1a68391cc27d16a708e4557f1bb9a09340745bd05e09704eee717",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector15",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.318,
+        "log": "testOfficialSquadsSPLVector16.log",
+        "log_sha256": "01b28eb29257d8c02e7000eae9bf02ae50dbd60e62ee9d4b94057a9cb3972790",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector16",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.294,
+        "log": "testOfficialSquadsSPLVector17.log",
+        "log_sha256": "389fe1ad021d6c5e53d971933c53c41a4752c26cbf3bf4ba7decab6400407141",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector17",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 2.285,
+        "log": "testOfficialSquadsSPLVector18.log",
+        "log_sha256": "1d59d1eaa202c7a233dc9d0eff3098d0a4e50e9a3985a5ed210bacd7e9b1902a",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsSPLVector18",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.88,
+        "log": "testOfficialSquadsToken2022Vector00.log",
+        "log_sha256": "30230956c1cec536710d6a72559365cc0a656ee14c9baa7379c8f313fb678e88",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector00",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.782,
+        "log": "testOfficialSquadsToken2022Vector01.log",
+        "log_sha256": "7463e0c6217ac14b8b4ff797f20f02c12b8bee17600f0bb557113d51ad86497a",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector01",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.822,
+        "log": "testOfficialSquadsToken2022Vector02.log",
+        "log_sha256": "5e0eaf6a823f1df2028cc6fece0bb02bdf5e939cc52551f6a7b7a4aad485db6e",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector02",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.875,
+        "log": "testOfficialSquadsToken2022Vector03.log",
+        "log_sha256": "5009e11f0675d2c47c880da19798e9436229c366539f4e6e355a744b7ae2c068",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector03",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.865,
+        "log": "testOfficialSquadsToken2022Vector04.log",
+        "log_sha256": "748114624f3a9fc62236eb50f48b4b14945d120ed06f8b43b89b30f5df57d81d",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector04",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.826,
+        "log": "testOfficialSquadsToken2022Vector05.log",
+        "log_sha256": "4e4420cedd08f0b999498f3dfb3cd66b290d3f0c8bfe2851400f12457fe4b70e",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector05",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.81,
+        "log": "testOfficialSquadsToken2022Vector06.log",
+        "log_sha256": "59b37dbc28820f2ff1935dac69adfde61932e7a224d568132cc7e23805837693",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector06",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.883,
+        "log": "testOfficialSquadsToken2022Vector07.log",
+        "log_sha256": "f48dd4c283a5b7c33a5857d88b687cf3d315ed0df9c162e0fa1c29b0fe78edca",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector07",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.902,
+        "log": "testOfficialSquadsToken2022Vector08.log",
+        "log_sha256": "c3e5cbe5ae7e81164b5bc55a4ad7ecf4cba4b76d2ea3e140b4feaff1becb27e2",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector08",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.89,
+        "log": "testOfficialSquadsToken2022Vector09.log",
+        "log_sha256": "9908ba9aa37c63f8f352f0995b7883e53121bff7ecca87973f2f84173a7b1ca4",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector09",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.903,
+        "log": "testOfficialSquadsToken2022Vector10.log",
+        "log_sha256": "f8d1b8aa4692078f7adc9b5abbf916c73a816614e01614dd3ea782cdb919ad30",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector10",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.86,
+        "log": "testOfficialSquadsToken2022Vector11.log",
+        "log_sha256": "c48ce18843ebef0fd8f9abc574f5926c6fdd1e69097b91ab52498ed8195ac18a",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector11",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.827,
+        "log": "testOfficialSquadsToken2022Vector12.log",
+        "log_sha256": "a3a7f4eb332230c6434be305332c2ab1013f76ad740ffaf5e55857ce0288bf28",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector12",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.873,
+        "log": "testOfficialSquadsToken2022Vector13.log",
+        "log_sha256": "8b5e09af2b62772f3bbab8bd41f0aae465987cfa5a0fb68111da896218b0735c",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector13",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.758,
+        "log": "testOfficialSquadsToken2022Vector14.log",
+        "log_sha256": "fea89222ffc9b943979c2ca7d0df6c0f1c49aa95d361fc2bffbd611c8971dfd6",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector14",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.901,
+        "log": "testOfficialSquadsToken2022Vector15.log",
+        "log_sha256": "64316e25cecd11b2935c41bae83a3fcab4c1dc991456971a94cbb1782c167194",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector15",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.933,
+        "log": "testOfficialSquadsToken2022Vector16.log",
+        "log_sha256": "ef94a8f670ae51ddac801e4359020c2d05784ae0130b9b4ceb29fcad84d9108d",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector16",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.892,
+        "log": "testOfficialSquadsToken2022Vector17.log",
+        "log_sha256": "2b0f6f54fd69a2941fe34abbb6b9b8e73d730697fed39c78135f6044c0ddc347",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector17",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 1.883,
+        "log": "testOfficialSquadsToken2022Vector18.log",
+        "log_sha256": "7c6acac4cfdc5a9f35fc5d473c08780919b94fa7fd677088b1603867ff21c708",
+        "selector": "OathAnkrTests.SolanaMultisigTests/testOfficialSquadsToken2022Vector18",
+        "status": "passed"
+      }
+    ],
+    "duration_seconds": 37.876,
+    "runtime_scope": "macOS host, 76 independent SDK vectors, separate network-denied processes, same assertions and 120-second process limit; no device or blockchain",
+    "log": "solana-vector-isolation.log",
+    "log_sha256": "56921598fbb7e434ea309321b8c2f4f094c56941b5f77c8f2dfbad6ec09637ab",
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/final-individual/solana-vector-isolation.json"
+  },
+  {
+    "check": "squads-sdk-regeneration",
+    "status": "passed",
+    "vectors": 76,
+    "kinds": {
+      "setup": 19,
+      "native": 19,
+      "spl": 19,
+      "token2022": 19
+    },
+    "versions": {
+      "@sqds/multisig": "2.1.4",
+      "@solana/web3.js": "1.98.4",
+      "@solana/spl-token": "0.4.14"
+    },
+    "node": "v26.5.0",
+    "fixture_sha256": "33465bf994ceb215eadf6f7b1d03dff1a2664a7d9fa1eaaf62e12556dc1adbda",
+    "generator_sha256": "f022d5aea954fc75ed7519e92826fbc5a637e89c70bd79d5ff7ec81d57e83412",
+    "dependency_lock_sha256": "b17cfe193c3eaa4ae8699310440ae0d8cb570a32d2efb1e642abb03cc10ec5fe",
+    "scope": "Complete deterministic fixture equality; no deployed program or production transaction proof",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "log": "sdk-regeneration.log",
+    "log_sha256": "10758d0780a79437c5e53e016c7ccfb1e0614a98e91becc597a07d8a30bee413",
+    "network_access": "denied by sandbox-exec for generator and child process",
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/sdk-regeneration.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-squads-isolation-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 226.76,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "fd0c598563043e2dc3a2d639fba3d21361a5e24c8d4a58f2b63ee9695f5a0791",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "9e470243aa6753c532790d07a408a0d9a865874f313de2c1a600eb6acdf5f5a8"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/validation/OathAnkr.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-squads-isolation-evidence/validation"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 6.93,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "e29006c0624c2ca41cc3385790229d1f935992d0497445f15f34a6d6579ee01d",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "b5dd492bff08a84820929d0574f9baf86e3e0a55301ba3568b109601140535f1"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 26.16,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "39a656e25247a873a1a28623612ea14609a23f4ca7420cc693ce6e397c86c47b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/validation/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.38,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 13.07,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "fd8367c9acffb52fb2669446516f26e3ff3cabb05b068f91495c8229292526ea",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/solana-vector-isolation/oath-squads-isolation-evidence/validation/build.json"
   }
 ]

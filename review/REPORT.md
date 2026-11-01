@@ -7,7 +7,16 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`e46fff5686db48a40103c9dbffe5e830cfc5548a`**.
+Current review target: **`f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1`**.
+[Progress 29](SOLANA-VECTOR-ISOLATION.md) isolates the 76 unchanged Solana
+multisig SDK vectors and reproduces their complete bytes with pinned SDK tools.
+Current-target host tests report 1,296 networking passes/194 skips and 118
+diagnostics passes/two skips; unsigned Release compilation and source checks
+pass. The original CI timeout and SDK-tool advisories remain in the record.
+The source-pinned final-target GitHub matrix is not yet verified.
+
+The prior target `e46fff5686db48a40103c9dbffe5e830cfc5548a` retains the following
+findings and its original evidence:
 [OW-2026-014](../findings/OW-2026-014.md) repairs omitted router commands on the
 first approval screen. The identical host-model fixture retains 30 expected
 assertion failures before and nine passing executions after; ten independent
@@ -32,8 +41,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,808 files: 242 reviewed, 31 partially reviewed,
-10 generated artifacts verified, 4,525 outstanding. The inventory also includes
+The application ledger contains 4,808 files: 246 reviewed, 31 partially reviewed,
+11 generated artifacts verified, 4,520 outstanding. The inventory also includes
 website changes since the previous source pin; those are excluded from the mobile-wallet verdict. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
