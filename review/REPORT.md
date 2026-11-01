@@ -7,13 +7,12 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`8f5c27c030fdd85e1d5c3c18d9da8aa92ac04c79`**.
-[OW-2026-012](../findings/OW-2026-012.md) repairs inconsistent permission history
-and batch results after a duplicate readback callback. The identical fixture
-produces six expected failures and three passing reorganization controls before;
-all nine executions pass after. [PR 16](https://github.com/devdasx/oath-wallet/pull/16) is merged with the same source tree.
-Normal-app duplicate scheduling is not demonstrated. Prior findings and failed
-attempts remain visible below. No App Store upload or submission is included.
+Current review target: **`8dcc9c4c50eae2010b648782c0582c3db70c6357`**.
+[OW-2026-013](../findings/OW-2026-013.md) repairs false pending Polygon swap
+progress when equivalent EVM addresses use different capitalization. The same
+fixture retains 12 expected assertions before and nine passing executions after.
+[PR 17](https://github.com/devdasx/oath-wallet/pull/17) is merged with the tested source tree.
+Prior findings and failed attempts remain visible. No App Store upload or submission is included.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
 [application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
@@ -31,8 +30,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,680 files: 224 reviewed, 29 partially reviewed,
-10 generated artifacts verified, 4,417 outstanding. The Wallet Core upstream
+The application ledger contains 4,681 files: 236 reviewed, 34 partially reviewed,
+10 generated artifacts verified, 4,401 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -762,3 +761,41 @@ and published hashes, sanitized logs, source/fixture/binary pins, durations and
 explicit skips. No simulator, device, funded account, broadcast, App Store
 upload or submission occurred. This is not independent certification or a
 whole-wallet completion verdict.
+
+## Progress 27 — swap destination identity and review boundaries
+
+The canonical EVM-chain mapping now supplies progress destination comparison,
+fixing the omitted Polygon case. This is informational/reliability: false pending
+presentation, not signing bypass or demonstrated fund loss. The original fixture
+commit is `8fa6ee3bf99caf78ab71997b5642e323cccb95da`; the fixed commit is
+`8dcc9c4c50eae2010b648782c0582c3db70c6357`. PR 17 merged as
+`db7f3340e652160f1b5eefa16afb9817f395786e`, with identical tree
+`84cadb5882dbde25ee921d7a2858c4ac172ef603`.
+
+- Same three methods in three network-denied host processes: three failing Polygon
+  executions with four exact assertion failures each, six passing control executions
+  before; all nine pass after. Fixture hash is identical; binary hash changes.
+- OathAnkr: **1,220 passed, 194 explicitly skipped**, zero failures.
+- OathDiagnostics: **118 passed, two explicitly skipped**, zero failures.
+- Public-source scan and diagnostic coverage pass.
+- Generic unsigned iOS Release build passes in **434.42 seconds**, reusing an
+  isolated build cache. This is compile-only, not a clean-from-empty or runtime check.
+- Audit tooling: **101 helper tests passed**. Workflow lint passes with only the
+  existing custom runner-label warning filtered; the original warning is retained.
+
+[Swap review](SWAP-REVIEW.md) records whole-file and partial reads. Mixed
+swap-and-transfer first-screen visibility remains an unconfirmed review lead.
+Its related files remain partial; the Polygon fix does not resolve that question.
+Live provider settlement, current pool availability and UI rendering were not tested.
+
+The ledger contains **4,681 application files: 236 reviewed, 34 partial,
+10 generated-verified, 4,401 outstanding**. Core remains 21 reviewed, 20 partial
+and 3,900 outstanding. The completion gate reports **7,617 outstanding items**.
+Earlier tests retain their original source pins. Current-target full CI is not
+verified: the retained metadata records progress25's run with 10 successful,
+five active and 35 queued jobs, and progress26 pending with zero jobs.
+
+The **1,589-file** bundle [evidence/swap-review](../evidence/swap-review) preserves
+source/fixture/binary hashes, sanitized logs, actual durations, skips and paired
+results. No local Oath/Vault edits, simulator, physical device, production
+transaction, App Store upload or submission occurred in this increment.

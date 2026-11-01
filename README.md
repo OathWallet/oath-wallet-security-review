@@ -20,10 +20,13 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [duplicate readback contradicts verified permission history](findings/OW-2026-012.md).
-The same database fixture has six expected failures and three passing controls before,
-and all nine executions pass after. [Discovery, history and presentation review](review/PERMISSION-DISCOVERY-REVIEW.md)
-records exact read scope and the limit: normal-app duplicate scheduling is not established.
+Latest application finding: [Polygon swap destination capitalization](findings/OW-2026-013.md).
+The same production-decoder fixture has 12 expected assertion failures and six
+passing control executions before, and all nine executions pass after.
+[Swap source review](review/SWAP-REVIEW.md) retains the separate open question
+about mixed swap-and-transfer visibility on the first approval screen.
+The prior [duplicate permission readback finding](findings/OW-2026-012.md) and
+[discovery review](review/PERMISSION-DISCOVERY-REVIEW.md) retain their evidence.
 The previous [permission-grant revocation fix](findings/OW-2026-011.md) and
 [batch source review](review/PERMISSION-BATCH-REVIEW.md) remain available.
 The previous [delegation nonce serialization finding](findings/OW-2026-010.md) remains,
@@ -48,6 +51,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/swap-progress.py .work/source --output .work/swap-after --scratch .work/swap-after-build
 python3 scripts/permission-batch-races.py .work/source --output .work/batch-after --scratch .work/batch-after-build
 python3 scripts/permission-readback.py .work/source --output .work/readback-after --scratch .work/readback-after-build
 python3 scripts/evm-response-boundary.py .work/source --output .work/evm-evidence/after --scratch .work/evm-after-build

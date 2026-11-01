@@ -310,5 +310,17 @@
     "retest_scope": "Same three test methods in three network-denied processes each: six expected batch/history mismatch failures and three reorganization controls before, all nine pass after. Real SQL, imported-key signatures, journal, restart and reorg triggers. Normal-app duplicate scheduling, UI effect and fund loss not demonstrated.",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/16"
+  },
+  {
+    "id": "OW-2026-013",
+    "severity": "informational",
+    "title": "Polygon swap payouts stay pending when address capitalization differs",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-013.md",
+    "fix_commit": "8dcc9c4c50eae2010b648782c0582c3db70c6357",
+    "regression_only_commit": "8fa6ee3bf99caf78ab71997b5642e323cccb95da",
+    "retest_scope": "Same three-method corpus in three network-denied processes per phase: 12 expected Polygon destination assertion failures and six passing control executions before; all nine executions pass after. Production decoder, synthetic provider observations. False pending status, no signing bypass or fund loss demonstrated.",
+    "available_in_app_store_verified": false,
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/17"
   }
 ]
