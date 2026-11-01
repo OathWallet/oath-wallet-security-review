@@ -28,9 +28,9 @@ def instruction_digest(body):
     if cursor!=32+size:raise ValueError('Incomplete object commands')
     return h.hexdigest() if total else None
 
-def members(data):
+def payloads(data):
     if not data.startswith(b'!<arch>\n'):raise ValueError('Not a Unix static archive')
-    at=8;rows=[]
+    at=8;count=0
     while at<len(data):
         header=data[at:at+60]
         if len(header)!=60 or header[58:]!=b'`\n':raise ValueError('Invalid member header')
@@ -42,9 +42,13 @@ def members(data):
             if n>len(body) or n<=0:raise ValueError('Invalid long name')
             name=body[:n].rstrip(b'\0').decode();body=body[n:]
         if name not in ('__.SYMDEF','__.SYMDEF SORTED','__.SYMDEF_64','__.SYMDEF_64 SORTED'):
-            rows.append({'name':name,'sha256':sha(body),'bytes':len(body),'instruction_digest':instruction_digest(body)})
-    if at!=len(data) or not rows:raise ValueError('Incomplete archive')
-    return rows
+            count+=1
+            yield name,body
+    if at!=len(data) or not count:raise ValueError('Incomplete archive')
+
+def members(data):
+    return [{'name':name,'sha256':sha(body),'bytes':len(body),'instruction_digest':instruction_digest(body)}
+            for name,body in payloads(data)]
 
 def inventory(path):
     arch=subprocess.check_output(['xcrun','lipo','-archs',path],text=True).strip()
