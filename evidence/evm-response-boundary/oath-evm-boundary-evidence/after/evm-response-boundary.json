@@ -1,0 +1,50 @@
+{
+  "check": "evm-response-boundary",
+  "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+  "phase": "after",
+  "status": "passed",
+  "runs": [
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.671,
+      "log": "case-01.log",
+      "log_sha256": "9d135015173725a762364ff353fbfc67435db18d36cca8ea84a0b0ae140d80c2",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.133,
+      "log": "case-02.log",
+      "log_sha256": "104a463c3c28b93d9b420439613c9d5c9dfb0ada11af21aab8d3b23ad3a520ed",
+      "status": "passed"
+    },
+    {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.129,
+      "log": "case-03.log",
+      "log_sha256": "8ba960350320d87f0d6f680e7cf034a243d910815be106d2e111a88931aedba7",
+      "status": "passed"
+    }
+  ],
+  "boundary_reproduced": 0,
+  "tests_passed": 9,
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 36.282,
+    "log": "build.log",
+    "log_sha256": "af635d857c237cdfc5220cb3925da7ca1b4fd0f4870598a445808848d3cb66e1"
+  },
+  "duration_seconds": 37.918,
+  "selector": "OathAnkrTests.EVMSendResponseBoundaryTests",
+  "fixture_sha256": "500387c6be0d8c5a9a1fd72eb47d2e0792a85c4b74f1e41e6164d45261d443ef",
+  "test_binary_sha256": "3f64d1b3ee6461c4e54c7f68b547c596f3dc5c311485fe037eab8fc4749f1557",
+  "runtime_scope": "macOS host; synthetic oversized RPC responses; network denied; no simulator or device",
+  "limitation": "Three deterministic repetitions. Does not demonstrate fund loss, denial of service, or a streaming transport memory limit; default transport separately caps replies at 64 MiB.",
+  "process_runs_passed": 3,
+  "log": "evm-response-boundary.log",
+  "log_sha256": "dd85962f597ceb943581a94941287989fa32d20b4103a48de8d5133d3bbd22e7"
+}

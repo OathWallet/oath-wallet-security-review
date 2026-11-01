@@ -1,0 +1,592 @@
+{
+  "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+  "selected_classes": [
+    "EVMBroadcastRecoveryTests",
+    "EVMDuplicateBroadcastTests",
+    "EVMMultisigInclusionTests",
+    "EVMMultisigTests",
+    "EVMPendingReceiptTests",
+    "EVMSendRPCRegressionTests",
+    "EVMSendResponseBoundaryTests",
+    "EVMSendTests",
+    "FilecoinSendTests",
+    "PermissionTests",
+    "WalletConnectEVMActionTests",
+    "WalletConnectEVMRequestTests"
+  ],
+  "counts": {
+    "passed": 66,
+    "skipped": 5
+  },
+  "included_in_full_package_totals": true,
+  "cases": [
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testLostBroadcastReplyRecoversConfirmedExactTransaction",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.618,
+      "log": "OathAnkr-cases/575356bab8d201ae.log",
+      "log_sha256": "ab7a61a5b5b7095fb655ed88737def77ba58b624f025db42849c8bd88df70aaf"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testLostBroadcastReplyShowsSubmittedThenConfirmedWithoutResending",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.109,
+      "log": "OathAnkr-cases/3f394e857669d212.log",
+      "log_sha256": "0d5277502e9dc5a7973e052f781cfa07b50d79d94b67f477346b0343f211e554"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testNullPrimaryLookupConsultsIndependentProviderOnExistingEVMChains",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.561,
+      "log": "OathAnkr-cases/4ef3664250cbc501.log",
+      "log_sha256": "f91be2fa19a57876d24ba79fd3367d23293df469ffc67d04616d9b8f20bc7408"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReadOnlyPreviouslyBroadcastBSCTransaction",
+      "status": "skipped",
+      "exit_code": 0,
+      "duration_seconds": 0.085,
+      "log": "OathAnkr-cases/31c68c1cd971e260.log",
+      "log_sha256": "1ef186a4b2b87adf2897652b7c78216d9ffb0bee0d1a72c9e9d6eddd253e04f4"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReceiptFailureWithoutExactTransactionRemainsUnknown",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.098,
+      "log": "OathAnkr-cases/1c63627e05432c44.log",
+      "log_sha256": "0c989d85e080c563ed8355c9fd12b0c56c47d9d7286398d21b16bf52254a57fb"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testReceiptLookupFailureRetainsPrivacyFilteredDiagnostics",
+      "status": "skipped",
+      "exit_code": 0,
+      "duration_seconds": 0.09,
+      "log": "OathAnkr-cases/5ff69a789ddd14de.log",
+      "log_sha256": "35d15c137a38197cd835b755e4f2f3a11dc414639e24ec80351870154f15d5e0"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testStalePendingEntryDoesNotHideFinalizedReplacement",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.104,
+      "log": "OathAnkr-cases/d4e2b3865bfe72c5.log",
+      "log_sha256": "576f9c4a8a4892ea02445de98f0cbbdd836d8a36802d0bb57bbb8b4156315720"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testUnknownMismatchedAndCancelledBroadcastNeverClaimAcceptance",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.135,
+      "log": "OathAnkr-cases/62c0e06a6f80f71b.log",
+      "log_sha256": "7ef1b1d72bb59294e8d1dd5230f7be8ad87a7804fcdd549c1a78271e46ba7617"
+    },
+    {
+      "selector": "OathAnkrTests.EVMBroadcastRecoveryTests/testVerifiedPendingTransactionDoesNotDependOnReceiptOrFinalityServices",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.116,
+      "log": "OathAnkr-cases/e834fcef80b88c08.log",
+      "log_sha256": "1544122718541d0d1f9a22c27dacd0153b003808c4df0dd351341689a592e157"
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testAlreadyKnownReconcilesExactSignedTransactionAcrossNetworks",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 1.119,
+      "log": "OathAnkr-cases/7354cbd838a949df.log",
+      "log_sha256": "e683eb9feba56fa44f0bfeb5c4bb157a07345e84a316aa2c7b5cbc7964f01048"
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testCancellationDuringReconciliationDoesNotRebroadcast",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.112,
+      "log": "OathAnkr-cases/9c37d84354e251b8.log",
+      "log_sha256": "653f6fcda79c56b2ade358e9a084a2f6810a174b8e905919b1d2ca0792e63cdd"
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testDuplicateSafeOuterExecutionStillRequiresInnerSuccess",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.215,
+      "log": "OathAnkr-cases/a9efe471ee215bf5.log",
+      "log_sha256": "c06e7ed95ba1e0183cf2be351237dc491eaad0a59777426a845ec7959a961305"
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testReconciledDuplicateIsSilentButUnverifiedDuplicateReportsItsCause",
+      "status": "skipped",
+      "exit_code": 0,
+      "duration_seconds": 0.087,
+      "log": "OathAnkr-cases/c7202bcc367fbf30.log",
+      "log_sha256": "f0fc42b7acc0d9661e53a1d4b8ddb848343ce31116f6a0c40e5d16203adeb791"
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testRecoveryReadCanRaceWithBroadcastAndThenReconcile",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.106,
+      "log": "OathAnkr-cases/3544097d968284f3.log",
+      "log_sha256": "8ef8f1d028f4bd80c0cde3da36c5ecd6f3c21adf91bfef047dd4a6d278a87cd8"
+    },
+    {
+      "selector": "OathAnkrTests.EVMDuplicateBroadcastTests/testUnverifiableDuplicateNeverBecomesSuccess",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.143,
+      "log": "OathAnkr-cases/10b6d1f5d23efc0b.log",
+      "log_sha256": "847eb1c0e358f9f53b313693060d6a184d3a6ea3e1ad1efe9a4183c7df5d1e82"
+    },
+    {
+      "selector": "OathAnkrTests.EVMMultisigInclusionTests/testIncludedSafeRequiresInnerExecutionEvidence",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.161,
+      "log": "OathAnkr-cases/6ce1fc08b54a1f8e.log",
+      "log_sha256": "29539fb468e4e359a53b993b187b9436e18648896200c1378f99f64c50af4fcb"
+    },
+    {
+      "selector": "OathAnkrTests.EVMMultisigTests/testNetworkBindingTamperingAndExecutorAccounting",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 2.788,
+      "log": "OathAnkr-cases/1b9f9d701ca73a2b.log",
+      "log_sha256": "db3ec52ef107eb48879d93782ed177b3a6cb034f0123c2c5be4621c3da94beb4"
+    },
+    {
+      "selector": "OathAnkrTests.EVMMultisigTests/testRejectMalformedPolicies",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.085,
+      "log": "OathAnkr-cases/99440e387c8c3a78.log",
+      "log_sha256": "7f990a65ee680ed0c8e1c072f54f0ff52a7b1636707805dd57a5a6496d857b2d"
+    },
+    {
+      "selector": "OathAnkrTests.EVMMultisigTests/testSafeExecutionNativeTokensThresholdsAndReplays",
+      "status": "skipped",
+      "exit_code": 0,
+      "duration_seconds": 0.084,
+      "log": "OathAnkr-cases/31717d97926549ed.log",
+      "log_sha256": "5178d4a20f5295074b01d4b7b5aa52aabbd7f6ffcfd159a01817d4ff27d9cd3d"
+    },
+    {
+      "selector": "OathAnkrTests.EVMMultisigTests/testThresholdSignatureBindingAndRecovery",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.62,
+      "log": "OathAnkr-cases/06e69b1832167c3f.log",
+      "log_sha256": "90acfc137699b985bea453c8cb05fee875ddf2db264f63a87fcb5c93e2931fca"
+    },
+    {
+      "selector": "OathAnkrTests.EVMPendingReceiptTests/testMalformedOrMismatchedEvidenceStillFails",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.142,
+      "log": "OathAnkr-cases/1893114ef2902fd9.log",
+      "log_sha256": "7e93e4b6cb8852920a4c879a143dddf72075bdcfcc314d71318c87c4891ca6f8"
+    },
+    {
+      "selector": "OathAnkrTests.EVMPendingReceiptTests/testReceiptArrivingAfterPendingTransactionReadRemainsAcceptedUntilConsistent",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.523,
+      "log": "OathAnkr-cases/36beca1995915d1a.log",
+      "log_sha256": "8e2052b03f28a5c7f33967ee2fa3205863747728e346a106b378ec62fc834eab"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testContractEffectsRequirePendingVisibilityAndDelegationReservesTwoNonces",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.108,
+      "log": "OathAnkr-cases/64dabcd127268299.log",
+      "log_sha256": "9257b36e7295545d8d3a80ad0aa4a9fece0f2458d69c707b915aeed8ba11dd3e"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testEveryEVMNetworkExposesVerifiedInclusionBeforeFinality",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 1.207,
+      "log": "OathAnkr-cases/5f781a4c7e90baae.log",
+      "log_sha256": "91f1b23f52b7e7d539a14fa9ff3a7d9ed387549aaa7b81d3553fd13776795f9b"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testEveryNetworkFreshNativeAndTokenSubmitSkipsRecovery",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.804,
+      "log": "OathAnkr-cases/8957dacc3fe25523.log",
+      "log_sha256": "a3f780ff90fcb9b692f170af640be1b3e2ec3ee8ef380fae2e02bb691e993de1"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testEverySupportedNetworkNativeTokenAndMax",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.745,
+      "log": "OathAnkr-cases/2ed259e92e58f5be.log",
+      "log_sha256": "586e821645c2054666e1552b6ef7638b693976348203919d4181ed518510380b"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testIndependentFallbackIsChainChecked",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.092,
+      "log": "OathAnkr-cases/5e3f5502c51196da.log",
+      "log_sha256": "46d9be51e77c477e06b62bcb25672b15c5b622d01977d6cf6471c8dec5ab464e"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testLegacyAndL2FeeReceipts",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.147,
+      "log": "OathAnkr-cases/f6db71819998d735.log",
+      "log_sha256": "7948e29bc8c88b431a6d768774d3b0d8f5d023170b79a0159db9556993641949"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testLocalCommitmentsReserveNextNonceTokenAmountAndMaximumGasAcrossNetworks",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 1.155,
+      "log": "OathAnkr-cases/f48312acccd2ba6a.log",
+      "log_sha256": "22c7453374c030f2e458f034474cd6df018d2d258f7244c76be96d065f0f8ce8"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testNegativeRPCRejectionIsPreservedWithoutProviderRetry",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.09,
+      "log": "OathAnkr-cases/74d330cc5bc15398.log",
+      "log_sha256": "f581d2c2351530d3b920337011c32dd93a090faf235a4f411a26c1c97eea0be5"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testObservedPendingBalanceIsNotDoubleSubtractedAndIncomingFundsAreNotAdvanced",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.114,
+      "log": "OathAnkr-cases/72b386864dd3004e.log",
+      "log_sha256": "382e55f86a018adaaa2e37bc5c0a30e9616be22f6f1209ee375080d63c4d2852"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testPendingPredecessorAllowsAnotherNativeAndTokenSend",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.552,
+      "log": "OathAnkr-cases/4c515d9eac4ee47d.log",
+      "log_sha256": "80a146db62e26c130bf59917f7380b2404d3f8fe95eb73f47381713fc43ea4b3"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testPreconfirmationAndMalformedReceiptCannotDisplayConfirmation",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.11,
+      "log": "OathAnkr-cases/8baca4333ce39a32.log",
+      "log_sha256": "419dfa3c2dddad2713bec9288aefffd2acb0486020a37983012f362c68eaeabb"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testPreflightRechecksReservationsAndRejectsStaleNonceOrNewlySpentFunds",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.119,
+      "log": "OathAnkr-cases/5ec77bc06fc3e727.log",
+      "log_sha256": "b16f938dfa9872f0c3eec770c8f3b1718ee90de2ad91a9b8964d1e00df780699"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testProviderMessagesUseSharedPrivacyFilter",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.103,
+      "log": "OathAnkr-cases/2f03d6d8349c3360.log",
+      "log_sha256": "1e40c310bba85714c07b07f51f4a21a160a9248360cbdeb15eff3afaadb206bc"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testQuoteMaxAndPreflightUseNativeGasReserve",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.099,
+      "log": "OathAnkr-cases/d52ae177a5708a5c.log",
+      "log_sha256": "ff88fdd3bce397c16f75882fa4ab675af0f7c54c043a26cf1c1b8b78e9892954"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testReceiptConfirmationFailureAndTampering",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.166,
+      "log": "OathAnkr-cases/39773e6be683b10f.log",
+      "log_sha256": "397a39dc5e9a3db4cdc0c8104106db02edd65f25f58a3d4657adfd487f2809fa"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testReservationIdentityDuplicatesAndNonceGapsAreRejected",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.111,
+      "log": "OathAnkr-cases/dc0722688586e784.log",
+      "log_sha256": "000fa421f6430408c247f6cd12580c3ee332ceef0e376e56404551bafdf1c083"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testTokenExecutionAndDeliveredAmountAreIndependent",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.134,
+      "log": "OathAnkr-cases/6f1fc39ee9b60e72.log",
+      "log_sha256": "e020771ef9d7b64036af9a761ba0de8706265fcb78c25f67e8e6df68278f4df2"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testUnknownAndBroadcastAcceptanceRemainNonterminal",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.108,
+      "log": "OathAnkr-cases/ec46d7206511d167.log",
+      "log_sha256": "ad7db2bebe4431aff81ae5e1f3e1da310c2f0d3922e1807ce4b355c70e2d17ac"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testUnsupportedLineaMethodUsesChainVerifiedProviderFallback",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.1,
+      "log": "OathAnkr-cases/47d6e7f6c16d6761.log",
+      "log_sha256": "1ffd84d0f3b9e614f0a62738cacebf895fd0e5bb6144dafc9ebafe680fff58e2"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendRPCRegressionTests/testWrongChainMismatchedIDsPendingNonceAndFeeFailuresReject",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.111,
+      "log": "OathAnkr-cases/62038c8ba26470b1.log",
+      "log_sha256": "1b6dae508675c92299281cfe2aed15de79a8fe29a9324299973f14845c3ace2c"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendResponseBoundaryTests/testBatchBoundaryStillRejectsOneByteOverAndAcceptsExactLimit",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.099,
+      "log": "OathAnkr-cases/4c650202837396f6.log",
+      "log_sha256": "692f6d54c7d6d568c5e8f6508b507f62bd9391a0cad0738a32a3cf3fcf1c9643"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendResponseBoundaryTests/testExactStandaloneLimitRemainsAccepted",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.095,
+      "log": "OathAnkr-cases/9bb8275aa69bbfa6.log",
+      "log_sha256": "f4c094ec28340f0908992655c102aab44be2cda187d784ab874c180b52512b16"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendResponseBoundaryTests/testOversizedStandaloneChainReplyPreventsBroadcast",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.09,
+      "log": "OathAnkr-cases/0ab5b4350fc02172.log",
+      "log_sha256": "249960e2103516c9225ae0dede2e632e4321d20a91b08d008ae03a762535eb2b"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendTests/testDecodedPlanCannotBypassNetworkFeeAmountOrAgeValidation",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.09,
+      "log": "OathAnkr-cases/67c8cb3efc5350db.log",
+      "log_sha256": "39c5e478d272ef4b452e22fa7bf119c6259c4a332366add4705161d819f485f0"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendTests/testExactUInt256AndNativeMirrorPrecision",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.091,
+      "log": "OathAnkr-cases/bc3ffba106ad6bc0.log",
+      "log_sha256": "85afaa4cf95b94db862587c6e0902fe89da0f526e60cfa5af8cfd19b19968aeb"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendTests/testNativeAndTokenSignaturesMatchIndependentEthersVectors",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.354,
+      "log": "OathAnkr-cases/e5b8055855697b90.log",
+      "log_sha256": "ffcb8544d4d73667ec52fc13ebd265cede150790dc610154b4ff28f15f5a0491"
+    },
+    {
+      "selector": "OathAnkrTests.EVMSendTests/testSignatureIsBoundToChainRecipientNonceAndToken",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.095,
+      "log": "OathAnkr-cases/d23fc1e6ac00e87d.log",
+      "log_sha256": "6583a9c57cf3da30799f496835f3b42febe248c4f21bb88a532fbd619647c3f1"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testExactFeeBudgetCannotBecomeAZeroValuePayment",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.094,
+      "log": "OathAnkr-cases/06d45a69988f8330.log",
+      "log_sha256": "b3ab6778d14be21fb335087b014259489e0e8aa7a7808cce8d8f75068785994c"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testIndependentReadsOverlapWithinTheRequestBudget",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.152,
+      "log": "OathAnkr-cases/d97183f73743f90b.log",
+      "log_sha256": "cedead9850a4d2cbe18e28523161260a1f605de207911f4cf10a2b1f4173ca45"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testLargeFilecoinGasAndDelegatedRecipients",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.109,
+      "log": "OathAnkr-cases/6e509bee1a8e8552.log",
+      "log_sha256": "d68c6262498963fee33023c3c8b8ef90c36e77ec776f93921c565648b6c0a242"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testLotusFeeVectorsAndLargeGasProductsAreExact",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.085,
+      "log": "OathAnkr-cases/f562fc56300e6547.log",
+      "log_sha256": "94deb3c1d2a340ba1dc9fa8f40dd827ea60ade99db48f63f01697cdfdb8dec91"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testMissingHashIndexUsesVerifiedFallbackWithoutRebroadcasting",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.129,
+      "log": "OathAnkr-cases/dae9d984b891601b.log",
+      "log_sha256": "d0865c4d98bb149ea2bc86540a6ed2bd5ff7458703de0d4fc695a529b679c988"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testPublicMainnetFeeQuotesWithoutSigning",
+      "status": "skipped",
+      "exit_code": 0,
+      "duration_seconds": 0.086,
+      "log": "OathAnkr-cases/b8560abb9ccff6a6.log",
+      "log_sha256": "881448d95da27c8ad573637eb71aa245f8ef58a74951ac563847ec82d0b49288"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testRemainingBalancePaysFirstAndOnlyShortfallReducesPayment",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.178,
+      "log": "OathAnkr-cases/e630b804ef788224.log",
+      "log_sha256": "b25dc5d4f248a0fbd959b3512caf079a0acbf293bed7945c539b2472129a6adc"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testReplacementSearchSkipsNullEpochsWithoutGuessingCancellation",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.101,
+      "log": "OathAnkr-cases/09fb4acb7feddd07.log",
+      "log_sha256": "e0a08faa11e8dffc08f64035f218ae4a066838563281b5e1d2bfbb3d5341c6d2"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testStatusRecoveryNeverRebroadcastsTerminalSends",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.18,
+      "log": "OathAnkr-cases/1d98eb07695bc1a9.log",
+      "log_sha256": "dd9438cd0d878249a14c5feba88ce59b59d66db0c46a1eb361140024f0609c9b"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testTestnetIdentityAndNoFeeCurrencyOracle",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.089,
+      "log": "OathAnkr-cases/08f173fe4ee148aa.log",
+      "log_sha256": "e13624b05f5aabf165f9dc50b9c4c6fb1ff433aa751b11d14c3d0b8827bd41e3"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testTokenFeeShortageIsDetectedBeforeFinalSimulation",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.091,
+      "log": "OathAnkr-cases/2724978f0daeab99.log",
+      "log_sha256": "144b8948af939c8c6f962d79bc1f370c41ab331afa1272b30b91b478a3e6b6ab"
+    },
+    {
+      "selector": "OathAnkrTests.FilecoinSendTests/testTokensNeverDeductTheirAmountToPayNativeGas",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.088,
+      "log": "OathAnkr-cases/68718d27072d196f.log",
+      "log_sha256": "483cf5227f787707e65a34a4c24f195c49eb0c0d96d46943b9e046cf2be2e57a"
+    },
+    {
+      "selector": "OathAnkrTests.PermissionTests/testDelegationAuthorizationCannotReplayOrChangeTheApprovedPlan",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.102,
+      "log": "OathAnkr-cases/ea5bbc5ed77d23f8.log",
+      "log_sha256": "0ca38093ceb9de01de9ca91c6aeae0f7ec9d8ce4338f1317f7d97e5d01ab17ab"
+    },
+    {
+      "selector": "OathAnkrTests.PermissionTests/testEventDiscoveryRejectsOtherOwnerAndSeparatesNFTFromToken",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.087,
+      "log": "OathAnkr-cases/b9f934b9180f7180.log",
+      "log_sha256": "960d65678cf14eeed34a8d87dc30f6d550f360a4bff73472463a664347b00f21"
+    },
+    {
+      "selector": "OathAnkrTests.PermissionTests/testMalformedOrAlreadyRemovedPermissionsCannotBeSigned",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.089,
+      "log": "OathAnkr-cases/bc939fc84ce87801.log",
+      "log_sha256": "86e9f0cf7abb61551d96720357cf2ef13dab513f3c773e20a9dcea6b6c10da3c"
+    },
+    {
+      "selector": "OathAnkrTests.PermissionTests/testRemovalCalldataHasNoValueOrSpenderApproval",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.089,
+      "log": "OathAnkr-cases/ee76ad2fe5f188cc.log",
+      "log_sha256": "cae4321fc53fd54e2c131ba5a920c091631ff39f86b565df933291b500953eb7"
+    },
+    {
+      "selector": "OathAnkrTests.PermissionTests/testSignedRemovalBoundToExactContractAndNoAssetValue",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.096,
+      "log": "OathAnkr-cases/226c6e30580f9173.log",
+      "log_sha256": "a774dea53d172bc386b085097d16d734db83a47fae11c8abe4a5b8f9e0041254"
+    },
+    {
+      "selector": "OathAnkrTests.WalletConnectEVMActionTests/testIndependentABIAndExactTransactionSignatures",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.154,
+      "log": "OathAnkr-cases/9b85a33395c8aa17.log",
+      "log_sha256": "81fa85a30c0641797b023bbf656cf035a1edfbd862000cf096ce2b9540277172"
+    },
+    {
+      "selector": "OathAnkrTests.WalletConnectEVMActionTests/testMalformedAndSpoofedCalldataNeverGetsFriendlyInterpretation",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.117,
+      "log": "OathAnkr-cases/6600713de0fa4c92.log",
+      "log_sha256": "28c674a5eecf7049ca7f8934e96b4d94e8deb661b9aa639845220244ce79078a"
+    },
+    {
+      "selector": "OathAnkrTests.WalletConnectEVMRequestTests/testContractSignatureBindsAllBytesAndKeepsZeroValueCalls",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.096,
+      "log": "OathAnkr-cases/f1bf3171597f72f2.log",
+      "log_sha256": "e55f2765fbfa4e1828a9b039c65a9f29994ac9057f3f274f15abd41856586dda"
+    },
+    {
+      "selector": "OathAnkrTests.WalletConnectEVMRequestTests/testExactTransactionFieldsAndEnvelope",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.087,
+      "log": "OathAnkr-cases/3003c92dac5ed02a.log",
+      "log_sha256": "fd15c938bbcf1cfdf1cf32e7534ef8c33ffe653880eec5e000aa73d6049f4910"
+    },
+    {
+      "selector": "OathAnkrTests.WalletConnectEVMRequestTests/testRejectsAmbiguousUnsupportedAndMismatchedRequests",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.085,
+      "log": "OathAnkr-cases/737d16c5521aeba6.log",
+      "log_sha256": "acb7260a382b58559709bb50b21636584c8c63076917117f15c8741cd49b63da"
+    }
+  ]
+}

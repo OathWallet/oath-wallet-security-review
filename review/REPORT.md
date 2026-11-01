@@ -7,13 +7,14 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`2eef5a4912ce1680cd174c7596471620ffcf129e`**.
-The new [cancellation finding](../findings/OW-2026-008.md) retains the original
-CI failure and a regression-only revision before its public-source repair.
-Merged in [application PR 12](https://github.com/devdasx/oath-wallet/pull/12),
-merge `f57a3e27a6f075fb3fa422b217e55138792381fe`, with an identical source tree.
-Final validation is recorded below and in the machine-readable results; no App
-Store upload or submission is included.
+Current review target: **`6124254d43ee7a98d4a364639671ccfc52155396`**.
+[OW-2026-009](../findings/OW-2026-009.md) repairs a missing EVM response-size
+check with retained before/after tests. It is merged in
+[application PR 13](https://github.com/devdasx/oath-wallet/pull/13), merge
+`eb78da3e7690a1ad3eca6a1e0970882600ac19eb`, whose source tree matches the
+reviewed commit. The preceding cancellation repair remains recorded in
+[OW-2026-008](../findings/OW-2026-008.md) and progress 22 below. No App Store
+upload or submission is included.
 
 The previous target `27fcf5f58f6169e1a40fb6afced883bc736d124d` was merged by
 [application PR 11](https://github.com/devdasx/oath-wallet/pull/11), merge
@@ -31,8 +32,8 @@ swaps, WalletConnect, providers, diagnostics and build supply chain. Website
 files are inventoried but excluded from the mobile-wallet verdict. No production
 secrets, funded accounts, live financial transactions or physical devices are used.
 
-The application ledger contains 4,676 files: 186 reviewed, 22 partially reviewed,
-10 generated artifacts verified, 4,458 outstanding. The Wallet Core upstream
+The application ledger contains 4,677 files: 189 reviewed, 28 partially reviewed,
+10 generated artifacts verified, 4,450 outstanding. The Wallet Core upstream
 ledger contains 3,941 files: 21 reviewed, 20 partially reviewed, 3,900 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
@@ -571,3 +572,27 @@ claim of a successful current-target GitHub matrix.
 
 No simulator, physical device or App Store operation occurred. See the
 [durable raw evidence](../evidence/refresh-cancellation) and acceptance checklist.
+
+## Progress 23: EVM send trace and response boundary repair
+
+The new informational finding [OW-2026-009](../findings/OW-2026-009.md) shows
+that the standalone pre-broadcast chain check omitted the EVM client's 8 MiB
+response bound. The default transport already limits streaming to 64 MiB;
+this is not an unbounded download or a demonstrated fund-loss vulnerability.
+The same regression fails in three baseline processes and passes in three
+fixed processes. Two controls pass in each process before and after. Raw logs,
+fixture/binary hashes and original source revisions are preserved.
+
+On the exact current target, OathAnkr passes 1,213 cases with 194 explicit skips;
+OathDiagnostics passes 118 with two skips. All 22 EVM authorization host checks,
+public-source/Gitleaks validation, diagnostic coverage and generic unsigned
+iOS Release compilation pass. The build reuses an isolated directory. Ninety-two
+audit-helper tests pass. The [EVM trace](EVM-SEND-TRACE.md) records what was
+read and keeps nonce-helper API, chain-protocol, Safe bytecode and broader
+integration questions partial. No new property-fuzzing or live-chain proof is
+claimed by this increment.
+
+The completion checker reports **7,655 outstanding items**. Current-target
+GitHub execution remains pending behind earlier queued work; previous-target
+successes do not establish a fresh full matrix. All historical failures remain
+in the evidence. No simulator, physical-device or App Store operation occurred.

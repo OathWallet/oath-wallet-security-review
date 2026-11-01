@@ -1,0 +1,50 @@
+{
+  "check": "evm-response-boundary",
+  "source_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
+  "phase": "before",
+  "status": "expected-failure",
+  "runs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 2.036,
+      "log": "case-01.log",
+      "log_sha256": "47c1a6299253982366abd94512cd1711b4dc39bf42da606ba43dc6dfbda4877e",
+      "status": "boundary-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.132,
+      "log": "case-02.log",
+      "log_sha256": "d28f6179046bcc7ed929068888a31734b694c74a482564d3d4442da2406ad442",
+      "status": "boundary-reproduced"
+    },
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 0.132,
+      "log": "case-03.log",
+      "log_sha256": "af7b45045bfbcf3a00c0437d45272698cf49554330aeb3b427febe3bab0a1bec",
+      "status": "boundary-reproduced"
+    }
+  ],
+  "boundary_reproduced": 3,
+  "tests_passed": 6,
+  "build": {
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 2.221,
+    "log": "build.log",
+    "log_sha256": "3d6a5d1c253044aeacd6990a8033465383c2bc63e6965500d7589704fdf1bd52"
+  },
+  "duration_seconds": 5.027,
+  "selector": "OathAnkrTests.EVMSendResponseBoundaryTests",
+  "fixture_sha256": "500387c6be0d8c5a9a1fd72eb47d2e0792a85c4b74f1e41e6164d45261d443ef",
+  "test_binary_sha256": "08d5b93e0492eb5db86ad66f2d3b6871b79e6edef476e0232a9e550f94cbdb3d",
+  "runtime_scope": "macOS host; synthetic oversized RPC responses; network denied; no simulator or device",
+  "limitation": "Three deterministic repetitions. Does not demonstrate fund loss, denial of service, or a streaming transport memory limit; default transport separately caps replies at 64 MiB.",
+  "process_runs_passed": 0,
+  "log": "evm-response-boundary.log",
+  "log_sha256": "263f6d1ccedf3b38cfa928fa93fde764b29f32e3916a0cd0a1b70d015ab365e2"
+}

@@ -20,8 +20,10 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-Latest application finding: [queued refresh reads during cancellation](findings/OW-2026-008.md),
-with the original CI failure, a regression-only revision and the production fix.
+Latest application finding: [standalone EVM response-size validation](findings/OW-2026-009.md),
+with identical before/after tests and exact-limit controls. The [EVM source trace](review/EVM-SEND-TRACE.md)
+keeps its remaining protocol, dependency and helper-API questions explicit.
+The earlier [refresh cancellation repair](findings/OW-2026-008.md) retains its original CI failure.
 [Offline diagnostic modes](review/DIAGNOSTIC-MODES.md) also cover eight cases
 that previously skipped under the normal package environment. The earlier
 [TRON trace](review/TRON-SEND-TRACE.md) remains available separately.
@@ -37,6 +39,7 @@ No signing certificate, provider credential, real wallet or App Store access is 
 
 ```sh
 python3 scripts/checkout.py
+python3 scripts/evm-response-boundary.py .work/source --output .work/evm-evidence/after --scratch .work/evm-after-build
 python3 scripts/inventory.py .work/source --output scope/inventory.json
 python3 -m unittest discover -s tests -p 'test_*.py'
 sh scripts/parser-check.sh .work/source .work/parser

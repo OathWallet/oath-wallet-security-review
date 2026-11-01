@@ -6861,5 +6861,272 @@
       ]
     },
     "evidence_path": "refresh-cancellation/oath-progress22-ci-db/OathDatabase.json"
+  },
+  {
+    "check": "evm-response-boundary",
+    "source_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
+    "phase": "before",
+    "status": "expected-failure",
+    "runs": [
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 2.036,
+        "log": "case-01.log",
+        "log_sha256": "47c1a6299253982366abd94512cd1711b4dc39bf42da606ba43dc6dfbda4877e",
+        "status": "boundary-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.132,
+        "log": "case-02.log",
+        "log_sha256": "d28f6179046bcc7ed929068888a31734b694c74a482564d3d4442da2406ad442",
+        "status": "boundary-reproduced"
+      },
+      {
+        "exit_code": 1,
+        "timed_out": false,
+        "duration_seconds": 0.132,
+        "log": "case-03.log",
+        "log_sha256": "af7b45045bfbcf3a00c0437d45272698cf49554330aeb3b427febe3bab0a1bec",
+        "status": "boundary-reproduced"
+      }
+    ],
+    "boundary_reproduced": 3,
+    "tests_passed": 6,
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 2.221,
+      "log": "build.log",
+      "log_sha256": "3d6a5d1c253044aeacd6990a8033465383c2bc63e6965500d7589704fdf1bd52"
+    },
+    "duration_seconds": 5.027,
+    "selector": "OathAnkrTests.EVMSendResponseBoundaryTests",
+    "fixture_sha256": "500387c6be0d8c5a9a1fd72eb47d2e0792a85c4b74f1e41e6164d45261d443ef",
+    "test_binary_sha256": "08d5b93e0492eb5db86ad66f2d3b6871b79e6edef476e0232a9e550f94cbdb3d",
+    "runtime_scope": "macOS host; synthetic oversized RPC responses; network denied; no simulator or device",
+    "limitation": "Three deterministic repetitions. Does not demonstrate fund loss, denial of service, or a streaming transport memory limit; default transport separately caps replies at 64 MiB.",
+    "process_runs_passed": 0,
+    "log": "evm-response-boundary.log",
+    "log_sha256": "263f6d1ccedf3b38cfa928fa93fde764b29f32e3916a0cd0a1b70d015ab365e2",
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/before/evm-response-boundary.json"
+  },
+  {
+    "check": "evm-response-boundary",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "phase": "after",
+    "status": "passed",
+    "runs": [
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.671,
+        "log": "case-01.log",
+        "log_sha256": "9d135015173725a762364ff353fbfc67435db18d36cca8ea84a0b0ae140d80c2",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.133,
+        "log": "case-02.log",
+        "log_sha256": "104a463c3c28b93d9b420439613c9d5c9dfb0ada11af21aab8d3b23ad3a520ed",
+        "status": "passed"
+      },
+      {
+        "exit_code": 0,
+        "timed_out": false,
+        "duration_seconds": 0.129,
+        "log": "case-03.log",
+        "log_sha256": "8ba960350320d87f0d6f680e7cf034a243d910815be106d2e111a88931aedba7",
+        "status": "passed"
+      }
+    ],
+    "boundary_reproduced": 0,
+    "tests_passed": 9,
+    "build": {
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 36.282,
+      "log": "build.log",
+      "log_sha256": "af635d857c237cdfc5220cb3925da7ca1b4fd0f4870598a445808848d3cb66e1"
+    },
+    "duration_seconds": 37.918,
+    "selector": "OathAnkrTests.EVMSendResponseBoundaryTests",
+    "fixture_sha256": "500387c6be0d8c5a9a1fd72eb47d2e0792a85c4b74f1e41e6164d45261d443ef",
+    "test_binary_sha256": "3f64d1b3ee6461c4e54c7f68b547c596f3dc5c311485fe037eab8fc4749f1557",
+    "runtime_scope": "macOS host; synthetic oversized RPC responses; network denied; no simulator or device",
+    "limitation": "Three deterministic repetitions. Does not demonstrate fund loss, denial of service, or a streaming transport memory limit; default transport separately caps replies at 64 MiB.",
+    "process_runs_passed": 3,
+    "log": "evm-response-boundary.log",
+    "log_sha256": "dd85962f597ceb943581a94941287989fa32d20b4103a48de8d5133d3bbd22e7",
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/after/evm-response-boundary.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-evm-boundary-evidence/ankr"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 252.92,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1407 selected; 1213 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "3a5bb658f28244ca506db1b8d4bbf192594a5fb0d9325c2d4477bcbf7c8c6d9c",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1407,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "fb6758202e1927512006c75c661e222901cc8962636189633b68a5db606b1457"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/ankr/OathAnkr.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath-evm-boundary-evidence/diagnostics"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 7.39,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "60a5e1bbc73d836ea1a953198ecdfc17972a59614d30a877736d20285178538a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "9018d29222eced1c03d32a7a17bd6e64c8f857aaa92416964a540d0cf411dbbe"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/diagnostics/OathDiagnostics.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 30.45,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "41ffc29e76ea5ee0228d26fd8fe7eea8da31cd42183d7d0d47086d42589b013f",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/checks/public.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.35,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "9363cbece48d5ebf8d204268603f88874b65f8c21e31464e48623f26d895682b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/checks/diagnostics-coverage.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 167.79,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "3dd970a03e513fc35c8eece25468319a9a759c3676096c7c710a41fd2f87d1a4",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/build/build.json"
+  },
+  {
+    "check": "evm-send",
+    "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--evm-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 170.39,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 22 arbitrum send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "4e6d11987e324415b101c783b849a92343566fe8c9599885fda4f81d639fa0fc",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evm-response-boundary/oath-evm-boundary-evidence/evm-send/evm-send.json"
   }
 ]

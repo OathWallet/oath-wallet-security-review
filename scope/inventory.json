@@ -1,5 +1,5 @@
 {
-  "source_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+  "source_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -8116,16 +8116,22 @@
       "sha256": "7de6b1ae0fa9ed5985a186b9359a637cfdbc1b288aabb11f7cc04b2175ea56b8",
       "bytes": 4975,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Send/OathEVMSendService.swift",
       "sha256": "38b27fd1c6e74340362f0c87a6832ff039c3d22604322264edcde202b4ef7f9f",
       "bytes": 15601,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "OathAtmosphere/Send/OathNearSendModel.swift",
@@ -9656,40 +9662,55 @@
       "sha256": "7a484ed792c405a9699c26555678f490e5cac68b320787606ff9cbdb3b06ed24",
       "bytes": 10271,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendClient.swift",
-      "sha256": "003706d56ed37986bbfa4e9d0db6a6b8791a72ff2dd532aeed8c6153cf08710d",
-      "bytes": 53670,
+      "sha256": "6e32f7491359fcbec7944a7ff38a330d32d5143b88a1bc1e3a956e658f1a96a8",
+      "bytes": 53931,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendCrypto.swift",
       "sha256": "38b6b67d58956fff594538968de7e0a83455355db7460c5d6f5ebc80e8b89798",
       "bytes": 6630,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendNetwork.swift",
       "sha256": "2c1528efae1e32287fc5ad6d9694474ff2aadb8370a75456c4065e7757288c34",
       "bytes": 4126,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendPlan.swift",
       "sha256": "bf4f153b3f84f34a77b40aa25c9b4c8720a1fdf15955c4ffc16ece520424eacf",
       "bytes": 15499,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Sources/OathAnkr/FilecoinHistoryArchive.swift",
@@ -11497,6 +11518,17 @@
       "category": "test",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/EVMSendResponseBoundaryTests.swift",
+      "sha256": "500387c6be0d8c5a9a1fd72eb47d2e0792a85c4b74f1e41e6164d45261d443ef",
+      "bytes": 3907,
+      "category": "test",
+      "status": "reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/EVMSendTests.swift",
@@ -15834,8 +15866,11 @@
       "sha256": "9d8f49b6c2562343441df674fda3fff3bc8bd666e3b56e689a06dcdf8134da7d",
       "bytes": 18953,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/EVM-SEND-TRACE.md",
+        "findings/OW-2026-009.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Sources/OathDatabase/EVMSwapHistory.swift",

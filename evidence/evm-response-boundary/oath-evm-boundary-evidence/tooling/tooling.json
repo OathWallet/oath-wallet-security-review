@@ -1,0 +1,31 @@
+[
+  {
+    "check": "actionlint-unfiltered",
+    "command": [
+      "actionlint",
+      "-no-color"
+    ],
+    "exit_code": 1,
+    "log": "actionlint-unfiltered.log",
+    "sha256": "a2b3136b8121104d5e952ec6828e850e453333505800d11022a9b50b0c2ad36b"
+  },
+  {
+    "check": "actionlint-filtered",
+    "command": [
+      "actionlint",
+      "-no-color",
+      "-ignore",
+      "^label \"xcode-27\" is unknown\\."
+    ],
+    "exit_code": 0,
+    "log": "actionlint-filtered.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "check": "audit-helper-tests",
+    "tests": 92,
+    "status": "passed",
+    "log": "audit-helper-tests.log",
+    "sha256": "ff8148b59d86be5b5bcf2de12afe20da39d7a1bb767b93d407133c56d32d47f9"
+  }
+]

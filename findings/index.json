@@ -264,5 +264,16 @@
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
     "integration_evidence": "evidence/core-app-integration"
+  },
+  {
+    "id": "OW-2026-009",
+    "severity": "informational",
+    "title": "Standalone EVM chain reply bypasses client size limit",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-009.md",
+    "fix_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
+    "regression_only_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
+    "retest_scope": "Identical production RPC tests: oversized precheck rejected after repair in 3 network-denied processes; exact-limit and ordinary-batch controls pass before and after. No fund loss or denial of service demonstrated.",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/13"
   }
 ]

@@ -433,3 +433,12 @@ retains the first broad networking run's nine failures and any subsequent
 repeat as separate results. No timeout or assertion threshold was relaxed.
 No simulator, physical device, production transaction or App Store action
 was used in this increment.
+
+## EVM send review, progress 23
+
+See [the exact-source trace](EVM-SEND-TRACE.md) for the plan, crypto, RPC,
+service, model, journal and Safe-policy boundaries inspected. Three files add
+reviewed dispositions and six add partial dispositions. The partial statuses
+preserve explicit dependency/protocol/API questions rather than treating the
+passing package suite as a substitute for those reads. OW-2026-009 is the
+confirmed response-validation defect repaired in this increment.
