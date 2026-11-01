@@ -1,0 +1,127 @@
+{
+  "check": "upstream-constructors-repaired",
+  "source_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "patch": {
+    "baseline_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch_path": "patches/walletcore-4.8.4-api-repairs.patch",
+    "patch_sha256": "33c5b24c74d0251121f6b4678106c5cc7aa7efed4a6adc3db269e2e82484746f",
+    "applied_diff_sha256": "33c5b24c74d0251121f6b4678106c5cc7aa7efed4a6adc3db269e2e82484746f",
+    "incorporated_in_shipped_framework": false
+  },
+  "status": "passed",
+  "cases": [
+    {
+      "configuration": "assertions",
+      "case": "positive",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "positive-constructor-checks"
+    },
+    {
+      "configuration": "assertions",
+      "case": "mnemonic32",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "assertions",
+      "case": "entropy32",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "assertions",
+      "case": "entropy-lifetime",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "assertions",
+      "case": "strength32",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "release",
+      "case": "positive",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "positive-constructor-checks"
+    },
+    {
+      "configuration": "release",
+      "case": "mnemonic32",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "release",
+      "case": "entropy32",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "release",
+      "case": "entropy-lifetime",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    },
+    {
+      "configuration": "release",
+      "case": "strength32",
+      "exit_code": 0,
+      "timed_out": false,
+      "observed": true,
+      "classification": "source-repair-regression"
+    }
+  ],
+  "duration_seconds": 4.767,
+  "ruby": "ruby 4.0.5 (2026-05-20 revision 64336ffd0e) +PRISM [arm64-darwin25]",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "source_hashes": {
+    "src/HDWallet.cpp": "1a916b5b4a9018e9924b7b8c2406afae26f678acbd36f9d5fcd493e2697ef7fd",
+    "src/HDWallet.h": "5c08f4b860f54edc5c4b00b7162d5514bbbc8f0058592e6300e2d8d76c225d33",
+    "src/Mnemonic.cpp": "4599c6d3a7208ea0ec267d728931685ff48655ddf8037d53e357bbbc3425b56c",
+    "src/Mnemonic.h": "beff711494b0c4711c7620f524fbbc4c0e7d13f3cafad9143b7050a6d6a8c8d8",
+    "src/Data.h": "a4aad9bae051e000500f1fce5c81b19190267ca073d825d0a8cb7c9d39e77950",
+    "src/memory/memzero_wrapper.h": "ea18e8594e846c35a0070a9ebd30a63e527a91da1cfc1d388d66b4e2791a667c",
+    "trezor-crypto/crypto/bip39.c": "bd3900318aec14386da390e030f50e311036ddda8ce764b744fa70676af35e33",
+    "trezor-crypto/crypto/sha2.c": "49d1c1efd653f6434a4ea64972a24711abea227d9766e633f13403a2b1a6ee53",
+    "trezor-crypto/crypto/hmac.c": "97ddd64b6100a34d7c380b31c964d671916752d19d958b150173bcfc35cc00b8",
+    "trezor-crypto/crypto/pbkdf2.c": "3cc55736b36a4ebee9be551504f22e196c426a98c919884f70dcda2c13724755",
+    "trezor-crypto/crypto/memzero.c": "1d5534da0a5686f84d867bfb11ae750a5396ffb615f12381b7cd22c25e8104ac",
+    "trezor-crypto/crypto/rand.c": "cf432ca318af6d9896eb1ba96db11c7e5de13088c156a4c4aedb6ae4495d5875"
+  },
+  "extraction": {
+    "start_line": 39,
+    "end_line": 111,
+    "sha256": "9c0e2b3a712ae1e4252450de7e439d7c648d226440f4247fbc127c4367ae58c8",
+    "qualification": "Exact contiguous production constructor/destructor bodies and real class header; unrelated methods not compiled."
+  },
+  "fixture_sha256": "9d336dd3226d9f7c87f7a54b92102b857d5d641101c47eb852b827025598a790",
+  "log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182",
+  "limitations": [
+    "Published source repairs are not incorporated in shipped frameworks.",
+    "32-byte mnemonic constructor not established reachable in Oath.",
+    "Deallocation observer reads synthetic entropy before free, not attacker-accessible memory.",
+    "Not a full upstream build or binary-equivalence proof."
+  ],
+  "original_log_sha256": "e39feb9d793b68a10ac34ac0749388817076d03fed4f21cd9849a0d2c1e4e182"
+}

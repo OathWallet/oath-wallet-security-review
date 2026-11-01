@@ -1,0 +1,14 @@
+....................................................F.........
+======================================================================
+FAIL: test_baseline_is_unmodified (test_upstream_patch.PatchedSourceTests.test_baseline_is_unmodified)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<AUDIT>/tests/test_upstream_patch.py", line 28, in test_baseline_is_unmodified
+    self.assertEqual(source,self.source);self.assertIsNone(metadata)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: PosixPath('/private/var/folders/3r/c0vp00nn2q9bflq211[28 chars]epo') != PosixPath('/var/folders/3r/c0vp00nn2q9bflq211n760x800[20 chars]epo')
+
+----------------------------------------------------------------------
+Ran 62 tests in 9.886s
+
+FAILED (failures=1)

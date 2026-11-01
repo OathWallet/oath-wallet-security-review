@@ -72,5 +72,53 @@
     "fix_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/9",
     "retest_scope": "Identical restoration fixture fails before and passes 140 checks after; actual Core simulator framework confirms 112 key equivalences. Host derivation is substituted; no app UI, real credentials, transactions or App Store verification."
+  },
+  {
+    "id": "DEP-CORE-001",
+    "severity": "dependency-api-defect",
+    "title": "Invalid curve dereference in dependency extended-key deserializer",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-SOURCE-REPAIRS.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-api-repairs.patch",
+    "evidence": "evidence/core-source-repairs",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false
+  },
+  {
+    "id": "DEP-CORE-002",
+    "severity": "dependency-api-defect",
+    "title": "Nano public-key cache populated without deriving the key",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-SOURCE-REPAIRS.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-api-repairs.patch",
+    "evidence": "evidence/core-source-repairs",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false
+  },
+  {
+    "id": "DEP-CORE-003",
+    "severity": "dependency-api-defect",
+    "title": "32-byte mnemonic constructor receives a 64-byte KDF result",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-SOURCE-REPAIRS.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-api-repairs.patch",
+    "evidence": "evidence/core-source-repairs",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false
+  },
+  {
+    "id": "DEP-CORE-004",
+    "severity": "memory-hygiene",
+    "title": "Dependency entropy allocation is not wiped before deallocation",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-SOURCE-REPAIRS.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-api-repairs.patch",
+    "evidence": "evidence/core-source-repairs",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false
   }
 ]

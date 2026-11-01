@@ -300,6 +300,11 @@ jobs:
         run: |
           reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
           python3 scripts/multisig-recovery.py .work/source --commit "$reviewed" --output evidence/ci/multisig-recovery
+      - name: Retest published dependency source repairs in disposable checkouts
+        run: |
+          reviewed=$(python3 -c "import json; print(json.load(open('scope/source.json'))['reviewed_commit'])")
+          python3 scripts/walletcore-bip32.py .work/wallet-core --app-source .work/source --app-commit "$reviewed" --repair --output evidence/ci/upstream-bip32-repaired
+          python3 scripts/walletcore-constructors.py .work/wallet-core --app-source .work/source --app-commit "$reviewed" --repair --output evidence/ci/upstream-constructors-repaired
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: upstream-entropy-evidence, path: evidence/ci, retention-days: 90}

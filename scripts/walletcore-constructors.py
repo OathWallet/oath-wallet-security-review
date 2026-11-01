@@ -11,6 +11,7 @@ import tempfile
 import time
 from bounded_process import logged_command
 from source_state import require_source_state
+from upstream_patch import upstream_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PIN = 'd40d24a63d92619167903369308bf0e2f7eb3a59'
@@ -26,8 +27,15 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('source',type=Path); p.add_argument('--app-source',required=True,type=Path)
     p.add_argument('--app-commit',required=True); p.add_argument('--output',required=True,type=Path)
-    a=p.parse_args(); source=a.source.resolve(); app=a.app_source.resolve(); out=a.output.resolve()
-    require_source_state(source,PIN); require_source_state(app,a.app_commit)
+    p.add_argument('--repair',action='store_true',help='Apply the published repair in a disposable checkout')
+    a=p.parse_args()
+    with upstream_source(a.source,PIN,a.repair) as (source,patch):
+        return exercise(a,source,patch)
+
+
+def exercise(a,source,patch):
+    app=a.app_source.resolve(); out=a.output.resolve()
+    require_source_state(app,a.app_commit)
     ruby=subprocess.check_output(['ruby','--version'],text=True).strip()
     if not ruby.startswith('ruby 4.0.5 '): raise ValueError('Ruby 4.0.5 required')
     out.mkdir(parents=True,exist_ok=True); started=time.monotonic(); commands=[]
@@ -65,20 +73,23 @@ def main():
             run(cxx+(['-DNDEBUG'] if mode=='release' else [])+['-c',str(work/'Constructors.cpp'),'-o',str(obj)],mode+'-compile')
             binary=work/mode
             run(cxx+[str(fixture),str(obj),str(source/'src/Mnemonic.cpp')]+objects+['-Wl,-dead_strip','-o',str(binary)],mode+'-link')
-            for case in ['positive','mnemonic32','entropy32','entropy-lifetime']:
+            for case in ['positive','mnemonic32','entropy32','entropy-lifetime']+(['strength32'] if a.repair else []):
                 name=mode+'-'+case
                 code,timeout=run([str(binary)]+([] if case=='positive' else [case]),name,required=False)
                 log=(out/(name+'.log')).read_text()
                 if case=='positive': observed=code==0 and log.strip()=='CONSTRUCTOR_OK checks=22'
-                elif case=='entropy-lifetime': observed=code==0 and log.strip()=='ENTROPY_DEALLOCATION retained_public_fixture=1 bytes=16'
+                elif case=='entropy-lifetime':
+                    expected='ENTROPY_DEALLOCATION retained_public_fixture=0 zeroed=1 bytes=16' if a.repair else 'ENTROPY_DEALLOCATION retained_public_fixture=1 zeroed=0 bytes=16'
+                    observed=code==0 and log.strip()==expected
+                elif a.repair: observed=code==0 and log.strip()=='UNSUPPORTED_MNEMONIC_SEED_SIZE rejected=1'
                 elif mode=='assertions': observed=code!=0 and 'entropy.size() > 10' in log
                 else: observed=code==1 and not log.strip()
                 cases.append(dict(configuration=mode,case=case,exit_code=code,timed_out=timeout,observed=observed and not timeout,
-                                  classification='positive-constructor-checks' if case=='positive' else 'unrepaired-api-characterization'))
-    require_source_state(source,PIN);require_source_state(app,a.app_commit)
+                                  classification='positive-constructor-checks' if case=='positive' else ('source-repair-regression' if a.repair else 'unrepaired-api-characterization')))
+    require_source_state(app,a.app_commit)
     paths=['src/HDWallet.cpp','src/HDWallet.h','src/Mnemonic.cpp','src/Mnemonic.h','src/Data.h','src/memory/memzero_wrapper.h']+['trezor-crypto/crypto/'+n for n in c_names]
-    result=dict(check='upstream-constructors',source_commit=a.app_commit,upstream_commit=PIN,
-                status='passed' if all(c['observed'] for c in cases) else 'failed',cases=cases,
+    result=dict(check='upstream-constructors-repaired' if a.repair else 'upstream-constructors',source_commit=a.app_commit,upstream_commit=PIN,
+                patch=patch, status='passed' if all(c['observed'] for c in cases) else 'failed',cases=cases,
                 duration_seconds=round(time.monotonic()-started,3),ruby=ruby,
                 compiler=subprocess.check_output(['clang++','--version'],text=True),
                 source_hashes={path:hashlib.sha256((source/path).read_bytes()).hexdigest() for path in paths},
@@ -86,7 +97,7 @@ def main():
                                 qualification='Exact contiguous production constructor/destructor bodies and real class header; unrelated methods not compiled.'),
                 fixture_sha256=hashlib.sha256(fixture.read_bytes()).hexdigest(),
                 log_sha256=hashlib.sha256((out/'assertions-positive.log').read_bytes()).hexdigest(),
-                limitations=['Expected failures are not fixes.', '32-byte mnemonic constructor not established reachable in Oath.',
+                limitations=['Published source repairs are not incorporated in shipped frameworks.' if a.repair else 'Expected failures are not fixes.', '32-byte mnemonic constructor not established reachable in Oath.',
                              'Deallocation observer reads synthetic entropy before free, not attacker-accessible memory.', 'Not a full upstream build or binary-equivalence proof.'])
     (out/'result.json').write_text(json.dumps(result,indent=2)+'\n')
     print('Constructor checks:',result['status'],'; positive checks=22 in each of two configurations; API characterizations retained')

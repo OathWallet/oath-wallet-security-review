@@ -5,21 +5,21 @@
 #include <cstring>
 #include <new>
 static const void *watched = nullptr;
-static bool watched_freed = false, entropy_retained = false;
+static bool watched_freed = false, entropy_retained = false, entropy_zeroed = false;
 void *operator new(std::size_t n) { if(void *p=std::malloc(n?n:1)) return p; throw std::bad_alloc(); }
 void operator delete(void *p) noexcept {
- if(p && p==watched) { watched_freed=true; auto b=static_cast<const unsigned char*>(p); entropy_retained=true; for(unsigned i=0;i<16;i++) entropy_retained &= b[i]==0x7f; }
+ if(p && p==watched) { watched_freed=true; auto b=static_cast<const unsigned char*>(p); entropy_retained=true; entropy_zeroed=true; for(unsigned i=0;i<16;i++) { entropy_retained &= b[i]==0x7f; entropy_zeroed &= b[i]==0; } }
  std::free(p);
 }
 void operator delete(void *p, std::size_t) noexcept { ::operator delete(p); }
 static const std::string phrase="abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about";
 int main(int argc,char **argv) {
- if(argc==2 && std::strcmp(argv[1],"mnemonic32")==0){TW::HDWallet<32> w(phrase, "TREZOR");return w.getEntropy().empty();}
- if(argc==2 && std::strcmp(argv[1],"entropy32")==0){TW::HDWallet<32> w(TW::Data(16,0), "TREZOR");return w.getEntropy().empty();}
- if(argc==2 && std::strcmp(argv[1],"strength32")==0){TW::HDWallet<32> w(128, "TREZOR");return w.getEntropy().empty();}
+ if(argc==2 && std::strcmp(argv[1],"mnemonic32")==0){try{TW::HDWallet<32> w(phrase, "TREZOR");return w.getEntropy().empty();}catch(const std::invalid_argument&){puts("UNSUPPORTED_MNEMONIC_SEED_SIZE rejected=1");return 0;}}
+ if(argc==2 && std::strcmp(argv[1],"entropy32")==0){try{TW::HDWallet<32> w(TW::Data(16,0), "TREZOR");return w.getEntropy().empty();}catch(const std::invalid_argument&){puts("UNSUPPORTED_MNEMONIC_SEED_SIZE rejected=1");return 0;}}
+ if(argc==2 && std::strcmp(argv[1],"strength32")==0){try{TW::HDWallet<32> w(128, "TREZOR");return w.getEntropy().empty();}catch(const std::invalid_argument&){puts("UNSUPPORTED_MNEMONIC_SEED_SIZE rejected=1");return 0;}}
  if(argc==2 && std::strcmp(argv[1],"entropy-lifetime")==0){
   auto *w=new TW::HDWallet<64>(TW::Data(16,0x7f), "");watched=w->getEntropy().data();delete w;watched=nullptr;
-  assert(watched_freed);printf("ENTROPY_DEALLOCATION retained_public_fixture=%d bytes=16\n",entropy_retained);return entropy_retained?0:1;
+  assert(watched_freed);printf("ENTROPY_DEALLOCATION retained_public_fixture=%d zeroed=%d bytes=16\n",entropy_retained,entropy_zeroed);return 0;
  }
  unsigned checks=0;
  for(unsigned n : {32u,64u}){

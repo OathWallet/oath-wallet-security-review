@@ -28,12 +28,14 @@ ledger contains 3,941 files: 14 reviewed, 5 partially reviewed, 3,922 outstandin
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 unrepaired defects in Go dependency APIs outside the traced Oath call path;
 [details and reproductions](AEZEED-DEPENDENCY-REVIEW.md) remain public.
-Two additional unrepaired Core C API hazards are documented in the
+Two Core C API hazards still present in the shipped dependency are documented in the
 [child-derivation review](CHILD-DERIVATION-REVIEW.md); no reachable Oath
 vulnerability was established for those calls.
 The [constructor/lifetime experiment](CONSTRUCTOR-LIFETIME-RESULTS.md) also
 confirms direct misuse of the 32-byte constructor and entropy remaining at
 deallocation; their app reachability and broader exposure limitations are explicit.
+All four now have [tested source patches](CORE-SOURCE-REPAIRS.md), with full
+dependency build and application integration still outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under
@@ -419,3 +421,20 @@ The full matrix, transitive dependency review, broader secret lifetime and
 binary-provenance gaps remain open. The completion ledger now has 7,671
 outstanding items. No simulator, device or App Store operation occurred in this
 audit increment.
+
+## Progress 15 — dependency source repairs and paired retests
+
+The four Core defects documented in progress 13/14 now have a published patch
+and paired before/after host evidence. Invalid curves reject safely, Nano key
+caching matches the separate public-key primitive, unsupported 32-byte mnemonic
+expansion rejects before the KDF writes, and the observed entropy allocation is
+zeroed before deallocation. Positive derivation and constructor compatibility
+checks pass on both sides. The 62 audit-helper tests pass; an initial path-alias
+fixture failure is preserved. [Scope, commands and limitations](CORE-SOURCE-REPAIRS.md).
+
+These are source repairs, not replacement Apple frameworks or a changed Oath
+application. Each dependency finding is now explicitly included in the
+machine-readable findings index with integration outstanding. Source coverage
+counts are unchanged: testing does not establish review of unread components.
+Full dependency compilation, final-target CI, broader secret lifetime and
+binary provenance remain unfinished. No simulator/device or App Store use.

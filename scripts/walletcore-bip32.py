@@ -14,6 +14,7 @@ import time
 from bip32_vectors import generate
 from bounded_process import logged_command
 from source_state import require_source_state
+from upstream_patch import upstream_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PIN = 'd40d24a63d92619167903369308bf0e2f7eb3a59'
@@ -26,9 +27,14 @@ def main():
     parser.add_argument('--app-source', required=True, type=Path)
     parser.add_argument('--app-commit', required=True)
     parser.add_argument('--output', required=True, type=Path)
+    parser.add_argument('--repair', action='store_true', help='Apply the published repair in a disposable checkout')
     args = parser.parse_args()
-    source, app, out = args.source.resolve(), args.app_source.resolve(), args.output.resolve()
-    require_source_state(source, PIN)
+    with upstream_source(args.source, PIN, args.repair) as (source, patch):
+        return exercise(args, source, patch)
+
+
+def exercise(args, source, patch):
+    app, out = args.app_source.resolve(), args.output.resolve()
     require_source_state(app, args.app_commit)
     out.mkdir(parents=True, exist_ok=True)
     started = time.monotonic()
@@ -78,24 +84,32 @@ def main():
             result = run([str(work/'derivation'), mode], mode)
             commands.append(result)
             observed = result['exit_code'] != 0 and not result['timed_out'] and diagnostic in (out/(mode+'.log')).read_text()
-            hazards.append(dict(api_case=mode, reproduced=observed, fixed=False, exit_code=result['exit_code'], reachable_oath_vulnerability_established=False))
+            repaired = result['exit_code'] == 0 and not result['timed_out'] and not (out/(mode+'.log')).read_text().strip()
+            hazards.append(dict(api_case=mode, reproduced=observed, repaired_in_tested_source=repaired if args.repair else False,
+                                expected_outcome_observed=repaired if args.repair else observed,
+                                fixed_in_shipped_framework=False, exit_code=result['exit_code'], reachable_oath_vulnerability_established=False))
+        if args.repair:
+            result = run([str(work/'derivation'), 'curve-guards'], 'curve-guards')
+            commands.append(result)
+            guards_passed = result['exit_code'] == 0 and not result['timed_out'] and not (out/'curve-guards.log').read_text().strip()
+            positive_passed = positive_passed and guards_passed
         (out/'api-characterizations.json').write_text(json.dumps(hazards, indent=2)+'\n')
         (out/'commands.json').write_text(json.dumps(commands, indent=2)+'\n')
     inputs = [cmake]+sources+list((source/'trezor-crypto/include').rglob('*.h'))
     inputs = [p for p in inputs if not any(part.startswith('._') for part in p.parts)]
     hashes = {str(p.relative_to(source)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs}
-    result = dict(check='upstream-bip32', source_commit=args.app_commit, upstream_commit=PIN,
-                  status='passed' if positive_passed and all(h['reproduced'] for h in hazards) else 'failed',
-                  positive_derivation_tests_passed=positive_passed, api_hazards_unrepaired=hazards,
+    result = dict(check='upstream-bip32-repaired' if args.repair else 'upstream-bip32', source_commit=args.app_commit, upstream_commit=PIN,
+                  status='passed' if positive_passed and all(h['expected_outcome_observed'] for h in hazards) else 'failed',
+                  positive_derivation_tests_passed=positive_passed, api_cases=hazards, patch=patch,
                   counts=counts, duration_seconds=round(time.monotonic()-started, 3),
                   compiler=subprocess.check_output(['clang','--version'],text=True),
                   input_hashes=hashes, fixture_sha256=hashlib.sha256(fixture.read_bytes()).hexdigest(),
                   vectors_sha256=hashlib.sha256(vectors.read_bytes()).hexdigest(),
                   log_sha256=hashlib.sha256((out/'positive.log').read_bytes()).hexdigest(),
-                  limitations=['Host source tests, not shipped binary equivalence.', 'Expected failing API characterizations are not fixes.', 'Compiled files are not automatically marked reviewed.'])
+                  limitations=['Host source tests, not shipped binary equivalence.', 'Published source repairs are not incorporated in shipped frameworks.' if args.repair else 'Expected failing API characterizations are not fixes.', 'Compiled files are not automatically marked reviewed.'])
     (out/'result.json').write_text(json.dumps(result, indent=2)+'\n')
     print(SUMMARY if positive_passed else 'BIP32_POSITIVE_TEST_FAILED')
-    print('Unrepaired API hazards reproduced:', sum(h['reproduced'] for h in hazards))
+    print('Expected API outcomes observed:', sum(h['expected_outcome_observed'] for h in hazards))
     return 0 if result['status']=='passed' else 1
 
 

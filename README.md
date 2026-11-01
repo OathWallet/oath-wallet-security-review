@@ -132,3 +132,10 @@ Progress 14 adds [multisig recovery review and mutations](review/MULTISIG-RECOVE
 and [constructor/entropy-lifetime experiments](review/CONSTRUCTOR-LIFETIME-RESULTS.md).
 Their expected dependency failures remain explicitly unrepaired and distinct
 from the passing positive tests.
+
+## Dependency source-repair follow-up
+
+Four confirmed Core API/lifetime defects now have [tested source patches and
+identical before/after evidence](review/CORE-SOURCE-REPAIRS.md). They are not yet
+incorporated into Oath’s shipped frameworks; integration and the whole-wallet
+review remain incomplete. No App Store upload was performed.

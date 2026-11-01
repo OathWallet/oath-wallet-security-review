@@ -4,6 +4,7 @@
 #include <string.h>
 #include <TrezorCrypto/bip32.h>
 #include <TrezorCrypto/curves.h>
+#include <TrezorCrypto/ed25519-donna/ed25519-blake2b.h>
 #include <TrezorCrypto/memzero.h>
 #include "bip32-vectors.h"
 static unsigned hex(const char *s, unsigned char *out, unsigned capacity) {
@@ -34,7 +35,25 @@ static void check(const struct Vector *v, unsigned number, int known) {
 }
 int main(int argc,char **argv) {
  if(argc==2 && strcmp(argv[1],"unknown-curve")==0){HDNode node;return hdnode_deserialize_private("invalid",0x0488ade4u,"not-a-curve",&node,NULL)==0;}
- if(argc==2 && strcmp(argv[1],"nano-public")==0){unsigned char seed[16]={0};HDNode node;assert(hdnode_from_seed(seed,16,"ed25519-blake2b-nano",&node));assert(hdnode_fill_public_key(&node)==0);unsigned any=0;for(unsigned i=1;i<33;i++)any|=node.public_key[i];assert(any!=0);return 0;}
+ if(argc==2 && strcmp(argv[1],"nano-public")==0){
+  for(unsigned n=0;n<64;n++){
+   unsigned char seed[16]={0}, expected[32];seed[0]=(unsigned char)n;HDNode node;
+   assert(hdnode_from_seed(seed,16,"ed25519-blake2b-nano",&node));
+   assert(hdnode_fill_public_key(&node)==0);unsigned any=0;for(unsigned i=1;i<33;i++)any|=node.public_key[i];assert(any!=0);
+   // Dispatch regression against the separate primitive used by PrivateKey.
+   // This is not an independent proof of the primitive's cryptography.
+   ed25519_publickey_blake2b(node.private_key,expected);
+   assert(node.public_key[0]==1&&memcmp(node.public_key+1,expected,32)==0);
+   assert(hdnode_fill_public_key(&node)==0&&memcmp(node.public_key+1,expected,32)==0);
+  }return 0;
+ }
+ if(argc==2 && strcmp(argv[1],"curve-guards")==0){
+  HDNode node;assert(hdnode_deserialize_public("invalid",0x0488b21eu,NULL,&node,NULL)!=0);
+  assert(hdnode_deserialize_private("invalid",0x0488ade4u,NULL,&node,NULL)!=0);
+  memset(&node,0,sizeof(node));assert(hdnode_fill_public_key(&node)!=0);assert(node.public_key[0]==0);
+  curve_info unsupported={0};node.curve=&unsupported;
+  assert(hdnode_fill_public_key(&node)!=0);assert(node.public_key[0]==0);return 0;
+ }
  for(unsigned i=0;i<sizeof(official)/sizeof(*official);i++)check(official+i,i,1);
  for(unsigned i=0;i<sizeof(oracle)/sizeof(*oracle);i++)check(oracle+i,i,0);
  unsigned char seed[32]={1};HDNode node,before;

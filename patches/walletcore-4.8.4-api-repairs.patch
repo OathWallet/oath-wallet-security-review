@@ -1,0 +1,75 @@
+diff --git a/src/HDWallet.cpp b/src/HDWallet.cpp
+index 02394bb..80b78d9 100644
+--- a/src/HDWallet.cpp
++++ b/src/HDWallet.cpp
+@@ -48,6 +48,9 @@ HDWallet<seedSize>::HDWallet(const Data& seed) {
+ 
+ template <std::size_t seedSize>
+ void HDWallet<seedSize>::updateSeedAndEntropy([[maybe_unused]] bool check) {
++    if constexpr (seedSize != 64) {
++        throw std::invalid_argument("Mnemonic derivation requires a 64-byte seed");
++    }
+     assert(!check || Mnemonic::isValid(mnemonic)); // precondition
+ 
+     // generate seed from mnemonic
+@@ -103,6 +106,7 @@ HDWallet<seedSize>::~HDWallet() {
+     memzero(seed.data(), seed.size());
+     memzero(mnemonic.data(), mnemonic.size());
+     memzero(passphrase.data(), passphrase.size());
++    memzero(entropy.data(), entropy.size());
+ }
+ 
+ template <size_t seedSize>
+diff --git a/trezor-crypto/crypto/bip32.c b/trezor-crypto/crypto/bip32.c
+index 4d821a8..ab5b09e 100644
+--- a/trezor-crypto/crypto/bip32.c
++++ b/trezor-crypto/crypto/bip32.c
+@@ -34,6 +34,7 @@
+ #include <TrezorCrypto/bip32.h>
+ #include <TrezorCrypto/curves.h>
+ #include <TrezorCrypto/ecdsa.h>
++#include <TrezorCrypto/ed25519-donna/ed25519-blake2b.h>
+ #include <TrezorCrypto/ed25519-donna/ed25519-sha3.h>
+ #include <TrezorCrypto/ed25519.h>
+ #include <TrezorCrypto/hmac.h>
+@@ -482,6 +483,7 @@ int hdnode_get_address(HDNode *node, uint32_t version, char *addr,
+ }
+ 
+ int hdnode_fill_public_key(HDNode *node) {
++  if (node->curve == NULL) return 1;
+   if (node->public_key[0] != 0) return 0;
+ 
+ #if USE_BIP32_25519_CURVES
+@@ -491,9 +493,10 @@ int hdnode_fill_public_key(HDNode *node) {
+       return 1;
+     }
+   } else {
+-    node->public_key[0] = 1;
+     if (node->curve == &ed25519_info) {
+       ed25519_publickey(node->private_key, node->public_key + 1);
++    } else if (node->curve == &ed25519_blake2b_nano_info) {
++      ed25519_publickey_blake2b(node->private_key, node->public_key + 1);
+     } else if (node->curve == &ed25519_sha3_info) {
+       ed25519_publickey_sha3(node->private_key, node->public_key + 1);
+ #if USE_KECCAK
+@@ -506,7 +509,10 @@ int hdnode_fill_public_key(HDNode *node) {
+     } else if (node->curve == &ed25519_cardano_info) {
+       ed25519_publickey_ext(node->private_key, node->public_key + 1);
+ #endif
++    } else {
++      return 1;
+     }
++    node->public_key[0] = 1;
+   }
+ #else
+ 
+@@ -748,7 +754,8 @@ static int hdnode_deserialize(const char *str, uint32_t version,
+                               uint32_t *fingerprint) {
+   uint8_t node_data[78] = {0};
+   memzero(node, sizeof(HDNode));
+-  node->curve = get_curve_by_name(curve);
++  node->curve = curve == NULL ? NULL : get_curve_by_name(curve);
++  if (node->curve == NULL) return -1;
+   if (base58_decode_check(str, node->curve->hasher_base58, node_data,
+                           sizeof(node_data)) != sizeof(node_data)) {
+     return -1;
