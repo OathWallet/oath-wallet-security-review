@@ -1,0 +1,85 @@
+=================================================================
+==58475==ERROR: AddressSanitizer: heap-use-after-free on address 0x6020000023d1 at pc 0x000104d29394 bp 0x00016b0de990 sp 0x00016b0de988
+READ of size 1 at 0x6020000023d1 thread T0
+    #0 0x000104d29390 in unsigned char* std::__1::construct_at[abi:nqe220106]<unsigned char, unsigned char const&, unsigned char*>(unsigned char*, unsigned char const&) construct_at.h:37
+    #1 0x000104d29390 in unsigned char* std::__1::__construct_at[abi:nqe220106]<unsigned char, unsigned char const&, unsigned char*>(unsigned char*, unsigned char const&) construct_at.h:45
+    #2 0x000104d29390 in void std::__1::allocator_traits<std::__1::allocator<unsigned char>>::construct[abi:nqe220106]<unsigned char, unsigned char const&, 0>(std::__1::allocator<unsigned char>&, unsigned char*, unsigned char const&) allocator_traits.h:302
+    #3 0x000104d29390 in void std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::__emplace_back_assume_capacity[abi:nqe220106]<unsigned char const&>(unsigned char const&) vector.h:483
+    #4 0x000104d29014 in unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda'()::operator()() const vector.h:1146
+    #5 0x000104d29014 in void std::__1::__if_likely_else[abi:nqe220106]<unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda'(), unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda0'()>(bool, unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda'(), unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda0'()) vector.h:1127
+    #6 0x000104d28638 in unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&) vector.h:1143
+    #7 0x000104d28638 in std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::push_back[abi:nqe220106](unsigned char const&) vector.h:464
+    #8 0x000104d298e4 in std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>::operator=[abi:nqe220106](unsigned char const&) back_insert_iterator.h:51
+    #9 0x000104d298e4 in std::__1::pair<unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>> std::__1::__copy_impl::operator()[abi:nqe220106]<unsigned char const*, unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>, 0>(unsigned char const*, unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>) const copy.h:51
+    #10 0x000104d298e4 in std::__1::pair<std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>> std::__1::__copy_move_unwrap_iters[abi:nqe220106]<std::__1::__copy_impl, std::__1::__wrap_iter<unsigned char const*>, std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>, 0>(std::__1::__wrap_iter<unsigned char const*>, std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>) copy_move_common.h:94
+    #11 0x000104d217bc in main UpstreamDataAlias.cpp:72
+    #12 0x00018d3f3e7c in start+0x1a1c (dyld:arm64e+0x31e7c)
+
+0x6020000023d1 is located 1 bytes inside of 2-byte region [0x6020000023d0,0x6020000023d2)
+freed by thread T0 here:
+    #0 0x000105774558 in _ZdlPv+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x50558)
+    #1 0x000104d295f8 in void std::__1::__libcpp_deallocate[abi:nqe220106]<unsigned char>(std::__1::__type_identity<unsigned char>::type*, std::__1::__element_count, unsigned long) allocate.h:80
+    #2 0x000104d295f8 in std::__1::allocator<unsigned char>::deallocate[abi:nqe220106](unsigned char*, unsigned long) allocator.h:107
+    #3 0x000104d295f8 in std::__1::allocator_traits<std::__1::allocator<unsigned char>>::deallocate[abi:nqe220106](std::__1::allocator<unsigned char>&, unsigned char*, unsigned long) allocator_traits.h:289
+    #4 0x000104d295f8 in std::__1::__split_buffer<unsigned char, std::__1::allocator<unsigned char>&>::~__split_buffer() __split_buffer:342
+    #5 0x000104d295f8 in std::__1::__split_buffer<unsigned char, std::__1::allocator<unsigned char>&>::~__split_buffer() __split_buffer:339
+    #6 0x000104d295f8 in unsigned char* std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::__emplace_back_slow_path<unsigned char const&>(unsigned char const&) vector.h:1113
+    #7 0x000104d2919c in unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda0'()::operator()() const vector.h:1149
+    #8 0x000104d28638 in unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&) vector.h:1143
+    #9 0x000104d28638 in std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::push_back[abi:nqe220106](unsigned char const&) vector.h:464
+    #10 0x000104d298e4 in std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>::operator=[abi:nqe220106](unsigned char const&) back_insert_iterator.h:51
+    #11 0x000104d298e4 in std::__1::pair<unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>> std::__1::__copy_impl::operator()[abi:nqe220106]<unsigned char const*, unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>, 0>(unsigned char const*, unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>) const copy.h:51
+    #12 0x000104d298e4 in std::__1::pair<std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>> std::__1::__copy_move_unwrap_iters[abi:nqe220106]<std::__1::__copy_impl, std::__1::__wrap_iter<unsigned char const*>, std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>, 0>(std::__1::__wrap_iter<unsigned char const*>, std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>) copy_move_common.h:94
+    #13 0x000104d217bc in main UpstreamDataAlias.cpp:72
+    #14 0x00018d3f3e7c in start+0x1a1c (dyld:arm64e+0x31e7c)
+
+previously allocated by thread T0 here:
+    #0 0x000105774150 in _Znwm+0x74 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x50150)
+    #1 0x000104d25760 in unsigned char* std::__1::__libcpp_allocate[abi:nqe220106]<unsigned char>(std::__1::__element_count, unsigned long) allocate.h:60
+    #2 0x000104d25760 in std::__1::allocator<unsigned char>::allocate[abi:nqe220106](unsigned long) allocator.h:92
+    #3 0x000104d25760 in std::__1::__allocation_result<std::__1::allocator_traits<std::__1::allocator<unsigned char>>::pointer, std::__1::allocator_traits<std::__1::allocator<unsigned char>>::size_type> std::__1::__allocate_at_least[abi:nqe220106]<std::__1::allocator<unsigned char>, std::__1::allocator_traits<std::__1::allocator<unsigned char>>>(std::__1::allocator<unsigned char>&, unsigned long) allocate_at_least.h:46
+    #4 0x000104d25760 in std::__1::__split_buffer<unsigned char, std::__1::allocator<unsigned char>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<unsigned char>&) __split_buffer:330
+    #5 0x000104d29540 in std::__1::__split_buffer<unsigned char, std::__1::allocator<unsigned char>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<unsigned char>&) __split_buffer:326
+    #6 0x000104d29540 in unsigned char* std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::__emplace_back_slow_path<unsigned char const&>(unsigned char const&) vector.h:1107
+    #7 0x000104d2919c in unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&)::'lambda0'()::operator()() const vector.h:1149
+    #8 0x000104d28638 in unsigned char& std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::emplace_back<unsigned char const&>(unsigned char const&) vector.h:1143
+    #9 0x000104d28638 in std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::push_back[abi:nqe220106](unsigned char const&) vector.h:464
+    #10 0x000104d298e4 in std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>::operator=[abi:nqe220106](unsigned char const&) back_insert_iterator.h:51
+    #11 0x000104d298e4 in std::__1::pair<unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>> std::__1::__copy_impl::operator()[abi:nqe220106]<unsigned char const*, unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>, 0>(unsigned char const*, unsigned char const*, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>) const copy.h:51
+    #12 0x000104d298e4 in std::__1::pair<std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>> std::__1::__copy_move_unwrap_iters[abi:nqe220106]<std::__1::__copy_impl, std::__1::__wrap_iter<unsigned char const*>, std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>, 0>(std::__1::__wrap_iter<unsigned char const*>, std::__1::__wrap_iter<unsigned char const*>, std::__1::back_insert_iterator<std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>>) copy_move_common.h:94
+    #13 0x000104d217bc in main UpstreamDataAlias.cpp:72
+    #14 0x00018d3f3e7c in start+0x1a1c (dyld:arm64e+0x31e7c)
+
+SUMMARY: AddressSanitizer: heap-use-after-free construct_at.h:37 in unsigned char* std::__1::construct_at[abi:nqe220106]<unsigned char, unsigned char const&, unsigned char*>(unsigned char*, unsigned char const&)
+Shadow bytes around the buggy address:
+  0x602000002100: fa fa fd fd fa fa fd fd fa fa fd fd fa fa 00 00
+  0x602000002180: fa fa 00 fa fa fa 00 fa fa fa fd fa fa fa fd fd
+  0x602000002200: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x602000002280: fa fa fd fd fa fa fd fa fa fa fd fa fa fa fd fa
+  0x602000002300: fa fa fd fa fa fa fd fa fa fa fd fd fa fa fd fa
+=>0x602000002380: fa fa fd fa fa fa fd fa fa fa[fd]fa fa fa 02 fa
+  0x602000002400: fa fa 02 fa fa fa 04 fa fa fa fa fa fa fa fa fa
+  0x602000002480: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000002500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000002580: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x602000002600: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==58475==ABORTING

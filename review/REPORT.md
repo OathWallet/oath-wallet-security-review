@@ -25,7 +25,7 @@ secrets, funded accounts, live financial transactions or physical devices are us
 
 The application ledger contains 4,675 files: 167 reviewed, 8 partially reviewed,
 10 generated artifacts verified, 4,490 outstanding. The Wallet Core upstream
-ledger contains 3,941 files: 15 reviewed, 5 partially reviewed, 3,921 outstanding.
+ledger contains 3,941 files: 17 reviewed, 11 partially reviewed, 3,913 outstanding.
 The selected aezeed Go dependency ledger adds 28 files: 27 reviewed and 1 wordlist verified as data. The source review records three
 defects in Go dependency APIs outside the traced Oath call path; the
 [original reproductions](AEZEED-DEPENDENCY-REVIEW.md) and
@@ -40,6 +40,10 @@ All four now have [tested source patches](CORE-SOURCE-REPAIRS.md). Full native
 compilation and upstream suites pass; Apple framework/application integration
 is still outstanding. A [fifth source repair](CORE-NATIVE-AND-EXTENDED-KEY.md)
 rejects public extended keys at the private derivation API.
+A [sixth source repair](CORE-DATA-ALIAS.md) prevents aliased buffer appends
+from reading freed storage. Identical production-code sanitizer tests show the
+baseline failures and repaired passes; the combined six-repair native C++ suite
+passes all 2,363 tests. Application integration remains outstanding.
 Standard-library implementation review remains a separate outstanding boundary.
 These counts are dispositions, not a security score. Tests and scanners never
 convert unread code into reviewed code. See the machine-readable ledgers under

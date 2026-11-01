@@ -1,0 +1,190 @@
+[
+  {
+    "name": "memzero-compile",
+    "command": [
+      "clang",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-c",
+      "/private/tmp/oath-review-wallet-core-4.8.4/trezor-crypto/crypto/memzero.c",
+      "-o",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/memzero.o"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "before-compile",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/include",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/src",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/trezor-crypto/include",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/trezor-crypto/crypto",
+      "-I",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/generated",
+      "-I",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/generated/rust",
+      "-Wl,-dead_strip",
+      "/Volumes/WORKSPACE/oath-wallet-security-review/tests/UpstreamDataAlias.cpp",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/src/interface/TWData.cpp",
+      "/private/tmp/oath-review-wallet-core-4.8.4/src/interface/TWString.cpp",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/memzero.o",
+      "/private/tmp/oath-core-dependency-repairs/build/local/lib/libwallet_core_rs.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-lresolv",
+      "-liconv",
+      "-o",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/before"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "before-self",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/before",
+      "self"
+    ],
+    "exit_code": 1,
+    "timed_out": false,
+    "log_sha256": "e0133edec7187a46d20d1b76a4117aabf690d33d343c59194acb3d5797c6ecb9"
+  },
+  {
+    "name": "before-alias",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/before",
+      "alias"
+    ],
+    "exit_code": 1,
+    "timed_out": false,
+    "log_sha256": "6afdaad05f5abc9f747a3401b0148e4f25b735c278a2419a24f83bfda901918b"
+  },
+  {
+    "name": "before-controls",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/before",
+      "controls"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "caf07271b2c53608314bf85365c38af888658b415f9aaf96cbe7c9e5a2e9d2e0"
+  },
+  {
+    "name": "before-properties",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/before",
+      "properties"
+    ],
+    "exit_code": 1,
+    "timed_out": false,
+    "log_sha256": "5a1054bad5a5230ac051861c8ab91f010b69eeef384dc708e494375f2ab10608"
+  },
+  {
+    "name": "apply",
+    "command": [
+      "git",
+      "apply",
+      "/Volumes/WORKSPACE/oath-wallet-security-review/patches/walletcore-4.8.4-data-alias.patch"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "after-compile",
+    "command": [
+      "clang++",
+      "-std=c++20",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/include",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/src",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/trezor-crypto/include",
+      "-I",
+      "/private/tmp/oath-review-wallet-core-4.8.4/trezor-crypto/crypto",
+      "-I",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/generated",
+      "-I",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/generated/rust",
+      "-Wl,-dead_strip",
+      "/Volumes/WORKSPACE/oath-wallet-security-review/tests/UpstreamDataAlias.cpp",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/src/interface/TWData.cpp",
+      "/private/tmp/oath-review-wallet-core-4.8.4/src/interface/TWString.cpp",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/memzero.o",
+      "/private/tmp/oath-core-dependency-repairs/build/local/lib/libwallet_core_rs.a",
+      "-framework",
+      "Security",
+      "-framework",
+      "CoreFoundation",
+      "-lresolv",
+      "-liconv",
+      "-o",
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/after"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "after-self",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/after",
+      "self"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "0ed3755f43d2ebe48ec54958fddb0a9ac016ab459aed83c61dfda36db027d5c7"
+  },
+  {
+    "name": "after-alias",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/after",
+      "alias"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "8f9382f68cb398e9861e11f8f64d1cf5b22b85d77f0296ac0c3ea15b9a0c1ed3"
+  },
+  {
+    "name": "after-controls",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/after",
+      "controls"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "caf07271b2c53608314bf85365c38af888658b415f9aaf96cbe7c9e5a2e9d2e0"
+  },
+  {
+    "name": "after-properties",
+    "command": [
+      "/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-data-alias-d8ts7qqt/after",
+      "properties"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "log_sha256": "437a7ac3b8d6b2dfa971c43c1b74f22030d92c5671995da0d608ddf48926efaa"
+  }
+]

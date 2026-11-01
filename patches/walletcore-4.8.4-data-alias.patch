@@ -1,0 +1,62 @@
+--- a/src/interface/TWData.cpp
++++ b/src/interface/TWData.cpp
+@@ -8,6 +8,8 @@
+ #include "Data.h"
+ #include "HexCoding.h"
+ #include <algorithm>
++#include <functional>
++#include <stdexcept>
+ #include <vector>
+ 
+ using namespace TW;
+@@ -78,8 +80,35 @@
+ 
+ void TWDataAppendBytes(TWData *_Nonnull data, const uint8_t *_Nonnull bytes, size_t size) {
+     auto* v = const_cast<Data*>(reinterpret_cast<const Data*>(data));
+-    for (auto i = 0ul; i < size; i += 1)
++    if (size == 0) {
++        return;
++    }
++    const auto originalSize = v->size();
++    if (size > v->max_size() - originalSize) {
++        throw std::length_error("TWData append exceeds maximum size");
++    }
++    // Capture an offset before reserve can invalidate a pointer into this data.
++    bool aliases = false;
++    size_t offset = 0;
++    if (originalSize != 0) {
++        const auto* begin = v->data();
++        const auto* end = begin + originalSize;
++        const std::less<const uint8_t*> less;
++        aliases = !less(bytes, begin) && less(bytes, end);
++        if (aliases) {
++            offset = static_cast<size_t>(bytes - begin);
++            if (size > originalSize - offset) {
++                throw std::out_of_range("TWData append source exceeds data bounds");
++            }
++        }
++    }
++    v->reserve(originalSize + size);
++    if (aliases) {
++        bytes = v->data() + offset;
++    }
++    for (size_t i = 0; i < size; ++i) {
+         v->push_back(bytes[i]);
++    }
+ }
+ 
+ void TWDataAppendByte(TWData *_Nonnull data, uint8_t byte) {
+@@ -88,9 +117,10 @@
+ }
+ 
+ void TWDataAppendData(TWData *_Nonnull data, TWData *_Nonnull append) {
+-    auto* v = const_cast<Data*>(reinterpret_cast<const Data*>(data));
+-    auto* av = reinterpret_cast<const Data*>(append);
+-    std::copy(av->begin(), av->end(), std::back_inserter(*v));
++    const auto* av = reinterpret_cast<const Data*>(append);
++    if (!av->empty()) {
++        TWDataAppendBytes(data, av->data(), av->size());
++    }
+ }
+ 
+ void TWDataReverse(TWData *_Nonnull data) {

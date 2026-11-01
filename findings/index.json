@@ -174,5 +174,17 @@
     "evidence": "evidence/aezeed-repairs",
     "fixed_in_public_framework": true,
     "available_in_app_store_verified": false
+  },
+  {
+    "id": "DEP-CORE-006",
+    "severity": "dependency-api-memory-safety",
+    "title": "Aliased data append reads freed vector storage",
+    "status": "source-repair-tested-integration-outstanding",
+    "document": "../review/CORE-DATA-ALIAS.md",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "patch": "patches/walletcore-4.8.4-data-alias.patch",
+    "evidence": "evidence/core-data-alias",
+    "fixed_in_shipped_framework": false,
+    "reachable_oath_exploit_established": false
   }
 ]

@@ -1,0 +1,85 @@
+{
+  "check": "upstream-data-alias",
+  "status": "passed",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "cases": [
+    {
+      "stage": "before",
+      "mode": "self",
+      "source_sha256": "2ebc470532e3edc9e5b115314f09e6851750f9c5a36d3cda0a8d51f40db80113",
+      "exit_code": 1,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "before",
+      "mode": "alias",
+      "source_sha256": "2ebc470532e3edc9e5b115314f09e6851750f9c5a36d3cda0a8d51f40db80113",
+      "exit_code": 1,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "before",
+      "mode": "controls",
+      "source_sha256": "2ebc470532e3edc9e5b115314f09e6851750f9c5a36d3cda0a8d51f40db80113",
+      "exit_code": 0,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "before",
+      "mode": "properties",
+      "source_sha256": "2ebc470532e3edc9e5b115314f09e6851750f9c5a36d3cda0a8d51f40db80113",
+      "exit_code": 1,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "after",
+      "mode": "self",
+      "source_sha256": "94384509bcf87dac3993ad381b4c799e15fe320220b88fceaaf6ebec51aa14eb",
+      "exit_code": 0,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "after",
+      "mode": "alias",
+      "source_sha256": "94384509bcf87dac3993ad381b4c799e15fe320220b88fceaaf6ebec51aa14eb",
+      "exit_code": 0,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "after",
+      "mode": "controls",
+      "source_sha256": "94384509bcf87dac3993ad381b4c799e15fe320220b88fceaaf6ebec51aa14eb",
+      "exit_code": 0,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    },
+    {
+      "stage": "after",
+      "mode": "properties",
+      "source_sha256": "94384509bcf87dac3993ad381b4c799e15fe320220b88fceaaf6ebec51aa14eb",
+      "exit_code": 0,
+      "timed_out": false,
+      "expected_outcome_observed": true
+    }
+  ],
+  "input_hashes": {
+    "/Volumes/WORKSPACE/oath-wallet-security-review/patches/walletcore-4.8.4-data-alias.patch": "817d9fbdd4748c33933bf7a1e059c526af34aa65f3b1505eaae7aa2f885ca4df",
+    "/Volumes/WORKSPACE/oath-wallet-security-review/tests/UpstreamDataAlias.cpp": "bfb1d38da27f4b5d70984c9f60db0e87f07fc28aad0ad8d499bae9ccecc10290",
+    "/private/tmp/oath-core-dependency-repairs/build/local/lib/libwallet_core_rs.a": "5bca602e07411f1f9da9ab45cd061ea6784219c7d01a41a24043fd39fbd4f769",
+    "/private/tmp/oath-core-dependency-repairs/src/rust/bindgen/WalletCoreRSBindgen.h": "a899bf0054cbbf199ab6a5aec1890b4d7c79dcfd2bbf5bcfe83a2afde23ac5aa"
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "duration_seconds": 12.872,
+  "limitations": [
+    "Host ASan/UBSan test of production translation units, not application runtime.",
+    "No reachable Oath call to either append API established.",
+    "LeakSanitizer disabled; this is not a leak or full memory-hygiene proof.",
+    "Rust library identity recorded, not independently rebuilt by this runner."
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "source_commit": "92423215ddd638b070c605a5911a9ebc7b15615f",
+    "command": [
+      "git",
+      "-C",
+      "/tmp/oath-aezeed-dependency-repairs",
+      "grep",
+      "-n",
+      "-E",
+      "TWDataAppend(Data|Bytes)",
+      "--",
+      "*.swift",
+      "*.cpp",
+      "*.c",
+      "*.h",
+      "*.java",
+      "*.kt"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "source_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "command": [
+      "git",
+      "-C",
+      "/tmp/oath-review-wallet-core-4.8.4",
+      "grep",
+      "-n",
+      "-E",
+      "TWDataAppend(Data|Bytes)",
+      "--",
+      "*.swift",
+      "*.cpp",
+      "*.c",
+      "*.h",
+      "*.java",
+      "*.kt"
+    ],
+    "exit_code": 0,
+    "stdout": "include/TrustWalletCore/TWData.h:86:void TWDataAppendBytes(TWData *_Nonnull data, const uint8_t *_Nonnull bytes, size_t size) TW_VISIBILITY_DEFAULT;\ninclude/TrustWalletCore/TWData.h:98:void TWDataAppendData(TWData *_Nonnull data, TWData *_Nonnull append) TW_VISIBILITY_DEFAULT;\nsrc/interface/TWData.cpp:79:void TWDataAppendBytes(TWData *_Nonnull data, const uint8_t *_Nonnull bytes, size_t size) {\nsrc/interface/TWData.cpp:90:void TWDataAppendData(TWData *_Nonnull data, TWData *_Nonnull append) {\ntests/chains/BitcoinCash/TWBitcoinCashTests.cpp:79:    TWDataAppendData(rawData.get(), data.get());\ntests/chains/ECash/TWECashTests.cpp:76:    TWDataAppendData(rawData.get(), data.get());\ntests/interface/TWDataTests.cpp:136:        TWDataAppendBytes(data.get(), bytes, 2);\ntests/interface/TWDataTests.cpp:145:        TWDataAppendData(data.get(), data2.get());\ntests/interface/TWHDWalletTests.cpp:283:    TWDataAppendData(prefix.get(), privateKeyData.get());\n",
+    "stderr": ""
+  }
+]

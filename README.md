@@ -13,6 +13,10 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+Latest dependency work: [buffer aliasing finding and paired regression results](review/CORE-DATA-ALIAS.md).
+The tested source repair is not yet integrated into the application's Apple
+frameworks. The report retains that gap explicitly.
+
 ## Reproduce
 
 Use an isolated machine with Xcode 27.1, Swift 6.4 and Python 3.14.7.
