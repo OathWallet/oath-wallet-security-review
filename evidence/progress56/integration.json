@@ -1,0 +1,46 @@
+{
+  "tested_commit": "5071662dc0700d7011795035aa14b5795a4a1e3a",
+  "merged_commit": "ad77a9d5f790114ec90c7bba59d1546279c9c794",
+  "tree": "24c8e4ec1f96dbbcfe920c7f266620f45934c8c1",
+  "app_release_tag": "v5.0.1-build103",
+  "release_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "checks": {
+    "recovery-reset-ios": {
+      "exit_code": 0,
+      "original_log_sha256": "5833681a6e901360f9eb7f5a0b966df410137716e42f280882e9edf2f91c459b",
+      "summary": [
+        "** BUILD SUCCEEDED **"
+      ]
+    },
+    "final-app-scan": {
+      "exit_code": 0,
+      "original_log_sha256": "69c50020212662a666051724a43b0115351c17a03bae648841c98f6d80112bae",
+      "summary": [
+        "11:28PM INF no leaks found",
+        "Public release validation passed: 4839 files; reviewed scanner matches are unchanged."
+      ]
+    },
+    "final-app-coverage": {
+      "exit_code": 0,
+      "original_log_sha256": "ec6a85a4a6321ec0887fa88ccc92f4ebffdc3aa3233b6dae16f2288e04aaab22",
+      "summary": [
+        "Checked app and local-package failure boundaries: 719 observed catch sites.",
+        "Diagnostics coverage guard passed (expected control-flow exclusions remain reviewable)."
+      ]
+    },
+    "final-diagnostics": {
+      "exit_code": 0,
+      "original_log_sha256": "cc21a01caefb46d3765a13904071985b37f0ef33037d92c72bf327b492a4a724",
+      "summary": [
+        "Executed 121 tests, with 2 tests skipped and 0 failures (0 unexpected) in 6.123 (6.131) seconds"
+      ]
+    },
+    "final-gitleaks": {
+      "exit_code": 0,
+      "original_log_sha256": "76dc557feb17f1bb1a00923e8a43b1d33731dce45f1e967a141b7747f93dd680",
+      "summary": [
+        "11:30PM INF no leaks found"
+      ]
+    }
+  }
+}

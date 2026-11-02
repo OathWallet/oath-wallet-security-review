@@ -1,0 +1,44 @@
+{
+  "check": "bitcoin-journal-and-reset",
+  "source_commit": "8425bc0597b6bd4ab36f8710d0e8d939d786a7fa",
+  "status": "reproduced",
+  "cases": [
+    {
+      "selector": "OathDatabaseTests.BitcoinSendSettlementTests/testRecoveryRejectsSignedBytesForAnotherPaymentUsingTheSameInputs",
+      "status": "reproduced",
+      "exit_code": 1,
+      "fixture_sha256": "35a46d8df74edd3ff76f39ae140e37cb86bdd1f517a71b61fb05e58821870d15",
+      "log": "testRecoveryRejectsSignedBytesForAnotherPaymentUsingTheSameInputs.log",
+      "log_sha256": "a4b4c10bda4cb0d31da18237289dd3c59fbe0fe43fae59123a2efbeca2aecb29",
+      "duration_seconds": 2.815
+    },
+    {
+      "selector": "OathDatabaseTests.BalanceHistoryTests/testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence",
+      "status": "reproduced",
+      "exit_code": 1,
+      "fixture_sha256": "09d6cde8c618a70d007792e2a6a5e0c7b3d163abc904a13f47d7319781a17d5b",
+      "log": "testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence.log",
+      "log_sha256": "01a294c0c92ab43a06195421d55913641e8c57a68779ea0bcd3ac56a39d4bb11",
+      "duration_seconds": 0.285
+    },
+    {
+      "selector": "OathDatabaseTests.HomeReadIndexTests/testMigrationBackfillsExistingRows",
+      "status": "reproduced",
+      "exit_code": 1,
+      "fixture_sha256": "33c4ee75ab85faa3b79a47920538e552625f9f81dea80eb6bdee3a85c9a0765a",
+      "log": "testMigrationBackfillsExistingRows.log",
+      "log_sha256": "ac9c40c645136c4077f0bce8613688a0654f96b815a0acc4d2059550f0233716",
+      "duration_seconds": 0.293
+    },
+    {
+      "selector": "OathDatabaseTests.WalletNamingTests/testUpgradeDoesNotBlockAnInterruptedWalletReset",
+      "status": "reproduced",
+      "exit_code": 1,
+      "fixture_sha256": "35f22db8df91087b6c0cc67b687b6a39e3598e0bfe4ee87ae0e4d1428e4214c1",
+      "log": "testUpgradeDoesNotBlockAnInterruptedWalletReset.log",
+      "log_sha256": "975b3496f02a29da3e5db73df10fb564c75d99cc73a281896aad1e6adf1a13db",
+      "duration_seconds": 0.419
+    }
+  ],
+  "scope": "Local synthetic signed payments and migrated SQLite stores; execution denied network access."
+}

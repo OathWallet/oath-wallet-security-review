@@ -1,0 +1,12 @@
+Test Suite 'Selected tests' started at 2026-11-02 23:25:31.563.
+Test Suite 'OathDatabasePackageTests.xctest' started at 2026-11-02 23:25:31.564.
+Test Suite 'HomeReadIndexTests' started at 2026-11-02 23:25:31.564.
+Test Case '-[OathDatabaseTests.HomeReadIndexTests testMigrationBackfillsExistingRows]' started.
+<unknown>:0: error: -[OathDatabaseTests.HomeReadIndexTests testMigrationBackfillsExistingRows] : failed: caught error: "SQLite error 19: Wallet reset in progress - while executing `UPDATE wallets SET needsBackupOfferReview = 1 WHERE pendingBackupOffer IS NULL`"
+Test Case '-[OathDatabaseTests.HomeReadIndexTests testMigrationBackfillsExistingRows]' failed (0.190 seconds).
+Test Suite 'HomeReadIndexTests' failed at 2026-11-02 23:25:31.754.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.190 (0.190) seconds
+Test Suite 'OathDatabasePackageTests.xctest' failed at 2026-11-02 23:25:31.754.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.190 (0.190) seconds
+Test Suite 'Selected tests' failed at 2026-11-02 23:25:31.754.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.190 (0.191) seconds

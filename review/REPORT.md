@@ -9,6 +9,12 @@ binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 
 Current review target: **`8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`**.
 
+## Progress 56 · 2 November 2026
+
+A synthetic signed transaction spending the same inputs but paying another recipient passed the original recovery check. A second defect kept a database with an interrupted reset from opening during the backup reminder upgrade. Four original failures reproduced. The same four tests and three additional compatibility checks all passed on the merged repair tree. The fixed database and Bitcoin packages passed 732 and 314 cases, respectively, with 72 and 60 explicit skips. The unsigned iOS Release build passed. The existing 5.0.1 (103) tag predates these fixes.
+
+Four more validations now have evidence at the historical review target. Three required validations and 16,583 total ledger entries remain open. [Finding details, test commands, results and limits](BITCOIN-JOURNAL-AND-RESET.md) · [App changes](https://github.com/devdasx/oath-wallet/pull/56).
+
 ## Progress 55 · 2 November 2026
 
 GitHub’s full run at this review target had three failed jobs. We recovered and checked all 84 artifact archive digests. Individual reports account for 98 recorded passes and one recorded failure with matching logs. The full package later passed on the fix commit for the duplicate metadata lookup in [app PR 55](https://github.com/devdasx/oath-wallet/pull/55). The fix commit and its public merge have identical source trees. The 5.0.1 (103) release tag predates the repair. A generic unsigned iOS Release build passed on the fixed tree.

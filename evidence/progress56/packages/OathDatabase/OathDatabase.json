@@ -1,0 +1,41 @@
+{
+  "check": "OathDatabase",
+  "source_commit": "8fdf4494f62219348ec0605d7fa38285c0fd058e",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathDatabase",
+    "<SCRATCH>-native",
+    "<RUN>/results/OathDatabase"
+  ],
+  "status": "failed",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 359.71,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 800 selected; 725 passed; 72 skipped; 3 failed",
+    "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+  ],
+  "log_sha256": "cc0e64d58d4472137cf00d9c1eff3d1b4f6ba4aba8f5e0cf111b9b3370f2f8b0",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 800,
+    "failures": 3,
+    "errors": 0,
+    "skipped": 72,
+    "sha256": "0ca0f107eab5aaff13f201ae85736d78ad1ade35c85fb6f198246b221258a6dc"
+  },
+  "swift_testing": {
+    "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+    "summaries": [
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ]
+  },
+  "original_report_sha256": "bfa07fdcd806035e78fca02a2a4c464c8a3c0ef4f80217bf60aea784474ca468",
+  "log": "OathDatabase.log.gz",
+  "uncompressed_log_sha256": "d66547d03fe458b238c3831c212190ffc4dd587edcf5c2a58571580e23c1e33e",
+  "log_encoding": "gzip"
+}

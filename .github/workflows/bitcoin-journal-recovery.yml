@@ -1,0 +1,33 @@
+name: Bitcoin payment recovery and interrupted resets
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/bitcoin-journal-recovery.py
+      - .github/workflows/bitcoin-journal-recovery.yml
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: xcode-27
+    timeout-minutes: 45
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - name: Reproduce four original failures, then exercise the repairs and compatibility controls
+        run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/payments
+          git -C .work/payments checkout --detach 8425bc0597b6bd4ab36f8710d0e8d939d786a7fa
+          python3 scripts/bitcoin-journal-recovery.py .work/payments --before --scratch .work/old-build --output evidence/ci/journal-before
+          git -C .work/payments checkout --detach 5071662dc0700d7011795035aa14b5795a4a1e3a
+          python3 scripts/bitcoin-journal-recovery.py .work/payments --scratch .work/new-build --output evidence/ci/journal-after
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: wallet-journal-and-reset-evidence, path: evidence/ci, retention-days: 90}

@@ -1,0 +1,12 @@
+Test Suite 'Selected tests' started at 2026-11-02 23:25:31.869.
+Test Suite 'OathDatabasePackageTests.xctest' started at 2026-11-02 23:25:31.870.
+Test Suite 'WalletNamingTests' started at 2026-11-02 23:25:31.870.
+Test Case '-[OathDatabaseTests.WalletNamingTests testUpgradeDoesNotBlockAnInterruptedWalletReset]' started.
+<unknown>:0: error: -[OathDatabaseTests.WalletNamingTests testUpgradeDoesNotBlockAnInterruptedWalletReset] : failed: caught error: "SQLite error 19: Wallet reset in progress - while executing `UPDATE wallets SET needsBackupOfferReview = 1 WHERE pendingBackupOffer IS NULL`"
+Test Case '-[OathDatabaseTests.WalletNamingTests testUpgradeDoesNotBlockAnInterruptedWalletReset]' failed (0.317 seconds).
+Test Suite 'WalletNamingTests' failed at 2026-11-02 23:25:32.187.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.317 (0.317) seconds
+Test Suite 'OathDatabasePackageTests.xctest' failed at 2026-11-02 23:25:32.187.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.317 (0.317) seconds
+Test Suite 'Selected tests' failed at 2026-11-02 23:25:32.187.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.317 (0.318) seconds

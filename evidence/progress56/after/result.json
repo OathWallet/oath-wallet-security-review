@@ -1,0 +1,71 @@
+{
+  "check": "bitcoin-journal-and-reset",
+  "source_commit": "5071662dc0700d7011795035aa14b5795a4a1e3a",
+  "status": "passed",
+  "cases": [
+    {
+      "selector": "OathDatabaseTests.BitcoinSendSettlementTests/testRecoveryRejectsSignedBytesForAnotherPaymentUsingTheSameInputs",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "35a46d8df74edd3ff76f39ae140e37cb86bdd1f517a71b61fb05e58821870d15",
+      "log": "testRecoveryRejectsSignedBytesForAnotherPaymentUsingTheSameInputs.log",
+      "log_sha256": "2e11e6decaad9f310f62fc1428a4beaaff388552f4df579b562cd192614a42a4",
+      "duration_seconds": 2.341
+    },
+    {
+      "selector": "OathDatabaseTests.BalanceHistoryTests/testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "09d6cde8c618a70d007792e2a6a5e0c7b3d163abc904a13f47d7319781a17d5b",
+      "log": "testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence.log",
+      "log_sha256": "faa999992878727db26c13c79c87d9b3ed3254fe51703e5de52e7c7d4727772b",
+      "duration_seconds": 0.276
+    },
+    {
+      "selector": "OathDatabaseTests.HomeReadIndexTests/testMigrationBackfillsExistingRows",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "33c4ee75ab85faa3b79a47920538e552625f9f81dea80eb6bdee3a85c9a0765a",
+      "log": "testMigrationBackfillsExistingRows.log",
+      "log_sha256": "120b5bc2b893ba3da8e6e9a572b3ba4b1f8629915f07ebc14a83d9cdb725d827",
+      "duration_seconds": 0.311
+    },
+    {
+      "selector": "OathDatabaseTests.WalletNamingTests/testUpgradeDoesNotBlockAnInterruptedWalletReset",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "35f22db8df91087b6c0cc67b687b6a39e3598e0bfe4ee87ae0e4d1428e4214c1",
+      "log": "testUpgradeDoesNotBlockAnInterruptedWalletReset.log",
+      "log_sha256": "7e16695b71232e8f0bc931489973c159edf88f3f108cebc9396503be3a52d618",
+      "duration_seconds": 0.282
+    },
+    {
+      "selector": "OathDatabaseTests.BitcoinSendSettlementTests/testRecoveryJournalChecksNetworkReceiptAndLegacyRowsOnEveryChain",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "f43c3543960726bdf02b048af2c8e219dabeb493bf0381c2b7acbd75c978c606",
+      "log": "testRecoveryJournalChecksNetworkReceiptAndLegacyRowsOnEveryChain.log",
+      "log_sha256": "5bb7b107cc1fa05db2bd1270cdafdeb6eb993df14d09bb234edf49b3c3911444",
+      "duration_seconds": 2.181
+    },
+    {
+      "selector": "OathDatabaseTests.BitcoinSendSettlementTests/testDigestMigrationReopensAnExistingSignedPaymentWithoutRewritingIt",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "58c07bde5b6030dae030ae355b21540dc0bc8e691379aeb017c3e20fb169265d",
+      "log": "testDigestMigrationReopensAnExistingSignedPaymentWithoutRewritingIt.log",
+      "log_sha256": "ca16c1a6e0fc94c93a3b6c5cb964760211b4fdc64033a126b0517b8e02f64748",
+      "duration_seconds": 0.846
+    },
+    {
+      "selector": "OathDatabaseTests.BitcoinSendSettlementTests/testRecoveryJournalDetectsWitnessChangeThatPreservesBitcoinTxid",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "1bb169b916a3c368c5221260e2331f4cd1f89ddb22bfabdaabbe94e181c99370",
+      "log": "testRecoveryJournalDetectsWitnessChangeThatPreservesBitcoinTxid.log",
+      "log_sha256": "320cdc84fca7fe14a41defc692844aaf1f20255f4794ae094e2ccd1e714ea977",
+      "duration_seconds": 0.785
+    }
+  ],
+  "scope": "Local synthetic signed payments and migrated SQLite stores; execution denied network access."
+}

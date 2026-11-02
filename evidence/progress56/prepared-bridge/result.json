@@ -1,0 +1,14 @@
+{
+  "check": "aezeed-prepared-bridge",
+  "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+  "status": "passed",
+  "log": "result.log",
+  "log_sha256": "0bd4e3983c183c07a47a8ebbe600eebdc3e4cbdc2832afc8852bd407bdba7c9f",
+  "original_output_sha256": "6cde77ed578e1b17c6a64870ea6d01cc122acd507e1bcf330a67625b7277dae0",
+  "fixtures": {
+    "Packages/OathAezeed/Tests/OathAezeedTests/Fixtures/lnd-production.json": "ca0d5f593699bc1b4def10d0122d89b05e140f129eab01cad49d6676695d12e7",
+    "Packages/OathBitcoin/Tests/OathBitcoinTests/Fixtures/aezeed-lnd-vectors.json": "196ab58f9d54bbf696cbb8b39d58842e3f48bbb2b0b1892ac00a722d060320de"
+  },
+  "command": "bash Tools/AezeedBridge/test.sh",
+  "scope": "Pinned Go build, prepared vendor source, race-enabled host tests, go vet, and two deterministic fixture generators. Public fixture values omitted from this log."
+}
