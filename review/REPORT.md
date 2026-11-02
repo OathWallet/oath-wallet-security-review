@@ -6,6 +6,8 @@
 
 **Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](../findings/OW-2026-046.md) · [Application and dependency checks](RELEASE-5.0.1-103.md) · [Direct input coverage](../evidence/5.0.1-build103/compiler/dispositions.json).
 
+**Build 103 checkpoint 5.** The bundled ENS response decoder trapped on malformed input and accepted several invalid encodings. The exact-release replay preserves seven crashing processes, four failing methods and five passing controls. All sixteen pass on the merged repair. Application reachability remains unproven. [Finding](../findings/OW-2026-053.md) · [Tests and review scope](ENS-CONTRACT-DECODING.md) · [CI evidence](../evidence/5.0.1-build103/ci-artifacts-checkpoint5.json).
+
 **Build 103 checkpoint 4.** Public source repairs cover Bitcoin-family address discovery and backup file races. The original failures, fixed cases and build receipts are recorded separately from the submitted build. [Address issuance](../findings/OW-2026-049.md) · [Backup reads](../findings/OW-2026-051.md) · [Conflicting backup writes](../findings/OW-2026-052.md) · [Scalar arithmetic](SECP-SCALAR-ARITHMETIC.md).
 
 **Build 103 checkpoint 3.** Synthetic authenticated vault and SQLite records reproduced three integer overflows. Public source repairs passed the focused tests, full database package and unsigned iOS builds. [Vault finding](../findings/OW-2026-047.md) · [Database finding](../findings/OW-2026-048.md) · [Exact-target CI evidence](../evidence/5.0.1-build103/ci-artifacts-checkpoint3.json).

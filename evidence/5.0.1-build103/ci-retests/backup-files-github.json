@@ -1,0 +1,108 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41543627524",
+  "workflow_revision": "e95ef84e35c6c726f19e4fbdd100860bd99bd435",
+  "conclusion": "success",
+  "artifact_id": 13188348885,
+  "archive_digest": "sha256:332ab3ffe57f057364f55a91c22c6af1ef686632c0b0aff8c38f6118ef941057",
+  "executions": [
+    {
+      "stage": "before",
+      "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "case": "OathCloudBackupTests.CloudFileRaceTests/testCachedMetadataDoesNotAuthorizeAReplacementSymlink",
+      "exit_code": 1,
+      "failures": [
+        "-[OathCloudBackupTests.CloudFileRaceTests testCachedMetadataDoesNotAuthorizeAReplacementSymlink] : XCTAssertNotEqual failed: (\"Optional(25 bytes)\") is equal to (\"Optional(25 bytes)\") - Stale resource values authorized the unselected file",
+        "-[OathCloudBackupTests.CloudFileRaceTests testCachedMetadataDoesNotAuthorizeAReplacementSymlink] : XCTAssertNil failed: \"25 bytes\""
+      ],
+      "raw_log_sha256": "63af212ba961f0644c4edaa24b1a22fdeccc8a209e7dcdb760d3533e3366f4f4",
+      "fixtures": {
+        "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+        "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+        "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+      },
+      "original_writer_sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+      "instrumented_writer_sha256": "b524ab20622f867986e8a6c1481ebd96b17cd8b245ba6f558c78fe2763b5f670"
+    },
+    {
+      "stage": "before",
+      "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "case": "OathCloudBackupTests.CloudFilePublishTests/testDanglingLinkAtBackupNameIsPreservedAsAConflict",
+      "exit_code": 1,
+      "failures": [
+        "-[OathCloudBackupTests.CloudFilePublishTests testDanglingLinkAtBackupNameIsPreservedAsAConflict] : XCTAssertThrowsError failed: did not throw an error",
+        "-[OathCloudBackupTests.CloudFilePublishTests testDanglingLinkAtBackupNameIsPreservedAsAConflict] : XCTAssertEqual failed: (\"nil\") is not equal to (\"Optional(\"/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-existing-link-193736D5-F79C-47C4-8835-18CCE92EEF71/missing-target\")\")"
+      ],
+      "raw_log_sha256": "0fbe3d620b97a3c6bfc565e098ab90a97b71d73ee7631f3a8c39c5f72594cc17",
+      "fixtures": {
+        "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+        "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+        "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+      },
+      "original_writer_sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+      "instrumented_writer_sha256": "b524ab20622f867986e8a6c1481ebd96b17cd8b245ba6f558c78fe2763b5f670"
+    },
+    {
+      "stage": "before",
+      "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "case": "OathCloudBackupTests.BackupFileBoundaryTests/testExclusiveCreatorWinsAtPublicationBoundary",
+      "exit_code": 1,
+      "failures": [
+        "-[OathCloudBackupTests.BackupFileBoundaryTests testExclusiveCreatorWinsAtPublicationBoundary] : XCTAssertThrowsError failed: did not throw an error",
+        "-[OathCloudBackupTests.BackupFileBoundaryTests testExclusiveCreatorWinsAtPublicationBoundary] : XCTAssertEqual failed: (\"3 bytes\") is not equal to (\"2 bytes\") - Earlier complete file must survive"
+      ],
+      "raw_log_sha256": "c9de41e4c5612dd5ca2d08be108752cc22bf95eb4ab24e3ef61c0a3a0ae2fe9d",
+      "fixtures": {
+        "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+        "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+        "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+      },
+      "original_writer_sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+      "instrumented_writer_sha256": "b524ab20622f867986e8a6c1481ebd96b17cd8b245ba6f558c78fe2763b5f670"
+    },
+    {
+      "stage": "after",
+      "source_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+      "case": "OathCloudBackupTests.CloudFileRaceTests/testCachedMetadataDoesNotAuthorizeAReplacementSymlink",
+      "exit_code": 0,
+      "failures": [],
+      "raw_log_sha256": "6e652ed3634a4fc73c472a7d9563dac0ba3038b482ace6a4bef46eec8c567cd7",
+      "fixtures": {
+        "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+        "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+        "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+      },
+      "original_writer_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+      "instrumented_writer_sha256": "e50b28238133d2c89f12886845e684245091c51f0f22bad8f941bc28977789b6"
+    },
+    {
+      "stage": "after",
+      "source_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+      "case": "OathCloudBackupTests.CloudFilePublishTests/testDanglingLinkAtBackupNameIsPreservedAsAConflict",
+      "exit_code": 0,
+      "failures": [],
+      "raw_log_sha256": "d4ece6cb149a798fdce8cdc4afe396ce6de5857155bda28afd68982a1637a38c",
+      "fixtures": {
+        "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+        "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+        "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+      },
+      "original_writer_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+      "instrumented_writer_sha256": "e50b28238133d2c89f12886845e684245091c51f0f22bad8f941bc28977789b6"
+    },
+    {
+      "stage": "after",
+      "source_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+      "case": "OathCloudBackupTests.BackupFileBoundaryTests/testExclusiveCreatorWinsAtPublicationBoundary",
+      "exit_code": 0,
+      "failures": [],
+      "raw_log_sha256": "1e918aa692f10bdb777d8eba4ba69558ec2e83edeae00e33d8b0a20011b90aeb",
+      "fixtures": {
+        "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+        "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+        "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+      },
+      "original_writer_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+      "instrumented_writer_sha256": "e50b28238133d2c89f12886845e684245091c51f0f22bad8f941bc28977789b6"
+    }
+  ]
+}

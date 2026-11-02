@@ -47,3 +47,18 @@ The ordinary and ZKP secp256k1 scalar modules passed 4,649 input pairs under eac
 On the exact tag, 76 of 115 required validations now have a passing hash-linked record. The snapshot covers 44 verified CI archives and 59 matched result/log pairs. It includes two failed reports. A separate Arc job reported a third failure with per-case logs. The database job's three failed tests all reproduced the pending-reset migration defect. Each passed on the repaired public source identified in its receipt. The merged Arc diagnostic fix also required a narrow checker update. Two mutation controls verified that other unreported catches remain rejected. Of 2,357 direct compiler inputs, 1,559 remain outstanding. [CI receipts](../evidence/5.0.1-build103/ci-artifacts-checkpoint4.json) · [Migration case receipts](../evidence/5.0.1-build103/ci-retests/database-migration.json) · [Coverage checker and final build](../evidence/5.0.1-build103/ci-retests/coverage-followup.json).
 
 Separate GitHub runs confirmed the earlier [import and diagnostic reproductions](../evidence/5.0.1-build103/ci-retests/github-confirmation.json) and [wallet-numbering reproductions](../evidence/5.0.1-build103/ci-retests/numbering-github.json).
+
+
+## Checkpoint 5
+
+The bundled ENS response decoder reproduced seven isolated process traps and four failing methods on the exact build 103 source. Five controls passed before repair. All sixteen methods passed after repair, including the production resolver contract response path. The complete SDK harness passed 277 tests with two skips. Diagnostics passed 119 tests with two skips, and the generic iOS Release build succeeded. [OW-2026-053](../findings/OW-2026-053.md) · [Reviewed scope and reproducible fixture](ENS-CONTRACT-DECODING.md).
+
+Source inspection found no application call into this ENS resolver. The recorded defect is confined to its tested dependency API. ENS name processing and other signer implementations remain open review areas.
+
+The updated CI snapshot verifies 52 archive digests and 73 report/log pairs. Seventy-one report success and two preserve failures. The separate Arc failure receipt remains in the record. Eighty-eight of 115 required validations have a passing hash-linked record on the exact build 103 tag. Five newly reviewed compiler inputs reduce outstanding direct inputs to 1,554. [CI snapshot](../evidence/5.0.1-build103/ci-artifacts-checkpoint5.json) · [Compiler coverage](../evidence/5.0.1-build103/compiler/dispositions.json).
+
+GitHub also completed the Bitcoin address-window and backup-file reproductions. Their receipts identify the original and repaired source for each run. [Address-window results](../evidence/5.0.1-build103/ci-retests/bitcoin-indices-github.json) · [Backup-file results](../evidence/5.0.1-build103/ci-retests/backup-files-github.json).
+
+Three scanner matches in the newer CI bundle were public source-file SHA-256 values. Each was recomputed against its source before scanning with exact-value exceptions. [Checksum review](../evidence/5.0.1-build103/ci-checkpoint5-checksum-review.json).
+
+The full review remains open. App Store availability of later fixes and binary equivalence remain unverified.

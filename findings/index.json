@@ -845,5 +845,20 @@
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json"
+  },
+  {
+    "id": "OW-2026-053",
+    "title": "Malformed ENS results can trap the bundled ABI decoder",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-053.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "7c6209a999b62003e0c4d2f16aec7810a4e5d56c",
+    "tested_commit": "a6b08a0890564489a12a0cb13987d9b2f885dd1e",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "evidence": "evidence/5.0.1-build103/ens-contract-decoding/result.json",
+    "merge_commit": "cd63782a33f35361f9ee4cbc6a05330e1b919fc1",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/66"
   }
 ]

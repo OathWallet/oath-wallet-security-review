@@ -1,0 +1,121 @@
+{
+  "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "tested_commit": "a6b08a0890564489a12a0cb13987d9b2f885dd1e",
+  "fix_commit": "7c6209a999b62003e0c4d2f16aec7810a4e5d56c",
+  "merge_commit": "cd63782a33f35361f9ee4cbc6a05330e1b919fc1",
+  "tree_matches": true,
+  "checks": {
+    "ens_exact_revision_replay": {
+      "before": {
+        "crashing_processes": 7,
+        "failing_methods": 4,
+        "passing_methods": 5
+      },
+      "after": {
+        "passing_methods": 16
+      }
+    },
+    "full_sdk_host": {
+      "passed": 277,
+      "skipped": 2,
+      "failed": 0
+    },
+    "diagnostics_host": {
+      "passed": 119,
+      "skipped": 2,
+      "failed": 0
+    },
+    "diagnostics_coverage": "passed",
+    "public_source_scan": "passed",
+    "generic_ios_release": {
+      "exit_code": 0,
+      "configuration": "Release",
+      "destination": "generic/platform=iOS",
+      "signing_enabled": false
+    },
+    "audit_harness_tests": {
+      "passed": 212
+    }
+  },
+  "initial_build_capture": {
+    "build_marker": "BUILD SUCCEEDED",
+    "wrapper_exit": 1,
+    "cause": "zsh rejects assignment to its read-only status variable",
+    "resolution": "reran the build with a task-specific exit variable; exit 0 recorded"
+  },
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+  },
+  "logs": {
+    "sdk-full-final.log": {
+      "raw_sha256": "a0607642079a50bd07d8828dfdcdc94f385fe0d8ac02bbb6857d70b6b5e8ba6e",
+      "sanitized_sha256": "269d217ce37a146e9e09ab17eda10c4c4a3040218d39268c134d2a51efa94e69",
+      "gzip_sha256": "53f3859298dc87738bf473a559dd1098a3db656827d75c70264de82828a9ee5f",
+      "file": "sdk-full-final.log.gz"
+    },
+    "diagnostics-tests.log": {
+      "raw_sha256": "0feb416657a351a6197e2774e22759296f8881c5133abf3550f164e2f6a2364c",
+      "sanitized_sha256": "20187605603daf47af7638c87cc8f0490af391fd9f16a04bb1fd185fc601b0b4",
+      "gzip_sha256": "dc1ced17756bfed1fc3111d32d415f0813efb2d7048e3652c906317184a403d4",
+      "file": "diagnostics-tests.log.gz"
+    },
+    "ios-release.log": {
+      "raw_sha256": "481da97ac2dc72b8861ababc48c1e62aca6382830ff5a3b491577882bfa563ed",
+      "sanitized_sha256": "ac9f7fc6ab539ae324943340e03ecc528e7d9cdfc079c7be719f4a3f1ef5e376",
+      "gzip_sha256": "f2f14d89dd97dcfe34c67807007da1f3340ecbc2df5962e10ee577208ac73f55",
+      "file": "ios-release.log.gz"
+    },
+    "ios-release-confirmed.log": {
+      "raw_sha256": "fcd54a5f175d138ac1221fc263d11f690e5461d57eb8e387fc25fdd3a26dc7fd",
+      "sanitized_sha256": "ba635d8d5bb6b57ab5b9e45fe3a6f17c0ab38e4a119831d61a554d174991396c",
+      "gzip_sha256": "9651832522638fd87a958a0c32cc0defc9e4c15b92b8402de708880591e8888e",
+      "file": "ios-release-confirmed.log.gz"
+    },
+    "diagnostics-coverage-final.log": {
+      "raw_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "sanitized_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "gzip_sha256": "c47947e55f580d678597e126ba95362fc2223c2dd5d09f6c352a3b4b8aa3a216",
+      "file": "diagnostics-coverage-final.log.gz"
+    },
+    "publication-scan-final.log": {
+      "raw_sha256": "f3beded93bedf74f2b8eae6b53eca52868c42788b056c4843eefcabb3fb106e0",
+      "sanitized_sha256": "f3beded93bedf74f2b8eae6b53eca52868c42788b056c4843eefcabb3fb106e0",
+      "gzip_sha256": "137e01fd2a626f8948f68625f65d547635ae1b4949513fdfc5a9315fb2774160",
+      "file": "publication-scan-final.log.gz"
+    },
+    "audit-tests.log": {
+      "raw_sha256": "4f8667075aaca211a29b79227b29b8ce09a74bd855768f7876060834d807e459",
+      "sanitized_sha256": "4f8667075aaca211a29b79227b29b8ce09a74bd855768f7876060834d807e459",
+      "gzip_sha256": "2708f40438d5163487635bbb9fe665134273419981c8edc610cd7047341976ca",
+      "file": "audit-tests.log.gz"
+    },
+    "diagnostics-tests-final.log": {
+      "raw_sha256": "00d02abd6e3bade2c3abbbad223c7bc58a9e63f2aa168cfa07e2229267b5f935",
+      "sanitized_sha256": "d22dfc80548e282c2907c3c407f274c2636d439419145fb8ddef4e6e7f9e8e6e",
+      "gzip_sha256": "2645e2b6446a034de28057d73b9eefd22ef116642713393ca24388b0dd80071d",
+      "file": "diagnostics-tests-final.log.gz"
+    },
+    "audit-tests-final.log": {
+      "raw_sha256": "67ccd318ee3c84f94c2055c9e12f660c542a49add654d6ae13c6fb6033f8daae",
+      "sanitized_sha256": "67ccd318ee3c84f94c2055c9e12f660c542a49add654d6ae13c6fb6033f8daae",
+      "gzip_sha256": "cf1067a25344c8a1d6cfde4a4f906884e7decce0db32611f8cffd9b84d83f6b6",
+      "file": "audit-tests-final.log.gz"
+    },
+    "audit-scan-verified.log": {
+      "raw_sha256": "461d59043180d3ff283e9fba35bd84e20c0a56ef28fbade63d0dcb8d22aeb887",
+      "sanitized_sha256": "461d59043180d3ff283e9fba35bd84e20c0a56ef28fbade63d0dcb8d22aeb887",
+      "gzip_sha256": "3241a6ec48e06ac9674db9780036cb392f4437a0ae0ca5df8c2606ced6eca4f2",
+      "file": "audit-scan-verified.log.gz"
+    }
+  },
+  "simulator_used": false,
+  "physical_device_used": false,
+  "runtime_scope": "macOS host fixtures and generic iOS compilation",
+  "app_store_availability_verified": false,
+  "audit_publication_scan": {
+    "raw_matches": 13,
+    "classification": "public source-file digests, each exact value independently recomputed",
+    "result_after_exact_checksum_exceptions": "passed"
+  }
+}
