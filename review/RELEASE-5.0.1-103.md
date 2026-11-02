@@ -29,3 +29,9 @@ Two GitHub jobs failed in the initial matrix. The [diagnostic failure investigat
 At this checkpoint, 51 of the 115 required validations have a passing, hash-linked record on the exact release revision. The snapshot covers 24 GitHub artifact archives and 28 matched report/log pairs, including one failed replay. The Arc matrix failure has an additional receipt because its report references individual test logs. A later passing result retains its own source revision.
 
 A separate synthetic vault fixture reproduced [OW-2026-047](../findings/OW-2026-047.md) during authenticated reopening. The repaired source passed the encrypted-envelope tests. The Arc repair also passed the complete [isolated provider package](../evidence/5.0.1-build103/ci-retests/arc-repair/OathAnkr.json).
+
+## Checkpoint 3
+
+Three original processes trapped on exhausted display metadata. PR 60 repaired vault family reconciliation and PR 61 repaired SQL name and sort allocation. Their final public trees matched the tested candidates. The Arc fix also passed the full provider package. All three unsigned iOS Release builds succeeded. [Wallet identity and numbering](BUILD103-WALLET-IDENTITY-AND-NUMBERING.md) · [Size and scope of the original failures](../findings/OW-2026-048.md).
+
+The newer CI snapshot verifies 35 archive digests and 41 individual report/log pairs. Forty report success and one preserves the original failed replay. The separate Arc failure remains recorded. At this checkpoint, 61 of 115 required validations have at least one passing receipt on build 103. Of 2,357 direct compiler inputs, 1,566 remain outstanding. [CI receipts](../evidence/5.0.1-build103/ci-artifacts-checkpoint3.json) · [Compiler dispositions](../evidence/5.0.1-build103/compiler/dispositions.json).
