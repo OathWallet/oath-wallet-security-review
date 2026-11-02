@@ -9,6 +9,12 @@ binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 
 Current review target: **`8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`**.
 
+## Progress 57 · 2 November 2026
+
+The complete native Wallet Core suites passed 2,363 C++ and 113 C cases. The extended-key corpus reproduced 21 original assertion failures and passed all 94 assertions with the repaired translation unit. At the historical app revision the provider package now passed 1,296 cases with 194 explicit skips. The earlier failing provider run remains valid evidence of an intermittent cache bug, and the later public repair remains necessary.
+
+All 115 required checks now have at least one passing record at the pinned revision. That count includes historical runs; it is not a clean pass of one GitHub workflow or the latest merged wallet tree. Separately, seven original Swift path failures reproduced and eleven host controls passed with the source patch. Two dependency findings await integration into the public app. 16,578 entries remain open across the source, dependency and findings ledgers. [Swift findings and reproduction](CORE-SWIFT-PATH-VALUES.md) · [Provider retest](../evidence/progress57/provider/result.json) · [Original provider failure](../findings/OW-2026-043.md).
+
 ## Progress 56 · 2 November 2026
 
 A synthetic signed transaction spending the same inputs but paying another recipient passed the original recovery check. A second defect kept a database with an interrupted reset from opening during the backup reminder upgrade. Four original failures reproduced. The same four tests and three additional compatibility checks all passed on the merged repair tree. The fixed database and Bitcoin packages passed 732 and 314 cases, respectively, with 72 and 60 explicit skips. The unsigned iOS Release build passed. The existing 5.0.1 (103) tag predates these fixes.

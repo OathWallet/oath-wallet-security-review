@@ -709,5 +709,33 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/56",
     "present_at_review_target": false,
     "available_in_app_store_verified": false
+  },
+  {
+    "id": "DEP-CORE-009",
+    "title": "Nonstandard Swift derivation paths can change or trap during coding",
+    "severity": "low",
+    "status": "source-repair-tested-integration-outstanding",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "document": "../review/CORE-SWIFT-PATH-VALUES.md",
+    "patch": "patches/walletcore-4.8.4-swift-path-values.patch",
+    "evidence": "evidence/progress57/swift-path/result.json",
+    "reachable_oath_exploit_established": false,
+    "fixed_in_public_framework": false,
+    "integrated_in_public_application": false,
+    "available_in_app_store_verified": false
+  },
+  {
+    "id": "DEP-CORE-010",
+    "title": "Unrepresentable Swift derivation indices trap before the bounds check",
+    "severity": "low",
+    "status": "source-repair-tested-integration-outstanding",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "document": "../review/CORE-SWIFT-PATH-VALUES.md",
+    "patch": "patches/walletcore-4.8.4-swift-path-values.patch",
+    "evidence": "evidence/progress57/swift-path/result.json",
+    "reachable_oath_exploit_established": false,
+    "fixed_in_public_framework": false,
+    "integrated_in_public_application": false,
+    "available_in_app_store_verified": false
   }
 ]

@@ -39802,5 +39802,149 @@
     "command": "bash Tools/AezeedBridge/test.sh",
     "scope": "Pinned Go build, prepared vendor source, race-enabled host tests, go vet, and two deterministic fixture generators. Public fixture values omitted from this log.",
     "evidence": "evidence/progress56/prepared-bridge/result.json"
+  },
+  {
+    "check": "upstream-native",
+    "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "status": "passed",
+    "runtime_scope": "native-macOS",
+    "cpp": {
+      "tests": 2363,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "time": "25.063s"
+    },
+    "c_checks": 113,
+    "c_failures": 0,
+    "c_errors": 0,
+    "binary_sha256": {
+      "cpp": "7c0c16db2bc3827b47f31ff20be428ec41a832e2242cef640594a32eb6286ec9",
+      "trezor": "07aa031757e0567df7b350ee1469c833964d1ddaadca4d75ee5df4b224e96e26"
+    },
+    "patch_sha256": "2dc70e8dbfb31dee39d6e27ba54b92257ec742c2e594d46ee7e4d3bff68e0d18",
+    "repair_set": "all-eight",
+    "log_sha256": "5351c3528d0ba74abd389ee1763318a15ab647b984fe5f924fee9e4d66178b24",
+    "limitations": [
+      "Prepared native build, not an Apple framework or whole-application test.",
+      "Passing suites do not establish manual source coverage or historical binary equivalence."
+    ],
+    "original_report_sha256": "5cfb8b64c5cec7049383aa9f0b797b3c83cc6b0aafc4a29a460633b339101974",
+    "log": "cpp.log.gz",
+    "log_encoding": "gzip",
+    "uncompressed_log_sha256": "543ac4878520e2c7a844c57c7c2f31cada5063c4958720e1cd452959c41ad352",
+    "original_log_sha256": "ac81869c5f08a31fc48e20cfc678bec4d26b4f74b7d33944cbd7f822f392f822",
+    "trezor_output": {
+      "log": "trezor.log.gz",
+      "log_sha256": "247abb1effa2b6b95f4d1245e5934cd83b6afe7d67b372d2644128d18702dfad",
+      "log_encoding": "gzip",
+      "uncompressed_log_sha256": "84e2c5f43c885d23f88a12c2289fc0ed658e48dd17e93bd1c906f4f473b655aa",
+      "original_log_sha256": "a700087e692de20b1615de3c380a074f131c44f88195ab0e0bdb2d6cb7fe0712"
+    },
+    "evidence": "evidence/progress57/native/result.json"
+  },
+  {
+    "check": "upstream-extended-key-kind",
+    "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+    "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+    "status": "passed",
+    "cases": [
+      {
+        "stage": "before",
+        "exit_code": 1,
+        "timed_out": false,
+        "summary": "EXTENDED_KEY_CHECKS total=94 public_rejected=9 failures=21",
+        "source_sha256": "1a916b5b4a9018e9924b7b8c2406afae26f678acbd36f9d5fcd493e2697ef7fd",
+        "expected_outcome_observed": true
+      },
+      {
+        "stage": "after",
+        "exit_code": 0,
+        "timed_out": false,
+        "summary": "EXTENDED_KEY_CHECKS total=94 public_rejected=30 failures=0",
+        "source_sha256": "fa4a7cd206d2692d0a0c4ee681af257e98bd5170aed7f9918624a50a287282a1",
+        "expected_outcome_observed": true
+      }
+    ],
+    "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "duration_seconds": 30.575,
+    "fixture_sha256": "685c95fe1f71c4714f980177c4acd9e5d73b1c0e59c3bf2f38e0891d6c6fdbfc",
+    "patch_sha256": "ab720d18076ab12e640d2b2ef88a5e5e9ab60598712efa287c5b1118ae0f1ad5",
+    "base_patch_sha256": "2dc70e8dbfb31dee39d6e27ba54b92257ec742c2e594d46ee7e4d3bff68e0d18",
+    "repair_set": "all-eight",
+    "library_hashes": {
+      "build/native-core/libTrustWalletCore.a": "843498c629f7aeeea63b4900d5e55edc3adb7dcbbccde05e0d1f5c98bd28ba10",
+      "build/native-core/trezor-crypto/libTrezorCrypto.a": "6c37f489bdf733db9f4a88fb6f028937e953b9b8a4779afef9ee0d57be8ce76b",
+      "rust/target/release/libwallet_core_rs.a": "479003a892b6fc2dc4d64f457b2f7f227eac5f070ab5ca5ee93fd5fb9d1ed11d",
+      "build/native-core/libprotobuf.a": "6f1b202c2a643e6bca4618c90cc2dbe0ea9f8c77cc9afa64c9a930738d25b19d"
+    },
+    "log_sha256": "9a2be6e94e3eff44c0cc8737f3b9ef77d55abb392b8e4c13e58d21ce88c41c44",
+    "limitations": [
+      "Full production HDWallet translation units; complete native dependencies, no substituted implementations.",
+      "Native host test; doesn\u2019t execute an Apple framework or application.",
+      "No Oath application call to this C++ API established.",
+      "No App Store or historical binary equivalence proof."
+    ],
+    "full_upstream_suite": {
+      "tests": 2363,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "time": "26.153s",
+      "exit_code": 0,
+      "timed_out": false,
+      "binary_sha256": "3c55a43a5007b9aafdc9e311c713482ad434c674e83100d7d885d05ebfbd5fd5",
+      "report_sha256": "63e29663d3d5c7cc0903c1846d2e9d59563a37fb8b3425e1a2030a85eb521cf9"
+    },
+    "original_report_sha256": "7f4d14422014e34bcad770253da601cc68581db4b9c37dc93fe0d07835ea842f",
+    "log": "after.log.gz",
+    "log_encoding": "gzip",
+    "uncompressed_log_sha256": "52db096b5d23a92243e153f6ecb923e74d37e089c1f310ef0289f2c7f2696b86",
+    "original_log_sha256": "52db096b5d23a92243e153f6ecb923e74d37e089c1f310ef0289f2c7f2696b86",
+    "evidence": "evidence/progress57/extended/result.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "<RUN>/ankr"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 315.17,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "cd21f232cc6fa8a0123bf6881167151b9bdf55490cc1946125adc1b39dcfeb68",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "3c74491fcd91fd520d82d8640808a1fc0819ecf64fe5b0f41048a769545dd880"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_report_sha256": "0096e1d4791fa00d3cde2b4b7cc092e8a07aeffd8842bf2d3797c042257babd6",
+    "log": "OathAnkr.log.gz",
+    "log_encoding": "gzip",
+    "uncompressed_log_sha256": "5889aa011ff1371ed7f951eb1be69b200999ebb1e33f651e3547dd7806443071",
+    "original_log_sha256": "5889aa011ff1371ed7f951eb1be69b200999ebb1e33f651e3547dd7806443071",
+    "evidence": "evidence/progress57/provider/result.json"
   }
 ]

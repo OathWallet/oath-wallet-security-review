@@ -1,0 +1,63 @@
+diff --git a/swift/Sources/Extensions/DerivationPath+Extension.swift b/swift/Sources/Extensions/DerivationPath+Extension.swift
+index a97d0fb..33b705e 100644
+--- a/swift/Sources/Extensions/DerivationPath+Extension.swift
++++ b/swift/Sources/Extensions/DerivationPath+Extension.swift
+@@ -36,7 +36,8 @@ extension DerivationPath: Equatable, Hashable, CustomStringConvertible {
+     }
+ 
+     public subscript(index: Int) -> DerivationPathIndex? {
+-        return self.indexAt(index: UInt32(index))
++        guard let index = UInt32(exactly: index) else { return nil }
++        return self.indexAt(index: index)
+     }
+ 
+     public func hash(into hasher: inout Hasher) {
+@@ -49,6 +50,7 @@ extension DerivationPath: Equatable, Hashable, CustomStringConvertible {
+ 
+ extension DerivationPath: Codable {
+     private enum CodingKeys: String, CodingKey {
++        case path
+         case purpose
+         case coin
+         case account
+@@ -58,7 +60,16 @@ extension DerivationPath: Codable {
+ 
+     public func encode(to encoder: Encoder) throws {
+         var container = encoder.container(keyedBy: CodingKeys.self)
+-        try container.encode(purpose.rawValue, forKey: .purpose)
++        // The original five numeric fields only represent a standard five-component path.
++        // Keep that encoding whenever it preserves every component and hardened bit.
++        guard indicesCount() == 5, let first = indexAt(index: 0),
++              let knownPurpose = Purpose(rawValue: first.value),
++              DerivationPath(purpose: knownPurpose, coin: coin, account: account,
++                             change: change, address: address) == self else {
++            try container.encode(description, forKey: .path)
++            return
++        }
++        try container.encode(knownPurpose.rawValue, forKey: .purpose)
+         try container.encode(coin, forKey: .coin)
+         try container.encode(account, forKey: .account)
+         try container.encode(change, forKey: .change)
+@@ -67,6 +78,22 @@ extension DerivationPath: Codable {
+ 
+     public convenience init(from decoder: Decoder) throws {
+         let container = try decoder.container(keyedBy: CodingKeys.self)
++        if container.contains(.path) {
++            let string = try container.decode(String.self, forKey: .path)
++            guard container.allKeys.count == 1 else {
++                throw DecodingError.dataCorruptedError(forKey: .path, in: container, debugDescription: "Conflicting derivation path")
++            }
++            let bytes = TWStringCreateWithNSString(string)
++            defer { TWStringDelete(bytes) }
++            guard let path = TWDerivationPathCreateWithString(bytes) else {
++                throw DecodingError.dataCorruptedError(forKey: .path, in: container, debugDescription: "Invalid derivation path")
++            }
++            self.init(rawValue: path)
++            guard description == string else {
++                throw DecodingError.dataCorruptedError(forKey: .path, in: container, debugDescription: "Noncanonical derivation path")
++            }
++            return
++        }
+         let purpose = try container.decode(UInt32.self, forKey: .purpose)
+         guard
+             let purposeEnum = Purpose(rawValue: purpose)

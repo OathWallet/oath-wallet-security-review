@@ -48,6 +48,7 @@ def main():
     for name in ['source','native','generator','runtime','rustup-home','cargo-home','output']:
         parser.add_argument('--'+name, type=Path, required=True)
     parser.add_argument('--repair-set', choices=['seven', 'eight'], default='seven')
+    parser.add_argument('--swift-path-values', action='store_true', help='Include the tested Swift path coding and indexing repair')
     a = parser.parse_args()
     source, native, generator, runtime, rustup, cargo, output = [p.resolve() for p in [a.source,a.native,a.generator,a.runtime,a.rustup_home,a.cargo_home,a.output]]
     require_source_state(source, CORE)
@@ -97,6 +98,19 @@ def main():
     run(['git','clone','--no-hardlinks','--no-checkout',str(source),str(work)],'clone',timeout=180)
     run(['git','checkout','--detach',CORE],'checkout',cwd=work,timeout=180)
     run(['git','apply',str(patch)],'apply',cwd=work,timeout=60)
+    overlay = ROOT/'patches/walletcore-4.8.4-swift-path-values.patch'
+    overlay_path = 'swift/Sources/Extensions/DerivationPath+Extension.swift'
+    if a.swift_path_values:
+        run(['git','apply',str(overlay)],'apply-swift-path-values',cwd=work,timeout=60)
+    def verify_apple_source():
+        command = ['git','diff','HEAD','--binary']
+        if a.swift_path_values:
+            if subprocess.check_output([*command,'--',overlay_path],cwd=work) != overlay.read_bytes():
+                raise ValueError('Swift path overlay differs from the tested patch')
+            command.extend(['--','.',':(exclude)'+overlay_path])
+        if subprocess.check_output(command,cwd=work) != expected:
+            raise ValueError('Apple source differs from selected native repairs')
+    verify_apple_source()
     shutil.copytree(native/'build/local',work/'build/local',ignore=shutil.ignore_patterns('._*'))
     prefix_inventory = inventory(work/'build/local')
     (logs/'native-prefix-inputs.json').write_text(json.dumps(prefix_inventory,indent=2)+'\n')
@@ -146,14 +160,15 @@ def main():
         archive_tree(products/(name+'.xcframework'),products/(name+'.xcframework.zip'),name+'.xcframework')
         archive_tree(output/'ios.xcarchive/dSYMs'/(name+'.framework.dSYM'),products/(name+'.xcframework.dSYM.zip'),name+'.dSYMs/'+name+'.framework.ios-arm64.dSYM')
     require_source_state(source,CORE);require_source_state(generator,GENERATOR);require_source_state(runtime,RUNTIME);check_native()
-    if subprocess.check_output(['git','diff','HEAD','--binary'],cwd=work) != expected:
-        raise ValueError('Apple source changed during build')
+    verify_apple_source()
     for row in generated:
         if digest(native/row['path']) != row['sha256']:
             raise ValueError('Native generated input changed during build')
     if inventory(work/'build/local') != prefix_inventory:
         raise ValueError('Native tool/dependency prefix changed during build')
     result = dict(status='passed',upstream_commit=CORE,generator_commit=GENERATOR,runtime_commit=RUNTIME,patch_sha256=hashlib.sha256(expected).hexdigest(),toolchain=versions,artifacts=inventory(products),runtime_executed=False,limitations=['Unsigned generic archives; no simulator or device launch.','Prepared native inputs are hash-checked; follow the public native recipe to recreate them.','Reproducible commands do not establish byte-for-byte equality or historical App Store equivalence.'])
+    if a.swift_path_values:
+        result['swift_overlay_patch_sha256'] = digest(overlay)
     (logs/'result.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({'status':'passed','artifact_directory':str(products)}))
 

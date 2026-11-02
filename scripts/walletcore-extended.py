@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Retest an extended-key repair using full production HDWallet translation units.
 
-Requires the documented native Core build with the progress-15 API patch.
+Requires the documented native Core build with one of the two pinned repair sets.
 This runner compiles both before/after translation units with identical flags;
 all other code comes from those complete, locally built Core static libraries.
 """
@@ -16,16 +16,20 @@ PIN='d40d24a63d92619167903369308bf0e2f7eb3a59'
 def main():
  p=argparse.ArgumentParser(description=__doc__)
  p.add_argument('source',type=Path,help='Clean pinned upstream checkout')
- p.add_argument('prepared',type=Path,help='Native build checkout with only the progress-15 source patch')
+ p.add_argument('prepared',type=Path,help='Native build checkout with the selected repair set')
  p.add_argument('--app-source',type=Path,required=True);p.add_argument('--app-commit',required=True)
  p.add_argument('--output',type=Path,required=True);p.add_argument('--boost',type=Path,required=True)
+ p.add_argument('--repair-set',choices=['api-only','all-eight'],default='api-only')
  p.add_argument('--full-suite',action='store_true',help='Also relink and run the complete upstream C++ suite with the repaired translation unit')
  a=p.parse_args();source=a.source.resolve();prepared=a.prepared.resolve();out=a.output.resolve();out.mkdir(parents=True,exist_ok=True)
  require_source_state(source,PIN);require_source_state(a.app_source,a.app_commit)
- expected=(ROOT/'patches/walletcore-4.8.4-api-repairs.patch').read_bytes()
+ patch_dir=ROOT/'patches'
+ api_patch=patch_dir/'walletcore-4.8.4-api-repairs.patch'
+ library_patch=api_patch if a.repair_set=='api-only' else patch_dir/'walletcore-4.8.4-combined-eight.patch'
+ expected=library_patch.read_bytes()
  head=subprocess.check_output(['git','-C',str(prepared),'rev-parse','HEAD'],text=True).strip()
  diff=lambda:subprocess.check_output(['git','-C',str(prepared),'diff','HEAD','--binary'])
- if head!=PIN or diff()!=expected:raise ValueError('Prepared source must contain exactly the published API patch')
+ if head!=PIN or diff()!=expected:raise ValueError('Prepared source must contain exactly the selected repair set')
  if subprocess.check_output(['git','-C',str(prepared),'ls-files','--others','--exclude-standard']).strip():raise ValueError('Unexpected source inputs')
  patch=ROOT/'patches/walletcore-4.8.4-extended-key-kind.patch';fixture=ROOT/'tests/UpstreamExtendedKeyKind.cpp'
  input_hashes={f:hashlib.sha256(f.read_bytes()).hexdigest() for f in [patch,fixture]}
@@ -39,10 +43,18 @@ def main():
   return code,timedout
  flags=['clang++','-std=c++20','-O2','-DNDEBUG','-I',str(prepared/'src'),'-I',str(prepared/'include'),'-I',str(prepared/'trezor-crypto/include'),'-I',str(a.boost),'-I',str(prepared/'build/local/include')]
  with tempfile.TemporaryDirectory(prefix='oath-extended-key-') as directory:
-  work=Path(directory);(work/'src').mkdir();file=work/'src/HDWallet.cpp';file.write_bytes((prepared/'src/HDWallet.cpp').read_bytes())
+  work=Path(directory);(work/'src').mkdir();file=work/'src/HDWallet.cpp'
+  file.write_bytes((source/'src/HDWallet.cpp').read_bytes())
+  run(['git','apply','--include=src/HDWallet.cpp',str(api_patch)],'prepare-before',cwd=work)
+  stages=json.loads((ROOT/'evidence/core-native/extended-repro-full/result.json').read_bytes())['cases']
+  stage_hashes={row['stage']:row['source_sha256'] for row in stages}
   for stage in ['before','after']:
    if stage=='after':run(['git','apply',str(patch)],'apply',cwd=work)
    obj=work/(stage+'.o');binary=work/stage;source_hash=hashlib.sha256(file.read_bytes()).hexdigest()
+   if source_hash!=stage_hashes[stage]:raise ValueError('Extended-key source mismatch for '+stage)
+   prepared_stage='after' if a.repair_set=='all-eight' else 'before'
+   if stage==prepared_stage and file.read_bytes()!=(prepared/'src/HDWallet.cpp').read_bytes():
+    raise ValueError('Tested translation unit differs from the selected library source')
    run(flags+['-c',str(file),'-o',str(obj)],stage+'-compile')
    run(flags+[str(fixture),str(obj)]+[str(f) for f in libraries]+['-o',str(binary)],stage+'-link')
    code,timedout=run([str(binary)],stage,required=False);log=(out/(stage+'.log')).read_text();summary='EXTENDED_KEY_CHECKS total=94 public_rejected='+('9 failures=21' if stage=='before' else '30 failures=0')
@@ -68,8 +80,8 @@ def main():
   if hashlib.sha256(f.read_bytes()).hexdigest()!=expected_hash:raise ValueError('Patch or fixture changed during execution')
  require_source_state(source,PIN);require_source_state(a.app_source,a.app_commit)
  result=dict(check='upstream-extended-key-kind',source_commit=a.app_commit,upstream_commit=PIN,status='passed' if all(c['expected_outcome_observed'] for c in cases) else 'failed',cases=cases,
-             compiler=subprocess.check_output(['clang++','--version'],text=True),duration_seconds=round(time.monotonic()-started,3),fixture_sha256=hashlib.sha256(fixture.read_bytes()).hexdigest(),patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest(),base_patch_sha256=hashlib.sha256(expected).hexdigest(),library_hashes=hashes,log_sha256=hashlib.sha256((out/'after.log').read_bytes()).hexdigest(),
-             limitations=['Full production HDWallet translation units; complete native dependencies, no substituted implementations.','Native host test, not incorporated into Apple frameworks or the application.','No Oath application call to this C++ API established.','No App Store or historical binary equivalence proof.'])
+             compiler=subprocess.check_output(['clang++','--version'],text=True),duration_seconds=round(time.monotonic()-started,3),fixture_sha256=hashlib.sha256(fixture.read_bytes()).hexdigest(),patch_sha256=hashlib.sha256(patch.read_bytes()).hexdigest(),base_patch_sha256=hashlib.sha256(expected).hexdigest(),repair_set=a.repair_set,library_hashes=hashes,log_sha256=hashlib.sha256((out/'after.log').read_bytes()).hexdigest(),
+             limitations=['Full production HDWallet translation units; complete native dependencies, no substituted implementations.','Native host test; doesn’t execute an Apple framework or application.','No Oath application call to this C++ API established.','No App Store or historical binary equivalence proof.'])
  result['full_upstream_suite']=suite
  (out/'result.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(dict(status=result['status'],cases=cases,full_upstream_suite=suite)));return 0 if result['status']=='passed' else 1
 

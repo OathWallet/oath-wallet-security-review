@@ -1,0 +1,218 @@
+{
+  "check": "walletcore-swift-path-values",
+  "status": "passed",
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "fixture_sha256": "85be4bc5a26e06e615b91a19004d93332b8d93b9ee434b7f09462e1082cbdbb2",
+  "patch_sha256": "4148830e3a3a8d01d521995e02761d0c88b606dce295818f405e6abb8a68a33d",
+  "inputs": {
+    "build/native-core/libTrustWalletCore.a": "843498c629f7aeeea63b4900d5e55edc3adb7dcbbccde05e0d1f5c98bd28ba10",
+    "build/native-core/trezor-crypto/libTrezorCrypto.a": "6c37f489bdf733db9f4a88fb6f028937e953b9b8a4779afef9ee0d57be8ce76b",
+    "rust/target/release/libwallet_core_rs.a": "479003a892b6fc2dc4d64f457b2f7f227eac5f070ab5ca5ee93fd5fb9d1ed11d",
+    "build/native-core/libprotobuf.a": "6f1b202c2a643e6bca4618c90cc2dbe0ea9f8c77cc9afa64c9a930738d25b19d",
+    "swift/Sources/Generated/DerivationPath.swift": "b0903b1babb59abe57a3a30039b63fa975395a9875054cf70d2c80bdb28cdc95",
+    "swift/Sources/Generated/DerivationPathIndex.swift": "aef6afc985e17132a808c17762a8bee762d4c11ee770865d5dc0bbb1dd7ba497",
+    "swift/Sources/Generated/Enums/Purpose.swift": "37a089df0ce6a02c81ca7e25414a87e7e5aca97f224f88954e5017e49afd33ee",
+    "swift/Sources/TWString.swift": "1a332edeae3647a83e712f43743ab4937effa4dc75a9acbf0c5f505bde5ec554"
+  },
+  "cases": [
+    {
+      "stage": "before",
+      "case": "standard",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-standard.log",
+      "log_sha256": "1a75a5d53a4aada378ed432310aec1bb5ba7dd6f1226efdf523f41ca18aeb816"
+    },
+    {
+      "stage": "before",
+      "case": "legacy",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-legacy.log",
+      "log_sha256": "e066c5220429cc3821a911bbcb813145d2fa593fd252326108a587e807943ccc"
+    },
+    {
+      "stage": "before",
+      "case": "bounds",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-bounds.log",
+      "log_sha256": "d7693472ccadefc753e44844f826d0596dce8f8cf621efcdf42d1ef6dd0ea36d"
+    },
+    {
+      "stage": "before",
+      "case": "short",
+      "exit_code": 1,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-short.log",
+      "log_sha256": "54279e9281c7f0fa22e224d4f6a07e44365dd19800873c94c2abae9dc61dd113"
+    },
+    {
+      "stage": "before",
+      "case": "long",
+      "exit_code": 1,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-long.log",
+      "log_sha256": "54279e9281c7f0fa22e224d4f6a07e44365dd19800873c94c2abae9dc61dd113"
+    },
+    {
+      "stage": "before",
+      "case": "bits",
+      "exit_code": 1,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-bits.log",
+      "log_sha256": "54279e9281c7f0fa22e224d4f6a07e44365dd19800873c94c2abae9dc61dd113"
+    },
+    {
+      "stage": "before",
+      "case": "root",
+      "exit_code": 1,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-root.log",
+      "log_sha256": "54279e9281c7f0fa22e224d4f6a07e44365dd19800873c94c2abae9dc61dd113"
+    },
+    {
+      "stage": "before",
+      "case": "unknown",
+      "exit_code": -5,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-unknown.log",
+      "log_sha256": "b3e6f4803c79ad26b82e493ce1d897389af51c83bb33ec4453b5d1a0a4701ca6"
+    },
+    {
+      "stage": "before",
+      "case": "negative",
+      "exit_code": -5,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-negative.log",
+      "log_sha256": "8d5720c01571523a73ac3715af08f6dcd28df41f139dacac0a62e392e67113c3"
+    },
+    {
+      "stage": "before",
+      "case": "wide",
+      "exit_code": -5,
+      "status": "reproduced",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-wide.log",
+      "log_sha256": "88267b96accc531056f294a372163f90223caebedd8022aedd46cd5b62d0f407"
+    },
+    {
+      "stage": "before",
+      "case": "reject",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "a6acf725314dee72683391c1a94a3ce25ce6c7f5620134c9154a561a02b2aba5",
+      "log": "before-reject.log",
+      "log_sha256": "2798b2a77d97df002e2bba2a6c5e52621907d10b535a3bea1856a0f5d8f9843b"
+    },
+    {
+      "stage": "after",
+      "case": "standard",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-standard.log",
+      "log_sha256": "1a75a5d53a4aada378ed432310aec1bb5ba7dd6f1226efdf523f41ca18aeb816"
+    },
+    {
+      "stage": "after",
+      "case": "legacy",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-legacy.log",
+      "log_sha256": "e066c5220429cc3821a911bbcb813145d2fa593fd252326108a587e807943ccc"
+    },
+    {
+      "stage": "after",
+      "case": "bounds",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-bounds.log",
+      "log_sha256": "d7693472ccadefc753e44844f826d0596dce8f8cf621efcdf42d1ef6dd0ea36d"
+    },
+    {
+      "stage": "after",
+      "case": "short",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-short.log",
+      "log_sha256": "2064bcb7ab8cf64e6de99c137f705999debb2f0f53e68430a8db77fffe92ed54"
+    },
+    {
+      "stage": "after",
+      "case": "long",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-long.log",
+      "log_sha256": "636697856f99efac7c1b56b310132d6b2ff745fb3c173f756c91f3dc6ec24d4d"
+    },
+    {
+      "stage": "after",
+      "case": "bits",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-bits.log",
+      "log_sha256": "8b31b4492c0603e2d812d40f55a8f08bf4c427170adca389a8388c521d63cae4"
+    },
+    {
+      "stage": "after",
+      "case": "root",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-root.log",
+      "log_sha256": "ecad8c8fd8ff23a3a8597369b50daf14e5e8be0da7d4ae9ef8e911f1aee1e7fc"
+    },
+    {
+      "stage": "after",
+      "case": "unknown",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-unknown.log",
+      "log_sha256": "49c6233a86e96626de62739ebd34210a84c0aea7f3f56526c96f78edb077e793"
+    },
+    {
+      "stage": "after",
+      "case": "negative",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-negative.log",
+      "log_sha256": "0c327f861d18f2d2c9f4761951fd437f4e44f3b5cb072e25d3f71c5f572376ce"
+    },
+    {
+      "stage": "after",
+      "case": "wide",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-wide.log",
+      "log_sha256": "590448b15aefc4c31c530ed25db8fcd49c1ea947e8bb5069958a20fa4b815ffd"
+    },
+    {
+      "stage": "after",
+      "case": "reject",
+      "exit_code": 0,
+      "status": "passed",
+      "source_sha256": "3632a7566c0ef0591739f218ec268a16ed1e9d2532eef96286aee3890b9f6c74",
+      "log": "after-reject.log",
+      "log_sha256": "2798b2a77d97df002e2bba2a6c5e52621907d10b535a3bea1856a0f5d8f9843b"
+    }
+  ],
+  "compiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+}

@@ -4,6 +4,8 @@ This is a **maintainer-commissioned, Codex-led security review** of the public
 Oath Wallet application. It is not independent certification, a guarantee of
 zero vulnerabilities, or a comparison with the installed App Store binary.
 
+**Progress 57.** All 115 required validations have a passing record at the historical review revision. An earlier failing provider run remains documented. New Swift derivation-path cases found two dependency defects; their source repair passed eleven host cases. Framework integration is a separate step. The whole-wallet ledger still has 16,578 open entries. [Dependency review](review/CORE-SWIFT-PATH-VALUES.md) · [Checkpoint report](review/REPORT.md).
+
 **Progress 56.** Two public-source fixes address a substituted payment during Bitcoin-family recovery and a database upgrade interrupted by a wallet reset. Four original failures reproduced offline. All seven targeted cases passed on the repaired source. Three required checks remain open at the historic review revision. [Report and test evidence](review/BITCOIN-JOURNAL-AND-RESET.md) · [Merged wallet fixes](https://github.com/devdasx/oath-wallet/pull/56).
 
 **Progress 55.** The full provider package passed 1,323 host tests on the merged repair tree, with 201 explicit skips. The review also reproduced 458 Stellar SDK source files byte for byte and verified the logs for 99 exact-revision CI results. Seven required checks still lack a passing result at the pinned app revision. [Public checkpoint report](review/REPORT.md) · [Reproduction details](review/PROVIDER-QUEUE-AND-STELLAR-GENERATION.md).
