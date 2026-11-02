@@ -1,0 +1,62 @@
+{
+  "check": "secp-table-provenance",
+  "status": "passed",
+  "package_commit": "e70a10e036a55fffea31568f0af92d69b6d449cd",
+  "secp_tag_object": "833ca65c66b6e97b86489807103ca6e187ab25aa",
+  "upstream_trees": {
+    "secp256k1": {
+      "commit": "1a53f4961f337b4d166c25fce72ef0dc88806618",
+      "identical": 177,
+      "modified": [],
+      "package_only": [],
+      "upstream_only": []
+    },
+    "secp256k1-zkp": {
+      "commit": "08d1cd0c9c35a5a151ba80c226d49ea949e90374",
+      "identical": 238,
+      "modified": [],
+      "package_only": [],
+      "upstream_only": []
+    },
+    "swift-crypto": {
+      "commit": "1b6b2e274e85105bfa155183145a1dcfd63331f1",
+      "identical": 1043,
+      "modified": [],
+      "package_only": [],
+      "upstream_only": []
+    }
+  },
+  "vendor_and_package_files": {
+    "Vendor/secp256k1/src/precomputed_ecmult.c": "1fba19c482de09f566ed9e7bf6a526e4edb59a1cf38218e3ab413000a0e0deda",
+    "Sources/libsecp256k1/src/precomputed_ecmult.c": "1fba19c482de09f566ed9e7bf6a526e4edb59a1cf38218e3ab413000a0e0deda",
+    "Vendor/secp256k1/src/precomputed_ecmult_gen.c": "c0a7af0884b7b07962be67e9da674e0d75a8d412d116153b8eae2a9e5527d401",
+    "Sources/libsecp256k1/src/precomputed_ecmult_gen.c": "c0a7af0884b7b07962be67e9da674e0d75a8d412d116153b8eae2a9e5527d401",
+    "Vendor/secp256k1-zkp/src/precomputed_ecmult.c": "1fba19c482de09f566ed9e7bf6a526e4edb59a1cf38218e3ab413000a0e0deda",
+    "Sources/libsecp256k1_zkp/src/precomputed_ecmult.c": "1fba19c482de09f566ed9e7bf6a526e4edb59a1cf38218e3ab413000a0e0deda",
+    "Vendor/secp256k1-zkp/src/precomputed_ecmult_gen.c": "c0a7af0884b7b07962be67e9da674e0d75a8d412d116153b8eae2a9e5527d401",
+    "Sources/libsecp256k1_zkp/src/precomputed_ecmult_gen.c": "c0a7af0884b7b07962be67e9da674e0d75a8d412d116153b8eae2a9e5527d401"
+  },
+  "arithmetic": {
+    "odd_multiples": 16384,
+    "signed_comb_points": 1760,
+    "configurations": [
+      [
+        2,
+        5,
+        26
+      ],
+      [
+        11,
+        6,
+        4
+      ],
+      [
+        43,
+        6,
+        1
+      ]
+    ]
+  },
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+  "scope": "Git object IDs include file modes. Source identity does not validate implementations. Arithmetic checks cover the two distinct generated tables; the fork and package copies match those bytes."
+}

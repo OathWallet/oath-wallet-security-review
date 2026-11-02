@@ -38,8 +38,15 @@ def files(checkout, pin):
     if git(checkout, 'status', '--porcelain', '--untracked-files=no', '--ignore-submodules=untracked'):
         raise ValueError(f'Modified tracked files in {checkout.name}')
     generated = {}
+    proof_relative = None
+    if checkout.name == 'swift-secp256k1':
+        proof_relative = 'evidence/5.0.1-build103/secp-tables/result.json'
+        proof = json.loads((Path(__file__).resolve().parents[1]/proof_relative).read_bytes())
+        if proof['package_commit'] == pin and proof['status'] == 'passed':
+            generated = proof['vendor_and_package_files']
     if checkout.name == 'stellar-ios-mac-sdk':
-        proof_path = Path(__file__).resolve().parents[1]/'evidence/progress55/stellar-generation.json'
+        proof_relative = 'evidence/progress55/stellar-generation.json'
+        proof_path = Path(__file__).resolve().parents[1]/proof_relative
         proof = json.loads(proof_path.read_bytes())
         if proof['sdk_commit'] == pin and not proof['mismatches']:
             generated = proof['matching_files']
@@ -72,7 +79,7 @@ def files(checkout, pin):
             if path.decode() in generated and generated[path.decode()] == row.get('sha256'):
                 row['semantic_review_status'] = row['status']
                 row['status'] = 'generated-verified'
-                row.setdefault('evidence', []).append('evidence/progress55/stellar-generation.json')
+                row.setdefault('evidence', []).append(proof_relative)
             rows.append(row)
         reader.stdin.close()
         if reader.wait():

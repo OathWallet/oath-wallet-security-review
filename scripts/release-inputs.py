@@ -23,6 +23,7 @@ def c_dependencies(path):
 def main():
     p=argparse.ArgumentParser();p.add_argument('source',type=Path);p.add_argument('--build-result',type=Path,required=True)
     p.add_argument('--derived-data',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--source-packages-dir',type=Path,help='Explicit clonedSourcePackagesDirPath used by xcodebuild')
     a=p.parse_args();source=a.source.resolve();derived=a.derived_data.resolve()
     build=json.loads(a.build_result.read_bytes()); pin=require_source_state(source,build['source_commit'])
     log=a.build_result.with_name('build.log')
@@ -32,7 +33,11 @@ def main():
     if len(ids)!=1:raise ValueError('Expected exactly one build description')
     inter=derived/'Build/Intermediates.noindex';manifest=inter/'XCBuildData'/(ids[0]+'.xcbuilddata')/'manifest.json'
     cmds=json.loads(manifest.read_bytes())['commands']
-    pkgs=derived/'SourcePackages/checkouts';toolchain=Path(subprocess.check_output(['xcrun','--find','swiftc'],text=True).strip()).resolve()
+    package_root = (a.source_packages_dir or derived/'SourcePackages').resolve()
+    if a.source_packages_dir:
+        if '-clonedSourcePackagesDirPath' not in build['command'] or build['command'][build['command'].index('-clonedSourcePackagesDirPath')+1] != str(package_root):
+            raise ValueError('Package root differs from the recorded build invocation')
+    pkgs=package_root/'checkouts';toolchain=Path(subprocess.check_output(['xcrun','--find','swiftc'],text=True).strip()).resolve()
     developer=next(x for x in toolchain.parents if x.name=='Developer')
     scope=json.loads((ROOT/'scope/inventory.json').read_bytes());assert scope['source_commit']==pin
     known={'application/'+r['path']:r['sha256'] for r in scope['files']}
@@ -42,7 +47,7 @@ def main():
     known.update({'package/SwiftDraw/'+r['path']:r['sha256'] for r in swift['files']})
     def identify(raw):
         real=Path(raw).resolve(strict=True)
-        for root,prefix in [(pkgs,'package'),(inter,'generated'),(source,'application'),(developer,'toolchain'),(derived/'SourcePackages/artifacts','artifact'),(derived/'Build/Products','product')]:
+        for root,prefix in [(pkgs,'package'),(inter,'generated'),(source,'application'),(developer,'toolchain'),(package_root/'artifacts','artifact'),(derived/'Build/Products','product')]:
             if real.is_relative_to(root):
                 return prefix+'/'+real.relative_to(root).as_posix()
         raise ValueError('Unexpected source origin at '+str(real))

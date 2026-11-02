@@ -1,0 +1,33 @@
+name: Reproduce secp256k1 point tables
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/secp-table-provenance.py', '.github/workflows/secp-tables.yml']
+permissions:
+  contents: read
+jobs:
+  regenerate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - name: Fetch pinned public sources
+        shell: bash
+        run: |
+          set -eu
+          checkout() {
+            git init -q ".work/$1"
+            git -C ".work/$1" fetch --depth=1 "https://github.com/$2.git" "$3"
+            git -C ".work/$1" checkout --detach FETCH_HEAD
+          }
+          checkout package 21-DOT-DEV/swift-secp256k1 e70a10e036a55fffea31568f0af92d69b6d449cd
+          checkout normal bitcoin-core/secp256k1 833ca65c66b6e97b86489807103ca6e187ab25aa
+          checkout zkp BlockstreamResearch/secp256k1-zkp 08d1cd0c9c35a5a151ba80c226d49ea949e90374
+          checkout crypto apple/swift-crypto 1b6b2e274e85105bfa155183145a1dcfd63331f1
+      - run: python3 scripts/secp-table-provenance.py .work/package .work/normal .work/zkp .work/crypto evidence/ci/secp/result.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with: {name: secp256k1-table-evidence, path: evidence/ci/secp/result.json, retention-days: 90}
