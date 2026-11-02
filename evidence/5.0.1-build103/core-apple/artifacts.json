@@ -1,0 +1,188 @@
+{
+  "upstream_commit": "d40d24a63d92619167903369308bf0e2f7eb3a59",
+  "generator_commit": "7e2c5f3cbbeea68e004915e3a8961e20bd11d824",
+  "runtime_commit": "d72aed98f8253ec1aa9ea1141e28150f408cf17f",
+  "native_patch_sha256": "2dc70e8dbfb31dee39d6e27ba54b92257ec742c2e594d46ee7e4d3bff68e0d18",
+  "swift_overlay_patch_sha256": "4148830e3a3a8d01d521995e02761d0c88b606dce295818f405e6abb8a68a33d",
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "xcodegen": "Version: 2.45.4",
+    "protoc": "libprotoc 3.20.3",
+    "cargo": "cargo 1.94.0-nightly (2c283a9a5 2025-12-04)"
+  },
+  "framework_uuids": {
+    "WalletCore": "1BD26DBD-B126-3633-BD96-2154AECD901F",
+    "WalletCoreSwiftProtobuf": "C59AEFE9-8371-3A07-ADBE-9D9850B39C7F"
+  },
+  "artifacts": [
+    {
+      "file": "WalletCore.xcframework.dSYM.zip",
+      "sha256": "67cdbfd8d605c82ae987baa29670e7488fc6508448ec136aadaecfa0add8f5e3",
+      "bytes": 32482887
+    },
+    {
+      "file": "WalletCore.xcframework.zip",
+      "sha256": "f077f7c36df0d0ed5131ec70d335a5d5e9a09143b77a734c4890fec2c2bbe4bd",
+      "bytes": 130060640
+    },
+    {
+      "file": "WalletCoreSwiftProtobuf-1.29.0-packaging.xcframework.zip",
+      "sha256": "e628aaf3cca1fa351971ab2b3bced283f8422ea524d15014c449fd1def6f079c",
+      "bytes": 45609173
+    },
+    {
+      "file": "WalletCoreSwiftProtobuf.xcframework.dSYM.zip",
+      "sha256": "3cdbbddce7131dec983c7f030cda9786975ae4bf159dc48245b8b314e1f0aa48",
+      "bytes": 2016300
+    },
+    {
+      "file": "WalletCoreSwiftProtobuf.xcframework.zip",
+      "sha256": "200f992328eed16a72b425cb3539a6468d67996200bc67bf5a68c9641c52ac5f",
+      "bytes": 8537749
+    }
+  ],
+  "commands": [
+    {
+      "name": "version-xcode",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.185,
+      "log_sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+    },
+    {
+      "name": "version-xcodegen",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.01,
+      "log_sha256": "dc5e65dc4cafe61f8f95608b28addd827bf53c9afca65b9201adc97aca83757a"
+    },
+    {
+      "name": "version-protoc",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.01,
+      "log_sha256": "e0eea9358188c013afbc197c7a5daeeb0a38a42591017e1f3a77110831bc15e5"
+    },
+    {
+      "name": "version-cargo",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.078,
+      "log_sha256": "dc9c4222c0890338b22436ebc6df63a644d92990d6ed088a5824c1ed80988b37"
+    },
+    {
+      "name": "clone",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.235,
+      "log_sha256": "bbcae9d8cd5bd545c7ee120ba849c47f65b70affb7d730cb492b01d3bc8129b7"
+    },
+    {
+      "name": "checkout",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.345,
+      "log_sha256": "cf754853b076d46ed9125f553a09eb1f26cf9c9b4495092c0e93cb8f80fe6197"
+    },
+    {
+      "name": "apply",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.011,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "apply-swift-path-values",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.011,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "swift-generator",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 21.872,
+      "log_sha256": "653357ca3e604114d5a6e32297bb2d77a8d675b7692ad052b107a1dfa6116451"
+    },
+    {
+      "name": "swift-protobuf",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.727,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "rust-src",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 3.094,
+      "log_sha256": "d9fec78088427efcd882bf0df92c4c67598a47f807f95644c6cd94903dbfd02d"
+    },
+    {
+      "name": "rust-apple",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 103.705,
+      "log_sha256": "2efba818660b498ffa5db7e51bec72b8029fe24b183016ac73521ed3b902b838"
+    },
+    {
+      "name": "rust-lipo",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.617,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "rust-xcframework",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.599,
+      "log_sha256": "e2338e405b8451b94b6f640ac1e5a7d4040def77bc94be7c7b641ec619371d77"
+    },
+    {
+      "name": "upstream-project",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.02,
+      "log_sha256": "3cc00a6d8acb0cc067aa8b8c33d040c54f259d4276fb7af6b1828c5530a2d6b3"
+    },
+    {
+      "name": "generate-project",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.186,
+      "log_sha256": "0597226194f0dba258dbaca4849491a677f2588afe64eed3a73f1886975caa8c"
+    },
+    {
+      "name": "archive-ios",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 99.965,
+      "log_sha256": "862e7193af3f2bc1d42f87fc3be7ee1036001d75b50ffa3e52bdd1c06f20931e"
+    },
+    {
+      "name": "archive-simulator",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 229.208,
+      "log_sha256": "9e09f80518ab0aea9c77cb48f9ff886bf7a2c9265fb23a5d9968aabcbe6a1622"
+    },
+    {
+      "name": "package-WalletCore",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.773,
+      "log_sha256": "a670abe1b9ba86b485ab92b6ab1c698efa6a25bacc3562519cea3373f30a1a5a"
+    },
+    {
+      "name": "package-WalletCoreSwiftProtobuf",
+      "exit_code": 0,
+      "timed_out": false,
+      "duration_seconds": 0.57,
+      "log_sha256": "13bd0b8db7b0555890f6d5a1dbfda17b2c921400e4ee7a2de5607abfe4573f33"
+    }
+  ],
+  "runtime_executed": false,
+  "scope": "Unsigned archives and public package inputs for the post-103 repair. The 5.0.1 build 103 tag uses its original dependencies."
+}
