@@ -40125,5 +40125,25 @@
     "log": "security.log.gz",
     "log_encoding": "gzip",
     "evidence": "evidence/5.0.1-build103/checks/security/result.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "configuration": "Release",
+    "destination": "generic/platform=iOS",
+    "signed": false,
+    "executed": false,
+    "log": "build.log",
+    "log_sha256": "32ea82d651c3d503f3c78af933e81a8062507c11667e4ce693dcb62c88ebc4b9",
+    "original_build_log_sha256": "9849f79f4b1eb7d99df83258a498fb74be0f5e307f1af60b8d30151999e248ed",
+    "product_version": "5.0.1",
+    "product_build": "103",
+    "toolchain": [
+      "Xcode 27.0",
+      "Build version 27A266a"
+    ],
+    "command": "xcodebuild -project OathAtmosphere.xcodeproj -scheme OathAtmosphere -configuration Release -destination generic/platform=iOS CODE_SIGNING_ALLOWED=NO build",
+    "evidence": "evidence/5.0.1-build103/checks/build/result.json"
   }
 ]
