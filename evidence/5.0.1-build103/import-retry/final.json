@@ -1,0 +1,40 @@
+{
+  "test_only_empty_input_commit": "73431e08c66d325b7bf7bec7c5806f61ad4bddb9",
+  "tested_commit": "741d0b4734e036fa87567faed202956ae590cb3c",
+  "merged_commit": "7393e4c2e55994f2034c0372fe71094934480682",
+  "source_tree_match": true,
+  "checks": {
+    "empty-before": {
+      "original_log_sha256": "12e282ee408b6398d6cb034f34cef7673206057aae40b63968276038d7c9dbed",
+      "outcome": "FAIL: empty mnemonic request matched a committed private key"
+    },
+    "empty-after": {
+      "original_log_sha256": "4515b46518cf0e1394066c824bdd3adf6aa2034d1f65e01c4b2b1b0df14e1614",
+      "outcome": "Passed 38 aezeed host integration checks: actual import, local vault, Bitcoin-only SQL/receive, lock/unlock, recovery display, BIP39 separation and cloud exclusion."
+    },
+    "final-ios": {
+      "original_log_sha256": "e43e87d657bfa9fa73c9f3d78becc813054b0311650e6e941b029fbdf3825731",
+      "outcome": "** BUILD SUCCEEDED **"
+    },
+    "final-multiwallet": {
+      "original_log_sha256": "46ca59b35b7bb9e56307afdb823479810fba2beb4092e85300c751989ef4d5c7",
+      "outcome": "Passed 791 host multiwallet integration checks (production vault/session/SQLite, fixture derivation; no simulator, Keychain or live network)."
+    },
+    "final-diagnostics": {
+      "original_log_sha256": "95987e870364293812c1ced3342fd4818166445a0259cc30af93322b27a79731",
+      "outcome": "Executed 121 tests, with 2 tests skipped and 0 failures (0 unexpected) in 6.681 (6.690) seconds"
+    },
+    "final-public": {
+      "original_log_sha256": "da4e42e11883a787a2600f63df9b427846def608f0924108a36f02000d439e4c",
+      "outcome": "12:32AM INF no leaks found"
+    },
+    "final-gitleaks": {
+      "original_log_sha256": "aee27411e8d171b29a546cf882e78b5187ac69abea34ec76b3f123124e48b4ae",
+      "outcome": "12:32AM INF no leaks found"
+    },
+    "final-coverage-verified": {
+      "original_log_sha256": "ec6a85a4a6321ec0887fa88ccc92f4ebffdc3aa3233b6dae16f2288e04aaab22",
+      "outcome": "Diagnostics coverage guard passed (expected control-flow exclusions remain reviewable)."
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "check": "wallet-import-retry-identity",
+  "cases": [
+    {
+      "stage": "before",
+      "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "status": "reproduced",
+      "exit_code": 1,
+      "fixture_sha256": "08363d6c6e875ba3a586716750f3f85073319bcdcbfaa2a0f1196f4ac640338e",
+      "shared_case_sha256": "c3a7fb1b5777f860fcc9d0eb85a376f5f867f2a07bd705c4ba8008964a40f811",
+      "log": "before.log",
+      "log_sha256": "19ca4b67f41e3d6e93b23aa009dc830d22a54ddecfeef81224b97a221d4f1aa9",
+      "duration_seconds": 224.92
+    },
+    {
+      "stage": "after",
+      "source_commit": "e1857158db600fc171cdcca7cedd37da2722f8ad",
+      "status": "passed",
+      "exit_code": 0,
+      "fixture_sha256": "5f8e78783feded34716c6e4f6d412de33ff692d77dd8c77c35f9a242dae7aca6",
+      "shared_case_sha256": "c3a7fb1b5777f860fcc9d0eb85a376f5f867f2a07bd705c4ba8008964a40f811",
+      "log": "after.log",
+      "log_sha256": "164b2e8ec1afd4368dfa3071e5aea9e6eafbd4b7da7fecb9e796239eb76d5d42",
+      "duration_seconds": 131.14
+    }
+  ],
+  "scope": "Production vault and SQLite, synthetic overlap and key, memory protected storage. BIP39 display adapter is substituted by the host harness; Bitcoin addresses are independently checked."
+}

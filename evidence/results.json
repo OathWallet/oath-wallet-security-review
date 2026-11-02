@@ -40153,5 +40153,972 @@
     "log": "release-inputs.log",
     "log_sha256": "34b79feb09cf6bb7aaab0024606f8088d2686ce3a00c36d86fda3ff1e9eaab8e",
     "evidence": "evidence/5.0.1-build103/compiler/release-inputs.json"
+  },
+  {
+    "check": "OathAezeed",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAezeed",
+      "<SCRATCH>-native",
+      "<RUN>/tests/OathAezeed"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 61.31,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 7 selected; 7 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "b35f0d65bcbd2755dd7850b198ee9350b2687faf3ca448ee60f96f8d57a7a6f7",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "64b73b897389da6f74eac8308bcb51ea9799eb8d59b671107367f668f474ca8f"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_report_sha256": "78a5ed0b209cea0e4c677de50540cef6fb887afc9afb3a82d5f21e78b53d8049",
+    "original_log_sha256": "449136e9908f103d8ba24ba67ef93647351d907044ff371f1e0a28606a054dc9",
+    "log_encoding": "gzip",
+    "log": "OathAezeed.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/OathAezeed/result.json"
+  },
+  {
+    "check": "OathCloudBackup",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathCloudBackup",
+      "<SCRATCH>-native",
+      "<RUN>/tests/OathCloudBackup"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 20.3,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 60 selected; 60 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "315f84f4187312c115ccefd850c14e2685c832c71b9762f88a6d0e9cb3fcb274",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 60,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "7d745c95f4631d63f8014d281d1c9690511c97280d6fcd85b5c25da07c3b135a"
+    },
+    "swift_testing": {
+      "log_sha256": "a884e4bf70823509ed6180e8a4a3ebf56516796285d766ec91bfe35e4c74b5e0",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_report_sha256": "42e4aa8e021d051a73d89b182b13e905364c65e2f5b502bd61c36b39b9c95091",
+    "original_log_sha256": "4eb2f163d9c4819ef599dab097e3bb5a176fd1f5bc9c47e759b6e5a5590738c2",
+    "log_encoding": "gzip",
+    "log": "OathCloudBackup.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/OathCloudBackup/result.json"
+  },
+  {
+    "check": "OathExchangeRates",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathExchangeRates",
+      "<SCRATCH>-native",
+      "<RUN>/tests/OathExchangeRates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 206.44,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 22 selected; 19 passed; 3 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "9a2a53346073c20e380d127dab1b92bf95f80f4c6e4c978b9949cfe6a7e9fa9b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3,
+      "sha256": "92522ed454b0e7bbd17283d446fe4b2db21ea89c5fab2e47d29ca12fc7c533b9"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_report_sha256": "ac5c538467ffc2278f1ae0aecefa21eab51ec077ce778f4e7102f06299322169",
+    "original_log_sha256": "e910f36d9afacf7a07cab3f24979402fc3cf4f61381d0827c9af53015dc96d06",
+    "log_encoding": "gzip",
+    "log": "OathExchangeRates.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/OathExchangeRates/result.json"
+  },
+  {
+    "check": "OathWalletHandoff",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathWalletHandoff",
+      "<SCRATCH>-native",
+      "<RUN>/tests/OathWalletHandoff"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 9.74,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 0 selected; 0 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 12 tests in 0 suites passed after 0.002 seconds."
+    ],
+    "log_sha256": "e91261a8ac67c29bb79a36ea613884e4279ac9bbe4cdea2c9dbf54b0fb6f60fe",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "eeb1244359196b9c1ef5c15c61e8b4a4e0245b21af8e85c602b7e7bb90bccc56"
+    },
+    "swift_testing": {
+      "log_sha256": "078fb79ba040398cebe4c7a9025a8059e4a1d7159297df6f54e517f50b83b6f9",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 12 tests in 0 suites passed after 0.002 seconds."
+      ]
+    },
+    "original_report_sha256": "cd9aeca6c274c9943bc126e405f4d90b12862f99b03d50765ad55156af3d5ea2",
+    "original_log_sha256": "39a5c46f98ef1cd027426d5e85da028deebd24120bf37a64aee381c59ce808eb",
+    "log_encoding": "gzip",
+    "log": "OathWalletHandoff.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/OathWalletHandoff/result.json"
+  },
+  {
+    "check": "authentication",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--authentication"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 330.16,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 123 biometric fallback checks and 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "3877f65ced13399b91276227dee3f94a237533f9e02689f638cfbfb5fa12364e",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_report_sha256": "759c5abbaca32cbe896cc6b70453f0e5d4429a3c1ed900cb4698d06cd8ba19a8",
+    "original_log_sha256": "889bb3f2e99f089574bc64b069d72a6c85b1ef150546b5259c03700627354232",
+    "log_encoding": "gzip",
+    "log": "authentication.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/authentication/result.json"
+  },
+  {
+    "check": "cloud-restore",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--cloud-restore"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 290.42,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 140 cloud-restore integration checks (local synthetic backups; no live iCloud)."
+    ],
+    "log_sha256": "d12dfa3257e4a03a49b77af535ec85855e65b13e1ab1a9d5f51c34998610de7d",
+    "runtime_scope": "macOS host; production restoration/encryption/SQL; substituted Wallet Core derivation; no live iCloud",
+    "live_network_tests_enabled": false,
+    "assertion_count": 140,
+    "original_report_sha256": "9e5fb90daf04bd2dd2383c6104d04a2ebfe1be7134ea560b57bc6aa14f63ef71",
+    "original_log_sha256": "ecc71e74d0ba2b64f568de8a486c035e2d9f4c65b772f98caeda5260ba1c9cc5",
+    "log_encoding": "gzip",
+    "log": "cloud-restore.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/cloud-restore/result.json"
+  },
+  {
+    "check": "envelope",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--envelope"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 319.52,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 80 multi-wallet envelope checks"
+    ],
+    "log_sha256": "2dc61aedbc159d4708175acc30a9dcd71a35792b762ea0cbcb9c12f9675c459c",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_report_sha256": "07441f581e41424a698a8856ea7570f792613a910d41d769b7c5f00aa8fcb90e",
+    "original_log_sha256": "626ddd1f9983273b42a2127cef145149b509388fac9085589dc2505f5e7d34a3",
+    "log_encoding": "gzip",
+    "log": "envelope.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/envelope/result.json"
+  },
+  {
+    "check": "lifecycle",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--lifecycle"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 247.54,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 144 wallet lifecycle checks (synthetic host storage, deletion, restore, ordering, authentication and interrupted writes).",
+      "Passed 37 reset checks (synthetic stores, interrupted cleanup, authorization, preferences and key rotation)."
+    ],
+    "log_sha256": "0096a3cae96fa68a8e4fdc5d7b37646b4928b5aa1654312b97da9f03fac0ffa6",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_report_sha256": "181efe3d595f51ae1d48c866d941c2403632af3a3403cc668b65e5f3e3bcce1b",
+    "original_log_sha256": "bc57a2dbdf6e04d0abffd5e1d342362f2ff5f9fa6472eeab57506f2d6bc46d5f",
+    "log_encoding": "gzip",
+    "log": "lifecycle.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/lifecycle/result.json"
+  },
+  {
+    "check": "permission-batch",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--permission-batch"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 319.49,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 11 batch authorization host checks; production vault/signatures, synthetic local credentials, no network or device."
+    ],
+    "log_sha256": "3bfe3d2a2a9b5b92964351469846347d9b6cf0fca47f07811a581a63e111fe9d",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_report_sha256": "49b8c442d9ecc2ee339e2b9fc84e9e64b1f048fe6fd3f34323ed74213555662e",
+    "original_log_sha256": "41ccc8faa38f177c8440746a4b15ab93e51130db9a8623ee7c29832ff988167c",
+    "log_encoding": "gzip",
+    "log": "permission-batch.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/permission-batch/result.json"
+  },
+  {
+    "check": "protected-startup",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--protected-startup"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 219.67,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Protected wallet startup: 28/28 host checks passed; 0 failed. No simulator, device, user Keychain or network used."
+    ],
+    "log_sha256": "bef3e61b4f9f3af9551343f2e6e9daba66f0357cdf228c89e8103e3ee5e007c5",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_report_sha256": "c9cd924fcd9be9ee49b4374438adbed15fc05a9a1607b0260ca39508b9c86e9c",
+    "original_log_sha256": "6bbfc69b48e19b5b172b249e1f0079e220bd2c187cc52b19ddaed141f18a57ce",
+    "log_encoding": "gzip",
+    "log": "protected-startup.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/protected-startup/result.json"
+  },
+  {
+    "check": "scanner",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 125.19,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 13635 scanner checks; 715 real CoreImage/Vision QR round trips; 42 chains; 260 public BIP39 vectors across 10 languages. No wallet data, simulator, camera, or network used."
+    ],
+    "log_sha256": "7a60598c49cfa254edc88c2e0a56e9bbefa01f0b862177224726717b4ae3564c",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 13635,
+    "original_report_sha256": "9cfd0b550d22620dc80fc1ffeb1829be000bb3c18894ee3b828c3697f8f7589c",
+    "original_log_sha256": "8470ce3f7090b16e88614710895cfda53b246748463a975f02e60c183cf445f8",
+    "log_encoding": "gzip",
+    "log": "scanner.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/scanner/result.json"
+  },
+  {
+    "check": "scanner-lifecycle",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py",
+      "--performance"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 13.41,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Scanner concurrency/lifecycle: 2021 checks passed"
+    ],
+    "log_sha256": "0988877bfcb8350995df186da263b585cca51e7812fe6a7ddf7f61777889bdb9",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 2021,
+    "original_report_sha256": "b2fe4a290063a35cf0523d1407253e0b74ef36cfc4d30c7ebc637826ab2985c1",
+    "original_log_sha256": "3366cc3a22a8b717cd81e0aff441cf4f3cbb8196b371fd3e0617e2d04a7a5de3",
+    "log_encoding": "gzip",
+    "log": "scanner-lifecycle.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/scanner-lifecycle/result.json"
+  },
+  {
+    "check": "wallet-links",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py",
+      "--links"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 13.33,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Wallet link checks passed: 145"
+    ],
+    "log_sha256": "47a60a3493b8496d2255cd6217d8ffedf00b4b73785552af283e1a52fc4a027e",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 145,
+    "original_report_sha256": "fd145411727f0785a7f8fd1afabc9639c6ca858201a6b7422652d217a633f0c1",
+    "original_log_sha256": "b9dca1bce07c063d20d948191c83077ef54d4b62d661f064a710e3a9d2a29e59",
+    "log_encoding": "gzip",
+    "log": "wallet-links.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/wallet-links/result.json"
+  },
+  {
+    "check": "ton-authorization",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "3d4fe5b69069277a8837ac6b7391c399242d45bea41ca6202db6084796f5a2d3",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13184721091,
+    "original_archive_sha256": "1e7e08532fafdd0b2397f0cee62ab13f31da6112b6f9804249cfe037c7cd0dfa",
+    "report": "ton-properties-evidence/ton-authorization.json",
+    "report_sha256": "b6a25dd8ec0ef437278d9b2286c04a24f61ea44ee2a29d1dd5b4978a13c2dcf6",
+    "log": "ton-properties-evidence/ton-authorization.log"
+  },
+  {
+    "check": "ton-properties",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "5576c7e990a42ec898af6b520d31a7a84e08b630aed9118c1068356b26af2dce",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13184721091,
+    "original_archive_sha256": "1e7e08532fafdd0b2397f0cee62ab13f31da6112b6f9804249cfe037c7cd0dfa",
+    "report": "ton-properties-evidence/ton-properties.json",
+    "report_sha256": "81b2f55991b51ebe6e4874f423ce68775b656fe08c18e81da573e0ba09cc74e2",
+    "log": "ton-properties-evidence/ton-properties.log"
+  },
+  {
+    "check": "refresh-cancellation",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "39bef5327dd3164e6173a4dda55b9689d5d176ac98619bd71566409cd21bc5aa",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183931970,
+    "original_archive_sha256": "6be9fa81b7f4f7f5151fe7cbcbaffdc6d372f055cd994d23618e785bbf352824",
+    "report": "refresh-cancellation-evidence/after/refresh-cancellation.json",
+    "report_sha256": "e3c0b3e6a069ecefdc31fade62d21a9332d9b1745823d4a0c74b647c2e3982ff",
+    "log": "refresh-cancellation-evidence/after/refresh-cancellation.log"
+  },
+  {
+    "check": "refresh-model",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "acd34333b7cf78fdd967093b166deb01ff21071a7a966e869b4d411d02fac0ed",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183931970,
+    "original_archive_sha256": "6be9fa81b7f4f7f5151fe7cbcbaffdc6d372f055cd994d23618e785bbf352824",
+    "report": "refresh-cancellation-evidence/refresh-model/refresh-model.json",
+    "report_sha256": "5859cb848d442707c93f2b024d4235f17515ddeb0bb4c2c10619e7ef3825f3e8",
+    "log": "refresh-cancellation-evidence/refresh-model/refresh-model.log"
+  },
+  {
+    "check": "electrum-two-factor",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "3f66baeee3c29dc6f4cc930544fb58bdd292a8c472aeabaafb59d78b48421aab",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183860394,
+    "original_archive_sha256": "82c040df68d78bd174281b440cf74d90817cf4d037d774ab6262ecc4e5fcc1be",
+    "report": "electrum-two-factor-evidence/after/electrum-two-factor.json",
+    "report_sha256": "6c24781e6a3664ee1adc11fbad897f1ff941755beed177de6355e3b7163ad089",
+    "log": "electrum-two-factor-evidence/after/electrum-two-factor.log"
+  },
+  {
+    "check": "caip-boundary",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "c9a8234309045fb26c7379806b4e4db880d515c678da1bd7fbcfeb440392341d",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183661168,
+    "original_archive_sha256": "e152a4d3677c4d65a483cb9e53d182cd5f3bb4fd573564c7403a7d4e20cc3fb9",
+    "report": "caip-boundary-boundary/caip-boundary.json",
+    "report_sha256": "e2a4119fada7c236544a76fea19ca444644053bf73bc1aba7e0699b312b397e0",
+    "log": "caip-boundary-boundary/caip-boundary.log"
+  },
+  {
+    "check": "artwork-host-policy",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "2b3783cebd5629a732b0b14486d435d25de03ff7ed9ed1da2afe2cbdfb93ce4c",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182992071,
+    "original_archive_sha256": "f94297a40fb0fdca6653afaaba56ed6f43d069160471bde448613ee5af287031",
+    "report": "artwork-host-policy-boundary/artwork-host-policy.json",
+    "report_sha256": "fcacc8a1d8696734493f516396aba3c029a21962fa9b82de423195eebd97dc09",
+    "log": "artwork-host-policy-boundary/artwork-host-policy.log"
+  },
+  {
+    "check": "relay-metadata",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "50d1bee7beabc5aa9d974da21c73d99d2629e1dbc3bd21117ca0da93328cd23d",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182926488,
+    "original_archive_sha256": "82abdf3522cce5963a4bf5acb8a49749f9000e6b7450988a566c98cfa313d6fd",
+    "report": "relay-metadata-boundary/relay-metadata.json",
+    "report_sha256": "e95dc4ff8601466c0a5c49b418d1ad5f1fe4a46e8e73dd03c5fbff912c849fc2",
+    "log": "relay-metadata-boundary/relay-metadata.log"
+  },
+  {
+    "check": "history-atomicity",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "31c2dc35ebf39604b515d985ad65476907d6251a81564bd5d59aa9f69fc9bb0d",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182901554,
+    "original_archive_sha256": "bcdaa20dca25a8d22c17019ed8f004ecb4d30b905bfaf74727d5a6091a711fba",
+    "report": "history-atomicity-boundary/history-atomicity.json",
+    "report_sha256": "fa149fc93a81df0560cb02eddb5b1c46988d9ed18a8406cc04ac375f2b6778d9",
+    "log": "history-atomicity-boundary/history-atomicity.log"
+  },
+  {
+    "check": "evm-response-boundary",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "c370d1cc77a50a66a524f070983e8ce56c70deabc43945de3a9edb3806fd642f",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182868328,
+    "original_archive_sha256": "332fddd7112bae4f684f5d2b901429899d5538641dbb9a0d16ddd0ac691ed9e0",
+    "report": "evm-response-boundary-evidence/after/evm-response-boundary.json",
+    "report_sha256": "a3f43e34ac8d11c370d955a6ae86584a07b266ac95268f2ad75e22d04cfd8e39",
+    "log": "evm-response-boundary-evidence/after/evm-response-boundary.log"
+  },
+  {
+    "check": "link-metadata",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "25301b88fdd5052421e2dcb244102bb427cfbf96b64da935764f75a883a261d0",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182867458,
+    "original_archive_sha256": "4875b478dc4f7077ce3480e9c58807078e0dfc5043c56ae995f7796507f3eb79",
+    "report": "link-metadata-boundary/link-metadata.json",
+    "report_sha256": "d75c843c85e2df2ea3404ae0106e67e8f4c7d1cf7fe3bcba3fbdef734bb7d975",
+    "log": "link-metadata-boundary/link-metadata.log"
+  },
+  {
+    "check": "session-expiry",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "6b3bcee4d7b36652bed37e911b5c6b95585866e6aef3ed8ad5f94f5d11e9c50a",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182554925,
+    "original_archive_sha256": "9d88a4f949b5b27b3e4097438e140449fc80fc0ab561a4f431441d9fc12c5505",
+    "report": "session-expiry-boundary/session-expiry.json",
+    "report_sha256": "d67e2062029f773f136fd37d6db9dfdc71e2ec0014427fa43de914f223b93268",
+    "log": "session-expiry-boundary/session-expiry.log"
+  },
+  {
+    "check": "bchn-regtest",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "32b8e16aa1d3bc449bcbf524be34fc3968f8862332e6b5e3e07a23ee443e91ba",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182048403,
+    "original_archive_sha256": "7cc2a35a05a30b44b9131fd1effe1bb46b01858ce0db2d1ad422ba8849ee6943",
+    "report": "bitcoin-cash-node-evidence/bchn/bchn-regtest.json",
+    "report_sha256": "8d5462504f4c5bf9ebe58f643af7f1f7075bcdb14424343066edbe70457f2068",
+    "log": "bitcoin-cash-node-evidence/bchn/bchn-regtest.log"
+  },
+  {
+    "check": "cash-token-prefixes",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "236cba1e741c98bff7d6d900ecd23deba1e82155c8e60582a13b8e4fb245de01",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13182048403,
+    "original_archive_sha256": "7cc2a35a05a30b44b9131fd1effe1bb46b01858ce0db2d1ad422ba8849ee6943",
+    "report": "bitcoin-cash-node-evidence/cash-tokens/cash-token-prefixes.json",
+    "report_sha256": "757e35985e9fb00dc343afee67ee7edd413b21756fbba7e2f5ff1daf50956080",
+    "log": "bitcoin-cash-node-evidence/cash-tokens/cash-token-prefixes.log"
+  },
+  {
+    "check": "aezeed",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--aezeed"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 295.89,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 30 aezeed host integration checks: actual import, local vault, Bitcoin-only SQL/receive, lock/unlock, recovery display, BIP39 separation and cloud exclusion."
+    ],
+    "log_sha256": "f03fa2138a0f25a6ab945f77423ce82dc730d1fd56e9655241fc9a3bbfc50bb6",
+    "runtime_scope": "macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter",
+    "live_network_tests_enabled": false,
+    "assertion_count": 30,
+    "original_report_sha256": "6d27ab5180f7917a3ae0af413e2d1fff5c3cb1378eed878843166b8a10eb5948",
+    "original_log_sha256": "177a6fd1646a835d2c2336078febb24bf55c1143094670f6a02786b8a0305c13",
+    "log_encoding": "gzip",
+    "log": "aezeed.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/aezeed/result.json"
+  },
+  {
+    "check": "electrum",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--electrum"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 175.9,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 205 Electrum host integration checks across 5 formats: import, encrypted vault, lock/unlock, SQL, receive, recovery, deduplication and BIP39 separation."
+    ],
+    "log_sha256": "3390a09edaa7c3ea12457cbe11f1795a790c58a37ae33bc0fa7446f6ca64c4f5",
+    "runtime_scope": "macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter",
+    "live_network_tests_enabled": false,
+    "assertion_count": 205,
+    "original_report_sha256": "0a0438bdaed21e86dfe5d628e0b91d0aa4fd8c5e2794600b1138d476bcbb4796",
+    "original_log_sha256": "6127514647ef5afe0a0ddbde89ab1edd8a5b160267320f0d74eafdfe279b2d67",
+    "log_encoding": "gzip",
+    "log": "electrum.log.gz",
+    "evidence": "evidence/5.0.1-build103/checks/electrum/result.json"
+  },
+  {
+    "check": "solana-properties",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "554e9176481f1550f1b24c279b45d3f481e7c38cca9735ef03dc708d88d68e77",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13185575008,
+    "original_archive_sha256": "4e207d84bd5d3dc83bac29432af3edc0e642217f3b0ceb08faed6f541d0f45f3",
+    "report": "solana-properties-evidence/solana-properties.json",
+    "report_sha256": "180570c571789e467af234edd2f5cf81555024b1f9fec5ed40e96dd2e3b15d02",
+    "log": "solana-properties-evidence/solana-properties.log"
+  },
+  {
+    "check": "auth-boundary",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "180e608b59e94ce02ee5f5fe544dbf9f7da653e7063d1813118b042c0006810b",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13185142493,
+    "original_archive_sha256": "dfd8a4116379396450a14f4fce20cf9a2e19ecb0228ec3be2949a9ff2d05fac3",
+    "report": "auth-boundary-boundary/auth-boundary.json",
+    "report_sha256": "9b4c7dc65ace55c0f21ebc4ef6e9049e252a6e375f2ccc440c9453e9366b2ada",
+    "log": "auth-boundary-boundary/auth-boundary.log"
+  },
+  {
+    "check": "evm-delegation-nonce",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "015a37ba7199ef16ef2e3bdee5c915a3e909acf5792b6de6964b78b25986690e",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13185105848,
+    "original_archive_sha256": "66e85d4638b33b5ff3c3ece9f86d17a664f662d9070bdc96a99db53f9c1b5754",
+    "report": "evm-delegation-nonce-evidence/after/evm-delegation-nonce.json",
+    "report_sha256": "d741616d738b99466137253a0362630081fb777574c1fc57d67997fa7f463918",
+    "log": "evm-delegation-nonce-evidence/after/evm-delegation-nonce.log"
+  },
+  {
+    "check": "response-routing",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "7764ea591267fc5bfd47e7d67d30b611448b63361b438ed5e61367316ff26863",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13185071597,
+    "original_archive_sha256": "f0acca914b68bcdfe0a9c05fa38683356148842da9a10ba993c518bff1bea32d",
+    "report": "response-routing-boundary/response-routing.json",
+    "report_sha256": "8186005e8a4739d336d207093cf83e9ac0819e74b0c8367d1b2059ee207a9e30",
+    "log": "response-routing-boundary/response-routing.log"
+  },
+  {
+    "check": "link-boundary",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "1662bd4331abb2fc6ace19b0e7b86b2cf010e3f3523da0dcffca4b2b6b5c486a",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13184388170,
+    "original_archive_sha256": "9e6f3fc91ca4c45990b0beba42b107d6f002d582f1207e70ecc9d78d307c9935",
+    "report": "link-boundary-boundary/link-boundary.json",
+    "report_sha256": "b071100c3d8a6c61267f8aa42a6c9ccfec9eedc675405d12b93aa8ae49c08438",
+    "log": "link-boundary-boundary/link-boundary.log"
+  },
+  {
+    "check": "cleanup-lifetime",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "ec15610a365aacaedb4b57a2d2e1a29b39b7f5457ca0f1b1c2062a2b040853bc",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183858546,
+    "original_archive_sha256": "d60b5a9923c9b81fda7ddc32c9f8a9f703aa3c00ddeac43564431382de1fd165",
+    "report": "cleanup-lifetime-boundary/cleanup-lifetime.json",
+    "report_sha256": "3c6e10b882bbd0217207349c8ae93b473a27110d9d89c5cfc4d6bd04701f68eb",
+    "log": "cleanup-lifetime-boundary/cleanup-lifetime.log"
+  },
+  {
+    "check": "history-generation",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "9fbb0570ff91d719d6eab6527dae7fb061593df34ec6b0fac2308738291616bd",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183592839,
+    "original_archive_sha256": "d5c40f3608faa3f5747992c2b573b8f5efcdfc75b206ff7db752ca6e4434ae5e",
+    "report": "history-generation-boundary/history-generation.json",
+    "report_sha256": "0c035bb99ff7e487bbeb8be0e140d99b7ddaefcfc7c3479a40e6663397f2c383",
+    "log": "history-generation-boundary/history-generation.log"
+  },
+  {
+    "check": "bip32-import-vectors",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "73e1e10f5ed6d4ba99455534e520ed89f2fab7f2ba82e7e01dc99ef412d9b6fc",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/bip32/bip32-import-vectors.json",
+    "report_sha256": "2d6ab608aab406703a38c9ef81392859437308e052b9599d1aaf6916de87508e",
+    "log": "extended-key-import-boundary/bip32/bip32-import-vectors.log"
+  },
+  {
+    "check": "utxo-child-boundary",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "c3a9368e03bbc52218b45cce4933419a162429174b914103bec3c8f8dffdf525",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/child-index/utxo-child-boundary.json",
+    "report_sha256": "558b85ed24301c67aaf7cee4fcaef20c1a1fc37071cc8fb75effc0150b611db2",
+    "log": "extended-key-import-boundary/child-index/utxo-child-boundary.log"
+  },
+  {
+    "check": "secp-wrapper",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "df16a7861bf76636b68e852cf9c8643e2e3590388f01737caa66f15499c34bbf",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/curve/secp-wrapper.json",
+    "report_sha256": "f306000638f805fa55ad843d0578d1ef6c11f00890f7030a8159c523a69b7977",
+    "log": "extended-key-import-boundary/curve/secp-wrapper.log"
+  },
+  {
+    "check": "multisig-diagnostic-delivery",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "failed",
+    "log_sha256": "aefd81b6da62c749a9889acb72caf655e25199e048ebf9ee2f6f588411928fca",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/delivery/multisig-diagnostic-delivery.json",
+    "report_sha256": "e9752a4b1d679b5b182209d5390cc130525520a7ac04067a96f39d68b3ebc974",
+    "log": "extended-key-import-boundary/delivery/multisig-diagnostic-delivery.log"
+  },
+  {
+    "check": "utxo-key-import",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "fe08a6ed119867fee6a9c525d2af6ae6927c819693648490e0a8aac8259b851c",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/import/utxo-key-import.json",
+    "report_sha256": "cba0da894f8c555af6de0397c890a191040a8bde13c4183ab3f396cfdce5edd0",
+    "log": "extended-key-import-boundary/import/utxo-key-import.log"
+  },
+  {
+    "check": "extended-key-restore",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "bf24d58b45dc92a4b3881573938512407a6a144e7c43a45e7a5159f74bcb0967",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/legacy/extended-key-restore.json",
+    "report_sha256": "62da9961de2d2eb4e49ea0269205dd8834c1b9f44ffcacfcbc92bca81e45958e",
+    "log": "extended-key-import-boundary/legacy/extended-key-restore.log"
+  },
+  {
+    "check": "utxo-key-recovery",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "90a76d18dab93a8338de613a39d1da5cf3535b8e1149b25895d6b26a1ff49b8a",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13183319092,
+    "original_archive_sha256": "5aa67cf77e012ce3ce8563852226802093da82749bb9b4ccc1fbcdac4698713e",
+    "report": "extended-key-import-boundary/recovery/utxo-key-recovery.json",
+    "report_sha256": "b0a160951250e5fce3d28f24b11ce5f58bd09f7673d98abde7131a767a51b2c8",
+    "log": "extended-key-import-boundary/recovery/utxo-key-recovery.log"
+  },
+  {
+    "check": "multisig-diagnostic-delivery",
+    "status": "passed",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "baseline_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+    "executions": [
+      {
+        "phase": "before",
+        "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+        "suite": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 1,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "before-Bitcoin.log",
+        "log_sha256": "f0a4e944ded6b62eabff4e3faab32d2753a5750a37e9d5ffe5315919a3da12e9"
+      },
+      {
+        "phase": "before",
+        "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+        "suite": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 1,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "before-BitcoinCash.log",
+        "log_sha256": "03bcf1c137afeb615a9c4798c3954190dd40b54826e09a52e5387fc80ed122e4"
+      },
+      {
+        "phase": "before",
+        "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+        "suite": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 1,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "before-Dogecoin.log",
+        "log_sha256": "a3fcd79488bebd835b9105847d56d27246f988ccd6f370c506d0be4470d9b57f"
+      },
+      {
+        "phase": "before",
+        "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+        "suite": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 1,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "before-Litecoin.log",
+        "log_sha256": "0bd849e519718d92fbaed7656f87590c88a5736b4dcb90d2d41f6187bb90c7c2"
+      },
+      {
+        "phase": "after",
+        "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+        "suite": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 0,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "after-Bitcoin.log",
+        "log_sha256": "68f85f46494bfcf5e2950ecf903d3ad6a018c1e014e2892ea932c59c5467966a"
+      },
+      {
+        "phase": "after",
+        "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+        "suite": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 0,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "after-BitcoinCash.log",
+        "log_sha256": "fc8a6bf7b0c0d86e87c2bc7d17b44ad5a07964a94f738df2b1e9af7f773bb6bc"
+      },
+      {
+        "phase": "after",
+        "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+        "suite": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 0,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "after-Dogecoin.log",
+        "log_sha256": "ac4a264932afb73bac53223bb8b0344022c7e1c8ac22152d5511093d900112a5"
+      },
+      {
+        "phase": "after",
+        "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+        "suite": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests",
+        "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+        "exit_code": 0,
+        "expected_outcome_observed": true,
+        "timed_out": false,
+        "log": "after-Litecoin.log",
+        "log_sha256": "2763cf46bb0609c8ac6a86242127b986e8ee3919fef8e8b205becbc933bf42a1"
+      }
+    ],
+    "instrumentation": [
+      {
+        "phase": "before",
+        "path": "BitcoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "287fb1aca0f6045f36f6346b71091559cf5a3c2dc9ec9d833ed905f41d582cf3",
+        "instrumented_sha256": "fb229c3daa05e5ca501b6c1ce19ce7b5855687536b3fa9e1516eb9f39cbc1987"
+      },
+      {
+        "phase": "before",
+        "path": "BitcoinCashMultisigDiagnosticsTests.swift",
+        "original_sha256": "a35e2416b19ebbcf31cdda2b979f133fdf4ae45fbe38da248c1a910d7867dedf",
+        "instrumented_sha256": "f7e9993956c2b8c9d0607d72e53611aabd6fd09313ca15c97c269156a45b0dd4"
+      },
+      {
+        "phase": "before",
+        "path": "DogecoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "9ce9105948204f2153bb6fb6d6f883f3499dcbfe9607bbc2a53e4ded8f4fbef0",
+        "instrumented_sha256": "8f75f665724fef9b1b481a3a8c2442957c6553c8edc8242280b053f482e58395"
+      },
+      {
+        "phase": "before",
+        "path": "LitecoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "a98f3605357e1383c72673b6d484084c1d27941f5b733cd1eaafb6a5eb564e0e",
+        "instrumented_sha256": "97f09ca28b8d001cc443fe581ae8a995a68c0a27be892cacbe9349c1c51423cd"
+      },
+      {
+        "phase": "before",
+        "path": "BitcoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "fb229c3daa05e5ca501b6c1ce19ce7b5855687536b3fa9e1516eb9f39cbc1987",
+        "instrumented_sha256": "6ed7f4f248ff073461f5b42ad3b12a3929effcbdc99b0a4185e66c3047b69625"
+      },
+      {
+        "phase": "before",
+        "path": "BitcoinCashMultisigDiagnosticsTests.swift",
+        "original_sha256": "f7e9993956c2b8c9d0607d72e53611aabd6fd09313ca15c97c269156a45b0dd4",
+        "instrumented_sha256": "c4a78c495dcfa97bcb2489f00964f26d08c7d22286b1c09e8d4b4ecd57f33f06"
+      },
+      {
+        "phase": "before",
+        "path": "DogecoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "8f75f665724fef9b1b481a3a8c2442957c6553c8edc8242280b053f482e58395",
+        "instrumented_sha256": "e48aa3360a39242abd89f0fd6a4fa47ba7ae546ffecdbb051c6ab392c9162632"
+      },
+      {
+        "phase": "before",
+        "path": "LitecoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "97f09ca28b8d001cc443fe581ae8a995a68c0a27be892cacbe9349c1c51423cd",
+        "instrumented_sha256": "659abfb00ab015c7df32e49984fe99c8c77641e13e254135a39b7e064989de02"
+      },
+      {
+        "phase": "after",
+        "path": "MultisigSigningDiagnosticCapture.swift",
+        "original_sha256": "b0807fcd3caa335cf1676fab1c690f9d59eeb7d7f0a61b35de0d40aeb53ceaeb",
+        "instrumented_sha256": "3015e1f261fa1474f5d08a658b182a170b7df951f3640c34d016f9bf98dc60b7"
+      },
+      {
+        "phase": "after",
+        "path": "BitcoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "1012d7a67a4208b9c74405625c67029b68e144f044a745ac89a892b51516bab5",
+        "instrumented_sha256": "05efae1c22340fbd776cd724b4756484bf4bc8f9c6e1c3148c4eb8f063e560cd"
+      },
+      {
+        "phase": "after",
+        "path": "BitcoinCashMultisigDiagnosticsTests.swift",
+        "original_sha256": "49d931a27292df14922cf759950f5fac971599cffcbed1eeababc0d490d1aade",
+        "instrumented_sha256": "277b0ba0e3f077f057e8e2155b996fa1f07e0ac745d7f48e4726f4594c6d4a44"
+      },
+      {
+        "phase": "after",
+        "path": "DogecoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "00fb7cb169d190876963e1d08bb5ae4ae8162835b3613ad7e1accb9ff186c662",
+        "instrumented_sha256": "11e2e680fed1fb6516374983716fef76d32a15127b816cede4068f1623200b41"
+      },
+      {
+        "phase": "after",
+        "path": "LitecoinMultisigDiagnosticsTests.swift",
+        "original_sha256": "fa3c94b8849e83d808a9184f65d3f90cedfe6f47b353ce7961238201c22cd1ad",
+        "instrumented_sha256": "64506a608ae29eb9ca04f378f0f373510c45bc200509d050743b5e7402dd6741"
+      }
+    ],
+    "duration_seconds": 77.73,
+    "scope": "A test-only delivery gate holds the original snapshot consumer through its final read and permits the repaired expectation consumer to receive before its read. Original assertions and production implementations are unchanged. Network denied for all eight XCTest executions.",
+    "log": "multisig-diagnostic-delivery.log",
+    "log_sha256": "f690420b2e46f4c49cb4ba8b8af1398256ea3935dae965f3f89a204b3271b7d3",
+    "evidence": "evidence/5.0.1-build103/ci-retests/delivery-replay.json"
   }
 ]

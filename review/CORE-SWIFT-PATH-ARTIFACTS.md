@@ -13,3 +13,7 @@ python3 scripts/walletcore-apple.py --repair-set eight --swift-path-values \
 ```
 
 The protobuf distribution ZIP applies the existing resource-metadata repair after compilation. Four Info.plists differ between the raw and distribution ZIPs. Both archives contain the same executable, debug symbols and privacy manifests. [Pinned checksums, build steps, tools and device binary UUIDs](../evidence/5.0.1-build103/core-apple/artifacts.json). The byte hashes identify these outputs. A second independent byte-identical Apple build has not been demonstrated.
+
+## Integration after build 103
+
+[Wallet PR 57](https://github.com/devdasx/oath-wallet/pull/57) updates both package pins and their matching symbols. Both framework executables embedded in the unsigned generic iOS Release archive matched the public package bytes. Both dSYM UUIDs matched the device binaries. The tested commit and the merged commit have the same Git tree. The diagnostics package passed 119 tests and skipped two. [Archive evidence](../evidence/5.0.1-build103/core-apple/integration.json). This evidence applies to public app source after the build 103 tag.

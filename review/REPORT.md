@@ -4,6 +4,8 @@
 
 **Active target — 5.0.1 (103).** The maintainer-commissioned Codex review now targets public source `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect showed iOS version 5.0.1 Waiting for Review on 2 November 2026. [Current results and release-specific findings](RELEASE-5.0.1-103.md) · [Coverage inventory](../scope/inventory.json).
 
+**Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](../findings/OW-2026-046.md) · [Application and dependency checks](RELEASE-5.0.1-103.md) · [Direct input coverage](../evidence/5.0.1-build103/compiler/dispositions.json).
+
 ## Historical 4.1.15 series
 
 The original baseline was `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Its last review target was `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`. The dated entries below describe that earlier work.

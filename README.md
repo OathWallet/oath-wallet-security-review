@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](findings/OW-2026-046.md) · [Application and dependency checks](review/RELEASE-5.0.1-103.md) · [Direct input coverage](evidence/5.0.1-build103/compiler/dispositions.json).
+
 Latest dependency work: [result-wrapper state transitions](review/CORE-RESULT-STATE.md)
 and [malformed signing/planning inputs](review/CORE-SIGNING-PARSE.md), with real
 before/after tests. All eight source repairs pass the full native C/C++ suites.
