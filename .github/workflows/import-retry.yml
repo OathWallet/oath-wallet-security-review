@@ -1,0 +1,40 @@
+name: Build 103 wallet and diagnostic regressions
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/import-retry-identity.py', 'scripts/multisig-diagnostic-delivery.py', 'scripts/diagnostic-modes.py', '.github/workflows/import-retry.yml']
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: xcode-27
+    timeout-minutes: 55
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          python3 scripts/import-retry-identity.py .work/wallet evidence/ci/import-retry
+      - name: Reproduce four historical multisig diagnostic races
+        run: |
+          git -C .work/wallet checkout --detach c7acd23bb139864a40273f405d18b479589d2b20
+          python3 scripts/multisig-diagnostic-delivery.py .work/wallet --expected-commit c7acd23bb139864a40273f405d18b479589d2b20 --scratch .work/delivery-build --output evidence/ci/delivery
+      - name: Retest Arc diagnostics with synthetic responses
+        run: |
+          git -C .work/wallet checkout --detach 9051e2043271a06a9d5f618f45a1634d1b49f57c
+          python3 scripts/diagnostic-modes.py .work/wallet --expected-commit 9051e2043271a06a9d5f618f45a1634d1b49f57c --package OathAnkr --scratch .work/arc-build --output evidence/ci/arc
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: build103-wallet-diagnostic-regressions
+          path: evidence/ci
+          if-no-files-found: error
+          retention-days: 90

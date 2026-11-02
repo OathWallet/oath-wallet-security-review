@@ -53,12 +53,13 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source', type=Path)
+    parser.add_argument('--expected-commit', help='Exact source revision for an explicitly scoped repair retest')
     parser.add_argument('--package', choices=['OathAnkr', 'OathDiagnostics'], default='OathAnkr')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--scratch', type=Path, required=True)
     args = parser.parse_args()
     source, out, scratch = args.source.resolve(), args.output.resolve(), args.scratch.resolve()
-    sha = require_source_state(source, json.loads((ROOT/'scope/source.json').read_text())['reviewed_commit'])
+    sha = require_source_state(source, args.expected_commit or json.loads((ROOT/'scope/source.json').read_text())['reviewed_commit'])
     if not Path('/usr/bin/sandbox-exec').is_file():
         raise RuntimeError('macOS host with sandbox-exec is required; no unconfined fallback')
     out.mkdir(parents=True, exist_ok=True)
