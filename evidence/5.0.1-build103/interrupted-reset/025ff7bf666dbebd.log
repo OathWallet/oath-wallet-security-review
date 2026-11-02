@@ -1,0 +1,12 @@
+Test Suite 'Selected tests' started at 2026-11-02 23:56:23.240.
+Test Suite 'OathDatabasePackageTests.xctest' started at 2026-11-02 23:56:23.242.
+Test Suite 'BalanceHistoryTests' started at 2026-11-02 23:56:23.242.
+Test Case '-[OathDatabaseTests.BalanceHistoryTests testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence]' started.
+<unknown>:0: error: -[OathDatabaseTests.BalanceHistoryTests testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence] : failed: caught error: "SQLite error 19: Wallet reset in progress - while executing `UPDATE wallets SET needsBackupOfferReview = 1 WHERE pendingBackupOffer IS NULL`"
+Test Case '-[OathDatabaseTests.BalanceHistoryTests testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence]' failed (0.219 seconds).
+Test Suite 'BalanceHistoryTests' failed at 2026-11-02 23:56:23.462.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.219 (0.220) seconds
+Test Suite 'OathDatabasePackageTests.xctest' failed at 2026-11-02 23:56:23.462.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.219 (0.220) seconds
+Test Suite 'Selected tests' failed at 2026-11-02 23:56:23.462.
+	 Executed 1 test, with 1 failure (1 unexpected) in 0.219 (0.222) seconds

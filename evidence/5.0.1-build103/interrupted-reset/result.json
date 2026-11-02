@@ -1,0 +1,40 @@
+{
+  "check": "pending-reset-upgrade",
+  "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "status": "failed",
+  "finding": "OW-2026-045",
+  "cases": [
+    {
+      "selector": "OathDatabaseTests.BalanceHistoryTests/testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_seconds": 0.341,
+      "log": "025ff7bf666dbebd.log",
+      "log_sha256": "6d9cee5600b6eb5e74448c607fbc73582ebaffc6539c096397f71c004cc371ef",
+      "repaired_log": "evidence/progress56/after/testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence.log",
+      "repaired_log_sha256": "faa999992878727db26c13c79c87d9b3ed3254fe51703e5de52e7c7d4727772b"
+    },
+    {
+      "selector": "OathDatabaseTests.HomeReadIndexTests/testMigrationBackfillsExistingRows",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_seconds": 0.342,
+      "log": "d5f2dc58e03bd802.log",
+      "log_sha256": "752dca80f675b8ee08dd73a38058a17d755526652aa458ef862ec93a1985868b",
+      "repaired_log": "evidence/progress56/after/testMigrationBackfillsExistingRows.log",
+      "repaired_log_sha256": "120b5bc2b893ba3da8e6e9a572b3ba4b1f8629915f07ebc14a83d9cdb725d827"
+    },
+    {
+      "selector": "OathDatabaseTests.WalletNamingTests/testUpgradeDoesNotBlockAnInterruptedWalletReset",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_seconds": 0.338,
+      "log": "81b0e65635caf6d2.log",
+      "log_sha256": "bf6a84319151b8e991e88e691da353e79a9c867ef0c6ae3c8ca60030ab0cf72b",
+      "repaired_log": "evidence/progress56/after/testUpgradeDoesNotBlockAnInterruptedWalletReset.log",
+      "repaired_log_sha256": "7e16695b71232e8f0bc931489973c159edf88f3f108cebc9396503be3a52d618"
+    }
+  ],
+  "retested_fix": "5071662dc0700d7011795035aa14b5795a4a1e3a",
+  "merged_fix": "ad77a9d5f790114ec90c7bba59d1546279c9c794"
+}
