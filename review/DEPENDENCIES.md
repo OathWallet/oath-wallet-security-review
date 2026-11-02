@@ -43,3 +43,7 @@ mnemonic, path, HMAC and PBKDF2 boundaries. See `MNEMONIC-DERIVATION-REVIEW.md`
 for exact scope, the zero-round low-level API characterization, existing Oath
 passphrase guards and unresolved derivation/copy-lifetime leads. These source
 tests do not verify Wallet Core's distributed Apple binary equivalence.
+
+## Inventory refreshed for the combined recovery repair
+
+At app source `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`, the scan found 32 lock entries, 15 notices, 12 binary or module files and 1,345 candidate network/build source locations. The added exchange-rates package lock references Stellar SDK 3.12.0 at the same revision already recorded for Xcode. The number of candidates includes changed source locations and is not a count of endpoints. The review workflow regenerates and compares all four catalogs to detect further drift. [Pins](../scope/dependencies.json) · [Candidate locations](../scope/entry-points.json).

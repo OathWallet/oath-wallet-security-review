@@ -20,7 +20,7 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-**Latest checkpoint.** [Recovery import repairs and dictionary verification](review/RECOVERY-IMPORT-ROUTING.md) · [Remaining review coverage](review/ACCEPTANCE.md).
+**Latest checkpoint.** [Two-factor recovery and fixture repairs](review/ELECTRUM-TWO-FACTOR.md) · [Bitcoin Cash transactions and token-bearing outputs](review/BCH-TOKENS-AND-SIGNING.md) · [Acceptance](review/ACCEPTANCE.md).
 
 **Earlier checkpoint.** [Provider response limits](findings/OW-2026-034.md), [Stellar decoder checks](review/STELLAR-XDR-BOUNDARIES.md) and [remaining scope](review/ACCEPTANCE.md).
 

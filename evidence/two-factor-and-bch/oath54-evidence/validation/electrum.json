@@ -1,0 +1,21 @@
+{
+  "check": "electrum",
+  "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+  "command": [
+    "python3",
+    "Tools/CheckMultiWallet.py",
+    "--electrum"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 562.55,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "Passed 205 Electrum host integration checks across 5 formats: import, encrypted vault, lock/unlock, SQL, receive, recovery, deduplication and BIP39 separation."
+  ],
+  "log_sha256": "05d5dea4fd02c8b7fa9ea8813c6c943af7f45099d1997b76fc84dc1ccedabe39",
+  "runtime_scope": "macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter",
+  "live_network_tests_enabled": false,
+  "assertion_count": 205
+}

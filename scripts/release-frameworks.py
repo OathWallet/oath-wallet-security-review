@@ -36,14 +36,35 @@ def inspect(path):
     if at!=32+size or not uuid or '__TEXT.__text' not in code:raise ValueError('Missing or incomplete executable identity')
     return dict(sha256=hashlib.sha256(data).hexdigest(),uuid=uuid,executable_sections=code)
 
+def archived_slice_metadata(source, name, archive):
+    """The manifest pins the archive. The build's original device binary must still be present."""
+    import re
+    import zipfile
+    manifest=(source/'Packages/WalletCore/Package.swift').read_text()
+    pattern=r'\.binaryTarget\(\s*name:\s*"'+re.escape(name)+r'",\s*url:\s*"[^"]+",\s*checksum:\s*"([0-9a-f]{64})"'
+    matches=re.findall(pattern,manifest)
+    digest=hashlib.sha256(archive.read_bytes()).hexdigest()
+    if matches != [digest]:
+        raise ValueError('Archive does not match the reviewed package manifest: '+name)
+    with zipfile.ZipFile(archive) as zipped:
+        metadata=zipped.read(name+'.xcframework/Info.plist')
+        members=[m for m in plistlib.loads(metadata)['AvailableLibraries'] if m['SupportedPlatform']=='ios'
+                 and not m.get('SupportedPlatformVariant') and 'arm64' in m['SupportedArchitectures']]
+        if len(members)!=1:raise ValueError('Ambiguous archive device slice: '+name)
+        member=members[0]
+        path='/'.join((name+'.xcframework',member['LibraryIdentifier'],member['LibraryPath'],name))
+        binary_sha=hashlib.sha256(zipped.read(path)).hexdigest()
+    return metadata,dict(archive_sha256=digest,metadata_sha256=hashlib.sha256(metadata).hexdigest(),device_sha256=binary_sha)
+
 def main():
     p=argparse.ArgumentParser()
     for name in ('source','derived','build_result','output'):p.add_argument(name,type=Path)
+    p.add_argument('--package-archives',type=Path,help='Verify missing package metadata against manifest-pinned archives and the existing device executable')
     a=p.parse_args();build=json.loads(a.build_result.read_bytes());pin=require_source_state(a.source,build['source_commit'])
     if build['status']!='passed' or hashlib.sha256(a.build_result.with_name('build.log').read_bytes()).hexdigest()!=build['log_sha256']:
         raise ValueError('Successful hashed build log required')
     app=a.derived/'Build/Products/Release-iphoneos/Oath Wallet.app'
-    links={};embedded={};core={}
+    links={};embedded={};core={};recovered={}
     info=plistlib.loads((app/'Info.plist').read_bytes())
     for bundle in [app,*sorted((app/'Frameworks').glob('*.framework'))]:
         name=plistlib.loads((bundle/'Info.plist').read_bytes())['CFBundleExecutable']
@@ -53,15 +74,23 @@ def main():
         embedded[name]=inspect(exe)
     for name in ('WalletCore','WalletCoreSwiftProtobuf'):
         root=a.derived/'SourcePackages/artifacts/walletcore'/name/(name+'.xcframework')
-        matches=[x for x in plistlib.loads((root/'Info.plist').read_bytes())['AvailableLibraries']
+        if (root/'Info.plist').is_file():
+            metadata=(root/'Info.plist').read_bytes()
+        elif a.package_archives:
+            metadata,recovered[name]=archived_slice_metadata(a.source,name,a.package_archives/(name+'.xcframework.zip'))
+        else:
+            raise ValueError('Resolved package metadata is missing for '+name+'; supply its manifest-pinned archive')
+        matches=[x for x in plistlib.loads(metadata)['AvailableLibraries']
                  if x['SupportedPlatform']=='ios' and not x.get('SupportedPlatformVariant') and 'arm64' in x['SupportedArchitectures']]
         if len(matches)!=1:raise ValueError('Unexpected arm64 device slice')
         member=matches[0];src=root/member['LibraryIdentifier']/member['LibraryPath']/name
+        if name in recovered and hashlib.sha256(src.read_bytes()).hexdigest()!=recovered[name]['device_sha256']:
+            raise ValueError('Original device executable differs from pinned archive: '+name)
         resolved=inspect(src);actual=embedded[name]
         if resolved['uuid']!=actual['uuid'] or resolved['executable_sections']!=actual['executable_sections']:
             raise ValueError('Resolved and embedded executable code differs: '+name)
         core[name]=dict(resolved=resolved,whole_file_identical=actual['sha256']==resolved['sha256'],slice=member['LibraryIdentifier'])
-    result=dict(source_commit=pin,check='release-frameworks',status='passed',build_log_sha256=build['log_sha256'],
+    result=dict(source_commit=pin,check='release-frameworks',status='passed',metadata_from_pinned_archives=recovered,build_log_sha256=build['log_sha256'],
         product=info['CFBundleIdentifier'],embedded=embedded,dependencies=links,comparison=core,
         scope='Exact embedded files, Mach-O UUIDs, instruction-bearing sections and dynamic library references for this generic unsigned iOS build. Only the two dynamic Wallet Core products are compared against resolved XCFramework device slices. This is not a rebuild of Wallet Core or a comparison with the App Store.')
     out=a.output;out.mkdir(parents=True,exist_ok=True);log=out/'release-frameworks.log';log.write_text(json.dumps(result,indent=2)+'\n')

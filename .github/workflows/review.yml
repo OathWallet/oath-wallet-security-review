@@ -33,6 +33,9 @@ jobs:
           python3 scripts/inventory.py .work/source --output evidence/ci/inventory.json
           cmp scope/inventory.json evidence/ci/inventory.json
           python3 scripts/dependencies.py .work/source --output evidence/ci
+          for ledger in dependencies licenses binaries entry-points; do
+            cmp "scope/$ledger.json" "evidence/ci/$ledger.json"
+          done
       - name: Record outstanding coverage without converting it to a pass
         run: |
           set +e
@@ -522,6 +525,9 @@ jobs:
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: provider-response-budgets-boundary, path: evidence/ci, retention-days: 90}
+  recovery-and-bch:
+    if: inputs.validation_kind != 'scanners' && inputs.validation_kind != 'packages'
+    uses: ./.github/workflows/recovery-and-bch.yml
   bitcoin-signature-core:
     if: inputs.validation_kind != 'scanners'
     runs-on: xcode-27
@@ -868,7 +874,7 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
       OATH_REVIEW_XCODE: '27.1'
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: {persist-credentials: false}
@@ -975,6 +981,8 @@ jobs:
       - run: python3 scripts/run.py .work/source build --output evidence/ci --scratch .work/release-build
       - name: Trace this build's Swift and C compiler inputs
         run: python3 scripts/release-inputs.py .work/source --build-result evidence/ci/build.json --derived-data .work/release-build --output evidence/ci/build-inputs
+      - name: Report direct compiler inputs still requiring review
+        run: python3 scripts/compiled-coverage.py evidence/ci/build-inputs/release-inputs.json evidence/ci/build-inputs/compiled-coverage.json
       - name: Compare embedded Wallet Core images with the resolved arm64 slices
         run: python3 scripts/release-frameworks.py .work/source .work/release-build evidence/ci/build.json evidence/ci/build-inputs
       - run: python3 scripts/bip39-dictionaries.py .work/source ".work/release-build/Build/Products/Release-iphoneos/Oath Wallet.app" evidence/ci/build-inputs/release-frameworks.json evidence/ci/build-inputs

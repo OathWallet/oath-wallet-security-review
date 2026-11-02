@@ -1,0 +1,41 @@
+{
+  "check": "refresh-model",
+  "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+  "status": "passed",
+  "cases": {
+    "events": {
+      "summary": "100000 seeded events passed; activations=4617, feedback=99",
+      "files": {
+        "RefreshPullGesture.swift": "57a7ef11ded6433e81724e087f260cd650e4fcfacabd416e78770544098c6791",
+        "RefreshPullFeedback.swift": "387a5154c04fbd49f96d646f7cfe06b8e38d7cf0951de21d62af0314f4c6a4f3",
+        "RefreshCycle.swift": "cb026f4454dd4b4b6d8d9f9f4922c5cb14f2744264049a049f871ac4ed10b7ce",
+        "Events.swift": "c48b45e82f634d59e4b28e81586d309b36fcd271c6b72df4a724464dc86788bc"
+      }
+    },
+    "settlement": {
+      "summary": "Passed 251 refresh lifecycle checks",
+      "files": {
+        "RefreshCompletion.swift": "49e37372a7436679ae954d5e091cebb47b8c10ea4130bd459b3bf77be119f103",
+        "CheckRefreshCompletion.swift": "754380325416848d6933a7015a9a8c065f086d1182e6bc81db63b71c97f1befe"
+      }
+    },
+    "observation": {
+      "summary": "PASS: idle observation is quiet across 20,000 repeated stops; active and partial refresh cancel once",
+      "files": {
+        "RefreshCycle.swift": "cb026f4454dd4b4b6d8d9f9f4922c5cb14f2744264049a049f871ac4ed10b7ce",
+        "RefreshIndicatorModel.swift": "f70d2b6dde05e48307071509c2722e5e2589bce794a73a2606b41100547f0d99",
+        "CheckRefreshObservation.swift": "e5333667cd997d7c3caed349c8209f9abf349001bfdd30a5308b80f6218e27c1"
+      }
+    },
+    "geometry": {
+      "summary": "Passed 6182 branded refresh lifecycle and SVG geometry checks",
+      "files": {
+        "RefreshCycle.swift": "cb026f4454dd4b4b6d8d9f9f4922c5cb14f2744264049a049f871ac4ed10b7ce",
+        "OathRefreshMark.swift": "65bd4d51579ed2675866c49fa59dd5a5406b1a2f604cee66dacb1ebb47a07efb",
+        "CheckBrandedRefresh.swift": "d1cda2eb3b16ca47412cb2a519222b71b569472809e42c80d3e90328d478f2f6"
+      }
+    }
+  },
+  "log": "refresh-model.log",
+  "log_sha256": "acd34333b7cf78fdd967093b166deb01ff21071a7a966e869b4d411d02fac0ed"
+}

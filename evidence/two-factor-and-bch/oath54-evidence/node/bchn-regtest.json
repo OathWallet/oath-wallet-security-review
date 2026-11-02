@@ -1,0 +1,39 @@
+{
+  "check": "bchn-regtest",
+  "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+  "status": "passed",
+  "tools": {
+    "bitcoind": "84aee425e62a580c17cc9defc370b499ee1cba04942d6cca7e036680ea88e77d",
+    "bitcoin-cli": "47c9e49a4700b2b8468409d10e8ee82dd7d5aea37168cc6fbade87af1eb22f14"
+  },
+  "upstream_version": "29.2.0",
+  "original_test_sha256": "9bf1dfaca1139e004a2ffbfdc242b3926c5a483c24ef65d4a77657319a5ac8c1",
+  "adapted_test_sha256": "5c1c8049ebc268902d33b2b6d3dcc35d8c6b1863df461431af4eeceec9c2bd9a",
+  "results": [
+    {
+      "selector": "OathBitcoinTests.BitcoinCashSendTests/testBCHNAcceptsMinesAddressAndFeeMatrix",
+      "blocks": 141,
+      "peers": 0,
+      "network_active": false,
+      "receipts": 20,
+      "receipt_sha256": "dbf9efe4c441d02466ff2db55788d0ef060f3028f424790b28ce72583978e6b3"
+    },
+    {
+      "selector": "OathBitcoinTests.BitcoinCashSendTests/testBCHNRejectsNonForkIDSignatureAndModifiedRecipientAmount",
+      "blocks": 102,
+      "peers": 0,
+      "network_active": false
+    },
+    {
+      "selector": "OathBitcoinTests.BitcoinCashMultisigTests/testBitcoinCashCoreMultisigConsensus",
+      "blocks": 343,
+      "peers": 0,
+      "network_active": false,
+      "confirmed_policies": 121,
+      "confirmed_txids_sha256": "122aec00595e1cadd8a7bfa9d6e52f88d923b604be9e72d78592723f622bda81"
+    }
+  ],
+  "scope": "Unmodified production package; existing assertions, isolated native RPC test adapter and temporary receipt path. The three test chains are private regtest. The multisig fixture runs unchanged.",
+  "log": "bchn-regtest.log",
+  "log_sha256": "268b55d0ee62ca4934310fc11946c12e6e5855792a7e20b87a9a71a8b3812d19"
+}

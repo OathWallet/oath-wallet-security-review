@@ -1,5 +1,5 @@
 {
-  "source_commit": "343046575c980b9091a4474f098878e920963492",
+  "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -8741,12 +8741,13 @@
     },
     {
       "path": "OathAtmosphere/Import/OathRecoveryPhraseScreen.swift",
-      "sha256": "41550d34b72b7b29e07ec02e3f5bffc2fcff8e841db4a7a3d859ff89dfdef393",
-      "bytes": 14431,
+      "sha256": "6dc77cd30deafb02fe9aac2ea3a739e30ff9103f371ae09ecd33f2b234f0fdc4",
+      "bytes": 14457,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
-        "review/RECOVERY-IMPORT-ROUTING.md"
+        "review/RECOVERY-IMPORT-ROUTING.md",
+        "review/ELECTRUM-TWO-FACTOR.md"
       ]
     },
     {
@@ -10571,13 +10572,14 @@
     },
     {
       "path": "OathAtmosphere/Wallet/OathVaultImportPreparation.swift",
-      "sha256": "6b202d7be6b3f6890b99536c7a03cf80d5271d25912850e66113a046f38ca21f",
-      "bytes": 6224,
+      "sha256": "a8add6a606aa0677769ae03bcd76f8bde4e03edf31202055c7e567b51680770e",
+      "bytes": 6250,
       "category": "application",
-      "status": "reviewed",
+      "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "review/INPUT-BOUNDARIES.md"
+        "review/INPUT-BOUNDARIES.md",
+        "review/ELECTRUM-TWO-FACTOR.md"
       ]
     },
     {
@@ -10592,13 +10594,14 @@
     },
     {
       "path": "OathAtmosphere/Wallet/OathWalletEngine.swift",
-      "sha256": "54eddb9849c35953fed7097945e85eb7ad3d1b379d3f696472e1397f071415b7",
-      "bytes": 10554,
+      "sha256": "cdd37ba5790ca3c09eab2b0b03e5a5e83d6b47cc3ea66293de02c2b1376ea946",
+      "bytes": 10580,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
         "review/READ-NOTES.md",
-        "review/RECOVERY-IMPORT-ROUTING.md"
+        "review/RECOVERY-IMPORT-ROUTING.md",
+        "review/ELECTRUM-TWO-FACTOR.md"
       ]
     },
     {
@@ -16150,24 +16153,30 @@
       "sha256": "45071f640bd9abd94703644959fb823548318ae5b831093584b01d3df807b8c3",
       "bytes": 4022,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinCashSendSigner.swift",
       "sha256": "deeaec123f61a059c862adc3bae927fa0ccfa665eb384f57cbad243207efa3b9",
       "bytes": 3300,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinCashTokens.swift",
       "sha256": "7bd5e11e13e04d7c13cc38259cd2a82673d59c6b105a37f2874935ec32f5a7d0",
       "bytes": 2183,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConcurrent.swift",
@@ -16295,8 +16304,10 @@
       "sha256": "a668742d53c0693b204b6da902ecfba994c17f5c28a893a80c5689b4c055d01b",
       "bytes": 2356,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendPlan.swift",
@@ -16344,16 +16355,20 @@
       "sha256": "1de6c19ef91a47a8523a2c3961911298bb0e0d272b3cbbda3747f3f90c08e163",
       "bytes": 9124,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/CashAddress.swift",
       "sha256": "f4a488591046135de6372c9ee1cac31177030cb7a2cb051e1ff30782f634d655",
       "bytes": 4875,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/DiagnosticAvailability.swift",
@@ -16402,12 +16417,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/ElectrumMnemonic.swift",
-      "sha256": "6c8644738601878f52793b5f3346efd7b8dab57a4a5c119e6996c70f22840a48",
-      "bytes": 8766,
+      "sha256": "9d7fc824e7321e6e8ad48f152950ed2fbe9900766b8550311181cf41d9bda64a",
+      "bytes": 9509,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
-        "review/RECOVERY-IMPORT-ROUTING.md"
+        "review/RECOVERY-IMPORT-ROUTING.md",
+        "review/ELECTRUM-TWO-FACTOR.md"
       ]
     },
     {
@@ -16423,8 +16439,10 @@
       "sha256": "c791a01154833b345935a2661de54e98ff56eac5340845180dfbfb9722682e32",
       "bytes": 3309,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/LitecoinKeys.swift",
@@ -16800,13 +16818,14 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/ElectrumMnemonicTests.swift",
-      "sha256": "0a0ab6a7cbf90187b96f559b3df79e2fa28505639c38c6ac05fc40eba0ef992e",
-      "bytes": 11809,
+      "sha256": "aed75b8bbd9f33af2c608c661a1b3d77342934a579a54e750d1eb49d98219c2d",
+      "bytes": 13104,
       "category": "test",
       "status": "partially-reviewed",
       "evidence": [
         "review/BITCOIN-SIGNER-AND-CORE.md",
-        "review/CURVE-WRAPPER-AND-INDEX.md"
+        "review/CURVE-WRAPPER-AND-INDEX.md",
+        "review/ELECTRUM-TWO-FACTOR.md"
       ]
     },
     {
@@ -16897,16 +16916,20 @@
       "sha256": "602eaf98a3ec328b3575999179fee41885538468361620f8c06af716e08c0e3d",
       "bytes": 13208,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/Fixtures/bitcoincash-tokens-valid.json",
       "sha256": "fb80f3f92be0cb4209e54c10f63c4896b1a329abceb10cc6c105867fedf1fb28",
       "bytes": 28935,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/BCH-TOKENS-AND-SIGNING.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/Fixtures/bitcoincash-vectors.json",
@@ -18316,11 +18339,13 @@
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/AptosLedgerTests.swift",
-      "sha256": "a1c17d63d979fbb8575bc507f7d03937d32a26639b5f972dca2ce7306df4be54",
-      "bytes": 19935,
+      "sha256": "69cf0830bb09deda7fd7c9c4b683914917e5bcfe72e081bba29ec617158a7927",
+      "bytes": 20323,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ELECTRUM-TWO-FACTOR.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/AptosSendJournalTests.swift",
@@ -18332,11 +18357,13 @@
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/ArcHistoryTeardownTests.swift",
-      "sha256": "5d201160f97e6d168fd1a1491c0ff150ecd659355b5f12d3b7dc4c3f3102e34a",
-      "bytes": 6874,
+      "sha256": "f3b0c8270832baa4bbcb4610fd498b449aeea15d3939ab11baf2414103f4e700",
+      "bytes": 6861,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ELECTRUM-TWO-FACTOR.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/ArcLedgerTests.swift",
@@ -18452,11 +18479,13 @@
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/DatabaseDiagnosticsTests.swift",
-      "sha256": "3bd0ef7e31900dabf651900d9759ae367748fb8814e24fb25ec4ad2f49802704",
-      "bytes": 1586,
+      "sha256": "2b1b421b4214fe7138bf7e46e7c445cb2e92b6add992292e1cfbd344c443d1b8",
+      "bytes": 2049,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ELECTRUM-TWO-FACTOR.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/DatabaseTests.swift",
@@ -19006,11 +19035,13 @@
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/TronHistoryTeardownTests.swift",
-      "sha256": "87c39511c6700351f7f82ca0e4a46f826dcf1c59cbdb3327cd66cfb202a6764c",
-      "bytes": 6057,
+      "sha256": "c06a62403e7dca5d5aeaf1ecda4de553b2b1ae0c2d833c42634967c71641fcbe",
+      "bytes": 7196,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ELECTRUM-TWO-FACTOR.md"
+      ]
     },
     {
       "path": "Packages/OathDatabase/Tests/OathDatabaseTests/TronLedgerTests.swift",
@@ -21101,12 +21132,13 @@
     },
     {
       "path": "Tools/CheckElectrumImport.swift",
-      "sha256": "5c4727c53a330aeddb867d2ef14abb1176905a2beaa1aa80f5a5a0a80d2bd31b",
-      "bytes": 6588,
+      "sha256": "13312417af498a972a498739f9c7e369b5ea2c32da59ac9d1751b87ccf1839b7",
+      "bytes": 7893,
       "category": "test",
       "status": "partially-reviewed",
       "evidence": [
-        "review/RECOVERY-IMPORT-ROUTING.md"
+        "review/RECOVERY-IMPORT-ROUTING.md",
+        "review/ELECTRUM-TWO-FACTOR.md"
       ]
     },
     {
@@ -21514,11 +21546,13 @@
     },
     {
       "path": "Tools/CheckRefreshActions.py",
-      "sha256": "8148a614ba14f52ce93f2e079c2229dddf3ed2af87a9b1af60ee80c4b2c85f66",
-      "bytes": 1865,
+      "sha256": "294f5d657eb379ae75c3f6c680fdedf649f6fcdbe6cebe18d5589533676febef",
+      "bytes": 2268,
       "category": "test",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ELECTRUM-TWO-FACTOR.md"
+      ]
     },
     {
       "path": "Tools/CheckRefreshCompletion.swift",
@@ -22462,6 +22496,16 @@
       "category": "build-or-documentation",
       "status": "outstanding",
       "evidence": []
+    },
+    {
+      "path": "Tools/NativeRefreshValidation/BackgroundRefreshTests.swift",
+      "sha256": "09b01edbc1d0bc0dd8a80336f72ca26e170e5fa0a8a7fdedd938b52e8eaeaa5e",
+      "bytes": 1873,
+      "category": "build-or-documentation",
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/ELECTRUM-TWO-FACTOR.md"
+      ]
     },
     {
       "path": "Tools/NativeRefreshValidation/RefreshActionTests.swift",

@@ -1,0 +1,29 @@
+{
+  "check": "utxo-input-bytes",
+  "source_commit": "251d883f5095a42f2dff0f7ae9c6efed455afdb3",
+  "status": "reproduced",
+  "results": [
+    {
+      "case": "testRecipientAddressRequiresOriginalASCIIBytes",
+      "outcome": "both non-ASCII aliases accepted",
+      "exit_code": 1,
+      "original_log_sha256": "e7790c948a3dd158b2f5519242a981d755eb126b4eb5b061653da6d306b8042b"
+    },
+    {
+      "case": "testSlicedSingleByteMessageReachesReviewedPlan",
+      "outcome": "named test terminated by trap",
+      "exit_code": -5,
+      "original_log_sha256": "20b27e29fdf549b49e1cea294a4e75a6a93bbecf22370aba23b4874e2a6ebd5f"
+    },
+    {
+      "case": "testByteLimitsAndPushdataBoundaries",
+      "outcome": "passed",
+      "exit_code": 0,
+      "original_log_sha256": "63216a86929b1a58903a437fe9e0c3470461526c689bfe11d0b4f92a629ffefe"
+    }
+  ],
+  "probe_sha256": "67173b9764d0b296dfbdebcd3a922b66d2faf5330fa6e84b20675557706b1875",
+  "scope": "Production public planner and recipient decoders. Synthetic, offline, without UI.",
+  "log": "utxo-input-bytes.log",
+  "log_sha256": "ecbf4fc9f97b2e83b3c2bfab6f35ae5ad8a0ab019a55e432b28c8cde755af94e"
+}

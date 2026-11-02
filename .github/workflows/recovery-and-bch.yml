@@ -1,0 +1,89 @@
+name: Recovery and Bitcoin Cash consensus evidence
+on:
+  workflow_call:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bitcoin-cash-node:
+    runs-on: xcode-27
+    timeout-minutes: 40
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Check upstream token prefix vectors and seeded malformed inputs
+        run: python3 scripts/cash-token-prefixes.py .work/source --output evidence/ci/cash-tokens
+      - name: Download the pinned signed arm64 BCHN release and verify its archive
+        run: |
+          mkdir -p .work/bchn
+          cd .work/bchn
+          curl --fail --location --retry 2 https://github.com/bitcoin-cash-node/bitcoin-cash-node/releases/download/v29.2.0/bitcoin-cash-node-29.2.0-aarch64-apple-darwin-codesigned.tar.gz -o node.tgz
+          echo 'e27aaee42256de8df384ecd1a141701c06f0abe7acf3c7351c3ba31da0ddcd96  node.tgz' | shasum -a 256 -c -
+          tar -xzf node.tgz bitcoin-cash-node-29.2.0/bin/bitcoind bitcoin-cash-node-29.2.0/bin/bitcoin-cli
+      - name: Verify the existing signing tests against isolated local BCH chains
+        run: python3 scripts/bchn-regtest.py .work/source --node-bin .work/bchn/bitcoin-cash-node-29.2.0/bin --scratch .work/bchn-build --output evidence/ci/bchn
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: bitcoin-cash-node-evidence, path: evidence/ci, retention-days: 90}
+  electrum-two-factor:
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16
+        with: {go-version: '1.26.5', cache: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Compare East Asian two-factor recovery with upstream TrustedCoin and independent Bitcoin addresses
+        run: |
+          git init -q .work/electrum-reference
+          git -C .work/electrum-reference fetch --quiet --depth=1 https://github.com/spesmilo/electrum.git a8b86f2c725ffad4e52d7fa5912906be914f1999
+          git -C .work/electrum-reference checkout -q --detach FETCH_HEAD
+          mkdir -p .work/two-factor-oracle evidence/ci/two-factor
+          cp .work/source/Tools/AezeedBridge/go.{mod,sum} .work/two-factor-oracle/
+          cp fixtures/electrum-two-factor/electrum-two-factor-address.go .work/two-factor-oracle/main.go
+          (cd .work/two-factor-oracle && GOWORK=off GOTOOLCHAIN=local go build -mod=readonly -o oracle . && go mod verify)
+          sandbox-exec -p '(version 1) (allow default) (deny network*)' python3 fixtures/electrum-two-factor/electrum-two-factor-reference.py .work/electrum-reference .work/two-factor-oracle/oracle .work/source > evidence/ci/two-factor/addresses.json
+          cmp fixtures/electrum-two-factor/expected.json evidence/ci/two-factor/addresses.json
+          git -C .work/source worktree add --detach ../two-factor-before 6ff120198e46111cbe05f4bd76a7e94dd7a001e2
+          python3 scripts/electrum-two-factor.py .work/two-factor-before --before --scratch .work/two-factor-old-build --output evidence/ci/two-factor/before
+          python3 scripts/electrum-two-factor.py .work/source --scratch .work/two-factor-current-build --output evidence/ci/two-factor/after
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: electrum-two-factor-evidence, path: evidence/ci/two-factor, retention-days: 90}
+
+  utxo-input-bytes:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 scripts/checkout.py
+      - name: Reproduce original input handling and verify the PR 53 repair at its own source commit
+        run: |
+          git -C .work/source worktree add --detach ../input-before 251d883f5095a42f2dff0f7ae9c6efed455afdb3
+          git -C .work/source worktree add --detach ../input-after b4be6adba9222d9e8dfdc655ac66f5420155c88c
+          python3 scripts/utxo-input-bytes.py .work/input-before --before --scratch .work/input-old-build --output evidence/ci/input-before
+          python3 scripts/utxo-input-bytes.py .work/input-after --expected-commit b4be6adba9222d9e8dfdc655ac66f5420155c88c --scratch .work/input-new-build --output evidence/ci/input-after
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: paired-utxo-input-evidence, path: evidence/ci, retention-days: 90}
