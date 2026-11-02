@@ -1,0 +1,124 @@
+{
+  "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "tested_commit": "9193c64c6435f60b3ec856e318cdc7d8df5935d8",
+  "merge_commit": "e782d434f64236aa94f58bb9add6feb6e62133f3",
+  "pull_request": "https://github.com/devdasx/oath-wallet/pull/67",
+  "tree_matches": true,
+  "checks": {
+    "exact_revision_replay": {
+      "before": {
+        "crashing_processes": 5,
+        "failing_methods": 12,
+        "passing_methods": 3
+      },
+      "after": {
+        "passing_methods": 20
+      }
+    },
+    "full_sdk_host": {
+      "passed": 297,
+      "skipped": 2,
+      "failed": 0
+    },
+    "diagnostics_host": {
+      "passed": 119,
+      "skipped": 2,
+      "failed": 0
+    },
+    "diagnostics_coverage": {
+      "passed": true,
+      "catch_sites": 720
+    },
+    "public_source_scan": "passed",
+    "generic_ios_release": {
+      "exit_code": 0,
+      "configuration": "Release",
+      "destination": "generic/platform=iOS",
+      "signing_enabled": false
+    },
+    "audit_harness_tests": {
+      "passed": 216
+    }
+  },
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0"
+  },
+  "logs": {
+    "sdk-full.log": {
+      "raw_sha256": "8e8a4c715a524c3137e44f852a23a545551f1b73f508ff90a6d58a37fbaf8ce2",
+      "sanitized_sha256": "602bcf4112d7f729fc766ec9cfa1b7ad45bec25406e8e3ceaff7cd2464970eb7",
+      "gzip_sha256": "faa937403b71da7cf1682e2e67767e60f075c95c8e9bdd39bce32d5671af298e",
+      "file": "sdk-full.log.gz"
+    },
+    "diagnostics.log": {
+      "raw_sha256": "4237f080d146cf66a3c2e0de0cd9842a823539aebcc31faf59e4b72ecaf3e605",
+      "sanitized_sha256": "dc87adc3bcfd937219d27d505834948a6d3f1d2b1df53cddc08f9dfaf008029c",
+      "gzip_sha256": "313963258307d2544cba363fcb832a042b6d30d43c675392d0c2d8f1be8c4dae",
+      "file": "diagnostics.log.gz"
+    },
+    "ios-release.log": {
+      "raw_sha256": "7f8782ffbbdeab5938398538b3c806b55b6de5d7dc231ce5199cd7517df36ab8",
+      "sanitized_sha256": "74338ae4c00f8e40f50ae98701b367a09491fe020728fff54477befe1ca972b1",
+      "gzip_sha256": "723daf3d2d8b1bed060c03209a49b87459a1990733bda9aa4047f6341061e58e",
+      "file": "ios-release.log.gz"
+    },
+    "public-scan.log": {
+      "raw_sha256": "1c64a0fcf0a2ce96c7d489274de6b920bf6d54f4d4212023a3e081462991e683",
+      "sanitized_sha256": "1c64a0fcf0a2ce96c7d489274de6b920bf6d54f4d4212023a3e081462991e683",
+      "gzip_sha256": "ec347278dc330e94a64577cf61b1f9351e25e2eef50b4b038ae0d23fd375e1f6",
+      "file": "public-scan.log.gz"
+    },
+    "coverage.log": {
+      "raw_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "sanitized_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "gzip_sha256": "c47947e55f580d678597e126ba95362fc2223c2dd5d09f6c352a3b4b8aa3a216",
+      "file": "coverage.log.gz"
+    },
+    "audit-tests.log": {
+      "raw_sha256": "7bce41fce69fe4cab5360e767f7df145431f6717fb4f74c56fde82bde2d3d1ac",
+      "sanitized_sha256": "7bce41fce69fe4cab5360e767f7df145431f6717fb4f74c56fde82bde2d3d1ac",
+      "gzip_sha256": "01b72f960b5229675908d075d2ba4fb48beb55e23898c909490a07c5ab66dd3b",
+      "file": "audit-tests.log.gz"
+    }
+  },
+  "simulator_used": false,
+  "physical_device_used": false,
+  "app_store_availability_verified": false,
+  "runtime_scope": "macOS host fixtures and generic iOS compilation",
+  "independent_vectors": {
+    "tool": "ethers",
+    "version": "6.15.0",
+    "node": "26.5.0",
+    "cases": 10,
+    "signature_lengths": [
+      0,
+      1,
+      31,
+      32,
+      33,
+      64,
+      65,
+      66,
+      96,
+      130
+    ]
+  },
+  "github_replay": "Pending after publication; local replay results are recorded separately.",
+  "oracle_fixture_sha256": {
+    "generate.cjs": "814397594ac933b9e1c47746b05f4fa031ff03d4a505f7f7d3987c4fa126635e",
+    "package-lock.json": "375e7fa0e9f248a1fc7691d810ec46e4a479b19d1ce2340ed7cb1f86e9576837",
+    "package.json": "4a1a2e282defb2c217febe0b6147f5b94eed5585a2bfbd07cfb4b40ec04e6077"
+  },
+  "audit_publication_scan": {
+    "sanitized_full_logs": "passed",
+    "ci_bundle": "passed with previously recomputed exact source-checksum exceptions",
+    "checksum_receipt": "../ci-checkpoint5-checksum-review.json",
+    "staged_files": "passed after independently recomputing 13 public checksum matches",
+    "staged_checksum_receipt": "publication-checksums.json"
+  },
+  "workflow_validation": {
+    "actionlint": "passed with only the known custom xcode-27 label diagnostic filtered",
+    "execution_policy": "trusted main push or manual dispatch only; no pull-request code, secrets or deployment jobs"
+  }
+}

@@ -62,3 +62,15 @@ GitHub also completed the Bitcoin address-window and backup-file reproductions. 
 Three scanner matches in the newer CI bundle were public source-file SHA-256 values. Each was recomputed against its source before scanning with exact-value exceptions. [Checksum review](../evidence/5.0.1-build103/ci-checkpoint5-checksum-review.json).
 
 The full review remains open. App Store availability of later fixes and binary equivalence remain unverified.
+
+## Checkpoint 6
+
+The signature and contract-verification review confirmed two dependency defects. Original host cases produce five traps, twelve failing methods and three passing controls. All twenty methods pass on the repair merged in [PR #67](https://github.com/devdasx/oath-wallet/pull/67). Ten independently generated ethers vectors verify variable-length contract signatures. The public signature constructors now throw on malformed input; valid serialization is retained. [Review scope, API compatibility and findings](SIGNATURE-CONTRACT-BOUNDARIES.md).
+
+The complete SDK suite passes 297 tests with two skips. Diagnostics passes 119 tests with two skips. The public-source scan, diagnostic coverage guard, 216 audit helper tests and unsigned generic iOS Release compilation pass. The merged tree exactly matches the tested source. The dedicated GitHub replay is pending publication of this checkpoint. [Validation receipt and logs](../evidence/5.0.1-build103/signature-contracts/validation.json).
+
+The baseline CI snapshot now verifies 60 archive digests and 81 report/log pairs: 79 successes and two retained failures. The separate Arc failure remains recorded. Ninety of 115 required checks have passing hash-linked evidence on the exact build 103 tag. The workflow is still incomplete. Its new archive was scanned with the same independently checked source-checksum exceptions recorded in checkpoint 5. [CI receipt](../evidence/5.0.1-build103/ci-artifacts-checkpoint6.json). The earlier ENS replay has also [passed on GitHub](../evidence/5.0.1-build103/ci-retests/ens-github.json).
+
+Twelve additional direct compiler inputs have source-hash-linked review dispositions. Of 2,357 direct inputs, 1,542 remain outstanding, 105 partially reviewed and 20 require a generated-source trace. The completion gate reports 16,621 open items across its combined ledgers. Counts include different evidence categories and are not a vulnerability count. [Compiler dispositions](../evidence/5.0.1-build103/compiler/dispositions.json).
+
+These later source fixes have not been checked in an App Store binary. The internal verifier's current application reachability, ENS normalization, other message-signing interfaces and dependency provenance remain open. No simulator, physical-device or App Store operation was performed.
