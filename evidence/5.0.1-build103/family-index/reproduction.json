@@ -1,0 +1,32 @@
+{
+  "release": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "overlay_sha256": "73dbed926b5850b8b416851162432948ef02eabbd767304dad9aab696f02927c",
+  "original_log_sha256": "93b988a0c40fa81e360c803dbc8f709e1efe92b469ddc57e391f2b745be14bec",
+  "original_crash_report_sha256": "dbdbf121be1488b3f2199a1113419bf535b136dcb59989f1d47ece246c5bd91a",
+  "outer_exit_code": 1,
+  "signal": "SIGTRAP",
+  "cause": "Swift runtime failure: arithmetic overflow",
+  "production_frame": {
+    "symbol": "OathVaultContents.reconcilePassphraseFamilies(records:)",
+    "sourceFile": "OathVaultEnvelope.swift",
+    "sourceLine": 231
+  },
+  "repaired_commit": "cc8d0073b3aa0b2a1a9792239fa04372b18f022e",
+  "fixed_log_sha256": "71ee03667cf8f12e87327045a470fca518010c560a56dd05d45d765c59c16ea1",
+  "fixed_summary": "Passed 87 multi-wallet envelope checks",
+  "scope": "Synthetic, locally authenticated envelope with a maximal display counter and an unnumbered derived member. No external path to set this metadata was established.",
+  "additional_host_checks": [
+    {
+      "summary": "Passed 87 passphrase persistence, backup and flow checks.",
+      "log_sha256": "842b77cd1c339930f5e3a5428d85ab31bd645834f5e86318c1c8ce62cf9c7cc3"
+    },
+    {
+      "summary": "Passed 90 password-wallet host checks across 4 Electrum formats, reference addresses, persistence, families, deduplication and BIP39 regression.",
+      "log_sha256": "f6195e928c1523e638d95e0f041fecfbc9a5916ec2a6c917c24f7df9eca3aaeb"
+    }
+  ],
+  "merge_commit": "0ead5bc10f8749f3a54c8f6f91f4585fb7ccefc6",
+  "ios_unsigned_exit": 0,
+  "ios_build_log_sha256": "d935e1ce560868d7122820d976aacbdd6677d4f6aeace7bdb84af1b8017113ce",
+  "merge_tree_matches": true
+}

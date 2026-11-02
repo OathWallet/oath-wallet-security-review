@@ -761,5 +761,32 @@
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/import-retry/result.json",
     "merge_commit": "7393e4c2e55994f2034c0372fe71094934480682"
+  },
+  {
+    "id": "OW-2026-047",
+    "title": "Exhausted family display counter can trap during authenticated reopening",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-047.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "cc8d0073b3aa0b2a1a9792239fa04372b18f022e",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/60",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "evidence": "evidence/5.0.1-build103/family-index/reproduction.json",
+    "merge_commit": "0ead5bc10f8749f3a54c8f6f91f4585fb7ccefc6"
+  },
+  {
+    "id": "OW-2026-048",
+    "title": "Wallet database insertion traps at exhausted display or ordering indices",
+    "severity": "low",
+    "status": "repair-under-verification",
+    "document": "OW-2026-048.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "dce615da563de5d0510dbfc86325f61cfe925f62",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/61",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "evidence": "evidence/5.0.1-build103/sql-counters/original.json"
   }
 ]

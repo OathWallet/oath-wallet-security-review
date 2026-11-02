@@ -1,0 +1,19 @@
+diff --git a/Tools/CheckMultiWalletEnvelope.swift b/Tools/CheckMultiWalletEnvelope.swift
+index 4cb8e2c..172d316 100644
+--- a/Tools/CheckMultiWalletEnvelope.swift
++++ b/Tools/CheckMultiWalletEnvelope.swift
+@@ -22,6 +22,14 @@ import OathCloudBackup
+         let pin: [UInt8] = [2, 9, 4, 8, 1, 6]
+         let (legacy, existingKey) = try OathVaultEnvelope.seal(first, digits: pin)
+         let legacyBytes = try JSONEncoder().encode(legacy)
++        var derived = second
++        derived.passphrase = "public synthetic test"
++        var boundary = OathVaultContents(wallets: [first, derived])
++        boundary.lastPassphraseIndex = Int.max
++        let maximum = try OathVaultEnvelope.seal(boundary, rootID: first.id, key: existingKey, salt: legacy.salt, iterations: legacy.iterations)
++        var boundaryReopened = try maximum.openContents(using: existingKey)
++        _ = boundaryReopened.reconcilePassphraseFamilies()
++        check(boundaryReopened.wallets.count == 2, "Exhausted display numbering keeps authenticated wallets intact")
+         let decodedLegacy = try JSONDecoder().decode(OathVaultEnvelope.self, from: legacyBytes)
+         check(decodedLegacy.version == 1 && decodedLegacy.walletIDs == nil, "Legacy format stays readable")
+         var contents = try decodedLegacy.openContents(using: existingKey)

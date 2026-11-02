@@ -1,0 +1,32 @@
+{
+  "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "test_overlay_sha256": "a6ba7b34f62deaefa7fe5e8491198df17140e7aff2be97522a2ac88598d0978a",
+  "cases": [
+    {
+      "case": "testMaximumSortOrderKeepsRelativeOrderWhenAppending",
+      "exit_code": 133,
+      "original_log_sha256": "738d5c827574da2c134cd2d681f4ef9cf764d8974ea31b91aa74a63ce4c22fb9",
+      "crash_report_sha256": "d42dedd844e030190ee28e7c94878621fccffe0cd731a1e859d838cde93eacc2",
+      "signal": "SIGTRAP",
+      "cause": "Swift runtime failure: arithmetic overflow",
+      "production_frame": {
+        "symbol": "closure #2 in OathDatabase.importWalletIfNeeded(_:accounts:)",
+        "sourceFile": "OathDatabase.swift",
+        "sourceLine": 145
+      }
+    },
+    {
+      "case": "testExistingMaximumDisplayIndexAllowsAnUnrelatedWallet",
+      "exit_code": 133,
+      "original_log_sha256": "d6b83288c361a9ae9a47be7210d7b2450eaf5992eaeb5f6bf163ffaa93f05c6d",
+      "crash_report_sha256": "ad8f5532d380b192dd56af69d7379ca687003638a138812856acb5f6fa58f159",
+      "signal": "SIGTRAP",
+      "cause": "Swift runtime failure: arithmetic overflow",
+      "production_frame": {
+        "symbol": "closure #2 in OathDatabase.importWalletIfNeeded(_:accounts:)",
+        "sourceFile": "OathDatabase.swift",
+        "sourceLine": 147
+      }
+    }
+  ]
+}

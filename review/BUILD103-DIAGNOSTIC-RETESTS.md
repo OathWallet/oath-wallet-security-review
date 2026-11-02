@@ -17,3 +17,5 @@ The revised replay controls the in-memory transport. The old consumer takes its 
 These follow-up results leave the two original GitHub jobs recorded as failed.
 
 A separate exploratory run started all provider XCTest cases in one process. Several diagnostics suites could not observe their private sinks after the process-wide diagnostics service was configured by an earlier suite. This run was stopped and is excluded from passing totals. The package's standard audit runner isolates XCTest cases. The seven explicit diagnostic scenarios above also ran separately.
+
+The Arc repair is now merged in [wallet PR 59](https://github.com/devdasx/oath-wallet/pull/59). On that source the standard isolated full provider package passed 1,323 XCTest cases with 201 explicit skips and no failures. It had no additional Swift Testing cases. The unsigned generic iOS Release build succeeded. [Package results](../evidence/5.0.1-build103/ci-retests/arc-repair/OathAnkr.json) · [Tested source and merge receipt](../evidence/5.0.1-build103/ci-retests/arc-repair/merge.json).

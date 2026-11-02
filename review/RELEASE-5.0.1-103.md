@@ -28,4 +28,4 @@ Two GitHub jobs failed in the initial matrix. The [diagnostic failure investigat
 
 At this checkpoint, 51 of the 115 required validations have a passing, hash-linked record on the exact release revision. The snapshot covers 24 GitHub artifact archives and 28 matched report/log pairs, including one failed replay. The Arc matrix failure has an additional receipt because its report references individual test logs. A later passing result retains its own source revision.
 
-A separate synthetic vault fixture exposed a display-number overflow during authenticated reopening. Repair and retesting of that case are ongoing.
+A separate synthetic vault fixture reproduced [OW-2026-047](../findings/OW-2026-047.md) during authenticated reopening. The repaired source passed the encrypted-envelope tests. The Arc repair also passed the complete [isolated provider package](../evidence/5.0.1-build103/ci-retests/arc-repair/OathAnkr.json).
