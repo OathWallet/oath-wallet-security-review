@@ -1,0 +1,101 @@
+[
+  {
+    "stage": "before",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "case": "OathCloudBackupTests.CloudFileRaceTests/testCachedMetadataDoesNotAuthorizeAReplacementSymlink",
+    "exit_code": 1,
+    "failures": [
+      "-[OathCloudBackupTests.CloudFileRaceTests testCachedMetadataDoesNotAuthorizeAReplacementSymlink] : XCTAssertNotEqual failed: (\"Optional(25 bytes)\") is equal to (\"Optional(25 bytes)\") - Stale resource values authorized the unselected file",
+      "-[OathCloudBackupTests.CloudFileRaceTests testCachedMetadataDoesNotAuthorizeAReplacementSymlink] : XCTAssertNil failed: \"25 bytes\""
+    ],
+    "raw_log_sha256": "6f0dd1bc636f52a047567e43a1718a23bd9ee56419dea86541540edbc84c611e",
+    "fixtures": {
+      "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+      "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+      "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+    },
+    "original_writer_sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+    "instrumented_writer_sha256": "b524ab20622f867986e8a6c1481ebd96b17cd8b245ba6f558c78fe2763b5f670"
+  },
+  {
+    "stage": "before",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "case": "OathCloudBackupTests.CloudFilePublishTests/testDanglingLinkAtBackupNameIsPreservedAsAConflict",
+    "exit_code": 1,
+    "failures": [
+      "-[OathCloudBackupTests.CloudFilePublishTests testDanglingLinkAtBackupNameIsPreservedAsAConflict] : XCTAssertThrowsError failed: did not throw an error",
+      "-[OathCloudBackupTests.CloudFilePublishTests testDanglingLinkAtBackupNameIsPreservedAsAConflict] : XCTAssertEqual failed: (\"nil\") is not equal to (\"Optional(\"/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-existing-link-CB2CE779-E331-44C7-9562-97E211682634/missing-target\")\")"
+    ],
+    "raw_log_sha256": "6e88a532fade6b15540702bb55301265f7ea236216e81be07ac4f458656fca93",
+    "fixtures": {
+      "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+      "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+      "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+    },
+    "original_writer_sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+    "instrumented_writer_sha256": "b524ab20622f867986e8a6c1481ebd96b17cd8b245ba6f558c78fe2763b5f670"
+  },
+  {
+    "stage": "before",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "case": "OathCloudBackupTests.BackupFileBoundaryTests/testExclusiveCreatorWinsAtPublicationBoundary",
+    "exit_code": 1,
+    "failures": [
+      "-[OathCloudBackupTests.BackupFileBoundaryTests testExclusiveCreatorWinsAtPublicationBoundary] : XCTAssertThrowsError failed: did not throw an error",
+      "-[OathCloudBackupTests.BackupFileBoundaryTests testExclusiveCreatorWinsAtPublicationBoundary] : XCTAssertEqual failed: (\"3 bytes\") is not equal to (\"2 bytes\") - Earlier complete file must survive"
+    ],
+    "raw_log_sha256": "d70aa740446a4840ffa473842dfa135b7e02eaf4b7789f995fab15230a9125a2",
+    "fixtures": {
+      "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+      "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+      "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+    },
+    "original_writer_sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+    "instrumented_writer_sha256": "b524ab20622f867986e8a6c1481ebd96b17cd8b245ba6f558c78fe2763b5f670"
+  },
+  {
+    "stage": "after",
+    "source_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+    "case": "OathCloudBackupTests.CloudFileRaceTests/testCachedMetadataDoesNotAuthorizeAReplacementSymlink",
+    "exit_code": 0,
+    "failures": [],
+    "raw_log_sha256": "b4b74493ae0fb6261180cacd02b0fe608305d3d1f6e70106f424d882426dbb36",
+    "fixtures": {
+      "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+      "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+      "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+    },
+    "original_writer_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+    "instrumented_writer_sha256": "e50b28238133d2c89f12886845e684245091c51f0f22bad8f941bc28977789b6"
+  },
+  {
+    "stage": "after",
+    "source_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+    "case": "OathCloudBackupTests.CloudFilePublishTests/testDanglingLinkAtBackupNameIsPreservedAsAConflict",
+    "exit_code": 0,
+    "failures": [],
+    "raw_log_sha256": "0a9f30a8610717ee432cc30c4da1a4e8dd53150152b36e7aaf432ea7cb819a40",
+    "fixtures": {
+      "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+      "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+      "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+    },
+    "original_writer_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+    "instrumented_writer_sha256": "e50b28238133d2c89f12886845e684245091c51f0f22bad8f941bc28977789b6"
+  },
+  {
+    "stage": "after",
+    "source_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+    "case": "OathCloudBackupTests.BackupFileBoundaryTests/testExclusiveCreatorWinsAtPublicationBoundary",
+    "exit_code": 0,
+    "failures": [],
+    "raw_log_sha256": "a8d62b0d876ef27aba05cefc7c85e85306992493942ddad96139c7a769d0795f",
+    "fixtures": {
+      "CloudFileRaceTests.swift": "c160da2b570c2b0fb18baf3d1817f54ebdc2c14659f61644c99deb0d2a573619",
+      "CloudFilePublishTests.swift": "13b9365a3a1007a67b24d8231026cd8fdfe285e5e764053354c4971e187bb3b9",
+      "BackupFileBoundaryTests.swift": "f2f68f5baea56e7ad39ec6fc81822cc3d7821ef6581c3599af800cfa819eeba8"
+    },
+    "original_writer_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+    "instrumented_writer_sha256": "e50b28238133d2c89f12886845e684245091c51f0f22bad8f941bc28977789b6"
+  }
+]

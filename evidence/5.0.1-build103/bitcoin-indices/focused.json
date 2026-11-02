@@ -1,0 +1,106 @@
+{
+  "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "fixed_commit": "3e33b299fab0d4c1a6d5e245cc5881f878d243e0",
+  "overlay_sha256": "862fb3e021d7f2d0e78eec358a9b4876d6085afc2decfdbf43492563665aa4d5",
+  "observations": [
+    {
+      "stage": "before",
+      "case": "testChangeRejectsOverflowingStoredChildIndex",
+      "exit_code": 133,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "7bfae39e3ce5fe6a087830ec832028553000b638447ce523f855a86a657cd51b"
+    },
+    {
+      "stage": "before",
+      "case": "testNewHDAddressesLeaveRoomForTheFullDiscoveryGap",
+      "exit_code": 1,
+      "xctest_assertion_failures": 4,
+      "raw_log_sha256": "01bff97a579120351c21eea8ed21bbab18ae4ebb29de03b8c900c6a2cbb263de"
+    },
+    {
+      "stage": "before",
+      "case": "testReceiveRejectsOverflowingStoredChildIndex",
+      "exit_code": 133,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "4f6102fab50bd44d2ffafe56827e58e1e7f06e521ef3cb73eafbda24948cb844"
+    },
+    {
+      "stage": "before",
+      "case": "testStateRejectsUnrepresentableDiscoveryIndex",
+      "exit_code": 133,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "7868735998bd76a879785ad0441b9f3fee097870d8ec2b0d915dda814da75364"
+    },
+    {
+      "stage": "after",
+      "case": "testChangeRejectsOverflowingStoredChildIndex",
+      "exit_code": 0,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "e0c8e6fe36c27d9c7a91177516a15a9745ab253594409685f391d3ce4e124418"
+    },
+    {
+      "stage": "after",
+      "case": "testNewHDAddressesLeaveRoomForTheFullDiscoveryGap",
+      "exit_code": 0,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "858a0e788a723b25044f934ec8d85d4b7b6848ebc756716184195b213c3c336b"
+    },
+    {
+      "stage": "after",
+      "case": "testReceiveRejectsOverflowingStoredChildIndex",
+      "exit_code": 0,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "419c3ed0f4f083f5064e1db1eff6f40aae6f724b74f4614a7101ac9022f83440"
+    },
+    {
+      "stage": "after",
+      "case": "testReservedChangeDoesNotConsumeTheDiscoveryGap",
+      "exit_code": 0,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "c3692ce50511086e4ff870a485e7bf45117c34c2cb40097bf8621da2067ca5b9"
+    },
+    {
+      "stage": "after",
+      "case": "testStateRejectsUnrepresentableDiscoveryIndex",
+      "exit_code": 0,
+      "xctest_assertion_failures": 0,
+      "raw_log_sha256": "8b4b5076cfb4fad70ccd5484c8bc71f7b9405b6992533a328c9a9f8685613c6b"
+    }
+  ],
+  "crash_receipts": [
+    {
+      "signal": "SIGTRAP",
+      "top": "Swift runtime failure: arithmetic overflow",
+      "production_frame": {
+        "symbol": "closure #1 in OathDatabase.bitcoinReceiveAddress(accountID:type:)",
+        "sourceFile": "BitcoinLedger.swift",
+        "sourceLine": 112
+      },
+      "original_sha256": "9702853d1366bb03a47ff6eac9c166b53f491ae8eb97788b16199f1c04373057"
+    },
+    {
+      "signal": "SIGTRAP",
+      "top": "Swift runtime failure: arithmetic overflow",
+      "production_frame": {
+        "symbol": "closure #1 in OathDatabase.bitcoinChangeAddress(accountID:)",
+        "sourceFile": "BitcoinSend.swift",
+        "sourceLine": 25
+      },
+      "original_sha256": "8e85b82361545823c2c37425030ed384008d0ed099cd4dd28c271c1e91a0ec4c"
+    },
+    {
+      "signal": "SIGTRAP",
+      "top": "_assertionFailure(_:_:file:line:flags:)",
+      "production_frame": {
+        "symbol": "closure #1 in OathDatabase.bitcoinState(accountID:)",
+        "sourceFile": "BitcoinLedger.swift",
+        "sourceLine": 82
+      },
+      "original_sha256": "6ea81e092dd07b03b3a34eaa4f14a786bab2974b6fb221e4d50bc59871d4d393"
+    }
+  ],
+  "merge_commit": "8cff8a04c114b3dd7cfa20a2c039f4f30ad8dcc7",
+  "merge_tree_matches": true,
+  "unsigned_generic_release_build_exit": 0,
+  "build_log_sha256": "0be9f5f1777d85e65d95bcf1a6e35371fd0320b7bfd06e17892d33883af5c570"
+}

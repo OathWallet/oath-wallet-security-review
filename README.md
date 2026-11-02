@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Build 103 checkpoint 4.** Public source repairs cover Bitcoin-family address discovery and backup file races. The original failures, fixed cases and build receipts are recorded separately from the submitted build. [Address issuance](findings/OW-2026-049.md) · [Backup reads](findings/OW-2026-051.md) · [Conflicting backup writes](findings/OW-2026-052.md) · [Scalar arithmetic](review/SECP-SCALAR-ARITHMETIC.md).
+
 **Build 103 checkpoint 3.** Synthetic authenticated vault and SQLite records reproduced three integer overflows. Public source repairs passed the focused tests, full database package and unsigned iOS builds. [Vault finding](findings/OW-2026-047.md) · [Database finding](findings/OW-2026-048.md) · [Exact-target CI evidence](evidence/5.0.1-build103/ci-artifacts-checkpoint3.json).
 
 **Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](findings/OW-2026-046.md) · [Application and dependency checks](review/RELEASE-5.0.1-103.md) · [Direct input coverage](evidence/5.0.1-build103/compiler/dispositions.json).

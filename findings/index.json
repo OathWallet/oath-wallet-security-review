@@ -789,5 +789,61 @@
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/sql-counters/original.json",
     "merge_commit": "6250263512a50868ca1f004958acbf2bf7f39b51"
+  },
+  {
+    "id": "OW-2026-049",
+    "title": "A newly issued Bitcoin-family address may leave insufficient discovery space",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-049.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "3e33b299fab0d4c1a6d5e245cc5881f878d243e0",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/62",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "merge_commit": "8cff8a04c114b3dd7cfa20a2c039f4f30ad8dcc7",
+    "evidence": "evidence/5.0.1-build103/bitcoin-indices/focused.json"
+  },
+  {
+    "id": "OW-2026-050",
+    "title": "Out-of-range persisted address indices can trap during receive, change or state reads",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-050.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "3e33b299fab0d4c1a6d5e245cc5881f878d243e0",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/62",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "merge_commit": "8cff8a04c114b3dd7cfa20a2c039f4f30ad8dcc7",
+    "evidence": "evidence/5.0.1-build103/bitcoin-indices/focused.json"
+  },
+  {
+    "id": "OW-2026-051",
+    "title": "A backup read can follow a replaced final symlink",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-051.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "89ba6acdbe25772ba658272b160b0f7841ebfc67",
+    "merge_commit": "3122d242dd4407900d19bbc0bfd95470cee5dd65",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/63",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json"
+  },
+  {
+    "id": "OW-2026-052",
+    "title": "A concurrent creator can lose an existing backup to atomic replacement",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-052.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "dd16c594baf46299d489ce67737aa5fb101c5ae4",
+    "merge_commit": "9c83a297639cca0689f6508aa32aa1ba152341f3",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/64",
+    "present_at_review_target": true,
+    "available_in_app_store_verified": false,
+    "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json"
   }
 ]

@@ -1,0 +1,204 @@
+{
+  "status": "passed",
+  "package_commit": "e70a10e036a55fffea31568f0af92d69b6d449cd",
+  "seed": "oath-scalar-properties-v1",
+  "case_count": 4649,
+  "corpus_sha256": "a3555e5d98d65a69a700203d35e219983d9dbc07ce8c54368aa56f6b3c060b17",
+  "harness_sha256": "1d1fd2d8f0e3d2f9490cdf9df835dcfd3b525227a920b4bc24a9d290d431cb2b",
+  "compiler": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+  "runs": [
+    {
+      "tree": "libsecp256k1",
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-DVERIFY",
+        "-DUSE_FORCE_WIDEMUL_INT64",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined"
+      ],
+      "cases": 4649,
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
+      "compiled_package_inputs": {
+        "Sources/libsecp256k1/include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
+        "Sources/libsecp256k1/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
+        "Sources/libsecp256k1/src/util.h": "a2d678ac4126c742cee549dda6de8b2def62cbd87103ec7e9fd42e04b3881a36",
+        "Sources/libsecp256k1/src/../include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
+        "Sources/libsecp256k1/src/checkmem.h": "450e7928206b994693912ad5c9bbb890ca5250feded149f5025f67ad30d6d711",
+        "Sources/libsecp256k1/src/int128.h": "89ac5d91d64f857038d063dd70eec4b29b4f32aa218c790fe049137c347186cb",
+        "Sources/libsecp256k1/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+        "Sources/libsecp256k1/src/scalar.h": "cdc9a0053321cc541c81bb02f5c4dbba1b9489947908b3187a7c3462c9e806bb",
+        "Sources/libsecp256k1/src/scalar_8x32.h": "0614cea113aea88a47ef3b2ba8167722e850d7b2a696a4f16b03ec9a320ef1d6",
+        "Sources/libsecp256k1/src/scalar_8x32_impl.h": "7dd402b15ae1c9b884f20a86c952db4aabb7c13fdba0a4d9addc7e752bc5a982",
+        "Sources/libsecp256k1/src/modinv32_impl.h": "befe02af7099a871677c7b05a81302dff5a4dc1d59f19b20bcb58cc28e096112",
+        "Sources/libsecp256k1/src/modinv32.h": "774887ccd462b145434d1d6b9ae9455aa3618e791544a2b61267e18931d5010d"
+      }
+    },
+    {
+      "tree": "libsecp256k1",
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-DVERIFY",
+        "-DUSE_FORCE_WIDEMUL_INT128",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined"
+      ],
+      "cases": 4649,
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
+      "compiled_package_inputs": {
+        "Sources/libsecp256k1/include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
+        "Sources/libsecp256k1/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
+        "Sources/libsecp256k1/src/util.h": "a2d678ac4126c742cee549dda6de8b2def62cbd87103ec7e9fd42e04b3881a36",
+        "Sources/libsecp256k1/src/../include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
+        "Sources/libsecp256k1/src/checkmem.h": "450e7928206b994693912ad5c9bbb890ca5250feded149f5025f67ad30d6d711",
+        "Sources/libsecp256k1/src/int128.h": "89ac5d91d64f857038d063dd70eec4b29b4f32aa218c790fe049137c347186cb",
+        "Sources/libsecp256k1/src/int128_native.h": "b4c52c7ff091083f5eca9879b98641c7a38356a3c5321cbcc22ae1573e7711e1",
+        "Sources/libsecp256k1/src/int128_native_impl.h": "ecaafefadbde3db034d4f44678096833d2d113fd21b4ff7044095b6153ec03a8",
+        "Sources/libsecp256k1/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+        "Sources/libsecp256k1/src/scalar.h": "cdc9a0053321cc541c81bb02f5c4dbba1b9489947908b3187a7c3462c9e806bb",
+        "Sources/libsecp256k1/src/scalar_4x64.h": "42aed583b28bda7982c54a6f63e50c0ae5f9c27d5f66d92ec6bf6c90e765735a",
+        "Sources/libsecp256k1/src/scalar_4x64_impl.h": "992b203310337ad913afbdc29691f184462aba37d121c13a76581e9ff2c891b6",
+        "Sources/libsecp256k1/src/modinv64_impl.h": "1254dc7ea941fc4d4ef0a85eed80db58d9e2647a8b8d19238d6afc048d63764d",
+        "Sources/libsecp256k1/src/modinv64.h": "b71cf177d768beac28fcb4f0ef545aafaad16ad0f275c70ee4c60b5f7549ac41"
+      }
+    },
+    {
+      "tree": "libsecp256k1",
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-DVERIFY",
+        "-DUSE_FORCE_WIDEMUL_INT128_STRUCT",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined"
+      ],
+      "cases": 4649,
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
+      "compiled_package_inputs": {
+        "Sources/libsecp256k1/include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
+        "Sources/libsecp256k1/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
+        "Sources/libsecp256k1/src/util.h": "a2d678ac4126c742cee549dda6de8b2def62cbd87103ec7e9fd42e04b3881a36",
+        "Sources/libsecp256k1/src/../include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
+        "Sources/libsecp256k1/src/checkmem.h": "450e7928206b994693912ad5c9bbb890ca5250feded149f5025f67ad30d6d711",
+        "Sources/libsecp256k1/src/int128.h": "89ac5d91d64f857038d063dd70eec4b29b4f32aa218c790fe049137c347186cb",
+        "Sources/libsecp256k1/src/int128_struct.h": "0733b3a65719a1e9a8fb3564c71a38f2f31ca3522f40087d536dba90361b66e7",
+        "Sources/libsecp256k1/src/int128_struct_impl.h": "0b4e2200327f5357078ba43b0e0514c58c2b1eb217b87ebc14d95efb913b5be2",
+        "Sources/libsecp256k1/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+        "Sources/libsecp256k1/src/scalar.h": "cdc9a0053321cc541c81bb02f5c4dbba1b9489947908b3187a7c3462c9e806bb",
+        "Sources/libsecp256k1/src/scalar_4x64.h": "42aed583b28bda7982c54a6f63e50c0ae5f9c27d5f66d92ec6bf6c90e765735a",
+        "Sources/libsecp256k1/src/scalar_4x64_impl.h": "992b203310337ad913afbdc29691f184462aba37d121c13a76581e9ff2c891b6",
+        "Sources/libsecp256k1/src/modinv64_impl.h": "1254dc7ea941fc4d4ef0a85eed80db58d9e2647a8b8d19238d6afc048d63764d",
+        "Sources/libsecp256k1/src/modinv64.h": "b71cf177d768beac28fcb4f0ef545aafaad16ad0f275c70ee4c60b5f7549ac41"
+      }
+    },
+    {
+      "tree": "libsecp256k1_zkp",
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-DVERIFY",
+        "-DUSE_FORCE_WIDEMUL_INT64",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-DOATH_TEST_ZKP"
+      ],
+      "cases": 4649,
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
+      "compiled_package_inputs": {
+        "Sources/libsecp256k1_zkp/include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
+        "Sources/libsecp256k1_zkp/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
+        "Sources/libsecp256k1_zkp/src/util.h": "b98e457c2ba8ed3e9dbafb170e02e041aae36f6765fe32a25581d6ff9ff5994f",
+        "Sources/libsecp256k1_zkp/src/../include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
+        "Sources/libsecp256k1_zkp/src/checkmem.h": "f367089bffa53b8998047de2f718f75d627dad549a1e5dc2a9ce9ab9f581ffe8",
+        "Sources/libsecp256k1_zkp/src/int128.h": "89ac5d91d64f857038d063dd70eec4b29b4f32aa218c790fe049137c347186cb",
+        "Sources/libsecp256k1_zkp/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+        "Sources/libsecp256k1_zkp/src/scalar.h": "87fea4d072b4db4a093527e7df75b654e66cc89202c07a7f7d20d44c12cb0f65",
+        "Sources/libsecp256k1_zkp/src/scalar_8x32.h": "0614cea113aea88a47ef3b2ba8167722e850d7b2a696a4f16b03ec9a320ef1d6",
+        "Sources/libsecp256k1_zkp/src/scalar_8x32_impl.h": "2fe7d67f3218e9fd60fc959a302571e7fbed0e302ed53ec8a3d797f629f6650d",
+        "Sources/libsecp256k1_zkp/src/modinv32_impl.h": "befe02af7099a871677c7b05a81302dff5a4dc1d59f19b20bcb58cc28e096112",
+        "Sources/libsecp256k1_zkp/src/modinv32.h": "774887ccd462b145434d1d6b9ae9455aa3618e791544a2b61267e18931d5010d"
+      }
+    },
+    {
+      "tree": "libsecp256k1_zkp",
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-DVERIFY",
+        "-DUSE_FORCE_WIDEMUL_INT128",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-DOATH_TEST_ZKP"
+      ],
+      "cases": 4649,
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
+      "compiled_package_inputs": {
+        "Sources/libsecp256k1_zkp/include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
+        "Sources/libsecp256k1_zkp/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
+        "Sources/libsecp256k1_zkp/src/util.h": "b98e457c2ba8ed3e9dbafb170e02e041aae36f6765fe32a25581d6ff9ff5994f",
+        "Sources/libsecp256k1_zkp/src/../include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
+        "Sources/libsecp256k1_zkp/src/checkmem.h": "f367089bffa53b8998047de2f718f75d627dad549a1e5dc2a9ce9ab9f581ffe8",
+        "Sources/libsecp256k1_zkp/src/int128.h": "89ac5d91d64f857038d063dd70eec4b29b4f32aa218c790fe049137c347186cb",
+        "Sources/libsecp256k1_zkp/src/int128_native.h": "b4c52c7ff091083f5eca9879b98641c7a38356a3c5321cbcc22ae1573e7711e1",
+        "Sources/libsecp256k1_zkp/src/int128_native_impl.h": "ecaafefadbde3db034d4f44678096833d2d113fd21b4ff7044095b6153ec03a8",
+        "Sources/libsecp256k1_zkp/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+        "Sources/libsecp256k1_zkp/src/scalar.h": "87fea4d072b4db4a093527e7df75b654e66cc89202c07a7f7d20d44c12cb0f65",
+        "Sources/libsecp256k1_zkp/src/scalar_4x64.h": "42aed583b28bda7982c54a6f63e50c0ae5f9c27d5f66d92ec6bf6c90e765735a",
+        "Sources/libsecp256k1_zkp/src/scalar_4x64_impl.h": "61d0fb4bf51c36819bb778479e7735605d64f8a23073c53afbc3c1eb14f4080d",
+        "Sources/libsecp256k1_zkp/src/modinv64_impl.h": "1254dc7ea941fc4d4ef0a85eed80db58d9e2647a8b8d19238d6afc048d63764d",
+        "Sources/libsecp256k1_zkp/src/modinv64.h": "b71cf177d768beac28fcb4f0ef545aafaad16ad0f275c70ee4c60b5f7549ac41"
+      }
+    },
+    {
+      "tree": "libsecp256k1_zkp",
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-DVERIFY",
+        "-DUSE_FORCE_WIDEMUL_INT128_STRUCT",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-DOATH_TEST_ZKP"
+      ],
+      "cases": 4649,
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
+      "compiled_package_inputs": {
+        "Sources/libsecp256k1_zkp/include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
+        "Sources/libsecp256k1_zkp/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
+        "Sources/libsecp256k1_zkp/src/util.h": "b98e457c2ba8ed3e9dbafb170e02e041aae36f6765fe32a25581d6ff9ff5994f",
+        "Sources/libsecp256k1_zkp/src/../include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
+        "Sources/libsecp256k1_zkp/src/checkmem.h": "f367089bffa53b8998047de2f718f75d627dad549a1e5dc2a9ce9ab9f581ffe8",
+        "Sources/libsecp256k1_zkp/src/int128.h": "89ac5d91d64f857038d063dd70eec4b29b4f32aa218c790fe049137c347186cb",
+        "Sources/libsecp256k1_zkp/src/int128_struct.h": "0733b3a65719a1e9a8fb3564c71a38f2f31ca3522f40087d536dba90361b66e7",
+        "Sources/libsecp256k1_zkp/src/int128_struct_impl.h": "0b4e2200327f5357078ba43b0e0514c58c2b1eb217b87ebc14d95efb913b5be2",
+        "Sources/libsecp256k1_zkp/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+        "Sources/libsecp256k1_zkp/src/scalar.h": "87fea4d072b4db4a093527e7df75b654e66cc89202c07a7f7d20d44c12cb0f65",
+        "Sources/libsecp256k1_zkp/src/scalar_4x64.h": "42aed583b28bda7982c54a6f63e50c0ae5f9c27d5f66d92ec6bf6c90e765735a",
+        "Sources/libsecp256k1_zkp/src/scalar_4x64_impl.h": "61d0fb4bf51c36819bb778479e7735605d64f8a23073c53afbc3c1eb14f4080d",
+        "Sources/libsecp256k1_zkp/src/modinv64_impl.h": "1254dc7ea941fc4d4ef0a85eed80db58d9e2647a8b8d19238d6afc048d63764d",
+        "Sources/libsecp256k1_zkp/src/modinv64.h": "b71cf177d768beac28fcb4f0ef545aafaad16ad0f275c70ee4c60b5f7549ac41"
+      }
+    }
+  ],
+  "scalar_header_hashes": {
+    "Sources/libsecp256k1/src/scalar.h": "cdc9a0053321cc541c81bb02f5c4dbba1b9489947908b3187a7c3462c9e806bb",
+    "Sources/libsecp256k1/src/scalar_4x64.h": "42aed583b28bda7982c54a6f63e50c0ae5f9c27d5f66d92ec6bf6c90e765735a",
+    "Sources/libsecp256k1/src/scalar_4x64_impl.h": "992b203310337ad913afbdc29691f184462aba37d121c13a76581e9ff2c891b6",
+    "Sources/libsecp256k1/src/scalar_8x32.h": "0614cea113aea88a47ef3b2ba8167722e850d7b2a696a4f16b03ec9a320ef1d6",
+    "Sources/libsecp256k1/src/scalar_8x32_impl.h": "7dd402b15ae1c9b884f20a86c952db4aabb7c13fdba0a4d9addc7e752bc5a982",
+    "Sources/libsecp256k1/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+    "Sources/libsecp256k1/src/scalar_low.h": "3cab20db10224ff85ee7c6d975d2968c1370ed8e96ea26b94650f6e2bac31ac4",
+    "Sources/libsecp256k1/src/scalar_low_impl.h": "b44c726ac42516345dff05b1d964807609e7c53112aefe584aa0a1d060fb8b9f",
+    "Sources/libsecp256k1_zkp/src/scalar.h": "87fea4d072b4db4a093527e7df75b654e66cc89202c07a7f7d20d44c12cb0f65",
+    "Sources/libsecp256k1_zkp/src/scalar_4x64.h": "42aed583b28bda7982c54a6f63e50c0ae5f9c27d5f66d92ec6bf6c90e765735a",
+    "Sources/libsecp256k1_zkp/src/scalar_4x64_impl.h": "61d0fb4bf51c36819bb778479e7735605d64f8a23073c53afbc3c1eb14f4080d",
+    "Sources/libsecp256k1_zkp/src/scalar_8x32.h": "0614cea113aea88a47ef3b2ba8167722e850d7b2a696a4f16b03ec9a320ef1d6",
+    "Sources/libsecp256k1_zkp/src/scalar_8x32_impl.h": "2fe7d67f3218e9fd60fc959a302571e7fbed0e302ed53ec8a3d797f629f6650d",
+    "Sources/libsecp256k1_zkp/src/scalar_impl.h": "6ba654bd4edc0349d1d7f1dfc25ba2d73dd9f2ecdca8078e384bf7b7837d663f",
+    "Sources/libsecp256k1_zkp/src/scalar_low.h": "3cab20db10224ff85ee7c6d975d2968c1370ed8e96ea26b94650f6e2bac31ac4",
+    "Sources/libsecp256k1_zkp/src/scalar_low_impl.h": "c7c73a26dae95abd861b7927e5c0a1add5dd7efb20de69b3e62ff24987170206"
+  },
+  "duration_seconds": 7.68,
+  "scope": "Deterministic host arithmetic and decomposition, with VERIFY and undefined-behavior checks. No constant-time or device-code equivalence claim."
+}

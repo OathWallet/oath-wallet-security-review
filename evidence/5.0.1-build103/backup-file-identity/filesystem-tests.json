@@ -1,0 +1,97 @@
+[
+  {
+    "label": "publish-after-1",
+    "raw_log_sha256": "385049e9ae01d90ad1f5652caf3a2f3a7a9676a73a594ec189a8028cec5665d6",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "publish-after-2",
+    "raw_log_sha256": "48dbbbf6444e68cac24a298a020f9badc2ccd99d6c6de763946cf074521dd751",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "publish-after-3",
+    "raw_log_sha256": "bfd96e56efd1766da5d19587e0156d8c9528bb55ed494d4daf444193376f1c2b",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "publish-after-4",
+    "raw_log_sha256": "ac17633a489c4c749026b2c9c23286e995c58b8a392f2848a7b7b306efc5dd1b",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "publish-after-5",
+    "raw_log_sha256": "cf42f344324fd8eb69728af8c4b57366e135044bb5cae0101d9f40c752f3b35e",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "publish-before",
+    "raw_log_sha256": "d25c852cda6bd722519843533f234ff787e1400ad7d603ca33cc2064fcfed908",
+    "assertion_failures": [
+      "-[OathCloudBackupTests.CloudFilePublishTests testUncoordinatedExclusiveFileCreationIsNeverOverwritten] : XCTAssertFalse failed - Both different writers reported success",
+      "-[OathCloudBackupTests.CloudFilePublishTests testUncoordinatedExclusiveFileCreationIsNeverOverwritten] : XCTAssertEqual failed: (\"1048576 bytes\") is not equal to (\"26 bytes\") - The first file was overwritten"
+    ],
+    "passed": false
+  },
+  {
+    "label": "testCachedMetadataDoesNotAuthorizeAReplacementSymlink-after",
+    "raw_log_sha256": "f93346c587ea58a690bb246e67a2c263073015c8612b60db8c84ac9f1b5e4802",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "testCachedMetadataDoesNotAuthorizeAReplacementSymlink-before",
+    "raw_log_sha256": "30c13c5da9f56504ff6c606a7fbca2209c114b7415a9592aaaef69083d996d75",
+    "assertion_failures": [
+      "-[OathCloudBackupTests.CloudFileRaceTests testCachedMetadataDoesNotAuthorizeAReplacementSymlink] : XCTAssertNotEqual failed: (\"Optional(25 bytes)\") is equal to (\"Optional(25 bytes)\") - Stale resource values authorized the unselected file",
+      "-[OathCloudBackupTests.CloudFileRaceTests testCachedMetadataDoesNotAuthorizeAReplacementSymlink] : XCTAssertNil failed: \"25 bytes\""
+    ],
+    "passed": false
+  },
+  {
+    "label": "testCoordinatedRestoreReadDoesNotFollowARacingSymlink-after",
+    "raw_log_sha256": "aeaccfa4f1928b89940342e49e43be4b1948b8a18e98a3c17f658e9583a26eaf",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "testCoordinatedRestoreReadDoesNotFollowARacingSymlink-before",
+    "raw_log_sha256": "4ce868c036d95efab4c8c30eb4accff2d444c306dbf3cdf093a81486a0507320",
+    "assertion_failures": [
+      "-[OathCloudBackupTests.CloudFileRaceTests testCoordinatedRestoreReadDoesNotFollowARacingSymlink] : XCTAssertFalse failed - The coordinated backup reader returned data from the temporary sibling outside the backup directory"
+    ],
+    "passed": false
+  },
+  {
+    "label": "testDanglingLinkAtBackupNameIsPreservedAsAConflict-before",
+    "raw_log_sha256": "1977f6bfd7cfbdd41ed5c9cac84e7a1a7953a6c459bbeb8e5d99598d155e6e41",
+    "assertion_failures": [
+      "-[OathCloudBackupTests.CloudFilePublishTests testDanglingLinkAtBackupNameIsPreservedAsAConflict] : XCTAssertThrowsError failed: did not throw an error",
+      "-[OathCloudBackupTests.CloudFilePublishTests testDanglingLinkAtBackupNameIsPreservedAsAConflict] : XCTAssertEqual failed: (\"nil\") is not equal to (\"Optional(\"/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-existing-link-58D24803-24C3-4C1C-8006-EDD016511AEA/missing-target\")\")"
+    ],
+    "passed": false
+  },
+  {
+    "label": "testDanglingLinkAtBackupNameIsPreservedAsAConflict-write-fix",
+    "raw_log_sha256": "1254c9baf4884ca03e569fa838cbe85d5838b1babda998f8f220d49d04ae755f",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "testUncoordinatedExclusiveFileCreationIsNeverOverwritten-before",
+    "raw_log_sha256": "a19abc35f7135ab1bf88f03d69fea0794e3fb3134e0f82fcd9451866ba98c743",
+    "assertion_failures": [],
+    "passed": true
+  },
+  {
+    "label": "testUncoordinatedExclusiveFileCreationIsNeverOverwritten-write-fix",
+    "raw_log_sha256": "fb44f781eb71b622fb6948f663e1e10f4689ca5e65cd76ce417ec0c17741eb50",
+    "assertion_failures": [],
+    "passed": true
+  }
+]

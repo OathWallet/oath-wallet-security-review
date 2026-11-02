@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 
+SCALARS = json.loads((Path(__file__).resolve().parents[1]/'review/secp-scalar-dispositions.json').read_bytes())
 LOCK = 'OathAtmosphere.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved'
 REVIEWED = {
     'bdk-swift/.github/workflows/publish-spm.yaml': 'ab4b0c02e522b4016ab527dfd8cda246c40f55c5f1d7cf51478b7774a551a50b',
@@ -76,6 +77,8 @@ def files(checkout, pin):
                 row.update(status='reviewed', evidence=['review/RESOLVED-PACKAGES.md'])
             if name in PARTIAL_XDR and row.get('sha256') == PARTIAL_XDR[name]:
                 row.update(status='partially-reviewed', evidence=['review/STELLAR-XDR-BOUNDARIES.md'])
+            if name in SCALARS and SCALARS[name]['sha256'] == row.get('sha256'):
+                row.update(status=SCALARS[name]['status'], evidence=['review/SECP-SCALAR-ARITHMETIC.md'])
             if path.decode() in generated and generated[path.decode()] == row.get('sha256'):
                 row['semantic_review_status'] = row['status']
                 row['status'] = 'generated-verified'
@@ -108,10 +111,10 @@ def main():
         rows = files(checkout, revision)
         packages.append(dict(checkout=name, repository=url, commit=revision, entries=len(rows)))
         entries.extend(rows)
-    if {r['path'] for r in entries if r['status'] == 'reviewed'} != set(REVIEWED):
+    if {r['path'] for r in entries if r['status'] == 'reviewed'} != set(REVIEWED) | {k for k,v in SCALARS.items() if v['status']=='reviewed'}:
         raise ValueError('Reviewed source missing')
-    if {r['path'] for r in entries if r.get('semantic_review_status',r['status']) == 'partially-reviewed'} != set(PARTIAL_XDR):
-        raise ValueError('Partially reviewed XDR source missing or changed')
+    if {r['path'] for r in entries if r.get('semantic_review_status',r['status']) == 'partially-reviewed'} != set(PARTIAL_XDR) | {k for k,v in SCALARS.items() if v['status']=='partially-reviewed'}:
+        raise ValueError('Partially reviewed source missing or changed')
     output = dict(lockfile=LOCK, lock_sha256=hashlib.sha256((a.source/LOCK).read_bytes()).hexdigest(),
                   scope='All tracked entries at the other Xcode package pins. Gitlinks are unresolved subtrees. Development files are included. No automatic reachability or review disposition.', packages=packages, files=entries)
     a.output.parent.mkdir(parents=True, exist_ok=True)

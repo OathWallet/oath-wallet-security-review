@@ -1,0 +1,34 @@
+{
+  "job": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820/job/125574710450",
+  "archive_id": 13187645049,
+  "archive_sha256": "faa1286673a3b4208fd4163409e9cc8d36d7f73dde5c5ece3a6fd92ce25f2b0b",
+  "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "candidate_commit": "3e33b299fab0d4c1a6d5e245cc5881f878d243e0",
+  "source_finding": "OW-2026-045",
+  "cases": [
+    {
+      "selector": "OathDatabaseTests.BalanceHistoryTests/testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence",
+      "baseline_result": "failed",
+      "baseline_log_sha256": "67fcaf09da8523cd2771e9e787b03becfc231f8ce091d2466f4c508413b44c0f",
+      "baseline_error": "-[OathDatabaseTests.BalanceHistoryTests testUpgradeDuringPendingResetDoesNotTripTheSnapshotWriteFence] : failed: caught error: \"SQLite error 19: Wallet reset in progress - while executing `UPDATE wallets SET needsBackupOfferReview = 1 WHERE pendingBackupOffer IS NULL`\"",
+      "candidate_result": "passed",
+      "candidate_log_sha256": "80bea6cce71755f2f261c0cef5852c7bad2ed49224b6e40549bbaaffa1fb3502"
+    },
+    {
+      "selector": "OathDatabaseTests.HomeReadIndexTests/testMigrationBackfillsExistingRows",
+      "baseline_result": "failed",
+      "baseline_log_sha256": "9aa723f987f9553d058e6a0644b780276d3efc028ed807e2ce5a79457587e121",
+      "baseline_error": "-[OathDatabaseTests.HomeReadIndexTests testMigrationBackfillsExistingRows] : failed: caught error: \"SQLite error 19: Wallet reset in progress - while executing `UPDATE wallets SET needsBackupOfferReview = 1 WHERE pendingBackupOffer IS NULL`\"",
+      "candidate_result": "passed",
+      "candidate_log_sha256": "3260b7283fdac8a42cb4694c4e0ec51f4f916e17c26fd380e672e7f55ff8ed28"
+    },
+    {
+      "selector": "OathDatabaseTests.WalletNamingTests/testUpgradeDoesNotBlockAnInterruptedWalletReset",
+      "baseline_result": "failed",
+      "baseline_log_sha256": "86775a9a634a2edc931e9ec5cfadef6d5a342be15a93985e70e9c56696182627",
+      "baseline_error": "-[OathDatabaseTests.WalletNamingTests testUpgradeDoesNotBlockAnInterruptedWalletReset] : failed: caught error: \"SQLite error 19: Wallet reset in progress - while executing `UPDATE wallets SET needsBackupOfferReview = 1 WHERE pendingBackupOffer IS NULL`\"",
+      "candidate_result": "passed",
+      "candidate_log_sha256": "0c79d9f73d719a0db51b2b2663cf55ef48a3df2ed4f34105e0c37bf87688ea18"
+    }
+  ]
+}

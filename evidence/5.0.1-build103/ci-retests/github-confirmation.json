@@ -1,0 +1,189 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41538961747",
+  "artifact_id": 13186729737,
+  "archive_sha256": "8f5bfd5affd07fed4d634289fe69e2b96f91b9b12d3f449ebbba81d676b23fd2",
+  "reports": [
+    {
+      "report": "import-retry/result.json",
+      "report_sha256": "980096504940c1b4303d68ba007e9220317f70aa957148cf74ac80b9302f5fd5",
+      "verified_case_logs": 2,
+      "source_commit": null,
+      "cases": [
+        {
+          "stage": "before",
+          "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+          "status": "reproduced",
+          "exit_code": 1,
+          "shared_case_sha256": "c3a7fb1b5777f860fcc9d0eb85a376f5f867f2a07bd705c4ba8008964a40f811",
+          "log_sha256": "19ca4b67f41e3d6e93b23aa009dc830d22a54ddecfeef81224b97a221d4f1aa9"
+        },
+        {
+          "stage": "after",
+          "source_commit": "e1857158db600fc171cdcca7cedd37da2722f8ad",
+          "status": "passed",
+          "exit_code": 0,
+          "shared_case_sha256": "c3a7fb1b5777f860fcc9d0eb85a376f5f867f2a07bd705c4ba8008964a40f811",
+          "log_sha256": "164b2e8ec1afd4368dfa3071e5aea9e6eafbd4b7da7fecb9e796239eb76d5d42"
+        }
+      ]
+    },
+    {
+      "report": "delivery/multisig-diagnostic-delivery.json",
+      "report_sha256": "26e4738172e455c541afa09f7bb1dffa191f0785f689d1d8687a59f6ceab027a",
+      "verified_case_logs": 8,
+      "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "cases": [
+        {
+          "phase": "before",
+          "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+          "suite": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 1,
+          "expected_outcome_observed": true,
+          "log_sha256": "adc9e82333bc31bf281db3d27e3366225c837db016145ca4034ba94cc5ac86ad"
+        },
+        {
+          "phase": "before",
+          "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+          "suite": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 1,
+          "expected_outcome_observed": true,
+          "log_sha256": "950a80c9cc5ba180625a30a96a28f625c3fd4aa846b806527ed9be84739ce8b1"
+        },
+        {
+          "phase": "before",
+          "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+          "suite": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 1,
+          "expected_outcome_observed": true,
+          "log_sha256": "6c735048e1d6c9c68094cc8a50a3cf132cddbfcbd6859100f4ad29ecde3b06ee"
+        },
+        {
+          "phase": "before",
+          "source_commit": "5fce630e522fa25dae81658bdeaa6737897dc1b2",
+          "suite": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 1,
+          "expected_outcome_observed": true,
+          "log_sha256": "f7639cc86e2b544dbf03c067ea0e8052bd5f7e9ffacfaa7436ef857451ed69de"
+        },
+        {
+          "phase": "after",
+          "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+          "suite": "OathBitcoinTests.BitcoinMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 0,
+          "expected_outcome_observed": true,
+          "log_sha256": "f39259f1de4e17a63eaf04f60d6e07c7a4cfe7660d0e87b39324eebb208f4296"
+        },
+        {
+          "phase": "after",
+          "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+          "suite": "OathBitcoinTests.BitcoinCashMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 0,
+          "expected_outcome_observed": true,
+          "log_sha256": "26157ef251df2ebc545c08ab269987d89048d8b368369d3cf7f35b86405de4cf"
+        },
+        {
+          "phase": "after",
+          "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+          "suite": "OathBitcoinTests.DogecoinMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 0,
+          "expected_outcome_observed": true,
+          "log_sha256": "7c0d73f9db1a99481c9880204014d9f94f808846ca5c2bcadb563d7401797743"
+        },
+        {
+          "phase": "after",
+          "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+          "suite": "OathBitcoinTests.LitecoinMultisigDiagnosticsTests",
+          "case": "testSigningFailureReportsOnlySafeCodeAndOperationContext",
+          "exit_code": 0,
+          "expected_outcome_observed": true,
+          "log_sha256": "862ca16a3b1cce7555e2afa9978a7abda0e3fd4499b74bbf7e6d0d5159685e86"
+        }
+      ]
+    },
+    {
+      "report": "arc/diagnostic-modes.json",
+      "report_sha256": "2ded45a7a9cd39156933ae7bf612652ef80d304895eb40619f656a0e37737cbf",
+      "verified_case_logs": 14,
+      "source_commit": "9051e2043271a06a9d5f618f45a1634d1b49f57c",
+      "cases": [
+        {
+          "exit_code": 0,
+          "log_sha256": "af065b26e463137b194012ad4271c3b2a54bb2b614ad242fc4b3c57a8b5320ce",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "ee37ceaaa3807c4c6c8b253a81517f1a93e51a2d77f77ab27de754895377cfb9",
+          "status": "skipped"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "c7562931e5617015e3a9db3255ee536f8e124fadf7e380c678f08fcc09c129b6",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "f01789019b2dd7d0c5d5a3b8f502a215672ef969b2aa3ac1b51231379d24b924",
+          "status": "skipped"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "fcfa9ba5fc995e527a9f105edc4155d5677f6cd1725d19518fcbaa59c30047e5",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "bbc7bd9df048d4d4b766e4544c622bafbf733467b8796fd71fac5fe85956f0e9",
+          "status": "skipped"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "30ae5baa20727cf20eec0319339e44d1d47abcac0775a333e0b5a76207df134f",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "cdc461d915c4894c379ac8bcfba4514cd0f9159196fdf8b6c025ebb51d3a66a3",
+          "status": "skipped"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "d08f5518c328496fe77909f084592ba27be86e39b15ea18284d417b3ebf85ad6",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "08455232b84ee19b50c52622275cfd26823d385b33174211694ff8fb23a8a3f8",
+          "status": "skipped"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "728bbc4d28aa8e37e33321bffe53e638a797c4c7b59eb90b952dad67df9e95ed",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "6c33d60c59801fff4dafe4420a6a82d139c3c53a9ea92557a3ed3957523324f9",
+          "status": "skipped"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "a1f9940d075956e9420924e5130b45b3420bd1259ba4dfd042e94b34a660aedf",
+          "status": "passed"
+        },
+        {
+          "exit_code": 0,
+          "log_sha256": "8ac5be0c7ae51753f29f386e60b28932c203c1a8b11d9f0dc277af5fd8e6e2a4",
+          "status": "skipped"
+        }
+      ]
+    }
+  ]
+}

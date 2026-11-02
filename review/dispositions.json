@@ -8158,14 +8158,16 @@
     "sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
     "status": "partially-reviewed",
     "evidence": [
-      "review/BUILD103-CUSTODY-RECHECK.md"
+      "review/BUILD103-CUSTODY-RECHECK.md",
+      "findings/OW-2026-052.md"
     ]
   },
   "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudRestore.swift": {
     "sha256": "41f0e36a3f03d71d6ded9c84a8ea8ed45eed0487418702b27d5105717719c244",
     "status": "partially-reviewed",
     "evidence": [
-      "review/BUILD103-CUSTODY-RECHECK.md"
+      "review/BUILD103-CUSTODY-RECHECK.md",
+      "findings/OW-2026-051.md"
     ]
   },
   "OathApp/Info.plist": {
@@ -8202,6 +8204,29 @@
     "sha256": "1deabc9de0402493284621707420744b9018ac4d4afc4b6fb3aba0dec7b7daaa",
     "evidence": [
       "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
+    ]
+  },
+  "Packages/OathDatabase/Sources/OathDatabase/BitcoinLedger.swift": {
+    "status": "partially-reviewed",
+    "sha256": "69ff4bde5bd9f5d62fade1e294b158398405bce59312b7b1d7b1f3cac07cda80",
+    "evidence": [
+      "findings/OW-2026-049.md",
+      "findings/OW-2026-050.md"
+    ]
+  },
+  "Packages/OathDatabase/Sources/OathDatabase/BitcoinSend.swift": {
+    "status": "partially-reviewed",
+    "sha256": "58afbc34b6f526cd5602c9acccf65f5a7b4c457f6a53cf3a8eb945b64eb5a38d",
+    "evidence": [
+      "findings/OW-2026-049.md",
+      "findings/OW-2026-050.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinDiscovery.swift": {
+    "status": "partially-reviewed",
+    "sha256": "c7b50fbbaafe1fe34bcb6b0a67ef374d7ac344cae7668f07321fd73d51cdb211",
+    "evidence": [
+      "findings/OW-2026-049.md"
     ]
   }
 }
