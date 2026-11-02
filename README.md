@@ -4,6 +4,8 @@ This is a **maintainer-commissioned, Codex-led security review** of the public
 Oath Wallet application. It is not independent certification, a guarantee of
 zero vulnerabilities, or a comparison with the installed App Store binary.
 
+**Progress 55.** The full provider package passed 1,323 host tests on the merged repair tree, with 201 explicit skips. The review also reproduced 458 Stellar SDK source files byte for byte and verified the logs for 99 exact-revision CI results. Seven required checks still lack a passing result at the pinned app revision. [Public checkpoint report](review/REPORT.md) · [Reproduction details](review/PROVIDER-QUEUE-AND-STELLAR-GENERATION.md).
+
 Baseline: [4.1.15 (100)](https://github.com/devdasx/oath-wallet/tree/c7cdbde5e9f136b595500e92fbc904b107dcd8ee).
 The exact baseline and current target are in [scope/source.json](scope/source.json).
 

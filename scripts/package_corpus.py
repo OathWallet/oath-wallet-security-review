@@ -29,6 +29,7 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
     args=parser.parse_args()
     source=args.source.resolve()
     sha=require_source_state(source,args.expected_commit or json.loads((ROOT/'scope/source.json').read_text())['reviewed_commit'])
+    paired_fixtures = {}
     if case_suites is None:
         fixture_path = f"{pkg}/Tests/{package}Tests/{suite.split('.')[-1]}.swift"
         fixture = overlay.read_bytes() if overlay else (source/fixture_path).read_bytes()
@@ -40,15 +41,21 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
         if overlay or set(cases) != set(case_suites):
             raise ValueError('Expected the exact set of selected test cases and no overlay')
         suite_hashes = {}
+        target_suite_hashes = {}
         for name in sorted(set(case_suites.values())):
             path = f"{pkg}/Tests/{package}Tests/{name.split('.')[-1]}.swift"
-            data = (source/path).read_bytes()
-            if data != subprocess.check_output(['git','-C',source,'show',base+':'+path]):
-                raise ValueError('Test file differs between comparison revisions: '+path)
-            declared = set(re.findall(rb'func (test\w+)\(',data))
-            if any(case.encode() not in declared for case in cases if case_suites[case]==name):
-                raise ValueError('Missing selected case in '+path)
-            suite_hashes[name] = hashlib.sha256(data).hexdigest()
+            target = (source/path).read_bytes()
+            original = subprocess.check_output(['git','-C',source,'show',base+':'+path])
+            selected = {case.encode() for case in cases if case_suites[case] == name}
+            for data in (original, target):
+                declared = re.findall(rb'func (test\w+)\(',data)
+                if any(declared.count(case) != 1 for case in selected):
+                    raise ValueError('Missing or ambiguous selected case in '+path)
+            # Build the baseline test and its original helpers against BOTH production
+            # revisions. Unrelated new tests in a shared suite are outside this probe.
+            paired_fixtures[path] = original
+            suite_hashes[name] = hashlib.sha256(original).hexdigest()
+            target_suite_hashes[name] = hashlib.sha256(target).hexdigest()
         fixture_hash = hashlib.sha256(json.dumps(suite_hashes,sort_keys=True).encode()).hexdigest()
     env={k:v for k,v in os.environ.items() if k in ['HOME','PATH','TMPDIR','DEVELOPER_DIR','SDKROOT','LANG','LC_ALL','CI']}
     out=args.output.resolve();out.mkdir(parents=True,exist_ok=True)
@@ -59,6 +66,9 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
         archive=subprocess.check_output(['git','-C',source,'archive',rev,pkg,*['Packages/'+name for name in local_dependencies]])
         with tempfile.TemporaryDirectory(prefix='oath-package-review-') as tmp:
             with tarfile.open(fileobj=io.BytesIO(archive)) as tar: tar.extractall(tmp,filter='data')
+            for path, data in paired_fixtures.items():
+                # The path is constructed solely under the exported package test target.
+                (Path(tmp)/path).write_bytes(data)
             if overlay:
                 # Both revisions receive identical audit-owned tests; never replace a shipped file.
                 with (Path(tmp)/fixture_path).open('xb') as stream: stream.write(fixture)
@@ -86,7 +96,7 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
                 fixture_sha256=fixture_hash,status='passed' if ok else 'failed',executions=rows,
                 duration_seconds=round(time.monotonic()-start,3),scope=scope)
     if case_suites:
-        result.update(suite_sha256=suite_hashes,case_suites=case_suites)
+        result.update(suite_sha256=suite_hashes,shipped_target_suite_sha256=target_suite_hashes,fixture_revision=base,case_suites=case_suites)
     if 'SwiftDraw' in pins: result['swiftdraw_commit'] = pins['SwiftDraw']
     log=out/(check+'.log');log.write_text(json.dumps(result,indent=2)+'\n')
     result.update(log=log.name,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest())

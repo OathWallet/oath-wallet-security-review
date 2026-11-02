@@ -1,0 +1,26 @@
+{
+  "matches": [
+    {
+      "artifact_file": "upstream-entropy-evidence/multisig-recovery/result.json",
+      "line": 30,
+      "scanner_rule": "generic-api-key",
+      "verified_public_file": "Packages/OathCloudBackup/Sources/OathCloudBackup/MultisigCredential.swift",
+      "sha256": "84592e87f4683cf7ea7b290b8e8f97c93daeb45d896d22346693b0fac0a6160b"
+    },
+    {
+      "artifact_file": "upstream-entropy-evidence/upstream-bip32/result.json",
+      "line": 56,
+      "scanner_rule": "generic-api-key",
+      "verified_public_file": "trezor-crypto/crypto/aes/aeskey.c",
+      "sha256": "19bd8db1ae31d5716dd347478c2e9f32515bdc8fd9979d4af0c111925881a321"
+    },
+    {
+      "artifact_file": "upstream-entropy-evidence/upstream-bip32-repaired/result.json",
+      "line": 62,
+      "scanner_rule": "generic-api-key",
+      "verified_public_file": "trezor-crypto/crypto/aes/aeskey.c",
+      "sha256": "19bd8db1ae31d5716dd347478c2e9f32515bdc8fd9979d4af0c111925881a321"
+    }
+  ],
+  "explanation": "All three scanner matches are exact SHA-256 digests of public source files."
+}

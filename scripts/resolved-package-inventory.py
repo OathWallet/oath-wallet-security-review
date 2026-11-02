@@ -37,6 +37,12 @@ def files(checkout, pin):
         raise ValueError(f'Revision mismatch in {checkout.name}')
     if git(checkout, 'status', '--porcelain', '--untracked-files=no', '--ignore-submodules=untracked'):
         raise ValueError(f'Modified tracked files in {checkout.name}')
+    generated = {}
+    if checkout.name == 'stellar-ios-mac-sdk':
+        proof_path = Path(__file__).resolve().parents[1]/'evidence/progress55/stellar-generation.json'
+        proof = json.loads(proof_path.read_bytes())
+        if proof['sdk_commit'] == pin and not proof['mismatches']:
+            generated = proof['matching_files']
     rows = []
     with subprocess.Popen(['git', '-C', checkout, 'cat-file', '--batch'],
                           stdin=subprocess.PIPE, stdout=subprocess.PIPE) as reader:
@@ -63,6 +69,10 @@ def files(checkout, pin):
                 row.update(status='reviewed', evidence=['review/RESOLVED-PACKAGES.md'])
             if name in PARTIAL_XDR and row.get('sha256') == PARTIAL_XDR[name]:
                 row.update(status='partially-reviewed', evidence=['review/STELLAR-XDR-BOUNDARIES.md'])
+            if path.decode() in generated and generated[path.decode()] == row.get('sha256'):
+                row['semantic_review_status'] = row['status']
+                row['status'] = 'generated-verified'
+                row.setdefault('evidence', []).append('evidence/progress55/stellar-generation.json')
             rows.append(row)
         reader.stdin.close()
         if reader.wait():
@@ -93,7 +103,7 @@ def main():
         entries.extend(rows)
     if {r['path'] for r in entries if r['status'] == 'reviewed'} != set(REVIEWED):
         raise ValueError('Reviewed source missing')
-    if {r['path'] for r in entries if r['status'] == 'partially-reviewed'} != set(PARTIAL_XDR):
+    if {r['path'] for r in entries if r.get('semantic_review_status',r['status']) == 'partially-reviewed'} != set(PARTIAL_XDR):
         raise ValueError('Partially reviewed XDR source missing or changed')
     output = dict(lockfile=LOCK, lock_sha256=hashlib.sha256((a.source/LOCK).read_bytes()).hexdigest(),
                   scope='All tracked entries at the other Xcode package pins. Gitlinks are unresolved subtrees. Development files are included. No automatic reachability or review disposition.', packages=packages, files=entries)

@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import signal
 import subprocess
+import sys
 from source_state import require_source_state
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -43,8 +44,15 @@ def main():
     if probe != subprocess.check_output(['git','-C',src,'show',BASE+':'+PROBE]):
         raise ValueError('Changed test code')
     cmd=['swift','build','--package-path',src/'Packages/OathBitcoin','--scratch-path',args.scratch.absolute(),'--build-system','native','--force-resolved-versions']
-    with (out/'compile.log').open('w') as log:
-        subprocess.run([*cmd,'--build-tests','--jobs','4'],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=1200)
+    compile_log = out/'compile.log'
+    with compile_log.open('w') as log:
+        result = subprocess.run([*cmd,'--build-tests','--jobs','4'], stdout=log, stderr=subprocess.STDOUT, timeout=1200)
+    if result.returncode:
+        # Preserve the dependency/compiler error even if artifact delivery also fails.
+        lines = compile_log.read_text(errors='replace').splitlines()
+        for line in lines[-24:]:
+            print(line.replace(str(src), '<SOURCE>').replace(str(args.scratch.absolute()), '<SCRATCH>')[:800], file=sys.stderr)
+        raise SystemExit(result.returncode)
     bundle=Path(subprocess.check_output([*cmd,'--show-bin-path'],text=True).strip())/'OathBitcoinPackageTests.xctest'
     rows=[]
     for case in CASES:

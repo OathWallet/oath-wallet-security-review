@@ -1,0 +1,60 @@
+name: Reproduce Stellar transaction-format sources
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/stellar-xdr-generation.py
+      - evidence/progress55/stellar-generation.json
+      - .github/workflows/stellar-xdr-generation.yml
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f
+        with: {ruby-version: '3.4.12', bundler: '2.7.2'}
+      - name: Fetch public inputs at reviewed revisions
+        run: |
+          set -eu
+          python3 scripts/checkout.py
+          for dir in sdk spec; do git init -q ".work/$dir"; done
+          git -C .work/sdk fetch -q --depth=1 https://github.com/Soneso/stellar-ios-mac-sdk.git b5dac0a6e8ff312d597c9a3b4269b03131d66e0d
+          git -C .work/spec fetch -q --depth=1 https://github.com/stellar/stellar-xdr.git c40231c76bf2ebce76b24aa11c72508ac3eaa329
+          git -C .work/sdk checkout -q --detach FETCH_HEAD
+          git -C .work/spec checkout -q --detach FETCH_HEAD
+          cd .work/sdk/tools/xdr-generator
+          BUNDLE_FROZEN=true BUNDLE_PATH="$RUNNER_TEMP/stellar-gems" bundle _2.7.2_ install
+      - name: Check installed gem archives against the recorded inputs
+        run: |
+          python3 - <<'PYTHON'
+          import hashlib, json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])/'stellar-gems'
+          seen = {p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in root.glob('ruby/*/cache/*.gem')}
+          expected = json.loads(Path('evidence/progress55/gem-archives.json').read_bytes())
+          if seen != expected:
+              raise SystemExit('The generator dependency archives differ from the recorded inputs')
+          PYTHON
+      - name: Regenerate offline and compare every published file hash
+        run: |
+          set -eu
+          BUNDLE_PATH="$RUNNER_TEMP/stellar-gems" python3 scripts/stellar-xdr-generation.py --sdk .work/sdk --spec .work/spec --bundle "$(command -v bundle)" --app .work/source --output .work/results/stellar-generation.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          expected = json.loads(Path('evidence/progress55/stellar-generation.json').read_bytes())
+          observed = json.loads(Path('.work/results/stellar-generation.json').read_bytes())
+          for key in ('source_commit','sdk_commit','schema_commit','generator_commit','gemfile_lock_sha256','schema_sha256','generated_count','matching_files','mismatches'):
+              if expected[key] != observed[key]:
+                  raise SystemExit('Generator reproduction diverged at '+key)
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: stellar-xdr-source-evidence, path: .work/results/stellar-generation.json, if-no-files-found: warn}

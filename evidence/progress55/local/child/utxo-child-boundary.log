@@ -1,0 +1,135 @@
+{
+  "check": "utxo-child-boundary",
+  "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+  "baseline_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "22484d295f44d08124e50435aad72f6c57b467cb55a92f7934b704eac61bc26c",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports",
+      "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports.log",
+      "log_sha256": "49847b95f2161ae4c5624a2d2dca26f1adaa812ef761e150e7929dcce3c77cea"
+    },
+    {
+      "phase": "before",
+      "case": "testFinalNormalChildStillRejectsHardenedAndFixedKeys",
+      "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testFinalNormalChildStillRejectsHardenedAndFixedKeys.log",
+      "log_sha256": "5f03bea3e1302b9ebac846928ea77b42aad70482283af191692ebc537389171f"
+    },
+    {
+      "phase": "before",
+      "case": "testFinalNormalChildSignsInputAndChange",
+      "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testFinalNormalChildSignsInputAndChange.log",
+      "log_sha256": "c86b42284a47a6399a1b45f9037757f2a14c75ef62e803488d4cbc90f009461a"
+    },
+    {
+      "phase": "before",
+      "case": "testFinalNormalChildElectrumLeafExport",
+      "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testFinalNormalChildElectrumLeafExport.log",
+      "log_sha256": "fded7cb149343375a846e23501a3e740b1c482b1470eba55a0643f06f6877e85"
+    },
+    {
+      "phase": "before",
+      "case": "testFinalNormalChildMultisigInputAndChange",
+      "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testFinalNormalChildMultisigInputAndChange.log",
+      "log_sha256": "427ddf875684a1af70fdf5fcf90051b64ed97add954932459d7dd6e21d1bff5c"
+    },
+    {
+      "phase": "after",
+      "case": "testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports",
+      "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports.log",
+      "log_sha256": "24b6d7e752c626c45ae216ef664611a564293506ac02cd9947fa000c9d830624"
+    },
+    {
+      "phase": "after",
+      "case": "testFinalNormalChildStillRejectsHardenedAndFixedKeys",
+      "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testFinalNormalChildStillRejectsHardenedAndFixedKeys.log",
+      "log_sha256": "8d3f759bf6d5392bb7fe41f4a67fa0c35be15c09928280680b213f891fac09aa"
+    },
+    {
+      "phase": "after",
+      "case": "testFinalNormalChildSignsInputAndChange",
+      "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testFinalNormalChildSignsInputAndChange.log",
+      "log_sha256": "4bc4a4d259236644df7e64b87c4bcfc86a24601fb660735a31bc509aaf70a1df"
+    },
+    {
+      "phase": "after",
+      "case": "testFinalNormalChildElectrumLeafExport",
+      "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testFinalNormalChildElectrumLeafExport.log",
+      "log_sha256": "2be87e82537b0f82226d852ad51c8d69ae27ebcf6df8571e39ae8662c0485b6f"
+    },
+    {
+      "phase": "after",
+      "case": "testFinalNormalChildMultisigInputAndChange",
+      "source_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testFinalNormalChildMultisigInputAndChange.log",
+      "log_sha256": "60d4b3894df46adf72af79c55e3792759e0e4ba759c105b0df11463f01f285e4"
+    }
+  ],
+  "duration_seconds": 79.544,
+  "scope": "Explicit final normal child, finite fixed-key and hardened controls, single-key and multisig signing, Electrum leaf export, independent four-chain P2PKH scripts. One synthetic transaction at a time, network denied. Gap discovery policy is separate.",
+  "suite_sha256": {
+    "OathBitcoinTests.BitcoinKeysTests": "1d55e1e5d6c5242e2dc78978bfa444286effc8f294bfc8613587ef689cd359b5",
+    "OathBitcoinTests.BitcoinMultisigTests": "c551cb69ee9c17b18a34123ef4389ffb2d1ca7d87e027711f81837f94be79f66",
+    "OathBitcoinTests.BitcoinSendTests": "54a44353b2ba79f82bc4201edc72580d84fad988e09d526d9b2489334e1edb32",
+    "OathBitcoinTests.ElectrumMnemonicTests": "0a0ab6a7cbf90187b96f559b3df79e2fa28505639c38c6ac05fc40eba0ef992e"
+  },
+  "shipped_target_suite_sha256": {
+    "OathBitcoinTests.BitcoinKeysTests": "1d55e1e5d6c5242e2dc78978bfa444286effc8f294bfc8613587ef689cd359b5",
+    "OathBitcoinTests.BitcoinMultisigTests": "c551cb69ee9c17b18a34123ef4389ffb2d1ca7d87e027711f81837f94be79f66",
+    "OathBitcoinTests.BitcoinSendTests": "54a44353b2ba79f82bc4201edc72580d84fad988e09d526d9b2489334e1edb32",
+    "OathBitcoinTests.ElectrumMnemonicTests": "aed75b8bbd9f33af2c608c661a1b3d77342934a579a54e750d1eb49d98219c2d"
+  },
+  "fixture_revision": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+  "case_suites": {
+    "testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports": "OathBitcoinTests.BitcoinKeysTests",
+    "testFinalNormalChildStillRejectsHardenedAndFixedKeys": "OathBitcoinTests.BitcoinKeysTests",
+    "testFinalNormalChildSignsInputAndChange": "OathBitcoinTests.BitcoinSendTests",
+    "testFinalNormalChildElectrumLeafExport": "OathBitcoinTests.ElectrumMnemonicTests",
+    "testFinalNormalChildMultisigInputAndChange": "OathBitcoinTests.BitcoinMultisigTests"
+  }
+}
