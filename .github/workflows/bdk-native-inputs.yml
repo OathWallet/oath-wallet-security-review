@@ -1,0 +1,50 @@
+name: BDK native C and assembly source trace
+on:
+  push:
+    branches: [main, review/bdk-native-trace]
+    paths: ['.github/workflows/bdk-native-inputs.yml', 'scripts/bdk-native-inputs.py', 'scripts/bdk-clang-trace.py', 'scripts/trace-bdk-native.sh']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rebuild:
+    runs-on: macos-15
+    timeout-minutes: 75
+    env:
+      BDK_BUILD_LAYOUT: publisher-rust-src
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - name: Record the actual toolchain
+        run: |
+          mkdir -p results
+          sw_vers > results/host.txt
+          xcodebuild -version >> results/host.txt
+          xcrun --sdk iphoneos --show-sdk-version | tee -a results/host.txt | grep -Fx '18.5'
+          test "$(uname -m)" = arm64
+      - name: Verify publisher inputs
+        run: |
+          git init -q bridge
+          git -C bridge fetch --depth=1 https://github.com/bitcoindevkit/bdk-ffi.git 1c5f4863c6a53cc9d063d34c4e13c91fea5c58de
+          git -C bridge checkout -q --detach FETCH_HEAD
+          curl -fsSL --retry 2 -o original.zip https://github.com/bitcoindevkit/bdk-swift/releases/download/3.1.1/bdkFFI.xcframework.zip
+          echo '5e7f8ac46306f9de7ec2cc1c6486d9db5141c793d33cc13071ea7d1e3dae817f  original.zip' | shasum -a 256 -c -
+          unzip -p original.zip bdkFFI.xcframework/ios-arm64/libbdkffi.a > original.a
+      - name: Build and record the comparison
+        run: |
+          sh scripts/rebuild-bdk-ios.sh bridge independent original.a
+          cp independent/{comparison,packages,versions,differences}.json results/
+      - name: Trace each native object to translation units and actual includes
+        run: |
+          sh scripts/trace-bdk-native.sh independent trace-build
+          python3 scripts/bdk-native-inputs.py "$HOME/work/bdk-swift/bdk-swift/build/bdk-ffi" "$HOME/.cargo" trace-build original.a results/native-inputs.json \
+            --linked-members evidence/typed-keys/oath50-release-evidence/build-inputs/bdk-linked-members.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: bdk-native-device-provenance
+          path: results
+          retention-days: 90
