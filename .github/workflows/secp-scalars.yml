@@ -1,0 +1,23 @@
+name: Compare packaged secp256k1 scalar arithmetic with integer vectors
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['fixtures/secp-scalars/driver.c', 'scripts/secp-scalar-properties.py', '.github/workflows/secp-scalars.yml']
+permissions:
+  contents: read
+jobs:
+  arithmetic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: |
+          git init -q .work/package
+          git -C .work/package fetch --depth=1 https://github.com/21-DOT-DEV/swift-secp256k1.git e70a10e036a55fffea31568f0af92d69b6d449cd
+          python3 scripts/secp-scalar-properties.py .work/package evidence/ci/secp-scalars.json --cc /usr/bin/clang-18
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with: {name: secp-scalar-oracle, path: evidence/ci/secp-scalars.json, retention-days: 90}
