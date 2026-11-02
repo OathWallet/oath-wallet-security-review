@@ -32192,5 +32192,1413 @@
     "runtime_scope": "host",
     "live_network_tests_enabled": false,
     "evidence_path": "evidence/child-boundary/oath51-paired-release/previous/diagnostics-coverage.json"
+  },
+  {
+    "check": "OathExchangeRates",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathExchangeRates",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 125.6,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 18 selected; 16 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "5f06bd0a54ea6c9c8ccfa9d7531581b0aae56ff32dedbfe177699fd696adb6f3",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "f81957a6b61250022a388d64b5be3ab6aaba1c3797cd3c9dc89ee25a6bf865b5"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/OathExchangeRates.json"
+  },
+  {
+    "check": "arc-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--arc-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 97.49,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Arc send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "be5596e4c6c314106136b33fad498f8780cfe9ec7ca22e354a74f21f8c64dc1b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/arc-send.json"
+  },
+  {
+    "check": "authentication",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--authentication"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 93.3,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 123 biometric fallback checks and 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "9e7194bcf56127d107601c81d797803c39e23242f348d61a0371cc56404db80e",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/authentication.json"
+  },
+  {
+    "check": "cloud-restore",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--cloud-restore"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 80.28,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 140 cloud-restore integration checks (local synthetic backups; no live iCloud)."
+    ],
+    "log_sha256": "c0b49cbdc0a6714da2ed78ffe3fe81cc67b33bbc55be0495fbcbd08d8f6433cc",
+    "runtime_scope": "macOS host; production restoration/encryption/SQL; substituted Wallet Core derivation; no live iCloud",
+    "live_network_tests_enabled": false,
+    "assertion_count": 140,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/cloud-restore.json"
+  },
+  {
+    "check": "evm-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--evm-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 59.54,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 22 arbitrum send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "cbba8c0b05a69f57563e1865b4bbd49c2ec5b4ebe100b6ef2bfcd87707346a57",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/evm-send.json"
+  },
+  {
+    "check": "lifecycle",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--lifecycle"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 97.2,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 144 wallet lifecycle checks (synthetic host storage, deletion, restore, ordering, authentication and interrupted writes).",
+      "Passed 37 reset checks (synthetic stores, interrupted cleanup, authorization, preferences and key rotation)."
+    ],
+    "log_sha256": "ba6b6353295aae227432c2fe0ec76013fbab6b4028d82c178e696f768e4b5e36",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/lifecycle.json"
+  },
+  {
+    "check": "near-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--near-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 73.53,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Near send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "2b3836a4e1d213c4127ed2f6830375041742cfb814f5a0f86a30a81c66971a4e",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/near-send.json"
+  },
+  {
+    "check": "permission-batch",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--permission-batch"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 64.42,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 11 batch authorization host checks; production vault/signatures, synthetic local credentials, no network or device."
+    ],
+    "log_sha256": "7547e15c84cd27341270ce649dbf67df686a06aab3c836932851d057d03d6648",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/permission-batch.json"
+  },
+  {
+    "check": "protected-startup",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--protected-startup"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 73.38,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Protected wallet startup: 27/27 host checks passed; 0 failed. No simulator, device, user Keychain or network used."
+    ],
+    "log_sha256": "4895eaf2c5a3906700a5bd083b2596d64cd298d384a6e5ab9ef32213944b2bef",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/protected-startup.json"
+  },
+  {
+    "check": "security",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--security"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 179.33,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "3dfcca7aaabe249a8a672f86801bad6f8a67bf6df2374d36d0d4f62d0802c7d2",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/security.json"
+  },
+  {
+    "check": "solana-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--solana-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 61.38,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 27 Solana send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "f592ccf11b59a77779e0405e1d7f0af31620a666cfac01670256f6743034af98",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/solana-send.json"
+  },
+  {
+    "check": "stellar-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--stellar-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 63.3,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Stellar send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "7180fb1ebb079829ce6d8f4ef3031b37c43a64575abeb1214b13449bf648c3d5",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/stellar-send.json"
+  },
+  {
+    "check": "ton-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--ton-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 68.29,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Ton send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "0e447b283bb1655b061a32fc9e07071d19dd6d421b4ed5df6ba8393e23487055",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/ton-send.json"
+  },
+  {
+    "check": "tron-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--tron-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 57.92,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Tron send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "eef2ee7b03e81fa566f788437667dfcee71f388158a1a92bc96eb4c16c33553e",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/tron-send.json"
+  },
+  {
+    "check": "walletconnect",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--walletconnect"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 78.57,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 13 WalletConnect authorization host checks. Real vault/PIN/imported-key signer; simulated biometric storage. No app, user wallet, device or network used."
+    ],
+    "log_sha256": "5c0709be9cf8453cc8d878b53b705e425100cf2dbe6f9cb198e0f0e90bd8320d",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/walletconnect.json"
+  },
+  {
+    "check": "xrpl-send",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--xrpl-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 62.99,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Xrpl send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "c37b5c497052bc54a5605cc56689e1056b0ac365ff65b608c4600ac9031cca0c",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/xrpl-send.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "/private/tmp/oath52-exact-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 339.28,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "d0d1ef0f1507748efa69da63422f07e3f5be6afc0aa8fd169dfd467af74ba805",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "bfc0eb91109c18518f5ab0871c7581fecb586b1046ddfca50e1708899415b88c"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/OathAnkr.json"
+  },
+  {
+    "check": "app-updates",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckAppUpdates.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 4.38,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 23 app update checks: actual bundle metadata, numeric versions, identity, absent listings, malformed data, HTTP/offline failure, cancellation and coalescing."
+    ],
+    "log_sha256": "d90e866bcdbf839d94b519032142bbb9a90fdd03d4a2efd6d6a65eeecc148dad",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "assertion_count": 23,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/app-updates.json"
+  },
+  {
+    "check": "scanner-lifecycle",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py",
+      "--performance"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 10.37,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Scanner concurrency/lifecycle: 2021 checks passed"
+    ],
+    "log_sha256": "ca09f5c80055f12662d4da8823c4cee6fa6edabbb8adc07fbcfcb64430cdd7b3",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 2021,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/scanner-lifecycle.json"
+  },
+  {
+    "check": "scanner",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 99.87,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 13635 scanner checks; 715 real CoreImage/Vision QR round trips; 42 chains; 260 public BIP39 vectors across 10 languages. No wallet data, simulator, camera, or network used."
+    ],
+    "log_sha256": "8ce58390810bc1c974dda0e3cb033be152d2d8d743fc4462170b553b35ae73ba",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 13635,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/scanner.json"
+  },
+  {
+    "check": "token-lookup",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckTokenLookup.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 31.95,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-789t8ztm/Tests/TokenLookupTests/TokenLookupTests.swift:626: -[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks] : Test skipped - Explicit all-network live lookup",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks]' skipped (0.001 seconds).",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-789t8ztm/Tests/TokenLookupTests/TokenLookupTests.swift:162: -[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata] : Test skipped - Opt-in public Celo token metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata]' skipped (0.000 seconds).",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-789t8ztm/Tests/TokenLookupTests/TokenLookupTests.swift:604: -[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract] : Test skipped - Opt-in public token RPC check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract]' skipped (0.000 seconds).",
+      "/private/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/oath-token-lookup-789t8ztm/Tests/TokenLookupTests/TokenLookupTests.swift:125: -[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks] : Test skipped - Opt-in six-chain public metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks]' skipped (0.000 seconds).",
+      "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 12.616 (12.618) seconds",
+      "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 12.616 (12.618) seconds",
+      "\t Executed 23 tests, with 4 tests skipped and 0 failures (0 unexpected) in 12.616 (12.619) seconds",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "2377722de15fa34ba4d40d655225aa8791c73c3d8c8b721aefbd50ecf5e86ccb",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 19,
+      "skipped": 4,
+      "failed": 0
+    },
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/token-lookup.json"
+  },
+  {
+    "check": "wallet-links",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckScanner.py",
+      "--links"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 10.52,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Wallet link checks passed: 145"
+    ],
+    "log_sha256": "78ba0bb7f311c4b50cbd62b60ca32034c1d6cf8c35f9fb0412b1079dc434246c",
+    "runtime_scope": "macOS host; synthetic QR images, no camera, simulator, device or live-chain request",
+    "live_network_tests_enabled": false,
+    "assertion_count": 145,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/validation/wallet-links.json"
+  },
+  {
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "check": "bdk-linked-exports",
+    "status": "passed",
+    "missing": [],
+    "extra": [],
+    "scope": "Case-sensitive names in each embedded Mach-O dynamic export trie compared with public UniFFI names in the pinned archive. Export presence does not establish call reachability, signature correctness or byte-identical implementations.",
+    "log": "bdk-linked-exports.log",
+    "log_sha256": "24886bc0970e2a88b03f02ba78fc940dd10c890772025832adf75398056ed9a7",
+    "evidence_path": "evidence/native-inputs/oath52-evidence/link/bdk-linked-exports.json"
+  },
+  {
+    "check": "bdk-linked-members",
+    "status": "passed",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "manifest_sha256": "5973892ae7cf1b6bc37692e3d4afb3071f9ce6543e0a32ddd1cb814e75adc7d7",
+    "replay_uuid": "18476706b50937e48c132b95938f4679",
+    "same_uuid": true,
+    "matching_executable_sections": {
+      "__TEXT.__text": {
+        "bytes": 9846116,
+        "sha256": "924ca2b225a9014f1fa6d6fa1d6e75eb20f2688c021900f8d3e4301abcddd778"
+      },
+      "__TEXT.__stubs": {
+        "bytes": 9684,
+        "sha256": "104d4b84947c31f6d1a134bfc0779635145de958f0873bacbd478b008b8c8ebe"
+      },
+      "__TEXT.__objc_stubs": {
+        "bytes": 736,
+        "sha256": "718937dba1bfd39a67e979b4b7bc35ee0f1fdd86bd505a30a2e61e0d369e815f"
+      }
+    },
+    "whole_file_identical": false,
+    "replay_sha256": "74fc1f5f7285dca1b3032a9853d74070c56b835e507f35c613a7cfd312a1bdc8",
+    "original_embedded_sha256": "f26f914e61ee1b1d31ce07b4c749dfd3fd67dec7b8d54db6aa7a4990bfb9191d",
+    "linked_archive_sha256": "b5106bc00a27ee1b4fc828c8be21c56224557ab4f163d6c11fb0d71f3a6bf8ec",
+    "linked_archive_bytes": 130068584,
+    "member_count": 282,
+    "cargo_function": {
+      "member": "uniffi_testing-d5b6ff1829c838e7.uniffi_testing.2472df9cc30629ec-cgu.0.rcgu.o",
+      "address": 4331256,
+      "bytes": 536
+    },
+    "scope": "Replay changed only declared linker output paths and requested a link map. All instruction-bearing sections and the UUID matched the embedded framework. Listed members were selected at link; live-symbol presence does not prove invocation.",
+    "log": "bdk-linked-members.log",
+    "log_sha256": "043d3eb85de1d34cf6bd3657d166dd78205f76eadd567e34a7b277b89d46e4b6",
+    "evidence_path": "evidence/native-inputs/oath52-evidence/link/bdk-linked-members.json"
+  },
+  {
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "check": "release-frameworks",
+    "status": "passed",
+    "build_log_sha256": "b4b7529f4e96ebf222b2bf01eba029f2ab4e38083b08aad50a63cf4642d8a070",
+    "product": "com.aperture.wallet",
+    "embedded": {
+      "OathAtmosphere": {
+        "sha256": "65bfe694cbe8c9a3a2559922f301aa45090baaa5852b29fbf2d9215ece7de278",
+        "uuid": "cd6df6bfe0c23e42956c1c81bb387bfb",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 32665532,
+            "sha256": "7f59babf5eb4bae3306896104416231edd03fda9e8e15feefaa428107f89b410"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 35760,
+            "sha256": "36075f92317b0b0cd02502759515df430a55a1128d169e338d0abd374fb6cf77"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 27360,
+            "sha256": "14a008ffe41351ee13e64f722a7a60dd374cbc3b30f2fe652d5fda6d3a5d5804"
+          }
+        }
+      },
+      "OathBitcoin": {
+        "sha256": "f26f914e61ee1b1d31ce07b4c749dfd3fd67dec7b8d54db6aa7a4990bfb9191d",
+        "uuid": "18476706b50937e48c132b95938f4679",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 9846116,
+            "sha256": "924ca2b225a9014f1fa6d6fa1d6e75eb20f2688c021900f8d3e4301abcddd778"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 9684,
+            "sha256": "104d4b84947c31f6d1a134bfc0779635145de958f0873bacbd478b008b8c8ebe"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 736,
+            "sha256": "718937dba1bfd39a67e979b4b7bc35ee0f1fdd86bd505a30a2e61e0d369e815f"
+          }
+        }
+      },
+      "OathDiagnostics": {
+        "sha256": "9706c10bb65c60ab42f880be48564d6c9490a6743a710cde146c772745e3a058",
+        "uuid": "1af452e9ea36349f9026b1bf25218642",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 319100,
+            "sha256": "0ef5d8c25adc396fd2edfd44f94190188ed186d87021c4cdc200b3608f92c448"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 5256,
+            "sha256": "469aed65cdf81c40891eba9e3097f04df702a690277c269f674f320f88d1fea4"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 1376,
+            "sha256": "cf8097b7b68be669e3cc64a0b36d72b02a7909cf3094243adcef487d5d6e038e"
+          }
+        }
+      },
+      "OathSecp256k1": {
+        "sha256": "2e54f6dbcba9a1c287950eec422a15aea1cc6bfc13906d5da17ddb5c23bdbec1",
+        "uuid": "71640bb508bc37acac5c98785e065dd3",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 101764,
+            "sha256": "ffb43ebe85ec2b901b77282b85ee0cc40a08ab40e4fa47c6e0c0b0d5f650d557"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 504,
+            "sha256": "583317e53da74b42b22a8cfa9b600f3d989b5044678789734970b2262e31d1df"
+          }
+        }
+      },
+      "WalletCore": {
+        "sha256": "9300e40afdfb0b42bb9280abf20d148da3830efe6ae6010b787fd305d2321d94",
+        "uuid": "08ffd60ae21d354bad70c02731d58624",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 13646560,
+            "sha256": "9ae28c616038727c1624aca36c2b382cbe0fa4e20c0c712f4b4bc955d7f8befd"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 9600,
+            "sha256": "3b68481457ab96c1fc2c0cced1ae67a420e136e83c9138fdf5f03eed08660483"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 192,
+            "sha256": "b3567d9fc80fc5119efac33402e5fcd62ea3eb2d80c7862693d4dcf3550a0b96"
+          }
+        }
+      },
+      "WalletCoreSwiftProtobuf": {
+        "sha256": "5c26febe5bc2967ad63d15072be307f4adbafe782f743156469fdd6828e3a16b",
+        "uuid": "2c12fa7ae54f3cfb9ba13f11ea73a18d",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 840488,
+            "sha256": "79ffc7ec0e0879cdf368013ad24fa0eb06838b574f52aee50aaeb509f45cd947"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 2916,
+            "sha256": "bc60e60d57a71377956254ad34659c52132d66096f19ec4fdc8ee225246bd41b"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 96,
+            "sha256": "28cd7d59136f9edf3111a9b553f15a1230163a1897cf457caaac77ea6d60e2a2"
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "OathAtmosphere": [
+        "/usr/lib/libresolv.9.dylib",
+        "@rpath/OathDiagnostics.framework/OathDiagnostics",
+        "@rpath/OathSecp256k1.framework/OathSecp256k1",
+        "@rpath/OathBitcoin.framework/OathBitcoin",
+        "@rpath/WalletCore.framework/WalletCore",
+        "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+        "/System/Library/Frameworks/AuthenticationServices.framework/AuthenticationServices",
+        "/System/Library/Frameworks/BackgroundTasks.framework/BackgroundTasks",
+        "/System/Library/Frameworks/Charts.framework/Charts",
+        "/System/Library/Frameworks/Combine.framework/Combine",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+        "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+        "/System/Library/Frameworks/CoreText.framework/CoreText",
+        "/System/Library/Frameworks/CoreTransferable.framework/CoreTransferable",
+        "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+        "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+        "/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore",
+        "/System/Library/Frameworks/LinkPresentation.framework/LinkPresentation",
+        "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+        "/System/Library/Frameworks/MessageUI.framework/MessageUI",
+        "/System/Library/Frameworks/Metal.framework/Metal",
+        "/System/Library/Frameworks/MetalKit.framework/MetalKit",
+        "/System/Library/Frameworks/MetricKit.framework/MetricKit",
+        "/System/Library/Frameworks/Network.framework/Network",
+        "/System/Library/Frameworks/Photos.framework/Photos",
+        "/System/Library/Frameworks/PhotosUI.framework/PhotosUI",
+        "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+        "/System/Library/Frameworks/SafariServices.framework/SafariServices",
+        "/System/Library/Frameworks/Security.framework/Security",
+        "/System/Library/Frameworks/SwiftUI.framework/SwiftUI",
+        "/System/Library/Frameworks/Symbols.framework/Symbols",
+        "/System/Library/Frameworks/UIKit.framework/UIKit",
+        "/System/Library/Frameworks/Vision.framework/Vision",
+        "/System/Library/Frameworks/_PhotosUI_SwiftUI.framework/_PhotosUI_SwiftUI",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/libcompression.dylib",
+        "/usr/lib/libsqlite3.dylib",
+        "/usr/lib/swift/libswiftAVFoundation.dylib",
+        "/usr/lib/swift/libswiftAccelerate.dylib",
+        "/usr/lib/swift/libswiftCompression.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreAudio.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftCoreImage.dylib",
+        "/usr/lib/swift/libswiftCoreLocation.dylib",
+        "/usr/lib/swift/libswiftCoreMIDI.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftMetal.dylib",
+        "/usr/lib/swift/libswiftMetalKit.dylib",
+        "/usr/lib/swift/libswiftModelIO.dylib",
+        "/usr/lib/swift/libswiftOSLog.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftObservation.dylib",
+        "/usr/lib/swift/libswiftQuartzCore.dylib",
+        "/usr/lib/swift/libswiftSpatial.dylib",
+        "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftos.dylib",
+        "/usr/lib/swift/libswiftsimd.dylib",
+        "/usr/lib/swift/libswiftCoreGraphics.dylib"
+      ],
+      "OathBitcoin": [
+        "@rpath/OathBitcoin.framework/OathBitcoin",
+        "@rpath/OathDiagnostics.framework/OathDiagnostics",
+        "@rpath/OathSecp256k1.framework/OathSecp256k1",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+        "/System/Library/Frameworks/Network.framework/Network",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "OathDiagnostics": [
+        "@rpath/OathDiagnostics.framework/OathDiagnostics",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+        "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+        "/System/Library/Frameworks/Network.framework/Network",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftos.dylib"
+      ],
+      "OathSecp256k1": [
+        "@rpath/OathSecp256k1.framework/OathSecp256k1",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib"
+      ],
+      "WalletCore": [
+        "@rpath/WalletCore.framework/WalletCore",
+        "/usr/lib/libc++.1.dylib",
+        "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+        "/System/Library/Frameworks/Foundation.framework/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/Security.framework/Security",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswiftFoundation.dylib"
+      ],
+      "WalletCoreSwiftProtobuf": [
+        "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswiftFoundation.dylib"
+      ]
+    },
+    "comparison": {
+      "WalletCore": {
+        "resolved": {
+          "sha256": "9300e40afdfb0b42bb9280abf20d148da3830efe6ae6010b787fd305d2321d94",
+          "uuid": "08ffd60ae21d354bad70c02731d58624",
+          "executable_sections": {
+            "__TEXT.__text": {
+              "bytes": 13646560,
+              "sha256": "9ae28c616038727c1624aca36c2b382cbe0fa4e20c0c712f4b4bc955d7f8befd"
+            },
+            "__TEXT.__stubs": {
+              "bytes": 9600,
+              "sha256": "3b68481457ab96c1fc2c0cced1ae67a420e136e83c9138fdf5f03eed08660483"
+            },
+            "__TEXT.__objc_stubs": {
+              "bytes": 192,
+              "sha256": "b3567d9fc80fc5119efac33402e5fcd62ea3eb2d80c7862693d4dcf3550a0b96"
+            }
+          }
+        },
+        "whole_file_identical": true,
+        "slice": "ios-arm64"
+      },
+      "WalletCoreSwiftProtobuf": {
+        "resolved": {
+          "sha256": "5c26febe5bc2967ad63d15072be307f4adbafe782f743156469fdd6828e3a16b",
+          "uuid": "2c12fa7ae54f3cfb9ba13f11ea73a18d",
+          "executable_sections": {
+            "__TEXT.__text": {
+              "bytes": 840488,
+              "sha256": "79ffc7ec0e0879cdf368013ad24fa0eb06838b574f52aee50aaeb509f45cd947"
+            },
+            "__TEXT.__stubs": {
+              "bytes": 2916,
+              "sha256": "bc60e60d57a71377956254ad34659c52132d66096f19ec4fdc8ee225246bd41b"
+            },
+            "__TEXT.__objc_stubs": {
+              "bytes": 96,
+              "sha256": "28cd7d59136f9edf3111a9b553f15a1230163a1897cf457caaac77ea6d60e2a2"
+            }
+          }
+        },
+        "whole_file_identical": true,
+        "slice": "ios-arm64"
+      }
+    },
+    "scope": "Exact embedded files, Mach-O UUIDs, instruction-bearing sections and dynamic library references for this generic unsigned iOS build. Only the two dynamic Wallet Core products are compared against resolved XCFramework device slices. This is not a rebuild of Wallet Core or a comparison with the App Store.",
+    "log": "release-frameworks.log",
+    "log_sha256": "71fc2cc8cc938b813fe7176d2260d32fd1438de2723db748d3345d93ac046cf4",
+    "evidence_path": "evidence/native-inputs/oath52-evidence/link/release-frameworks.json"
+  },
+  {
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "check": "release-inputs",
+    "status": "passed",
+    "build_log_sha256": "b4b7529f4e96ebf222b2bf01eba029f2ab4e38083b08aad50a63cf4642d8a070",
+    "build_description": "de8d915a419da83f42268559d9beee0c",
+    "manifest_sha256": "5973892ae7cf1b6bc37692e3d4afb3071f9ce6543e0a32ddd1cb814e75adc7d7",
+    "processed_xcframeworks": [
+      "application/Packages/OathAezeed/OathAezeedCore.xcframework",
+      "artifact/bdk-swift/bdkFFI/bdkFFI.xcframework",
+      "artifact/walletcore/WalletCore/WalletCore.xcframework",
+      "artifact/walletcore/WalletCoreSwiftProtobuf/WalletCoreSwiftProtobuf.xcframework"
+    ],
+    "scope": "Swift and C-family compile command inputs and Clang .d dependencies from this Release arm64 build. Source selection alone does not establish symbol reachability, resource behavior or App Store binary equivalence. Apple toolchain files are excluded.",
+    "log": "release-inputs.log",
+    "log_sha256": "b780618590a23235730bceb09e842f4eca1b28ac8799af9a3cb9dc53663ab8af",
+    "evidence_path": "evidence/native-inputs/oath52-evidence/link/release-inputs.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>-native",
+      "<SOURCE>-results"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 69.5,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 359 selected; 299 passed; 60 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "828d25ed35b6a51a07736ca0be89814459bc3412fe50cd26a5d55cd926c20d1e",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 359,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 60,
+      "sha256": "1cf8cee8da84c8f7bba4c93e1d34f2f785d785ce7d5287b5faeb70faaee10a19"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/OathBitcoin.json"
+  },
+  {
+    "check": "OathDatabase",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDatabase",
+      "<SCRATCH>-native",
+      "<SOURCE>-results"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 300.74,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 778 selected; 707 passed; 71 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "1313e3e884fc34b1677b3ada7d6bc49a869bf4478fa1dda5227d22281599baa2",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 778,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 71,
+      "sha256": "8517e2ff9ef901d02d10542b7c95470dac08ecadc8c1abf0fd0acb0cb8c8f01e"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/OathDatabase.json"
+  },
+  {
+    "check": "authentication",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--authentication"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 76.4,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 123 biometric fallback checks and 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "7f3b467633642e9db5372d750f0d45be861b62affb515ad6cd24fab6522909b7",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/authentication.json"
+  },
+  {
+    "check": "clipboard",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckClipboard.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.78,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 33 clipboard policy checks using an in-memory pasteboard; no devices or clipboard contents accessed."
+    ],
+    "log_sha256": "39a8c42f3db002d3f84bb80fcb184cd63834885b4da27fc0bd25461013984312",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/clipboard.json"
+  },
+  {
+    "check": "cloud-restore",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--cloud-restore"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 64.71,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 140 cloud-restore integration checks (local synthetic backups; no live iCloud)."
+    ],
+    "log_sha256": "ec5ac4f3df889e9d28e51a7591bc9cfe410f05ade5398f4a51f943769d47b3eb",
+    "runtime_scope": "macOS host; production restoration/encryption/SQL; substituted Wallet Core derivation; no live iCloud",
+    "live_network_tests_enabled": false,
+    "assertion_count": 140,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/cloud-restore.json"
+  },
+  {
+    "check": "envelope",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--envelope"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 59.58,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 80 multi-wallet envelope checks"
+    ],
+    "log_sha256": "4b1908ef4394b3743b9ea805052f6bd6dc93874d7408fac0c0fa779bc215eea7",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/envelope.json"
+  },
+  {
+    "check": "evm-send",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--evm-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 68.28,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 22 arbitrum send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "ac035a1df16e6efeda377ea49926c3fe99e68c28987237946a1845bf55ab3f91",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/evm-send.json"
+  },
+  {
+    "check": "lifecycle",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--lifecycle"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 111.39,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 144 wallet lifecycle checks (synthetic host storage, deletion, restore, ordering, authentication and interrupted writes).",
+      "Passed 37 reset checks (synthetic stores, interrupted cleanup, authorization, preferences and key rotation)."
+    ],
+    "log_sha256": "53890df3e835a7c037da84755b7b36d2564ce3d7ee06bc31f21d52549ec30ffc",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/lifecycle.json"
+  },
+  {
+    "check": "near-send",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--near-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 104.11,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Near send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "059547a5b6115c19634870401f1534cc3b651c7378b219fa7d4e5a975b5855d5",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/near-send.json"
+  },
+  {
+    "check": "permission-batch",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--permission-batch"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 69.92,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 11 batch authorization host checks; production vault/signatures, synthetic local credentials, no network or device."
+    ],
+    "log_sha256": "6574d6fe90ca30d3626fda7ecd9b3e223ac68355bf9f1adc85f09721446b27ea",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/permission-batch.json"
+  },
+  {
+    "check": "protected-startup",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--protected-startup"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 80.98,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Protected wallet startup: 27/27 host checks passed; 0 failed. No simulator, device, user Keychain or network used."
+    ],
+    "log_sha256": "ef53102b0044358af25a7d953566b4aa5fea7321b685b23e3b54282c977823ec",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/protected-startup.json"
+  },
+  {
+    "check": "security",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--security"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 160.32,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "153a99f8480f3a54b207a481657486d99f2cdae129fdfa69a4b6a0e93b2ae501",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/security.json"
+  },
+  {
+    "check": "solana-send",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--solana-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 86.46,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 27 Solana send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "48f4143146fdb0692105cd4fc422c3eb157e02057870e3dc67d303aeeb10df35",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/solana-send.json"
+  },
+  {
+    "check": "tron-send",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--tron-send"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 67.87,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 9 Tron send authorization host checks. Production vault, PIN and imported-key signer; synthetic biometric store, no HD derivation, network, simulator or device."
+    ],
+    "log_sha256": "9cc5affe8d1d801552cd4c070888a0073ece69c01adada332494169fdb16eaea",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/tron-send.json"
+  },
+  {
+    "check": "walletconnect",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--walletconnect"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 61.73,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 13 WalletConnect authorization host checks. Real vault/PIN/imported-key signer; simulated biometric storage. No app, user wallet, device or network used."
+    ],
+    "log_sha256": "2a98ed0e6632a0ee37bcb0647e810a3b505eff733fb1eb28b0346e1966d68132",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/native-inputs/oath52-evidence/previous/walletconnect.json"
+  },
+  {
+    "check": "utxo-key-import",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "baseline_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+    "dependency_commits": {
+      "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+    },
+    "fixture_sha256": "0fb0fb04b3e56a5f46140b0f15ed8cb4a1a4ca213ae37a67e1deeb6a0246c6b6",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testBitcoinRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testBitcoinRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "d064cca6505fb5b2f072dede88ba355e4485dd4b3967a664c549e1865695bc96"
+      },
+      {
+        "phase": "before",
+        "case": "testBitcoinCashRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testBitcoinCashRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "148770b593fa47465dadf584e2edd93bc45a374dcc003a5d2dd02206a4365f33"
+      },
+      {
+        "phase": "before",
+        "case": "testDogecoinRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testDogecoinRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "52955cf553227c8de3f2b2c6b3c0b0f4aff1188479c75ae1c7df34cb6c2ee377"
+      },
+      {
+        "phase": "before",
+        "case": "testLitecoinRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testLitecoinRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "3464e5d8feaf411a073273da8dab818c2bd4c45f5969ebff24f918e4e35f42cc"
+      },
+      {
+        "phase": "before",
+        "case": "testAlternatePrivateVersionsRejectMalformedMarker",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testAlternatePrivateVersionsRejectMalformedMarker.log",
+        "log_sha256": "22bfa44a9b7db217036c44d559a953b999bfb71f257140f2fdba5b0757673643"
+      },
+      {
+        "phase": "before",
+        "case": "testCanonicalPrivateEnvelopesRetainOriginalScalar",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testCanonicalPrivateEnvelopesRetainOriginalScalar.log",
+        "log_sha256": "279f481c0b7d713e1e4d8b14020f7ddb55fcb3b806bb3505db58749d90feaeba"
+      },
+      {
+        "phase": "before",
+        "case": "testPublicVersionCannotBeImportedAsPrivate",
+        "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testPublicVersionCannotBeImportedAsPrivate.log",
+        "log_sha256": "917e16147b2272ada0bed93e47a29e8bcecb802b4bedbc1ea69f5691d95913b7"
+      },
+      {
+        "phase": "after",
+        "case": "testBitcoinRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testBitcoinRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "048d13894bee157ce759a56ea0d920937a9ee34931bd7245867b6862ce0851fd"
+      },
+      {
+        "phase": "after",
+        "case": "testBitcoinCashRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testBitcoinCashRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "70683a4ade0b49fe8ff5b81ed0a330e547c910336007c8e2d325ae8871c4d270"
+      },
+      {
+        "phase": "after",
+        "case": "testDogecoinRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testDogecoinRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "35ae2e0ed819d88c1d70e40b73b2748f26a052a5a2e677870ed7c40961eb5af3"
+      },
+      {
+        "phase": "after",
+        "case": "testLitecoinRejectsPublicPointInPrivateEnvelope",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testLitecoinRejectsPublicPointInPrivateEnvelope.log",
+        "log_sha256": "c546bf8f1b2cdf2330724912ec34a89ae47590cdc19f99578b65a89b46154243"
+      },
+      {
+        "phase": "after",
+        "case": "testAlternatePrivateVersionsRejectMalformedMarker",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testAlternatePrivateVersionsRejectMalformedMarker.log",
+        "log_sha256": "213715202060d58eaa6ec382eaf93277b88620ab801fc35d1e156dcc04159718"
+      },
+      {
+        "phase": "after",
+        "case": "testCanonicalPrivateEnvelopesRetainOriginalScalar",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testCanonicalPrivateEnvelopesRetainOriginalScalar.log",
+        "log_sha256": "9ed34510fb8aecbc35db8df200d2adfef0983915a6a82bc3763302dfd181942b"
+      },
+      {
+        "phase": "after",
+        "case": "testPublicVersionCannotBeImportedAsPrivate",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testPublicVersionCannotBeImportedAsPrivate.log",
+        "log_sha256": "e89bf27fc6a83c0ef5dea7e97af2195cf4902975db84f7a77c7782dd7e7ab245"
+      }
+    ],
+    "duration_seconds": 109.602,
+    "scope": "Synthetic public point and chain codes. Each fixture runs in a network-denied XCTest process. The four-network recovery control compares derived scripts and leaf exports with independent BIP44 vectors.",
+    "log": "utxo-key-import.log",
+    "log_sha256": "d6f1d38034ad0c541a6a0a7826f009377e78627e75ad5a0109e3dfad3fb261a5",
+    "evidence_path": "evidence/native-inputs/oath52-evidence/paired/import/utxo-key-import.json"
   }
 ]

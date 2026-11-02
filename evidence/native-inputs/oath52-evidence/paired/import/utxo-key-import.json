@@ -1,0 +1,157 @@
+{
+  "check": "utxo-key-import",
+  "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+  "baseline_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "0fb0fb04b3e56a5f46140b0f15ed8cb4a1a4ca213ae37a67e1deeb6a0246c6b6",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "testBitcoinRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testBitcoinRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "d064cca6505fb5b2f072dede88ba355e4485dd4b3967a664c549e1865695bc96"
+    },
+    {
+      "phase": "before",
+      "case": "testBitcoinCashRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testBitcoinCashRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "148770b593fa47465dadf584e2edd93bc45a374dcc003a5d2dd02206a4365f33"
+    },
+    {
+      "phase": "before",
+      "case": "testDogecoinRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testDogecoinRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "52955cf553227c8de3f2b2c6b3c0b0f4aff1188479c75ae1c7df34cb6c2ee377"
+    },
+    {
+      "phase": "before",
+      "case": "testLitecoinRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testLitecoinRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "3464e5d8feaf411a073273da8dab818c2bd4c45f5969ebff24f918e4e35f42cc"
+    },
+    {
+      "phase": "before",
+      "case": "testAlternatePrivateVersionsRejectMalformedMarker",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "reproduced",
+      "exit_code": 1,
+      "timed_out": false,
+      "log": "before-testAlternatePrivateVersionsRejectMalformedMarker.log",
+      "log_sha256": "22bfa44a9b7db217036c44d559a953b999bfb71f257140f2fdba5b0757673643"
+    },
+    {
+      "phase": "before",
+      "case": "testCanonicalPrivateEnvelopesRetainOriginalScalar",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testCanonicalPrivateEnvelopesRetainOriginalScalar.log",
+      "log_sha256": "279f481c0b7d713e1e4d8b14020f7ddb55fcb3b806bb3505db58749d90feaeba"
+    },
+    {
+      "phase": "before",
+      "case": "testPublicVersionCannotBeImportedAsPrivate",
+      "source_commit": "7a737d938422d2a6d50ae3143bbca27bd95a87c2",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "before-testPublicVersionCannotBeImportedAsPrivate.log",
+      "log_sha256": "917e16147b2272ada0bed93e47a29e8bcecb802b4bedbc1ea69f5691d95913b7"
+    },
+    {
+      "phase": "after",
+      "case": "testBitcoinRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testBitcoinRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "048d13894bee157ce759a56ea0d920937a9ee34931bd7245867b6862ce0851fd"
+    },
+    {
+      "phase": "after",
+      "case": "testBitcoinCashRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testBitcoinCashRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "70683a4ade0b49fe8ff5b81ed0a330e547c910336007c8e2d325ae8871c4d270"
+    },
+    {
+      "phase": "after",
+      "case": "testDogecoinRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testDogecoinRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "35ae2e0ed819d88c1d70e40b73b2748f26a052a5a2e677870ed7c40961eb5af3"
+    },
+    {
+      "phase": "after",
+      "case": "testLitecoinRejectsPublicPointInPrivateEnvelope",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testLitecoinRejectsPublicPointInPrivateEnvelope.log",
+      "log_sha256": "c546bf8f1b2cdf2330724912ec34a89ae47590cdc19f99578b65a89b46154243"
+    },
+    {
+      "phase": "after",
+      "case": "testAlternatePrivateVersionsRejectMalformedMarker",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testAlternatePrivateVersionsRejectMalformedMarker.log",
+      "log_sha256": "213715202060d58eaa6ec382eaf93277b88620ab801fc35d1e156dcc04159718"
+    },
+    {
+      "phase": "after",
+      "case": "testCanonicalPrivateEnvelopesRetainOriginalScalar",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testCanonicalPrivateEnvelopesRetainOriginalScalar.log",
+      "log_sha256": "9ed34510fb8aecbc35db8df200d2adfef0983915a6a82bc3763302dfd181942b"
+    },
+    {
+      "phase": "after",
+      "case": "testPublicVersionCannotBeImportedAsPrivate",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testPublicVersionCannotBeImportedAsPrivate.log",
+      "log_sha256": "e89bf27fc6a83c0ef5dea7e97af2195cf4902975db84f7a77c7782dd7e7ab245"
+    }
+  ],
+  "duration_seconds": 109.602,
+  "scope": "Synthetic public point and chain codes. Each fixture runs in a network-denied XCTest process. The four-network recovery control compares derived scripts and leaf exports with independent BIP44 vectors.",
+  "log": "utxo-key-import.log",
+  "log_sha256": "d6f1d38034ad0c541a6a0a7826f009377e78627e75ad5a0109e3dfad3fb261a5"
+}

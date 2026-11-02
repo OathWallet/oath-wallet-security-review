@@ -1,0 +1,314 @@
+{
+  "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+  "check": "release-frameworks",
+  "status": "passed",
+  "build_log_sha256": "b4b7529f4e96ebf222b2bf01eba029f2ab4e38083b08aad50a63cf4642d8a070",
+  "product": "com.aperture.wallet",
+  "embedded": {
+    "OathAtmosphere": {
+      "sha256": "65bfe694cbe8c9a3a2559922f301aa45090baaa5852b29fbf2d9215ece7de278",
+      "uuid": "cd6df6bfe0c23e42956c1c81bb387bfb",
+      "executable_sections": {
+        "__TEXT.__text": {
+          "bytes": 32665532,
+          "sha256": "7f59babf5eb4bae3306896104416231edd03fda9e8e15feefaa428107f89b410"
+        },
+        "__TEXT.__stubs": {
+          "bytes": 35760,
+          "sha256": "36075f92317b0b0cd02502759515df430a55a1128d169e338d0abd374fb6cf77"
+        },
+        "__TEXT.__objc_stubs": {
+          "bytes": 27360,
+          "sha256": "14a008ffe41351ee13e64f722a7a60dd374cbc3b30f2fe652d5fda6d3a5d5804"
+        }
+      }
+    },
+    "OathBitcoin": {
+      "sha256": "f26f914e61ee1b1d31ce07b4c749dfd3fd67dec7b8d54db6aa7a4990bfb9191d",
+      "uuid": "18476706b50937e48c132b95938f4679",
+      "executable_sections": {
+        "__TEXT.__text": {
+          "bytes": 9846116,
+          "sha256": "924ca2b225a9014f1fa6d6fa1d6e75eb20f2688c021900f8d3e4301abcddd778"
+        },
+        "__TEXT.__stubs": {
+          "bytes": 9684,
+          "sha256": "104d4b84947c31f6d1a134bfc0779635145de958f0873bacbd478b008b8c8ebe"
+        },
+        "__TEXT.__objc_stubs": {
+          "bytes": 736,
+          "sha256": "718937dba1bfd39a67e979b4b7bc35ee0f1fdd86bd505a30a2e61e0d369e815f"
+        }
+      }
+    },
+    "OathDiagnostics": {
+      "sha256": "9706c10bb65c60ab42f880be48564d6c9490a6743a710cde146c772745e3a058",
+      "uuid": "1af452e9ea36349f9026b1bf25218642",
+      "executable_sections": {
+        "__TEXT.__text": {
+          "bytes": 319100,
+          "sha256": "0ef5d8c25adc396fd2edfd44f94190188ed186d87021c4cdc200b3608f92c448"
+        },
+        "__TEXT.__stubs": {
+          "bytes": 5256,
+          "sha256": "469aed65cdf81c40891eba9e3097f04df702a690277c269f674f320f88d1fea4"
+        },
+        "__TEXT.__objc_stubs": {
+          "bytes": 1376,
+          "sha256": "cf8097b7b68be669e3cc64a0b36d72b02a7909cf3094243adcef487d5d6e038e"
+        }
+      }
+    },
+    "OathSecp256k1": {
+      "sha256": "2e54f6dbcba9a1c287950eec422a15aea1cc6bfc13906d5da17ddb5c23bdbec1",
+      "uuid": "71640bb508bc37acac5c98785e065dd3",
+      "executable_sections": {
+        "__TEXT.__text": {
+          "bytes": 101764,
+          "sha256": "ffb43ebe85ec2b901b77282b85ee0cc40a08ab40e4fa47c6e0c0b0d5f650d557"
+        },
+        "__TEXT.__stubs": {
+          "bytes": 504,
+          "sha256": "583317e53da74b42b22a8cfa9b600f3d989b5044678789734970b2262e31d1df"
+        }
+      }
+    },
+    "WalletCore": {
+      "sha256": "9300e40afdfb0b42bb9280abf20d148da3830efe6ae6010b787fd305d2321d94",
+      "uuid": "08ffd60ae21d354bad70c02731d58624",
+      "executable_sections": {
+        "__TEXT.__text": {
+          "bytes": 13646560,
+          "sha256": "9ae28c616038727c1624aca36c2b382cbe0fa4e20c0c712f4b4bc955d7f8befd"
+        },
+        "__TEXT.__stubs": {
+          "bytes": 9600,
+          "sha256": "3b68481457ab96c1fc2c0cced1ae67a420e136e83c9138fdf5f03eed08660483"
+        },
+        "__TEXT.__objc_stubs": {
+          "bytes": 192,
+          "sha256": "b3567d9fc80fc5119efac33402e5fcd62ea3eb2d80c7862693d4dcf3550a0b96"
+        }
+      }
+    },
+    "WalletCoreSwiftProtobuf": {
+      "sha256": "5c26febe5bc2967ad63d15072be307f4adbafe782f743156469fdd6828e3a16b",
+      "uuid": "2c12fa7ae54f3cfb9ba13f11ea73a18d",
+      "executable_sections": {
+        "__TEXT.__text": {
+          "bytes": 840488,
+          "sha256": "79ffc7ec0e0879cdf368013ad24fa0eb06838b574f52aee50aaeb509f45cd947"
+        },
+        "__TEXT.__stubs": {
+          "bytes": 2916,
+          "sha256": "bc60e60d57a71377956254ad34659c52132d66096f19ec4fdc8ee225246bd41b"
+        },
+        "__TEXT.__objc_stubs": {
+          "bytes": 96,
+          "sha256": "28cd7d59136f9edf3111a9b553f15a1230163a1897cf457caaac77ea6d60e2a2"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "OathAtmosphere": [
+      "/usr/lib/libresolv.9.dylib",
+      "@rpath/OathDiagnostics.framework/OathDiagnostics",
+      "@rpath/OathSecp256k1.framework/OathSecp256k1",
+      "@rpath/OathBitcoin.framework/OathBitcoin",
+      "@rpath/WalletCore.framework/WalletCore",
+      "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+      "/System/Library/Frameworks/Foundation.framework/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+      "/System/Library/Frameworks/AuthenticationServices.framework/AuthenticationServices",
+      "/System/Library/Frameworks/BackgroundTasks.framework/BackgroundTasks",
+      "/System/Library/Frameworks/Charts.framework/Charts",
+      "/System/Library/Frameworks/Combine.framework/Combine",
+      "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+      "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+      "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+      "/System/Library/Frameworks/CoreText.framework/CoreText",
+      "/System/Library/Frameworks/CoreTransferable.framework/CoreTransferable",
+      "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+      "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+      "/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore",
+      "/System/Library/Frameworks/LinkPresentation.framework/LinkPresentation",
+      "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+      "/System/Library/Frameworks/MessageUI.framework/MessageUI",
+      "/System/Library/Frameworks/Metal.framework/Metal",
+      "/System/Library/Frameworks/MetalKit.framework/MetalKit",
+      "/System/Library/Frameworks/MetricKit.framework/MetricKit",
+      "/System/Library/Frameworks/Network.framework/Network",
+      "/System/Library/Frameworks/Photos.framework/Photos",
+      "/System/Library/Frameworks/PhotosUI.framework/PhotosUI",
+      "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+      "/System/Library/Frameworks/SafariServices.framework/SafariServices",
+      "/System/Library/Frameworks/Security.framework/Security",
+      "/System/Library/Frameworks/SwiftUI.framework/SwiftUI",
+      "/System/Library/Frameworks/Symbols.framework/Symbols",
+      "/System/Library/Frameworks/UIKit.framework/UIKit",
+      "/System/Library/Frameworks/Vision.framework/Vision",
+      "/System/Library/Frameworks/_PhotosUI_SwiftUI.framework/_PhotosUI_SwiftUI",
+      "/usr/lib/libc++.1.dylib",
+      "/usr/lib/libcompression.dylib",
+      "/usr/lib/libsqlite3.dylib",
+      "/usr/lib/swift/libswiftAVFoundation.dylib",
+      "/usr/lib/swift/libswiftAccelerate.dylib",
+      "/usr/lib/swift/libswiftCompression.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreAudio.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftCoreImage.dylib",
+      "/usr/lib/swift/libswiftCoreLocation.dylib",
+      "/usr/lib/swift/libswiftCoreMIDI.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftMetal.dylib",
+      "/usr/lib/swift/libswiftMetalKit.dylib",
+      "/usr/lib/swift/libswiftModelIO.dylib",
+      "/usr/lib/swift/libswiftOSLog.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftObservation.dylib",
+      "/usr/lib/swift/libswiftQuartzCore.dylib",
+      "/usr/lib/swift/libswiftSpatial.dylib",
+      "/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswiftos.dylib",
+      "/usr/lib/swift/libswiftsimd.dylib",
+      "/usr/lib/swift/libswiftCoreGraphics.dylib"
+    ],
+    "OathBitcoin": [
+      "@rpath/OathBitcoin.framework/OathBitcoin",
+      "@rpath/OathDiagnostics.framework/OathDiagnostics",
+      "@rpath/OathSecp256k1.framework/OathSecp256k1",
+      "/System/Library/Frameworks/Foundation.framework/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+      "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+      "/System/Library/Frameworks/Network.framework/Network",
+      "/usr/lib/libc++.1.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswiftos.dylib"
+    ],
+    "OathDiagnostics": [
+      "@rpath/OathDiagnostics.framework/OathDiagnostics",
+      "/System/Library/Frameworks/Foundation.framework/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+      "/System/Library/Frameworks/CryptoKit.framework/CryptoKit",
+      "/System/Library/Frameworks/LocalAuthentication.framework/LocalAuthentication",
+      "/System/Library/Frameworks/Network.framework/Network",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswiftos.dylib"
+    ],
+    "OathSecp256k1": [
+      "@rpath/OathSecp256k1.framework/OathSecp256k1",
+      "/System/Library/Frameworks/Foundation.framework/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib"
+    ],
+    "WalletCore": [
+      "@rpath/WalletCore.framework/WalletCore",
+      "/usr/lib/libc++.1.dylib",
+      "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+      "/System/Library/Frameworks/Foundation.framework/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/Security.framework/Security",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswiftFoundation.dylib"
+    ],
+    "WalletCoreSwiftProtobuf": [
+      "@rpath/WalletCoreSwiftProtobuf.framework/WalletCoreSwiftProtobuf",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+      "/usr/lib/libc++.1.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswiftFoundation.dylib"
+    ]
+  },
+  "comparison": {
+    "WalletCore": {
+      "resolved": {
+        "sha256": "9300e40afdfb0b42bb9280abf20d148da3830efe6ae6010b787fd305d2321d94",
+        "uuid": "08ffd60ae21d354bad70c02731d58624",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 13646560,
+            "sha256": "9ae28c616038727c1624aca36c2b382cbe0fa4e20c0c712f4b4bc955d7f8befd"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 9600,
+            "sha256": "3b68481457ab96c1fc2c0cced1ae67a420e136e83c9138fdf5f03eed08660483"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 192,
+            "sha256": "b3567d9fc80fc5119efac33402e5fcd62ea3eb2d80c7862693d4dcf3550a0b96"
+          }
+        }
+      },
+      "whole_file_identical": true,
+      "slice": "ios-arm64"
+    },
+    "WalletCoreSwiftProtobuf": {
+      "resolved": {
+        "sha256": "5c26febe5bc2967ad63d15072be307f4adbafe782f743156469fdd6828e3a16b",
+        "uuid": "2c12fa7ae54f3cfb9ba13f11ea73a18d",
+        "executable_sections": {
+          "__TEXT.__text": {
+            "bytes": 840488,
+            "sha256": "79ffc7ec0e0879cdf368013ad24fa0eb06838b574f52aee50aaeb509f45cd947"
+          },
+          "__TEXT.__stubs": {
+            "bytes": 2916,
+            "sha256": "bc60e60d57a71377956254ad34659c52132d66096f19ec4fdc8ee225246bd41b"
+          },
+          "__TEXT.__objc_stubs": {
+            "bytes": 96,
+            "sha256": "28cd7d59136f9edf3111a9b553f15a1230163a1897cf457caaac77ea6d60e2a2"
+          }
+        }
+      },
+      "whole_file_identical": true,
+      "slice": "ios-arm64"
+    }
+  },
+  "scope": "Exact embedded files, Mach-O UUIDs, instruction-bearing sections and dynamic library references for this generic unsigned iOS build. Only the two dynamic Wallet Core products are compared against resolved XCFramework device slices. This is not a rebuild of Wallet Core or a comparison with the App Store.",
+  "log": "release-frameworks.log",
+  "log_sha256": "71fc2cc8cc938b813fe7176d2260d32fd1438de2723db748d3345d93ac046cf4"
+}

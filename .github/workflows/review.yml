@@ -1000,6 +1000,7 @@ jobs:
           python3 scripts/bdk-linked-exports.py ".work/release-build/Build/Products/Release-iphoneos/Oath Wallet.app" evidence/ci/build-inputs/release-frameworks.json evidence/ci/bdk-ios-reconstruction.json evidence/ci/build-inputs
           python3 scripts/bdk-selected-inputs.py .work/bdk-ios-rebuild/artifacts.jsonl .work/bdk-ios-rebuild/packages.json .work/bdk-ios-rebuild/bdk-ffi .work/bdk-ios-rebuild/cargo evidence/ci/bdk-extra-sources.json evidence/ci/bdk-rustc-inputs.json
           cmp scope/upstream-bdk-rust-selected.json evidence/ci/bdk-extra-sources.json
+          python3 scripts/bdk-native-curve.py .work/bdk-ios-rebuild .work/bdk-curve-build evidence/ci/bdk-native-curve.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
         with: {name: unsigned-ios-release-build, path: evidence/ci, retention-days: 90}

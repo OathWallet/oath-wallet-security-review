@@ -9,6 +9,13 @@ binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 
 Current review target: **`7ecfa2c163704d363ebe6dc16b60151dc8a7cd78`**.
 
+The complete BDK Swift 3.1.1 arm64 device archive matched the distributed bytes on GitHub Actions. All 902 members and the full archive SHA-256 matched. Two local traces identified the inputs of all 400 native archive members. A new ledger records 823 additional registry files rather than treating a binary match as source review. The pinned Rust/C curve passed 137 host scalar and point cases. The historical DER reader was exercised with positive and negative encodings, all 70 truncated prefixes, and 2,048 deterministic bounded inputs. [Scope, evidence and reproduction](BDK-NATIVE-INPUTS.md).
+
+OW-2026-002 remains open for original archive provenance. All original C members across the three historical aezeed slices matched the earliest public bridge build. Every Go executable-section byte outside its embedded build ID matched, as did all section relocation records. Non-identical file hashes, differing debug and symbol data, and the original build's modified-checkout flag remain visible. [Historical finding](../findings/OW-2026-002.md).
+
+The exact current app checkout now has 38 passing check records, with 68 required checks still lacking passing records in the published ledger. Additional checks belonging to an earlier test revision are retained under that earlier commit. [Acceptance checklist](ACCEPTANCE.md).
+
+
 [OW-2026-036](../findings/OW-2026-036.md) fixes refusal of the final normal BIP32 address index. The same four positive tests failed before and passed after; the negative boundary control passed on both revisions. Independent P2PKH scripts cover four chains. Single-key and two-of-two Bitcoin transactions were signed offline. [PR 49](https://github.com/devdasx/oath-wallet/pull/49).
 
 All seven Swift secp256k1 wrapper operations were read. Four independent-vector test cases exercised deterministic DER and recoverable signatures, rejection boundaries, scalar addition and sliced buffers against the shipped implementation. Native internals, emitted erasure behavior and side-channel properties remain open. The full Bitcoin host package passed 304 cases with 60 opt-in skips, and the generic unsigned iOS Release build passed. [paired address results](../evidence/child-boundary/oath51-paired-release/child/utxo-child-boundary.json) · [curve results](../evidence/child-boundary/oath51-paired-release/curve/secp-wrapper.json).

@@ -42,7 +42,7 @@ def build(checkout):
     lock=tomllib.loads(git('show',REVISION+':bdk-ffi/Cargo.lock').decode())
     crates=[{key:item[key] for key in ('name','version','source','checksum') if key in item} for item in lock['package']]
     return dict(repository='https://github.com/bitcoindevkit/bdk-ffi',commit=REVISION,files=files,
-                locked_packages=crates,scope='Source selected in publisher build log. Locked packages include tools and test inputs. Rust dependency implementation coverage and independent build equivalence remain outstanding.')
+                locked_packages=crates,scope='Source selected in publisher build log. Locked packages include tools and test inputs. The distributed 3.1.1 arm64 iOS static archive was independently reproduced by full bytes. Implementation coverage, remaining binary slices and App Store equivalence are separate.')
 
 if __name__ == '__main__':
     p=argparse.ArgumentParser(description=__doc__)

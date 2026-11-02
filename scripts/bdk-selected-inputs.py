@@ -63,9 +63,13 @@ def main():
                     if prior['sha256']!=digest:raise ValueError('Prior crate ledger differs')
                     owner='existing-crate'
             else:raise ValueError('Unclassified compiler input '+str(file))
+            if name=='secp256k1-sys-0.10.1/build.rs':
+                disposition='reviewed'
             if name not in selected:
                 if sha(file)!=digest:raise ValueError('Compiled source differs from authenticated input '+name)
                 selected[name]=dict(path=name,sha256=digest,bytes=file.stat().st_size,roles=set(),owner=owner,status=disposition)
+            if name=='secp256k1-sys-0.10.1/build.rs':
+                selected[name]['evidence']=['review/BDK-NATIVE-INPUTS.md']
             selected[name]['roles'].add(role)
     if not finished or cmdrows<100:raise ValueError('Incomplete device build')
     for r in selected.values():r['roles']=sorted(r['roles'])

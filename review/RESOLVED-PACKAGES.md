@@ -21,3 +21,7 @@ The eight current bridge dispositions cover these small adapters, the two config
 ## Reproduction
 
 Run the generic Release build with `python3 scripts/run.py .work/source build --scratch .work/release-build --output .work/checks`. Then run the resolved package inventory and archive comparison shown in the [release-build workflow job](../.github/workflows/review.yml). They read already resolved files on disk. Only downloading the official archive requires network access. Each manual disposition in the new ledger is bound to the SHA-256 of its reviewed file.
+
+## Updated device-slice result
+
+The BDK Swift 3.1.1 arm64 iOS static archive has now been reproduced byte for byte on a public hosted runner. [Exact source, toolchain and evidence](BDK-NATIVE-INPUTS.md). This result covers the archive consumed by the generic iOS build; it does not establish source equivalence for Oath’s complete App Store binary.

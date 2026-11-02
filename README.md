@@ -20,7 +20,7 @@ before/after tests. All eight source repairs pass the full native C/C++ suites.
 separately. [Public app integration and its checks now pass](review/CORE-APP-INTEGRATION.md).
 That is not an App Store update or a whole-wallet completion verdict.
 
-**Latest checkpoint.** [Final BIP32 child and curve-wrapper tests](review/CURVE-WRAPPER-AND-INDEX.md), [SDK-matched archive comparisons](review/REPORT.md), and [remaining coverage](review/ACCEPTANCE.md).
+**Latest checkpoint.** [Byte-identical BDK device archive and native source review](review/BDK-NATIVE-INPUTS.md), [historical aezeed comparison](findings/OW-2026-002.md), and [remaining coverage](review/ACCEPTANCE.md).
 
 **Earlier checkpoint.** [Provider response limits](findings/OW-2026-034.md), [Stellar decoder checks](review/STELLAR-XDR-BOUNDARIES.md) and [remaining scope](review/ACCEPTANCE.md).
 

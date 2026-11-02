@@ -28,12 +28,21 @@ def main():
         if replay['uuid']!=actual['uuid'] or replay['executable_sections']!=actual['executable_sections']:raise ValueError('Relinked instruction sections differ from embedded image')
         raw=result.read_bytes();objects=raw.split(b'# Sections:')[0];live=raw.split(b'# Symbols:')[1].split(b'# Dead Stripped Symbols:')[0]
         members={int(idx):name.decode() for idx,name in re.findall(rb'^\[\s*(\d+)\].*?libbdkffi\.a\(([^)]+)\)$',objects,re.M)}
+        # The copied XCFramework input can have a different path from the
+        # packaged slice. Hash the archive actually named by the linker.
+        archive_paths={Path(p.decode()).resolve() for p in re.findall(rb'^\[\s*\d+\]\s+(.+?/libbdkffi\.a)\([^)]*\)$',objects,re.M)}
+        archive,=archive_paths
+        if not archive.is_relative_to(d) or not archive.is_file():
+            raise ValueError('Link map referenced an unexpected BDK archive')
+        with archive.open('rb') as stream:archive_digest=hashlib.file_digest(stream,'sha256').hexdigest()
+        if archive_digest!='b5106bc00a27ee1b4fc828c8be21c56224557ab4f163d6c11fb0d71f3a6bf8ec':
+            raise ValueError('Actually linked BDK library differs from the verified distribution')
         target,=[idx for idx,n in members.items() if n.startswith('uniffi_testing-')]
         sym=rb'__ZN14uniffi_testing24get_cargo_build_messages17he9666a7cefeebc81E'
         addr,length=re.findall(rb'^0x([0-9A-F]+)\s+0x([0-9A-F]+)\s+\[\s*'+str(target).encode()+rb'\] '+sym+rb'$',live,re.M)[0]
         r=dict(check='bdk-linked-members',status='passed',source_commit=i['source_commit'],manifest_sha256=sha(m),replay_uuid=replay['uuid'],same_uuid=True,
             matching_executable_sections=actual['executable_sections'],whole_file_identical=replay['sha256']==actual['sha256'],replay_sha256=replay['sha256'],original_embedded_sha256=actual['sha256'],
-            selected_bdk_members=sorted(members.values()),member_count=len(members),cargo_function=dict(member=members[target],address=int(addr,16),bytes=int(length,16)),
+            linked_archive_sha256=archive_digest,linked_archive_bytes=archive.stat().st_size,selected_bdk_members=sorted(members.values()),member_count=len(members),cargo_function=dict(member=members[target],address=int(addr,16),bytes=int(length,16)),
             scope='Replay changed only declared linker output paths and requested a link map. All instruction-bearing sections and the UUID matched the embedded framework. Listed members were selected at link; live-symbol presence does not prove invocation.')
     a.output.mkdir(parents=True,exist_ok=True);log=a.output/'bdk-linked-members.log';log.write_text(json.dumps(r,indent=2)+'\n')
     r.update(log=log.name,log_sha256=sha(log.read_bytes()));(a.output/'bdk-linked-members.json').write_text(json.dumps(r,indent=2)+'\n');print(r['member_count'],'archive members selected, function is present')
