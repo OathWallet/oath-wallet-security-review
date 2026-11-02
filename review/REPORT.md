@@ -7,7 +7,13 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`7ecfa2c163704d363ebe6dc16b60151dc8a7cd78`**.
+Current review target: **`343046575c980b9091a4474f098878e920963492`**.
+
+Nine synthetic inputs or decisions reproduced import failures on their original revisions. All eleven repaired cases and positive controls passed, as did 1,667 existing assertions across 260 BIP39 vectors. Separate encrypted-storage integrations passed 30 aezeed checks and 201 Electrum checks. The original integration fixture failure is retained with its corrected test. The unsigned iOS Release build succeeded, and all 20,480 BIP39 word-list entries matched the pinned upstream files in both the source and the product. The bundled legacy Electrum resource also matched all 1,626 upstream word positions.
+
+30 passing checks are recorded at this exact revision. 82 required checks lack passing exact-revision records. The full ledger has 17,119 open entries. OW-2026-002 remains open for historical binary provenance. A further confirmed CJK two-factor recovery issue, OW-2026-040, remains open at this reviewed revision. Two earlier database diagnostic assertions failed. The current database run passed 706 of 778 selected cases, skipped 71 and timed out in the TRON test transport. [Follow-up test repairs](https://github.com/devdasx/oath-wallet/pull/52) have separate results. [Recovery review](RECOVERY-IMPORT-ROUTING.md) · [Public fix](https://github.com/devdasx/oath-wallet/pull/50).
+
+Previous target: `7ecfa2c163704d363ebe6dc16b60151dc8a7cd78`.
 
 The complete BDK Swift 3.1.1 arm64 device archive matched the distributed bytes on GitHub Actions. All 902 members and the full archive SHA-256 matched. Two local traces identified the inputs of all 400 native archive members. A new ledger records 823 additional registry files rather than treating a binary match as source review. The pinned Rust/C curve passed 137 host scalar and point cases. The historical DER reader was exercised with positive and negative encodings, all 70 truncated prefixes, and 2,048 deterministic bounded inputs. [Scope, evidence and reproduction](BDK-NATIVE-INPUTS.md).
 

@@ -1,0 +1,8 @@
+{
+  "outcome": "failed",
+  "source_commit": "5a9f376808dd89a3df7af039c05da8c30d64db3e",
+  "signature": "Precondition failed: BIP39 overlap creates a distinct wallet with the independent Bitcoin address",
+  "original_log_sha256": "1b2490ddbea530ced5f67f3b56f7c1d3f9107dd6fb568d6506ddad7cf1a93744",
+  "corrected_test_commit": "343046575c980b9091a4474f098878e920963492",
+  "reason": "The earlier integration harness compared a synthetic multi-chain display address. The corrected test queries its production Bitcoin descriptor and stored receive address. Process register dumps omitted."
+}

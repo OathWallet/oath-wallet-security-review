@@ -1,0 +1,177 @@
+{
+  "check": "recovery-routing",
+  "source_commit": "343046575c980b9091a4474f098878e920963492",
+  "baseline_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "before",
+      "case": "stale-electrum",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "before",
+      "case": "stale-aezeed",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "before",
+      "case": "qr-url",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "before",
+      "case": "qr-json",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "before",
+      "case": "qr-address",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "before",
+      "case": "dual-choice",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "before",
+      "case": "recognized-formats",
+      "source_commit": "f8ea1b460be251e70f9b07a820d373012a506cce",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "manual-before",
+      "case": "paste-url",
+      "source_commit": "f6f86f003e998dc112f85e1c7c8f56a72ee8c13b",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "manual-before",
+      "case": "paste-json",
+      "source_commit": "f6f86f003e998dc112f85e1c7c8f56a72ee8c13b",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "manual-before",
+      "case": "paste-address",
+      "source_commit": "f6f86f003e998dc112f85e1c7c8f56a72ee8c13b",
+      "status": "reproduced",
+      "exit_code": 1
+    },
+    {
+      "phase": "manual-before",
+      "case": "legacy-hex",
+      "source_commit": "f6f86f003e998dc112f85e1c7c8f56a72ee8c13b",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "stale-electrum",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "stale-aezeed",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "qr-url",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "qr-json",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "qr-address",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "dual-choice",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "recognized-formats",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "paste-url",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "paste-json",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "paste-address",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    },
+    {
+      "phase": "after",
+      "case": "legacy-hex",
+      "source_commit": "343046575c980b9091a4474f098878e920963492",
+      "status": "passed",
+      "exit_code": 0
+    }
+  ],
+  "existing_suite_checks": 1667,
+  "existing_suite_vectors": 260,
+  "three_format_routes_verified": true,
+  "three_format_native_addresses_verified": 2,
+  "manual_probe_baseline": "f6f86f003e998dc112f85e1c7c8f56a72ee8c13b",
+  "case_runner_sha256": "d4442a728fbe75bd6a25529a6b73695bce83f652a28f8f25bcd3b33443c4a4a9",
+  "manual_probe_sha256": "b6c2bb7e9935d67a799fad2827fc8a9a224349d46f3a25416bf6fce984fb9efb",
+  "input_set_sha256": "80c4966d730259d447ecf4a46855cae5149f855ee879d8a14532a7a1504b5d29",
+  "expected_receive_addresses": {
+    "bitcoinBIP39": "bc1q45rxl0xx5yxvgcz5d3avq4xeujl5kaaz2mr3q3",
+    "bitcoinAezeed": "bc1qkq3zvunxpjss2gczwkec0vd7qzr6czmmq09wy0"
+  },
+  "scope": "Shared unmodified import/draft code on both revisions. Each case executed with network denied. The independent LND fixture is valid under both aezeed and BIP39. This run checks import routing, separate from the encrypted vault integration and camera UI.",
+  "log": "recovery-routing.log",
+  "log_sha256": "be9f7be1c450897fbe0302cb28375c2e3855c0d28e16a88c7d0553dbd0d880b8"
+}

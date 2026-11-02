@@ -10,13 +10,21 @@ PACKAGES = ['OathDiagnostics', 'OathCloudBackup', 'OathDatabase', 'OathBitcoin',
 SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
 APP_MODES = {'app-updates':'Tools/CheckAppUpdates.py', 'token-lookup':'Tools/CheckTokenLookup.py'}
 SCANNER_MODES = {'scanner': [], 'wallet-links': ['--links'], 'scanner-lifecycle': ['--performance']}
-MODES = ['envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
+RECOVERY_MODES = {'aezeed': 'aezeed', 'electrum': 'Electrum'}
+MODES = [*RECOVERY_MODES, 'envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
          'evm-send', 'solana-send', 'tron-send', 'xrpl-send', 'stellar-send',
          'aptos-send', 'sui-send', 'near-send', 'ton-send', 'thorchain-send', 'arc-send', 'permission-batch', 'cloud-restore']
 
 def restore_case_count(text):
     matches = re.findall(r'^Passed (\d+) cloud-restore integration checks \(local synthetic backups; no live iCloud\)\.$', text, re.MULTILINE)
     return int(matches[0]) if len(matches) == 1 and int(matches[0]) >= 140 else None
+
+def recovery_case_count(mode, text):
+    pattern = rf'^Passed ([1-9][0-9]*) {RECOVERY_MODES[mode]} host integration checks'
+    pattern += r' across 5 formats:' if mode == 'electrum' else ':'
+    matches = re.findall(pattern, text, re.MULTILINE)
+    minimum = 30 if mode == 'aezeed' else 201
+    return int(matches[0]) if len(matches) == 1 and int(matches[0]) >= minimum else None
 
 def scanner_case_count(mode, text):
     """Require the harness's final assertion summary, not just a successful build."""
@@ -99,6 +107,9 @@ def main():
     sdk_cases = sdk_case_counts(text) if a.check in SDK_MODES or a.check == 'token-lookup' else None
     scanner_cases = scanner_case_count(a.check, text) if a.check in SCANNER_MODES else None
     restore_cases = restore_case_count(text) if a.check == 'cloud-restore' else None
+    recovery_cases = recovery_case_count(a.check, text) if a.check in RECOVERY_MODES else None
+    if a.check in RECOVERY_MODES and recovery_cases is None:
+        code = code or 1
     if a.check == 'cloud-restore' and restore_cases is None:
         code = code or 1
     if a.check in SCANNER_MODES and scanner_cases is None:
@@ -115,6 +126,9 @@ def main():
                   timed_out=timed_out,duration_seconds=round(time.time()-start,2),platform=platform.platform(),
                   summaries=summaries,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest(),
                   runtime_scope='host' if a.check!='build' else 'compile-only',live_network_tests_enabled=False)
+    if a.check in RECOVERY_MODES:
+        result['assertion_count'] = recovery_cases
+        result['runtime_scope'] = 'macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter'
     if app_update_counts: result['assertion_count'] = int(app_update_counts[0])
     if sdk_cases is not None: result['xctest_cases'] = sdk_cases
     if a.check == 'cloud-restore':

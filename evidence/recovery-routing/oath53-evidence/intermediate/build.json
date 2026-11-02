@@ -1,0 +1,30 @@
+{
+  "check": "build",
+  "source_commit": "5a9f376808dd89a3df7af039c05da8c30d64db3e",
+  "command": [
+    "xcodebuild",
+    "-project",
+    "OathAtmosphere.xcodeproj",
+    "-scheme",
+    "OathAtmosphere",
+    "-configuration",
+    "Release",
+    "-destination",
+    "generic/platform=iOS",
+    "-derivedDataPath",
+    "<SCRATCH>",
+    "CODE_SIGNING_ALLOWED=NO",
+    "build"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 1053.54,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "** BUILD SUCCEEDED **"
+  ],
+  "log_sha256": "8c53c8971c58f7ce48b0fc34c608cbfd4dcd4f5eeffd4d8ea84767aae2d88f75",
+  "runtime_scope": "compile-only",
+  "live_network_tests_enabled": false
+}

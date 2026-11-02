@@ -1,0 +1,30 @@
+{
+  "source_commit": "6ff120198e46111cbe05f4bd76a7e94dd7a001e2",
+  "review_target": "343046575c980b9091a4474f098878e920963492",
+  "method": "Two synthetic inputs using ordinary and ideographic spaces. Four digest or presence assertions failed in ElectrumMnemonicTests.testTwoFactorCJKSeedBoundaries.",
+  "result": "reproduced",
+  "exit_code": 1,
+  "raw_log_sha256": "83b5ba75f7ba1b66a9ebfb21f4c4e84997aa460827a4ec7876397c4e379cd798",
+  "reference": {
+    "post27": {
+      "length": 12,
+      "iteration": 1581,
+      "firstSeedHash": "0ea025364a2417d22e247690d5d57e577bb13010b9bf226683f00a3ebe223996",
+      "secondSeedHash": "0ea025364a2417d22e247690d5d57e577bb13010b9bf226683f00a3ebe223996",
+      "branches": [
+        "m/0'/",
+        "m/1'/"
+      ]
+    },
+    "pre27": {
+      "length": 24,
+      "iteration": 2725,
+      "firstSeedHash": "2cba17c5b6eebb630fedf156095bbd72b5255bf7a18143258fe955bf9144970d",
+      "secondSeedHash": "8ded67946adac69690af08f56a7bd0c90b39757e1ee86ce067baefa4e21407d6",
+      "branches": [
+        "m/",
+        "m/"
+      ]
+    }
+  }
+}

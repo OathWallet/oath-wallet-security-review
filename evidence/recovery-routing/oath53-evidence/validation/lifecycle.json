@@ -1,0 +1,21 @@
+{
+  "check": "lifecycle",
+  "source_commit": "343046575c980b9091a4474f098878e920963492",
+  "command": [
+    "python3",
+    "Tools/CheckMultiWallet.py",
+    "--lifecycle"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 146.56,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "Passed 144 wallet lifecycle checks (synthetic host storage, deletion, restore, ordering, authentication and interrupted writes).",
+    "Passed 37 reset checks (synthetic stores, interrupted cleanup, authorization, preferences and key rotation)."
+  ],
+  "log_sha256": "841d346c87acb7d4d90335af2151666cb442a6db5c778d2142f5f31f7a8d822e",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false
+}
