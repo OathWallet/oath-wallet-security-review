@@ -7,7 +7,17 @@ independent certification, a guarantee of zero vulnerabilities, or an App Store
 binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
 `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 
-Current review target: **`a13a88cb67fe9fa73c1a0bbb222a474b195e25eb`**.
+Current review target: **`7ecfa2c163704d363ebe6dc16b60151dc8a7cd78`**.
+
+[OW-2026-036](../findings/OW-2026-036.md) fixes refusal of the final normal BIP32 address index. The same four positive tests failed before and passed after; the negative boundary control passed on both revisions. Independent P2PKH scripts cover four chains. Single-key and two-of-two Bitcoin transactions were signed offline. [PR 49](https://github.com/devdasx/oath-wallet/pull/49).
+
+All seven Swift secp256k1 wrapper operations were read. Four independent-vector test cases exercised deterministic DER and recoverable signatures, rejection boundaries, scalar addition and sliced buffers against the shipped implementation. Native internals, emitted erasure behavior and side-channel properties remain open. The full Bitcoin host package passed 304 cases with 60 opt-in skips, and the generic unsigned iOS Release build passed. [paired address results](../evidence/child-boundary/oath51-paired-release/child/utxo-child-boundary.json) · [curve results](../evidence/child-boundary/oath51-paired-release/curve/secp-wrapper.json).
+
+The SDK 18.5 GitHub build with the publisher’s recorded checkout and Cargo paths matched 835/902 whole members and 857/857 instruction digests. Full archive byte equality: false. The paired isolated layout matched 788/902 members and 856/857 instruction digests. Nonidentical same-name members in the publisher-path build: 67. [Hosted jobs](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41364048202) · [component-by-component differences](../evidence/child-boundary/oath51-paired-release/device/publisher/differences.json). All 857 instruction digests and all raw section relocation records match in the publisher-path pair. Each of the 67 differing members has different constant data, C strings, embedded bitcode, load commands and symbol tables. Those differences still matter to a complete library equivalence claim. This concerns one dependency slice.
+
+An earlier public workflow completed all 70 jobs at application commit `25bcf5bd3418c574d92d63c7d5d5acef39d7d75c`. Its results have their own scope and identity. [Workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41354459646) · [job and artifact index](../evidence/child-boundary/oath51-paired-release/ci/prior-hosted-run.json).
+
+Previous target: `a13a88cb67fe9fa73c1a0bbb222a474b195e25eb`.
 
 [OW-2026-035](../findings/OW-2026-035.md) fixes a private-key import that could turn a public point into the wrong spending wallet. Five synthetic cases reproduced the original failures. The repaired importer passed all seven cases, plus all 16 published BIP32 invalid vectors and their valid-root control. Three of those official invalid inputs were accepted before the fix. Four locally encrypted prior-format wallets preserved their independently calculated scripts across restore, cold reopen and re-backup. The [source repair](https://github.com/devdasx/oath-wallet/pull/47) distinguishes fresh private input from recovery of a scalar already held in protected storage. The tested and merged Git trees are identical.
 

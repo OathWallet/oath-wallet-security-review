@@ -1,0 +1,71 @@
+import XCTest
+import OathSecp256k1
+
+final class CurveBoundaryTests: XCTestCase {
+    private typealias Curve = OathSecp256k1
+    private let one = Data(repeating: 0, count: 31) + Data([1])
+    private let digest = bytes("@digest@")
+    private let pub = bytes("@public@")
+    private let order = bytes("fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141")
+
+    func testIndependentRecoverableAndDERSignatures() throws {
+        let signature = try Curve.sign(digest, key: one)
+        XCTAssertEqual(signature, bytes("@der@"))
+        XCTAssertNoThrow(try Curve.verify(signature, digest: digest, publicKey: pub))
+        XCTAssertEqual(try Curve.sign(digest, key: one), signature)
+        let recoverable = try Curve.signRecoverable(digest, key: one)
+        XCTAssertEqual(recoverable, bytes("@compact@"))
+        XCTAssertEqual(try Curve.recover(recoverable, digest: digest), try Curve.publicKey(one, compressed: false))
+    }
+
+    func testMalformedAndMalleableSignatures() {
+        let signature = bytes("@der@")
+        XCTAssertThrowsError(try Curve.verify(bytes("@highDER@"), digest: digest, publicKey: pub))
+        XCTAssertThrowsError(try Curve.recover(bytes("@highCompact@"), digest: digest))
+        XCTAssertThrowsError(try Curve.recover(bytes("@compact@").dropLast()+Data([4]), digest: digest))
+        XCTAssertThrowsError(try Curve.verify(signature, digest: Data(repeating: 0,count: 32), publicKey: pub))
+        XCTAssertThrowsError(try Curve.verify(signature+Data([0]), digest: digest, publicKey: pub))
+        XCTAssertThrowsError(try Curve.verify(signature, digest: digest, publicKey: Data(repeating: 0,count: 33)))
+        XCTAssertThrowsError(try Curve.recover(Data(repeating: 0,count: 65), digest: digest))
+    }
+
+    func testScalarAndTweakLimits() throws {
+        XCTAssertEqual(try Curve.publicKey(one), pub)
+        for bad in [Data(repeating: 0,count: 32), order, Data(repeating: 255,count: 32), one.dropFirst()] {
+            XCTAssertThrowsError(try Curve.publicKey(bad))
+            XCTAssertThrowsError(try Curve.sign(digest,key: bad))
+            XCTAssertThrowsError(try Curve.signRecoverable(digest,key: bad))
+        }
+        let two = Data(repeating: 0,count: 31)+Data([2])
+        XCTAssertEqual(try Curve.adding(one,toSecretKey: one),two)
+        XCTAssertEqual(try Curve.adding(one,toPublicKey: pub),bytes("@twice@"))
+        let zero = Data(repeating: 0,count: 32)
+        XCTAssertEqual(try Curve.adding(zero,toSecretKey: one),one)
+        XCTAssertEqual(try Curve.adding(zero,toPublicKey: pub),pub)
+        var negativeOne = order
+        negativeOne[31] -= 1
+        for bad in [negativeOne,order,one.dropFirst()] {
+            XCTAssertThrowsError(try Curve.adding(bad,toSecretKey: one))
+            XCTAssertThrowsError(try Curve.adding(bad,toPublicKey: pub))
+        }
+    }
+
+    func testNonzeroStartOffsetOfValidBuffers() throws {
+        func slice(_ data: Data) -> Data { (Data(repeating: 0,count: 83)+data).dropFirst(83) }
+        let compact = slice(bytes("@compact@"))
+        XCTAssertGreaterThan(compact.startIndex,0)
+        XCTAssertEqual(try Curve.publicKey(slice(one)),pub)
+        XCTAssertEqual(try Curve.sign(slice(digest),key: slice(one)),bytes("@der@"))
+        XCTAssertNoThrow(try Curve.verify(slice(bytes("@der@")),digest: slice(digest),publicKey: slice(pub)))
+        XCTAssertEqual(try Curve.recover(compact,digest: slice(digest)),try Curve.publicKey(one,compressed: false))
+        XCTAssertEqual(try Curve.adding(slice(one),toPublicKey: slice(pub)),bytes("@twice@"))
+    }
+}
+
+private func bytes(_ hex: String) -> Data {
+    precondition(hex.count % 2 == 0)
+    return Data(stride(from: 0,to: hex.utf8.count,by: 2).map { i in
+        let start = hex.index(hex.startIndex,offsetBy: i)
+        return UInt8(hex[start..<hex.index(start,offsetBy: 2)],radix: 16)!
+    })
+}

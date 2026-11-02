@@ -1,5 +1,5 @@
 {
-  "source_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
+  "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
   "files": [
     {
       "path": ".github/workflows/deploy-website-services.yml",
@@ -43,7 +43,7 @@
     },
     {
       "path": ".gitleaksignore",
-      "sha256": "eb9ffa627eef6465eceaaa2a226dd5f6c7f68274262cc1d2f01994c26c0eb6cc",
+      "sha256": "2b4540425a6a37b9c507e5259f6c38c330150a985df4c861fce5be7d4468f38d",
       "bytes": 28556,
       "category": "build-or-documentation",
       "status": "outstanding",
@@ -12858,6 +12858,14 @@
       "evidence": []
     },
     {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/CorrelatedDiagnosticTestCapture.swift",
+      "sha256": "44ff5087752d545b3ca468ab0d587836d4d291303ee6e255b8b22d4968f9342f",
+      "bytes": 936,
+      "category": "test",
+      "status": "outstanding",
+      "evidence": []
+    },
+    {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/DiscoveryChainMetadataTests.swift",
       "sha256": "5d8d807eaf81c051d72c1511f77c7f416187007b15b0eca33bb3e91db9c1ce37",
       "bytes": 3223,
@@ -15484,8 +15492,8 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/TokenDiscoveryArtworkTests.swift",
-      "sha256": "2a5354b6f2e266d7c4b47ea7183698d6da0d0c8a9794fb8a225f0b06de938d81",
-      "bytes": 10130,
+      "sha256": "545b30a97d737c2951c95f29961669f663bd716cfcbece06fd3f6caed2b22753",
+      "bytes": 10091,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -15526,8 +15534,8 @@
     },
     {
       "path": "Packages/OathAnkr/Tests/OathAnkrTests/TonReadRecoveryTests.swift",
-      "sha256": "9b6ccf99c187babf5e2d7ff2859e55fe851d8068f43f95d914b62389f43fc951",
-      "bytes": 13720,
+      "sha256": "4ad16249c6d438f9e13025d4077e0468d993dc1b9ea20e8a585266984c814354",
+      "bytes": 13632,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -16222,31 +16230,35 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinKeys.swift",
-      "sha256": "6674fefe8cb749ec4976fbcc8aeb881b37a304b74db7e98101930a6934bc32b6",
-      "bytes": 19209,
+      "sha256": "46409993aff29ae73145be05008d33d921fd378acba8f0fd39f69fe9afd57697",
+      "bytes": 19274,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
         "review/EXTENDED-KEY-IMPORT.md",
-        "findings/OW-2026-035.md"
+        "findings/OW-2026-035.md",
+        "review/CURVE-WRAPPER-AND-INDEX.md"
       ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinMultisig.swift",
-      "sha256": "a2e6aefaf4bf4e5b79f748ebdbe8b542fb6f2465b0f168e0105bc80778ce266c",
-      "bytes": 10209,
+      "sha256": "96543471a4d7337c476e0ac981deacb40548019b071c476c1f5eca069b36f0ae",
+      "bytes": 10228,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/CURVE-WRAPPER-AND-INDEX.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinPrivateKeys.swift",
-      "sha256": "d2ebea5a57d8c102beebb88ad79267b3c2ac196458caeed2bcc9c23e2bda87e5",
-      "bytes": 3991,
+      "sha256": "20d3985c0330b7396477dea3502b31e467d941ae78e06e35e465526c56534c72",
+      "bytes": 4010,
       "category": "application",
       "status": "reviewed",
       "evidence": [
-        "review/BITCOIN-SIGNER-AND-CORE.md"
+        "review/BITCOIN-SIGNER-AND-CORE.md",
+        "review/CURVE-WRAPPER-AND-INDEX.md"
       ]
     },
     {
@@ -16259,12 +16271,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendPlan.swift",
-      "sha256": "67a322c68e1bb1d22d73991fc8e9ba3bf73f41ac1600f560db60cb8ce7539b25",
-      "bytes": 21322,
+      "sha256": "7fedfa7188245ab1350cbcc437d7ff995b38d2e06ce131ac16ed9ca9882059aa",
+      "bytes": 21341,
       "category": "application",
       "status": "partially-reviewed",
       "evidence": [
-        "review/BITCOIN-SIGNER-AND-CORE.md"
+        "review/BITCOIN-SIGNER-AND-CORE.md",
+        "review/CURVE-WRAPPER-AND-INDEX.md"
       ]
     },
     {
@@ -16350,11 +16363,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/ElectrumBitcoin.swift",
-      "sha256": "4718cda4da4bff8719d389a447a3be914b9bd591e39b918d84a3d708b204dfac",
-      "bytes": 8662,
+      "sha256": "00691116e5c22730202ce9195cb2a2799f633b0c632ba0b8c58c4d0f36fd3f9e",
+      "bytes": 8681,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "partially-reviewed",
+      "evidence": [
+        "review/CURVE-WRAPPER-AND-INDEX.md"
+      ]
     },
     {
       "path": "Packages/OathBitcoin/Sources/OathBitcoin/ElectrumMnemonic.swift",
@@ -16575,8 +16590,8 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinKeysTests.swift",
-      "sha256": "386bd7018f6bc1ef8d74f9555ab064a7647932a31a0ec7adab3f81fdc7a607c3",
-      "bytes": 6716,
+      "sha256": "1d55e1e5d6c5242e2dc78978bfa444286effc8f294bfc8613587ef689cd359b5",
+      "bytes": 8527,
       "category": "test",
       "status": "outstanding",
       "evidence": []
@@ -16594,12 +16609,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinMultisigTests.swift",
-      "sha256": "ba44e55daa66a1c03a8f1be37bc1681b166628153940c00035c46706de998fe0",
-      "bytes": 8933,
+      "sha256": "c551cb69ee9c17b18a34123ef4389ffb2d1ca7d87e027711f81837f94be79f66",
+      "bytes": 9159,
       "category": "test",
       "status": "partially-reviewed",
       "evidence": [
-        "review/BITCOIN-SIGNER-AND-CORE.md"
+        "review/BITCOIN-SIGNER-AND-CORE.md",
+        "review/CURVE-WRAPPER-AND-INDEX.md"
       ]
     },
     {
@@ -16639,12 +16655,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinSendTests.swift",
-      "sha256": "24a9486cadb4aff20ee430ed38ae0efc1cb3ea1a0d7488fd03a58dff1065626d",
-      "bytes": 22609,
+      "sha256": "54a44353b2ba79f82bc4201edc72580d84fad988e09d526d9b2489334e1edb32",
+      "bytes": 23174,
       "category": "test",
       "status": "partially-reviewed",
       "evidence": [
-        "review/BITCOIN-SIGNER-AND-CORE.md"
+        "review/BITCOIN-SIGNER-AND-CORE.md",
+        "review/CURVE-WRAPPER-AND-INDEX.md"
       ]
     },
     {
@@ -16750,12 +16767,13 @@
     },
     {
       "path": "Packages/OathBitcoin/Tests/OathBitcoinTests/ElectrumMnemonicTests.swift",
-      "sha256": "d4668bedaa1ba8fdb62a2133db8942ecea6c1d7750d804487c620f30860bdaf8",
-      "bytes": 11013,
+      "sha256": "0a0ab6a7cbf90187b96f559b3df79e2fa28505639c38c6ac05fc40eba0ef992e",
+      "bytes": 11809,
       "category": "test",
       "status": "partially-reviewed",
       "evidence": [
-        "review/BITCOIN-SIGNER-AND-CORE.md"
+        "review/BITCOIN-SIGNER-AND-CORE.md",
+        "review/CURVE-WRAPPER-AND-INDEX.md"
       ]
     },
     {
@@ -20013,8 +20031,10 @@
       "sha256": "2975e5c8f465a9a8141eb351465a7a9d565267321c31040952d6ef8fe66baca2",
       "bytes": 6913,
       "category": "application",
-      "status": "outstanding",
-      "evidence": []
+      "status": "reviewed",
+      "evidence": [
+        "review/CURVE-WRAPPER-AND-INDEX.md"
+      ]
     },
     {
       "path": "Packages/OathTokenImages/Package.resolved",
@@ -22543,7 +22563,7 @@
     },
     {
       "path": "Tools/PublicFixtureReview.json",
-      "sha256": "8f8be0f9f41e8af285329b7c3130c133beebcbb9b7314bcf4fd4e38c0bb47b37",
+      "sha256": "0a272ab054a57f20f3c3b7e36cb6d06b34288904fd1817ac2d1c7596ca0f7b36",
       "bytes": 55708,
       "category": "build-or-documentation",
       "status": "outstanding",

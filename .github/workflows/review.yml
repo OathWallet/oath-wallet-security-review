@@ -488,6 +488,9 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: python3 scripts/checkout.py
+      - run: python3 scripts/utxo-child-oracle.py .work/source
+      - run: python3 scripts/utxo-child-boundary.py .work/source --scratch .work/child-index-build --output evidence/ci/child-index
+      - run: python3 scripts/secp-wrapper.py .work/source --scratch .work/curve-build --output evidence/ci/curve
       - run: python3 scripts/extended-key-import.py import .work/source --scratch .work/key-build --output evidence/ci/import
       - run: python3 scripts/bip32-import-vectors.py .work/source --scratch .work/key-build --output evidence/ci/bip32
       - run: python3 scripts/extended-key-import.py recovery .work/source --scratch .work/key-build --output evidence/ci/recovery

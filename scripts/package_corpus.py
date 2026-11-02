@@ -18,10 +18,9 @@ from source_state import require_source_state
 SWIFTDRAW = '82699f4bdf2f075793cfa0d392eb27c59b41a3fe'
 ROOT = Path(__file__).resolve().parents[1]
 def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
-        local_dependencies=('OathDiagnostics',), pins=None, overlay=None, compare=True):
+        local_dependencies=('OathDiagnostics',), pins=None, overlay=None, compare=True, case_suites=None):
     pins = {'SwiftDraw': SWIFTDRAW} if pins is None else pins
     pkg = 'Packages/' + package
-    fixture_path = f"{pkg}/Tests/{package}Tests/{suite.split('.')[-1]}.swift"
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source',type=Path)
     parser.add_argument('--output',type=Path,required=True)
@@ -30,10 +29,27 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
     args=parser.parse_args()
     source=args.source.resolve()
     sha=require_source_state(source,args.expected_commit or json.loads((ROOT/'scope/source.json').read_text())['reviewed_commit'])
-    fixture = overlay.read_bytes() if overlay else (source/fixture_path).read_bytes()
-    if not overlay:
-        assert fixture==subprocess.check_output(['git','-C',source,'show',base+':'+fixture_path])
-    assert set(re.findall(rb'func (test\w+)\(',fixture))=={case.encode() for case in cases}
+    if case_suites is None:
+        fixture_path = f"{pkg}/Tests/{package}Tests/{suite.split('.')[-1]}.swift"
+        fixture = overlay.read_bytes() if overlay else (source/fixture_path).read_bytes()
+        if not overlay:
+            assert fixture==subprocess.check_output(['git','-C',source,'show',base+':'+fixture_path])
+        assert set(re.findall(rb'func (test\w+)\(',fixture))=={case.encode() for case in cases}
+        fixture_hash = hashlib.sha256(fixture).hexdigest()
+    else:
+        if overlay or set(cases) != set(case_suites):
+            raise ValueError('Expected the exact set of selected test cases and no overlay')
+        suite_hashes = {}
+        for name in sorted(set(case_suites.values())):
+            path = f"{pkg}/Tests/{package}Tests/{name.split('.')[-1]}.swift"
+            data = (source/path).read_bytes()
+            if data != subprocess.check_output(['git','-C',source,'show',base+':'+path]):
+                raise ValueError('Test file differs between comparison revisions: '+path)
+            declared = set(re.findall(rb'func (test\w+)\(',data))
+            if any(case.encode() not in declared for case in cases if case_suites[case]==name):
+                raise ValueError('Missing selected case in '+path)
+            suite_hashes[name] = hashlib.sha256(data).hexdigest()
+        fixture_hash = hashlib.sha256(json.dumps(suite_hashes,sort_keys=True).encode()).hexdigest()
     env={k:v for k,v in os.environ.items() if k in ['HOME','PATH','TMPDIR','DEVELOPER_DIR','SDKROOT','LANG','LC_ALL','CI']}
     out=args.output.resolve();out.mkdir(parents=True,exist_ok=True)
     start=time.monotonic();rows=[]
@@ -57,7 +73,8 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
             bundles=list(binary.glob('*.xctest'));assert len(bundles)==1
             for case in cases:
                 log=out/(phase+'-'+case+'.log')
-                command=['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)','xcrun','xctest','-XCTest',suite+'/'+case,str(bundles[0])]
+                test_suite = case_suites[case] if case_suites else suite
+                command=['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)','xcrun','xctest','-XCTest',test_suite+'/'+case,str(bundles[0])]
                 with log.open('w') as stream:
                     code,expired=logged_command(command,stream=stream,env=env,timeout=45)
                 status='failed' if expired else outcome(log.read_text(errors='replace'),code,case,phase=='before')
@@ -66,8 +83,10 @@ def run(*, check, base, suite, cases, outcome, scope, package='OathTokenImages',
     require_source_state(source,sha)
     ok=len(rows)==len(phases)*len(cases) and all(x['status']!='failed' for x in rows)
     result=dict(check=check,source_commit=sha,baseline_commit=base,dependency_commits=pins,
-                fixture_sha256=hashlib.sha256(fixture).hexdigest(),status='passed' if ok else 'failed',executions=rows,
+                fixture_sha256=fixture_hash,status='passed' if ok else 'failed',executions=rows,
                 duration_seconds=round(time.monotonic()-start,3),scope=scope)
+    if case_suites:
+        result.update(suite_sha256=suite_hashes,case_suites=case_suites)
     if 'SwiftDraw' in pins: result['swiftdraw_commit'] = pins['SwiftDraw']
     log=out/(check+'.log');log.write_text(json.dumps(result,indent=2)+'\n')
     result.update(log=log.name,log_sha256=hashlib.sha256(log.read_bytes()).hexdigest())

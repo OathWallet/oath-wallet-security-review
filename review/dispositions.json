@@ -7852,17 +7852,19 @@
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinPrivateKeys.swift": {
-    "sha256": "d2ebea5a57d8c102beebb88ad79267b3c2ac196458caeed2bcc9c23e2bda87e5",
+    "sha256": "20d3985c0330b7396477dea3502b31e467d941ae78e06e35e465526c56534c72",
     "status": "reviewed",
     "evidence": [
-      "review/BITCOIN-SIGNER-AND-CORE.md"
+      "review/BITCOIN-SIGNER-AND-CORE.md",
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendPlan.swift": {
-    "sha256": "67a322c68e1bb1d22d73991fc8e9ba3bf73f41ac1600f560db60cb8ce7539b25",
+    "sha256": "7fedfa7188245ab1350cbcc437d7ff995b38d2e06ce131ac16ed9ca9882059aa",
     "status": "partially-reviewed",
     "evidence": [
-      "review/BITCOIN-SIGNER-AND-CORE.md"
+      "review/BITCOIN-SIGNER-AND-CORE.md",
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
   "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinConnectSignatureProofTests.swift": {
@@ -7880,17 +7882,19 @@
     ]
   },
   "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinSendTests.swift": {
-    "sha256": "24a9486cadb4aff20ee430ed38ae0efc1cb3ea1a0d7488fd03a58dff1065626d",
+    "sha256": "54a44353b2ba79f82bc4201edc72580d84fad988e09d526d9b2489334e1edb32",
     "status": "partially-reviewed",
     "evidence": [
-      "review/BITCOIN-SIGNER-AND-CORE.md"
+      "review/BITCOIN-SIGNER-AND-CORE.md",
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
   "Packages/OathBitcoin/Tests/OathBitcoinTests/BitcoinMultisigTests.swift": {
-    "sha256": "ba44e55daa66a1c03a8f1be37bc1681b166628153940c00035c46706de998fe0",
+    "sha256": "c551cb69ee9c17b18a34123ef4389ffb2d1ca7d87e027711f81837f94be79f66",
     "status": "partially-reviewed",
     "evidence": [
-      "review/BITCOIN-SIGNER-AND-CORE.md"
+      "review/BITCOIN-SIGNER-AND-CORE.md",
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
   "Packages/OathBitcoin/Tests/OathBitcoinTests/AezeedBitcoinTests.swift": {
@@ -7901,10 +7905,11 @@
     ]
   },
   "Packages/OathBitcoin/Tests/OathBitcoinTests/ElectrumMnemonicTests.swift": {
-    "sha256": "d4668bedaa1ba8fdb62a2133db8942ecea6c1d7750d804487c620f30860bdaf8",
+    "sha256": "0a0ab6a7cbf90187b96f559b3df79e2fa28505639c38c6ac05fc40eba0ef992e",
     "status": "partially-reviewed",
     "evidence": [
-      "review/BITCOIN-SIGNER-AND-CORE.md"
+      "review/BITCOIN-SIGNER-AND-CORE.md",
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
   "Packages/OathDatabase/Sources/OathDatabase/WalletConnectBitcoin.swift": {
@@ -8018,11 +8023,12 @@
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinKeys.swift": {
-    "sha256": "6674fefe8cb749ec4976fbcc8aeb881b37a304b74db7e98101930a6934bc32b6",
+    "sha256": "46409993aff29ae73145be05008d33d921fd378acba8f0fd39f69fe9afd57697",
     "status": "partially-reviewed",
     "evidence": [
       "review/EXTENDED-KEY-IMPORT.md",
-      "findings/OW-2026-035.md"
+      "findings/OW-2026-035.md",
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
   "Packages/OathBitcoin/Sources/OathBitcoin/DogecoinKeys.swift": {
@@ -8095,6 +8101,27 @@
     "evidence": [
       "review/EXTENDED-KEY-IMPORT.md",
       "findings/OW-2026-035.md"
+    ]
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinMultisig.swift": {
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/CURVE-WRAPPER-AND-INDEX.md"
+    ],
+    "sha256": "96543471a4d7337c476e0ac981deacb40548019b071c476c1f5eca069b36f0ae"
+  },
+  "Packages/OathBitcoin/Sources/OathBitcoin/ElectrumBitcoin.swift": {
+    "status": "partially-reviewed",
+    "evidence": [
+      "review/CURVE-WRAPPER-AND-INDEX.md"
+    ],
+    "sha256": "00691116e5c22730202ce9195cb2a2799f633b0c632ba0b8c58c4d0f36fd3f9e"
+  },
+  "Packages/OathSecp256k1/Sources/OathSecp256k1/OathSecp256k1.swift": {
+    "sha256": "2975e5c8f465a9a8141eb351465a7a9d565267321c31040952d6ef8fe66baca2",
+    "status": "reviewed",
+    "evidence": [
+      "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   }
 }

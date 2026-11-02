@@ -31651,5 +31651,546 @@
     "runtime_scope": "compile-only",
     "live_network_tests_enabled": false,
     "evidence_path": "evidence/typed-keys/oath50-release-evidence/test-followup/build.json"
+  },
+  {
+    "check": "utxo-child-boundary",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "baseline_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+    "dependency_commits": {
+      "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+    },
+    "fixture_sha256": "22484d295f44d08124e50435aad72f6c57b467cb55a92f7934b704eac61bc26c",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "before",
+        "case": "testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports",
+        "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports.log",
+        "log_sha256": "ae732e8fde4966323637c883c536de49c792d42358564ab6a6c6e6a76c746419"
+      },
+      {
+        "phase": "before",
+        "case": "testFinalNormalChildStillRejectsHardenedAndFixedKeys",
+        "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "before-testFinalNormalChildStillRejectsHardenedAndFixedKeys.log",
+        "log_sha256": "36f577842a99c033ef4c06c37631c8c7fe935f78fd86e1f48cbeb28dbea686b7"
+      },
+      {
+        "phase": "before",
+        "case": "testFinalNormalChildSignsInputAndChange",
+        "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testFinalNormalChildSignsInputAndChange.log",
+        "log_sha256": "29690f0e9827017179d4fa9cf77e0b7d4922c9e0a09d28b5c10b7ae60a9681e0"
+      },
+      {
+        "phase": "before",
+        "case": "testFinalNormalChildElectrumLeafExport",
+        "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testFinalNormalChildElectrumLeafExport.log",
+        "log_sha256": "8cded31ecb714420ea2f5e296ed18ee96babb143161f36c0826ad96286df271d"
+      },
+      {
+        "phase": "before",
+        "case": "testFinalNormalChildMultisigInputAndChange",
+        "source_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
+        "status": "reproduced",
+        "exit_code": 1,
+        "timed_out": false,
+        "log": "before-testFinalNormalChildMultisigInputAndChange.log",
+        "log_sha256": "0698d7fac2121b83c0caf280a58c5261d69efe8a9f2797dbfb4097d8215e4c49"
+      },
+      {
+        "phase": "after",
+        "case": "testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports.log",
+        "log_sha256": "719b64e38a5ecabe9fcd80fe4640fdc33748c4290b1e49ad141818191f20b43f"
+      },
+      {
+        "phase": "after",
+        "case": "testFinalNormalChildStillRejectsHardenedAndFixedKeys",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testFinalNormalChildStillRejectsHardenedAndFixedKeys.log",
+        "log_sha256": "3a7b190e0972f2f66ba3a9cf527078f4c6bc529b1997572d65dac628e9a5c5e3"
+      },
+      {
+        "phase": "after",
+        "case": "testFinalNormalChildSignsInputAndChange",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testFinalNormalChildSignsInputAndChange.log",
+        "log_sha256": "72688d636b68a714ac699f625df3e36df247da90693f58d82dc75c2112f0edfb"
+      },
+      {
+        "phase": "after",
+        "case": "testFinalNormalChildElectrumLeafExport",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testFinalNormalChildElectrumLeafExport.log",
+        "log_sha256": "09a2a1993d4a8c185d5435721cd1a57b37637544f5b2e585b77d9e129e8efa3d"
+      },
+      {
+        "phase": "after",
+        "case": "testFinalNormalChildMultisigInputAndChange",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testFinalNormalChildMultisigInputAndChange.log",
+        "log_sha256": "9c216b59df35c1af87d21b27f4a9c4fe2d08fa4d5e15add4f3c6daf7553c0b92"
+      }
+    ],
+    "duration_seconds": 78.595,
+    "scope": "Explicit final normal child, finite fixed-key and hardened controls, single-key and multisig signing, Electrum leaf export, independent four-chain P2PKH scripts. One synthetic transaction at a time, network denied. Gap discovery policy is separate.",
+    "suite_sha256": {
+      "OathBitcoinTests.BitcoinKeysTests": "1d55e1e5d6c5242e2dc78978bfa444286effc8f294bfc8613587ef689cd359b5",
+      "OathBitcoinTests.BitcoinMultisigTests": "c551cb69ee9c17b18a34123ef4389ffb2d1ca7d87e027711f81837f94be79f66",
+      "OathBitcoinTests.BitcoinSendTests": "54a44353b2ba79f82bc4201edc72580d84fad988e09d526d9b2489334e1edb32",
+      "OathBitcoinTests.ElectrumMnemonicTests": "0a0ab6a7cbf90187b96f559b3df79e2fa28505639c38c6ac05fc40eba0ef992e"
+    },
+    "case_suites": {
+      "testFinalNormalChildMatchesIndependentBIP44ScriptsAndExports": "OathBitcoinTests.BitcoinKeysTests",
+      "testFinalNormalChildStillRejectsHardenedAndFixedKeys": "OathBitcoinTests.BitcoinKeysTests",
+      "testFinalNormalChildSignsInputAndChange": "OathBitcoinTests.BitcoinSendTests",
+      "testFinalNormalChildElectrumLeafExport": "OathBitcoinTests.ElectrumMnemonicTests",
+      "testFinalNormalChildMultisigInputAndChange": "OathBitcoinTests.BitcoinMultisigTests"
+    },
+    "log": "utxo-child-boundary.log",
+    "log_sha256": "0af7dc4158aa8a5570a887a5a1b3853b8b8123d0f600485ed66b41c31ae5bdef",
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/child/utxo-child-boundary.json"
+  },
+  {
+    "check": "secp-wrapper",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "baseline_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "dependency_commits": {
+      "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+      "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+    },
+    "fixture_sha256": "03cbbbff70878d35748cc08bf6cf4584b8fbdd9258008a31fa94479cc44fd7b0",
+    "status": "passed",
+    "executions": [
+      {
+        "phase": "after",
+        "case": "testIndependentRecoverableAndDERSignatures",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testIndependentRecoverableAndDERSignatures.log",
+        "log_sha256": "0cdd4f0c0ed3b5a2badad3ce44cc0d65f0c033699ba538d9e98cf60c69cd82a3"
+      },
+      {
+        "phase": "after",
+        "case": "testMalformedAndMalleableSignatures",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testMalformedAndMalleableSignatures.log",
+        "log_sha256": "c6a0c06137c8583de5f6f0318c9df1853ea680a7c39425106402245315bd8bc2"
+      },
+      {
+        "phase": "after",
+        "case": "testScalarAndTweakLimits",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testScalarAndTweakLimits.log",
+        "log_sha256": "3d931b14f06aa356316967d627c33ee188a4919c9e2d56c80ad20547c815f718"
+      },
+      {
+        "phase": "after",
+        "case": "testNonzeroStartOffsetOfValidBuffers",
+        "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+        "status": "passed",
+        "exit_code": 0,
+        "timed_out": false,
+        "log": "after-testNonzeroStartOffsetOfValidBuffers.log",
+        "log_sha256": "f4c987ef3de0cb670259cbe893e06add39a1375b1f2fb21c8b6b5a67e7012c05"
+      }
+    ],
+    "duration_seconds": 17.919,
+    "scope": "Network-denied production Swift curve wrapper, seven exported operations including both tweak overloads. Independent RFC6979 computation and OpenSSL secp256k1 point multiplication; neither constant-time behavior nor memory erasure is demonstrated.",
+    "log": "secp-wrapper.log",
+    "log_sha256": "ce428fd8362eeadfa6e430512753d05791b206f06822d69422e0425eeb3c221d",
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/curve/secp-wrapper.json"
+  },
+  {
+    "check": "OathAezeed",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAezeed",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 13.04,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 7 selected; 7 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "6e6f14c1c8ff84cee534f28944e449b806634d4ef743f113acd166892bef6c5f",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "bdc8b19fdff7b386997d3700c43f7255938b31731f5512fd353f987f81e625b8"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/OathAezeed.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 47.97,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 364 selected; 304 passed; 60 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "74d7a10923118d86ca7f0448852ccf39d185f946a86ace4d88caa56a4fe1915b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 364,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 60,
+      "sha256": "9a5ef303594bdf2e21441ac995f0b9d2425b7e83297f958157c542a6222fc1d7"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/OathBitcoin.json"
+  },
+  {
+    "check": "OathCloudBackup",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathCloudBackup",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 37.64,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 58 selected; 58 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.002 seconds."
+    ],
+    "log_sha256": "8c599358e7cdea66de0b9ba197969d1fe710bdeb065b31fdf0de509831191979",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 58,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "05ea65ded28cbba5c87ec79e021a1fb36ef5d97190457482d590360649671113"
+    },
+    "swift_testing": {
+      "log_sha256": "40ef827886cfe0ab7fea237c2f73632b7b335cda73f1387f7b43818bff5076c6",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.002 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/OathCloudBackup.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 7.09,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 120 selected; 118 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "34fbddd9838980edea19c7931410d3b8eb20fbaadd5acb79a56529e7af08a92a",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 120,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "1a30503baacc12171fd5448a4baf9b2ecdadb8285e957330d2186228d8973758"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/OathDiagnostics.json"
+  },
+  {
+    "check": "OathTokenImages",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathTokenImages",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 10.48,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 102 selected; 92 passed; 10 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "4d7d56705690eb7639ae92113906c564c95e3f4979aad3f7506b78174f634b1b",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 102,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 10,
+      "sha256": "f50fa88bc27c854a990448590498d78169f46ffe35398900f040016108fb7051"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/OathTokenImages.json"
+  },
+  {
+    "check": "OathWalletHandoff",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathWalletHandoff",
+      "<SCRATCH>-native",
+      "/private/tmp/oath51-child-gates"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 15.25,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 0 selected; 0 passed; 0 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 12 tests in 0 suites passed after 0.002 seconds."
+    ],
+    "log_sha256": "67645fa2bfe7281788e40f8579525ff37c5ea4385df9358838a5f31a76b50149",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "sha256": "eeb1244359196b9c1ef5c15c61e8b4a4e0245b21af8e85c602b7e7bb90bccc56"
+    },
+    "swift_testing": {
+      "log_sha256": "8980d27378ae8ee0ce26450aabe8c8dd92a48fd09fa9db9d45c5aa6c27a57baf",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 12 tests in 0 suites passed after 0.002 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/OathWalletHandoff.json"
+  },
+  {
+    "check": "build",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 200.79,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "** BUILD SUCCEEDED **"
+    ],
+    "log_sha256": "b4b7529f4e96ebf222b2bf01eba029f2ab4e38083b08aad50a63cf4642d8a070",
+    "runtime_scope": "compile-only",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/build.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.26,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "ddcff02113cd8daf5e3c7a635c267a4cf4af6ab205d374f172faf1fe033809fc",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/diagnostics-coverage.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 29.55,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "c62db940732aa05aaca12baf408e394eebda278d73b361cb846ee19b33a003e0",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/validation/public.json"
+  },
+  {
+    "check": "OathAnkr",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathAnkr",
+      "<SCRATCH>-native",
+      "<SOURCE>-results"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 310.87,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 1490 selected; 1296 passed; 194 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "e0cd0cf6cfb8ec9765f110536a37a9dc99de27bb58e66b498213afdc416b2b19",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 1490,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 194,
+      "sha256": "392b7b25aa4b932291f188df80f15cb7f99b7e36b6383df095d075a3ce12a070"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/previous/OathAnkr.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "85571136c4dd0397e99c64c63d5244cc58d44092",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.32,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "ddcff02113cd8daf5e3c7a635c267a4cf4af6ab205d374f172faf1fe033809fc",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "evidence_path": "evidence/child-boundary/oath51-paired-release/previous/diagnostics-coverage.json"
   }
 ]

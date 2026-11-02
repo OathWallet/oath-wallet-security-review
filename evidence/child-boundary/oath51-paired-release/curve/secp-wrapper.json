@@ -1,0 +1,57 @@
+{
+  "check": "secp-wrapper",
+  "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+  "baseline_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+  "dependency_commits": {
+    "bdk-swift": "55284dc4e767c301c7926c412daad241c0667106",
+    "swift-secp256k1": "e70a10e036a55fffea31568f0af92d69b6d449cd"
+  },
+  "fixture_sha256": "03cbbbff70878d35748cc08bf6cf4584b8fbdd9258008a31fa94479cc44fd7b0",
+  "status": "passed",
+  "executions": [
+    {
+      "phase": "after",
+      "case": "testIndependentRecoverableAndDERSignatures",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testIndependentRecoverableAndDERSignatures.log",
+      "log_sha256": "0cdd4f0c0ed3b5a2badad3ce44cc0d65f0c033699ba538d9e98cf60c69cd82a3"
+    },
+    {
+      "phase": "after",
+      "case": "testMalformedAndMalleableSignatures",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testMalformedAndMalleableSignatures.log",
+      "log_sha256": "c6a0c06137c8583de5f6f0318c9df1853ea680a7c39425106402245315bd8bc2"
+    },
+    {
+      "phase": "after",
+      "case": "testScalarAndTweakLimits",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testScalarAndTweakLimits.log",
+      "log_sha256": "3d931b14f06aa356316967d627c33ee188a4919c9e2d56c80ad20547c815f718"
+    },
+    {
+      "phase": "after",
+      "case": "testNonzeroStartOffsetOfValidBuffers",
+      "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+      "status": "passed",
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "after-testNonzeroStartOffsetOfValidBuffers.log",
+      "log_sha256": "f4c987ef3de0cb670259cbe893e06add39a1375b1f2fb21c8b6b5a67e7012c05"
+    }
+  ],
+  "duration_seconds": 17.919,
+  "scope": "Network-denied production Swift curve wrapper, seven exported operations including both tweak overloads. Independent RFC6979 computation and OpenSSL secp256k1 point multiplication; neither constant-time behavior nor memory erasure is demonstrated.",
+  "log": "secp-wrapper.log",
+  "log_sha256": "ce428fd8362eeadfa6e430512753d05791b206f06822d69422e0425eeb3c221d"
+}

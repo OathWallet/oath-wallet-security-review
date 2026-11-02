@@ -1,0 +1,37 @@
+{
+  "check": "OathCloudBackup",
+  "source_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
+  "command": [
+    "python3",
+    "<AUDIT>/scripts/isolated_tests.py",
+    "<SOURCE>",
+    "OathCloudBackup",
+    "<SCRATCH>-native",
+    "/private/tmp/oath51-child-gates"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 37.64,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "XCTest: 58 selected; 58 passed; 0 skipped; 0 failed",
+    "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.002 seconds."
+  ],
+  "log_sha256": "8c599358e7cdea66de0b9ba197969d1fe710bdeb065b31fdf0de509831191979",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false,
+  "xunit": {
+    "tests": 58,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "sha256": "05ea65ded28cbba5c87ec79e021a1fb36ef5d97190457482d590360649671113"
+  },
+  "swift_testing": {
+    "log_sha256": "40ef827886cfe0ab7fea237c2f73632b7b335cda73f1387f7b43818bff5076c6",
+    "summaries": [
+      "\udbc4\udc5b  Test run with 1 test in 0 suites passed after 0.002 seconds."
+    ]
+  }
+}
