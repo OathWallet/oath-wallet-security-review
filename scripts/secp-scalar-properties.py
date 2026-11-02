@@ -19,7 +19,7 @@ LAMBDA = 0x5363ad4cc05c30e0a5261c028812645a122e22ea20816678df02967c1b23bd72
 SEED = b'oath-scalar-properties-v1'
 TREES = ['libsecp256k1', 'libsecp256k1_zkp']
 MODES = ['USE_FORCE_WIDEMUL_INT64','USE_FORCE_WIDEMUL_INT128','USE_FORCE_WIDEMUL_INT128_STRUCT']
-WIDTH = 5 + 10*32
+WIDTH = 5 + 12*32
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
@@ -48,8 +48,8 @@ def verify(records, data):
         flags=bytes([raw_a>=N,raw_b>=N,0<raw_a<N,a+b>=N,a>N//2])
         outputs=[int.from_bytes(row[j:j+32],'big') for j in range(5,WIDTH,32)]
         expected=[a,b,(a+b)%N,(a*b)%N,((a+N) if a%2 else a)//2,(-a)%N,inverses[a],inverses[a]]
-        r1,r2=outputs[-2:]
-        if (row[:5]!=flags or outputs[:8]!=expected or max(r1,r2)>=N or
+        r1,r2=outputs[8:10]
+        if (row[:5]!=flags or outputs[:8]!=expected or outputs[10:]!=[a*a%N,raw_a%2**64] or max(r1,r2)>=N or
             (r1+LAMBDA*r2)%N!=a or max(min(r1,N-r1),min(r2,N-r2))>=2**128):
             raise ValueError(f'Scalar oracle mismatch at public fixture {i}')
 
@@ -77,6 +77,8 @@ def main():
             for mode in MODES:
                 binary=directory/'driver'
                 flags=['-std=c11','-O2','-DVERIFY','-D'+mode,'-fsanitize=undefined','-fno-sanitize-recover=undefined']
+                if tree=='libsecp256k1_zkp':
+                    flags.append('-DOATH_TEST_ZKP')
                 deps=directory/'includes.d'
                 subprocess.run([args.cc,*flags,'-I',src,'-MMD','-MF',deps,driver,'-o',binary],check=True)
                 # Extract only the package inputs from the compiler dependency list.

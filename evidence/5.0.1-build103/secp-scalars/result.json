@@ -4,7 +4,7 @@
   "seed": "oath-scalar-properties-v1",
   "case_count": 4649,
   "corpus_sha256": "a3555e5d98d65a69a700203d35e219983d9dbc07ce8c54368aa56f6b3c060b17",
-  "harness_sha256": "212c1a44a273c5acbad724c527ae3aff22afa1aeddefcd251795607896898d74",
+  "harness_sha256": "1d1fd2d8f0e3d2f9490cdf9df835dcfd3b525227a920b4bc24a9d290d431cb2b",
   "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
   "runs": [
     {
@@ -18,7 +18,7 @@
         "-fno-sanitize-recover=undefined"
       ],
       "cases": 4649,
-      "output_sha256": "2ec4bf717d89dbdbf2f3d1f09badbe27a7485064a11f8eb0c95f9a9e878cf4eb",
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
       "compiled_package_inputs": {
         "Sources/libsecp256k1/include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
         "Sources/libsecp256k1/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
@@ -45,7 +45,7 @@
         "-fno-sanitize-recover=undefined"
       ],
       "cases": 4649,
-      "output_sha256": "2ec4bf717d89dbdbf2f3d1f09badbe27a7485064a11f8eb0c95f9a9e878cf4eb",
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
       "compiled_package_inputs": {
         "Sources/libsecp256k1/include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
         "Sources/libsecp256k1/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
@@ -74,7 +74,7 @@
         "-fno-sanitize-recover=undefined"
       ],
       "cases": 4649,
-      "output_sha256": "2ec4bf717d89dbdbf2f3d1f09badbe27a7485064a11f8eb0c95f9a9e878cf4eb",
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
       "compiled_package_inputs": {
         "Sources/libsecp256k1/include/secp256k1.h": "328da0a2e0433e9cdcfae1fbde894d50a17c349e366e03f3f99fe8558ebd9af9",
         "Sources/libsecp256k1/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
@@ -100,10 +100,11 @@
         "-DVERIFY",
         "-DUSE_FORCE_WIDEMUL_INT64",
         "-fsanitize=undefined",
-        "-fno-sanitize-recover=undefined"
+        "-fno-sanitize-recover=undefined",
+        "-DOATH_TEST_ZKP"
       ],
       "cases": 4649,
-      "output_sha256": "2ec4bf717d89dbdbf2f3d1f09badbe27a7485064a11f8eb0c95f9a9e878cf4eb",
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
       "compiled_package_inputs": {
         "Sources/libsecp256k1_zkp/include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
         "Sources/libsecp256k1_zkp/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
@@ -127,10 +128,11 @@
         "-DVERIFY",
         "-DUSE_FORCE_WIDEMUL_INT128",
         "-fsanitize=undefined",
-        "-fno-sanitize-recover=undefined"
+        "-fno-sanitize-recover=undefined",
+        "-DOATH_TEST_ZKP"
       ],
       "cases": 4649,
-      "output_sha256": "2ec4bf717d89dbdbf2f3d1f09badbe27a7485064a11f8eb0c95f9a9e878cf4eb",
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
       "compiled_package_inputs": {
         "Sources/libsecp256k1_zkp/include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
         "Sources/libsecp256k1_zkp/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
@@ -156,10 +158,11 @@
         "-DVERIFY",
         "-DUSE_FORCE_WIDEMUL_INT128_STRUCT",
         "-fsanitize=undefined",
-        "-fno-sanitize-recover=undefined"
+        "-fno-sanitize-recover=undefined",
+        "-DOATH_TEST_ZKP"
       ],
       "cases": 4649,
-      "output_sha256": "2ec4bf717d89dbdbf2f3d1f09badbe27a7485064a11f8eb0c95f9a9e878cf4eb",
+      "output_sha256": "1179550f1815d9749b821b5198039846c44cdd18c1454dec29051698e8713607",
       "compiled_package_inputs": {
         "Sources/libsecp256k1_zkp/include/secp256k1.h": "48cc5722b9a604df49ef4f9a4877aea7267bc4ea32f7509cdeb124cdd8d2057e",
         "Sources/libsecp256k1_zkp/src/int128_impl.h": "5683c02dfc495639da259d80624711c1c449bbaee6186729e399e713a28b4719",
@@ -196,6 +199,6 @@
     "Sources/libsecp256k1_zkp/src/scalar_low.h": "3cab20db10224ff85ee7c6d975d2968c1370ed8e96ea26b94650f6e2bac31ac4",
     "Sources/libsecp256k1_zkp/src/scalar_low_impl.h": "c7c73a26dae95abd861b7927e5c0a1add5dd7efb20de69b3e62ff24987170206"
   },
-  "duration_seconds": 3.67,
+  "duration_seconds": 4.05,
   "scope": "Deterministic host arithmetic and decomposition, with VERIFY and undefined-behavior checks. No constant-time or device-code equivalence claim."
 }
