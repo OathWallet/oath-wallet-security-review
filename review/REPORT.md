@@ -2,12 +2,11 @@
 
 **IN PROGRESS. This is not a completed whole-wallet audit.**
 
-This is a maintainer-commissioned, Codex-led security review. It is not an
-independent certification, a guarantee of zero vulnerabilities, or an App Store
-binary-equivalence claim. The baseline is Oath Wallet **4.1.15 (100)**,
-`c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
+**Active target — 5.0.1 (103).** The maintainer-commissioned Codex review now targets public source `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect showed iOS version 5.0.1 Waiting for Review on 2 November 2026. [Current results and release-specific findings](RELEASE-5.0.1-103.md) · [Coverage inventory](../scope/inventory.json).
 
-Current review target: **`8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`**.
+## Historical 4.1.15 series
+
+The original baseline was `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Its last review target was `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`. The dated entries below describe that earlier work.
 
 ## Progress 57 · 2 November 2026
 

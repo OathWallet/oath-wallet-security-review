@@ -27,7 +27,7 @@ def main():
     source, output = args.source.resolve(), args.output.resolve()
     config = json.loads((ROOT/'scope/source.json').read_text())
     sha = require_source_state(source, config['reviewed_commit'])
-    baseline = subprocess.check_output(['git', '-C', str(source), 'show', config['baseline_commit']+':'+PRODUCTION])
+    baseline = subprocess.check_output(['git', '-C', str(source), 'show', config['historical_baseline_commit']+':'+PRODUCTION])
     assert hashlib.sha256(baseline).hexdigest() == BASELINE_HASH, 'Unexpected baseline implementation'
     fixed = (source/PRODUCTION).read_bytes()
     assert baseline != fixed, 'No production repair present'
@@ -54,7 +54,7 @@ def main():
             text = re.sub(r'/(?:private/)?var/folders/[^\s:]+/oath-sdk-validation-[^/\s]+', '<SDK-HARNESS>', text)
             log.write_text(text)
             cases = sdk_case_counts(text)
-            result = dict(stage=stage, source_commit=sha, baseline_commit=config['baseline_commit'],
+            result = dict(stage=stage, source_commit=sha, baseline_commit=config['historical_baseline_commit'],
                 reproduction_tree='final source with only the production ingress file restored from baseline' if stage=='before' else 'exact final source',
                 production_sha256=hashlib.sha256(implementation).hexdigest(),
                 test_sha256=hashlib.sha256((source/TEST).read_bytes()).hexdigest(),

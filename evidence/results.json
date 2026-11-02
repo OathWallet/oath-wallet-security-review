@@ -39946,5 +39946,184 @@
     "uncompressed_log_sha256": "5889aa011ff1371ed7f951eb1be69b200999ebb1e33f651e3547dd7806443071",
     "original_log_sha256": "5889aa011ff1371ed7f951eb1be69b200999ebb1e33f651e3547dd7806443071",
     "evidence": "evidence/progress57/provider/result.json"
+  },
+  {
+    "check": "OathBitcoin",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathBitcoin",
+      "<SCRATCH>-native",
+      "<RUN>/tests/OathBitcoin"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 106.98,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 374 selected; 314 passed; 60 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "382d7e8ed1fc2b23512e81015ba0d1a719f94196945678cfe0a50b0a62eb02c5",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 374,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 60,
+      "sha256": "ea0a23f5db31da8be623cd52c56057c4052433df5e021aedcb64d5fbddc0e517"
+    },
+    "swift_testing": {
+      "log_sha256": "b432e6f170dac5bbc1d29a41af9f318c25b356a2fc7e779957f74b6802b4725f",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_log_sha256": "3998ce5353f03ffea27dc951b8ed11bcf358cea8886b5669c46956aa58cd4f4c",
+    "original_report_sha256": "c0fe8dcde204768f2d9023740cfcbf2651ad2cf819a68e5ed307e9e6dbfe0559",
+    "log": "OathBitcoin.log.gz",
+    "log_encoding": "gzip",
+    "evidence": "evidence/5.0.1-build103/checks/OathBitcoin/result.json"
+  },
+  {
+    "check": "OathDiagnostics",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "<AUDIT>/scripts/isolated_tests.py",
+      "<SOURCE>",
+      "OathDiagnostics",
+      "<SCRATCH>-native",
+      "<RUN>/tests/OathDiagnostics"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 20.6,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "XCTest: 121 selected; 119 passed; 2 skipped; 0 failed",
+      "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "bc205927f73f0fe065f84fd53829bb9e8474210c2868255de7ccd664cdbdabf9",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xunit": {
+      "tests": 121,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "sha256": "49a15152a99f476f8876b2813dbc313339f01db17e21400e99d78d5f4044a5f5"
+    },
+    "swift_testing": {
+      "log_sha256": "c94ad20cfaa8217d66fae49a65bb44ec17cf6d03e77c21b8d0a2773056b87c91",
+      "summaries": [
+        "\udbc4\udc5b  Test run with 0 tests in 0 suites passed after 0.001 seconds."
+      ]
+    },
+    "original_log_sha256": "8e45e7129f7752d2a0b192ed63283d3499579626c475698d23a47fc9170622a8",
+    "original_report_sha256": "f86979fbedd26093744ce8d77b2ea82f72da9c0f65299a74850ca0fc665f8c16",
+    "log": "OathDiagnostics.log.gz",
+    "log_encoding": "gzip",
+    "evidence": "evidence/5.0.1-build103/checks/OathDiagnostics/result.json"
+  },
+  {
+    "check": "clipboard",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckClipboard.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 1.47,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 33 clipboard policy checks using an in-memory pasteboard; no devices or clipboard contents accessed."
+    ],
+    "log_sha256": "e1e68384eee6445b6bd88cd193def4693637c0022cb245989f9d9faa8ba8dfd1",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "39a8c42f3db002d3f84bb80fcb184cd63834885b4da27fc0bd25461013984312",
+    "original_report_sha256": "9a7d24668900bd5d1ed83e223c2e80b8f9bb316f83a0f5f1dea7db374d80b5ee",
+    "log": "clipboard.log.gz",
+    "log_encoding": "gzip",
+    "evidence": "evidence/5.0.1-build103/checks/clipboard/result.json"
+  },
+  {
+    "check": "diagnostics-coverage",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 0.29,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "c0ac20c6a41c1a15d6e0f26a842bfb51691254f6dd875967e9a2ebf887f9ffd6",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "ec6a85a4a6321ec0887fa88ccc92f4ebffdc3aa3233b6dae16f2288e04aaab22",
+    "original_report_sha256": "5a36e7935fb4d69e7d44b09f7677cf256551603c9058c30d75433df904f1122c",
+    "log": "diagnostics-coverage.log.gz",
+    "log_encoding": "gzip",
+    "evidence": "evidence/5.0.1-build103/checks/diagnostics-coverage/result.json"
+  },
+  {
+    "check": "public",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py",
+      "--scan"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 28.44,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [],
+    "log_sha256": "b15f04ddb45a3b512d4580c7312a0044386a24d560fb2670eb5875438555f823",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "73eae474bced861125482acbccd45a076664d2d74a8a4f07218518f9fc0f854f",
+    "original_report_sha256": "d6f5812a69211d9c527949bc078349ff6021ef043b3c79211d498688a665eb6a",
+    "log": "public.log.gz",
+    "log_encoding": "gzip",
+    "evidence": "evidence/5.0.1-build103/checks/public/result.json"
+  },
+  {
+    "check": "security",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--security"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 151.74,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+      "Passed 158 security host checks. No simulator, device, user Keychain or network was used."
+    ],
+    "log_sha256": "f3cd324a93ad278ebf9b7997dd7adf725e29c1654c68866cc7f224f8776bd3e8",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "original_log_sha256": "f28cad644762f0929357e818faf229a3c6f830c65d87b82468bea9dacce75361",
+    "original_report_sha256": "8dece8f5f61eb551816375b9f24e350e8a7774fbc6b13a2df254b847c3b3acd8",
+    "log": "security.log.gz",
+    "log_encoding": "gzip",
+    "evidence": "evidence/5.0.1-build103/checks/security/result.json"
   }
 ]

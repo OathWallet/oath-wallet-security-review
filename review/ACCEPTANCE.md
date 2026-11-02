@@ -1,5 +1,9 @@
 # Acceptance checklist — in progress
 
+Active release: **5.0.1 (103)**, `c7acd23bb139864a40273f405d18b479589d2b20`. [Release-specific findings and exact-target checks](RELEASE-5.0.1-103.md). The completion gate reads the active commit from [the scope](../scope/source.json).
+
+## Historical acceptance snapshot
+
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.
 
 The Electrum two-factor repair restored both independently calculated Bitcoin addresses, and the encrypted-wallet run passed 205 checks. Full package runs passed 305 Bitcoin and 708 database cases, with 60 and 71 explicit skips respectively. Unsigned iOS Release compilation passed. Three isolated Bitcoin Cash Node chains confirmed 20 ordinary spends and 121 threshold-policy spends. The node rejected modified signatures, changed payments and spends missing a required multisignature. The CashTokens prefix reader matched all 22,960 expected outcomes.

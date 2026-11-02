@@ -1,17 +1,10 @@
-# Oath Wallet security review — in progress
+# Oath Wallet 5.0.1 (103) security review
 
 This is a **maintainer-commissioned, Codex-led security review** of the public
 Oath Wallet application. It is not independent certification, a guarantee of
 zero vulnerabilities, or a comparison with the installed App Store binary.
 
-**Progress 57.** All 115 required validations have a passing record at the historical review revision. An earlier failing provider run remains documented. New Swift derivation-path cases found two dependency defects; their source repair passed eleven host cases. Framework integration is a separate step. The whole-wallet ledger still has 16,578 open entries. [Dependency review](review/CORE-SWIFT-PATH-VALUES.md) · [Checkpoint report](review/REPORT.md).
-
-**Progress 56.** Two public-source fixes address a substituted payment during Bitcoin-family recovery and a database upgrade interrupted by a wallet reset. Four original failures reproduced offline. All seven targeted cases passed on the repaired source. Three required checks remain open at the historic review revision. [Report and test evidence](review/BITCOIN-JOURNAL-AND-RESET.md) · [Merged wallet fixes](https://github.com/devdasx/oath-wallet/pull/56).
-
-**Progress 55.** The full provider package passed 1,323 host tests on the merged repair tree, with 201 explicit skips. The review also reproduced 458 Stellar SDK source files byte for byte and verified the logs for 99 exact-revision CI results. Seven required checks still lack a passing result at the pinned app revision. [Public checkpoint report](review/REPORT.md) · [Reproduction details](review/PROVIDER-QUEUE-AND-STELLAR-GENERATION.md).
-
-Baseline: [4.1.15 (100)](https://github.com/devdasx/oath-wallet/tree/c7cdbde5e9f136b595500e92fbc904b107dcd8ee).
-The exact baseline and current target are in [scope/source.json](scope/source.json).
+**Active release:** [Oath Wallet 5.0.1 (103)](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.1-build103), commit `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect listed iOS version 5.0.1 as **Waiting for Review** on 2 November 2026. [Build 103 review and checks](review/RELEASE-5.0.1-103.md) · [Source manifest](scope/source.json) · [Previous review series](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress57).
 
 **The whole-wallet review is not complete.** Test success does not turn
 outstanding source into reviewed source. Consult the [report](review/REPORT.md),
@@ -258,7 +251,7 @@ proof that App Store users have received it.
 
 ## Progress evidence release
 
-The [latest progress snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress26)
+The [historical progress 26 snapshot](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress26)
 is a prerelease, not a completed audit. It identifies the original baseline and
 fixed source target and attaches sanitized logs, result records and SHA-256
 checksums. Failed attempts remain included. Workflow runs after the snapshot
