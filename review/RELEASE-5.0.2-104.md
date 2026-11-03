@@ -1,5 +1,7 @@
 # Oath Wallet 5.0.2 (104) — active prerelease audit
 
+Build 104 checkpoint 21 adds seven passing production-parser methods backed by deterministic independent Stellar vectors and 1,776 truncation cases. A disposable checksum mutation produces 64 expected assertion failures. Two files gain partial source review; no new app defect or implementation change is claimed. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-DECODING.md).
+
 Build 104 checkpoint 20 adds 31 passing offline Stellar persistence and generic refresh-worker methods, including database reopening, signature preservation, duplicate-wallet isolation and retries. Seven files have hash-bound partial read evidence; four were previously outstanding. No application implementation changes or new confirmed defect are claimed. The earlier XDR/SCALE hosted replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-PERSISTENCE.md).
 
 The current target is `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`,
