@@ -1,0 +1,31 @@
+{
+  "original_job": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820/job/125574716576",
+  "failure_stage": "source checkout",
+  "cause": "Git clone RPC timeout and early EOF; Electrum check did not run in this job",
+  "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "focused_tests": 8,
+  "audit_helper_tests": 236,
+  "logs": [
+    {
+      "file": "original-electrum-job.log.gz",
+      "raw_sha256": "e98689023ba4d5bea0f0ff66efd780d1b13b98c510dddf9b8c3674f9c9083e72",
+      "sanitized_sha256": "031070aa54f6c03547c56138c107b3368639e3dd2b8981483a3e35938eb83113",
+      "gzip_sha256": "f09e796b780e7f44eb1b2a08b75c1f3ff4caade27baf12883519e2fefe3d389b"
+    },
+    {
+      "file": "tests.log.gz",
+      "raw_sha256": "c8f46ed602909e30ccabe75f37e45094fa37bda3fa2e9b3123df3aa3fc9ca185",
+      "sanitized_sha256": "d62d4c6e525e3ee6572420fe06ab145a3dba9ad13e7a5f4e668d9c3aba728f87",
+      "gzip_sha256": "c73609e5111440e8949720066bc150f4e3727b4b519db8332c1dc4f0382cc53b"
+    },
+    {
+      "file": "all-tests.log.gz",
+      "raw_sha256": "903f9e5cc8e60db613b873b94774d8f84647944f63a722ee5a1a22c3b44af424",
+      "sanitized_sha256": "2fef9aa07eecc9b90362ecb1d1b82adfd81da6b85be8f5a354a6eb1b547b3ce4",
+      "gzip_sha256": "f2ab09ab8bbe735e25211232edfbeb66ea6229e99d379b361d4d75a4db6d684b"
+    }
+  ],
+  "scope": "Synthetic local Git repositories, injected partial clone failure and timeout; no reproduction of the external network outage",
+  "github_retest": "Pending publication of checkout-electrum workflow",
+  "application_changed": false
+}
