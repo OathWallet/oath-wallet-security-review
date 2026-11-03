@@ -1,0 +1,105 @@
+{
+  "source_commit": "a904515793b087289140e4411924f030b3fe61ff",
+  "source_file": "OathAtmosphere/Wallet/OathCloudRestoreModel.swift",
+  "source_sha256": "582f0910f8902deed0d04f870eaef94a6a9b64b87bc215f9d666022fc41035fb",
+  "compiled_model_sha256": "197d947191474260433b32813a1b40e537383505677779341dc4c5de5fb1ed90",
+  "fixture_sha256": "d9dc3a8c7f97d96b0d9c9b67d0d10262ed139261698ff1527d93dd8f8b18f86e",
+  "script_sha256": "cc453d10440338a2ea0d4913fa45b2ae2f494bb7c71417a4e7c7042dd8b76ef8",
+  "passed": 22,
+  "failed": 0,
+  "deliberate_mutation": false,
+  "exit_code": 0,
+  "duration_seconds": 1.17,
+  "log_sha256": "37f2e6e1b79da9a6b96b696b36f7cf0cde1f99a70d4bb308dbe09bc3052da538",
+  "cases": [
+    {
+      "name": "discovery publishes current entries",
+      "status": "pass"
+    },
+    {
+      "name": "unknown entry cannot be selected",
+      "status": "pass"
+    },
+    {
+      "name": "download owns busy state",
+      "status": "pass"
+    },
+    {
+      "name": "download progress uses current entry",
+      "status": "pass"
+    },
+    {
+      "name": "busy selection cannot replace attempt",
+      "status": "pass"
+    },
+    {
+      "name": "duplicate restore cannot start another read",
+      "status": "pass"
+    },
+    {
+      "name": "successful restore saves exactly once",
+      "status": "pass"
+    },
+    {
+      "name": "successful restore clears busy without error",
+      "status": "pass"
+    },
+    {
+      "name": "stop clears discovered and selected entries",
+      "status": "pass"
+    },
+    {
+      "name": "wrong password permits retry",
+      "status": "pass"
+    },
+    {
+      "name": "wrong password replaces secure field identity",
+      "status": "pass"
+    },
+    {
+      "name": "wrong password never reaches local save",
+      "status": "pass"
+    },
+    {
+      "name": "account change after decryption prevents save",
+      "status": "pass"
+    },
+    {
+      "name": "canceled read failure cannot set current error",
+      "status": "pass"
+    },
+    {
+      "name": "canceled failure cannot reset new discovery",
+      "status": "pass"
+    },
+    {
+      "name": "local save remains busy until completion",
+      "status": "pass"
+    },
+    {
+      "name": "late old save cannot finish new discovery",
+      "status": "pass"
+    },
+    {
+      "name": "late old save cannot complete newer attempt",
+      "status": "pass"
+    },
+    {
+      "name": "new failed attempt cannot repeat old save",
+      "status": "pass"
+    },
+    {
+      "name": "discovery failure clears restore selection",
+      "status": "pass"
+    },
+    {
+      "name": "invalidated read cannot overwrite discovery failure",
+      "status": "pass"
+    },
+    {
+      "name": "discovery invalidation prevents pending save",
+      "status": "pass"
+    }
+  ],
+  "scope": "Unchanged production model body; synthetic cloud, cryptography, diagnostics and local-save boundaries. No iCloud, database, real secrets, UI, simulator or device."
+}

@@ -1,0 +1,172 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41566034707",
+  "workflow_revision": "22564effd6f29167b0dbfcd25d14f5453b9944e5",
+  "conclusion": "success",
+  "artifact_id": 13198668100,
+  "archive_digest": "sha256:7fe2324018f3d6c6715c72d3e0f1b2d41b561a91fb867248949d69b614f2a50b",
+  "published_archive": "5.0.1-build103-backup-presentation-github.zip",
+  "records": [
+    {
+      "stage": "before",
+      "source_commit": "00d26c005fbc3f811615b23b865bb50ef7b6619f",
+      "production_sha256": "3cee1564e80597d1b47872d667d63d294d614c92e953f3c8efd6851f8f76209b",
+      "fixture_hashes": {
+        "Tools/CheckBackupPresentation.py": "a83e5fd2e813c7d67d8d23a73212c45eac9fd541d4180d225f23f9f30e573706",
+        "Tools/CheckBackupPresentation.swift": "cc9a52f58dd44bd23d3ebf351019f20fd05fb71ca162335a6591bbbcd3b83751"
+      },
+      "exit_code": 1,
+      "duration_seconds": 6.77,
+      "raw_log_sha256": "895ae018d4adff45f97b50646b02e6d65269d7ef189e32b164c7750e42f74a9d",
+      "log": "before.log",
+      "log_sha256": "1d2166c2effc6d7ef0e43689f7999861a37b7ec02dfe8a4f4f0d847ff7bd73d8",
+      "passed": 12,
+      "failed": 3,
+      "cases": [
+        {
+          "name": "successful read: old completion cannot set new failure",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: old completion cannot advance new progress",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: new preparation remains active",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: old record is not published",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: current completion counts once",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: current record appears",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: old completion cannot set new failure",
+          "status": "fail"
+        },
+        {
+          "name": "failed read: old completion cannot advance new progress",
+          "status": "fail"
+        },
+        {
+          "name": "failed read: new preparation remains active",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: old record is not published",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: current completion counts once",
+          "status": "fail"
+        },
+        {
+          "name": "failed read: current record appears",
+          "status": "pass"
+        },
+        {
+          "name": "current failure remains visible",
+          "status": "pass"
+        },
+        {
+          "name": "current failure counts once",
+          "status": "pass"
+        },
+        {
+          "name": "failed read cannot invent a record",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "stage": "after",
+      "source_commit": "a904515793b087289140e4411924f030b3fe61ff",
+      "production_sha256": "1c38bbec8cc769c48cda65aacf117966647d482f7058e8cb310bcceb963d38c1",
+      "fixture_hashes": {
+        "Tools/CheckBackupPresentation.py": "a83e5fd2e813c7d67d8d23a73212c45eac9fd541d4180d225f23f9f30e573706",
+        "Tools/CheckBackupPresentation.swift": "cc9a52f58dd44bd23d3ebf351019f20fd05fb71ca162335a6591bbbcd3b83751"
+      },
+      "exit_code": 0,
+      "duration_seconds": 1.42,
+      "raw_log_sha256": "dbe3f379c5f775ecea64e592213dc096cd5e2f44508108f5333b60adabc6a6a8",
+      "log": "after.log",
+      "log_sha256": "dbe3f379c5f775ecea64e592213dc096cd5e2f44508108f5333b60adabc6a6a8",
+      "passed": 15,
+      "failed": 0,
+      "cases": [
+        {
+          "name": "successful read: old completion cannot set new failure",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: old completion cannot advance new progress",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: new preparation remains active",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: old record is not published",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: current completion counts once",
+          "status": "pass"
+        },
+        {
+          "name": "successful read: current record appears",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: old completion cannot set new failure",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: old completion cannot advance new progress",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: new preparation remains active",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: old record is not published",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: current completion counts once",
+          "status": "pass"
+        },
+        {
+          "name": "failed read: current record appears",
+          "status": "pass"
+        },
+        {
+          "name": "current failure remains visible",
+          "status": "pass"
+        },
+        {
+          "name": "current failure counts once",
+          "status": "pass"
+        },
+        {
+          "name": "failed read cannot invent a record",
+          "status": "pass"
+        }
+      ]
+    }
+  ],
+  "files": {
+    "after.log": "dbe3f379c5f775ecea64e592213dc096cd5e2f44508108f5333b60adabc6a6a8",
+    "before.log": "1d2166c2effc6d7ef0e43689f7999861a37b7ec02dfe8a4f4f0d847ff7bd73d8",
+    "result.json": "75d15d4fd0c74352cc32f97f9067f8cae2c7bdc719fe02101bb86b5a8bce73df",
+    "toolchain.txt": "d93355f07ec943224f176aee78acf80638d59e3e1dc682a663872a68387c737b"
+  }
+}

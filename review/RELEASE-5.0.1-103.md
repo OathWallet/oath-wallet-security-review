@@ -293,3 +293,38 @@ are coverage counts, not vulnerability counts. The whole-wallet review remains
 incomplete. The audit-only hosted callback replay is recorded separately; no
 hosted success is inferred from the local replay. No simulator, physical-device
 or App Store operation was performed for this backup follow-up.
+
+
+## Checkpoint 14
+
+Two hosted reproductions now complete the previously pending receipts. The
+[private-key cleanup run](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41564389687)
+records **7 passes / 4 failures before**, **11 passes / 0 failures after**.
+The [backup progress run](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41566034707)
+records **12 passes / 3 failures before**, **15 passes / 0 failures after**.
+Archive sizes and GitHub SHA256 digests, result/log hashes, exact case outcomes,
+source model bytes and overlaid fixture hashes were independently checked after
+download. Both original archives accompany this checkpoint's release.
+[Private-key receipt](../evidence/5.0.1-build103/ci-retests/private-key-disclosure-github.json)
+· [Backup receipt](../evidence/5.0.1-build103/ci-retests/backup-presentation-github.json).
+These hosted tests are model/host evidence, not a new OS snapshot test.
+
+**22 controlled restore-model checks pass locally** on unchanged production
+source. Removing one ownership guard from a temporary copy yields exactly three
+failures, demonstrating sensitivity to the tested stale callbacks. Continuation
+barriers cover account changes, duplicate requests, cancellation-resistant read
+errors and late save completion. Cloud, cryptography and persistence are
+synthetic boundaries; this is not live iCloud, full vault or UIKit coverage.
+[Reproduction](../fixtures/cloud-restore-lifecycle/README.md) ·
+[Source review and limitations](CLOUD-RESTORE-LIFECYCLE.md).
+The [hosted restore replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41567766015)
+is queued at this checkpoint; local success is not a hosted result.
+
+**273 audit-helper tests pass.** Four newly documented partial dispositions
+leave direct compiler coverage at **244 reviewed, 128 partial, 1,505 outstanding,
+460 generated-and-verified and 20 needing trace**. The combined completion gate
+still has **16,597 open items**. These are coverage/validation entries, not a count
+of vulnerabilities. No new application defect was confirmed in this follow-up.
+The app source is unchanged; its prior unsigned Release build is retained, not
+reported as a new build. No simulator, physical device or App Store operation was
+performed. The whole-wallet review remains in progress.

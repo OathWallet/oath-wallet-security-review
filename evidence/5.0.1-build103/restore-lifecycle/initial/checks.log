@@ -1,0 +1,23 @@
+PASS: discovery publishes current entries
+PASS: unknown entry cannot be selected
+PASS: download owns busy state
+PASS: download progress uses current entry
+PASS: busy selection cannot replace attempt
+PASS: duplicate restore cannot start another read
+PASS: successful restore saves exactly once
+PASS: successful restore clears busy without error
+PASS: stop clears discovered and selected entries
+PASS: wrong password permits retry
+PASS: wrong password replaces secure field identity
+PASS: wrong password never reaches local save
+PASS: account change after decryption prevents save
+PASS: canceled read failure cannot set current error
+PASS: canceled failure cannot reset new discovery
+PASS: local save remains busy until completion
+PASS: late old save cannot finish new discovery
+PASS: late old save cannot complete newer attempt
+PASS: new failed attempt cannot repeat old save
+PASS: discovery failure clears restore selection
+PASS: invalidated read cannot overwrite discovery failure
+PASS: discovery invalidation prevents pending save
+Cloud restore lifecycle checks: 22 passed, 0 failed
