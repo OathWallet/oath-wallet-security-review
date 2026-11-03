@@ -10,6 +10,8 @@ Checkpoint 11 records 105 of 116 passing required exact-baseline checks and 250 
 
 Checkpoint 12 resolves the specific retained-key snapshot hypothesis as OW-2026-058 and publishes its tested source repair. The historical baseline still contains that defect; fixes after the reviewed commit remain separate in the gate. Runtime evidence uses one synthetic production-component fixture, not a complete export UI or every OS. No existing outstanding source/dependency entry is promoted merely because this test passed. The whole-wallet review remains in progress.
 
+Checkpoint 13 records OW-2026-059's tested source repair and fifteen controlled model cases (three expected failures before, none after). Four new partial dispositions leave 244 reviewed, 124 partial and 1,509 outstanding direct inputs, with generated counts unchanged. The gate retains 16,597 open items, and 266 audit-helper checks pass. Model tests do not complete UIKit, live-cloud or cryptographic coverage. [Backup review](BACKUP-PRESENTATION.md).
+
 ## Historical acceptance snapshot
 
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.

@@ -251,3 +251,45 @@ Checkpoint 12 audit-helper validation: **262 tests passed**. The combined gate
 retains **16,596 open items**; the extra finding remains counted against the
 unchanged historical baseline despite its later public repair. Direct compiler
 coverage counts are unchanged. These counts are not counts of vulnerabilities.
+
+
+## Checkpoint 13
+
+The all-wallet backup model rechecked operation ownership after a successful
+record read, but omitted that check when the read threw. A controlled host replay
+confirms an old canceled read can set a newer batch's failure and increment its
+counter. [OW-2026-059](../findings/OW-2026-059.md) is a low-severity backup-status
+integrity/reliability defect; no persisted backup corruption, key disclosure or
+authorization bypass was demonstrated.
+
+[PR #73](https://github.com/devdasx/oath-wallet/pull/73) adds the same ownership and
+cancellation check to the error path. The identical **15 cases** yield **12 passes,
+three failures before**, and **15 passes, no failures after**. The test extracts
+the real production model unchanged; synthetic boundaries hold/release database
+callbacks using continuations and explicit completion barriers. It does not run
+SwiftUI, iCloud, actual storage failures or cryptography. Current legitimate
+failures remain visible. The initial 12-case exploration and failed output remain
+in evidence. [Reproduction](../fixtures/backup-presentation/README.md).
+
+At `a904515793b087289140e4411924f030b3fe61ff`, public release validation,
+diagnostics coverage, a zero-match secret scan, **119 diagnostics tests (two
+skipped)** and unsigned generic iOS Release compilation pass. Merge
+`cfd43d36f6e1ee58845005bd817b069096843030` includes concurrent Website-only changes;
+all non-Website tracked files match the tested commit. The manifest lists the
+actual delta rather than claiming whole-tree identity.
+[Checks and hashes](../evidence/5.0.1-build103/backup-presentation/manifest.json).
+
+Full source reads covered the all-wallet backup model/page, backup-password form,
+secure-input bridge and native entry field. These now have **partial** dispositions:
+keyboard, accessibility, autofill, system snapshot and complete UI integration
+remain outside this host run. The field's deactivation concealment is a source
+observation, not a new runtime result. [Review limits](BACKUP-PRESENTATION.md).
+
+**266 audit-helper tests pass.** Direct compiler input dispositions now include
+244 reviewed, 124 partial, 1,509 outstanding, 460 generated-and-verified and 20
+needing trace. The combined completion gate retains **16,597 open items**, including
+later-fixed defects still present in the unchanged historical baseline. These
+are coverage counts, not vulnerability counts. The whole-wallet review remains
+incomplete. The audit-only hosted callback replay is recorded separately; no
+hosted success is inferred from the local replay. No simulator, physical-device
+or App Store operation was performed for this backup follow-up.

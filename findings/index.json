@@ -929,5 +929,19 @@
     "available_in_app_store_verified": false,
     "retest_scope": "11 production-model checks: 7 pass/4 fail before, 11 pass after; 791 broader host checks; generic iOS Release build; one isolated iOS 27.0 synthetic production-component snapshot experiment. No full export UI, device, all-OS timing or memory-zeroization claim.",
     "evidence": "evidence/5.0.1-build103/private-key-snapshot/manifest.json"
+  },
+  {
+    "id": "OW-2026-059",
+    "title": "Canceled backup read failure changes a newer batch progress state",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-059.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "a904515793b087289140e4411924f030b3fe61ff",
+    "merge_commit": "cfd43d36f6e1ee58845005bd817b069096843030",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/73",
+    "available_in_app_store_verified": false,
+    "retest_scope": "15 controlled production-model host cases: 12 pass/3 fail before, 15 pass after. Synthetic database/service boundaries; no persisted corruption, key disclosure or cloud runtime claim.",
+    "evidence": "evidence/5.0.1-build103/backup-presentation/manifest.json"
   }
 ]
