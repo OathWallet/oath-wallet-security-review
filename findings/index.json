@@ -901,5 +901,19 @@
     "retest_scope": "Nine production checksum methods; 24 independent vectors; seven original failing methods and two controls. Application-entry-point reachability unproven.",
     "merge_commit": "717e876e76a6d453f0fd692e2ca147341dc7121e",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/68"
+  },
+  {
+    "id": "OW-2026-057",
+    "severity": "low",
+    "title": "Malformed protocol key hex is silently coerced",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-057.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "2499ee8e7a0fc9709283e394eda4e22e65a3acb1",
+    "tested_commit": "235a730de504e47fb961c34f68f9426ffdbdfe6d",
+    "available_in_app_store": false,
+    "retest_scope": "15 production host methods; real CryptoKit agreement and independent Node/OpenSSL HKDF reference; source-level approval path, no UI exploit.",
+    "merge_commit": "65b06c1d67af0daf84f1748ad203f8f10c7c40ce",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/69"
   }
 ]

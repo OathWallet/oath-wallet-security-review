@@ -1,0 +1,131 @@
+{
+  "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "implementation_commit": "2499ee8e7a0fc9709283e394eda4e22e65a3acb1",
+  "tested_commit": "235a730de504e47fb961c34f68f9426ffdbdfe6d",
+  "merge_commit": "65b06c1d67af0daf84f1748ad203f8f10c7c40ce",
+  "tree_matches": true,
+  "pull_request": "https://github.com/devdasx/oath-wallet/pull/69",
+  "checks": {
+    "exact_replay": {
+      "before": {
+        "failing_methods": 11,
+        "passing_methods": 4,
+        "assertion_failures": 153
+      },
+      "after": {
+        "passing_methods": 15
+      }
+    },
+    "sdk": {
+      "passed": 321,
+      "skipped": 2
+    },
+    "diagnostics": {
+      "passed": 119,
+      "skipped": 2
+    },
+    "audit_helpers": {
+      "passed": 224
+    },
+    "ios_release": {
+      "exit_code": 0,
+      "signing_enabled": false,
+      "destination": "generic/platform=iOS"
+    },
+    "public_source_scan": {
+      "exit_code": 0,
+      "files": 4847
+    },
+    "diagnostics_coverage": {
+      "exit_code": 0,
+      "catch_sites": 720
+    }
+  },
+  "logs": {
+    "sdk-full-final": {
+      "file": "sdk-full-final.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "ffd53621e471249dd58f791b054994c3bb6d88e9bb4ab3e6c79457da67ecae63",
+      "sanitized_sha256": "ad7ffbb79b3eba72a3e8ea765a01585f1f3db28e572721cb5dbcc34055caab85",
+      "gzip_sha256": "301d447ab31bd0ceb32c65412aaebea7d4ed117f6dca206a996b83dab99831f3"
+    },
+    "diagnostics-final": {
+      "file": "diagnostics-final.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "a111a14e07d2f58a8d053b350806e36ab04fa5ecf4dc26c72eaf4d64cd0ea3b0",
+      "sanitized_sha256": "549f0b6acfa2a34896e99c2b8d526ea52accc4fc1ea791c05b556d2a66d9ffd2",
+      "gzip_sha256": "860ffd24e0146a67a7b8bf232696c9e9ea1f3f8b3200f2484a0d832651a05c9a"
+    },
+    "ios-release-final": {
+      "file": "ios-release-final.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "8abe70b663c33df4b24d000c2b297e9cf88098f14e2c1b35def2fbe452bef983",
+      "sanitized_sha256": "14d0e450a5ceaa25bc7b274ce52ff54b143d7e99102fb6003a1e7f89852f33d1",
+      "gzip_sha256": "4ef100c904174e711a13874c82197c39a3706fddbbf1abc208576d2915ef9f99"
+    },
+    "public-scan-final": {
+      "file": "public-scan-final.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "e9fa98306bb0f3b873c45dd200066c0adc79c1916136b81a9eb6aaa850df16b1",
+      "sanitized_sha256": "e9fa98306bb0f3b873c45dd200066c0adc79c1916136b81a9eb6aaa850df16b1",
+      "gzip_sha256": "40024bd153a452e282160f85ab0701aa6a208d126ad6f98ab0f0661254386d0b"
+    },
+    "coverage-final": {
+      "file": "coverage-final.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "sanitized_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "gzip_sha256": "c47947e55f580d678597e126ba95362fc2223c2dd5d09f6c352a3b4b8aa3a216"
+    },
+    "audit-tests": {
+      "file": "audit-tests.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "5f1b0db3ecbe9cd32fa117e8de70074a44734ca0ff46ca6710e8a35ce4789933",
+      "sanitized_sha256": "5f1b0db3ecbe9cd32fa117e8de70074a44734ca0ff46ca6710e8a35ce4789933",
+      "gzip_sha256": "9d2c4c5b354e77d2110d2b8a665cf9dfd690fc65b7d8c756abfde2ff7921edc5"
+    },
+    "replay-final": {
+      "file": "replay-final.log.gz",
+      "exit_code": 0,
+      "raw_sha256": "1f19d9c84a2339e11873468f0c1566eed4f3f7bd55f77644301b03cde2245323",
+      "sanitized_sha256": "1f19d9c84a2339e11873468f0c1566eed4f3f7bd55f77644301b03cde2245323",
+      "gzip_sha256": "470cb755edaaa38f5296b2f5df0460a0cd7d84635f2ad6b8308782e169879110"
+    },
+    "public-scan": {
+      "file": "public-scan.log.gz",
+      "exit_code": 1,
+      "raw_sha256": "4a10226cdec6e00730f63b301cdf0f519ea77c01b10897c599faecbdf833f0ea",
+      "sanitized_sha256": "4a10226cdec6e00730f63b301cdf0f519ea77c01b10897c599faecbdf833f0ea",
+      "gzip_sha256": "b4af734dd83c7047264aeed6bf081b88a1c251c956028d38a9951125c7f70ac9"
+    }
+  },
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "node": "v26.5.0",
+    "openssl": "3.6.4"
+  },
+  "oracle": {
+    "method": "Node/OpenSSL X25519 and HKDF-SHA256; one synthetic vector",
+    "generator_sha256": "2591c04832458979a0d15ee3daa841ff56e1691344cb70b4bab314108fa53353",
+    "matches_fixture": true
+  },
+  "scanner_renewal": {
+    "initial_check_exit": 1,
+    "final_check_exit": 0,
+    "receipt": "scanner-renewal.json",
+    "scope": "Only two source hashes renewed; matched declarations unchanged."
+  },
+  "simulator_used": false,
+  "physical_device_used": false,
+  "app_store_availability_verified": false,
+  "github_replay": "Pending publication; completed host replay separately recorded.",
+  "publication_scan": {
+    "staged_evidence": "passed after independent recomputation of 449 matches representing 18 public source-file digests",
+    "checksum_receipt": "publication-checksums.json",
+    "github_checksum_archive": "passed without exceptions"
+  },
+  "workflow_validation": {
+    "actionlint": "passed; known custom xcode-27 runner label diagnostic filtered"
+  }
+}
