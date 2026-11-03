@@ -435,3 +435,5 @@ validation gaps remain open; this checkpoint is not an audit completion verdict.
 
 **290 audit-helper/evidence-integrity tests pass.** These are separate from the
 production Swift methods and compilation checks above.
+
+The [paired simulation workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41573179363) is queued at checkpoint publication. The paired results above are locally verified; hosted results remain pending. New checkpoint files and expanded logs pass the publication secret scan. The downloaded signing archive uses the previously reviewed exact synthetic-fixture exceptions; no whole-history scan claim is made.
