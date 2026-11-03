@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+**Checkpoint 21.** A controlled encrypted-write pause reproduced a race between wallet removal and a newly signed transaction journal. The same fixture changes from 19 passes/four failures to all 23 passing after the durable reservation repair; 30 restart checks cover interrupted persistence. Earlier delayed-authentication results are now verified on GitHub. [Reproduction, validation and remaining scope](CONNECT-REMOVAL-RACE.md).
+
 **Checkpoint 20.** Delayed authentication across removal, restore, failed persistence and locking passes 38 checks with production vault and EVM imported-key signers. A deliberately stale envelope produces exactly two failures, demonstrating sensitivity to that guard. No new app defect is confirmed by this matrix. [Scope, evidence and remaining races](CONNECT-REMOVAL-AUTHORIZATION.md).
 
 **Checkpoint 19.** Pending dApp submissions now block removal of an active wallet in [PR #76](https://github.com/devdasx/oath-wallet/pull/76). Original and intermediate compatibility failures are preserved; all five final methods pass. Full database tests, diagnostics and unsigned iOS Release compilation pass. Legacy cleanup remains compatible; signing/removal concurrency remains open. [Evidence and limits](CONNECT-REMOVAL.md).

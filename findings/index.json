@@ -985,5 +985,19 @@
     "available_in_app_store_verified": false,
     "retest_scope": "Five production-database methods pass; original two failures (46 assertions) and intermediate compatibility failure (seven assertions) retained. Signed synthetic XRP plus seven-table schema-only matrix. Full database 744 pass/72 skips, diagnostics 119 pass/two skips; unsigned Release compilation passes. Legacy already-removed cleanup remains permitted; cross-vault/SQL atomicity not proven.",
     "evidence": "evidence/5.0.1-build103/connect-removal/manifest.json"
+  },
+  {
+    "id": "OW-2026-063",
+    "title": "Wallet removal races a new signed transaction journal",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-063.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "b1f1b120947062aec871cb7fdc4439e88042cda3",
+    "available_in_app_store_verified": false,
+    "retest_scope": "Controlled production vault/XRP journal: identical 23-case fixture changes from 19 passes/four failures to 23 passes. Thirty interrupted-recovery checks. Eight-table schema guard matrix. No live fund loss, UI or OS authentication claim. See manifest for final validation and retained failed setup attempts.",
+    "evidence": "evidence/5.0.1-build103/connect-removal-race/manifest.json",
+    "merge_commit": "adacd9143ca97ef559f6de36c19c4a6b4c401c6c",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/77"
   }
 ]

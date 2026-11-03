@@ -1,0 +1,7 @@
+OW-2026-063 candidate confirmed at 0e91ce56f91ef56b3e45629967e01e449be0052f.
+Controlled memory storage pauses encrypted vault update after pending-work validation. Actual vault-produced synthetic XRP signature enters the production journal during that pause. Removal succeeds; pending query and reopened database omit it; retention removes it. No network or relay and no live fund loss.
+Initial fixture compiled after correcting access to review's internal memberwise initializer; use public Codable decoding, record setup failure.
+Initial source unchanged: 18 passes, four failed checks. Public test-only commit 82ea452 adds the explicit retry assertion (23 cases).
+Candidate a5fde471b055f6c853b2c712152bb57c3ebb08ca: 23 passes, but wrapper correctly rejected source HEAD drift to a subsequent test-only revision; do not use as final pinned validation. First focused DB run eight passes at original build (new migration test added afterwards); superseded by full clean final-pin checks.
+Fix: atomic SQLite pending validation and durable token-scoped removal reservation; pending INSERT/UPDATE guards for seven Connect journals plus ordinary sends; encrypted write then lifecycle replay then release. Failed encrypted write releases only own token in cancellation-independent local cleanup. Interrupted state reconciles authenticated persisted envelope before fence release; serialized unlock protects against stale concurrent replay. Reset deletes fence rows through wallet FK cascade. New migration v106, existing migrations unchanged.
+App Store and devices excluded.

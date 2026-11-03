@@ -559,3 +559,44 @@ revisions, expected failures, per-method outcomes and log hashes were verified.
 This supersedes its earlier running snapshot; the original artifact accompanies
 this release. The [new delayed-authentication workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41577528851)
 is running; its hosted result remains pending.
+
+## Checkpoint 21
+
+[OW-2026-063](../findings/OW-2026-063.md) confirms a wallet-removal race with a
+newly signed transaction journal. The actual vault signer and encrypted write
+path run against synthetic gated storage and the production XRP journal. Four
+checks fail before repair; the unchanged 23-case fixture passes afterward.
+Thirty additional checks cover interruption before/after encrypted persistence
+under passcode, synthetic biometric and device-key entry.
+
+[PR #77](https://github.com/devdasx/oath-wallet/pull/77) adds an atomic database
+removal reservation and token-scoped cleanup/recovery. The schema matrix covers
+ordinary sends and seven Connect journals; this is not seven full chain-signing
+integration tests. Migration and reset compatibility are exercised. Final tested
+source is `b1f1b120947062aec871cb7fdc4439e88042cda3`; merged app/test source is
+identical at `adacd9143ca97ef559f6de36c19c4a6b4c401c6c`.
+
+- Full database: **748 passed, 72 explicitly skipped**, zero failures.
+- Diagnostics: **119 passed, two explicitly skipped**, zero failures.
+- Public-source, secret scanning and diagnostic coverage: passed.
+- Generic unsigned iOS Release build: passed, 10.50 seconds with reused cache.
+- Earlier identical-production host pin f75: 144 lifecycle, 37 reset,
+  158 authentication, 123 biometric fallback and 28 protected-startup checks pass.
+- Audit helper/evidence integrity: **315 passed**.
+
+The first migration fixture failure, later fixed-delay Aptos assertion failure,
+its isolated passing rerun, source-change rejection, scanner invocation error
+and original application race failures are retained. The corrected tests do not
+change production diagnostics or conceal the original failures. [Detailed scope](CONNECT-REMOVAL-RACE.md)
+and [manifest](../evidence/5.0.1-build103/connect-removal-race/manifest.json).
+
+The previous delayed-authentication GitHub run now has a verified downloaded
+artifact: 38 normal passes, and exactly two expected failures in its deliberate
+stale-envelope variant. [Receipt](../evidence/5.0.1-build103/ci-retests/connect-removal-auth-github.json).
+The original archive is a durable release attachment. The new race/recovery
+workflow is published separately; its result is not claimed before verification.
+
+Direct compiler coverage counts remain unchanged. The combined gate has
+**16,770 open coverage/validation entries**. This is not a vulnerability count
+or a completed audit. No App Store, simulator, physical-device, live ledger or
+relay operation occurred. No installed-build equivalence is claimed.

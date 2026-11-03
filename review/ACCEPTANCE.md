@@ -51,3 +51,9 @@ a two-failure deliberate stale-envelope control. Three partial file dispositions
 leave 244 reviewed, 140 partial, 1,493 outstanding direct compiler inputs; generated
 counts are unchanged. The combined gate remains 16,769 open entries. Signing-to-
 journal/removal atomicity and the full review remain incomplete.
+
+Checkpoint 21 confirms OW-2026-063 and repairs it in later public source. The
+historical baseline remains unchanged; the combined gate now reports **16,770
+open coverage/validation entries**, not 16,770 vulnerabilities. Direct compiler
+coverage counts remain unchanged. The controlled journal/removal overlap is
+repaired; other asynchronous signing and full integration paths remain open.

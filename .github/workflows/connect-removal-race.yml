@@ -1,0 +1,54 @@
+name: Check wallet removal journal serialization and recovery
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/connect-removal-race.yml', 'scripts/connect-removal-race.py', 'tests/test_connect_removal_race.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 60
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_connect_removal_race.py
+      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - run: |
+          mkdir -p evidence/ci/connect-removal-race
+          cp evidence/ci/toolchain.txt evidence/ci/connect-removal-race/
+          git -C .work/wallet checkout --detach 82ea45249ae40e5ab0be39d671fbfc96b6e43069
+          python3 scripts/connect-removal-race.py .work/wallet .work/build evidence/ci/connect-removal-race/before --commit 82ea45249ae40e5ab0be39d671fbfc96b6e43069 --before
+          git -C .work/wallet checkout --detach b1f1b120947062aec871cb7fdc4439e88042cda3
+          python3 scripts/connect-removal-race.py .work/wallet .work/build evidence/ci/connect-removal-race/after --commit b1f1b120947062aec871cb7fdc4439e88042cda3
+          python3 scripts/connect-removal-race.py .work/wallet .work/build evidence/ci/connect-removal-race/recovery --commit b1f1b120947062aec871cb7fdc4439e88042cda3 --recovery
+          python3 scripts/isolated_tests.py .work/wallet OathDatabase .work/db-build evidence/ci/connect-removal-race/database --filter 'WalletRemovalReservationTests|WalletConnectRemovalGuardTests'
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: connect-removal-race-evidence, path: evidence/ci/connect-removal-race, retention-days: 90}
+  release-build:
+    runs-on: xcode-27
+    timeout-minutes: 60
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach b1f1b120947062aec871cb7fdc4439e88042cda3
+          python3 scripts/run.py .work/wallet build --expected-commit b1f1b120947062aec871cb7fdc4439e88042cda3 --output evidence/ci/removal-race-build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: removal-race-unsigned-build-evidence, path: evidence/ci/removal-race-build, retention-days: 90}

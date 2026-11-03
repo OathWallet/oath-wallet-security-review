@@ -1,0 +1,21 @@
+{
+  "check": "authentication",
+  "source_commit": "f75ed392064e38883598ec37884456f25a472826",
+  "command": [
+    "python3",
+    "Tools/CheckMultiWallet.py",
+    "--authentication"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 76.23,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+    "Passed 123 biometric fallback checks and 158 security host checks. No simulator, device, user Keychain or network was used."
+  ],
+  "log_sha256": "b5343576f3760d6c4902709badaabc0a9c4fbd7809e7bf136f57c4ad338ccd8f",
+  "runtime_scope": "host",
+  "live_network_tests_enabled": false
+}
