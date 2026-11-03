@@ -27,3 +27,5 @@ The same twenty methods were run against the original release and repair, each i
 [Exact-source replay and case logs](../evidence/5.0.1-build103/signature-contracts/result.json) · [Reproduction script](../scripts/signature-contract-boundaries.py) · [Signature finding](../findings/OW-2026-054.md) · [Contract finding](../findings/OW-2026-055.md).
 
 ENS normalization, RPC response limits, the remaining message-signing interfaces and broader cryptographic provenance remain review work. Simulator and physical-device checks were outside this checkpoint.
+
+Checkpoint 7 regenerated the same vectors with ethers 6.17.0 after updating an audit-only WebSocket dependency. The original fixture header and all vector bytes remain unchanged. [Tooling update receipt](../evidence/5.0.1-build103/address-checksums/oracle-update.json).

@@ -1,0 +1,115 @@
+{
+  "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "tested_commit": "b128544044a5d3043fca99c7d4c94af1af3b511c",
+  "merge_commit": "717e876e76a6d453f0fd692e2ca147341dc7121e",
+  "tree_matches": true,
+  "pull_request": "https://github.com/devdasx/oath-wallet/pull/68",
+  "checks": {
+    "exact_replay": {
+      "before": {
+        "failing_methods": 7,
+        "passing_methods": 2,
+        "assertion_failures": 65
+      },
+      "after": {
+        "passing_methods": 9
+      }
+    },
+    "sdk": {
+      "passed": 306,
+      "skipped": 2
+    },
+    "diagnostics": {
+      "passed": 119,
+      "skipped": 2
+    },
+    "audit_helpers": {
+      "passed": 220
+    },
+    "ios_release": {
+      "exit_code": 0,
+      "signing_enabled": false,
+      "destination": "generic/platform=iOS"
+    },
+    "public_source_scan": {
+      "exit_code": 0,
+      "files": 4846
+    },
+    "diagnostics_coverage": {
+      "exit_code": 0,
+      "catch_sites": 720
+    }
+  },
+  "logs": {
+    "sdk-full": {
+      "raw_sha256": "12a07a9e1b480fabc3b5ed4a2ed24e2b807fb3b1e029977811b5a954f8755d2d",
+      "sanitized_sha256": "fe41483343ae259653b714e0124019827c7c5900019260739e2d430435c1c89f",
+      "gzip_sha256": "c4de54aca6e3e622764a1ca5bf3cf3c007e9b7220385405a9781879846e553c6",
+      "file": "sdk-full.log.gz"
+    },
+    "diagnostics": {
+      "raw_sha256": "de95fa3d593090fb00b182e3bf3359911282142845513004bb4692533b6bb0de",
+      "sanitized_sha256": "1c10e1578b0aa2725c30ab455f962127a89d4225f7b2bd99be47324eea6f0b04",
+      "gzip_sha256": "4dc7a4eb093f1f64720cbac4357a8c1916f7051275a2a4d5d0f6010cb207579c",
+      "file": "diagnostics.log.gz"
+    },
+    "ios-release": {
+      "raw_sha256": "a88e114a20024a0f2ee104a713353aa1843196ab5a439efc9ebe77772b0fabe0",
+      "sanitized_sha256": "4a1724a2f37a56af03fc9e5ed026a97d6b64ad2ce90c1fefc4454ec3fde080d8",
+      "gzip_sha256": "ea3b7a6b6aca9abd3634ec25aaa0a9111547d82988633f11f35de93946526be8",
+      "file": "ios-release.log.gz"
+    },
+    "public-scan": {
+      "raw_sha256": "9ab6e812e29bba61dc6cd1f32b59757166e69e3c694737637389e29df8e989a5",
+      "sanitized_sha256": "9ab6e812e29bba61dc6cd1f32b59757166e69e3c694737637389e29df8e989a5",
+      "gzip_sha256": "4b52cd04981abe9d561e6b5f6e49c807ece1f84e8d4a839e4336148d24a1c515",
+      "file": "public-scan.log.gz"
+    },
+    "coverage": {
+      "raw_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "sanitized_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "gzip_sha256": "c47947e55f580d678597e126ba95362fc2223c2dd5d09f6c352a3b4b8aa3a216",
+      "file": "coverage.log.gz"
+    },
+    "audit-tests": {
+      "raw_sha256": "bbd95ae4735b4108aaeabd470192486289cd181eeb37b4551280370537787560",
+      "sanitized_sha256": "bbd95ae4735b4108aaeabd470192486289cd181eeb37b4551280370537787560",
+      "gzip_sha256": "2c6263a8d633d038593d0816810437747a943cc9d14c961b8da95d65b6571322",
+      "file": "audit-tests.log.gz"
+    },
+    "replay": {
+      "raw_sha256": "8b8cf4ef72d83183f79bdb808bb62e55e9ece20ef43091fb4c4cd6e6db91eca9",
+      "sanitized_sha256": "8b8cf4ef72d83183f79bdb808bb62e55e9ece20ef43091fb4c4cd6e6db91eca9",
+      "gzip_sha256": "31e82f77414949470943cf58a766fb99882e7dc8448f784a6b0a670e5ad0650a",
+      "file": "replay.log.gz"
+    }
+  },
+  "toolchain": {
+    "xcode": "Xcode 27.0\nBuild version 27A266a",
+    "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+    "node": "v26.5.0"
+  },
+  "oracle": {
+    "ethers": "6.17.0",
+    "vectors": 24,
+    "regeneration_matches": true,
+    "files": {
+      "package.json": "c6f69b02da707f01649ad0a92d25a61980bee2f5b7a3c0205c17161d95a23b27",
+      "package-lock.json": "59de1eb4959739364542d64ddd7abd17fbdb7f69a83bea93907cc38f3ab88fc1",
+      "generate.cjs": "43380a6b7052c5ae484918c8dd45bd6107f556dce61da1f15fd236381b88bd3d"
+    },
+    "initial_generation_ethers": "6.15.0",
+    "dependency_audit": "oracle-update.json"
+  },
+  "simulator_used": false,
+  "physical_device_used": false,
+  "app_store_availability_verified": false,
+  "github_replay": "Pending publication; completed host replay is separately recorded.",
+  "publication_scan": {
+    "sanitized_logs": "passed",
+    "staged_evidence": "passed; no matches"
+  },
+  "workflow_validation": {
+    "actionlint": "passed with only known custom xcode-27 runner label diagnostic filtered"
+  }
+}

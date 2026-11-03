@@ -1,3 +1,4 @@
+// Preserve the original fixture provenance header; the current pinned oracle reproduces its exact bytes.
 const { Interface } = require('ethers');
 const abi = new Interface(['function isValidSignature(bytes32 hash, bytes signature) view returns (bytes4)']);
 const messageHash = '0x' + 'ab'.repeat(32);

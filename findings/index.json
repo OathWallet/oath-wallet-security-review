@@ -888,5 +888,18 @@
     "evidence": "evidence/5.0.1-build103/signature-contracts/result.json",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/67",
     "merge_commit": "e782d434f64236aa94f58bb9add6feb6e62133f3"
+  },
+  {
+    "id": "OW-2026-056",
+    "severity": "low",
+    "title": "Address checksum helper changes malformed inputs silently",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-056.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "b128544044a5d3043fca99c7d4c94af1af3b511c",
+    "available_in_app_store": false,
+    "retest_scope": "Nine production checksum methods; 24 independent vectors; seven original failing methods and two controls. Application-entry-point reachability unproven.",
+    "merge_commit": "717e876e76a6d453f0fd692e2ca147341dc7121e",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/68"
   }
 ]

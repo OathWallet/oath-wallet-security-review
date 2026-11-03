@@ -74,3 +74,13 @@ The baseline CI snapshot now verifies 60 archive digests and 81 report/log pairs
 Twelve additional direct compiler inputs have source-hash-linked review dispositions. Of 2,357 direct inputs, 1,542 remain outstanding, 105 partially reviewed and 20 require a generated-source trace. The completion gate reports 16,621 open items across its combined ledgers. Counts include different evidence categories and are not a vulnerability count. [Compiler dispositions](../evidence/5.0.1-build103/compiler/dispositions.json).
 
 These later source fixes have not been checked in an App Store binary. The internal verifier's current application reachability, ENS normalization, other message-signing interfaces and dependency provenance remain open. No simulator, physical-device or App Store operation was performed.
+
+## Checkpoint 7
+
+The checksum helper accepted malformed addresses through permissive hex conversion and could truncate output with invalid lengths. [OW-2026-056](../findings/OW-2026-056.md) records the repair and compatibility boundary. Seven of nine methods fail on the exact build 103 source; two valid controls pass. All nine pass on the repaired source. The fixture includes 24 independently generated checksum/hash vectors and verifies exact hashing input. The original failure count includes the newly explicit uppercase-prefix and malformed-provider contracts.
+
+The merged source matches tested commit `b128544044a5d3043fca99c7d4c94af1af3b511c`. SDK tests pass 306 cases with two skips, diagnostics passes 119 with two skips, and 220 audit helper tests pass. Source scanning, the diagnostic coverage guard and unsigned generic iOS Release compilation pass. [Validation and logs](../evidence/5.0.1-build103/address-checksums/validation.json).
+
+Five additional compiler inputs have complete narrow review dispositions and three have partial dispositions. The direct-input ledger has 1,534 outstanding, 108 partially reviewed and 20 generated inputs needing trace evidence. The full completion gate retains 16,617 open entries. ENS normalization, reverse/forward ownership checks, MessageSigner semantics and shared hex-decoder callers need further review. [Scope and API notes](ADDRESS-CHECKSUMS.md).
+
+GitHub replay for this repair is pending publication. No App Store upload, simulator or physical-device operation was performed. The full review remains in progress.

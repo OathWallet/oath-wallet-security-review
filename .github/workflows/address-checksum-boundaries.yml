@@ -1,0 +1,33 @@
+name: Reproduce address checksum boundaries
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/address-checksum-boundaries.yml', 'scripts/address-checksum-boundaries.py', 'fixtures/address-checksums/**']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 55
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '26.5.0'}
+      - run: |
+          npm ci --ignore-scripts --prefix fixtures/address-checksums --cache .work/npm-cache
+          node fixtures/address-checksums/generate.cjs > .work/generated-vectors.swift
+          git -C .work/wallet show b128544044a5d3043fca99c7d4c94af1af3b511c:Tools/WalletConnectSDKValidation/AddressChecksumVectors.swift > .work/pinned-vectors.swift
+          cmp .work/generated-vectors.swift .work/pinned-vectors.swift
+      - run: python3 scripts/address-checksum-boundaries.py .work/wallet .work/checksum-build evidence/ci/address-checksums
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: address-checksum-boundary-evidence, path: evidence/ci/address-checksums, retention-days: 90}
