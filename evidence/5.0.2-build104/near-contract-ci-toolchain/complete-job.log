@@ -1,0 +1,380 @@
+native-evidence	Set up job	﻿2026-11-03T09:45:40.2640540Z Current runner version: '2.338.2'
+native-evidence	Set up job	2026-11-03T09:45:40.2666650Z ##[group]Runner Image Provisioner
+native-evidence	Set up job	2026-11-03T09:45:40.2667600Z Hosted Compute Agent
+native-evidence	Set up job	2026-11-03T09:45:40.2668170Z Version: 20261021.618
+native-evidence	Set up job	2026-11-03T09:45:40.2669340Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+native-evidence	Set up job	2026-11-03T09:45:40.2670520Z Build Date: 2026-10-21T00:45:21Z
+native-evidence	Set up job	2026-11-03T09:45:40.2672160Z Worker ID: {0284841a-2aa9-43ec-b233-6e62c54ffcd8}
+native-evidence	Set up job	2026-11-03T09:45:40.2673410Z Region: westus
+native-evidence	Set up job	2026-11-03T09:45:40.2674640Z Cloud: MacCloud
+native-evidence	Set up job	2026-11-03T09:45:40.2675760Z ##[endgroup]
+native-evidence	Set up job	2026-11-03T09:45:40.2677020Z ##[group]Operating System
+native-evidence	Set up job	2026-11-03T09:45:40.2677410Z macOS
+native-evidence	Set up job	2026-11-03T09:45:40.2677740Z 27.0.1
+native-evidence	Set up job	2026-11-03T09:45:40.2678080Z 26A434
+native-evidence	Set up job	2026-11-03T09:45:40.2678510Z ##[endgroup]
+native-evidence	Set up job	2026-11-03T09:45:40.2678860Z ##[group]Runner Image
+native-evidence	Set up job	2026-11-03T09:45:40.2679270Z Image: xcode-27-arm64
+native-evidence	Set up job	2026-11-03T09:45:40.2679630Z Version: 20261026.0314.1
+native-evidence	Set up job	2026-11-03T09:45:40.2680460Z Included Software: https://github.com/actions/runner-images/blob/xcode-27-arm64/20261026.0314/images/macos/xcode-27-arm64-Readme.md
+native-evidence	Set up job	2026-11-03T09:45:40.2681650Z Image Release: https://github.com/actions/runner-images/releases/tag/xcode-27-arm64%2F20261026.0314
+native-evidence	Set up job	2026-11-03T09:45:40.2683660Z ##[endgroup]
+native-evidence	Set up job	2026-11-03T09:45:40.2685800Z ##[group]GITHUB_TOKEN Permissions
+native-evidence	Set up job	2026-11-03T09:45:40.2689360Z Contents: read
+native-evidence	Set up job	2026-11-03T09:45:40.2689860Z Metadata: read
+native-evidence	Set up job	2026-11-03T09:45:40.2690280Z ##[endgroup]
+native-evidence	Set up job	2026-11-03T09:45:40.2692050Z Secret source: Actions
+native-evidence	Set up job	2026-11-03T09:45:40.2692650Z Cache mode: write
+native-evidence	Set up job	2026-11-03T09:45:40.2693160Z Prepare workflow directory
+native-evidence	Set up job	2026-11-03T09:45:40.3228390Z Prepare all required actions
+native-evidence	Set up job	2026-11-03T09:45:40.3290970Z Getting action download info
+native-evidence	Set up job	2026-11-03T09:45:40.7821190Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+native-evidence	Set up job	2026-11-03T09:45:41.1584250Z Download action repository 'actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+native-evidence	Set up job	2026-11-03T09:45:41.3068360Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+native-evidence	Set up job	2026-11-03T09:45:41.4876320Z Complete job name: native-evidence
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-11-03T09:45:41.5868880Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5870090Z with:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5870430Z   persist-credentials: false
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5870930Z   repository: devdasx/oath-wallet-security-review
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5875520Z   token: ***
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5875930Z   ssh-strict: true
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5876250Z   ssh-user: git
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5876570Z   clean: true
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5876980Z   sparse-checkout-cone-mode: true
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5877380Z   fetch-depth: 1
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5878390Z   fetch-tags: false
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5879570Z   show-progress: true
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5879940Z   lfs: false
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5880250Z   submodules: false
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5880790Z   set-safe-directory: true
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5881240Z   allow-unsafe-pr-checkout: false
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:41.5882050Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.1775220Z Syncing repository: devdasx/oath-wallet-security-review
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.1777180Z ##[group]Getting Git version info
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.1780460Z Working directory is '/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review'
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.1782060Z [command]/opt/homebrew/bin/git version
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2245610Z git version 2.56.0
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2268930Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2278990Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/729d5837-5fa5-4250-a963-835f463837bf/.gitconfig'
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2292410Z Temporarily overriding HOME='/Users/runner/work/_temp/729d5837-5fa5-4250-a963-835f463837bf' before making global git config changes
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2293840Z Adding repository directory to the temporary git global config as a safe directory
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2296590Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2488750Z Deleting the contents of '/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review'
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2494390Z ##[group]Determining repository object format
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2496640Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2498350Z ##[group]Initializing the repository
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2501090Z [command]/opt/homebrew/bin/git init /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2910970Z hint: Using 'master' as the name for the initial branch. This default branch name
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2912410Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2913210Z hint: to use in all of your new repositories, which will suppress this warning,
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2914240Z hint: call:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2914890Z hint:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2915350Z hint: 	git config --global init.defaultBranch <name>
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2918700Z hint:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2919370Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2920280Z hint: 'development'. The just-created branch can be renamed via this command:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2921010Z hint:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2921410Z hint: 	git branch -m <name>
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2921880Z hint:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2922740Z hint: Disable this message with "git config set advice.defaultBranchName false"
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2924340Z Initialized empty Git repository in /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git/
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.2943890Z [command]/opt/homebrew/bin/git remote add origin https://github.com/devdasx/oath-wallet-security-review
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3086200Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3087040Z ##[group]Disabling automatic garbage collection
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3088780Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3198640Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3199950Z ##[group]Setting up auth
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3200480Z Removing SSH command configuration
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3212150Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.3335140Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.5289800Z Removing HTTP extra header
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.5292750Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.5389480Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.7484990Z Removing includeIf entries pointing to credentials config files
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.7491890Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.7580170Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9222270Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9360110Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git.path /Users/runner/work/_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9532990Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9648520Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9751000Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9847980Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9851600Z ##[group]Fetching the repository
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:42.9853250Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +301996e1e68ce5a0549fee1ae88e4f301f701237:refs/remotes/origin/main
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.4278330Z From https://github.com/devdasx/oath-wallet-security-review
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.4413490Z  * [new ref]             301996e1e68ce5a0549fee1ae88e4f301f701237 -> origin/main
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.4846970Z [command]/opt/homebrew/bin/git branch --list --remote origin/main
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5003500Z   origin/main
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5157670Z [command]/opt/homebrew/bin/git rev-parse refs/remotes/origin/main
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5228630Z 301996e1e68ce5a0549fee1ae88e4f301f701237
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5251770Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5270130Z ##[group]Determining the checkout info
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5273600Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5274560Z [command]/opt/homebrew/bin/git sparse-checkout disable
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5572450Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5812030Z ##[group]Checking out the ref
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:48.5992760Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.0276610Z Updating files:   7% (5095/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.2075860Z Updating files:   8% (5816/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.3581470Z Updating files:   9% (6543/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.5261520Z Updating files:  10% (7270/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.6801740Z Updating files:  11% (7997/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.6981070Z Updating files:  12% (8723/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.8244250Z Updating files:  12% (8795/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:50.9929220Z Updating files:  13% (9450/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.3438720Z Updating files:  14% (10177/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.4597890Z Updating files:  15% (10904/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.5660900Z Updating files:  16% (11631/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.6936790Z Updating files:  17% (12358/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.7000740Z Updating files:  17% (13036/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.8368880Z Updating files:  18% (13085/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:51.9488710Z Updating files:  19% (13812/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.1349910Z Updating files:  20% (14539/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.2386170Z Updating files:  21% (15266/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.3401110Z Updating files:  22% (15993/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.4589940Z Updating files:  23% (16719/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.6438840Z Updating files:  24% (17446/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.6961670Z Updating files:  25% (18173/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.7938640Z Updating files:  25% (18400/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:52.9204940Z Updating files:  26% (18900/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.0534090Z Updating files:  27% (19627/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.1898380Z Updating files:  28% (20354/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.3498380Z Updating files:  29% (21081/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.5662950Z Updating files:  30% (21808/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.6945390Z Updating files:  31% (22535/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.7068840Z Updating files:  31% (23172/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.8322340Z Updating files:  32% (23262/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:53.9458180Z Updating files:  33% (23989/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.0793410Z Updating files:  34% (24715/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.2758310Z Updating files:  35% (25442/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.3875230Z Updating files:  36% (26169/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.5236660Z Updating files:  37% (26896/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.6334230Z Updating files:  38% (27623/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.6972740Z Updating files:  39% (28350/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.7547190Z Updating files:  39% (28666/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.8748850Z Updating files:  40% (29077/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:54.9889280Z Updating files:  41% (29804/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.1492600Z Updating files:  42% (30531/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.2541500Z Updating files:  43% (31258/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.3400970Z Updating files:  44% (31985/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.4323750Z Updating files:  45% (32711/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.5310570Z Updating files:  46% (33438/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.6491660Z Updating files:  47% (34165/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.6946370Z Updating files:  48% (34892/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.8159490Z Updating files:  48% (35123/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:55.9359740Z Updating files:  49% (35619/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.0768580Z Updating files:  50% (36346/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.1928640Z Updating files:  51% (37073/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.3279960Z Updating files:  52% (37800/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.4500350Z Updating files:  53% (38527/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.5764390Z Updating files:  54% (39254/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.6944050Z Updating files:  55% (39981/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.6966500Z Updating files:  55% (40693/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.8222170Z Updating files:  56% (40707/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:56.9696520Z Updating files:  57% (41434/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.0945920Z Updating files:  58% (42161/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.2422170Z Updating files:  59% (42888/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.3681700Z Updating files:  60% (43615/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.5804410Z Updating files:  61% (44342/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.7025800Z Updating files:  62% (45069/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.7237140Z Updating files:  62% (45675/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:57.8664220Z Updating files:  63% (45796/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.0150000Z Updating files:  64% (46523/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.1456670Z Updating files:  65% (47250/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.3004960Z Updating files:  66% (47977/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.4102440Z Updating files:  67% (48703/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.5572910Z Updating files:  68% (49430/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.6686800Z Updating files:  69% (50157/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.6943840Z Updating files:  70% (50884/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.8636350Z Updating files:  70% (50955/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:58.9839740Z Updating files:  71% (51611/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.0842140Z Updating files:  72% (52338/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.2115730Z Updating files:  73% (53065/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.3699970Z Updating files:  74% (53792/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.5139100Z Updating files:  75% (54519/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.6940700Z Updating files:  76% (55246/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.7204020Z Updating files:  76% (55899/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:45:59.9207720Z Updating files:  77% (55973/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.0357290Z Updating files:  78% (56699/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.1663210Z Updating files:  79% (57426/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.3172370Z Updating files:  80% (58153/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.4986270Z Updating files:  81% (58880/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.6119760Z Updating files:  82% (59607/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.6944090Z Updating files:  83% (60334/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.7755020Z Updating files:  83% (60765/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:00.8991850Z Updating files:  84% (61061/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.0041770Z Updating files:  85% (61788/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.1226340Z Updating files:  86% (62515/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.2599170Z Updating files:  87% (63242/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.3806140Z Updating files:  88% (63969/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.5392080Z Updating files:  89% (64695/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.6745220Z Updating files:  90% (65422/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.6942110Z Updating files:  91% (66149/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.8181210Z Updating files:  91% (66267/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:01.9310350Z Updating files:  92% (66876/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.0344530Z Updating files:  93% (67603/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.1291100Z Updating files:  94% (68330/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.2653220Z Updating files:  95% (69057/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.4027250Z Updating files:  96% (69784/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.5130290Z Updating files:  97% (70511/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.6321470Z Updating files:  98% (71238/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.6944060Z Updating files:  99% (71965/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.7710890Z Updating files:  99% (72341/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.7711940Z Updating files: 100% (72691/72691)
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.7712400Z Updating files: 100% (72691/72691), done.
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.8853180Z Switched to a new branch 'main'
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.8875570Z branch 'main' set up to track 'origin/main'.
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.8947920Z ##[endgroup]
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.9182910Z [command]/opt/homebrew/bin/git log -1 --format=%H
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.9291540Z 301996e1e68ce5a0549fee1ae88e4f301f701237
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.9318590Z ##[group]Removing auth
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.9319320Z Removing SSH command configuration
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.9326310Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:02.9462860Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.1039620Z Removing HTTP extra header
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.1042820Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.1141130Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2455600Z Removing includeIf entries pointing to credentials config files
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2458250Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2570640Z includeif.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2571770Z includeif.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git/worktrees/*.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2572410Z includeif.gitdir:/github/workspace/.git.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2573420Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2583680Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2689400Z /Users/runner/work/_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2701570Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git.path \/Users\/runner\/work\/_temp\/git\-credentials\-4188e68b\-7a37\-4cb3\-95bb\-6b81ee01a962\.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2809820Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git/worktrees/*.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2893510Z /Users/runner/work/_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.2909240Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.git/worktrees/*.path \/Users\/runner\/work\/_temp\/git\-credentials\-4188e68b\-7a37\-4cb3\-95bb\-6b81ee01a962\.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3003210Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3086970Z /github/runner_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3093720Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-4188e68b\-7a37\-4cb3\-95bb\-6b81ee01a962\.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3202150Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3304940Z /github/runner_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3306880Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-4188e68b\-7a37\-4cb3\-95bb\-6b81ee01a962\.config
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.3403280Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.4662610Z Removing credentials config '/Users/runner/work/_temp/git-credentials-4188e68b-7a37-4cb3-95bb-6b81ee01a962.config'
+native-evidence	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:03.4679290Z ##[endgroup]
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	﻿2026-11-03T09:46:03.5170800Z ##[group]Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5171220Z with:
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5171450Z   python-version: 3.14.7
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5171690Z   check-latest: false
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5174420Z   token: ***
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5174660Z   update-environment: true
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5174930Z   allow-prereleases: false
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5175140Z   freethreaded: false
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.5175400Z ##[endgroup]
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.7561610Z ##[group]Installed versions
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:03.7590490Z Version 3.14.7 was not found in the local cache
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:04.6130600Z Version 3.14.7 is available for downloading
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:04.6132180Z Download from "https://github.com/actions/python-versions/releases/download/3.14.7-31064857500/python-3.14.7-darwin-arm64.tar.gz"
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:05.4769600Z Extract downloaded archive
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:05.5030460Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/55a1493c-a20b-43d9-b8a3-4bd4de328351 -f /Users/runner/work/_temp/b767ed43-4cc0-433f-a081-69687dd78aee
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:05.6749950Z Execute installation script
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:05.7023430Z Check if Python hostedtoolcache folder exist...
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:05.7119420Z Deleting Python /Users/runner/hostedtoolcache/Python/3.14.9/arm64
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:05.7280700Z Install Python binaries from prebuilt package
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9164220Z installer: Package name is Python
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9166890Z installer: choices changes file '/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/tmp.XJpCIDTFbw' applied
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9169400Z installer: Upgrading at base path /
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9170960Z installer: The upgrade was successful.
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9178390Z Create hostedtoolcach symlinks (Required for the backward compatibility)
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9189210Z Create Python 3.14.7 folder
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9406650Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:48.9563040Z Upgrading pip...
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:49.8725180Z Collecting pip
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:49.9283820Z Downloading pip-26.3-py3-none-any.whl.metadata (4.6 kB)
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:49.9477780Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:50.0961920Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 13.9 MB/s  0:00:00
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:50.1485020Z Installing collected packages: pip
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:50.1587440Z   Attempting uninstall: pip
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:50.1689870Z Found existing installation: pip 26.2.2
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:50.2020680Z Uninstalling pip-26.2.2:
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:50.6226010Z Successfully uninstalled pip-26.2.2
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:52.7339180Z Successfully installed pip-26.3
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:52.8199230Z Install OpenSSL certificates
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.4546570Z Requirement already satisfied: certifi in /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages (2026.10.23)
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.7656020Z -- pip install --upgrade certifi
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.7657140Z  -- removing any existing file or link
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.7657780Z  -- creating symlink to certifi certificate bundle
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.7658370Z  -- setting permissions
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.7658770Z  -- update complete
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.7872660Z Create complete file
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.8206670Z Successfully set up CPython (3.14.7)
+native-evidence	Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1	2026-11-03T09:46:53.8216010Z ##[endgroup]
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	﻿2026-11-03T09:46:53.8894180Z ##[group]Run rustc --version
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.8894740Z ^[[36;1mrustc --version^[[0m
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.8895090Z ^[[36;1mcargo --version^[[0m
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.8895500Z ^[[36;1mpython3 -m unittest discover -s tests -p test_near_contract_unit.py^[[0m
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9166200Z shell: /bin/bash -e {0}
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9166690Z env:
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9167170Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9167790Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9168430Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9168950Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9169490Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:53.9169920Z ##[endgroup]
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.1908290Z rustc 1.99.1 (58cf8f9c3 2026-10-13)
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.5046340Z cargo 1.99.1 (5f94df478 2026-08-27)
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.8268210Z .....
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.8269260Z ----------------------------------------------------------------------
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.8271180Z Ran 5 tests in 0.116s
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.8271810Z 
+native-evidence	Require pinned Rust toolchain (absence is a blocker)	2026-11-03T09:46:54.8272950Z OK
+native-evidence	Replay native source with mock receipts and record SDK aborts	﻿2026-11-03T09:46:54.8543370Z ##[group]Run git clone --no-checkout https://github.com/near/core-contracts.git .work/near-contract
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8545090Z ^[[36;1mgit clone --no-checkout https://github.com/near/core-contracts.git .work/near-contract^[[0m
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8545810Z ^[[36;1mgit -C .work/near-contract checkout --detach 1b0436c96379c63aee7d2429c6d5d24019031ab8^[[0m
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8546800Z ^[[36;1mpython3 scripts/near_contract_unit.py .work/near-contract .work/native-contract evidence/ci/near-contract-unit --cargo-home .work/cargo-cache --fetch^[[0m
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8615520Z shell: /bin/bash -e {0}
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8638340Z env:
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8638830Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8639310Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8639990Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8640580Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8641410Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8641790Z ##[endgroup]
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:55.0030830Z Cloning into '.work/near-contract'...
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:56.7546010Z HEAD is now at 1b0436c doc(multisig2): Update README to use correct assembly name (#207)
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0447970Z Traceback (most recent call last):
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0476850Z   File "/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/scripts/near_contract_unit.py", line 197, in <module>
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0478550Z     main()
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0479310Z     ~~~~^^
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0480660Z   File "/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/scripts/near_contract_unit.py", line 135, in main
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0540370Z ##[error]    raise ValueError('This replay requires Rust and Cargo 1.96.1')
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0549140Z ValueError: This replay requires Rust and Cargo 1.96.1
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0552440Z ##[error]Process completed with exit code 1.
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	﻿2026-11-03T09:46:57.0648210Z ##[group]Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0648620Z with:
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0648910Z   name: near-contract-unit-evidence
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0649260Z   path: evidence/ci/near-contract-unit
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0649590Z   retention-days: 90
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0649880Z   if-no-files-found: warn
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0650110Z   compression-level: 6
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0650380Z   overwrite: false
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0651080Z   include-hidden-files: false
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0651900Z   archive: true
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0652130Z env:
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0652460Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0652920Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0653440Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0653930Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0654470Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.0654960Z ##[endgroup]
+native-evidence	Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9	2026-11-03T09:46:57.3142620Z ##[warning]No files were found with the provided path: evidence/ci/near-contract-unit. No artifacts will be uploaded.
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-11-03T09:46:57.3431160Z Post job cleanup.
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.4992060Z [command]/opt/homebrew/bin/git version
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5104330Z git version 2.56.0
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5156630Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/dfe11d2a-f885-4c43-b366-61714e0ff733/.gitconfig'
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5191570Z Temporarily overriding HOME='/Users/runner/work/_temp/dfe11d2a-f885-4c43-b366-61714e0ff733' before making global git config changes
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5192720Z Adding repository directory to the temporary git global config as a safe directory
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5197260Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5321760Z Removing SSH command configuration
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5332940Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.5453710Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.7575430Z Removing HTTP extra header
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.7585120Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.7677060Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.9639490Z Removing includeIf entries pointing to credentials config files
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.9641750Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+native-evidence	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-11-03T09:46:57.9730370Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+native-evidence	Complete job	﻿2026-11-03T09:46:58.1552410Z Cleaning up orphan processes

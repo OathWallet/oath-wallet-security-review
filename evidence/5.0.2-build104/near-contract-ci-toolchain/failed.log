@@ -1,0 +1,22 @@
+native-evidence	Replay native source with mock receipts and record SDK aborts	﻿2026-11-03T09:46:54.8543370Z ##[group]Run git clone --no-checkout https://github.com/near/core-contracts.git .work/near-contract
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8545090Z ^[[36;1mgit clone --no-checkout https://github.com/near/core-contracts.git .work/near-contract^[[0m
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8545810Z ^[[36;1mgit -C .work/near-contract checkout --detach 1b0436c96379c63aee7d2429c6d5d24019031ab8^[[0m
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8546800Z ^[[36;1mpython3 scripts/near_contract_unit.py .work/near-contract .work/native-contract evidence/ci/near-contract-unit --cargo-home .work/cargo-cache --fetch^[[0m
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8615520Z shell: /bin/bash -e {0}
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8638340Z env:
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8638830Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8639310Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8639990Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8640580Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8641410Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:54.8641790Z ##[endgroup]
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:55.0030830Z Cloning into '.work/near-contract'...
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:56.7546010Z HEAD is now at 1b0436c doc(multisig2): Update README to use correct assembly name (#207)
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0447970Z Traceback (most recent call last):
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0476850Z   File "/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/scripts/near_contract_unit.py", line 197, in <module>
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0478550Z     main()
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0479310Z     ~~~~^^
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0480660Z   File "/Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/scripts/near_contract_unit.py", line 135, in main
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0540370Z ##[error]    raise ValueError('This replay requires Rust and Cargo 1.96.1')
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0549140Z ValueError: This replay requires Rust and Cargo 1.96.1
+native-evidence	Replay native source with mock receipts and record SDK aborts	2026-11-03T09:46:57.0552440Z ##[error]Process completed with exit code 1.
