@@ -1,5 +1,7 @@
 # Oath Wallet 5.0.2 (104) prerelease security review
 
+Build 104 checkpoint 20 adds 31 passing offline Stellar persistence and generic refresh-worker methods, including database reopening, signature preservation, duplicate-wallet isolation and retries. Seven files have hash-bound partial read evidence; four were previously outstanding. No application implementation changes or new confirmed defect are claimed. The earlier XDR/SCALE hosted replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](review/STELLAR-PERSISTENCE.md).
+
 Build 104 checkpoint 19 fixes malformed Stellar plan timestamps that could crash structural validation during saved-send verification. Fresh before/after builds reproduce three crashes and then six passing methods; 40 adjacent methods pass. Valid saved transactions retain their bytes and signatures. Earlier Sui/XRP history and Sui signing GitHub replays are downloaded and hash-verified. The full audit remains incomplete. [Evidence and remaining gaps](review/STELLAR-PLAN-TIMESTAMPS.md).
 
 Build 104 checkpoint 18 repairs nonzero-origin buffer crashes in the Stellar XDR and Polkadot SCALE readers. The identical nine-method fixture changes from three passes/six SIGTRAPs to nine passes; 40 adjacent send and WalletConnect methods pass. Diagnostics and generic unsigned iOS Release compilation pass. Public API/internal parser robustness is demonstrated, not a remote exploit. The full audit remains incomplete. [Evidence and remaining gaps](review/XDR-SCALE-BUFFERS.md).
