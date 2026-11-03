@@ -261,3 +261,7 @@ NEAR balance freshness and delayed TRON/TON freshness now have verified hosted
 receipts, retaining their original source pins and before/after failures.
 The whole-wallet review remains incomplete; this checkpoint does not promote
 unreviewed files. No App Store operation is included.
+
+## Checkpoint 17 — Sui signing and transaction buffers
+
+Build 104 checkpoint 17 repairs a Sui transaction-parser crash on nonzero-origin Data. The identical fixture changes from one passing control/two SIGTRAPs to three passes. All 34 signing and WalletConnect methods pass, including 336 independent hash vectors; diagnostics and generic unsigned iOS Release compilation also pass. This is parser API robustness, not a demonstrated remote app exploit. [Exact source pins, reproduction and limits](SUI-SIGNING-BOUNDARIES.md). The full audit remains incomplete; no App Store operation.

@@ -1,0 +1,177 @@
+Building for debugging...
+[0/12] /Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/diagnostics-build/arm64-apple-macosx/debug/OathDiagnosticsPackageTests.derived/runner.swift
+[1/12] Copying reviewed-upload-exclusions.json
+[1/12] Copying app_source_files.json
+[3/12] Copying bip39_words.txt
+[4/12] Write sources
+[7/12] Write swift-version--58304C5D6DBC2206.txt
+[9/23] Compiling OathDiagnostics DiagnosticPrivacy.swift
+[10/23] Compiling OathDiagnostics DiagnosticTrace.swift
+[11/23] Compiling OathDiagnostics DiagnosticUploadPolicy.swift
+[12/26] Compiling OathDiagnostics DiagnosticEvent.swift
+[13/26] Compiling OathDiagnostics DiagnosticHTTP.swift
+[14/26] Compiling OathDiagnostics DiagnosticOutbox.swift
+[15/26] Emitting module OathDiagnostics
+[16/26] Compiling OathDiagnostics BoundedHTTPBody.swift
+[17/26] Compiling OathDiagnostics ClioHolderAbsence.swift
+[18/26] Compiling OathDiagnostics DiagnosticAvailabilityPolicy.swift
+[19/26] Compiling OathDiagnostics DiagnosticEVMBroadcast.swift
+[20/26] Compiling OathDiagnostics DiagnosticWatchdog.swift
+[21/26] Compiling OathDiagnostics OathDiagnostics.swift
+[22/26] Compiling OathDiagnostics resource_bundle_accessor.swift
+[22/26] Write Objects.LinkFileList
+[23/48] Linking libOathDiagnostics.dylib
+[25/48] Emitting module OathDiagnosticsTests
+[26/55] Compiling OathDiagnosticsTests AccountAbsenceTests.swift
+[27/55] Compiling OathDiagnosticsTests AptosSendDiagnosticTests.swift
+[28/55] Compiling OathDiagnosticsTests ArcDiagnosticTests.swift
+[29/55] Compiling OathDiagnosticsTests AvailabilityPolicyTests.swift
+[30/55] Compiling OathDiagnosticsTests ClioHolderAbsenceTests.swift
+[31/55] Compiling OathDiagnosticsTests DiagnosticAttemptCorrelationTests.swift
+[32/55] Compiling OathDiagnosticsTests DiagnosticCancellationTests.swift
+[33/55] Compiling OathDiagnosticsTests SeiDiagnosticTests.swift
+[34/55] Compiling OathDiagnosticsTests SolanaDiagnosticTests.swift
+[35/55] Compiling OathDiagnosticsTests ThorchainDiagnosticTests.swift
+[36/55] Compiling OathDiagnosticsTests TonSendDiagnosticTests.swift
+[37/55] Compiling OathDiagnosticsTests WalletConnectAttestationTests.swift
+[38/55] Compiling OathDiagnosticsTests XrplPendingDiagnosticTests.swift
+[39/55] Compiling OathDiagnosticsTests ZeroGDiagnosticTests.swift
+[40/55] Compiling OathDiagnosticsTests IoTeXDiagnosticTests.swift
+[41/55] Compiling OathDiagnosticsTests MarketAbsenceTests.swift
+[42/55] Compiling OathDiagnosticsTests NearSendDiagnosticTests.swift
+[43/55] Compiling OathDiagnosticsTests PolkadotImportedDiagnosticTests.swift
+[44/55] Compiling OathDiagnosticsTests PublicPolicyDiagnosticTests.swift
+[45/55] Compiling OathDiagnosticsTests ReviewedUploadPolicyTests.swift
+[46/55] Compiling OathDiagnosticsTests RuntimeStackRegressionTests.swift
+[47/55] Compiling OathDiagnosticsTests DiagnosticTraceTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[48/55] Compiling OathDiagnosticsTests DiagnosticWatchdogTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[49/55] Compiling OathDiagnosticsTests DiagnosticsTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[50/55] Compiling OathDiagnosticsTests EVMDuplicateDiagnosticTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[51/55] Compiling OathDiagnosticsTests EVMMetadataDiagnosticTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[52/55] Compiling OathDiagnosticsTests HistoryAvailabilityTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[53/55] Compiling OathDiagnosticsTests IndexedArchiveRecoveryPolicyTests.swift
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/sui-signing-boundaries/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[54/57] Compiling OathDiagnosticsPackageTests runner.swift
+[55/57] Emitting module OathDiagnosticsPackageTests
+[55/57] Write Objects.LinkFileList
+[56/57] Linking OathDiagnosticsPackageTests
+Build complete! (16.50s)
+warning: '--build-system native' has been deprecated and will be removed in a future release; please report an issue at https://github.com/swiftlang/swift-package-manager/issues if you are unable to adopt the default build system.

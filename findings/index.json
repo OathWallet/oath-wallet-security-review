@@ -1569,5 +1569,24 @@
     "hosted_replay": "pending",
     "merge_commit": "5e54956e10647ca1b2588fa77b3cbcb9b7884f03",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/85"
+  },
+  {
+    "id": "OW-2026-070",
+    "severity": "low",
+    "title": "Sui transaction parser traps on nonzero-origin Data",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-070.md",
+    "baseline_commit": "b3f1f6af98bedfe850d390cac684a563c598e3ac",
+    "fix_commit": "018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0",
+    "retest_scope": "Same production parser fixture: ordinary control passes and two sliced-data methods SIGTRAP before; all three pass after. Public parser API robustness; ordinary base64 RPC input is zero-origin, no remote app exploit demonstrated. Runtime network denied.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": false,
+      "validation": "Later source repair; immutable baseline and paired failures remain unchanged."
+    },
+    "hosted_replay": "pending",
+    "merge_commit": "e2b2596bbdd8d1879d0dbbff59bf23d1802bc9aa",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/86"
   }
 ]

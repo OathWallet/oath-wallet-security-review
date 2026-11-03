@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "python3",
+      "Tools/ValidatePublicRelease.py"
+    ],
+    "exit_code": 0,
+    "log": "public-source.log"
+  },
+  {
+    "command": [
+      "python3",
+      "Tools/CheckDiagnosticsCoverage.py"
+    ],
+    "exit_code": 0,
+    "log": "diagnostics-coverage.log"
+  },
+  {
+    "command": [
+      "gitleaks",
+      "dir",
+      ".",
+      "--redact=100"
+    ],
+    "exit_code": 0,
+    "log": "gitleaks.log"
+  }
+]

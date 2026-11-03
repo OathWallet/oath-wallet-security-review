@@ -1,0 +1,32 @@
+name: Reproduce Sui signing and transaction buffer checks
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sui-signing-boundaries.yml', 'scripts/sui-signing-boundaries.py', 'scripts/sui-transaction-slices.py', 'fixtures/sui-signing-boundaries/**', 'tests/test_sui_signing_boundaries.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 50
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_sui_signing_boundaries.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach b3f1f6af98bedfe850d390cac684a563c598e3ac
+          python3 scripts/sui-transaction-slices.py .work/wallet .work/before evidence/ci/sui-signing/before --baseline --expected-commit b3f1f6af98bedfe850d390cac684a563c598e3ac --build-cache .work/build
+          git -C .work/wallet checkout --detach 018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0
+          python3 scripts/sui-transaction-slices.py .work/wallet .work/after evidence/ci/sui-signing/after --expected-commit 018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0 --build-cache .work/build
+          python3 scripts/sui-signing-boundaries.py .work/wallet .work/signing evidence/ci/sui-signing/signing --expected-commit 018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0 --build-cache .work/build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: sui-signing-boundaries-evidence, path: evidence/ci/sui-signing, retention-days: 90}

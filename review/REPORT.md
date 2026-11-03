@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 17 repairs a Sui transaction-parser crash on nonzero-origin Data. The identical fixture changes from one passing control/two SIGTRAPs to three passes. All 34 signing and WalletConnect methods pass, including 336 independent hash vectors; diagnostics and generic unsigned iOS Release compilation also pass. This is parser API robustness, not a demonstrated remote app exploit. [Evidence and remaining gaps](SUI-SIGNING-BOUNDARIES.md).
+
 Build 104 checkpoint 16 repairs a Sui history restart overflow and missing Sui/XRP cursor-account checks. The same four host cases change from one passing control, two assertion failures and one SIGTRAP to all passing. All 22 adjacent offline methods pass. Earlier NEAR and TRON/TON hosted repair runs are now downloaded and hash-verified. [Evidence and remaining limits](HISTORY-RESTART-BOUNDARIES.md).
 
 Build 104 checkpoint 15 repairs delayed TRON/TON inventory freshness: the same five host cases change from two passes/three failures to five passes. Old in-flight balance responses no longer satisfy the post-send freshness check. The earlier NEAR journal-race hosted replay is downloaded and hash-verified. [Exact checks and remaining gaps](INVENTORY-FLIGHT-TIME.md).

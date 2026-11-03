@@ -1,0 +1,112 @@
+{
+  "finding": "OW-2026-070",
+  "before_commit": "b3f1f6af98bedfe850d390cac684a563c598e3ac",
+  "repair_commit": "018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0",
+  "before": {
+    "passed": 1,
+    "sigtrap": 2
+  },
+  "after": {
+    "passed": 3,
+    "sigtrap": 0
+  },
+  "signing": {
+    "passed": 34,
+    "failed": 0,
+    "independent_vectors": 336,
+    "live_excluded": 3
+  },
+  "hosted_replay": "pending",
+  "files": [
+    {
+      "path": "runs.zip",
+      "sha256": "4c2c9859b907c1c7298e3edbad0be5eccb85dfc23bebecc0842c7d4e2fc417c9"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "0ca343865fcaf7623f5b3ef4c5833e63c523a3a5218474a01e38e559856c482d"
+    },
+    {
+      "path": "validation/audit-helpers.log",
+      "sha256": "b35e216a24d5d3505d7cc9bc0a2ff981be0484d165e90aea9567b2979608aafb"
+    },
+    {
+      "path": "validation/checks.json",
+      "sha256": "d3d53bb22e602f83542320a49c9203004a3518d6bed27b8dbda87c5e64a96b1b"
+    },
+    {
+      "path": "validation/completion.log",
+      "sha256": "50311092c08fb83bd8779b0c6d3d2e30734a66184da5c5b83682d8d0e9bbb345"
+    },
+    {
+      "path": "validation/diagnostics-build.log",
+      "sha256": "7b102b887511480008f1569cc890eb81a4e5d899454e75ea2f6da8506901c053"
+    },
+    {
+      "path": "validation/diagnostics-coverage.log",
+      "sha256": "abb86118ee61e33a96aca80101c301a2f822631e7876b09297b66e93604246f4"
+    },
+    {
+      "path": "validation/diagnostics-result.json",
+      "sha256": "68a0b3660c93d4d919d6e4cc046dbcfc3ffca0f4171bacbc79b10593d88fb85f"
+    },
+    {
+      "path": "validation/diagnostics-tests.log",
+      "sha256": "7441b8bb2c2ad2b4d1e0a42aa0cadb0816d7374980b4ebb8d3dbe9777578d629"
+    },
+    {
+      "path": "validation/final-publication-secret-scan.log",
+      "sha256": "dd9799d82d54ca84acdaff4e1b93b43ff2b63ff0797b0cc4dd88ecbbfe84e02e"
+    },
+    {
+      "path": "validation/gitleaks.log",
+      "sha256": "00375359674d6bdd7c3d7499d1b96d99379a92716c1b3411319a886fa8a15b9f"
+    },
+    {
+      "path": "validation/initial-audit-helpers.log",
+      "sha256": "275c7e10da550eb71dba794a81f25f1f8df763de1f49bfe19db60d300da4822e"
+    },
+    {
+      "path": "validation/initial-diagnostics-result.json",
+      "sha256": "2a6fbc3a62a8d0b6e563e64867b757432c19efc66f6a6eafee38856f93bd3532"
+    },
+    {
+      "path": "validation/initial-diagnostics-tests.log",
+      "sha256": "efff8534d18004e1f7570dcb0692f483b8de4ce4a46424f16a3480dfd7051915"
+    },
+    {
+      "path": "validation/ios-build-result.json",
+      "sha256": "1ac210b6dfe2bdfe5f66ce5998500980f7dd7a59f310d499706282dc6cae358e"
+    },
+    {
+      "path": "validation/ios-build.log",
+      "sha256": "0252591380ce862dbe4584e1adad2bff11d279d155fda29dfbbe54dcb1b0986f"
+    },
+    {
+      "path": "validation/merge-binding.json",
+      "sha256": "e10338389720e092ef6070b1ca6c6b223a6e289964b852bbc1ae67f98b439de4"
+    },
+    {
+      "path": "validation/product-version.json",
+      "sha256": "93a1cc76c736b2c988bf1abe7b36eb68305e1a7e21a6397628e1fbd5bf10df47"
+    },
+    {
+      "path": "validation/public-source.log",
+      "sha256": "405817ee21490f2c176d81175c94f3a7b38be869a0d87b419e3c8e92657db1d1"
+    },
+    {
+      "path": "validation/publication-secret-scan.json",
+      "sha256": "653d8cb7c29ead0b294310c6ef2ecf6d58042aa2541cef653e262105d7ccf875"
+    },
+    {
+      "path": "validation/publication-secret-scan.log",
+      "sha256": "67ce269f60bdb255026cdd5480e141cec8345d89bbf57bccb15ba1a4d3cc04e7"
+    }
+  ],
+  "merge_commit": "e2b2596bbdd8d1879d0dbbff59bf23d1802bc9aa",
+  "merge_tree_matches_repair": true,
+  "generic_unsigned_ios_build": "passed",
+  "product_version": "5.0.2 (104)",
+  "audit_helpers": 383,
+  "completion_outstanding_items": 16917
+}
