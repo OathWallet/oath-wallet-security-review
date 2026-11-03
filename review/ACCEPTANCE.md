@@ -115,3 +115,8 @@ contract execution or dependency provenance. [Scope](NEAR-JOURNAL-RACES.md).
 The scratch sender-reservation mutation is detected by three methods, while six
 controls pass. All 368 audit-helper tests pass. The original application checkout
 is unchanged, and earlier hosted jobs remain separately tracked.
+
+Build 104 checkpoint 15 repairs OW-2026-067 on a later public source revision.
+The controlled host tests do not close the full adapter/worker integration or
+live-provider freshness gaps. No complete file-review dispositions are added
+by test success. [Evidence](INVENTORY-FLIGHT-TIME.md).

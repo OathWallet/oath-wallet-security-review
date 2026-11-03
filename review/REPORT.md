@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 15 repairs delayed TRON/TON inventory freshness: the same five host cases change from two passes/three failures to five passes. Old in-flight balance responses no longer satisfy the post-send freshness check. The earlier NEAR journal-race hosted replay is downloaded and hash-verified. [Exact checks and remaining gaps](INVENTORY-FLIGHT-TIME.md).
+
 Build 104 checkpoint 14 adds four scoped partial source dispositions for TRON/TON ledger refreshes and 27 passing existing offline ledger/journal methods. The earlier activation/bootstrap GitHub replay is downloaded and hash-verified. No new app defect or app-source change is claimed; snapshot freshness and full adapter integration remain open. [Evidence and limitations](TRON-TON-LEDGER-BOUNDARIES.md).
 
 Build 104 checkpoint 13 repairs [OW-2026-066](../findings/OW-2026-066.md): NEAR post-send refresh no longer completes when the sent token read failed or returned a pre-execution block. The same six methods change from two passes/four failures to all passing; 24 adjacent methods and unsigned iOS Release compilation pass. [Evidence and remaining gaps](NEAR-BALANCE-FRESHNESS.md).

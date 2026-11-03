@@ -1,0 +1,391 @@
+Building for debugging...
+[Planning deferred tasks]
+[45 / 74]
+[46 / 75] OathDiagnostics
+[55 / 128]
+[58 / 128]
+[65 / 128]
+[66 / 128]
+[70 / 128]
+[73 / 128]
+[80 / 128]
+[82 / 128]
+[83 / 128]
+[90 / 128] OathDiagnostics
+[99 / 128] OathDiagnostics
+[101 / 128] OathDiagnosticsTests-product
+[105 / 128]
+[109 / 128] OathDiagnostics
+[116 / 129] OathDiagnostics-product
+[118 / 129] OathDiagnosticsTests-product
+[127 / 175]
+[134 / 175]
+[138 / 175]
+[142 / 175]
+[145 / 175]
+[148 / 175]
+[149 / 175]
+[154 / 175] OathDiagnosticsTests-product
+[163 / 175] OathDiagnosticsTests-product
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/inventory-flight-time/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+403 |         XCTAssertEqual(boundary.sourceLine, 40)
+404 | 
+405 |         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    |                               `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+406 |         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/inventory-flight-time/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+407 |         XCTAssertNil(cancelled); XCTAssertNil(absent)
+408 |         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+409 |             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    |                                  `- warning: no 'async' operations occur within 'await' expression [#UnnecessaryEffectMarker]
+410 |             XCTAssertNil(deferred)
+411 |             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[167 / 175] OathDiagnosticsTests-product
+[169 / 175] OathDiagnosticsTests-product
+[171 / 175] OathDiagnosticsTests-product
+Build complete! (8.94 secs)
+Test Suite 'All tests' started at 2026-11-03 13:10:32.056.
+Test Suite 'OathDiagnosticsTests.xctest' started at 2026-11-03 13:10:32.056.
+Test Suite 'AccountAbsenceTests' started at 2026-11-03 13:10:32.056.
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testLiveRecordedUnfundedAccountEnvelopes]' started.
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/inventory-flight-time/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/AccountAbsenceTests.swift:73: -[OathDiagnosticsTests.AccountAbsenceTests testLiveRecordedUnfundedAccountEnvelopes] : Test skipped - Opt-in freshly fetched public synthetic account responses
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testLiveRecordedUnfundedAccountEnvelopes]' skipped (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testNearMissingAccountCannotHideContractFailureOrOtherAccount]' started.
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testNearMissingAccountCannotHideContractFailureOrOtherAccount]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testStellarOnlySuppressesHorizonAccountNotFound]' started.
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testStellarOnlySuppressesHorizonAccountNotFound]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testStellarPendingTransactionAbsenceIsExpectedButProxyFailuresAreNot]' started.
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testStellarPendingTransactionAbsenceIsExpectedButProxyFailuresAreNot]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testXrplFallbackRecognizesAbsenceButStillReportsBusyAndWrongLedger]' started.
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testXrplFallbackRecognizesAbsenceButStillReportsBusyAndWrongLedger]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testXrplRequiresExactAccountValidatedLedgerAndCorrectMethod]' started.
+Test Case '-[OathDiagnosticsTests.AccountAbsenceTests testXrplRequiresExactAccountValidatedLedgerAndCorrectMethod]' passed (0.001 seconds).
+Test Suite 'AccountAbsenceTests' passed at 2026-11-03 13:10:32.061.
+	 Executed 6 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'AptosSendDiagnosticTests' started at 2026-11-03 13:10:32.061.
+Test Case '-[OathDiagnosticsTests.AptosSendDiagnosticTests testContextContainsNoCredentialTransactionOrWalletFields]' started.
+Test Case '-[OathDiagnosticsTests.AptosSendDiagnosticTests testContextContainsNoCredentialTransactionOrWalletFields]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.AptosSendDiagnosticTests testOnlyExactPendingLookupAbsenceIsExcluded]' started.
+Test Case '-[OathDiagnosticsTests.AptosSendDiagnosticTests testOnlyExactPendingLookupAbsenceIsExcluded]' passed (0.001 seconds).
+Test Suite 'AptosSendDiagnosticTests' passed at 2026-11-03 13:10:32.062.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'ArcDiagnosticTests' started at 2026-11-03 13:10:32.062.
+Test Case '-[OathDiagnosticsTests.ArcDiagnosticTests testRPCContextDoesNotCopyPayloadSignatureOrKeys]' started.
+Test Case '-[OathDiagnosticsTests.ArcDiagnosticTests testRPCContextDoesNotCopyPayloadSignatureOrKeys]' passed (0.000 seconds).
+Test Suite 'ArcDiagnosticTests' passed at 2026-11-03 13:10:32.063.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'AvailabilityPolicyTests' started at 2026-11-03 13:10:32.063.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testAdmissionUsesTypedCodesWithoutFormattingAndPreservesRuntimeFailures]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testAdmissionUsesTypedCodesWithoutFormattingAndPreservesRuntimeFailures]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testChilizFinalSendOutagesAreRetainedWithoutChangingBackgroundExclusions]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testChilizFinalSendOutagesAreRetainedWithoutChangingBackgroundExclusions]' passed (0.017 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testExactStaleCoinbaseQuoteIsAvailabilityButUnrelated404sRemain]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testExactStaleCoinbaseQuoteIsAvailabilityButUnrelated404sRemain]' passed (0.003 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testHTTPAndURLFailuresAreExcludedAcrossServicesAndChains]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testHTTPAndURLFailuresAreExcludedAcrossServicesAndChains]' passed (0.028 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testKnownWrappersAndProviderEnvelopesDoNotLeakThrough]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testKnownWrappersAndProviderEnvelopesDoNotLeakThrough]' passed (0.006 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testNetworkFrameworkPOSIXFailuresFollowSocketPolicyWithoutHidingOtherCases]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testNetworkFrameworkPOSIXFailuresFollowSocketPolicyWithoutHidingOtherCases]' passed (0.007 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testNewAvailabilityReportsNeverPersistUploadOrProduceRetentionLoss]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testNewAvailabilityReportsNeverPersistUploadOrProduceRetentionLoss]' passed (0.047 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testPolkadotSendFailuresRetainSafeContextAndRedactWalletAndTransactionData]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testPolkadotSendFailuresRetainSafeContextAndRedactWalletAndTransactionData]' passed (0.003 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testRelayTimeoutIsExcludedButOtherSDKAndRuntimeFailuresRemain]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testRelayTimeoutIsExcludedButOtherSDKAndRuntimeFailuresRemain]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testReopenedOutboxRemovesOldAvailabilityReportsButSendsActualBug]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testReopenedOutboxRemovesOldAvailabilityReportsButSendsActualBug]' passed (0.003 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testRPCNormalizationNeverPreservesArbitraryQuotedText]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testRPCNormalizationNeverPreservesArbitraryQuotedText]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testSerializedRPC429IsExcludedWithoutHidingOtherCodesOrRuntimeReports]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testSerializedRPC429IsExcludedWithoutHidingOtherCodesOrRuntimeReports]' passed (0.004 seconds).
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testValidationAuthenticationStorageAndRuntimeErrorsStayReportable]' started.
+Test Case '-[OathDiagnosticsTests.AvailabilityPolicyTests testValidationAuthenticationStorageAndRuntimeErrorsStayReportable]' passed (0.008 seconds).
+Test Suite 'AvailabilityPolicyTests' passed at 2026-11-03 13:10:32.191.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.127 (0.128) seconds
+Test Suite 'ClioHolderAbsenceTests' started at 2026-11-03 13:10:32.191.
+Test Case '-[OathDiagnosticsTests.ClioHolderAbsenceTests testOnlyExactScopedValidatedHolderAbsenceIsExpected]' started.
+Test Case '-[OathDiagnosticsTests.ClioHolderAbsenceTests testOnlyExactScopedValidatedHolderAbsenceIsExpected]' passed (0.001 seconds).
+Test Suite 'ClioHolderAbsenceTests' passed at 2026-11-03 13:10:32.192.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'DiagnosticAttemptCorrelationTests' started at 2026-11-03 13:10:32.192.
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testAsyncAttemptCorrelatesProviderAndChildTaskBeforeFailure]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testAsyncAttemptCorrelatesProviderAndChildTaskBeforeFailure]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testConcurrentIndependentAttemptsDoNotShareAnIdentifier]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testConcurrentIndependentAttemptsDoNotShareAnIdentifier]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testNestedAttemptsKeepExistingScopeWithoutChangingChain]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testNestedAttemptsKeepExistingScopeWithoutChangingChain]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testOptionalAttemptPreservesAbsenceAndCancellationSemantics]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testOptionalAttemptPreservesAbsenceAndCancellationSemantics]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testSyncAttemptCreatesScopeAndRestoresCaller]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticAttemptCorrelationTests testSyncAttemptCreatesScopeAndRestoresCaller]' passed (0.000 seconds).
+Test Suite 'DiagnosticAttemptCorrelationTests' passed at 2026-11-03 13:10:32.193.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'DiagnosticCancellationTests' started at 2026-11-03 13:10:32.193.
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testCocoaFailuresAndWrappedCancellationRemainReportable]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testCocoaFailuresAndWrappedCancellationRemainReportable]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testCocoaUserCancellationFromNativeCallbacksIsExpected]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testCocoaUserCancellationFromNativeCallbacksIsExpected]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testExplicitTaskAndNetworkCancellationOnly]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testExplicitTaskAndNetworkCancellationOnly]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testNativeAuthenticationCancellationAndFallbackAreNotFailures]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testNativeAuthenticationCancellationAndFallbackAreNotFailures]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testRealAuthenticationErrorsAndUnrelatedDomainsStayReportable]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticCancellationTests testRealAuthenticationErrorsAndUnrelatedDomainsStayReportable]' passed (0.000 seconds).
+Test Suite 'DiagnosticCancellationTests' passed at 2026-11-03 13:10:32.194.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'DiagnosticTraceTests' started at 2026-11-03 13:10:32.194.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testAsyncStepPreservesCallingActorAndNonSendableResult]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testAsyncStepPreservesCallingActorAndNonSendableResult]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testConcurrentActionsKeepOriginsAndNestedStepsAfterNavigation]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testConcurrentActionsKeepOriginsAndNestedStepsAfterNavigation]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testEveryCataloguedSourceSurvivesButLookalikesAndPrivatePathsDoNot]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testEveryCataloguedSourceSurvivesButLookalikesAndPrivatePathsDoNot]' passed (0.023 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testEveryEventHasHonestDefaultsAndOriginalError]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testEveryEventHasHonestDefaultsAndOriginalError]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testExplicitStageAndHistoricalTimeAreNotMisattributed]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testExplicitStageAndHistoricalTimeAreNotMisattributed]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testExtendedContextIsBoundedFilteredAndNoPrivateKeysAreAccepted]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testExtendedContextIsBoundedFilteredAndNoPrivateKeysAreAccepted]' passed (0.003 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testKnownScreenSourceSurvivesContextFilteringWithoutTrustingArbitraryText]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testKnownScreenSourceSurvivesContextFilteringWithoutTrustingArbitraryText]' passed (0.003 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testNamedAttemptsRetainStepAndRestoreOuterScope]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testNamedAttemptsRetainStepAndRestoreOuterScope]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testPresentationRestoresParentAndIgnoresOutOfOrderDetach]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testPresentationRestoresParentAndIgnoresOutOfOrderDetach]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testRecordCapturesContextBeforeDetachedUpload]' started.
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/inventory-flight-time/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticTraceTests.swift:48: -[OathDiagnosticsTests.DiagnosticTraceTests testRecordCapturesContextBeforeDetachedUpload] : Test skipped - Run in a fresh process: the production reporter configures its transport once
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testRecordCapturesContextBeforeDetachedUpload]' skipped (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testThrowingAsyncStepRestoresCallerContext]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testThrowingAsyncStepRestoresCallerContext]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testTypedCauseChainSurvivesWithoutCredentialsOrUnboundedRecursion]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticTraceTests testTypedCauseChainSurvivesWithoutCredentialsOrUnboundedRecursion]' passed (0.001 seconds).
+Test Suite 'DiagnosticTraceTests' passed at 2026-11-03 13:10:32.227.
+	 Executed 12 tests, with 1 test skipped and 0 failures (0 unexpected) in 0.033 (0.034) seconds
+Test Suite 'DiagnosticWatchdogTests' started at 2026-11-03 13:10:32.227.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testBackgroundTimeIsNotCountedAsForegroundStall]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testBackgroundTimeIsNotCountedAsForegroundStall]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testInactiveAndSubthresholdHeartbeatsDoNotReport]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testInactiveAndSubthresholdHeartbeatsDoNotReport]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testReportsOncePerStallAndRearmsAfterHeartbeat]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testReportsOncePerStallAndRearmsAfterHeartbeat]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testStartFromMainActorReportsOnBackgroundQueueEvenWhenMainActorIsBlocked]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testStartFromMainActorReportsOnBackgroundQueueEvenWhenMainActorIsBlocked]' passed (0.022 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testStopAndRestartRearmsBackgroundCallback]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testStopAndRestartRearmsBackgroundCallback]' passed (0.154 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testTimerDoesNotRetainWatchdog]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticWatchdogTests testTimerDoesNotRetainWatchdog]' passed (0.000 seconds).
+Test Suite 'DiagnosticWatchdogTests' passed at 2026-11-03 13:10:32.404.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.176 (0.177) seconds
+Test Suite 'DiagnosticsTests' started at 2026-11-03 13:10:32.404.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testCocoaFileErrorsRedactIdentifiersAndLocalizedQuotedNames]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testCocoaFileErrorsRedactIdentifiersAndLocalizedQuotedNames]' passed (0.012 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testCorruptQueueRecoversWithoutLosingNewReport]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testCorruptQueueRecoversWithoutLosingNewReport]' passed (0.002 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testDuplicateEnqueueDoesNotClaimDurabilityAfterDiskFailure]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testDuplicateEnqueueDoesNotClaimDurabilityAfterDiskFailure]' passed (0.002 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testEnqueueDuringUploadDoesNotLoseNewEvents]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testEnqueueDuringUploadDoesNotLoseNewEvents]' passed (0.016 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testFilecoinAddressesAreRedactedFromProviderErrors]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testFilecoinAddressesAreRedactedFromProviderErrors]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testIdempotentLocalEnqueueAndRetentionBound]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testIdempotentLocalEnqueueAndRetentionBound]' passed (0.006 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testLargeRuntimeReportStaysParseableAndKeepsAttributedStack]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testLargeRuntimeReportStaysParseableAndKeepsAttributedStack]' passed (3.251 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testLongPayloadIsExplicitlyTruncated]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testLongPayloadIsExplicitlyTruncated]' passed (0.007 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testNewErrorsRespectBackoffUntilExplicitForegroundRetry]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testNewErrorsRespectBackoffUntilExplicitForegroundRetry]' passed (0.007 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testNSErrorWithoutMessageNeverFallsBackToArbitraryUserInfo]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testNSErrorWithoutMessageNeverFallsBackToArbitraryUserInfo]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testPreservesDomainCodeUnderlyingAndRejectsUnknownContext]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testPreservesDomainCodeUnderlyingAndRejectsUnknownContext]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testQueueExpiresEventsEvenWithoutRelaunch]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testQueueExpiresEventsEvenWithoutRelaunch]' passed (0.002 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testQueueRoundTripsAndRetainsFailedUpload]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testQueueRoundTripsAndRetainsFailedUpload]' passed (0.002 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRecoveryPhrasesAreRedactedAcrossSupportedLanguagesWithoutHidingNormalErrors]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRecoveryPhrasesAreRedactedAcrossSupportedLanguagesWithoutHidingNormalErrors]' passed (0.004 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRedactsSecretsURLsMnemonicsAndUntrustedEchoes]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRedactsSecretsURLsMnemonicsAndUntrustedEchoes]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRPCResponseCapturesOriginalErrorBeforeProviderFlattensIt]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRPCResponseCapturesOriginalErrorBeforeProviderFlattensIt]' passed (0.371 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRuntimeReportAllowsSymbolicationButRejectsPrivateFields]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testRuntimeReportAllowsSymbolicationButRejectsPrivateFields]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testSchedulingFlushReturnsWithAnUnfinishedDelivery]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testSchedulingFlushReturnsWithAnUnfinishedDelivery]' passed (0.011 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testShortAlchemyCredentialsAreRemovedFromErrorsAndContext]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testShortAlchemyCredentialsAreRemovedFromErrorsAndContext]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testTransportContextNeverCopiesCredentialsAddressesOrQuery]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testTransportContextNeverCopiesCredentialsAddressesOrQuery]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testWalletConnectPayloadIsEntirelyRedacted]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testWalletConnectPayloadIsEntirelyRedacted]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testWireSchemaUsesExpectedAcronymsAndNoUserInfo]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testWireSchemaUsesExpectedAcronymsAndNoUserInfo]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testWorstCaseMultibyteEscapedEventFitsServerLimit]' started.
+Test Case '-[OathDiagnosticsTests.DiagnosticsTests testWorstCaseMultibyteEscapedEventFitsServerLimit]' passed (0.278 seconds).
+Test Suite 'DiagnosticsTests' passed at 2026-11-03 13:10:36.381.
+	 Executed 23 tests, with 0 failures (0 unexpected) in 3.975 (3.977) seconds
+Test Suite 'EVMDuplicateDiagnosticTests' started at 2026-11-03 13:10:36.381.
+Test Case '-[OathDiagnosticsTests.EVMDuplicateDiagnosticTests testHistoricalAndUnresolvedDuplicatesRemainReportable]' started.
+Test Case '-[OathDiagnosticsTests.EVMDuplicateDiagnosticTests testHistoricalAndUnresolvedDuplicatesRemainReportable]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.EVMDuplicateDiagnosticTests testOnlyVerifiedAttemptScopeAllowsExactDuplicateControlFlow]' started.
+Test Case '-[OathDiagnosticsTests.EVMDuplicateDiagnosticTests testOnlyVerifiedAttemptScopeAllowsExactDuplicateControlFlow]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.EVMDuplicateDiagnosticTests testWrongChainRequestResponseOrEnvelopeIsNotSilenced]' started.
+Test Case '-[OathDiagnosticsTests.EVMDuplicateDiagnosticTests testWrongChainRequestResponseOrEnvelopeIsNotSilenced]' passed (0.001 seconds).
+Test Suite 'EVMDuplicateDiagnosticTests' passed at 2026-11-03 13:10:36.383.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'EVMMetadataDiagnosticTests' started at 2026-11-03 13:10:36.383.
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testArcOptionalLabelsExcludeOnlyExactRevertsAtPinnedOrLatestBlock]' started.
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testArcOptionalLabelsExcludeOnlyExactRevertsAtPinnedOrLatestBlock]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testBatchFailureAttributionUsesReplyIDAndOnlyPublicConstantLabels]' started.
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testBatchFailureAttributionUsesReplyIDAndOnlyPublicConstantLabels]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testOptionalProbeExclusionRequiresExactReadEnvelopeAndSelector]' started.
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testOptionalProbeExclusionRequiresExactReadEnvelopeAndSelector]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testRegistryDiagnosticContextDoesNotContainContractOrQuery]' started.
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testRegistryDiagnosticContextDoesNotContainContractOrQuery]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testStringRequestIDsAndTotalSupplyProbeAreMatchedExactly]' started.
+Test Case '-[OathDiagnosticsTests.EVMMetadataDiagnosticTests testStringRequestIDsAndTotalSupplyProbeAreMatchedExactly]' passed (0.000 seconds).
+Test Suite 'EVMMetadataDiagnosticTests' passed at 2026-11-03 13:10:36.386.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'HistoryAvailabilityTests' started at 2026-11-03 13:10:36.386.
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testExactTypedHistoryAvailabilityPreservesOtherFailuresAndFatalReports]' started.
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testExactTypedHistoryAvailabilityPreservesOtherFailuresAndFatalReports]' passed (0.004 seconds).
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testLegacyStellarLagWithoutValidatedLedgerRemainsReportable]' started.
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testLegacyStellarLagWithoutValidatedLedgerRemainsReportable]' passed (0.002 seconds).
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testProviderEnvelopeRequiresExactChainHostCodeAndMessage]' started.
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testProviderEnvelopeRequiresExactChainHostCodeAndMessage]' passed (0.009 seconds).
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testSavedOutboxDiscardsAvailabilityButUploadsUnprovenIncompleteHistory]' started.
+Test Case '-[OathDiagnosticsTests.HistoryAvailabilityTests testSavedOutboxDiscardsAvailabilityButUploadsUnprovenIncompleteHistory]' passed (0.002 seconds).
+Test Suite 'HistoryAvailabilityTests' passed at 2026-11-03 13:10:36.402.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.016 (0.017) seconds
+Test Suite 'IndexedArchiveRecoveryPolicyTests' started at 2026-11-03 13:10:36.402.
+Test Case '-[OathDiagnosticsTests.IndexedArchiveRecoveryPolicyTests testOnlyMissingIndexDuringArchiveHandoffIsExcluded]' started.
+Test Case '-[OathDiagnosticsTests.IndexedArchiveRecoveryPolicyTests testOnlyMissingIndexDuringArchiveHandoffIsExcluded]' passed (0.004 seconds).
+Test Suite 'IndexedArchiveRecoveryPolicyTests' passed at 2026-11-03 13:10:36.407.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'IoTeXDiagnosticTests' started at 2026-11-03 13:10:36.407.
+Test Case '-[OathDiagnosticsTests.IoTeXDiagnosticTests testNativeAndEVMAccountsAreRemovedFromProviderMessages]' started.
+Test Case '-[OathDiagnosticsTests.IoTeXDiagnosticTests testNativeAndEVMAccountsAreRemovedFromProviderMessages]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.IoTeXDiagnosticTests testProviderContextContainsNoKeyOrAccountQuery]' started.
+Test Case '-[OathDiagnosticsTests.IoTeXDiagnosticTests testProviderContextContainsNoKeyOrAccountQuery]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.IoTeXDiagnosticTests testSendFailureStagesRetainSafeDiagnostics]' started.
+Test Case '-[OathDiagnosticsTests.IoTeXDiagnosticTests testSendFailureStagesRetainSafeDiagnostics]' passed (0.005 seconds).
+Test Suite 'IoTeXDiagnosticTests' passed at 2026-11-03 13:10:36.413.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'MarketAbsenceTests' started at 2026-11-03 13:10:36.413.
+Test Case '-[OathDiagnosticsTests.MarketAbsenceTests testCatalogFailuresProxyErrorsAndMalformedBodiesAreNotExcluded]' started.
+Test Case '-[OathDiagnosticsTests.MarketAbsenceTests testCatalogFailuresProxyErrorsAndMalformedBodiesAreNotExcluded]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.MarketAbsenceTests testOnlyExactReadOnlyMissingListingEnvelopesAreExcluded]' started.
+Test Case '-[OathDiagnosticsTests.MarketAbsenceTests testOnlyExactReadOnlyMissingListingEnvelopesAreExcluded]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.MarketAbsenceTests testStaleQuoteRequiresExactEnvelopeAndAnonymousSpotRead]' started.
+Test Case '-[OathDiagnosticsTests.MarketAbsenceTests testStaleQuoteRequiresExactEnvelopeAndAnonymousSpotRead]' passed (0.000 seconds).
+Test Suite 'MarketAbsenceTests' passed at 2026-11-03 13:10:36.414.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'NearMetadataDiagnosticTests' started at 2026-11-03 13:10:36.414.
+Test Case '-[OathDiagnosticsTests.NearMetadataDiagnosticTests testOnlyPinnedOptionalMetadataMethodAbsenceIsExcluded]' started.
+Test Case '-[OathDiagnosticsTests.NearMetadataDiagnosticTests testOnlyPinnedOptionalMetadataMethodAbsenceIsExcluded]' passed (0.001 seconds).
+Test Suite 'NearMetadataDiagnosticTests' passed at 2026-11-03 13:10:36.415.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'NearSendDiagnosticTests' started at 2026-11-03 13:10:36.415.
+Test Case '-[OathDiagnosticsTests.NearSendDiagnosticTests testContractPanicAndArbitraryProviderTextCannotExposeInputs]' started.
+Test Case '-[OathDiagnosticsTests.NearSendDiagnosticTests testContractPanicAndArbitraryProviderTextCannotExposeInputs]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.NearSendDiagnosticTests testOptionalStorageProbeRequiresExactMethodErrorBlockAndEnvelope]' started.
+Test Case '-[OathDiagnosticsTests.NearSendDiagnosticTests testOptionalStorageProbeRequiresExactMethodErrorBlockAndEnvelope]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.NearSendDiagnosticTests testPendingStateNeverHidesTimeoutInternalOrOtherMethodFailures]' started.
+Test Case '-[OathDiagnosticsTests.NearSendDiagnosticTests testPendingStateNeverHidesTimeoutInternalOrOtherMethodFailures]' passed (0.000 seconds).
+Test Suite 'NearSendDiagnosticTests' passed at 2026-11-03 13:10:36.416.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'PolkadotImportedDiagnosticTests' started at 2026-11-03 13:10:36.416.
+Test Case '-[OathDiagnosticsTests.PolkadotImportedDiagnosticTests testAcknowledgementRequiresExactScopedHashAndCorrelatedEnvelope]' started.
+Test Case '-[OathDiagnosticsTests.PolkadotImportedDiagnosticTests testAcknowledgementRequiresExactScopedHashAndCorrelatedEnvelope]' passed (0.000 seconds).
+Test Suite 'PolkadotImportedDiagnosticTests' passed at 2026-11-03 13:10:36.416.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'PublicPolicyDiagnosticTests' started at 2026-11-03 13:10:36.416.
+Test Case '-[OathDiagnosticsTests.PublicPolicyDiagnosticTests testAbsentAptosPolicyOnlyExcludedForExactScopedPublicRead]' started.
+Test Case '-[OathDiagnosticsTests.PublicPolicyDiagnosticTests testAbsentAptosPolicyOnlyExcludedForExactScopedPublicRead]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.PublicPolicyDiagnosticTests testXRPPolicyAbsenceRequiresMatchingValidatedAccount]' started.
+Test Case '-[OathDiagnosticsTests.PublicPolicyDiagnosticTests testXRPPolicyAbsenceRequiresMatchingValidatedAccount]' passed (0.000 seconds).
+Test Suite 'PublicPolicyDiagnosticTests' passed at 2026-11-03 13:10:36.417.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'ReviewedUploadPolicyTests' started at 2026-11-03 13:10:36.417.
+Test Case '-[OathDiagnosticsTests.ReviewedUploadPolicyTests testEveryReviewedRuleAndUnrelatedFailures]' started.
+Test Case '-[OathDiagnosticsTests.ReviewedUploadPolicyTests testEveryReviewedRuleAndUnrelatedFailures]' passed (0.319 seconds).
+Test Case '-[OathDiagnosticsTests.ReviewedUploadPolicyTests testNewEventsAreConsumedWithoutDiskUploadOrLossReport]' started.
+Test Case '-[OathDiagnosticsTests.ReviewedUploadPolicyTests testNewEventsAreConsumedWithoutDiskUploadOrLossReport]' passed (0.022 seconds).
+Test Case '-[OathDiagnosticsTests.ReviewedUploadPolicyTests testReopenedQueueFiltersReviewedEventsAndRetainsUnrelatedReport]' started.
+Test Case '-[OathDiagnosticsTests.ReviewedUploadPolicyTests testReopenedQueueFiltersReviewedEventsAndRetainsUnrelatedReport]' passed (0.028 seconds).
+Test Suite 'ReviewedUploadPolicyTests' passed at 2026-11-03 13:10:36.787.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.369 (0.369) seconds
+Test Suite 'RuntimeStackRegressionTests' started at 2026-11-03 13:10:36.787.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testAdversarialDepthRemainsBoundedAndValidJSON]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testAdversarialDepthRemainsBoundedAndValidJSON]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testDeepFirstBranchCannotExhaustOtherStackNodeBudget]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testDeepFirstBranchCannotExhaustOtherStackNodeBudget]' passed (0.164 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testLargeAttributedStackKeepsItsAttributionWhenCompacted]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testLargeAttributedStackKeepsItsAttributionWhenCompacted]' passed (0.399 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testLargeFirstStackCannotEraseOtherAttributedStacks]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testLargeFirstStackCannotEraseOtherAttributedStacks]' passed (0.282 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testLargeStackTreeCannotConsumeDiagnosticMetadataBudget]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testLargeStackTreeCannotConsumeDiagnosticMetadataBudget]' passed (0.699 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testNestedMetricKitStackKeepsAppFramesBeyondSystemAbortFrames]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testNestedMetricKitStackKeepsAppFramesBeyondSystemAbortFrames]' passed (0.004 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testRefilteringPreservesTruncationAndStillRejectsPrivateFields]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testRefilteringPreservesTruncationAndStillRejectsPrivateFields]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testUnattributedThreadsDoNotStealAttributedStackBudget]' started.
+Test Case '-[OathDiagnosticsTests.RuntimeStackRegressionTests testUnattributedThreadsDoNotStealAttributedStackBudget]' passed (0.037 seconds).
+Test Suite 'RuntimeStackRegressionTests' passed at 2026-11-03 13:10:38.372.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 1.585 (1.585) seconds
+Test Suite 'SeiDiagnosticTests' started at 2026-11-03 13:10:38.372.
+Test Case '-[OathDiagnosticsTests.SeiDiagnosticTests testProviderContextKeepsChainWithoutCredentialsOrAddresses]' started.
+Test Case '-[OathDiagnosticsTests.SeiDiagnosticTests testProviderContextKeepsChainWithoutCredentialsOrAddresses]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.SeiDiagnosticTests testSendFailureStagesRetainSafeDiagnostics]' started.
+Test Case '-[OathDiagnosticsTests.SeiDiagnosticTests testSendFailureStagesRetainSafeDiagnostics]' passed (0.006 seconds).
+Test Suite 'SeiDiagnosticTests' passed at 2026-11-03 13:10:38.378.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'SolanaDiagnosticTests' started at 2026-11-03 13:10:38.378.
+Test Case '-[OathDiagnosticsTests.SolanaDiagnosticTests testRPCContextDoesNotCopyPayloadSignatureOrKeys]' started.
+Test Case '-[OathDiagnosticsTests.SolanaDiagnosticTests testRPCContextDoesNotCopyPayloadSignatureOrKeys]' passed (0.000 seconds).
+Test Suite 'SolanaDiagnosticTests' passed at 2026-11-03 13:10:38.379.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'ThorchainDiagnosticTests' started at 2026-11-03 13:10:38.379.
+Test Case '-[OathDiagnosticsTests.ThorchainDiagnosticTests testProviderContextAndErrorEchoesDoNotExposePublicAccounts]' started.
+Test Case '-[OathDiagnosticsTests.ThorchainDiagnosticTests testProviderContextAndErrorEchoesDoNotExposePublicAccounts]' passed (0.001 seconds).
+Test Suite 'ThorchainDiagnosticTests' passed at 2026-11-03 13:10:38.380.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'TonSendDiagnosticTests' started at 2026-11-03 13:10:38.380.
+Test Case '-[OathDiagnosticsTests.TonSendDiagnosticTests testOnlyMissingTraceIsExcluded]' started.
+Test Case '-[OathDiagnosticsTests.TonSendDiagnosticTests testOnlyMissingTraceIsExcluded]' passed (0.001 seconds).
+Test Suite 'TonSendDiagnosticTests' passed at 2026-11-03 13:10:38.381.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'WalletConnectAttestationTests' started at 2026-11-03 13:10:38.381.
+Test Case '-[OathDiagnosticsTests.WalletConnectAttestationTests testAmbiguousStoredHTTP404RemainsReportable]' started.
+Test Case '-[OathDiagnosticsTests.WalletConnectAttestationTests testAmbiguousStoredHTTP404RemainsReportable]' passed (0.001 seconds).
+Test Case '-[OathDiagnosticsTests.WalletConnectAttestationTests testOnlyScopedWellFormedAttestationAbsenceIsExcluded]' started.
+Test Case '-[OathDiagnosticsTests.WalletConnectAttestationTests testOnlyScopedWellFormedAttestationAbsenceIsExcluded]' passed (0.000 seconds).
+Test Suite 'WalletConnectAttestationTests' passed at 2026-11-03 13:10:38.382.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'XrplPendingDiagnosticTests' started at 2026-11-03 13:10:38.382.
+Test Case '-[OathDiagnosticsTests.XrplPendingDiagnosticTests testOnlyExactPendingTransactionAbsenceIsExpected]' started.
+Test Case '-[OathDiagnosticsTests.XrplPendingDiagnosticTests testOnlyExactPendingTransactionAbsenceIsExpected]' passed (0.000 seconds).
+Test Suite 'XrplPendingDiagnosticTests' passed at 2026-11-03 13:10:38.383.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'ZeroGDiagnosticTests' started at 2026-11-03 13:10:38.383.
+Test Case '-[OathDiagnosticsTests.ZeroGDiagnosticTests testProviderContextExcludesCredentialsAndAccountQuery]' started.
+Test Case '-[OathDiagnosticsTests.ZeroGDiagnosticTests testProviderContextExcludesCredentialsAndAccountQuery]' passed (0.000 seconds).
+Test Case '-[OathDiagnosticsTests.ZeroGDiagnosticTests testSendFailureStagesRetainSafeDiagnostics]' started.
+Test Case '-[OathDiagnosticsTests.ZeroGDiagnosticTests testSendFailureStagesRetainSafeDiagnostics]' passed (0.005 seconds).
+Test Suite 'ZeroGDiagnosticTests' passed at 2026-11-03 13:10:38.388.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.005 (0.006) seconds
+Test Suite 'OathDiagnosticsTests.xctest' passed at 2026-11-03 13:10:38.388.
+	 Executed 121 tests, with 2 tests skipped and 0 failures (0 unexpected) in 6.324 (6.332) seconds
+Test Suite 'All tests' passed at 2026-11-03 13:10:38.388.
+	 Executed 121 tests, with 2 tests skipped and 0 failures (0 unexpected) in 6.324 (6.333) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 2084
+􀄵  Target Platform: arm64e-apple-macos14.0
+􁁛  Test run with 0 tests in 0 suites passed after 0.001 seconds.

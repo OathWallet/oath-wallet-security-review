@@ -1510,5 +1510,24 @@
       "validation": "Later public repair; exact before and after pins retained in paired evidence."
     },
     "hosted_replay": "pending"
+  },
+  {
+    "id": "OW-2026-067",
+    "severity": "low",
+    "title": "Delayed TRON/TON inventories falsely complete balance refresh",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-067.md",
+    "baseline_commit": "fd06fdff104d128e00cc414d2de1472f11752e04",
+    "fix_commit": "63e0be4a10106fc577792a7fb3c6d69b1cc8870c",
+    "retest_scope": "Same five production client/SQLite predicates: two controls pass and three fail before; all five pass after. Synthetic final journal fixtures; runtime networking denied. Full worker, signing and live-provider freshness are not exercised.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": false,
+      "validation": "Later source repair; baseline and original paired failures are preserved."
+    },
+    "hosted_replay": "pending",
+    "merge_commit": "05e7917f0a3c26072b1a6b88d2e9e4a0d0310427",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/84"
   }
 ]

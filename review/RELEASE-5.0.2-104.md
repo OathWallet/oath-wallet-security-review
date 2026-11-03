@@ -234,3 +234,16 @@ mutation controls. Its original source and runtime limits remain unchanged.
 The ledger still contains 16,917 outstanding review items, including partially
 reviewed files. The new hosted TRON/TON replay is tracked separately. No App
 Store, simulator or physical-device operation occurred.
+
+## Checkpoint 15 — delayed inventory freshness
+
+[OW-2026-067](../findings/OW-2026-067.md) repairs late TRON/TON responses that
+were incorrectly classified as current balances. The original five-method
+fixture produces two passes and three failures; the repair passes all five.
+The final journal records are synthetic fixtures, not a complete send flow.
+[Reproduction and validation](INVENTORY-FLIGHT-TIME.md). The earlier nine-case
+NEAR journal-race replay is now downloaded and verified, including three
+expected failures in its deliberately broken reservation variant.
+
+The original build-104 tag, earlier source pins and unresolved review areas
+remain unchanged. No App Store operation is included.

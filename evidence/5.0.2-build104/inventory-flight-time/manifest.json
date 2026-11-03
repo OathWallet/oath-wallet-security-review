@@ -1,0 +1,94 @@
+{
+  "finding": "OW-2026-067",
+  "before_commit": "fd06fdff104d128e00cc414d2de1472f11752e04",
+  "repair_commit": "63e0be4a10106fc577792a7fb3c6d69b1cc8870c",
+  "before": {
+    "passed": 2,
+    "failed": 3
+  },
+  "after": {
+    "passed": 5,
+    "failed": 0
+  },
+  "adjacent": {
+    "passed": 27,
+    "failed": 0,
+    "live_tests": "two explicitly excluded"
+  },
+  "hosted_replay": "pending",
+  "files": [
+    {
+      "path": "runs.zip",
+      "sha256": "8422e5a588f3fc8abe7f2d44d1d8a188c6d4ca5741ba32c54e151248c01401ff"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "785a6e907c3e9835eb6e5f52d36d448a10db2ea2b3c0120b0231ea94e7e2da85"
+    },
+    {
+      "path": "validation/completion.log",
+      "sha256": "50311092c08fb83bd8779b0c6d3d2e30734a66184da5c5b83682d8d0e9bbb345"
+    },
+    {
+      "path": "validation/diagnostics-coverage.log",
+      "sha256": "abb86118ee61e33a96aca80101c301a2f822631e7876b09297b66e93604246f4"
+    },
+    {
+      "path": "validation/diagnostics-tests.log",
+      "sha256": "c1ec30883ae6a17d0e92da448844a348ab1187e8e6c1f6299e09b46b381b0713"
+    },
+    {
+      "path": "validation/gitleaks.log",
+      "sha256": "65ff5d529cb1077cfe112359f43318c51c2cb7a95eaa7ff4bf1695d8856fa2ae"
+    },
+    {
+      "path": "validation/helper-all.log",
+      "sha256": "f310e4e9a771c21ca3f30c0567c8d02d14d6a94fa3d3c054c541c13d189688d7"
+    },
+    {
+      "path": "validation/helper-targeted.log",
+      "sha256": "372ee57a30b8a8b17bb056a0814266786a922da7dcf4139f4f9a2457745d6424"
+    },
+    {
+      "path": "validation/ios-build.log",
+      "sha256": "fce01e1f34936b9a9fcdcc78409fa58f5657323949e11c74b9c11b8ef5e67b2f"
+    },
+    {
+      "path": "validation/public-release.log",
+      "sha256": "73cadb9a5df4e05e4122490cf8bc48773be17b6feeb7be2fafd1939c9b341348"
+    },
+    {
+      "path": "validation/publication-scan.log",
+      "sha256": "98468b9043f9b3459b5e8c8fe183a1c05093aa3b03fcf55b674732784c0bca1e"
+    },
+    {
+      "path": "validation/workflow-lint-known-runner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "validation/workflow-lint.log",
+      "sha256": "2b110aa46767c856194e9b0db94bc0e29759bf2617ab0f32c23d034cc603f170"
+    }
+  ],
+  "validation": {
+    "source_commit": "63e0be4a10106fc577792a7fb3c6d69b1cc8870c",
+    "public_release": "passed",
+    "files_scanned": 4860,
+    "diagnostics_coverage": "passed",
+    "catch_sites": 722,
+    "gitleaks": "passed",
+    "diagnostics_passed": 119,
+    "diagnostics_skipped": 2,
+    "unsigned_generic_ios_release": "passed",
+    "product_version": "5.0.2",
+    "product_build": "104",
+    "audit_helper_tests": 376,
+    "completion_gate": "16917 outstanding review items; incomplete",
+    "workflow_lint": "Known xcode-27 custom runner-label warning retained; all other checks pass",
+    "runtime_scope": "host regressions and generic compilation only; no simulator, device, live provider or App Store",
+    "changed_publication_and_expanded_archives_secret_scan": "passed"
+  },
+  "merge_commit": "05e7917f0a3c26072b1a6b88d2e9e4a0d0310427",
+  "merge_tree_matches_tested_repair": true,
+  "tree": "b47130bfadc500208eb832da267792638fa29f1f"
+}
