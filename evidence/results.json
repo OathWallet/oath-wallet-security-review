@@ -42066,5 +42066,64 @@
     "live_network_tests_enabled": false,
     "assertion_count": 205,
     "evidence": "evidence/5.0.1-build103/ci-retests/electrum-github.json"
+  },
+  {
+    "check": "private-keys",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--private-keys"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 158.54,
+    "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 305 HD private-key browser/vault host checks. Synthetic seed adapter; real public descriptors, leaf-key derivation, database and authorization. No user data, network, simulator or device used."
+    ],
+    "log_sha256": "16a61b4501aa69fd17fdee19ce929ce0c9027694f2b00576c9a31e33d14a0db4",
+    "runtime_scope": "macOS host; production vault, SQL and Bitcoin-family leaf WIF derivation; substituted application key/export engine with synthetic HD seed; does not execute OathPrivateKeyExport.swift, UIKit or OS authentication",
+    "live_network_tests_enabled": false,
+    "assertion_count": 305,
+    "published_log": "private-keys.log.gz",
+    "evidence": "evidence/5.0.1-build103/private-key-disclosure/private-keys.json"
+  },
+  {
+    "check": "token-lookup",
+    "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+    "command": [
+      "python3",
+      "Tools/CheckTokenLookup.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 397.6,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:651: -[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks] : Test skipped - Explicit all-network live lookup",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks]' skipped (0.005 seconds).",
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:162: -[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata] : Test skipped - Opt-in public Celo token metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata]' skipped (0.001 seconds).",
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:629: -[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract] : Test skipped - Opt-in public token RPC check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract]' skipped (0.001 seconds).",
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:125: -[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks] : Test skipped - Opt-in six-chain public metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks]' skipped (0.001 seconds).",
+      "\t Executed 24 tests, with 4 tests skipped and 0 failures (0 unexpected) in 18.086 (18.092) seconds",
+      "\t Executed 24 tests, with 4 tests skipped and 0 failures (0 unexpected) in 18.086 (18.092) seconds",
+      "\t Executed 24 tests, with 4 tests skipped and 0 failures (0 unexpected) in 18.086 (18.097) seconds",
+      "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "74c4ec70316ffc43595adee0837b6b1d438b117910c21a5f697fea605c1ea8b4",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 20,
+      "skipped": 4,
+      "failed": 0
+    },
+    "evidence": "evidence/5.0.1-build103/ci-retests/token-search-order-github.json"
   }
 ]

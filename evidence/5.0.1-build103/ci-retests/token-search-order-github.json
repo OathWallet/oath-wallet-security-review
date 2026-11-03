@@ -1,0 +1,130 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41556557873",
+  "workflow_revision": "56f033589f2d5635724eaaea464db7d42ac2375c",
+  "conclusion": "success",
+  "artifact_id": 13196121915,
+  "archive_digest": "sha256:4827cef3f60e188577bba8a18f632273c2c87addef7e51470291897e59042e2d",
+  "published_archive": "5.0.1-build103-token-search-order-github.zip",
+  "scope": "Hosted full token suite and unchanged-production versus guard-removal replay",
+  "full_suite": {
+    "check": "token-lookup",
+    "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+    "command": [
+      "python3",
+      "Tools/CheckTokenLookup.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 397.6,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:651: -[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks] : Test skipped - Explicit all-network live lookup",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCatalogAddResolutionAllNetworks]' skipped (0.005 seconds).",
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:162: -[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata] : Test skipped - Opt-in public Celo token metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveCeloBRLAResolutionFallsBackToChainMetadata]' skipped (0.001 seconds).",
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:629: -[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract] : Test skipped - Opt-in public token RPC check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveMetadataAbsenceAndNonTokenContract]' skipped (0.001 seconds).",
+      "/private/var/folders/5n/5t77mfb93jd7q8v9s6f0dn0m0000gn/T/oath-token-lookup-ntzhmtmc/Tests/TokenLookupTests/TokenLookupTests.swift:125: -[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks] : Test skipped - Opt-in six-chain public metadata check",
+      "Test Case '-[TokenLookupTests.TokenLookupTests testLiveNewChainCatalogAndRPCFallbacks]' skipped (0.001 seconds).",
+      "\t Executed 24 tests, with 4 tests skipped and 0 failures (0 unexpected) in 18.086 (18.092) seconds",
+      "\t Executed 24 tests, with 4 tests skipped and 0 failures (0 unexpected) in 18.086 (18.092) seconds",
+      "\t Executed 24 tests, with 4 tests skipped and 0 failures (0 unexpected) in 18.086 (18.097) seconds",
+      "\u2714 Test run with 0 tests in 0 suites passed after 0.001 seconds."
+    ],
+    "log_sha256": "74c4ec70316ffc43595adee0837b6b1d438b117910c21a5f697fea605c1ea8b4",
+    "runtime_scope": "host",
+    "live_network_tests_enabled": false,
+    "xctest_cases": {
+      "passed": 20,
+      "skipped": 4,
+      "failed": 0
+    }
+  },
+  "records": [
+    {
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+      "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "stage": "production",
+      "case": "testOldRefreshCannotReplaceNewWalletNetworkResults",
+      "status": "passed",
+      "assertions_failed": 0,
+      "exit_code": 0,
+      "source_hashes": {
+        "OathAtmosphere/Tokens/OathTokenSearchModel.swift": "50c59a2fd2abf2326265655b51f03028e7a412171c8fdcdb49023d0ba88af25f",
+        "Tools/CheckTokenLookup.py": "57beead665316b53a8e152aa2a79297a827a4998401c517f6fe7188c4794c6e1",
+        "Tools/TokenLookupValidation/TokenLookupTests.swift": "043c1349d97eee3115d960f86ba429bd2911e6c437ff4c0ebfc1668bd14eacaa"
+      },
+      "log": "production-testOldRefreshCannotReplaceNewWalletNetworkResults.log",
+      "log_sha256": "4c144b07cd612c51100f827adf283874837e8d5f0a5fbeb4e98373f4f608e242",
+      "raw_log_sha256": "4c144b07cd612c51100f827adf283874837e8d5f0a5fbeb4e98373f4f608e242",
+      "network_denied": true
+    },
+    {
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+      "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "stage": "production",
+      "case": "testResetDuringCatalogRefreshCannotPublishResults",
+      "status": "passed",
+      "assertions_failed": 0,
+      "exit_code": 0,
+      "source_hashes": {
+        "OathAtmosphere/Tokens/OathTokenSearchModel.swift": "50c59a2fd2abf2326265655b51f03028e7a412171c8fdcdb49023d0ba88af25f",
+        "Tools/CheckTokenLookup.py": "57beead665316b53a8e152aa2a79297a827a4998401c517f6fe7188c4794c6e1",
+        "Tools/TokenLookupValidation/TokenLookupTests.swift": "043c1349d97eee3115d960f86ba429bd2911e6c437ff4c0ebfc1668bd14eacaa"
+      },
+      "log": "production-testResetDuringCatalogRefreshCannotPublishResults.log",
+      "log_sha256": "4c0402fd3bbe902a8dad8c20ec1c5b1c3b2f99f7d1d6884083456dd751106b01",
+      "raw_log_sha256": "4c0402fd3bbe902a8dad8c20ec1c5b1c3b2f99f7d1d6884083456dd751106b01",
+      "network_denied": true
+    },
+    {
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+      "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "stage": "guards-removed",
+      "case": "testOldRefreshCannotReplaceNewWalletNetworkResults",
+      "status": "expected-mutation-failure",
+      "assertions_failed": 4,
+      "exit_code": 1,
+      "source_hashes": {
+        "OathAtmosphere/Tokens/OathTokenSearchModel.swift": "64896c019fd68ccd60823b636a79102f910502aeba9319f0a781e5c7abd62f8e",
+        "Tools/CheckTokenLookup.py": "57beead665316b53a8e152aa2a79297a827a4998401c517f6fe7188c4794c6e1",
+        "Tools/TokenLookupValidation/TokenLookupTests.swift": "043c1349d97eee3115d960f86ba429bd2911e6c437ff4c0ebfc1668bd14eacaa"
+      },
+      "log": "guards-removed-testOldRefreshCannotReplaceNewWalletNetworkResults.log",
+      "log_sha256": "5c721a9e83f0b8fae9fd658968507b69c9f8bbeeb53c4470bb417241c645d911",
+      "raw_log_sha256": "3bc971eccba1848c3193e861abd265cff6cf1264a1cc34678a339b80ba5a26a8",
+      "network_denied": true
+    },
+    {
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+      "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+      "stage": "guards-removed",
+      "case": "testResetDuringCatalogRefreshCannotPublishResults",
+      "status": "expected-mutation-failure",
+      "assertions_failed": 2,
+      "exit_code": 1,
+      "source_hashes": {
+        "OathAtmosphere/Tokens/OathTokenSearchModel.swift": "64896c019fd68ccd60823b636a79102f910502aeba9319f0a781e5c7abd62f8e",
+        "Tools/CheckTokenLookup.py": "57beead665316b53a8e152aa2a79297a827a4998401c517f6fe7188c4794c6e1",
+        "Tools/TokenLookupValidation/TokenLookupTests.swift": "043c1349d97eee3115d960f86ba429bd2911e6c437ff4c0ebfc1668bd14eacaa"
+      },
+      "log": "guards-removed-testResetDuringCatalogRefreshCannotPublishResults.log",
+      "log_sha256": "916bbc4336168ac2ee9e01c39b501f3d2787346eb0d673a83f5eb77a0b4a682e",
+      "raw_log_sha256": "a77bfc318903f5bf3891a8d9976b7ae70f97fd291813d23afe9279c30db5e9de",
+      "network_denied": true
+    }
+  ],
+  "files": {
+    "token-lookup.log": "74c4ec70316ffc43595adee0837b6b1d438b117910c21a5f697fea605c1ea8b4",
+    "toolchain.txt": "90b73d1fd75306206af394129d72051dfc3eaf6896c78375733c95b23618ca14",
+    "token-lookup.json": "140927ebcb03bd30531a5aacfc0af31c4820ca1a954cc25ca0c00a7aa0a095ef",
+    "order/guards-removed-testOldRefreshCannotReplaceNewWalletNetworkResults.log": "5c721a9e83f0b8fae9fd658968507b69c9f8bbeeb53c4470bb417241c645d911",
+    "order/guards-removed-testResetDuringCatalogRefreshCannotPublishResults.log": "916bbc4336168ac2ee9e01c39b501f3d2787346eb0d673a83f5eb77a0b4a682e",
+    "order/result.json": "be19a3534e722aaafc500c3ef635d0ff386300dc80155560e4f89ce398586a32",
+    "order/production-testResetDuringCatalogRefreshCannotPublishResults.log": "4c0402fd3bbe902a8dad8c20ec1c5b1c3b2f99f7d1d6884083456dd751106b01",
+    "order/guards-removed-build.log": "1d1167efaedb8ad6598d016630b981022c968caa550938fd4fc54984ce8ff7e7",
+    "order/production-testOldRefreshCannotReplaceNewWalletNetworkResults.log": "4c144b07cd612c51100f827adf283874837e8d5f0a5fbeb4e98373f4f608e242",
+    "order/production-build.log": "977efb0dece8be3bb2b39a17c32925ea6b5193adcc78b8171b03a8027adab279"
+  }
+}

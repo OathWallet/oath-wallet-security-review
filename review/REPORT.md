@@ -6,6 +6,8 @@
 
 **Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](../findings/OW-2026-046.md) · [Application and dependency checks](RELEASE-5.0.1-103.md) · [Direct input coverage](../evidence/5.0.1-build103/compiler/dispositions.json).
 
+**Checkpoint 11.** Private-key ownership and leaf-export checks pass 305 assertions on the exact build 103 baseline. Source tracing covers the export adapter separately from the substituted host engine. Token-search and automatic-prompt GitHub reruns passed with verified artifact/log hashes. The retained-key app-switcher snapshot question remains open. [Scope and evidence](RELEASE-5.0.1-103.md#checkpoint-11).
+
 **Checkpoint 10.** Recovery disclosure and passcode setup source tracing adds eleven scoped file dispositions. Nineteen automatic-prompt host checks and 245 audit helper tests pass. A single synthetic simulator experiment found no readable fixture text through the settled privacy cover; actual app-switcher snapshot timing remains open. No application change was needed for these hypotheses. [Scope and evidence](RELEASE-5.0.1-103.md#checkpoint-10).
 
 **Checkpoint 9.** Token-search race tests now use controlled interleavings instead of timing guesses; they pass on unchanged production code and detect an intentionally broken variant. The final baseline workflow preserves five failed jobs and 105 verified result/log pairs. [Evidence, test repairs and remaining scope](RELEASE-5.0.1-103.md#checkpoint-9).

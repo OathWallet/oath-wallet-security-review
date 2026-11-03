@@ -1,0 +1,22 @@
+{
+  "check": "private-keys",
+  "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "command": [
+    "python3",
+    "Tools/CheckMultiWallet.py",
+    "--private-keys"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 158.54,
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "summaries": [
+    "Passed 305 HD private-key browser/vault host checks. Synthetic seed adapter; real public descriptors, leaf-key derivation, database and authorization. No user data, network, simulator or device used."
+  ],
+  "log_sha256": "16a61b4501aa69fd17fdee19ce929ce0c9027694f2b00576c9a31e33d14a0db4",
+  "runtime_scope": "macOS host; production vault, SQL and Bitcoin-family leaf WIF derivation; substituted application key/export engine with synthetic HD seed; does not execute OathPrivateKeyExport.swift, UIKit or OS authentication",
+  "live_network_tests_enabled": false,
+  "assertion_count": 305,
+  "published_log": "private-keys.log.gz"
+}

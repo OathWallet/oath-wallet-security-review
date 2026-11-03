@@ -1,0 +1,22 @@
+{
+  "check": "audit-helper-tests",
+  "status": "passed",
+  "tests": 250,
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py"
+  ],
+  "log_sha256": "0c627e96b26ec730c8313a4e3f01e4edb7ec28a3fc815c8cceed4bd1579a81ee",
+  "log": "audit-helper-tests.log.gz",
+  "scope": "Audit infrastructure and result parsing; not wallet runtime coverage",
+  "application_changes": false,
+  "simulator_used": false,
+  "physical_device_used": false,
+  "app_store_operation": false
+}

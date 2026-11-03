@@ -6,6 +6,8 @@ Checkpoint 9 retains 16,599 open ledger items, including 1,526 outstanding direc
 
 Checkpoint 10 reduces the combined gate to 16,595 open items: direct compiler inputs now include 244 reviewed, 118 partial, 1,515 outstanding, 460 generated-and-verified and 20 generated inputs needing trace. The new source reads and limited synthetic runtime result do not change the full-review acceptance status.
 
+Checkpoint 11 records 105 of 116 passing required exact-baseline checks and 250 passing audit helper tests. Direct compiler inputs include 244 reviewed, 120 partial and 1,513 outstanding; generated counts and the 16,595 combined open-item count remain unchanged. Private-key snapshot behavior and the application export adapter runtime coverage remain open. [Private-key evidence limits](PRIVATE-KEY-DISCLOSURE.md).
+
 ## Historical acceptance snapshot
 
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.

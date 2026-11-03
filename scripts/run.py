@@ -11,13 +11,19 @@ SDK_MODES = ['walletconnect-sdk', 'walletconnect-verify']
 APP_MODES = {'app-updates':'Tools/CheckAppUpdates.py', 'token-lookup':'Tools/CheckTokenLookup.py'}
 SCANNER_MODES = {'scanner': [], 'wallet-links': ['--links'], 'scanner-lifecycle': ['--performance']}
 RECOVERY_MODES = {'aezeed': 'aezeed', 'electrum': 'Electrum'}
-MODES = [*RECOVERY_MODES, 'envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
+MODES = [*RECOVERY_MODES, 'private-keys', 'envelope', 'security', 'authentication', 'protected-startup', 'lifecycle', 'walletconnect',
          'evm-send', 'solana-send', 'tron-send', 'xrpl-send', 'stellar-send',
          'aptos-send', 'sui-send', 'near-send', 'ton-send', 'thorchain-send', 'arc-send', 'permission-batch', 'cloud-restore']
 
 def restore_case_count(text):
     matches = re.findall(r'^Passed (\d+) cloud-restore integration checks \(local synthetic backups; no live iCloud\)\.$', text, re.MULTILINE)
     return int(matches[0]) if len(matches) == 1 and int(matches[0]) >= 140 else None
+
+def private_key_case_count(text):
+    matches = re.findall(r'^Passed ([1-9][0-9]*) HD private-key browser/vault host checks\. Synthetic seed adapter; real public descriptors, leaf-key derivation, database and authorization\. No user data, network, simulator or device used\.$', text, re.MULTILINE)
+    # The pinned baseline fixture completes 305 assertions. A smaller summary
+    # must not silently certify a reduced run after harness changes.
+    return int(matches[0]) if len(matches) == 1 and int(matches[0]) >= 305 else None
 
 def recovery_case_count(mode, text):
     pattern = rf'^Passed ([1-9][0-9]*) {RECOVERY_MODES[mode]} host integration checks'
@@ -108,6 +114,9 @@ def main():
     scanner_cases = scanner_case_count(a.check, text) if a.check in SCANNER_MODES else None
     restore_cases = restore_case_count(text) if a.check == 'cloud-restore' else None
     recovery_cases = recovery_case_count(a.check, text) if a.check in RECOVERY_MODES else None
+    private_key_cases = private_key_case_count(text) if a.check == 'private-keys' else None
+    if a.check == 'private-keys' and private_key_cases is None:
+        code = code or 1
     if a.check in RECOVERY_MODES and recovery_cases is None:
         code = code or 1
     if a.check == 'cloud-restore' and restore_cases is None:
@@ -129,6 +138,9 @@ def main():
     if a.check in RECOVERY_MODES:
         result['assertion_count'] = recovery_cases
         result['runtime_scope'] = 'macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter'
+    if a.check == 'private-keys':
+        result['assertion_count'] = private_key_cases
+        result['runtime_scope'] = 'macOS host; production vault, SQL and Bitcoin-family leaf WIF derivation; substituted application key/export engine with synthetic HD seed; does not execute OathPrivateKeyExport.swift, UIKit or OS authentication'
     if app_update_counts: result['assertion_count'] = int(app_update_counts[0])
     if sdk_cases is not None: result['xctest_cases'] = sdk_cases
     if a.check == 'cloud-restore':

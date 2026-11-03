@@ -158,3 +158,49 @@ generated-and-verified and 20 need a generated-input trace. These are coverage
 counts, not vulnerability counts. Application source remains unchanged from the
 previous tested public repair tree; no new app build or App Store operation is
 claimed for this evidence-only checkpoint. No physical device was used.
+
+
+## Checkpoint 11
+
+Private-key disclosure source tracing covers account ownership, authentication,
+late-response invalidation, address-bound derivation, warning/reveal and cleanup.
+Two previously outstanding compiler inputs are now partially reviewed; remaining
+UI and dependency obligations are explicit. No new wallet vulnerability or
+application fix is claimed in this checkpoint.
+[Detailed review and limits](PRIVATE-KEY-DISCLOSURE.md).
+
+The existing, previously unlisted private-key browser fixture passes **305 host
+assertions** at the exact build 103 baseline. It executes production vault/SQL
+and Bitcoin-family leaf derivation with a substituted application key engine.
+It does not execute the application's non-UTXO export adapter, UIKit or OS
+biometric authorization. The audit runner now requires a single final summary
+with at least the pinned fixture's 305 assertions; successful compilation alone,
+missing/duplicate summaries and reduced assertion counts cannot pass. Five
+parser tests cover this gate. All 250 audit helper tests pass.
+[Host result](../evidence/5.0.1-build103/private-key-disclosure/private-keys.json)
+· [Audit helper validation](../evidence/5.0.1-build103/private-key-disclosure/validation.json).
+
+The token-search hosted replay passed the full suite and the controlled mutation
+checks; its production code is unchanged by the earlier test repair. The
+production automatic-biometric prompt fixture also passed all 19 host checks on
+GitHub. Downloaded archives match GitHub digests, and report/log pairs were
+independently verified. Two scanner matches were recomputed artifact checksums,
+not credentials; the narrow exceptions and final zero-match scan are preserved.
+[Token replay](../evidence/5.0.1-build103/ci-retests/token-search-order-github.json)
+· [Prompt replay](../evidence/5.0.1-build103/ci-retests/privacy-prompt-github.json).
+These supersede the respective pending-workflow statements in earlier checkpoints.
+The newly added dedicated private-key GitHub workflow remains pending at publication.
+
+A revealed private key intentionally remains in its model on cancellation, while
+the app-switcher blur is optional. The root's foreground lock presentation does
+not by itself establish background snapshot safety. Actual app-level snapshot
+behavior with privacy disabled remains an unresolved runtime concern; the earlier
+explicitly attached blur probe does not settle it. No new simulator or physical
+device check was performed for this checkpoint.
+
+There are **105 of 116** required exact-baseline checks with passing hash-linked
+records. The direct compiler ledger has 244 reviewed, 120 partial, 1,513
+outstanding, 460 generated-and-verified and 20 generated inputs needing trace,
+out of 2,357 inputs. The combined gate remains at 16,595 open items. These are
+coverage counts, not vulnerability counts. The whole-wallet review remains
+in progress. No application code, App Store upload or submission changed.
