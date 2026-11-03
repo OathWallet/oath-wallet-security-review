@@ -1,0 +1,36 @@
+name: Reproduce XRPL signing vectors
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/xrpl-signing-vectors.yml', 'scripts/xrpl-signing-vectors.py', 'fixtures/xrpl-signing/**', 'tests/test_xrpl_signing_fixture.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '26.5.0'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_xrpl_signing_fixture.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 6783750661c43d3511d8973a2de77106fdf2001d
+      - run: |
+          mkdir -p evidence/ci/xrpl-signing-vectors
+          cp evidence/ci/toolchain.txt evidence/ci/xrpl-signing-vectors/
+          node --version > evidence/ci/xrpl-signing-vectors/node-version.txt
+          npm --version > evidence/ci/xrpl-signing-vectors/npm-version.txt
+          python3 scripts/xrpl-signing-vectors.py .work/wallet .work/xrpl-signing evidence/ci/xrpl-signing-vectors
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: xrpl-signing-vectors-evidence, path: evidence/ci/xrpl-signing-vectors, retention-days: 90}
