@@ -84,3 +84,5 @@ The merged source matches tested commit `b128544044a5d3043fca99c7d4c94af1af3b511
 Five additional compiler inputs have complete narrow review dispositions and three have partial dispositions. The direct-input ledger has 1,534 outstanding, 108 partially reviewed and 20 generated inputs needing trace evidence. The full completion gate retains 16,617 open entries. ENS normalization, reverse/forward ownership checks, MessageSigner semantics and shared hex-decoder callers need further review. [Scope and API notes](ADDRESS-CHECKSUMS.md).
 
 GitHub replay for this repair is pending publication. No App Store upload, simulator or physical-device operation was performed. The full review remains in progress.
+
+The preceding signer checkpoint has now completed its GitHub replay successfully. All forty original/repaired case logs match their recorded checksums, and the downloaded archive matches GitHub's digest. [Hosted signer receipt](../evidence/5.0.1-build103/ci-retests/signatures-github.json). Its original traps and assertion failures remain expected replay outcomes, not missing tests.

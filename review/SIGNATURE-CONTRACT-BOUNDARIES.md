@@ -29,3 +29,5 @@ The same twenty methods were run against the original release and repair, each i
 ENS normalization, RPC response limits, the remaining message-signing interfaces and broader cryptographic provenance remain review work. Simulator and physical-device checks were outside this checkpoint.
 
 Checkpoint 7 regenerated the same vectors with ethers 6.17.0 after updating an audit-only WebSocket dependency. The original fixture header and all vector bytes remain unchanged. [Tooling update receipt](../evidence/5.0.1-build103/address-checksums/oracle-update.json).
+
+The [GitHub replay completed successfully](../evidence/5.0.1-build103/ci-retests/signatures-github.json) at audit revision `10db256a64a8e73fc99fb166fcd06634bf34d783`. Its archive digest and all forty per-case log hashes were independently verified. This run used the original pinned oracle; the later tooling update has its own receipt.
