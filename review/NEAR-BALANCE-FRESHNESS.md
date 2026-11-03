@@ -75,3 +75,7 @@ historical aezeed provenance finding, remaining dependency/source inventory and
 unresolved app integration areas stay open. Neither this repair nor the passing
 tests completes the whole-wallet review. Hosted reproduction of this new repair
 is tracked separately from local results.
+
+## Subsequent hosted verification
+
+Run [41622627422](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41622627422) completed successfully. Its downloaded archive, source pins, fixture and case logs were verified against GitHub metadata. [Durable receipt](../evidence/5.0.2-build104/hosted-near-balance-freshness/manifest.json). The original local checkpoint manifest retains its publication-time status.

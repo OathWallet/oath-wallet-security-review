@@ -1,0 +1,89 @@
+{
+  "findings": [
+    "OW-2026-068",
+    "OW-2026-069"
+  ],
+  "before_commit": "05e7917f0a3c26072b1a6b88d2e9e4a0d0310427",
+  "repair_commit": "b3f1f6af98bedfe850d390cac684a563c598e3ac",
+  "before": {
+    "passed": 1,
+    "assertion_failures": 2,
+    "sigtrap": 1
+  },
+  "after": {
+    "passed": 4,
+    "failed": 0
+  },
+  "adjacent": {
+    "passed": 22,
+    "failed": 0,
+    "live_tests": "two explicitly excluded"
+  },
+  "hosted_replay": "pending",
+  "files": [
+    {
+      "path": "runs.zip",
+      "sha256": "9ae6247beaf5de024a20fb15317dde9a59c0724fdb9c72acc6428c01bfb4ef16"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "bbea9fcbb01bad6bd0634ede3f2933797cc836a385d59e05438eed53fa0d7798"
+    },
+    {
+      "path": "validation/completion.log",
+      "sha256": "50311092c08fb83bd8779b0c6d3d2e30734a66184da5c5b83682d8d0e9bbb345"
+    },
+    {
+      "path": "validation/diagnostics-coverage.log",
+      "sha256": "abb86118ee61e33a96aca80101c301a2f822631e7876b09297b66e93604246f4"
+    },
+    {
+      "path": "validation/diagnostics-tests.log",
+      "sha256": "00b5f7ce4ef9de31244cff6b8148ce827029f2f600c871cf9b0f34b1daf5565b"
+    },
+    {
+      "path": "validation/gitleaks.log",
+      "sha256": "34564e4d85866fb00cbf909c4d34a114e77e8f22f5b169a5bbb17dcb8ac28ab8"
+    },
+    {
+      "path": "validation/helper-all.log",
+      "sha256": "db1eb0909ed4717a51f490e30abbaf05555ef3adf26f4c2498e7a861ddf48d18"
+    },
+    {
+      "path": "validation/helper-targeted.log",
+      "sha256": "41cee9cc70f8e2902ff4277cf9577cbdf05c130cf7652490990fd48efa2e4859"
+    },
+    {
+      "path": "validation/ios-build-missing-metal.log",
+      "sha256": "73335b8cff75577394371be1847ebc772754ebd1deb8f43fe2e8626dcce26a38"
+    },
+    {
+      "path": "validation/ios-build.log",
+      "sha256": "9ed939a61a9ea88e67ec5ad5ddc2f341cd4fa5de8c765bf37ad63d2d6a134eaf"
+    },
+    {
+      "path": "validation/merge-binding.json",
+      "sha256": "4d178ccc01a24eeebae979d3db7f55aa00ba0ec7541bd264b0142cb5528bfb0e"
+    },
+    {
+      "path": "validation/metal-toolchain-download.log",
+      "sha256": "793ed3bdad238ed846bec3ced236e75bbe010debc2db883784423f5ae92c6e8c"
+    },
+    {
+      "path": "validation/product-version.json",
+      "sha256": "c209615c8209ee355964138168203f72e31bcaf4edd23a07cc97d4c7422e6352"
+    },
+    {
+      "path": "validation/public-release.log",
+      "sha256": "46bd524025e802ff48256a35fa1f7ae6293a0ae4cc16c716a3096252b29e0072"
+    },
+    {
+      "path": "validation/publication-scan.log",
+      "sha256": "39c4ac7b63064ccaa53ef93ee56556ca8b8e33418e5b1857cf9fece7b8c7c274"
+    },
+    {
+      "path": "validation/workflow-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

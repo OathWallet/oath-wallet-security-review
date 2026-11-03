@@ -1509,7 +1509,8 @@
       "fix_commit_is_ancestor": false,
       "validation": "Later public repair; exact before and after pins retained in paired evidence."
     },
-    "hosted_replay": "pending"
+    "hosted_replay": "verified",
+    "hosted_evidence": "evidence/5.0.2-build104/hosted-near-balance-freshness/manifest.json"
   },
   {
     "id": "OW-2026-067",
@@ -1526,8 +1527,47 @@
       "fix_commit_is_ancestor": false,
       "validation": "Later source repair; baseline and original paired failures are preserved."
     },
-    "hosted_replay": "pending",
+    "hosted_replay": "verified",
     "merge_commit": "05e7917f0a3c26072b1a6b88d2e9e4a0d0310427",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/84"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/84",
+    "hosted_evidence": "evidence/5.0.2-build104/hosted-inventory-flight-time/manifest.json"
+  },
+  {
+    "id": "OW-2026-068",
+    "severity": "low",
+    "title": "Sui history restart overflows on a malformed checkpoint",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-068.md",
+    "baseline_commit": "05e7917f0a3c26072b1a6b88d2e9e4a0d0310427",
+    "fix_commit": "b3f1f6af98bedfe850d390cac684a563c598e3ac",
+    "retest_scope": "Same four production decoder/SQLite methods: one control pass, two assertion failures and one SIGTRAP before; all four pass after. Cursor rejection preserves stored history. Internal account-mismatch calls are not a demonstrated app-level exploit. Runtime network denied.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": false,
+      "validation": "Later source repair; immutable baseline and paired failures remain unchanged."
+    },
+    "hosted_replay": "pending",
+    "merge_commit": "5e54956e10647ca1b2588fa77b3cbcb9b7884f03",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/85"
+  },
+  {
+    "id": "OW-2026-069",
+    "severity": "low",
+    "title": "History restarts omit the ticket-to-account binding",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-069.md",
+    "baseline_commit": "05e7917f0a3c26072b1a6b88d2e9e4a0d0310427",
+    "fix_commit": "b3f1f6af98bedfe850d390cac684a563c598e3ac",
+    "retest_scope": "Same four production decoder/SQLite methods: one control pass, two assertion failures and one SIGTRAP before; all four pass after. Cursor rejection preserves stored history. Internal account-mismatch calls are not a demonstrated app-level exploit. Runtime network denied.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": false,
+      "validation": "Later source repair; immutable baseline and paired failures remain unchanged."
+    },
+    "hosted_replay": "pending",
+    "merge_commit": "5e54956e10647ca1b2588fa77b3cbcb9b7884f03",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/85"
   }
 ]

@@ -1,0 +1,226 @@
+{
+  "run_id": 41622627422,
+  "audit_commit": "6e14bac32f03b62d3cb535a7f7236cb0858fd94a",
+  "status": "completed",
+  "conclusion": "success",
+  "expanded_files_verified": [
+    {
+      "path": "adjacent/NearLedgerTests-testContractFailureKeepsBalanceTimestampAndRealZeroClearsIt.log",
+      "sha256": "2ab63d6639c9dcf0c6e524090792fe539a46522f641d9709bfd65348656061fb"
+    },
+    {
+      "path": "adjacent/NearLedgerTests-testExactBalancesOfflineAndWhitelistAccountIsolation.log",
+      "sha256": "0c8c60c3878eb883c361e1d50d58db91427d1f6323fdb408298b21adaabfb4e6"
+    },
+    {
+      "path": "adjacent/NearLedgerTests-testResumableHistorySameBlockTransfersAreNotLost.log",
+      "sha256": "91d64a6b503025e1d9483deaab63087d85423c830365177c8a741928bfe0fed0"
+    },
+    {
+      "path": "adjacent/NearLedgerTests-testStaleWritesResetAndMarketRetention.log",
+      "sha256": "8fa10eacc85e6de1c33388348fa0d490ebe8a08ae8718d131ef5f6a7b0271e07"
+    },
+    {
+      "path": "adjacent/NearLedgerTests-testUnknownMetadataRetainsUnitsAndReprojectsEvents.log",
+      "sha256": "9daf247c965f5c76ce9f2370a1b035cc1eaa9066a939668cd6320d0f0cb3033b"
+    },
+    {
+      "path": "adjacent/NearSendJournalTests-testCrossWalletReservationAndCancelledAuthenticationReleasesOnlyUnsigned.log",
+      "sha256": "e91bcc5ba1b22f88b92145ed8e3dd31701462fda522ce5e7f36d246f36fdaef6"
+    },
+    {
+      "path": "adjacent/NearSendJournalTests-testExactSignedBytesSurviveReopenAndUnknownBroadcastReservesSender.log",
+      "sha256": "087ab1c91f93ec7450cde73b19456c4c513a2a5c39b121abd914f52242a4286a"
+    },
+    {
+      "path": "adjacent/NearSendJournalTests-testFailedExecutionSettlesAsFailureAndNeverSuccess.log",
+      "sha256": "6f0ff3ae3c59154cc15d76f161e4e1baaa2f5ff82d81720e4b7dc014b9e06d71"
+    },
+    {
+      "path": "adjacent/NearSendJournalTests-testProvenExpiryReleasesSenderWithoutClaimingFeeOrBalanceRefresh.log",
+      "sha256": "186e3b258409185f3b959daf202945e6d2efb76e1dd0d69b8cad965cf5ed47f1"
+    },
+    {
+      "path": "adjacent/NearSendJournalTests-testSubmissionObservationRequiresFinalJournalAndWalletScope.log",
+      "sha256": "93f87784fa84accb83b0f1f56700878a094d2f875eb0b4b6a644902172e67b58"
+    },
+    {
+      "path": "adjacent/NearSendJournalTests-testTamperedSignedTransactionAndTestnetPlanRejectedBeforeJournal.log",
+      "sha256": "28e564d15de45f1f32e7e498d0fce7f850aacfbf4f1ed02630b456ecf4ac942a"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testAutomaticJournalHookRoutesAllFourChainsAndFutureChain.log",
+      "sha256": "d4afe49392b9ba882ec2b78c8eead4cb87043869c59ce9d95741270149eb3fd7"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testConfirmationWakesAnExhaustedBurstWithoutReopeningApp.log",
+      "sha256": "49dd9ac4a88071a6ff7adda72821330778e0d9a3bd070718d2971ef0b7a4b853"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testDurableQueuePagesBeyondMemoryLimitWithBoundedConcurrency.log",
+      "sha256": "3c4fe707fb3c19b934c3f062c9d4053e53cbedd9466470398a8f745727595f74"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testEveryAcknowledgementJournalAutomaticallyRequeuesOnce.log",
+      "sha256": "1744fc4639da8126e4942da01b97e834c82b643f511725ed3e704ea9e05d2429"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testExhaustionSurvivesRestartAndResumesWithoutRebroadcast.log",
+      "sha256": "26eb38d94341cf53f5ce3c3e90a96f1430969d1a5d244b7304b3580cb152d594"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testExpiredUnexecutedSendDoesNotRetryBalancesForever.log",
+      "sha256": "0b85a28f1d42ead51d55f4a9e0988058360de83ba75f1f03203153b58d8aa25c"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testMigrationRecoversPendingBroadcastsWithoutReplayingOldConfirmedHistory.log",
+      "sha256": "44df6fd2f6cc1bed0bc19f816abba99ac36cae43b5ee60fdb56351dfa0b40040"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testNewBroadcastWakesIdleWorkerWithoutScreenCallback.log",
+      "sha256": "79468e07074d0d997328a285ebf0c71579bd28777b210b385437268b32d369bd"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testNewReceiptCannotBeClearedByOlderInFlightBalanceRead.log",
+      "sha256": "0302034dc119a117cff4697905bd37528b2fec28cc01c04d0e5a800e0f912548"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testNewSendDuringRefreshIsNotLostAndDuplicateRequestsCoalesce.log",
+      "sha256": "3e3efcbb439db06705b7d5d1f2a39a6959d5acbbc8be80a3b5c7b91b11540197"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testPauseRejectsLateCompletionAndResumeKeepsPendingWork.log",
+      "sha256": "32dd1bc07172f927c0230159befa25877287eccd3ece7904c551ca2b9f289ebd"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testRetriesTransportFailureThenStaleSuccessWithoutChangingSendState.log",
+      "sha256": "10a465b0cac026050d99cbeaea89787430ea2eed577f12f9b6997f037ec6f565"
+    },
+    {
+      "path": "adjacent/PostSendBalanceRefreshTests-testWalletAndChainIsolationAlsoProtectsAcknowledgements.log",
+      "sha256": "1eba4b4782dbc330961377477ffc276722b8dd3acd95b3078e1a7a61592d2e56"
+    },
+    {
+      "path": "adjacent/result.json",
+      "sha256": "90e12c5e0ac8b18e5dfce89aa826ae6b95b4b641521ad1b8ab0f1124f5897cac"
+    },
+    {
+      "path": "after/build.log",
+      "sha256": "a9fcb537f52759de56b50b0b509649754d35094662ba1356aea57db8357100c1"
+    },
+    {
+      "path": "after/checkout.log",
+      "sha256": "cdd066fcda6c590342140ad7d6d8255dc096286f87050090eb8bce67dfecae2c"
+    },
+    {
+      "path": "after/clone.log",
+      "sha256": "059571720856e5132836ce74a2b739ffe466447c2742e06db3dd12aa561522dc"
+    },
+    {
+      "path": "after/python-version.log",
+      "sha256": "0366d77cc1f1ac88ea458231ba4f639323d5caf34de0d50b7618277fd4395f1f"
+    },
+    {
+      "path": "after/result.json",
+      "sha256": "d817d6f8c60ed0ce9fcb82973201b5b1d7b31f21d6bd5e839c614045ed5c4ee0"
+    },
+    {
+      "path": "after/swift-version.log",
+      "sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    {
+      "path": "after/testFailedTokenReadCannotCompletePostSendRefresh.log",
+      "sha256": "18d6987198ffbe6e371015d1f16215480900280c237cd46201baa47064961bbf"
+    },
+    {
+      "path": "after/testFailedTokenReadRecoversOnlyAfterSuccessfulNewRead.log",
+      "sha256": "a56379a1241dab4cc427f0a0e47ea84d0b75dd341861092a4e2d6ee98f356359"
+    },
+    {
+      "path": "after/testNativeSendRequiresExecutionHeightAndSuccessfulBalance.log",
+      "sha256": "eb0625a42bbdf41ecbaff27743218667d5ce6c2979add26200f80f9d32563d8d"
+    },
+    {
+      "path": "after/testNewObservationFromBeforeExecutionBlockIsNotCurrent.log",
+      "sha256": "bfcacf1c259a587a1a11fef38b7f005fd4f5e0a7749f6ccf22f3232a91ee5c4d"
+    },
+    {
+      "path": "after/testSuccessfulTokenAndFeeBalancesAtExecutionBlockAreCurrent.log",
+      "sha256": "c3b6af34e38bee8a0548064d605566bd50b1d4717ede85d83735858294e00780"
+    },
+    {
+      "path": "after/testSuccessfulZeroTokenBalanceCompletesRefresh.log",
+      "sha256": "ad3a6d80a5a368182b2c9c8e606afb51363898fb69b2d1a0b79881333d6e8043"
+    },
+    {
+      "path": "after/xcode-version.log",
+      "sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+    },
+    {
+      "path": "before/build.log",
+      "sha256": "891cea8aaafb40b4d0a3aeece77635c4ac206636de9db0ffa6ec5304918e2bfd"
+    },
+    {
+      "path": "before/checkout.log",
+      "sha256": "ad933bd14df7c185ae791536f5bf22a66d85103eb31f669c03ee742f6cc32e8b"
+    },
+    {
+      "path": "before/clone.log",
+      "sha256": "80dccf4c0e08e8c1cfb088d28057c2a3f33f7f150d637be0b8e93298eb107c21"
+    },
+    {
+      "path": "before/python-version.log",
+      "sha256": "0366d77cc1f1ac88ea458231ba4f639323d5caf34de0d50b7618277fd4395f1f"
+    },
+    {
+      "path": "before/result.json",
+      "sha256": "d83fa8f3367c8f1b2570b7a6e48bf5fcd377b206d3f1d6979f057ecda93e43bc"
+    },
+    {
+      "path": "before/swift-version.log",
+      "sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    {
+      "path": "before/testFailedTokenReadCannotCompletePostSendRefresh.log",
+      "sha256": "6c1154a5b18875f9835227e8194187a528d406fe71d222f402bcc687f18a7fa3"
+    },
+    {
+      "path": "before/testFailedTokenReadRecoversOnlyAfterSuccessfulNewRead.log",
+      "sha256": "852fe4227dd5851ab8ae54470db4d9ed542a0b78d1edd30530911219ff6c235e"
+    },
+    {
+      "path": "before/testNativeSendRequiresExecutionHeightAndSuccessfulBalance.log",
+      "sha256": "4734edf587030e040ef589ef53b1a7accaa12b5580a4fe1cd3dd8d9fdff4328e"
+    },
+    {
+      "path": "before/testNewObservationFromBeforeExecutionBlockIsNotCurrent.log",
+      "sha256": "34f7e9c064d99cf7fc5b7e0fbb17ea577dc96395c7c82589fdc60d2d1d2cd4fe"
+    },
+    {
+      "path": "before/testSuccessfulTokenAndFeeBalancesAtExecutionBlockAreCurrent.log",
+      "sha256": "407b803325dab517e12b849f115aaaab26616cdc8bf89e2b5e9f4b044d6473df"
+    },
+    {
+      "path": "before/testSuccessfulZeroTokenBalanceCompletesRefresh.log",
+      "sha256": "28962598a1f0b9aa16d59b925894c1ba551da0787f791f734413a7ff1127ed06"
+    },
+    {
+      "path": "before/xcode-version.log",
+      "sha256": "ee3fe26035862d2b9653c1a570be3eca4ee5be2815f0ce99ff2d8ffa3399e4c8"
+    }
+  ],
+  "files": [
+    {
+      "path": "artifact.zip",
+      "sha256": "0db85b1ba825002c06fc723a48ca854e07007963ed5b8e110a3430b7c04c9355"
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "209aaff77da299a5db1e3db5ac251cf7a95eec4b8e72df09883e66549bd008a2"
+    },
+    {
+      "path": "run.json",
+      "sha256": "746a289edb4dd90a17a1f5d26c44a11d54600f42e0a524c707e7414ced7307a1"
+    }
+  ]
+}

@@ -70,3 +70,7 @@ The repair is merged in [PR84](https://github.com/devdasx/oath-wallet/pull/84),
 `05e7917f0a3c26072b1a6b88d2e9e4a0d0310427`. The full merge tree matches the tested repair tree.
 The changed publication files and expanded new evidence archives also pass a
 redacted secret scan. This is not a new whole-history scan claim.
+
+## Subsequent hosted verification
+
+Run [41626421156](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41626421156) completed successfully. Its downloaded archive, source pins, fixture and case logs were verified against GitHub metadata. [Durable receipt](../evidence/5.0.2-build104/hosted-inventory-flight-time/manifest.json). The original local checkpoint manifest retains its publication-time status.

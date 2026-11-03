@@ -1,5 +1,7 @@
 # Oath Wallet 5.0.2 (104) prerelease security review
 
+Build 104 checkpoint 16 repairs a Sui history restart overflow and missing Sui/XRP cursor-account checks. The same four host cases change from one passing control, two assertion failures and one SIGTRAP to all passing. All 22 adjacent offline methods pass. Earlier NEAR and TRON/TON hosted repair runs are now downloaded and hash-verified. [Evidence and remaining limits](review/HISTORY-RESTART-BOUNDARIES.md).
+
 Build 104 checkpoint 15 repairs delayed TRON/TON inventory freshness: the same five host cases change from two passes/three failures to five passes. Old in-flight balance responses no longer satisfy the post-send freshness check. The earlier NEAR journal-race hosted replay is downloaded and hash-verified. [Exact checks and remaining gaps](review/INVENTORY-FLIGHT-TIME.md).
 
 Build 104 checkpoint 14 adds four scoped partial source dispositions for TRON/TON ledger refreshes and 27 passing existing offline ledger/journal methods. The earlier activation/bootstrap GitHub replay is downloaded and hash-verified. No new app defect or app-source change is claimed; snapshot freshness and full adapter integration remain open. [Evidence and limitations](review/TRON-TON-LEDGER-BOUNDARIES.md).

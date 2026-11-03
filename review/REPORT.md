@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 16 repairs a Sui history restart overflow and missing Sui/XRP cursor-account checks. The same four host cases change from one passing control, two assertion failures and one SIGTRAP to all passing. All 22 adjacent offline methods pass. Earlier NEAR and TRON/TON hosted repair runs are now downloaded and hash-verified. [Evidence and remaining limits](HISTORY-RESTART-BOUNDARIES.md).
+
 Build 104 checkpoint 15 repairs delayed TRON/TON inventory freshness: the same five host cases change from two passes/three failures to five passes. Old in-flight balance responses no longer satisfy the post-send freshness check. The earlier NEAR journal-race hosted replay is downloaded and hash-verified. [Exact checks and remaining gaps](INVENTORY-FLIGHT-TIME.md).
 
 Build 104 checkpoint 14 adds four scoped partial source dispositions for TRON/TON ledger refreshes and 27 passing existing offline ledger/journal methods. The earlier activation/bootstrap GitHub replay is downloaded and hash-verified. No new app defect or app-source change is claimed; snapshot freshness and full adapter integration remain open. [Evidence and limitations](TRON-TON-LEDGER-BOUNDARIES.md).
@@ -52,7 +54,7 @@ The following checkpoints are historical evidence with their original pins.
 
 **IN PROGRESS. This is not a completed whole-wallet audit.**
 
-**Active target — 5.0.1 (103).** The maintainer-commissioned Codex review now targets public source `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect showed iOS version 5.0.1 Waiting for Review on 2 November 2026. [Current results and release-specific findings](RELEASE-5.0.1-103.md) · [Coverage inventory](../scope/inventory.json).
+**Historical build-103 target — 5.0.1 (103).** This earlier checkpoint targeted public source `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect showed iOS version 5.0.1 Waiting for Review on 2 November 2026. [Current results and release-specific findings](RELEASE-5.0.1-103.md) · [Coverage inventory](../scope/inventory.json).
 
 **Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](../findings/OW-2026-046.md) · [Application and dependency checks](RELEASE-5.0.1-103.md) · [Direct input coverage](../evidence/5.0.1-build103/compiler/dispositions.json).
 

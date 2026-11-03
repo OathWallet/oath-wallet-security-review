@@ -247,3 +247,17 @@ expected failures in its deliberately broken reservation variant.
 
 The original build-104 tag, earlier source pins and unresolved review areas
 remain unchanged. No App Store operation is included.
+
+## Checkpoint 16 — history restart arithmetic and account binding
+
+[OW-2026-068](../findings/OW-2026-068.md) rejects an overflowing Sui history
+checkpoint without crashing or changing saved cursor state. [OW-2026-069](../findings/OW-2026-069.md)
+binds Sui/XRP restarts to the ticket's account. The original four-method fixture
+has one passing control, two failed assertions and one SIGTRAP; all four pass
+after repair. All 22 adjacent offline methods pass; two live tests remain excluded.
+[Reproduction and validation limits](HISTORY-RESTART-BOUNDARIES.md).
+
+NEAR balance freshness and delayed TRON/TON freshness now have verified hosted
+receipts, retaining their original source pins and before/after failures.
+The whole-wallet review remains incomplete; this checkpoint does not promote
+unreviewed files. No App Store operation is included.
