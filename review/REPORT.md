@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+**Checkpoint 17.** [OW-2026-061](../findings/OW-2026-061.md) repairs inconsistent XRP Connect simulation metadata in [PR #75](https://github.com/devdasx/oath-wallet/pull/75). The clean-checkout replay preserves two failing methods before and all six passing after; broader XRP tests, diagnostics and unsigned Release compilation pass. The earlier signing matrix now also passes on GitHub with verified artifact hashes. [Evidence and limits](XRPL-CONNECT-SIMULATION.md).
+
 **Checkpoint 16.** Four offline production-package methods pass: 61 complete XRP signed transactions and hashes match the independent pinned SDK, 13 RIPEMD vectors match OpenSSL-backed results, and altered plans/envelopes/signer sets are rejected. Five source files gain partial coverage. No new application defect is confirmed by this matrix. [Scope, reproduction and remaining provider hypothesis](XRPL-SIGNING-MATRIX.md).
 
 

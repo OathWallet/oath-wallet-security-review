@@ -32,3 +32,9 @@ Checkpoint 12 audit-helper validation: **262 tests passed**. The combined gate
 retains **16,596 open items**; the extra finding remains counted against the
 unchanged historical baseline despite its later public repair. Direct compiler
 coverage counts are unchanged. These counts are not counts of vulnerabilities.
+
+Checkpoint 17: OW-2026-061 has a verified later-source repair and paired replay.
+The unchanged baseline keeps it counted in the gate: **16,599 open entries**.
+Direct compiler coverage remains 244 reviewed, 135 partial, 1,498 outstanding,
+460 generated-and-verified and 20 needing trace. These are coverage/validation
+entries, not vulnerability counts. No App Store availability claim is made.

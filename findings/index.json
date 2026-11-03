@@ -957,5 +957,19 @@
     "available_in_app_store_verified": false,
     "retest_scope": "4900 exact-arithmetic host cases: 4843 pass/57 fail before; 4900 pass after. Selected package regressions, diagnostics and unsigned Release compilation pass. No fund loss, live ledger or UI claim.",
     "evidence": "evidence/5.0.1-build103/xrpl-amounts/manifest.json"
+  },
+  {
+    "id": "OW-2026-061",
+    "title": "XRP Connect accepts inconsistent simulation metadata",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-061.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "8a31eb265c34ef7f37ba21741201842366d43b7b",
+    "merge_commit": "b614d27fe7f2525ff14be1c2cb1290faeb353379",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/75",
+    "available_in_app_store_verified": false,
+    "retest_scope": "Six provider methods: four pass/two fail before (eight assertions), six pass after. Broader XRP package: 43 pass/four live skips. Diagnostics 119 pass/two skips; source checks and unsigned Release build pass. No live ledger, UI or fund loss claim.",
+    "evidence": "evidence/5.0.1-build103/xrpl-connect-simulation/manifest.json"
   }
 ]

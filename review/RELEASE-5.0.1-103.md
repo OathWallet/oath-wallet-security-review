@@ -399,3 +399,39 @@ upstream-provenance work remains open.
 **285 audit-helper/evidence-integrity tests pass.** The publication scan's nine initial matches were all deterministic public test keys. Regeneration reproduced the complete fixture exactly; narrowly scoped value-and-path exceptions retain that evidence. No whole-history scanner claim is made.
 
 The [GitHub signing replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41571599716) is running at checkpoint publication. Its hosted result remains pending; the four-method pass reported here is locally verified.
+
+## Checkpoint 17
+
+The previously unconfirmed simulation-response hypothesis is now reproduced as
+[OW-2026-061](../findings/OW-2026-061.md). XRP Connect review and fresh preflight
+accepted failure or malformed metadata when the top-level engine field claimed
+success. Eight assertions fail across two methods before repair; four controls
+pass. The unchanged six methods pass after repair, including valid responses
+and the DeliverMax alias. A clean-checkout paired replay reproduces both sides.
+[Commands and limits](XRPL-CONNECT-SIMULATION.md) ·
+[Manifest](../evidence/5.0.1-build103/xrpl-connect-simulation/manifest.json).
+
+[PR #75](https://github.com/devdasx/oath-wallet/pull/75) merges fix
+`8a31eb265c34ef7f37ba21741201842366d43b7b` as
+`b614d27fe7f2525ff14be1c2cb1290faeb353379`. The merge differs from the tested
+commit only in 91 concurrent Website files, not app source or build settings.
+The broader XRP run passes **43 methods with four live tests skipped**.
+Diagnostics passes **119 methods with two skips**. Public-source validation,
+diagnostics coverage, redacted source secret scan and unsigned generic iOS
+Release compilation pass at the fixed commit. No UI, simulator, physical device,
+live transaction or App Store operation is included. No fund loss was shown;
+a provider fabricating both success fields remains outside this guard.
+
+The [checkpoint 16 signing workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41571599716)
+now passes all four methods on GitHub. Its downloaded archive size/digest,
+source/fixture/generator/overlay/script hashes and individual result logs match
+the recorded expectations. This supersedes the earlier pending status without
+altering its historical snapshot. [Receipt](../evidence/5.0.1-build103/ci-retests/xrpl-signing-github.json).
+
+The combined completion gate has **16,599 open entries**, including this
+later-source repair against the unchanged baseline. File-review dispositions
+are unchanged. Full application review, dependency provenance and exact-target
+validation gaps remain open; this checkpoint is not an audit completion verdict.
+
+**290 audit-helper/evidence-integrity tests pass.** These are separate from the
+production Swift methods and compilation checks above.

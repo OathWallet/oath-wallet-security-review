@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Checkpoint 17.** XRP Connect simulation validation is repaired in [PR #75](https://github.com/devdasx/oath-wallet/pull/75): eight assertions fail across two methods before; all six provider methods pass afterward. Broader XRP tests, diagnostics and unsigned iOS Release compilation pass. The earlier signing matrix also passes on GitHub with verified archive hashes. [Evidence and limits](review/XRPL-CONNECT-SIMULATION.md). The full review remains incomplete.
+
 **Checkpoint 16.** Four offline production-package methods pass: 61 complete XRP signed transactions and hashes match the independent pinned SDK, 13 RIPEMD vectors match OpenSSL-backed results, and altered plans/envelopes/signer sets are rejected. Five source files gain partial coverage. No new application defect is confirmed by this matrix. [Scope, reproduction and remaining provider hypothesis](review/XRPL-SIGNING-MATRIX.md).
 
 **Checkpoint 15.** [OW-2026-060](findings/OW-2026-060.md) repairs an XRP issued-token quote failure for valid large amounts. The same 4,900 deterministic arithmetic cases change from 4,843 passes/57 failures to all passing. Targeted package regressions, diagnostics, source validation and unsigned iOS Release compilation pass. [Reproduction, scope and limits](review/XRPL-AMOUNT-ARITHMETIC.md) · [Checkpoint evidence](review/RELEASE-5.0.1-103.md#checkpoint-15). No live ledger or App Store result is claimed.
