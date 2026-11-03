@@ -83,3 +83,12 @@ execution or a complete contract review. The earlier ten-method hosted app repla
 is now downloaded and verified. 358 audit-helper tests pass. Existing reviewed
 and partial dispositions remain scoped to their original evidence; no outstanding
 implementation is promoted by test success. [Contract scope and open questions](NEAR-CONTRACT-NATIVE.md).
+
+Build 104 checkpoint 9 leaves **16,918 outstanding review/validation entries**.
+The identical native fixture now has 18 valid passes and two excluded inherited
+fixture passes after an audit-only SDK mock ABI repair; ten original aborts are
+retained. A deliberate member-admission mutation causes exactly four failures.
+362 audit-helper tests pass. Hosted signing vectors and the pinned-toolchain
+native replay have downloaded, hash-verified evidence. No implementation review
+is promoted by those results; shipped-WASM execution, source-to-binary rebuild
+and remaining dependency review stay open. [Repair and limitations](NEAR-CONTRACT-REJECTIONS.md).

@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/near-contract-unit.yml', 'scripts/near_contract_unit.py', 'fixtures/near-contract-unit/**', 'tests/test_near_contract_unit.py']
+    paths: ['.github/workflows/near-contract-unit.yml', 'scripts/near_contract_unit.py', 'scripts/near_contract_unwind.py', 'fixtures/near-contract-unit/**', 'tests/test_near_contract_unit.py', 'tests/test_near_contract_unwind.py']
 permissions:
   contents: read
 jobs:
@@ -25,11 +25,22 @@ jobs:
           rustc --version
           cargo --version
           python3 -m unittest discover -s tests -p test_near_contract_unit.py
+          python3 -m unittest discover -s tests -p test_near_contract_unwind.py
       - name: Replay native source with mock receipts and record SDK aborts
         run: |
           git clone --no-checkout https://github.com/near/core-contracts.git .work/near-contract
           git -C .work/near-contract checkout --detach 1b0436c96379c63aee7d2429c6d5d24019031ab8
           python3 scripts/near_contract_unit.py .work/near-contract .work/native-contract evidence/ci/near-contract-unit --cargo-home .work/cargo-cache --fetch
+      - name: Compare the identical rejection fixture and a member-guard mutation
+        run: |
+          python3 scripts/near_contract_unwind.py .work/near-contract .work/native-before evidence/ci/near-contract-unwind/before .work/cargo-cache --mode original
+          python3 scripts/near_contract_unwind.py .work/near-contract .work/native-after evidence/ci/near-contract-unwind/after .work/cargo-cache --mode unwind
+          python3 scripts/near_contract_unwind.py .work/near-contract .work/native-mutant evidence/ci/near-contract-unwind/mutant .work/cargo-cache --mode mutant
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         if: always()
-        with: {name: near-contract-unit-evidence, path: evidence/ci/near-contract-unit, retention-days: 90}
+        with:
+          name: near-contract-unit-evidence
+          path: |
+            evidence/ci/near-contract-unit
+            evidence/ci/near-contract-unwind
+          retention-days: 90

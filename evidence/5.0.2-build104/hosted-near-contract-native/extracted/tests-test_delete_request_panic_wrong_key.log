@@ -1,0 +1,104 @@
+
+running 1 test
+
+thread 'tests::test_delete_request_panic_wrong_key' (18466) panicked at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/cargo-cache/registry/src/index.crates.io-1949cf8c6b5b557f/near-sdk-4.0.0-pre.4/src/environment/mock/mocked_blockchain.rs:111:78:
+called `Result::unwrap()` on an `Err` value: HostError(GuestPanic { panic_msg: "Request cannot be deleted immediately after creation." })
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tests::test_delete_request_panic_wrong_key' (18466) panicked at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/panicking.rs:225:5:
+panic in a function that cannot unwind
+stack backtrace:
+   0:        0x102748d10 - std[93770f9ee7fea9f3]::backtrace_rs::backtrace::libunwind::trace
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/../../backtrace/src/backtrace/libunwind.rs:117:9
+   1:        0x102748d10 - std[93770f9ee7fea9f3]::backtrace_rs::backtrace::trace_unsynchronized::<std[93770f9ee7fea9f3]::sys::backtrace::_print_fmt::{closure#1}>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/../../backtrace/src/backtrace/mod.rs:66:14
+   2:        0x102748d10 - std[93770f9ee7fea9f3]::sys::backtrace::_print_fmt
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/sys/backtrace.rs:74:9
+   3:        0x102748d10 - <<std[93770f9ee7fea9f3]::sys::backtrace::BacktraceLock>::print::DisplayBacktrace as core[d73c09da13b2be7a]::fmt::Display>::fmt
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/sys/backtrace.rs:44:26
+   4:        0x102759e98 - <core[d73c09da13b2be7a]::fmt::rt::Argument>::fmt
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/fmt/rt.rs:152:76
+   5:        0x102759e98 - core[d73c09da13b2be7a]::fmt::write
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/fmt/mod.rs:1687:22
+   6:        0x10274d58c - std[93770f9ee7fea9f3]::io::default_write_fmt::<std[93770f9ee7fea9f3]::sys::stdio::unix::Stderr>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/io/mod.rs:621:11
+   7:        0x10274d58c - <std[93770f9ee7fea9f3]::sys::stdio::unix::Stderr as std[93770f9ee7fea9f3]::io::Write>::write_fmt
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/io/mod.rs:1976:13
+   8:        0x1027305d0 - <std[93770f9ee7fea9f3]::sys::backtrace::BacktraceLock>::print
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/sys/backtrace.rs:47:25
+   9:        0x1027305d0 - std[93770f9ee7fea9f3]::panicking::default_hook::{closure#0}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:292:27
+  10:        0x102742944 - std[93770f9ee7fea9f3]::panicking::default_hook
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:319:9
+  11:        0x102742c6c - std[93770f9ee7fea9f3]::panicking::panic_with_hook
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:825:13
+  12:        0x1027306a8 - std[93770f9ee7fea9f3]::panicking::panic_handler::{closure#0}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:691:13
+  13:        0x102727d08 - std[93770f9ee7fea9f3]::sys::backtrace::__rust_end_short_backtrace::<std[93770f9ee7fea9f3]::panicking::panic_handler::{closure#0}, !>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/sys/backtrace.rs:182:18
+  14:        0x102730d54 - __rustc[38dafaa32e25e62e]::rust_begin_unwind
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:689:5
+  15:        0x1027688b8 - core[d73c09da13b2be7a]::panicking::panic_nounwind_fmt::runtime
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/panicking.rs:122:22
+  16:        0x1027688b8 - core[d73c09da13b2be7a]::panicking::panic_nounwind_fmt
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/intrinsics/mod.rs:2448:9
+  17:        0x102768840 - core[d73c09da13b2be7a]::panicking::panic_nounwind
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/panicking.rs:225:5
+  18:        0x102768994 - core[d73c09da13b2be7a]::panicking::panic_cannot_unwind
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/panicking.rs:337:5
+  19:        0x1026de4b8 - panic_utf8
+                               at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/cargo-cache/registry/src/index.crates.io-1949cf8c6b5b557f/near-sdk-4.0.0-pre.4/src/environment/mock/mocked_blockchain.rs:204:5
+  20:        0x1026e8df0 - near_sdk::environment::env::panic_str::hdb21d15cef0aa6e8
+                               at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/cargo-cache/registry/src/index.crates.io-1949cf8c6b5b557f/near-sdk-4.0.0-pre.4/src/environment/env.rs:486:14
+  21:        0x102694b50 - multisig2::assert::he8787b04e32aeead
+                               at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/native-contract/src/lib.rs:138:9
+  22:        0x102693188 - multisig2::MultiSigContract::delete_request::ha143a3e8d5601d97
+                               at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/native-contract/src/lib.rs:217:9
+  23:        0x1026a451c - multisig2::tests::test_delete_request_panic_wrong_key::h301b99b16cff2973
+                               at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/native-contract/src/lib.rs:847:11
+  24:        0x10268e84c - multisig2::tests::test_delete_request_panic_wrong_key::{{closure}}::hc7f6738b475b400c
+                               at /Users/runner/work/oath-wallet-security-review/oath-wallet-security-review/.work/native-contract/src/lib.rs:830:45
+  25:        0x10268919c - core::ops::function::FnOnce::call_once::he53fe56dd510a734
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/ops/function.rs:250:5
+  26:        0x1026a5fdc - <fn() -> core[d73c09da13b2be7a]::result::Result<(), alloc[9e718a9324190137]::string::String> as core[d73c09da13b2be7a]::ops::function::FnOnce<()>>::call_once
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/ops/function.rs:250:5
+  27:        0x1026a5fdc - test[26aa0a2bdf09ed7b]::__rust_begin_short_backtrace::<core[d73c09da13b2be7a]::result::Result<(), alloc[9e718a9324190137]::string::String>, fn() -> core[d73c09da13b2be7a]::result::Result<(), alloc[9e718a9324190137]::string::String>>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/test/src/lib.rs:663:18
+  28:        0x1026b0204 - test[26aa0a2bdf09ed7b]::run_test_in_process::{closure#0}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/test/src/lib.rs:686:74
+  29:        0x1026b0204 - <core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<test[26aa0a2bdf09ed7b]::run_test_in_process::{closure#0}> as core[d73c09da13b2be7a]::ops::function::FnOnce<()>>::call_once
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/panic/unwind_safe.rs:275:9
+  30:        0x1026b0204 - std[93770f9ee7fea9f3]::panicking::catch_unwind::do_call::<core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<test[26aa0a2bdf09ed7b]::run_test_in_process::{closure#0}>, core[d73c09da13b2be7a]::result::Result<(), alloc[9e718a9324190137]::string::String>>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:581:40
+  31:        0x1026b0204 - std[93770f9ee7fea9f3]::panicking::catch_unwind::<core[d73c09da13b2be7a]::result::Result<(), alloc[9e718a9324190137]::string::String>, core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<test[26aa0a2bdf09ed7b]::run_test_in_process::{closure#0}>>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:544:19
+  32:        0x1026b0204 - std[93770f9ee7fea9f3]::panic::catch_unwind::<core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<test[26aa0a2bdf09ed7b]::run_test_in_process::{closure#0}>, core[d73c09da13b2be7a]::result::Result<(), alloc[9e718a9324190137]::string::String>>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panic.rs:359:14
+  33:        0x1026b0204 - test[26aa0a2bdf09ed7b]::run_test_in_process
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/test/src/lib.rs:686:27
+  34:        0x1026b0204 - test[26aa0a2bdf09ed7b]::run_test::{closure#0}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/test/src/lib.rs:607:43
+  35:        0x1026abc48 - test[26aa0a2bdf09ed7b]::run_test::{closure#1}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/test/src/lib.rs:637:41
+  36:        0x1026abc48 - std[93770f9ee7fea9f3]::sys::backtrace::__rust_begin_short_backtrace::<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/sys/backtrace.rs:166:18
+  37:        0x1026b24dc - std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked::<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/thread/lifecycle.rs:91:13
+  38:        0x1026b24dc - <core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}> as core[d73c09da13b2be7a]::ops::function::FnOnce<()>>::call_once
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/panic/unwind_safe.rs:275:9
+  39:        0x1026b24dc - std[93770f9ee7fea9f3]::panicking::catch_unwind::do_call::<core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}>, ()>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:581:40
+  40:        0x1026b24dc - std[93770f9ee7fea9f3]::panicking::catch_unwind::<(), core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}>>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panicking.rs:544:19
+  41:        0x1026b24dc - std[93770f9ee7fea9f3]::panic::catch_unwind::<core[d73c09da13b2be7a]::panic::unwind_safe::AssertUnwindSafe<std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1}::{closure#0}>, ()>
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/panic.rs:359:14
+  42:        0x1026b24dc - std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked::<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/thread/lifecycle.rs:89:26
+  43:        0x1026b24dc - <std[93770f9ee7fea9f3]::thread::lifecycle::spawn_unchecked<test[26aa0a2bdf09ed7b]::run_test::{closure#1}, ()>::{closure#1} as core[d73c09da13b2be7a]::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/core/src/ops/function.rs:250:5
+  44:        0x1027486d4 - <alloc[9e718a9324190137]::boxed::Box<dyn core[d73c09da13b2be7a]::ops::function::FnOnce<(), Output = ()> + core[d73c09da13b2be7a]::marker::Send> as core[d73c09da13b2be7a]::ops::function::FnOnce<()>>::call_once
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/alloc/src/boxed.rs:2249:9
+  45:        0x1027486d4 - <std[93770f9ee7fea9f3]::sys::thread::unix::Thread>::new::thread_start
+                               at /rustc/31fca3adb283cc9dfd56b49cdee9a96eb9c96ffd/library/std/src/sys/thread/unix.rs:118:17
+  46:        0x18bf41d00 - __pthread_exit
+thread caused non-unwinding panic. aborting.

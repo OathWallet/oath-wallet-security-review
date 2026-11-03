@@ -4004,5 +4004,13 @@
     "adapted_manifest": true,
     "wasm_execution_verified": false,
     "membership_change_semantics": "Characterized in native source; impact remains open."
+  },
+  "native_mock_unwind_replay": {
+    "evidence": "evidence/5.0.2-build104/near-contract-unwind/manifest.json",
+    "valid_passes": 18,
+    "invalid_inherited_fixture_passes": 2,
+    "sdk_modifications": "Two native panic ABI boundaries only; contract unchanged.",
+    "wasm_execution_verified": false,
+    "source_to_binary_rebuild_verified": false
   }
 }

@@ -140,3 +140,18 @@ GitHub run 41609444047 independently passed ten app multisig methods and four
 upstream-copy checks; its downloaded artifact and case logs are verified.
 [Native evidence, reproduction and remaining scope](NEAR-CONTRACT-NATIVE.md).
 No application, device, simulator or App Store changes occurred.
+
+## Checkpoint 9 — Native mock rejection repair
+
+The identical 20-method source fixture records nine valid passes, ten SDK abort
+blockers and one invalid inherited fixture pass before; eighteen valid passes
+and two invalid inherited fixture passes after. The repair changes only the
+native SDK mock panic ABI and its declaration. Two misleading inherited tests
+remain excluded, with correctly targeted companion rejection tests added.
+A one-line member-admission mutation causes exactly four failures.
+The independent signing-vector GitHub run 41611022824 and its five verifier
+controls passed; downloaded hashes are verified. The native workflow's first
+compiler-version failure is retained and explicit toolchain installation added.
+[Reproduction and limits](NEAR-CONTRACT-REJECTIONS.md). Shipped-WASM execution,
+source-to-binary reproduction and whole-wallet coverage remain unverified.
+No application or App Store operation changed.

@@ -3,7 +3,7 @@
   "status": "failed-before-contract-tests",
   "cause": "Runner default Rust/Cargo 1.99.1 differs from the required 1.96.1; driver correctly rejected it.",
   "repair": "Install 1.96.1 and expose its absolute compiler bin directory before executing the existing unchanged driver.",
-  "retest": "pending",
+  "retest": "verified: run 41614094759 reproduced the original native dispositions after installing Rust/Cargo 1.96.1",
   "files": [
     {
       "path": "complete-job.log",
@@ -17,5 +17,6 @@
       "path": "failed.log",
       "sha256": "294c86e30f7bac6b150971b39c7d416c39825ebcc2baf05f7cd2a9fc26e2edd8"
     }
-  ]
+  ],
+  "retest_evidence": "evidence/5.0.2-build104/hosted-near-contract-native/manifest.json"
 }

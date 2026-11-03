@@ -1,0 +1,53 @@
+{
+  "upstream_commit": "1b0436c96379c63aee7d2429c6d5d24019031ab8",
+  "identical_contract_fixture_before_after": true,
+  "before": {
+    "passed": 9,
+    "blocked_sdk_abort": 10,
+    "invalid_fixture_pass": 1
+  },
+  "after": {
+    "passed": 18,
+    "invalid_fixture_pass": 2
+  },
+  "member_admission_mutant": {
+    "passed": 14,
+    "failed": 4,
+    "invalid_fixture_pass": 2
+  },
+  "wasm_execution_verified": false,
+  "production_app_changed": false,
+  "archive_files": 118,
+  "files": [
+    {
+      "path": "after-result.json",
+      "sha256": "4eae985eaca564505f034c53a6d690a82e4041c8bacfc6c39d0e11e4bb08c8a3"
+    },
+    {
+      "path": "before-result.json",
+      "sha256": "a58d965758622c7e41c7080f13b67d3dad83a495d941af678967ec65182799a5"
+    },
+    {
+      "path": "helper-tests.log",
+      "sha256": "0e034b32567852cc392d4ee95ef6d75d2dbdbe4dc0983362ebccc4c167cbaee6"
+    },
+    {
+      "path": "mutant-result.json",
+      "sha256": "825b7544853c526217efbca3dea111ec13697efcbe9e493a658102919fc76cd8"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "6bb758bfc8ac2fd349c8e29ae28c6127e5792eb96caf79aa90db665f2c1d159f"
+    },
+    {
+      "path": "secret-scan.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "secret-scan.log",
+      "sha256": "9cd1d98a160d8d5b54b3420687dcb8d61cb4fde8ef98fbd76116e10db51925ae"
+    }
+  ],
+  "helper_tests_passed": 362,
+  "secret_scan": "No leaks in staged-source candidate and recursively expanded evidence archives; final helper-only hash validation assertions added afterward."
+}
