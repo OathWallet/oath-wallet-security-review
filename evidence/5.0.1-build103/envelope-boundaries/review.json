@@ -1,0 +1,26 @@
+{
+  "tested_source": "235a730de504e47fb961c34f68f9426ffdbdfe6d",
+  "baseline": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "envelope_source_unchanged_between_revisions": true,
+  "cases_per_revision": 10,
+  "result": "20 passed; no confirmed defect",
+  "scope": "Host boundary behavior and source trace only; no UI, device or live relay",
+  "source_hashes": {
+    "Vendor/Reown/Sources/WalletConnectSign/Types/Session/WCSession.swift": "1988d1c3ad498dc3cba3315706491d3fe38f8671847fdf2f61d101f8601aa8f9",
+    "Vendor/Reown/Sources/WalletConnectSign/Types/Common/Participant.swift": "6dcda5aa69b9f366fbe4e302155fe3eeea1d2bdc49b6615324858a18d14cc801",
+    "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/ApproveEngine.swift": "2abedd0d53e9526fbbb9f15ff27063f76c5d4512b51b573914f54623e0c24274",
+    "Vendor/Reown/Sources/WalletConnectKMS/Serialiser/Envelope.swift": "fd92534bffbdab81161e20102bed3a6be5eac284804c240925a7c4b04a2f46f5",
+    "Vendor/Reown/Sources/WalletConnectNetworking/NetworkingInteractor.swift": "e97454d8915dae9ef741fb083c794ad166901e87e3dcb97ae4d1933757db30f6",
+    "Vendor/Reown/Sources/WalletConnectSign/Auth/Link/LinkEnvelopesDispatcher.swift": "544baddd43e86e4c17fe9f122455b0503eb15c3998037eaa85bc3c87656f66a8"
+  },
+  "note": "before/after stage names are inherited from the replay format. There is no envelope implementation fix between them. A provisional one-line source change was discarded; no application change was published.",
+  "audit_helpers": {
+    "passed": 228,
+    "log": "audit-tests.log.gz",
+    "raw_sha256": "927c17cb298f398a50064f1b22de0db9cff57c67ed017d4b63109ff1a86a5539"
+  },
+  "publication_scan": {
+    "passed": true,
+    "exceptions": "Only the independently recomputed source digests from key-hex/publication-checksums.json and ci-checkpoint5-checksum-review.json"
+  }
+}
