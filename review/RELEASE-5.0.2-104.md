@@ -51,9 +51,13 @@ On `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`:
 [Compiled inputs](../evidence/5.0.2-build104/compiler/release-inputs.json) ·
 [Compiled-input dispositions](../evidence/5.0.2-build104/compiler/dispositions.json).
 
-The compiler ledger has 227 reviewed, 122 partially reviewed, 1,529 outstanding,
+The compiler ledger has 227 reviewed, 126 partially reviewed, 1,525 outstanding,
 460 generated-and-verified and 20 generated inputs needing trace. These reflect
 exact hash matches and reopened changed files, not a completed audit.
+
+The four additional partial entries are the [chain wallet adapters](CHAIN-WALLET-ADAPTERS.md).
+[Coverage reconciliation](COMPILER-DISPOSITION-RECONCILIATION.md) preserves 16
+previously documented partial compiler dispositions in the canonical inventory.
 
 ## Checkpoint 2 — later public repair
 

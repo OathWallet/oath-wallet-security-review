@@ -1,0 +1,38 @@
+.....................................................F................Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpmkx79yk_/workspace/.source-download-s0wvvxkx/source'...
+done.
+fatal: unable to read tree (0000000000000000000000000000000000000000)
+.Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmplgj3xz_y/workspace/.source-download-0y6dwzoe/source'...
+done.
+HEAD is now at 249dd23 synthetic source
+.Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpwy8co0gq/workspace/.source-download-djmah0eb/source'...
+done.
+HEAD is now at d605e52 synthetic source
+..Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpfkvpz23o/workspace/.source-download-kses9xqn/source'...
+done.
+HEAD is now at d605e52 synthetic source
+.Source download attempt 1 failed; retrying in a fresh directory.
+Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpi_9_m4pt/workspace/.source-download-1vmv7o0e/source'...
+done.
+HEAD is now at d605e52 synthetic source
+.Source download attempt 1 failed; retrying in a fresh directory.
+Source download attempt 2 failed; retrying in a fresh directory.
+..Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpz1b2cx85/workspace/.source-download-do9s2e64/source'...
+done.
+HEAD is now at d605e52 synthetic source
+...............................................................................................................................................................................................................................................................
+======================================================================
+FAIL: test_compiler_trace_matches_current_target_and_scoped_hashes (test_build104_transition.Build104Transition.test_compiler_trace_matches_current_target_and_scoped_hashes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/thuglifex/Developer/OathSecurityReview/tests/test_build104_transition.py", line 28, in test_compiler_trace_matches_current_target_and_scoped_hashes
+    self.assertEqual(coverage['trace_manifest_sha256'],hashlib.sha256((R/(p+'release-inputs.json')).read_bytes()).hexdigest())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '3c5eb3ca5b263560ab6aeb1d8ba95bf3ab10f53fe99705190d393d077f22448b' != 'e98408b03dc8fb2bd103d1dab24965db4c10d5fd92b48235471c56d640829c26'
+- 3c5eb3ca5b263560ab6aeb1d8ba95bf3ab10f53fe99705190d393d077f22448b
++ e98408b03dc8fb2bd103d1dab24965db4c10d5fd92b48235471c56d640829c26
+
+
+----------------------------------------------------------------------
+Ran 333 tests in 10.594s
+
+FAILED (failures=1)

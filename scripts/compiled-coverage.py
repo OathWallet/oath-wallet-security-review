@@ -34,7 +34,9 @@ def join(inputs, app, packages, artwork):
             if disposition['sha256']!=source['sha256']:
                 raise ValueError('Stale review disposition for '+path)
             status=disposition['status']
-        results.append(dict(source,review_status=status,additional_review=status not in CLOSED))
+        results.append(dict(source,review_status=status,
+                            evidence=list(disposition.get('evidence', [])) if disposition else [],
+                            additional_review=status not in CLOSED))
     return results
 
 def main():
@@ -49,7 +51,7 @@ def main():
     rows=join(trace,*ledgers)
     counts=Counter(row['review_status'] for row in rows)
     open_targets=Counter(t for row in rows if row['additional_review'] for t in row['targets'])
-    output=dict(source_commit=trace['source_commit'],trace_manifest_sha256=trace['manifest_sha256'],input_count=len(rows),status_counts=dict(counts),
+    output=dict(source_commit=trace['source_commit'],trace_manifest_sha256=hashlib.sha256(args.trace.read_bytes()).hexdigest(),input_count=len(rows),status_counts=dict(counts),
                 open_input_counts_by_target=dict(open_targets.most_common()),files=rows,
                 scope='Direct source and header inputs of the selected unsigned iOS build. Excludes prebuilt libraries, runtime-loaded assets and build tools. No review status is changed by this join.')
     args.output.parent.mkdir(parents=True,exist_ok=True)

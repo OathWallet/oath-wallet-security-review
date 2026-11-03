@@ -55,6 +55,8 @@ The following checkpoints are historical evidence with their original pins.
 
 **Build 103 checkpoint 3.** Synthetic authenticated vault and SQLite records reproduced three integer overflows. Public source repairs passed the focused tests, full database package and unsigned iOS builds. [Vault finding](../findings/OW-2026-047.md) · [Database finding](../findings/OW-2026-048.md) · [Exact-target CI evidence](../evidence/5.0.1-build103/ci-artifacts-checkpoint3.json).
 
+Four chain wallet adapters now have hash-bound partial source coverage. The compiler ledger is reproducible from the canonical inventory, including 16 preserved historical partial dispositions. [Read scope and remaining work](CHAIN-WALLET-ADAPTERS.md) · [Coverage reconciliation](COMPILER-DISPOSITION-RECONCILIATION.md). This does not close the whole-wallet review.
+
 ## Historical 4.1.15 series
 
 The original baseline was `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Its last review target was `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`. The dated entries below describe that earlier work.

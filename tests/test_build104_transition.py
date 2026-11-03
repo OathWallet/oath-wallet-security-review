@@ -13,7 +13,8 @@ class Build104Transition(unittest.TestCase):
         self.assertFalse(now['app_store_upload_performed'])
     def test_inherited_decisions_require_identical_bytes(self):
         old=read('scope/history/5.0.1-build103/dispositions.json');new=read('review/dispositions.json')
-        for name,value in new.items():self.assertEqual(value,old[name],name)
+        for name,value in new.items():
+            if name in old:self.assertEqual(value,old[name],name)
         ledger={x['path']:x for x in read('scope/inventory.json')['files']}
         for name,value in new.items():self.assertEqual(value['sha256'],ledger[name]['sha256'])
         transition=read('evidence/5.0.2-build104/target-transition.json')
