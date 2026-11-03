@@ -38,3 +38,10 @@ The unchanged baseline keeps it counted in the gate: **16,599 open entries**.
 Direct compiler coverage remains 244 reviewed, 135 partial, 1,498 outstanding,
 460 generated-and-verified and 20 needing trace. These are coverage/validation
 entries, not vulnerability counts. No App Store availability claim is made.
+
+Checkpoint 18: byte-identical XRP codec reproduction closes its generated-asset
+trace. Adding its previously unenumerated upstream closure increases the combined
+gate to **16,768 open entries**. The 170 upstream input files remain outstanding.
+Direct compiler inputs: 244 reviewed, 137 partial, 1,496 outstanding,
+460 generated-and-verified and 20 needing trace. JavaScript assets are outside
+that direct Swift/C compiler trace. No overall completion claim is made.

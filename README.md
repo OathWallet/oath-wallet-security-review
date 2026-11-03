@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Checkpoint 18.** The shipped XRP JavaScript codec rebuilds byte-for-byte from its locked source. Six new actual-package request/signature boundary methods pass, including the isolated network-denied replay. The newly enumerated 170 upstream input files remain explicitly outstanding; a matching bundle does not certify their implementations. [Evidence and scope](review/XRPL-CODEC-BOUNDARIES.md).
+
 **Checkpoint 17.** XRP Connect simulation validation is repaired in [PR #75](https://github.com/devdasx/oath-wallet/pull/75): eight assertions fail across two methods before; all six provider methods pass afterward. Broader XRP tests, diagnostics and unsigned iOS Release compilation pass. The earlier signing matrix also passes on GitHub with verified archive hashes. [Evidence and limits](review/XRPL-CONNECT-SIMULATION.md). The full review remains incomplete.
 
 **Checkpoint 16.** Four offline production-package methods pass: 61 complete XRP signed transactions and hashes match the independent pinned SDK, 13 RIPEMD vectors match OpenSSL-backed results, and altered plans/envelopes/signer sets are rejected. Five source files gain partial coverage. No new application defect is confirmed by this matrix. [Scope, reproduction and remaining provider hypothesis](review/XRPL-SIGNING-MATRIX.md).

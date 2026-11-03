@@ -1,0 +1,226 @@
+{
+  "source_commit": "8a31eb265c34ef7f37ba21741201842366d43b7b",
+  "baseline_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "source_bindings": {
+    "Packages/OathAnkr/Sources/OathAnkr/Resources/XrplCodec.js": {
+      "sha256": "77cb450cf20bbd0ec5b2a0c425244bd0607fc18b6ecf9ecc01ea26aadd52681b",
+      "baseline_matches_tested": true,
+      "status": "generated-verified"
+    },
+    "Packages/OathAnkr/Sources/OathAnkr/WalletConnectXrpl.swift": {
+      "sha256": "a6273fff296377fe3ee06304721292b6a92b72c8f7775a7f71b9fcd36d10ed02",
+      "baseline_matches_tested": true,
+      "status": "partially-reviewed"
+    },
+    "Packages/OathDatabase/Sources/OathDatabase/WalletConnectXrplJournal.swift": {
+      "sha256": "dcc2afaad149437320c8c1247cedd4506192ab8e4698fe9761acc966384d0aa9",
+      "baseline_matches_tested": true,
+      "status": "partially-reviewed"
+    },
+    "Tools/WalletConnectXrplCodec/index.js": {
+      "sha256": "8bd5acd8fde37610c0f6d8dd0ed8a92ff4facc9a7b74285f5e07c50672f228b7",
+      "baseline_matches_tested": true,
+      "status": "partially-reviewed"
+    }
+  },
+  "methods_passed": 6,
+  "production_changes": false,
+  "bundle_byte_identical": true,
+  "compiler_inputs": 171,
+  "upstream_inputs": 170,
+  "upstream_packages": 11,
+  "files": {
+    "boundary/OathAnkr-cases/334ddf2b1fbbddf4.log.gz": {
+      "sha256": "314276f11bc3421fb1014daca8d5722ca5c24a52b1618524c3ad3c5e1f5ffd6f",
+      "uncompressed_sha256": "3121f1f75072e5e659744d15fa089ae8188636ad82afbab0b26a257d41ab3c42",
+      "bytes": 275
+    },
+    "boundary/OathAnkr-cases/3b9cf08a70e40061.log.gz": {
+      "sha256": "0997c95b893e5cfeec3fca221baa48f99243d62e0b6d61af86461c1a5c23276a",
+      "uncompressed_sha256": "296bb3bb036dae91c0ecaad9a5e4f92268a4c62b2659b0cf2fabeae25a43b2b7",
+      "bytes": 288
+    },
+    "boundary/OathAnkr-cases/7cea431d397c5950.log.gz": {
+      "sha256": "67396ccfe8a2900d4ff36a7705d9da9c587c2a3b0ca83c0b6b1228e886f2d177",
+      "uncompressed_sha256": "cc57c19c4b706749cef9fb18fd6f0f555a0604da363a5089164823b338b9a008",
+      "bytes": 286
+    },
+    "boundary/OathAnkr-cases/8c6c4336ed2d7f27.log.gz": {
+      "sha256": "68164aa29072674ae4b5612b32639f1f23d3e9a11c736dfb644304d8b3bb1646",
+      "uncompressed_sha256": "399098adf9d809e140a1cb9f3a2a1e3341cefb8fef5d88158a049c9bc09ec239",
+      "bytes": 269
+    },
+    "boundary/OathAnkr-cases/92c9c7f50b7fa638.log.gz": {
+      "sha256": "14b1aa83be34d6073c4117751a460be198c6a1c5047e7b0c2ab3906ba7679929",
+      "uncompressed_sha256": "a096f53f2ecc4bb7b6f58f55d310472ab00698bd91ff0dad6b2011a934c835ea",
+      "bytes": 271
+    },
+    "boundary/OathAnkr-cases/e01a8ecda4df9859.log.gz": {
+      "sha256": "3c100ed484a53fc4dd77a3781efa5feb8f1b256302a0a2b78d03b40d29ba703c",
+      "uncompressed_sha256": "3f0d0f27fe18e72e7ea1f8f6aabf17285dace6cb76953041bc3d17dfe616f74d",
+      "bytes": 271
+    },
+    "boundary/OathAnkr-cases.json": {
+      "sha256": "7fe8cee42b23eecfc952e5040729374d119a47310471445bfc029dd2677d6ebd",
+      "uncompressed_sha256": "7fe8cee42b23eecfc952e5040729374d119a47310471445bfc029dd2677d6ebd",
+      "bytes": 1940
+    },
+    "boundary/OathAnkr-swift-testing.log.gz": {
+      "sha256": "5b9893a0b1b51e3f7840bc072b9cf09f2fc561029d160021f2ca09a136d4536f",
+      "uncompressed_sha256": "139fb31392bde92faf8ffac6705d27a78affe498e9f5da8e94c03e7d6a798527",
+      "bytes": 216
+    },
+    "boundary/OathAnkr-swift-testing.xml": {
+      "sha256": "7acc2d7bbbac90fa45c13883cd0d0cdc14389c5580d99131ab817db3f61425a7",
+      "uncompressed_sha256": "7acc2d7bbbac90fa45c13883cd0d0cdc14389c5580d99131ab817db3f61425a7",
+      "bytes": 177
+    },
+    "boundary/OathAnkr.xml": {
+      "sha256": "0744aed98d3f0c0eba9511736065b79f88d9ebe4c167d470919f23d2795d9de8",
+      "uncompressed_sha256": "0744aed98d3f0c0eba9511736065b79f88d9ebe4c167d470919f23d2795d9de8",
+      "bytes": 886
+    },
+    "replay/build.log.gz": {
+      "sha256": "166f104c24f5f9ce86e096cc0bf717d739c3081fa89978a09b954c8f33158542",
+      "uncompressed_sha256": "d7668517bebcc8b28b399f6d3f2e1ec596783165f1a9d3bc27df0eee1a540426",
+      "bytes": 13410
+    },
+    "replay/checkout.log.gz": {
+      "sha256": "8d801555ce07cd8acd8593964ef5db8cffb7346e24bca2be179adb8c623f589a",
+      "uncompressed_sha256": "3f935839b235a206b4a59c6cb125923ad1c62ccaeee793536ae87155ef69c19a",
+      "bytes": 94
+    },
+    "replay/clone.log.gz": {
+      "sha256": "8192d371edc2c35e8094f7925026726e1008facf0ca119391f92c32c00b01fac",
+      "uncompressed_sha256": "80b495cf080fa1000baf8bebd3d751e21283e25757e2c9b923219463033b3171",
+      "bytes": 121
+    },
+    "replay/result.json": {
+      "sha256": "74310f38bb92891e810e22322551b50cc09ab4a87abf81ee583157bb90714ca6",
+      "uncompressed_sha256": "74310f38bb92891e810e22322551b50cc09ab4a87abf81ee583157bb90714ca6",
+      "bytes": 2045
+    },
+    "replay/testAuthorityAndChainBoundaries.log.gz": {
+      "sha256": "ebbf9202320bc3afe4281c5bda368781a7a7db726eb0e11d2f6d7c73f27481ca",
+      "uncompressed_sha256": "bafbe4949dc0647df763beca2b5d684f0bd8592460e044e5991e177bec570b54",
+      "bytes": 272
+    },
+    "replay/testDuplicateAndResourceBounds.log.gz": {
+      "sha256": "af428924c6e508153b29e5ea53e995b9da1b797bba5f41944ec9b059d686ac0b",
+      "uncompressed_sha256": "a3d1b972e42618a68a53fe7f09fa3060ffb02f767264a3c26d8389272820f710",
+      "bytes": 270
+    },
+    "replay/testMemoUnknownFieldsAndNumericRoundTrip.log.gz": {
+      "sha256": "4bc002c8b219b1c2c1ae3b45174bbd4d84614007a3eba70c74dd51ca5635a456",
+      "uncompressed_sha256": "c15ba877d33c77588b3bcca71364c5a0a617e7d1fe39784962cddf49b7cea652",
+      "bytes": 284
+    },
+    "replay/testMultisignOrderingAndPriorSignatureTamper.log.gz": {
+      "sha256": "0b0f63ff23dca93ece496121b7832d101983ff46247172e642525876f902434a",
+      "uncompressed_sha256": "9b3efccec976f08f502650f79490f25ac59b4585fdb6f852b75155d22d3f2d37",
+      "bytes": 287
+    },
+    "replay/testReviewMutationAndTimeBoundaries.log.gz": {
+      "sha256": "367ce77e8e729e4322137fcb0aa53e17295c0c86eab7c5b267f566e51af82b62",
+      "uncompressed_sha256": "71a945cca66b39ae75b8ee65680b1e62de6a592df42f58ab49fe727a6f3d9f7e",
+      "bytes": 279
+    },
+    "replay/testSignedPayloadTampering.log.gz": {
+      "sha256": "b407d10cc34405eb91494d64b65c4fb645fd346822a29283d4062a05033a6e66",
+      "uncompressed_sha256": "86955deb5c8a47c5e2096685a2b71cd3e5c92ca348373dd5beae0ef5fd7eb0ed",
+      "bytes": 270
+    },
+    "provenance-final/XrplCodec.js.gz": {
+      "sha256": "5049eabb1cf63ea8e73bed550f09d4bcdb992b3d9cb5a3a906dcf13ee27f50f4",
+      "uncompressed_sha256": "77cb450cf20bbd0ec5b2a0c425244bd0607fc18b6ecf9ecc01ea26aadd52681b",
+      "bytes": 111449
+    },
+    "provenance-final/build.log.gz": {
+      "sha256": "b822e80067be4eddaee297fd509f9b949c93a22ff87b34a6e1ea06521b606187",
+      "uncompressed_sha256": "8cb36bbfe98e16fc86a77506ecd4d8efdd196c9144d7e86b2156806c2ae7ace7",
+      "bytes": 85
+    },
+    "provenance-final/meta.json": {
+      "sha256": "a7667338cbe1bfcdfbe8827fe75e07890a1e6fe1ead0d88ad4ef3d428a359303",
+      "uncompressed_sha256": "a7667338cbe1bfcdfbe8827fe75e07890a1e6fe1ead0d88ad4ef3d428a359303",
+      "bytes": 133988
+    },
+    "provenance-final/npm.log.gz": {
+      "sha256": "554c0f8dcb51b7e378f5114d92a525aa595c9426f4b550e71782da02897928c8",
+      "uncompressed_sha256": "d8006b63ed86e079ee694a700c65fee7b61273476e80262561e7703263fb90d1",
+      "bytes": 48
+    },
+    "provenance-final/result.json": {
+      "sha256": "83bcc022cb46c54077a8a6287a5062b9a0cefcd0a36ed7700ecff384680352f7",
+      "uncompressed_sha256": "83bcc022cb46c54077a8a6287a5062b9a0cefcd0a36ed7700ecff384680352f7",
+      "bytes": 58103
+    },
+    "boundary.log.gz": {
+      "sha256": "25bf956b277b8cd27ef2d3d2645cb75eeec058819c85c309bc36c2fe204c799f",
+      "uncompressed_sha256": "f50c313e0539f15892cfedd82767fe89634b4a2354f27e54d3d41d5ed9a526be",
+      "bytes": 13305
+    },
+    "boundary-driver.json": {
+      "sha256": "1644cff25358f365b79d9e3bd93f254805691366277407eb3eab4f89efea34ad",
+      "uncompressed_sha256": "1644cff25358f365b79d9e3bd93f254805691366277407eb3eab4f89efea34ad",
+      "bytes": 188
+    },
+    "setup.log.gz": {
+      "sha256": "f0bfe53629654fc3d0dd130c40a4df264a26206c57832957dca6b32c49c5b448",
+      "uncompressed_sha256": "e3eccfbc4a97101f2fa937502ee077b37013eec29b063257a1e205bb23ce4d7c",
+      "bytes": 612
+    },
+    "npm-audit.json": {
+      "sha256": "9424fea8199b543498875844880706d0b48e083ffeb347028dae038a51de284c",
+      "uncompressed_sha256": "9424fea8199b543498875844880706d0b48e083ffeb347028dae038a51de284c",
+      "bytes": 362
+    },
+    "npm-audit-stderr.log.gz": {
+      "sha256": "4155d67b6e49e55262109071cf323f37065586276095ccce4c4c795b22d4a027",
+      "uncompressed_sha256": "e00f04f40e8fa05222de7bb913441aa655530ae17adae49c6b9465ec3307401a",
+      "bytes": 160
+    },
+    "initial.json": {
+      "sha256": "f886f99dbec21ac272edac2327b3dec85deb33156babdc1723d44d6c76a8fc22",
+      "uncompressed_sha256": "f886f99dbec21ac272edac2327b3dec85deb33156babdc1723d44d6c76a8fc22",
+      "bytes": 794
+    },
+    "provenance-driver.log.gz": {
+      "sha256": "fc48ecf0650c9a3f61b4bf958f895ddcf90f4c18b95a63f5c7f870529d8dbf9d",
+      "uncompressed_sha256": "e6a8522f001c8b8b7aee7c555e70470209d61c3269775399ba6407da91d38918",
+      "bytes": 75
+    },
+    "provenance-final-driver.log.gz": {
+      "sha256": "fc48ecf0650c9a3f61b4bf958f895ddcf90f4c18b95a63f5c7f870529d8dbf9d",
+      "uncompressed_sha256": "e6a8522f001c8b8b7aee7c555e70470209d61c3269775399ba6407da91d38918",
+      "bytes": 75
+    },
+    "replay-driver.log.gz": {
+      "sha256": "4311d455de13ab38931d3f95994206981dbca32083c94d0675737639459453bf",
+      "uncompressed_sha256": "ddbe636ba3aa1f4e1cc6c94c94890129285e0d0fb9f86dbf74927ecc7e2cc031",
+      "bytes": 196
+    },
+    "audit-helper.log.gz": {
+      "sha256": "7946ed720a4d2d3bc003307cbe798a8a76bd4a31f88c4e7783b7d8e9acaafac4",
+      "uncompressed_sha256": "b254d816e2b9d9b27b9014cff59dd26b7a7db3ff09c31264d60675877e081f17",
+      "bytes": 376
+    },
+    "scan.log.gz": {
+      "sha256": "4929a858bfdc46ed788e9ba9561f3897b2fe92aea355937906b23dbecadc01e8",
+      "uncompressed_sha256": "90a16f7471e7bcd95cc15785c908b16de5d53fad582fe2b6c08158debce13645",
+      "bytes": 127
+    },
+    "scan.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "uncompressed_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    }
+  },
+  "limits": [
+    "No manual-review completion for upstream closure",
+    "No full UI or live ledger validation",
+    "npm advisory result is point-in-time and not evidence of zero vulnerabilities",
+    "No iOS build rerun; prior checkpoint17 covers unchanged app commit"
+  ],
+  "publication_scan": "New and changed files plus expanded compressed logs/bundle; zero findings. Not a whole-history claim."
+}

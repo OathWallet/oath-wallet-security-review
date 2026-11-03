@@ -1,0 +1,4200 @@
+{
+  "inputs": {
+    "node_modules/fast-text-encoding/text.min.js": {
+      "bytes": 2862,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/enums/definitions.json": {
+      "bytes": 185401,
+      "imports": []
+    },
+    "node_modules/ripple-binary-codec/dist/enums/bytes.js": {
+      "bytes": 2216,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/@noble/hashes/utils.js": {
+      "bytes": 26035,
+      "imports": [],
+      "format": "esm"
+    },
+    "node_modules/@xrplf/isomorphic/dist/utils/shared.js": {
+      "bytes": 710,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "require-call",
+          "original": "@noble/hashes/utils.js"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@xrplf/isomorphic/dist/utils/browser.js": {
+      "bytes": 2406,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "require-call",
+          "original": "@noble/hashes/utils.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/shared.js",
+          "kind": "require-call",
+          "original": "./shared"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/shared.js",
+          "kind": "require-call",
+          "original": "./shared"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js": {
+      "bytes": 4330,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/serialized-type.js": {
+      "bytes": 3311,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-serializer"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/enums/constants.js": {
+      "bytes": 502,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/enums/field.js": {
+      "bytes": 1804,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/bytes.js",
+          "kind": "require-call",
+          "original": "./bytes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "../types/serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/constants.js",
+          "kind": "require-call",
+          "original": "./constants"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions-base.js": {
+      "bytes": 5279,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/bytes.js",
+          "kind": "require-call",
+          "original": "./bytes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/field.js",
+          "kind": "require-call",
+          "original": "./field"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/constants.js",
+          "kind": "require-call",
+          "original": "./constants"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/enums/index.js": {
+      "bytes": 1779,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/definitions.json",
+          "kind": "require-call",
+          "original": "./definitions.json"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions-base.js",
+          "kind": "require-call",
+          "original": "./xrpl-definitions-base"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@scure/base/index.js": {
+      "bytes": 49993,
+      "imports": [],
+      "format": "esm"
+    },
+    "node_modules/@noble/hashes/_u64.js": {
+      "bytes": 4794,
+      "imports": [],
+      "format": "esm"
+    },
+    "node_modules/@noble/hashes/_md.js": {
+      "bytes": 9175,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/_u64.js",
+          "kind": "import-statement",
+          "original": "./_u64.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/hashes/sha2.js": {
+      "bytes": 18997,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/_md.js",
+          "kind": "import-statement",
+          "original": "./_md.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/_u64.js",
+          "kind": "import-statement",
+          "original": "./_u64.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@xrplf/isomorphic/dist/internal/normalizeInput.js": {
+      "bytes": 607,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "require-call",
+          "original": "@noble/hashes/utils.js"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@xrplf/isomorphic/dist/internal/wrapNoble.js": {
+      "bytes": 958,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/internal/normalizeInput.js",
+          "kind": "require-call",
+          "original": "./normalizeInput"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@xrplf/isomorphic/dist/sha256/browser.js": {
+      "bytes": 521,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/sha2.js",
+          "kind": "require-call",
+          "original": "@noble/hashes/sha2.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/internal/wrapNoble.js",
+          "kind": "require-call",
+          "original": "../internal/wrapNoble"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-address-codec/dist/utils.js": {
+      "bytes": 1436,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-address-codec/dist/xrp-codec.js": {
+      "bytes": 7624,
+      "imports": [
+        {
+          "path": "node_modules/@scure/base/index.js",
+          "kind": "require-call",
+          "original": "@scure/base"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/sha256/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/sha256"
+        },
+        {
+          "path": "node_modules/ripple-address-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "./utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-address-codec/dist/index.js": {
+      "bytes": 5830,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-address-codec/dist/xrp-codec.js",
+          "kind": "require-call",
+          "original": "./xrp-codec"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/utils.js": {
+      "bytes": 6610,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/hash.js": {
+      "bytes": 2321,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/hash-160.js": {
+      "bytes": 617,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash.js",
+          "kind": "require-call",
+          "original": "./hash"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/account-id.js": {
+      "bytes": 2347,
+      "imports": [
+        {
+          "path": "node_modules/ripple-address-codec/dist/index.js",
+          "kind": "require-call",
+          "original": "ripple-address-codec"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-160.js",
+          "kind": "require-call",
+          "original": "./hash-160"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js": {
+      "bytes": 6081,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "../enums"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/currency.js": {
+      "bytes": 3535,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-160.js",
+          "kind": "require-call",
+          "original": "./hash-160"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/bignumber.js/dist/bignumber.cjs": {
+      "bytes": 83782,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/hash-192.js": {
+      "bytes": 617,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash.js",
+          "kind": "require-call",
+          "original": "./hash"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/amount.js": {
+      "bytes": 11402,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/account-id.js",
+          "kind": "require-call",
+          "original": "./account-id"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/currency.js",
+          "kind": "require-call",
+          "original": "./currency"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/bignumber.js/dist/bignumber.cjs",
+          "kind": "require-call",
+          "original": "bignumber.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-192.js",
+          "kind": "require-call",
+          "original": "./hash-192"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/blob.js": {
+      "bytes": 1343,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/hash-128.js": {
+      "bytes": 969,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash.js",
+          "kind": "require-call",
+          "original": "./hash"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/hash-256.js": {
+      "bytes": 477,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash.js",
+          "kind": "require-call",
+          "original": "./hash"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/int.js": {
+      "bytes": 1783,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/int-32.js": {
+      "bytes": 2156,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/int.js",
+          "kind": "require-call",
+          "original": "./int"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/issue.js": {
+      "bytes": 4859,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/account-id.js",
+          "kind": "require-call",
+          "original": "./account-id"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/currency.js",
+          "kind": "require-call",
+          "original": "./currency"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-192.js",
+          "kind": "require-call",
+          "original": "./hash-192"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/st-number.js": {
+      "bytes": 11378,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/path-set.js": {
+      "bytes": 7253,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/account-id.js",
+          "kind": "require-call",
+          "original": "./account-id"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/currency.js",
+          "kind": "require-call",
+          "original": "./currency"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/uint.js": {
+      "bytes": 1377,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/uint-64.js": {
+      "bytes": 3868,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint.js",
+          "kind": "require-call",
+          "original": "./uint"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "../enums"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/st-object.js": {
+      "bytes": 7120,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "../enums"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-address-codec/dist/index.js",
+          "kind": "require-call",
+          "original": "ripple-address-codec"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-serializer"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/st-array.js",
+          "kind": "require-call",
+          "original": "./st-array"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-64.js",
+          "kind": "require-call",
+          "original": "./uint-64"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/st-array.js": {
+      "bytes": 3138,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "../enums"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/st-object.js",
+          "kind": "require-call",
+          "original": "./st-object"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/signed-amount.js": {
+      "bytes": 3756,
+      "imports": [
+        {
+          "path": "node_modules/bignumber.js/dist/bignumber.cjs",
+          "kind": "require-call",
+          "original": "bignumber.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/amount.js",
+          "kind": "require-call",
+          "original": "./amount"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/uint-16.js": {
+      "bytes": 1400,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint.js",
+          "kind": "require-call",
+          "original": "./uint"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/uint-32.js": {
+      "bytes": 1588,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint.js",
+          "kind": "require-call",
+          "original": "./uint"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/uint-8.js": {
+      "bytes": 1422,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint.js",
+          "kind": "require-call",
+          "original": "./uint"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/vector-256.js": {
+      "bytes": 2498,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-256.js",
+          "kind": "require-call",
+          "original": "./hash-256"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-serializer"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/xchain-bridge.js": {
+      "bytes": 3496,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "../serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/account-id.js",
+          "kind": "require-call",
+          "original": "./account-id"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/serialized-type.js",
+          "kind": "require-call",
+          "original": "./serialized-type"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/issue.js",
+          "kind": "require-call",
+          "original": "./issue"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/types/index.js": {
+      "bytes": 4522,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/account-id.js",
+          "kind": "require-call",
+          "original": "./account-id"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/amount.js",
+          "kind": "require-call",
+          "original": "./amount"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/blob.js",
+          "kind": "require-call",
+          "original": "./blob"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/currency.js",
+          "kind": "require-call",
+          "original": "./currency"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-128.js",
+          "kind": "require-call",
+          "original": "./hash-128"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-160.js",
+          "kind": "require-call",
+          "original": "./hash-160"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-192.js",
+          "kind": "require-call",
+          "original": "./hash-192"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-256.js",
+          "kind": "require-call",
+          "original": "./hash-256"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/int-32.js",
+          "kind": "require-call",
+          "original": "./int-32"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/issue.js",
+          "kind": "require-call",
+          "original": "./issue"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/st-number.js",
+          "kind": "require-call",
+          "original": "./st-number"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/path-set.js",
+          "kind": "require-call",
+          "original": "./path-set"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/st-array.js",
+          "kind": "require-call",
+          "original": "./st-array"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/signed-amount.js",
+          "kind": "require-call",
+          "original": "./signed-amount"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/st-object.js",
+          "kind": "require-call",
+          "original": "./st-object"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-16.js",
+          "kind": "require-call",
+          "original": "./uint-16"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-32.js",
+          "kind": "require-call",
+          "original": "./uint-32"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-64.js",
+          "kind": "require-call",
+          "original": "./uint-64"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-8.js",
+          "kind": "require-call",
+          "original": "./uint-8"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/vector-256.js",
+          "kind": "require-call",
+          "original": "./vector-256"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/xchain-bridge.js",
+          "kind": "require-call",
+          "original": "./xchain-bridge"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "../enums"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/hash-prefixes.js": {
+      "bytes": 1796,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/utils.js",
+          "kind": "require-call",
+          "original": "./utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@xrplf/isomorphic/dist/sha512/browser.js": {
+      "bytes": 521,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/sha2.js",
+          "kind": "require-call",
+          "original": "@noble/hashes/sha2.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/internal/wrapNoble.js",
+          "kind": "require-call",
+          "original": "../internal/wrapNoble"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/hashes.js": {
+      "bytes": 2180,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hash-prefixes.js",
+          "kind": "require-call",
+          "original": "./hash-prefixes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "./types"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js",
+          "kind": "require-call",
+          "original": "./serdes/binary-serializer"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/sha512/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/sha512"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/binary.js": {
+      "bytes": 7964,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "./types"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "./serdes/binary-parser"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hash-prefixes.js",
+          "kind": "require-call",
+          "original": "./hash-prefixes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js",
+          "kind": "require-call",
+          "original": "./serdes/binary-serializer"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hashes.js",
+          "kind": "require-call",
+          "original": "./hashes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "./enums"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/shamap.js": {
+      "bytes": 4737,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "./types"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hash-prefixes.js",
+          "kind": "require-call",
+          "original": "./hash-prefixes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hashes.js",
+          "kind": "require-call",
+          "original": "./hashes"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/ledger-hashes.js": {
+      "bytes": 5108,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/shamap.js",
+          "kind": "require-call",
+          "original": "./shamap"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hash-prefixes.js",
+          "kind": "require-call",
+          "original": "./hash-prefixes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hashes.js",
+          "kind": "require-call",
+          "original": "./hashes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/binary.js",
+          "kind": "require-call",
+          "original": "./binary"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/hash-256.js",
+          "kind": "require-call",
+          "original": "./types/hash-256"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/st-object.js",
+          "kind": "require-call",
+          "original": "./types/st-object"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-64.js",
+          "kind": "require-call",
+          "original": "./types/uint-64"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-32.js",
+          "kind": "require-call",
+          "original": "./types/uint-32"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/uint-8.js",
+          "kind": "require-call",
+          "original": "./types/uint-8"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js",
+          "kind": "require-call",
+          "original": "./serdes/binary-parser"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/quality.js": {
+      "bytes": 1755,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "./types"
+        },
+        {
+          "path": "node_modules/bignumber.js/dist/bignumber.cjs",
+          "kind": "require-call",
+          "original": "bignumber.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/coretypes.js": {
+      "bytes": 2986,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "./enums"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "./types"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/binary.js",
+          "kind": "require-call",
+          "original": "./binary"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/shamap.js",
+          "kind": "require-call",
+          "original": "./shamap"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/ledger-hashes.js",
+          "kind": "require-call",
+          "original": "./ledger-hashes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hashes.js",
+          "kind": "require-call",
+          "original": "./hashes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/quality.js",
+          "kind": "require-call",
+          "original": "./quality"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/hash-prefixes.js",
+          "kind": "require-call",
+          "original": "./hash-prefixes"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions.js": {
+      "bytes": 1518,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions-base.js",
+          "kind": "require-call",
+          "original": "./xrpl-definitions-base"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "../types"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-binary-codec/dist/index.js": {
+      "bytes": 8663,
+      "imports": [
+        {
+          "path": "node_modules/ripple-binary-codec/dist/coretypes.js",
+          "kind": "require-call",
+          "original": "./coretypes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/ledger-hashes.js",
+          "kind": "require-call",
+          "original": "./ledger-hashes"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/index.js",
+          "kind": "require-call",
+          "original": "./enums"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions.js",
+          "kind": "require-call",
+          "original": "./enums/xrpl-definitions"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/types/index.js",
+          "kind": "require-call",
+          "original": "./types"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/errors.js": {
+      "bytes": 2148,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/ledger/AccountRoot.js": {
+      "bytes": 1828,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/ledger/MPTokenIssuance.js": {
+      "bytes": 2364,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/utils/index.js": {
+      "bytes": 946,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/common.js": {
+      "bytes": 21775,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-address-codec/dist/index.js",
+          "kind": "require-call",
+          "original": "ripple-address-codec"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/index.js",
+          "kind": "require-call",
+          "original": "ripple-binary-codec"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/accountSet.js": {
+      "bytes": 4593,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMClawback.js": {
+      "bytes": 1619,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMDeposit.js": {
+      "bytes": 2656,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMWithdraw.js": {
+      "bytes": 2614,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/batch.js": {
+      "bytes": 4226,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanManage.js": {
+      "bytes": 1672,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanPay.js": {
+      "bytes": 2080,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/MPTokenAuthorize.js": {
+      "bytes": 793,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/fast-json-stable-stringify/index.js": {
+      "bytes": 1845,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/utils/mptokenMetadata.js": {
+      "bytes": 14665,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/fast-json-stable-stringify/index.js",
+          "kind": "require-call",
+          "original": "fast-json-stable-stringify"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "../transactions/common"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "."
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceCreate.js": {
+      "bytes": 7292,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/mptokenMetadata.js",
+          "kind": "require-call",
+          "original": "../utils/mptokenMetadata"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceSet.js": {
+      "bytes": 6808,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/flags.js",
+          "kind": "require-call",
+          "original": "../utils/flags"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/mptokenMetadata.js",
+          "kind": "require-call",
+          "original": "../utils/mptokenMetadata"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceCreate.js",
+          "kind": "require-call",
+          "original": "./MPTokenIssuanceCreate"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/NFTokenCreateOffer.js": {
+      "bytes": 2684,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/NFTokenMint.js": {
+      "bytes": 2051,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/offerCreate.js": {
+      "bytes": 2261,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/payment.js": {
+      "bytes": 5842,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/paymentChannelClaim.js": {
+      "bytes": 1864,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/sponsorshipSet.js": {
+      "bytes": 8517,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/sponsorshipTransfer.js": {
+      "bytes": 5237,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/trustSet.js": {
+      "bytes": 1678,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/vaultCreate.js": {
+      "bytes": 6518,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/mptokenMetadata.js",
+          "kind": "require-call",
+          "original": "../utils/mptokenMetadata"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainModifyBridge.js": {
+      "bytes": 942,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/utils/flags.js": {
+      "bytes": 6801,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/ledger/AccountRoot.js",
+          "kind": "require-call",
+          "original": "../ledger/AccountRoot"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/ledger/MPTokenIssuance.js",
+          "kind": "require-call",
+          "original": "../ledger/MPTokenIssuance"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/accountSet.js",
+          "kind": "require-call",
+          "original": "../transactions/accountSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMClawback.js",
+          "kind": "require-call",
+          "original": "../transactions/AMMClawback"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMDeposit.js",
+          "kind": "require-call",
+          "original": "../transactions/AMMDeposit"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMWithdraw.js",
+          "kind": "require-call",
+          "original": "../transactions/AMMWithdraw"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/batch.js",
+          "kind": "require-call",
+          "original": "../transactions/batch"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "../transactions/common"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanManage.js",
+          "kind": "require-call",
+          "original": "../transactions/loanManage"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanPay.js",
+          "kind": "require-call",
+          "original": "../transactions/loanPay"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenAuthorize.js",
+          "kind": "require-call",
+          "original": "../transactions/MPTokenAuthorize"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceCreate.js",
+          "kind": "require-call",
+          "original": "../transactions/MPTokenIssuanceCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceSet.js",
+          "kind": "require-call",
+          "original": "../transactions/MPTokenIssuanceSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenCreateOffer.js",
+          "kind": "require-call",
+          "original": "../transactions/NFTokenCreateOffer"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenMint.js",
+          "kind": "require-call",
+          "original": "../transactions/NFTokenMint"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/offerCreate.js",
+          "kind": "require-call",
+          "original": "../transactions/offerCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/payment.js",
+          "kind": "require-call",
+          "original": "../transactions/payment"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/paymentChannelClaim.js",
+          "kind": "require-call",
+          "original": "../transactions/paymentChannelClaim"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/sponsorshipSet.js",
+          "kind": "require-call",
+          "original": "../transactions/sponsorshipSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/sponsorshipTransfer.js",
+          "kind": "require-call",
+          "original": "../transactions/sponsorshipTransfer"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/trustSet.js",
+          "kind": "require-call",
+          "original": "../transactions/trustSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultCreate.js",
+          "kind": "require-call",
+          "original": "../transactions/vaultCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainModifyBridge.js",
+          "kind": "require-call",
+          "original": "../transactions/XChainModifyBridge"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "."
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/accountDelete.js": {
+      "bytes": 623,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMBid.js": {
+      "bytes": 2549,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMCreate.js": {
+      "bytes": 1390,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMDelete.js": {
+      "bytes": 871,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/AMMVote.js": {
+      "bytes": 1362,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMCreate.js",
+          "kind": "require-call",
+          "original": "./AMMCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/checkCancel.js": {
+      "bytes": 521,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/checkCash.js": {
+      "bytes": 1200,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/checkCreate.js": {
+      "bytes": 1151,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/clawback.js": {
+      "bytes": 1339,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTClawback.js": {
+      "bytes": 1137,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTConvert.js": {
+      "bytes": 1914,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTConvertBack.js": {
+      "bytes": 1670,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTMergeInbox.js": {
+      "bytes": 716,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTSend.js": {
+      "bytes": 2138,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/CredentialAccept.js": {
+      "bytes": 547,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/CredentialCreate.js": {
+      "bytes": 1400,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/CredentialDelete.js": {
+      "bytes": 818,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/delegateSet.js": {
+      "bytes": 2362,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/depositPreauth.js": {
+      "bytes": 2029,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/DIDDelete.js": {
+      "bytes": 317,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/DIDSet.js": {
+      "bytes": 791,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/escrowCancel.js": {
+      "bytes": 819,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/escrowCreate.js": {
+      "bytes": 1504,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/escrowFinish.js": {
+      "bytes": 1291,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverClawback.js": {
+      "bytes": 1374,
+      "imports": [
+        {
+          "path": "node_modules/bignumber.js/dist/bignumber.cjs",
+          "kind": "require-call",
+          "original": "bignumber.js"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverDeposit.js": {
+      "bytes": 768,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverWithdraw.js": {
+      "bytes": 1060,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanBrokerDelete.js": {
+      "bytes": 658,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanBrokerSet.js": {
+      "bytes": 3480,
+      "imports": [
+        {
+          "path": "node_modules/bignumber.js/dist/bignumber.cjs",
+          "kind": "require-call",
+          "original": "bignumber.js"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanDelete.js": {
+      "bytes": 604,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/loanSet.js": {
+      "bytes": 4450,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceDestroy.js": {
+      "bytes": 467,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/NFTokenAcceptOffer.js": {
+      "bytes": 1302,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/NFTokenBurn.js": {
+      "bytes": 478,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/NFTokenCancelOffer.js": {
+      "bytes": 695,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/NFTokenModify.js": {
+      "bytes": 985,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/offerCancel.js": {
+      "bytes": 650,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/oracleDelete.js": {
+      "bytes": 416,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/oracleSet.js": {
+      "bytes": 4185,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/paymentChannelCreate.js": {
+      "bytes": 1585,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/paymentChannelFund.js": {
+      "bytes": 1107,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/permissionedDomainDelete.js": {
+      "bytes": 468,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/permissionedDomainSet.js": {
+      "bytes": 696,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/setRegularKey.js": {
+      "bytes": 551,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/signerListSet.js": {
+      "bytes": 1673,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/ticketCreate.js": {
+      "bytes": 918,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/vaultClawback.js": {
+      "bytes": 569,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/vaultDelete.js": {
+      "bytes": 1067,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/vaultDeposit.js": {
+      "bytes": 481,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/vaultSet.js": {
+      "bytes": 1194,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/index.js",
+          "kind": "require-call",
+          "original": "../utils"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/vaultWithdraw.js": {
+      "bytes": 772,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainAccountCreateCommit.js": {
+      "bytes": 720,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainAddAccountCreateAttestation.js": {
+      "bytes": 1428,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainAddClaimAttestation.js": {
+      "bytes": 1294,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainClaim.js": {
+      "bytes": 780,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainCommit.js": {
+      "bytes": 713,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainCreateBridge.js": {
+      "bytes": 621,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/XChainCreateClaimID.js": {
+      "bytes": 621,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/xrpl/dist/npm/models/transactions/transaction.js": {
+      "bytes": 14445,
+      "imports": [
+        {
+          "path": "node_modules/xrpl/dist/npm/errors.js",
+          "kind": "require-call",
+          "original": "../../errors"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/utils/flags.js",
+          "kind": "require-call",
+          "original": "../utils/flags"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/accountDelete.js",
+          "kind": "require-call",
+          "original": "./accountDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/accountSet.js",
+          "kind": "require-call",
+          "original": "./accountSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMBid.js",
+          "kind": "require-call",
+          "original": "./AMMBid"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMClawback.js",
+          "kind": "require-call",
+          "original": "./AMMClawback"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMCreate.js",
+          "kind": "require-call",
+          "original": "./AMMCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMDelete.js",
+          "kind": "require-call",
+          "original": "./AMMDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMDeposit.js",
+          "kind": "require-call",
+          "original": "./AMMDeposit"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMVote.js",
+          "kind": "require-call",
+          "original": "./AMMVote"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/AMMWithdraw.js",
+          "kind": "require-call",
+          "original": "./AMMWithdraw"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/batch.js",
+          "kind": "require-call",
+          "original": "./batch"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/checkCancel.js",
+          "kind": "require-call",
+          "original": "./checkCancel"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/checkCash.js",
+          "kind": "require-call",
+          "original": "./checkCash"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/checkCreate.js",
+          "kind": "require-call",
+          "original": "./checkCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/clawback.js",
+          "kind": "require-call",
+          "original": "./clawback"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/common.js",
+          "kind": "require-call",
+          "original": "./common"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTClawback.js",
+          "kind": "require-call",
+          "original": "./ConfidentialMPTClawback"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTConvert.js",
+          "kind": "require-call",
+          "original": "./ConfidentialMPTConvert"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTConvertBack.js",
+          "kind": "require-call",
+          "original": "./ConfidentialMPTConvertBack"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTMergeInbox.js",
+          "kind": "require-call",
+          "original": "./ConfidentialMPTMergeInbox"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTSend.js",
+          "kind": "require-call",
+          "original": "./ConfidentialMPTSend"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/CredentialAccept.js",
+          "kind": "require-call",
+          "original": "./CredentialAccept"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/CredentialCreate.js",
+          "kind": "require-call",
+          "original": "./CredentialCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/CredentialDelete.js",
+          "kind": "require-call",
+          "original": "./CredentialDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/delegateSet.js",
+          "kind": "require-call",
+          "original": "./delegateSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/depositPreauth.js",
+          "kind": "require-call",
+          "original": "./depositPreauth"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/DIDDelete.js",
+          "kind": "require-call",
+          "original": "./DIDDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/DIDSet.js",
+          "kind": "require-call",
+          "original": "./DIDSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/escrowCancel.js",
+          "kind": "require-call",
+          "original": "./escrowCancel"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/escrowCreate.js",
+          "kind": "require-call",
+          "original": "./escrowCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/escrowFinish.js",
+          "kind": "require-call",
+          "original": "./escrowFinish"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverClawback.js",
+          "kind": "require-call",
+          "original": "./loanBrokerCoverClawback"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverDeposit.js",
+          "kind": "require-call",
+          "original": "./loanBrokerCoverDeposit"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverWithdraw.js",
+          "kind": "require-call",
+          "original": "./loanBrokerCoverWithdraw"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanBrokerDelete.js",
+          "kind": "require-call",
+          "original": "./loanBrokerDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanBrokerSet.js",
+          "kind": "require-call",
+          "original": "./loanBrokerSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanDelete.js",
+          "kind": "require-call",
+          "original": "./loanDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanManage.js",
+          "kind": "require-call",
+          "original": "./loanManage"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanPay.js",
+          "kind": "require-call",
+          "original": "./loanPay"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/loanSet.js",
+          "kind": "require-call",
+          "original": "./loanSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenAuthorize.js",
+          "kind": "require-call",
+          "original": "./MPTokenAuthorize"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceCreate.js",
+          "kind": "require-call",
+          "original": "./MPTokenIssuanceCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceDestroy.js",
+          "kind": "require-call",
+          "original": "./MPTokenIssuanceDestroy"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceSet.js",
+          "kind": "require-call",
+          "original": "./MPTokenIssuanceSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenAcceptOffer.js",
+          "kind": "require-call",
+          "original": "./NFTokenAcceptOffer"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenBurn.js",
+          "kind": "require-call",
+          "original": "./NFTokenBurn"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenCancelOffer.js",
+          "kind": "require-call",
+          "original": "./NFTokenCancelOffer"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenCreateOffer.js",
+          "kind": "require-call",
+          "original": "./NFTokenCreateOffer"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenMint.js",
+          "kind": "require-call",
+          "original": "./NFTokenMint"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/NFTokenModify.js",
+          "kind": "require-call",
+          "original": "./NFTokenModify"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/offerCancel.js",
+          "kind": "require-call",
+          "original": "./offerCancel"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/offerCreate.js",
+          "kind": "require-call",
+          "original": "./offerCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/oracleDelete.js",
+          "kind": "require-call",
+          "original": "./oracleDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/oracleSet.js",
+          "kind": "require-call",
+          "original": "./oracleSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/payment.js",
+          "kind": "require-call",
+          "original": "./payment"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/paymentChannelClaim.js",
+          "kind": "require-call",
+          "original": "./paymentChannelClaim"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/paymentChannelCreate.js",
+          "kind": "require-call",
+          "original": "./paymentChannelCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/paymentChannelFund.js",
+          "kind": "require-call",
+          "original": "./paymentChannelFund"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/permissionedDomainDelete.js",
+          "kind": "require-call",
+          "original": "./permissionedDomainDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/permissionedDomainSet.js",
+          "kind": "require-call",
+          "original": "./permissionedDomainSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/setRegularKey.js",
+          "kind": "require-call",
+          "original": "./setRegularKey"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/signerListSet.js",
+          "kind": "require-call",
+          "original": "./signerListSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/sponsorshipSet.js",
+          "kind": "require-call",
+          "original": "./sponsorshipSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/sponsorshipTransfer.js",
+          "kind": "require-call",
+          "original": "./sponsorshipTransfer"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/ticketCreate.js",
+          "kind": "require-call",
+          "original": "./ticketCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/trustSet.js",
+          "kind": "require-call",
+          "original": "./trustSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultClawback.js",
+          "kind": "require-call",
+          "original": "./vaultClawback"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultCreate.js",
+          "kind": "require-call",
+          "original": "./vaultCreate"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultDelete.js",
+          "kind": "require-call",
+          "original": "./vaultDelete"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultDeposit.js",
+          "kind": "require-call",
+          "original": "./vaultDeposit"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultSet.js",
+          "kind": "require-call",
+          "original": "./vaultSet"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/vaultWithdraw.js",
+          "kind": "require-call",
+          "original": "./vaultWithdraw"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainAccountCreateCommit.js",
+          "kind": "require-call",
+          "original": "./XChainAccountCreateCommit"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainAddAccountCreateAttestation.js",
+          "kind": "require-call",
+          "original": "./XChainAddAccountCreateAttestation"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainAddClaimAttestation.js",
+          "kind": "require-call",
+          "original": "./XChainAddClaimAttestation"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainClaim.js",
+          "kind": "require-call",
+          "original": "./XChainClaim"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainCommit.js",
+          "kind": "require-call",
+          "original": "./XChainCommit"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainCreateBridge.js",
+          "kind": "require-call",
+          "original": "./XChainCreateBridge"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainCreateClaimID.js",
+          "kind": "require-call",
+          "original": "./XChainCreateClaimID"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/XChainModifyBridge.js",
+          "kind": "require-call",
+          "original": "./XChainModifyBridge"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@noble/hashes/legacy.js": {
+      "bytes": 12613,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/_md.js",
+          "kind": "import-statement",
+          "original": "./_md.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@xrplf/isomorphic/dist/ripemd160/browser.js": {
+      "bytes": 539,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/legacy.js",
+          "kind": "require-call",
+          "original": "@noble/hashes/legacy.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/internal/wrapNoble.js",
+          "kind": "require-call",
+          "original": "../internal/wrapNoble"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@noble/curves/utils.js": {
+      "bytes": 23221,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/modular.js": {
+      "bytes": 39844,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/curve.js": {
+      "bytes": 35711,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/fft.js": {
+      "bytes": 26024,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/hash-to-curve.js": {
+      "bytes": 26273,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/frost.js": {
+      "bytes": 45399,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/fft.js",
+          "kind": "import-statement",
+          "original": "./fft.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/hash-to-curve.js",
+          "kind": "import-statement",
+          "original": "./hash-to-curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/hashes/hmac.js": {
+      "bytes": 3118,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/der.js": {
+      "bytes": 7401,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/weierstrass.js": {
+      "bytes": 53654,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/hmac.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/hmac.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/der.js",
+          "kind": "import-statement",
+          "original": "./der.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/der.js",
+          "kind": "import-statement",
+          "original": "./der.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/secp256k1.js": {
+      "bytes": 20700,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/sha2.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/sha2.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./abstract/curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/frost.js",
+          "kind": "import-statement",
+          "original": "./abstract/frost.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/hash-to-curve.js",
+          "kind": "import-statement",
+          "original": "./abstract/hash-to-curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./abstract/modular.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/weierstrass.js",
+          "kind": "import-statement",
+          "original": "./abstract/weierstrass.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/ripple-keypairs/dist/utils/Sha512.js": {
+      "bytes": 900,
+      "imports": [
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/sha512/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/sha512"
+        },
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "require-call",
+          "original": "@noble/curves/utils.js"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/utils.js": {
+      "bytes": 3408,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/secp256k1.js",
+          "kind": "require-call",
+          "original": "@noble/curves/secp256k1.js"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/Sha512.js",
+          "kind": "require-call",
+          "original": "../../utils/Sha512"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-keypairs/dist/utils/assert.js": {
+      "bytes": 269,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-keypairs/dist/utils/getAlgorithmFromKey.js": {
+      "bytes": 4792,
+      "imports": [],
+      "format": "cjs"
+    },
+    "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/index.js": {
+      "bytes": 2432,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "require-call",
+          "original": "@noble/curves/utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/secp256k1.js",
+          "kind": "require-call",
+          "original": "@noble/curves/secp256k1.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/utils.js",
+          "kind": "require-call",
+          "original": "./utils"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/assert.js",
+          "kind": "require-call",
+          "original": "../../utils/assert"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/Sha512.js",
+          "kind": "require-call",
+          "original": "../../utils/Sha512"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/@noble/curves/abstract/edwards.js": {
+      "bytes": 32323,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/montgomery.js": {
+      "bytes": 14721,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/abstract/oprf.js": {
+      "bytes": 18336,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "../utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/hash-to-curve.js",
+          "kind": "import-statement",
+          "original": "./hash-to-curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./modular.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/@noble/curves/ed25519.js": {
+      "bytes": 30058,
+      "imports": [
+        {
+          "path": "node_modules/@noble/hashes/sha2.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/sha2.js"
+        },
+        {
+          "path": "node_modules/@noble/hashes/utils.js",
+          "kind": "import-statement",
+          "original": "@noble/hashes/utils.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/curve.js",
+          "kind": "import-statement",
+          "original": "./abstract/curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/edwards.js",
+          "kind": "import-statement",
+          "original": "./abstract/edwards.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/frost.js",
+          "kind": "import-statement",
+          "original": "./abstract/frost.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/hash-to-curve.js",
+          "kind": "import-statement",
+          "original": "./abstract/hash-to-curve.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/modular.js",
+          "kind": "import-statement",
+          "original": "./abstract/modular.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/montgomery.js",
+          "kind": "import-statement",
+          "original": "./abstract/montgomery.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/abstract/oprf.js",
+          "kind": "import-statement",
+          "original": "./abstract/oprf.js"
+        },
+        {
+          "path": "node_modules/@noble/curves/utils.js",
+          "kind": "import-statement",
+          "original": "./utils.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "node_modules/ripple-keypairs/dist/signing-schemes/ed25519/index.js": {
+      "bytes": 2028,
+      "imports": [
+        {
+          "path": "node_modules/@noble/curves/ed25519.js",
+          "kind": "require-call",
+          "original": "@noble/curves/ed25519.js"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/assert.js",
+          "kind": "require-call",
+          "original": "../../utils/assert"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/Sha512.js",
+          "kind": "require-call",
+          "original": "../../utils/Sha512"
+        }
+      ],
+      "format": "cjs"
+    },
+    "node_modules/ripple-keypairs/dist/index.js": {
+      "bytes": 5420,
+      "imports": [
+        {
+          "path": "node_modules/ripple-address-codec/dist/index.js",
+          "kind": "require-call",
+          "original": "ripple-address-codec"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/ripemd160/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/ripemd160"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/sha256/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/sha256"
+        },
+        {
+          "path": "node_modules/@xrplf/isomorphic/dist/utils/browser.js",
+          "kind": "require-call",
+          "original": "@xrplf/isomorphic/utils"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/utils.js",
+          "kind": "require-call",
+          "original": "./signing-schemes/secp256k1/utils"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/Sha512.js",
+          "kind": "require-call",
+          "original": "./utils/Sha512"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/assert.js",
+          "kind": "require-call",
+          "original": "./utils/assert"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/utils/getAlgorithmFromKey.js",
+          "kind": "require-call",
+          "original": "./utils/getAlgorithmFromKey"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/index.js",
+          "kind": "require-call",
+          "original": "./signing-schemes/secp256k1"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/signing-schemes/ed25519/index.js",
+          "kind": "require-call",
+          "original": "./signing-schemes/ed25519"
+        }
+      ],
+      "format": "cjs"
+    },
+    "index.js": {
+      "bytes": 1409,
+      "imports": [
+        {
+          "path": "node_modules/fast-text-encoding/text.min.js",
+          "kind": "import-statement",
+          "original": "fast-text-encoding"
+        },
+        {
+          "path": "node_modules/ripple-binary-codec/dist/index.js",
+          "kind": "import-statement",
+          "original": "ripple-binary-codec"
+        },
+        {
+          "path": "node_modules/xrpl/dist/npm/models/transactions/transaction.js",
+          "kind": "import-statement",
+          "original": "xrpl/dist/npm/models/transactions/transaction.js"
+        },
+        {
+          "path": "node_modules/ripple-keypairs/dist/index.js",
+          "kind": "import-statement",
+          "original": "ripple-keypairs"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "../../provenance-final/XrplCodec.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "index.js",
+      "inputs": {
+        "node_modules/fast-text-encoding/text.min.js": {
+          "bytesInOutput": 2806
+        },
+        "node_modules/ripple-binary-codec/dist/enums/definitions.json": {
+          "bytesInOutput": 70385
+        },
+        "node_modules/ripple-binary-codec/dist/enums/bytes.js": {
+          "bytesInOutput": 1082
+        },
+        "node_modules/@noble/hashes/utils.js": {
+          "bytesInOutput": 5845
+        },
+        "node_modules/@xrplf/isomorphic/dist/utils/shared.js": {
+          "bytesInOutput": 404
+        },
+        "node_modules/@xrplf/isomorphic/dist/utils/browser.js": {
+          "bytesInOutput": 1220
+        },
+        "node_modules/ripple-binary-codec/dist/serdes/binary-serializer.js": {
+          "bytesInOutput": 1299
+        },
+        "node_modules/ripple-binary-codec/dist/types/serialized-type.js": {
+          "bytesInOutput": 917
+        },
+        "node_modules/ripple-binary-codec/dist/enums/constants.js": {
+          "bytesInOutput": 342
+        },
+        "node_modules/ripple-binary-codec/dist/enums/field.js": {
+          "bytesInOutput": 696
+        },
+        "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions-base.js": {
+          "bytesInOutput": 2187
+        },
+        "node_modules/ripple-binary-codec/dist/enums/index.js": {
+          "bytesInOutput": 863
+        },
+        "node_modules/@scure/base/index.js": {
+          "bytesInOutput": 13421
+        },
+        "node_modules/@noble/hashes/_u64.js": {
+          "bytesInOutput": 958
+        },
+        "node_modules/@noble/hashes/_md.js": {
+          "bytesInOutput": 2024
+        },
+        "node_modules/@noble/hashes/sha2.js": {
+          "bytesInOutput": 6919
+        },
+        "node_modules/@xrplf/isomorphic/dist/internal/normalizeInput.js": {
+          "bytesInOutput": 214
+        },
+        "node_modules/@xrplf/isomorphic/dist/internal/wrapNoble.js": {
+          "bytesInOutput": 375
+        },
+        "node_modules/@xrplf/isomorphic/dist/sha256/browser.js": {
+          "bytesInOutput": 246
+        },
+        "node_modules/ripple-address-codec/dist/utils.js": {
+          "bytesInOutput": 362
+        },
+        "node_modules/ripple-address-codec/dist/xrp-codec.js": {
+          "bytesInOutput": 3033
+        },
+        "node_modules/ripple-address-codec/dist/index.js": {
+          "bytesInOutput": 2747
+        },
+        "node_modules/ripple-binary-codec/dist/utils.js": {
+          "bytesInOutput": 2089
+        },
+        "node_modules/ripple-binary-codec/dist/types/hash.js": {
+          "bytesInOutput": 786
+        },
+        "node_modules/ripple-binary-codec/dist/types/hash-160.js": {
+          "bytesInOutput": 291
+        },
+        "node_modules/ripple-binary-codec/dist/types/account-id.js": {
+          "bytesInOutput": 833
+        },
+        "node_modules/ripple-binary-codec/dist/serdes/binary-parser.js": {
+          "bytesInOutput": 2264
+        },
+        "node_modules/ripple-binary-codec/dist/types/currency.js": {
+          "bytesInOutput": 1267
+        },
+        "node_modules/bignumber.js/dist/bignumber.cjs": {
+          "bytesInOutput": 18549
+        },
+        "node_modules/ripple-binary-codec/dist/types/hash-192.js": {
+          "bytesInOutput": 291
+        },
+        "node_modules/ripple-binary-codec/dist/types/amount.js": {
+          "bytesInOutput": 4326
+        },
+        "node_modules/ripple-binary-codec/dist/types/blob.js": {
+          "bytesInOutput": 484
+        },
+        "node_modules/ripple-binary-codec/dist/types/hash-128.js": {
+          "bytesInOutput": 373
+        },
+        "node_modules/ripple-binary-codec/dist/types/hash-256.js": {
+          "bytesInOutput": 251
+        },
+        "node_modules/ripple-binary-codec/dist/types/int.js": {
+          "bytesInOutput": 446
+        },
+        "node_modules/ripple-binary-codec/dist/types/int-32.js": {
+          "bytesInOutput": 919
+        },
+        "node_modules/ripple-binary-codec/dist/types/issue.js": {
+          "bytesInOutput": 1810
+        },
+        "node_modules/ripple-binary-codec/dist/types/st-number.js": {
+          "bytesInOutput": 2680
+        },
+        "node_modules/ripple-binary-codec/dist/types/path-set.js": {
+          "bytesInOutput": 2337
+        },
+        "node_modules/ripple-binary-codec/dist/types/uint.js": {
+          "bytesInOutput": 467
+        },
+        "node_modules/ripple-binary-codec/dist/types/uint-64.js": {
+          "bytesInOutput": 1752
+        },
+        "node_modules/ripple-binary-codec/dist/types/st-object.js": {
+          "bytesInOutput": 2240
+        },
+        "node_modules/ripple-binary-codec/dist/types/st-array.js": {
+          "bytesInOutput": 1051
+        },
+        "node_modules/ripple-binary-codec/dist/types/signed-amount.js": {
+          "bytesInOutput": 1166
+        },
+        "node_modules/ripple-binary-codec/dist/types/uint-16.js": {
+          "bytesInOutput": 628
+        },
+        "node_modules/ripple-binary-codec/dist/types/uint-32.js": {
+          "bytesInOutput": 727
+        },
+        "node_modules/ripple-binary-codec/dist/types/uint-8.js": {
+          "bytesInOutput": 624
+        },
+        "node_modules/ripple-binary-codec/dist/types/vector-256.js": {
+          "bytesInOutput": 861
+        },
+        "node_modules/ripple-binary-codec/dist/types/xchain-bridge.js": {
+          "bytesInOutput": 1426
+        },
+        "node_modules/ripple-binary-codec/dist/types/index.js": {
+          "bytesInOutput": 2565
+        },
+        "node_modules/ripple-binary-codec/dist/hash-prefixes.js": {
+          "bytesInOutput": 694
+        },
+        "node_modules/@xrplf/isomorphic/dist/sha512/browser.js": {
+          "bytesInOutput": 246
+        },
+        "node_modules/ripple-binary-codec/dist/hashes.js": {
+          "bytesInOutput": 656
+        },
+        "node_modules/ripple-binary-codec/dist/binary.js": {
+          "bytesInOutput": 2917
+        },
+        "node_modules/ripple-binary-codec/dist/shamap.js": {
+          "bytesInOutput": 1527
+        },
+        "node_modules/ripple-binary-codec/dist/ledger-hashes.js": {
+          "bytesInOutput": 1998
+        },
+        "node_modules/ripple-binary-codec/dist/quality.js": {
+          "bytesInOutput": 663
+        },
+        "node_modules/ripple-binary-codec/dist/coretypes.js": {
+          "bytesInOutput": 1927
+        },
+        "node_modules/ripple-binary-codec/dist/enums/xrpl-definitions.js": {
+          "bytesInOutput": 256
+        },
+        "node_modules/ripple-binary-codec/dist/index.js": {
+          "bytesInOutput": 3065
+        },
+        "node_modules/xrpl/dist/npm/errors.js": {
+          "bytesInOutput": 1253
+        },
+        "node_modules/xrpl/dist/npm/models/ledger/AccountRoot.js": {
+          "bytesInOutput": 1037
+        },
+        "node_modules/xrpl/dist/npm/models/ledger/MPTokenIssuance.js": {
+          "bytesInOutput": 1080
+        },
+        "node_modules/xrpl/dist/npm/models/utils/index.js": {
+          "bytesInOutput": 542
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/common.js": {
+          "bytesInOutput": 11183
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/accountSet.js": {
+          "bytesInOutput": 2636
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMClawback.js": {
+          "bytesInOutput": 1045
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMDeposit.js": {
+          "bytesInOutput": 1745
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMWithdraw.js": {
+          "bytesInOutput": 1684
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/batch.js": {
+          "bytesInOutput": 2674
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanManage.js": {
+          "bytesInOutput": 903
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanPay.js": {
+          "bytesInOutput": 1271
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/MPTokenAuthorize.js": {
+          "bytesInOutput": 447
+        },
+        "node_modules/fast-json-stable-stringify/index.js": {
+          "bytesInOutput": 910
+        },
+        "node_modules/xrpl/dist/npm/models/utils/mptokenMetadata.js": {
+          "bytesInOutput": 7320
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceCreate.js": {
+          "bytesInOutput": 3891
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceSet.js": {
+          "bytesInOutput": 4077
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/NFTokenCreateOffer.js": {
+          "bytesInOutput": 1600
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/NFTokenMint.js": {
+          "bytesInOutput": 1266
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/offerCreate.js": {
+          "bytesInOutput": 1420
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/payment.js": {
+          "bytesInOutput": 3350
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/paymentChannelClaim.js": {
+          "bytesInOutput": 1184
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/sponsorshipSet.js": {
+          "bytesInOutput": 5321
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/sponsorshipTransfer.js": {
+          "bytesInOutput": 3263
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/trustSet.js": {
+          "bytesInOutput": 985
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/vaultCreate.js": {
+          "bytesInOutput": 3941
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainModifyBridge.js": {
+          "bytesInOutput": 557
+        },
+        "node_modules/xrpl/dist/npm/models/utils/flags.js": {
+          "bytesInOutput": 2992
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/accountDelete.js": {
+          "bytesInOutput": 418
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMBid.js": {
+          "bytesInOutput": 1607
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMCreate.js": {
+          "bytesInOutput": 964
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMDelete.js": {
+          "bytesInOutput": 573
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/AMMVote.js": {
+          "bytesInOutput": 914
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/checkCancel.js": {
+          "bytesInOutput": 314
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/checkCash.js": {
+          "bytesInOutput": 809
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/checkCreate.js": {
+          "bytesInOutput": 783
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/clawback.js": {
+          "bytesInOutput": 927
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTClawback.js": {
+          "bytesInOutput": 776
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTConvert.js": {
+          "bytesInOutput": 1366
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTConvertBack.js": {
+          "bytesInOutput": 1214
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTMergeInbox.js": {
+          "bytesInOutput": 448
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/ConfidentialMPTSend.js": {
+          "bytesInOutput": 1495
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/CredentialAccept.js": {
+          "bytesInOutput": 345
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/CredentialCreate.js": {
+          "bytesInOutput": 849
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/CredentialDelete.js": {
+          "bytesInOutput": 528
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/delegateSet.js": {
+          "bytesInOutput": 1386
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/depositPreauth.js": {
+          "bytesInOutput": 1198
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/DIDDelete.js": {
+          "bytesInOutput": 191
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/DIDSet.js": {
+          "bytesInOutput": 510
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/escrowCancel.js": {
+          "bytesInOutput": 537
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/escrowCreate.js": {
+          "bytesInOutput": 1063
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/escrowFinish.js": {
+          "bytesInOutput": 902
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverClawback.js": {
+          "bytesInOutput": 893
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverDeposit.js": {
+          "bytesInOutput": 490
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanBrokerCoverWithdraw.js": {
+          "bytesInOutput": 712
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanBrokerDelete.js": {
+          "bytesInOutput": 419
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanBrokerSet.js": {
+          "bytesInOutput": 2192
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanDelete.js": {
+          "bytesInOutput": 383
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/loanSet.js": {
+          "bytesInOutput": 2906
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/MPTokenIssuanceDestroy.js": {
+          "bytesInOutput": 281
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/NFTokenAcceptOffer.js": {
+          "bytesInOutput": 874
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/NFTokenBurn.js": {
+          "bytesInOutput": 304
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/NFTokenCancelOffer.js": {
+          "bytesInOutput": 439
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/NFTokenModify.js": {
+          "bytesInOutput": 605
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/offerCancel.js": {
+          "bytesInOutput": 416
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/oracleDelete.js": {
+          "bytesInOutput": 260
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/oracleSet.js": {
+          "bytesInOutput": 2271
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/paymentChannelCreate.js": {
+          "bytesInOutput": 1105
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/paymentChannelFund.js": {
+          "bytesInOutput": 743
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/permissionedDomainDelete.js": {
+          "bytesInOutput": 276
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/permissionedDomainSet.js": {
+          "bytesInOutput": 419
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/setRegularKey.js": {
+          "bytesInOutput": 338
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/signerListSet.js": {
+          "bytesInOutput": 1019
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/ticketCreate.js": {
+          "bytesInOutput": 542
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/vaultClawback.js": {
+          "bytesInOutput": 368
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/vaultDelete.js": {
+          "bytesInOutput": 660
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/vaultDeposit.js": {
+          "bytesInOutput": 304
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/vaultSet.js": {
+          "bytesInOutput": 718
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/vaultWithdraw.js": {
+          "bytesInOutput": 525
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainAccountCreateCommit.js": {
+          "bytesInOutput": 462
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainAddAccountCreateAttestation.js": {
+          "bytesInOutput": 969
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainAddClaimAttestation.js": {
+          "bytesInOutput": 880
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainClaim.js": {
+          "bytesInOutput": 523
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainCommit.js": {
+          "bytesInOutput": 474
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainCreateBridge.js": {
+          "bytesInOutput": 405
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/XChainCreateClaimID.js": {
+          "bytesInOutput": 402
+        },
+        "node_modules/xrpl/dist/npm/models/transactions/transaction.js": {
+          "bytesInOutput": 6088
+        },
+        "node_modules/@noble/hashes/legacy.js": {
+          "bytesInOutput": 3947
+        },
+        "node_modules/@xrplf/isomorphic/dist/ripemd160/browser.js": {
+          "bytesInOutput": 255
+        },
+        "node_modules/@noble/curves/utils.js": {
+          "bytesInOutput": 4711
+        },
+        "node_modules/@noble/curves/abstract/modular.js": {
+          "bytesInOutput": 7427
+        },
+        "node_modules/@noble/curves/abstract/curve.js": {
+          "bytesInOutput": 5769
+        },
+        "node_modules/@noble/curves/abstract/fft.js": {
+          "bytesInOutput": 3721
+        },
+        "node_modules/@noble/curves/abstract/hash-to-curve.js": {
+          "bytesInOutput": 6040
+        },
+        "node_modules/@noble/curves/abstract/frost.js": {
+          "bytesInOutput": 15356
+        },
+        "node_modules/@noble/hashes/hmac.js": {
+          "bytesInOutput": 1342
+        },
+        "node_modules/@noble/curves/abstract/der.js": {
+          "bytesInOutput": 2424
+        },
+        "node_modules/@noble/curves/abstract/weierstrass.js": {
+          "bytesInOutput": 13418
+        },
+        "node_modules/@noble/curves/secp256k1.js": {
+          "bytesInOutput": 6847
+        },
+        "node_modules/ripple-keypairs/dist/utils/Sha512.js": {
+          "bytesInOutput": 498
+        },
+        "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/utils.js": {
+          "bytesInOutput": 882
+        },
+        "node_modules/ripple-keypairs/dist/utils/assert.js": {
+          "bytesInOutput": 136
+        },
+        "node_modules/ripple-keypairs/dist/utils/getAlgorithmFromKey.js": {
+          "bytesInOutput": 1776
+        },
+        "node_modules/ripple-keypairs/dist/signing-schemes/secp256k1/index.js": {
+          "bytesInOutput": 907
+        },
+        "node_modules/@noble/curves/abstract/edwards.js": {
+          "bytesInOutput": 8293
+        },
+        "node_modules/@noble/curves/abstract/montgomery.js": {
+          "bytesInOutput": 2267
+        },
+        "node_modules/@noble/curves/abstract/oprf.js": {
+          "bytesInOutput": 5396
+        },
+        "node_modules/@noble/curves/ed25519.js": {
+          "bytesInOutput": 7333
+        },
+        "node_modules/ripple-keypairs/dist/signing-schemes/ed25519/index.js": {
+          "bytesInOutput": 811
+        },
+        "node_modules/ripple-keypairs/dist/index.js": {
+          "bytesInOutput": 2119
+        },
+        "index.js": {
+          "bytesInOutput": 884
+        }
+      },
+      "bytes": 409981
+    }
+  }
+}

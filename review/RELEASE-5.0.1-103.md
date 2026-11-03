@@ -437,3 +437,39 @@ validation gaps remain open; this checkpoint is not an audit completion verdict.
 production Swift methods and compilation checks above.
 
 The [paired simulation workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41573179363) is queued at checkpoint publication. The paired results above are locally verified; hosted results remain pending. New checkpoint files and expanded logs pass the publication secret scan. The downloaded signing archive uses the previously reviewed exact synthetic-fixture exceptions; no whole-history scan claim is made.
+
+## Checkpoint 18
+
+The 409,981-byte shipped XRP JavaScript codec rebuilds exactly from the checked-in
+entry point and dependency lock. Node 26.5.0, npm 11.17.0 and esbuild 0.25.12 are
+pinned; the formal build denies network after a scripts-disabled installation.
+The contributing closure contains **171 files: one application entry point and
+170 upstream files from 11 packages**. Per-input hashes, contributed bytes,
+package versions, integrity pins and license declarations are recorded.
+[Review and commands](XRPL-CODEC-BOUNDARIES.md) ·
+[Evidence](../evidence/5.0.1-build103/xrpl-codec/manifest.json).
+
+Six new real-package methods pass both the initial experiment and isolated
+clean-checkout replay: duplicate/oversized/deep input, account/chain/authority
+checks, review/time binding, payload/signature tampering, multisigner ordering
+and numeric/nested-field preservation. Runtime test processes have network
+denied. No new application defect was confirmed by this bounded matrix.
+
+The dependency audit query reports no known production-package advisories at
+query time; it does not establish zero vulnerabilities. **All 170 upstream
+implementation files remain outstanding.** Their earlier absence from the
+upstream ledger is corrected. The generated bundle has a verified reproduction
+disposition; request/codec/journal source has limited partial review dispositions.
+Direct compiler coverage is 244 reviewed, 137 partial, 1,496 outstanding,
+460 generated-and-verified and 20 needing trace. The combined completion gate
+now has **16,768 open coverage/validation entries**, not vulnerability findings.
+
+The application source is unchanged at `8a31eb265c34ef7f37ba21741201842366d43b7b`.
+Its checkpoint 17 unsigned Release build is prior evidence, not a new build in
+this checkpoint. No UI, simulator, physical device, live provider/ledger or
+App Store operation was performed. Journal concurrency/reset execution,
+all supported request types and upstream implementations remain open work.
+
+**295 audit-helper/evidence-integrity tests pass.** The new publication files and
+expanded logs/bundle pass the secret scan with no findings. Hosted codec/boundary
+replay has not yet produced a result; local results are reported above.
