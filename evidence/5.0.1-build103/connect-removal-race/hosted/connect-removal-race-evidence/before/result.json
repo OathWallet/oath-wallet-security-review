@@ -1,0 +1,109 @@
+{
+  "source_commit": "82ea45249ae40e5ab0be39d671fbfc96b6e43069",
+  "source_sha256": "e3eb768b0f0d0881a538a8f24f1b4b8c20fb23a1be80930d8a33e5baf7e5ce95",
+  "fixture_sha256": "4224c73e5dfa1353a8c2d3a09379fbb67d4160bbbea03eaeb64aa42c8c59ab99",
+  "harness_original_sha256": "e17adb8fa4630e7d7ff0dfd7c2f65c3594d5919e9174030255242f260d2f212c",
+  "harness_executed_sha256": "9949d6c3464ad6c5a165feb10b1782d8162441560ee72d9df70173836a13074e",
+  "script_sha256": "b84c753d0dbb20f67b36a534054b8c840621501036fff65bbfb0f7da0cd89862",
+  "expected_failure_reproduced": true,
+  "recovery": false,
+  "exit_code": 1,
+  "cases": [
+    {
+      "name": "journal first / production vault signature verifies",
+      "status": "pass"
+    },
+    {
+      "name": "journal first / pending work rejects removal",
+      "status": "pass"
+    },
+    {
+      "name": "journal first / removal and new pending work are exclusive",
+      "status": "pass"
+    },
+    {
+      "name": "journal first / every saved pending row remains recoverable",
+      "status": "pass"
+    },
+    {
+      "name": "journal first / restart preserves recoverability",
+      "status": "pass"
+    },
+    {
+      "name": "journal during vault write / production vault signature verifies",
+      "status": "pass"
+    },
+    {
+      "name": "journal during vault write / held after pending preflight before encrypted commit",
+      "status": "pass"
+    },
+    {
+      "name": "journal during vault write / removal and new pending work are exclusive",
+      "status": "fail"
+    },
+    {
+      "name": "journal during vault write / every saved pending row remains recoverable",
+      "status": "fail"
+    },
+    {
+      "name": "journal during vault write / restart preserves recoverability",
+      "status": "fail"
+    },
+    {
+      "name": "journal during vault write / pending row survives retention",
+      "status": "fail"
+    },
+    {
+      "name": "removal first / production vault signature verifies",
+      "status": "pass"
+    },
+    {
+      "name": "removal first / removed wallet rejects journal",
+      "status": "pass"
+    },
+    {
+      "name": "removal first / removal and new pending work are exclusive",
+      "status": "pass"
+    },
+    {
+      "name": "removal first / every saved pending row remains recoverable",
+      "status": "pass"
+    },
+    {
+      "name": "removal first / restart preserves recoverability",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / production vault signature verifies",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / held after pending preflight before encrypted commit",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / removal failure expected",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / removal and new pending work are exclusive",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / retry can persist after rejected encrypted write",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / every saved pending row remains recoverable",
+      "status": "pass"
+    },
+    {
+      "name": "vault write fails / restart preserves recoverability",
+      "status": "pass"
+    }
+  ],
+  "log_sha256": "ba059f9b2994b0371868c4d07d4f3606daa60627a18477948d02158656aef783",
+  "duration_seconds": 445.58,
+  "runtime_network": "denied",
+  "scope": "Production vault/encrypted envelope/SQLite/XRP imported-key signing and journal; gated in-memory credential store; inherited synthetic HD and unrelated service adapters. No UI, OS authentication, simulator, device or relay; no broadcast."
+}

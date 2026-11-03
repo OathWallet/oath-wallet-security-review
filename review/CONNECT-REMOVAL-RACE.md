@@ -115,3 +115,14 @@ harness identities, log hashes and 38-case normal/mutant outcomes matched local
 evidence. Its [receipt](../evidence/5.0.1-build103/ci-retests/connect-removal-auth-github.json)
 and original archive accompany checkpoint 21. This supersedes checkpoint 20's
 running snapshot without changing the older evidence.
+
+## Hosted replay completed
+
+[GitHub Actions run 41581212979](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41581212979)
+completed successfully on the exact original before/fixed pins. The downloaded
+logs reproduce 19 passes/four failures before, 23 passes afterward and 30
+interrupted-recovery checks. The exact fixed source also compiles in unsigned
+generic iOS Release configuration on the hosted runner (1,217.38 seconds).
+The replay's script and raw log hashes were checked against the saved results.
+[Durable hosted logs and checksums](../evidence/5.0.1-build103/connect-removal-race/hosted/manifest.json)
+retain the original version and pins; these are not tests of subsequent fixes.

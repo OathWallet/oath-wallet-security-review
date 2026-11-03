@@ -1,0 +1,137 @@
+{
+  "source_commit": "b1f1b120947062aec871cb7fdc4439e88042cda3",
+  "source_sha256": "eeb17988608021a989709f5a0d3af1890895d4c6dbe00e9b183dccf348377c9e",
+  "fixture_sha256": "d87b805d5a34d075877c07d354e8a75696975888263699295c433880a93299d8",
+  "harness_original_sha256": "9f695a438eb7a7dd44a88ebd2dc9317e2cf206d64607f69c21aafe94d910d00d",
+  "harness_executed_sha256": "997f6d81fd8aeba713569f24a4fe37a2eb948f565d19b403737d803838cc4bff",
+  "script_sha256": "b84c753d0dbb20f67b36a534054b8c840621501036fff65bbfb0f7da0cd89862",
+  "expected_failure_reproduced": false,
+  "recovery": true,
+  "exit_code": 0,
+  "cases": [
+    {
+      "name": "passcode / before encrypted commit / durable reservation before key write",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / before encrypted commit / fence persists before restart",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / before encrypted commit / authenticated replay releases fence",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / before encrypted commit / replay follows encrypted membership",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / before encrypted commit / both retained wallets survive",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / after encrypted commit / metadata failure observed",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / after encrypted commit / fence persists before restart",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / after encrypted commit / authenticated replay releases fence",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / after encrypted commit / replay follows encrypted membership",
+      "status": "pass"
+    },
+    {
+      "name": "passcode / after encrypted commit / both retained wallets survive",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / before encrypted commit / durable reservation before key write",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / before encrypted commit / fence persists before restart",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / before encrypted commit / authenticated replay releases fence",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / before encrypted commit / replay follows encrypted membership",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / before encrypted commit / both retained wallets survive",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / after encrypted commit / metadata failure observed",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / after encrypted commit / fence persists before restart",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / after encrypted commit / authenticated replay releases fence",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / after encrypted commit / replay follows encrypted membership",
+      "status": "pass"
+    },
+    {
+      "name": "biometric / after encrypted commit / both retained wallets survive",
+      "status": "pass"
+    },
+    {
+      "name": "device key / before encrypted commit / durable reservation before key write",
+      "status": "pass"
+    },
+    {
+      "name": "device key / before encrypted commit / fence persists before restart",
+      "status": "pass"
+    },
+    {
+      "name": "device key / before encrypted commit / authenticated replay releases fence",
+      "status": "pass"
+    },
+    {
+      "name": "device key / before encrypted commit / replay follows encrypted membership",
+      "status": "pass"
+    },
+    {
+      "name": "device key / before encrypted commit / both retained wallets survive",
+      "status": "pass"
+    },
+    {
+      "name": "device key / after encrypted commit / metadata failure observed",
+      "status": "pass"
+    },
+    {
+      "name": "device key / after encrypted commit / fence persists before restart",
+      "status": "pass"
+    },
+    {
+      "name": "device key / after encrypted commit / authenticated replay releases fence",
+      "status": "pass"
+    },
+    {
+      "name": "device key / after encrypted commit / replay follows encrypted membership",
+      "status": "pass"
+    },
+    {
+      "name": "device key / after encrypted commit / both retained wallets survive",
+      "status": "pass"
+    }
+  ],
+  "log_sha256": "4ff7908b4750121f89ba67ff7deb35cee37aaecc0fbdcfd8941bb242b2ce5149",
+  "duration_seconds": 254.37,
+  "runtime_network": "denied",
+  "scope": "Production vault/encrypted envelope/SQLite/XRP imported-key signing and journal; gated in-memory credential store; inherited synthetic HD and unrelated service adapters. No UI, OS authentication, simulator, device or relay; no broadcast."
+}
