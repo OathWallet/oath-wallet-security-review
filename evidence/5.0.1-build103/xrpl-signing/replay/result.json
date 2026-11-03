@@ -1,0 +1,43 @@
+{
+  "source_commit": "6783750661c43d3511d8973a2de77106fdf2001d",
+  "methods": [
+    {
+      "method": "testIndependentSDKBytesAndHashes",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testIndependentSDKBytesAndHashes.log",
+      "log_sha256": "01949c9ac5cc5d052ef48544ed6486bc9d922f6cc095aca6495adcd1c9a46562"
+    },
+    {
+      "method": "testAlteredPlanCannotReuseSignature",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testAlteredPlanCannotReuseSignature.log",
+      "log_sha256": "66e5316fd40df83486d61cc73511ccc024d8179db208ecb7513d85cfb5c8f05d"
+    },
+    {
+      "method": "testCorruptedEnvelopeAndSignerSetAreRejected",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testCorruptedEnvelopeAndSignerSetAreRejected.log",
+      "log_sha256": "75413e20635ace4a1351c402481b0e4952a2a4cdfb6933258998bfcc2244f382"
+    },
+    {
+      "method": "testRIPEMDBlockBoundariesMatchOpenSSL",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testRIPEMDBlockBoundariesMatchOpenSSL.log",
+      "log_sha256": "98064ffe1a45b6fe8d479a13a4bec8b608abe352abe085c4833cb4d8faace934"
+    }
+  ],
+  "transaction_vectors": 61,
+  "ripemd_vectors": 13,
+  "fixture_sha256": "b98ab062188bff5a5a981c995e8a7e371ac15e3a54f4ffb96360954d66a2c55f",
+  "sdk_lock_sha256": "0c4886ee319e961bcfeb0da848d7762d79df8d6f2c2aec2d6dee0616a2010b49",
+  "overlay_sha256": "3dfca6a20f030a3146f4a2010a5aa446ad4778fdb6119cbf5dcbf787f0cbe218",
+  "generator_sha256": "62ef7ce27526cd736e6237b2ea44a570f88c788c22bf5a4295a3ceaa144d727c",
+  "script_sha256": "622f0b064c8e9c2d71200fc9332a573ef9247c12fb5aed344fdba766ff7c03d8",
+  "duration_seconds": 81.7,
+  "runtime_network": "denied by sandbox-exec",
+  "scope": "Real OathAnkr package and secp256k1 dependency; synthetic public keys, independent pinned JS SDK fixtures, no provider or device"
+}

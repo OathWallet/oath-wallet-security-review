@@ -16,6 +16,8 @@ Checkpoint 13 records OW-2026-059's tested source repair and fifteen controlled 
 
 Checkpoint 15 adds the verified public-source repair OW-2026-060 and 4,900 paired arithmetic cases. Four partial dispositions leave 244 reviewed, 132 partial and 1,501 outstanding direct compiler inputs; generated counts are unchanged. The combined gate retains 16,598 entries. The complete signing/serialization paths, dependency provenance and full-wallet coverage remain open. [XRP arithmetic scope](XRPL-AMOUNT-ARITHMETIC.md).
 
+Checkpoint 16 adds 61 independent signed-transaction vectors, 13 RIPEMD vectors and negative signature/plan tests. Five more partial file dispositions leave 244 reviewed, 135 partial and 1,498 outstanding direct inputs. Generated counts and the 16,598-entry completion gate are unchanged. Provider-response hypotheses and all full-review acceptance gaps remain open. [Signing matrix](XRPL-SIGNING-MATRIX.md).
+
 ## Historical acceptance snapshot
 
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.

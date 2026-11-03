@@ -371,3 +371,31 @@ and case outcomes match the local replay. Output digests were recomputed from
 each archived result. [Hosted receipt](../evidence/5.0.1-build103/ci-retests/xrpl-amount-github.json).
 **281 audit-helper/evidence-integrity tests pass.** These are separate from the
 Swift production-function and package tests above.
+
+## Checkpoint 16
+
+The expanded offline XRP signing matrix passes four real production-package
+methods: **61 signed transactions/hash comparisons**, **13 RIPEMD vectors**, and
+checks that altered plans, envelopes and signer sets are rejected. Both the
+initial experiment and the clean-checkout replay pass. The latter denies network
+access during SDK fixture generation and XCTest execution. Dependency downloads
+and compilation are separate. Public deterministic test wallets only are used.
+[Scope and commands](XRPL-SIGNING-MATRIX.md) ·
+[Receipts](../evidence/5.0.1-build103/xrpl-signing/manifest.json).
+
+Five source files have new partial dispositions, including the complete XRP
+crypto, multisig and send-client source. All five have identical bytes at the
+review baseline and the tested commit. Direct compiler coverage is now
+**244 reviewed, 135 partial, 1,498 outstanding, 460 generated-and-verified and
+20 needing trace**. The combined gate remains **16,598 open ledger entries**.
+No new defect was confirmed by this matrix. A WalletConnect simulation-response
+hypothesis remains explicitly unconfirmed pending a controlled reproduction.
+
+No application source, simulator, physical device or App Store operation changed
+in this checkpoint. The earlier unsigned iOS build is prior evidence; it was not
+rerun for this audit-only change. Full UI, live ledger, provider-response and
+upstream-provenance work remains open.
+
+**285 audit-helper/evidence-integrity tests pass.** The publication scan's nine initial matches were all deterministic public test keys. Regeneration reproduced the complete fixture exactly; narrowly scoped value-and-path exceptions retain that evidence. No whole-history scanner claim is made.
+
+The [GitHub signing replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41571599716) is running at checkpoint publication. Its hosted result remains pending; the four-method pass reported here is locally verified.
