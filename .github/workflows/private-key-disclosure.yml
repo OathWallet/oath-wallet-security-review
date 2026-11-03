@@ -1,0 +1,30 @@
+name: Reproduce private-key disclosure cleanup
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/private-key-disclosure.yml', 'scripts/private-key-disclosure.py', 'tests/test_private_key_disclosure.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 55
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_private_key_disclosure.py
+      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - run: |
+          mkdir -p evidence/ci/private-key-disclosure
+          cp evidence/ci/toolchain.txt evidence/ci/private-key-disclosure/
+          python3 scripts/private-key-disclosure.py .work/wallet .work/disclosure-build evidence/ci/private-key-disclosure
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: private-key-disclosure-evidence, path: evidence/ci/private-key-disclosure, retention-days: 90}
