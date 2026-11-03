@@ -1467,13 +1467,14 @@
     "merge_commit": "501915920e99475e63af5fcb9e658f3c834f3cc8",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/81",
     "retest_scope": "66 account-read signing cases plus 14 pending-consent cases, 616 broader host assertions, 119 diagnostics passes and two skips; unsigned iOS Release build. Synthetic credentials; no relay, network-denied focused execution; no UI, device or App Store operation.",
-    "hosted_replay": "pending",
+    "hosted_replay": "verified",
     "current_target": {
       "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
       "release": "5.0.2 (104) prerelease baseline",
       "fix_commit_is_ancestor": false,
       "validation": "Fix is a later source revision, not a rewrite of the baseline tag."
-    }
+    },
+    "hosted_evidence": "evidence/5.0.2-build104/hosted-removal-read/manifest.json"
   },
   {
     "id": "OW-2026-065",
@@ -1489,6 +1490,8 @@
       "release": "5.0.2 (104) prerelease",
       "fix_commit_is_ancestor": false,
       "validation": "Later public repair; exact source commits retained in new evidence."
-    }
+    },
+    "hosted_replay": "verified",
+    "hosted_evidence": "evidence/5.0.2-build104/hosted-near-signing/manifest.json"
   }
 ]

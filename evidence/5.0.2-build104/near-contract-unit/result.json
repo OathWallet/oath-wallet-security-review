@@ -1,0 +1,274 @@
+{
+  "upstream_commit": "1b0436c96379c63aee7d2429c6d5d24019031ab8",
+  "source_sha256": "65bc055731f6c5a9344ba3155b9685f95ebdfafe83d938cf3c5bdd10ad458046",
+  "overlay_sha256": "9c984e9ec8d2fde43e8f5c5b4447b85e904ca368c4ee5f64294fc4dcea22253d",
+  "driver_sha256": "1afffc48209fc9db25d11ed1b65e929c69539d5b74e2c77280ae9dc750be216f",
+  "toolchain": {
+    "rustc": "rustc 1.96.1 (31fca3adb 2026-06-26) (Homebrew)",
+    "cargo": "cargo 1.96.1 (356927216 2026-06-26) (Homebrew)"
+  },
+  "lock": {
+    "original_packages": 335,
+    "unit_packages": 70,
+    "retained_versions_and_checksums_match": true,
+    "added_or_retargeted_edges": [],
+    "removed_edges": [
+      {
+        "package": [
+          "indexmap",
+          "1.7.0",
+          "registry+https://github.com/rust-lang/crates.io-index"
+        ],
+        "removed_edges": [
+          [
+            "serde",
+            "1.0.118",
+            "registry+https://github.com/rust-lang/crates.io-index"
+          ]
+        ]
+      },
+      {
+        "package": [
+          "multisig2",
+          "0.4.0",
+          null
+        ],
+        "removed_edges": [
+          [
+            "near-primitives-core",
+            "0.4.0",
+            "registry+https://github.com/rust-lang/crates.io-index"
+          ],
+          [
+            "near-sdk-sim",
+            "3.2.0",
+            "registry+https://github.com/rust-lang/crates.io-index"
+          ]
+        ]
+      }
+    ],
+    "note": "Removing simulation dev dependencies also prunes the indexmap serde feature edge; this is an adapted native unit harness, not the full original graph."
+  },
+  "cases": [
+    {
+      "name": "audit_contract::characterizes_confirmation_retained_after_quorum_authorized_member_removal",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.02,
+      "log": "audit_contract-characterizes_confirmation_retained_after_quorum_authorized_member_removal.log",
+      "sha256": "c6a57d965d4511092b4babb06c7ceb3fa5955a03afcd0f70ee943a493e554893"
+    },
+    {
+      "name": "audit_contract::cooldown_cleanup_preserves_other_members_requests",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.013,
+      "log": "audit_contract-cooldown_cleanup_preserves_other_members_requests.log",
+      "sha256": "3901a7d3182f92303cb6296a428ea00c83ac9a439f987f33d3e4d1056cb754ac"
+    },
+    {
+      "name": "audit_contract::quorum_preserves_function_call_bytes_deposit_and_gas",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.01,
+      "log": "audit_contract-quorum_preserves_function_call_bytes_deposit_and_gas.log",
+      "sha256": "b2e1ff989f90b283a6f62f4fff91496c92305bf5b55f14b2d4c6f30bf5b3ab8a"
+    },
+    {
+      "name": "audit_contract::quorum_schedules_exact_transfer_and_cleans_request",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.01,
+      "log": "audit_contract-quorum_schedules_exact_transfer_and_cleans_request.log",
+      "sha256": "31cad18b357898d4e29cccb59fd40bde27b402a327515c3d02471b82fb61ae9c"
+    },
+    {
+      "name": "tests::add_key_delete_key_storage_cleared",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.009,
+      "log": "tests-add_key_delete_key_storage_cleared.log",
+      "sha256": "013a4999a1cd9131b9917910bd62750c2ad730c4b3f497c9531afbcb7b424153"
+    },
+    {
+      "name": "tests::test_change_num_confirmations",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.008,
+      "log": "tests-test_change_num_confirmations.log",
+      "sha256": "390809ac6a525b80db6f9662f4353675951e43c9c87abfa20a426211f75c1945"
+    },
+    {
+      "name": "tests::test_delete_request_future",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.008,
+      "log": "tests-test_delete_request_future.log",
+      "sha256": "c5223e75edbdea16e76ca56548362ba49170d4d4f4bcddf2ed85fce92b2ac1a8"
+    },
+    {
+      "name": "tests::test_delete_request_panic_wrong_key",
+      "exit_code": -6,
+      "status": "blocked_sdk_abort",
+      "seconds": 0.021,
+      "log": "tests-test_delete_request_panic_wrong_key.log",
+      "sha256": "58def1901795cce360eff615974c7d3df0e7d4d2cba1a3c096da5bfc2d40416e"
+    },
+    {
+      "name": "tests::test_multi_3_of_n",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.008,
+      "log": "tests-test_multi_3_of_n.log",
+      "sha256": "56f4b6b0a4a37d48442f9b205f8df5653ea5454e48c9091f09cc1fa011e157f5"
+    },
+    {
+      "name": "tests::test_multi_add_request_and_confirm",
+      "exit_code": 0,
+      "status": "passed",
+      "seconds": 0.008,
+      "log": "tests-test_multi_add_request_and_confirm.log",
+      "sha256": "47aee2159cd183765ea1308dd36a0e5cd6fa70f0174c268d1010511d3022152c"
+    },
+    {
+      "name": "tests::test_panics_add_key_different_account",
+      "exit_code": 0,
+      "status": "invalid_fixture_pass",
+      "seconds": 0.007,
+      "log": "tests-test_panics_add_key_different_account.log",
+      "sha256": "8bda344fa0133df6c43b62cf40ead7c7f9151142a48a9c009749edb204eb6819"
+    },
+    {
+      "name": "tests::test_panics_delete_request",
+      "exit_code": -6,
+      "status": "blocked_sdk_abort",
+      "seconds": 0.02,
+      "log": "tests-test_panics_delete_request.log",
+      "sha256": "6cef6b36ad489d905599daa0ef56088f0b7b5ff582cd6a2aa02833fae0a5f0ac"
+    },
+    {
+      "name": "tests::test_panics_on_second_confirm",
+      "exit_code": -6,
+      "status": "blocked_sdk_abort",
+      "seconds": 0.021,
+      "log": "tests-test_panics_on_second_confirm.log",
+      "sha256": "fa1400ca568f73dc6521d0467b57ee632eb8efe46cde94eb2f694823bcc78aa3"
+    },
+    {
+      "name": "tests::test_too_many_confirmations",
+      "exit_code": -6,
+      "status": "blocked_sdk_abort",
+      "seconds": 0.021,
+      "log": "tests-test_too_many_confirmations.log",
+      "sha256": "d7e5f1683154895c1f56feed3a4b59212478ddf30fbe2bbb2a0a33435eade11b"
+    },
+    {
+      "name": "tests::test_too_many_requests",
+      "exit_code": -6,
+      "status": "blocked_sdk_abort",
+      "seconds": 0.023,
+      "log": "tests-test_too_many_requests.log",
+      "sha256": "8546641af105cf4011771ab9356717d384fc8cb360591b4a79750a7b6e66ea43"
+    }
+  ],
+  "all_contract_tests_passed": false,
+  "wasm_execution_verified": false,
+  "source_to_binary_rebuild_verified": false,
+  "runtime_network": "denied by sandbox-exec",
+  "duration_seconds": 7.058,
+  "scope": "Native contract source and SDK mock receipts; dev dependencies removed. No VM, blockchain or promise execution.",
+  "files": [
+    {
+      "path": "audit_contract-characterizes_confirmation_retained_after_quorum_authorized_member_removal.log",
+      "sha256": "c6a57d965d4511092b4babb06c7ceb3fa5955a03afcd0f70ee943a493e554893"
+    },
+    {
+      "path": "audit_contract-cooldown_cleanup_preserves_other_members_requests.log",
+      "sha256": "3901a7d3182f92303cb6296a428ea00c83ac9a439f987f33d3e4d1056cb754ac"
+    },
+    {
+      "path": "audit_contract-quorum_preserves_function_call_bytes_deposit_and_gas.log",
+      "sha256": "b2e1ff989f90b283a6f62f4fff91496c92305bf5b55f14b2d4c6f30bf5b3ab8a"
+    },
+    {
+      "path": "audit_contract-quorum_schedules_exact_transfer_and_cleans_request.log",
+      "sha256": "31cad18b357898d4e29cccb59fd40bde27b402a327515c3d02471b82fb61ae9c"
+    },
+    {
+      "path": "build.jsonl",
+      "sha256": "db6f97380ada8a18437e439bc2d1d0246158336ee3e24acc75483fd13c4521b9"
+    },
+    {
+      "path": "build.log",
+      "sha256": "97295ae8c9560340dec7c2c4b4924854d0bf4b559ca6b8206215564ee67cc5d4"
+    },
+    {
+      "path": "discovery.log",
+      "sha256": "e6193a65f3f150786ebc163f6b3b65d817aa48254551031cfac269f8191a508e"
+    },
+    {
+      "path": "fetch.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "inputs/Cargo.lock",
+      "sha256": "a4ff0327cd140c6557ed930f68bdc82f3de013bcdbcb455d9f6f67bf20130ae8"
+    },
+    {
+      "path": "inputs/Cargo.toml",
+      "sha256": "eb42c3e916caf5cbc5cd6561f77481bbb6ffacbc9bfea6ed480ceded2aa3fb6b"
+    },
+    {
+      "path": "inputs/src/lib.rs",
+      "sha256": "2571164aaee7a156206fd452b43492a87230ab0be083752c55523499c1e9c7e3"
+    },
+    {
+      "path": "tests-add_key_delete_key_storage_cleared.log",
+      "sha256": "013a4999a1cd9131b9917910bd62750c2ad730c4b3f497c9531afbcb7b424153"
+    },
+    {
+      "path": "tests-test_change_num_confirmations.log",
+      "sha256": "390809ac6a525b80db6f9662f4353675951e43c9c87abfa20a426211f75c1945"
+    },
+    {
+      "path": "tests-test_delete_request_future.log",
+      "sha256": "c5223e75edbdea16e76ca56548362ba49170d4d4f4bcddf2ed85fce92b2ac1a8"
+    },
+    {
+      "path": "tests-test_delete_request_panic_wrong_key.log",
+      "sha256": "58def1901795cce360eff615974c7d3df0e7d4d2cba1a3c096da5bfc2d40416e"
+    },
+    {
+      "path": "tests-test_multi_3_of_n.log",
+      "sha256": "56f4b6b0a4a37d48442f9b205f8df5653ea5454e48c9091f09cc1fa011e157f5"
+    },
+    {
+      "path": "tests-test_multi_add_request_and_confirm.log",
+      "sha256": "47aee2159cd183765ea1308dd36a0e5cd6fa70f0174c268d1010511d3022152c"
+    },
+    {
+      "path": "tests-test_panics_add_key_different_account.log",
+      "sha256": "8bda344fa0133df6c43b62cf40ead7c7f9151142a48a9c009749edb204eb6819"
+    },
+    {
+      "path": "tests-test_panics_delete_request.log",
+      "sha256": "6cef6b36ad489d905599daa0ef56088f0b7b5ff582cd6a2aa02833fae0a5f0ac"
+    },
+    {
+      "path": "tests-test_panics_on_second_confirm.log",
+      "sha256": "fa1400ca568f73dc6521d0467b57ee632eb8efe46cde94eb2f694823bcc78aa3"
+    },
+    {
+      "path": "tests-test_too_many_confirmations.log",
+      "sha256": "d7e5f1683154895c1f56feed3a4b59212478ddf30fbe2bbb2a0a33435eade11b"
+    },
+    {
+      "path": "tests-test_too_many_requests.log",
+      "sha256": "8546641af105cf4011771ab9356717d384fc8cb360591b4a79750a7b6e66ea43"
+    },
+    {
+      "path": "toolchain.json",
+      "sha256": "09e5c0ee52827ce0752b96235a361eeedfc3b7d9971af4d53774f30007971a56"
+    }
+  ]
+}

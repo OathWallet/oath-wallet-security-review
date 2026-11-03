@@ -128,3 +128,15 @@ GitHub run 41607922685 reproduced the prior parser failure and repair plus
 26 adjacent regressions; downloaded hashes, method identities and signatures
 were verified. [Reproduction, preserved failures and remaining review](NEAR-MULTISIG-VECTORS.md).
 No app, App Store, simulator or physical-device changes occurred.
+
+## Checkpoint 8 — Native contract evidence and hosted multisig replay
+
+The adapted native contract harness records nine passing methods, five SDK
+abort blockers and one invalid inherited fixture pass. Four new checks inspect
+actual mock receipts and characterize retained confirmations after a legitimate
+quorum changes membership. No shipped-WASM or full-contract-suite pass is claimed.
+The original failure logs, pruned graph and intermediate attempts are retained.
+GitHub run 41609444047 independently passed ten app multisig methods and four
+upstream-copy checks; its downloaded artifact and case logs are verified.
+[Native evidence, reproduction and remaining scope](NEAR-CONTRACT-NATIVE.md).
+No application, device, simulator or App Store changes occurred.

@@ -75,3 +75,11 @@ host assertions pass; 330 audit helper tests pass after repairing the historical
 count assumption. The completion gate retains 16,908 outstanding review items.
 This is not a count of vulnerabilities or a completion verdict.
 [Repair and scope](CONNECT-REMOVAL-READ.md).
+
+Build 104 checkpoint 8 leaves **16,918 outstanding review/validation entries**.
+The adapted native contract replay records nine passes, five SDK abort blockers
+and one invalid inherited fixture pass; it does not establish shipped-WASM
+execution or a complete contract review. The earlier ten-method hosted app replay
+is now downloaded and verified. 358 audit-helper tests pass. Existing reviewed
+and partial dispositions remain scoped to their original evidence; no outstanding
+implementation is promoted by test success. [Contract scope and open questions](NEAR-CONTRACT-NATIVE.md).

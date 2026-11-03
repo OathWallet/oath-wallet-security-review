@@ -7,6 +7,8 @@ including the public repairs through PR #77. Build 104 has its own source
 inventory, host checks and unsigned iOS build. [Current target and exact results](RELEASE-5.0.2-104.md).
 The following checkpoints are historical evidence with their original pins.
 
+**Build 104 checkpoint 8.** Native contract-source tests now run in a documented adapted harness: nine methods pass, five remain blocked by the old SDK panic boundary, and one inherited false-positive fixture is excluded. Exact mock transfer actions and retained confirmations after authorized membership removal are recorded without claiming WASM execution. The separate ten-method GitHub app replay is downloaded and hash-verified. [Results, reproduction and open questions](NEAR-CONTRACT-NATIVE.md).
+
 **Build 104 checkpoint 7.** Fifty independent NEAR multisig bundles cover 188 transaction parts; three host methods and five verifier controls pass. An isolated nonce mutation is detected. The original signature-byte fixture assumption and its correction remain visible. GitHub has also reproduced the earlier reader crash and repair, with downloaded evidence verified. [Results and remaining scope](NEAR-MULTISIG-VECTORS.md).
 
 **Build 104 checkpoint 6.** Ten existing NEAR multisig methods pass with runtime networking denied. Four bundled contract/source/license copies match pinned upstream bytes. Two application files gain partial source dispositions. Upstream Rust tests failed to compile in older dependencies; contract runtime and source-to-WASM reproduction remain unresolved. [Evidence and remaining scope](NEAR-MULTISIG-BOUNDARIES.md). No new app defect or app change is claimed.

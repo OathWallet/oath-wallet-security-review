@@ -49,7 +49,8 @@
       "bytes": 569,
       "status": "partially-reviewed",
       "evidence": [
-        "review/NEAR-MULTISIG-BOUNDARIES.md"
+        "review/NEAR-MULTISIG-BOUNDARIES.md",
+        "review/NEAR-CONTRACT-NATIVE.md"
       ]
     },
     {
@@ -86,7 +87,8 @@
         878
       ],
       "evidence": [
-        "review/NEAR-MULTISIG-BOUNDARIES.md"
+        "review/NEAR-MULTISIG-BOUNDARIES.md",
+        "review/NEAR-CONTRACT-NATIVE.md"
       ]
     },
     {
@@ -3993,5 +3995,14 @@
   ],
   "source_to_binary_rebuild_verified": false,
   "scope": "Byte identity with the pinned upstream artifact, source and license copies. Lock entries include test dependencies; they are not a proven production reachability inventory.",
-  "lock_inventory_note": "Lock entries enumerate direct/transitive build and test dependencies, not reviewed implementations or proven shipped reachability."
+  "lock_inventory_note": "Lock entries enumerate direct/transitive build and test dependencies, not reviewed implementations or proven shipped reachability.",
+  "native_unit_replay": {
+    "evidence": "evidence/5.0.2-build104/near-contract-unit/manifest.json",
+    "passed": 9,
+    "blocked_sdk_abort": 5,
+    "invalid_fixture_pass": 1,
+    "adapted_manifest": true,
+    "wasm_execution_verified": false,
+    "membership_change_semantics": "Characterized in native source; impact remains open."
+  }
 }
