@@ -7,6 +7,8 @@ including the public repairs through PR #77. Build 104 has its own source
 inventory, host checks and unsigned iOS build. [Current target and exact results](RELEASE-5.0.2-104.md).
 The following checkpoints are historical evidence with their original pins.
 
+**Build 104 checkpoint 6.** Ten existing NEAR multisig methods pass with runtime networking denied. Four bundled contract/source/license copies match pinned upstream bytes. Two application files gain partial source dispositions. Upstream Rust tests failed to compile in older dependencies; contract runtime and source-to-WASM reproduction remain unresolved. [Evidence and remaining scope](NEAR-MULTISIG-BOUNDARIES.md). No new app defect or app change is claimed.
+
 **Build 104 checkpoint 5.** [OW-2026-065](../findings/OW-2026-065.md) repairs a NEAR transaction-reader crash on Data slices. The same fixture changes from four passes and one SIGTRAP to five passes; 82 signatures verify independently and 26 adjacent NEAR methods pass. Diagnostics and unsigned iOS Release compilation pass. [Reproduction and remaining scope](NEAR-SIGNING-VECTORS.md). Three more source files have partial dispositions. Hosted signing-removal and journal replays are now verified; the new reader replay is tracked separately.
 
 **Build 104 checkpoint 4.** Eight database journal/removal methods pass with runtime networking denied; four more files have partial source coverage. GitHub also passed the earlier 24 NEAR provider/request methods and unsigned iOS Release compilation at the merged repair. Downloaded artifact and log hashes are verified. Signing-race hosted results were subsequently verified in checkpoint 5. [Scope and remaining gaps](NEAR-JOURNAL-BOUNDARIES.md). No new application defect was confirmed by this selection.

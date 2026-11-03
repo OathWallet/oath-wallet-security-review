@@ -103,3 +103,15 @@ completed all eight NEAR journal/removal methods successfully, with downloaded
 archive, receipt and log hashes verified. [Durable receipts](../evidence/5.0.2-build104/hosted-near-journal/manifest.json).
 The new NEAR reader/signing-vector workflow is a separate pending replay.
 No Apple submission or physical-device operation occurred.
+
+## Checkpoint 6 — NEAR multisig boundaries and artifact provenance
+
+Ten existing production-package multisig methods pass on the host with runtime
+network access denied. The bundled WASM, Rust source and two licenses match
+the pinned upstream commit byte-for-byte. This is not a verified Rust-to-WASM
+rebuild. The upstream contract test attempt failed during dependency compilation;
+original failure logs are preserved and no contract runtime pass is claimed.
+Two application files have partial dispositions. The newly inventoried upstream
+files and lock dependencies retain explicit gaps. [Read scope and reproducible
+commands](NEAR-MULTISIG-BOUNDARIES.md). No app code, App Store submission, simulator
+or physical-device operation changed.

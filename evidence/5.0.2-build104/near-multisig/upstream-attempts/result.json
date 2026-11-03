@@ -1,0 +1,20 @@
+{
+  "command": "cargo test --locked --lib --manifest-path multisig2/Cargo.toml",
+  "upstream_commit": "1b0436c96379c63aee7d2429c6d5d24019031ab8",
+  "cargo": "1.96.1 (356927216 2026-06-26)",
+  "rustc": "1.96.1 (31fca3adb 2026-06-26)",
+  "attempts": [
+    {
+      "log": "default-cache.log",
+      "exit_code": 101,
+      "scope": "Offline setup attempt; default cargo cache path was an existing non-directory."
+    },
+    {
+      "log": "isolated-cache.log",
+      "exit_code": 101,
+      "scope": "Isolated CARGO_HOME/CARGO_TARGET_DIR; dependency compilation failed in wasmer-runtime-core-near and librocksdb-sys. No contract tests executed."
+    }
+  ],
+  "contract_runtime_status": "not executed",
+  "source_to_binary_rebuild_verified": false
+}
