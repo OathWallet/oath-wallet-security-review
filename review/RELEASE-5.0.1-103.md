@@ -518,3 +518,44 @@ removal function and call-path scope is recorded separately.
 **301 audit-helper/evidence-integrity tests pass.** These are separate from production Swift tests.
 
 New publication files, expanded logs and both expanded hosted archives pass the secret scan with no findings.
+
+## Checkpoint 20
+
+The delayed-authentication review now has **38 passing checks** in both the initial
+experiment and an isolated network-denied replay. A separate deliberately stale
+envelope changes the result to **36 passes and exactly two expected failures**.
+Both original failure lines and nonzero process exit are preserved. This is a
+negative control in an audit-only source copy, not an application defect or fix.
+
+Actual vault/encrypted-envelope/SQLite and EVM imported-key message/EIP-712 signing
+code runs against in-memory credential and biometric storage. Six interleavings
+per signing type cover soft removal, permanent removal, restore before biometric
+completion, another wallet's removal, failed vault persistence and locking.
+HD derivation, OS authentication, full UI and the relay remain outside the runtime
+fixture. [Detailed boundaries and commands](CONNECT-REMOVAL-AUTHORIZATION.md) ·
+[Manifest and logs](../evidence/5.0.1-build103/connect-removal-auth/manifest.json).
+
+Eleven selected production function texts match the baseline exactly; their
+hashes and line ranges are recorded. Three previously outstanding files gain
+partial dispositions from the documented source reads. Direct compiler coverage
+is now **244 reviewed, 140 partial, 1,493 outstanding, 460 generated-and-verified,
+and 20 generated inputs needing trace**. The combined completion gate retains
+**16,769 open coverage/validation entries**, not a vulnerability count.
+
+**307 audit-helper/evidence-integrity tests pass.** Changed files and expanded logs
+pass the secret scan. The initial helper import failure and correction are noted.
+No application code changed; tested app remains
+`0e91ce56f91ef56b3e45629967e01e449be0052f`. Checkpoint 19's unsigned iOS build
+is prior evidence for that revision, not a new build in this checkpoint.
+
+The signing-to-journal/removal race remains open. Passing delayed-biometric
+checks must not be read as all lifecycle concurrency resolved. No simulator,
+physical device, OS authentication, live relay/transaction or App Store operation.
+
+The [checkpoint 19 three-stage removal replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41576159225)
+now passes on GitHub. The downloaded ZIP size/digest, all three exact source
+revisions, expected failures, per-method outcomes and log hashes were verified.
+[Hosted receipt](../evidence/5.0.1-build103/ci-retests/connect-removal-github.json).
+This supersedes its earlier running snapshot; the original artifact accompanies
+this release. The [new delayed-authentication workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41577528851)
+is running; its hosted result remains pending.

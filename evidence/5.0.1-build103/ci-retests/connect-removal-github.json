@@ -1,0 +1,155 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41576159225",
+  "workflow_revision": "2302ae8c022bf21d9bbb0c60e8768125bd322a22",
+  "conclusion": "success",
+  "artifact_id": 13204870248,
+  "archive_digest": "sha256:62c189f5223593bb51eb84432495d11e8ca6bc75bec8e660fd1bbec36c13e121",
+  "archive_bytes": 34038,
+  "published_archive": "5.0.1-build103-connect-removal-github.zip",
+  "results": {
+    "before": {
+      "source_commit": "31178e42e40d67218c2b52eda0024a5b4224f376",
+      "phase": "before",
+      "expected_failure_reproduced": true,
+      "test_exit_code": 1,
+      "cases": [
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testEveryJournalPendingStateBlocksOnlyItsWallet",
+          "status": "failed",
+          "exit_code": 1,
+          "duration_seconds": 23.025,
+          "log": "OathDatabase-cases/fb57b456377ba374.log",
+          "log_sha256": "184a27930f8752a363248d7637d7a6ffbcaa25b78e1dd1dc635f1b1f3c16c466"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testResetStillErasesPendingJournalAndRejectsLateWrites",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 5.196,
+          "log": "OathDatabase-cases/fedaf11df935f807.log",
+          "log_sha256": "8d767e768993e5b367c8546129981a9e8ef3760e6c04ffaf28ed4d43dcc8d0d4"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testSignedXrplRemovalAndPurgeAreBlocked",
+          "status": "failed",
+          "exit_code": 1,
+          "duration_seconds": 10.436,
+          "log": "OathDatabase-cases/5d314c48c4f6d9fd.log",
+          "log_sha256": "a50f16d8d24554ec4bfb41d955ffaf5b09e9fb579d55107ff7ffe673b36afe80"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testTerminalJournalStatesPermitRemoval",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 22.14,
+          "log": "OathDatabase-cases/8ec9ae6a7299a755.log",
+          "log_sha256": "60343f9c566971a3da01d7fb20e686e63a174fd8985b70cdfd23846ef16c466f"
+        }
+      ],
+      "duration_seconds": 523.23,
+      "script_sha256": "db5a20d87d767e8f864321c92df2e3c2179ab14c579a78c99053c04c4271fff0",
+      "scope": "Actual migrated database and removal methods; XRP case uses a signed synthetic transaction, seven-chain matrix uses schema-only synthetic journal rows. No provider, UI, simulator or live network tests."
+    },
+    "compatibility": {
+      "source_commit": "610f2fbcfa1b9a08bf9cfd9b439247324bf5366a",
+      "phase": "compatibility",
+      "expected_failure_reproduced": true,
+      "test_exit_code": 1,
+      "cases": [
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testPreviouslyRemovedJournalsKeepRetentionCleanupReachable",
+          "status": "failed",
+          "exit_code": 1,
+          "duration_seconds": 7.243,
+          "log": "OathDatabase-cases/a71f09046fe378fa.log",
+          "log_sha256": "489f6e0e9b0aa6abf54579cfd8c40d797c7e7ba4e7617e40f18883acbc256eed"
+        }
+      ],
+      "duration_seconds": 34.74,
+      "script_sha256": "db5a20d87d767e8f864321c92df2e3c2179ab14c579a78c99053c04c4271fff0",
+      "scope": "Actual migrated database and removal methods; XRP case uses a signed synthetic transaction, seven-chain matrix uses schema-only synthetic journal rows. No provider, UI, simulator or live network tests."
+    },
+    "after": {
+      "source_commit": "0e91ce56f91ef56b3e45629967e01e449be0052f",
+      "phase": "after",
+      "expected_failure_reproduced": false,
+      "test_exit_code": 0,
+      "cases": [
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testEveryJournalPendingStateBlocksOnlyItsWallet",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 22.426,
+          "log": "OathDatabase-cases/fb57b456377ba374.log",
+          "log_sha256": "b219e72078be021a761babbdd4860b5afd98975d9a3b0d3ce6621b6a78758da1"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testPreviouslyRemovedJournalsKeepRetentionCleanupReachable",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 10.012,
+          "log": "OathDatabase-cases/a71f09046fe378fa.log",
+          "log_sha256": "8d1ed81c84504680af10b88b58728c548d1393a960a28d6f3bed9ba19d5d7ce8"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testResetStillErasesPendingJournalAndRejectsLateWrites",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 2.673,
+          "log": "OathDatabase-cases/fedaf11df935f807.log",
+          "log_sha256": "450c5dd5cf93ade8986a38e6bfecce994113beeeece1b8c4a61c72cb53a084d6"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testSignedXrplRemovalAndPurgeAreBlocked",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 8.196,
+          "log": "OathDatabase-cases/5d314c48c4f6d9fd.log",
+          "log_sha256": "aab52cb6112364fad2aaea67746212096ef2cd91dcb493641f55ef488013f748"
+        },
+        {
+          "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testTerminalJournalStatesPermitRemoval",
+          "status": "passed",
+          "exit_code": 0,
+          "duration_seconds": 21.801,
+          "log": "OathDatabase-cases/8ec9ae6a7299a755.log",
+          "log_sha256": "5d73784423ce9ac221ea9e41144ac948925471b102fc4a280c343e4168f76efa"
+        }
+      ],
+      "duration_seconds": 41.37,
+      "script_sha256": "db5a20d87d767e8f864321c92df2e3c2179ab14c579a78c99053c04c4271fff0",
+      "scope": "Actual migrated database and removal methods; XRP case uses a signed synthetic transaction, seven-chain matrix uses schema-only synthetic journal rows. No provider, UI, simulator or live network tests."
+    }
+  },
+  "files": {
+    "toolchain.txt": "59c02f2274fdcd53872a73068f9ac0b0cf14dc833758aa51dc59936e3b47112c",
+    "compatibility/OathDatabase-swift-testing.xml": "3f9a723716a0ed51cc69b0eaabd67328ed5161b754232cc8ebad42f6a83f4425",
+    "compatibility/result.json": "af22a6bbaeb478761a8ea04506f9954833fbcfeddf470edc9a45470c6cb1361b",
+    "compatibility/OathDatabase-cases.json": "f64ed27b75fb0a09644be15f8a7860575ad8a63b8f11a4b687acaf7fce7db522",
+    "compatibility/OathDatabase.xml": "98b9ad559fa566c9641af5a78e9647378113344066ae41f21c6d86dfe98e9451",
+    "compatibility/driver.log": "bfd69d0479ba4b7f91b8b4c377ed1332ce0c28be8e20dd0156155243f6660169",
+    "compatibility/OathDatabase-swift-testing.log": "139fb31392bde92faf8ffac6705d27a78affe498e9f5da8e94c03e7d6a798527",
+    "before/OathDatabase-swift-testing.xml": "928bb4d737f33bb7cf45f1f2773751786a84ced9affa2a88556a3a88dae15e6e",
+    "before/result.json": "73aed04d775458f080d37a4c24ef26323b285948b9d0407e1a62462b761b4e22",
+    "before/OathDatabase-cases.json": "6240451979afd687c93d6c844bf0bf5a8c906714e3adeffa270d5bacf63e9693",
+    "before/OathDatabase.xml": "9141b79ab173226c8b60760edc7e924a8b57c2c08dc183e9fcf6bf7b44554c03",
+    "before/driver.log": "8d6c1f1a9f9664fcaf9bf273c2f7f732fd50e44eef524398b06a07395673282e",
+    "before/OathDatabase-swift-testing.log": "139fb31392bde92faf8ffac6705d27a78affe498e9f5da8e94c03e7d6a798527",
+    "after/OathDatabase-swift-testing.xml": "7517fcc1e93c41f4293899975ea48f59412b181e6a1d82cc88de7dd9a0559902",
+    "after/result.json": "a2bedba8f1480bab6ad5f5e50aa6d9969c9f38f527df3605c5e376d917c646c2",
+    "after/OathDatabase-cases.json": "9dc8f429a87c80aa0532949dbce3b601829b0eb9ac0bbcb8bdb015a60ea3d73c",
+    "after/OathDatabase.xml": "052e631b8ac05f17491912c3840cda111ed8713f5eeefe14bae2db8ad8e58baf",
+    "after/driver.log": "6bd5ac3b357bc722a6e04722d64da08e689b8cbaa7df4c9a4ab910460a174e6f",
+    "after/OathDatabase-swift-testing.log": "139fb31392bde92faf8ffac6705d27a78affe498e9f5da8e94c03e7d6a798527",
+    "after/OathDatabase-cases/fedaf11df935f807.log": "450c5dd5cf93ade8986a38e6bfecce994113beeeece1b8c4a61c72cb53a084d6",
+    "after/OathDatabase-cases/fb57b456377ba374.log": "b219e72078be021a761babbdd4860b5afd98975d9a3b0d3ce6621b6a78758da1",
+    "after/OathDatabase-cases/8ec9ae6a7299a755.log": "5d73784423ce9ac221ea9e41144ac948925471b102fc4a280c343e4168f76efa",
+    "after/OathDatabase-cases/5d314c48c4f6d9fd.log": "aab52cb6112364fad2aaea67746212096ef2cd91dcb493641f55ef488013f748",
+    "after/OathDatabase-cases/a71f09046fe378fa.log": "8d1ed81c84504680af10b88b58728c548d1393a960a28d6f3bed9ba19d5d7ce8",
+    "before/OathDatabase-cases/fedaf11df935f807.log": "8d767e768993e5b367c8546129981a9e8ef3760e6c04ffaf28ed4d43dcc8d0d4",
+    "before/OathDatabase-cases/fb57b456377ba374.log": "184a27930f8752a363248d7637d7a6ffbcaa25b78e1dd1dc635f1b1f3c16c466",
+    "before/OathDatabase-cases/8ec9ae6a7299a755.log": "60343f9c566971a3da01d7fb20e686e63a174fd8985b70cdfd23846ef16c466f",
+    "before/OathDatabase-cases/5d314c48c4f6d9fd.log": "a50f16d8d24554ec4bfb41d955ffaf5b09e9fb579d55107ff7ffe673b36afe80",
+    "compatibility/OathDatabase-cases/a71f09046fe378fa.log": "489f6e0e9b0aa6abf54579cfd8c40d797c7e7ba4e7617e40f18883acbc256eed"
+  }
+}

@@ -45,3 +45,9 @@ gate to **16,768 open entries**. The 170 upstream input files remain outstanding
 Direct compiler inputs: 244 reviewed, 137 partial, 1,496 outstanding,
 460 generated-and-verified and 20 needing trace. JavaScript assets are outside
 that direct Swift/C compiler trace. No overall completion claim is made.
+
+Checkpoint 20 adds 38 passing production-vault/EVM imported-key host checks and
+a two-failure deliberate stale-envelope control. Three partial file dispositions
+leave 244 reviewed, 140 partial, 1,493 outstanding direct compiler inputs; generated
+counts are unchanged. The combined gate remains 16,769 open entries. Signing-to-
+journal/removal atomicity and the full review remain incomplete.

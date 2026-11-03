@@ -1,0 +1,92 @@
+{
+  "source_commit": "0e91ce56f91ef56b3e45629967e01e449be0052f",
+  "baseline": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "production_replay": {
+    "passed": 38,
+    "failed": 0
+  },
+  "deliberate_stale_envelope": {
+    "passed": 36,
+    "failed": 2
+  },
+  "files": {
+    "initial.log.gz": {
+      "sha256": "f24317af50dc5831bfcb928586d6d96780cf170a42bf89087276e1a5d34dd138",
+      "uncompressed_sha256": "2e51694bcd7ae84abbb1ea15666cce838ada2cb36b838c264df08c6b76b15b15",
+      "bytes": 14289
+    },
+    "source-traces.json": {
+      "sha256": "c2d1e0f152ab0925c39fe218dbf2d6a8a5f8f90646fa1562c192faee7565dbff",
+      "uncompressed_sha256": "c2d1e0f152ab0925c39fe218dbf2d6a8a5f8f90646fa1562c192faee7565dbff",
+      "bytes": 6100
+    },
+    "toolchain.json": {
+      "sha256": "6aa0dd490248947ed2e163c0ba867d94f2e6d867a24a74a3fe72ac9bcc5066b4",
+      "uncompressed_sha256": "6aa0dd490248947ed2e163c0ba867d94f2e6d867a24a74a3fe72ac9bcc5066b4",
+      "bytes": 193
+    },
+    "setup-note.json": {
+      "sha256": "e7af84911281d81f8725db2ea823f57421d9ea2dc34b42b5c1a080e88517595a",
+      "uncompressed_sha256": "e7af84911281d81f8725db2ea823f57421d9ea2dc34b42b5c1a080e88517595a",
+      "bytes": 369
+    },
+    "replay/result.json": {
+      "sha256": "8cb3cfb25a574ed6d6f4dbbc005e15ba82c3a3ae11dc6e37d2d54004e905f240",
+      "uncompressed_sha256": "8cb3cfb25a574ed6d6f4dbbc005e15ba82c3a3ae11dc6e37d2d54004e905f240",
+      "bytes": 4676
+    },
+    "replay/checks.log.gz": {
+      "sha256": "69d041b844180e378925df1288e719bc568b3b686fbc78738264ba399e102db7",
+      "uncompressed_sha256": "ef4847d3d3bd35b0bd3b9c70d8242f92cfe83c9203d6b26760c34d153e5e902b",
+      "bytes": 5103
+    },
+    "replay/checkout.log.gz": {
+      "sha256": "950d9ae4ad86be81f1f4dbfab33531da2c5edbe22a7a11b2ad6eaeff8c7770a2",
+      "uncompressed_sha256": "82c8089ab6a5bd7e0c650ed5007659c8af86658525d86200c04bdbddb93fed84",
+      "bytes": 173
+    },
+    "mutant/result.json": {
+      "sha256": "1f91bcb5de0a8e96eb903e648b3bffb6132e180493d8ae7f36f59fbe35d00316",
+      "uncompressed_sha256": "1f91bcb5de0a8e96eb903e648b3bffb6132e180493d8ae7f36f59fbe35d00316",
+      "bytes": 4677
+    },
+    "mutant/checks.log.gz": {
+      "sha256": "a54db98bcb4794e0588fb5c4e486c7f29b32563bba32caaadb6166bce82bf117",
+      "uncompressed_sha256": "344248f087653a6068be088cac748aa4c7cd000f4333a404525e6eb4c9123f6b",
+      "bytes": 5780
+    },
+    "mutant/checkout.log.gz": {
+      "sha256": "c5db7b154f54b84c4c7907d3c7ffa47e77da1ac599730f63fff90816edb6da45",
+      "uncompressed_sha256": "97a9ee63b43a1ef7f5ff1d5a5b103f12f3f8119abcaa26d9135e5ebc84f05447",
+      "bytes": 173
+    },
+    "audit-helper.log.gz": {
+      "sha256": "729c309cf47b679f9817b2e43bdc802786b37287730cda10a43d31cec6e65625",
+      "uncompressed_sha256": "1250057a9771b614b693539373b8ea733d76d8e80165e7d350387dc74520444c",
+      "bytes": 367
+    },
+    "scan.log.gz": {
+      "sha256": "d5fa2e722b09a90adc421a3f1843bd432b1970a832a3541a00c1595ecb7b3d42",
+      "uncompressed_sha256": "983192ffbc6b7bdd46c20aa7b36557fbcae1d0172d9b9a46adab4c1f0cb5fd32",
+      "bytes": 127
+    },
+    "scan.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "uncompressed_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "publication-scan.log.gz": {
+      "sha256": "7baef579052e59b7212dfc6936ac40200d644a86c412da4ac830bab68defdde7",
+      "uncompressed_sha256": "976d734f2eda840e143abfc7791d3c1d7c8479cd4bd8197001bb56cb42029e41",
+      "bytes": 127
+    },
+    "publication-scan.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "uncompressed_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    }
+  },
+  "scope": "Vault authentication completion with memory biometric/credential storage, production EVM imported-key message/typed-data signing and real SQLite; no OS authentication, UI, relay, HD derivation or other chain signing claim. No application source change.",
+  "audit_helpers": 307,
+  "publication_scan_scope": "Changed checkpoint files, expanded logs and the expanded verified hosted removal archive; no whole-history clean claim"
+}
