@@ -1,5 +1,7 @@
 # Oath Wallet 5.0.2 (104) prerelease security review
 
+Build 104 checkpoint 11 adds six passing activation/bootstrap-authority host methods and an expected failing bootstrap-key mutation. Two application files gain scoped partial source review; full app integration remains open. [Results and remaining gaps](review/NEAR-MULTISIG-ACTIVATION.md).
+
 Build 104 checkpoint 10 adds six passing staged-submission host methods and an expected failing request-binding mutation. The preceding paired native-contract GitHub replay is now downloaded and verified. [Scope and remaining gaps](review/NEAR-MULTISIG-LIFECYCLE.md).
 
 

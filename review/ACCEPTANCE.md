@@ -98,3 +98,11 @@ and one expected failed-method mutation control. The paired native-contract
 hosted replay is now verified. The gate retains 16,918 open entries: these tests
 do not promote source coverage or establish full database restart, shipped-WASM
 execution or dependency review. [Exact scope](NEAR-MULTISIG-LIFECYCLE.md).
+
+Build 104 checkpoint 11 adds six passing activation methods and one expected
+failed-method mutation control. Two source files move from outstanding to
+partially reviewed; the gate retains **16,918 outstanding review/validation
+entries**. Full service/model/database integration, shipped-WASM reproduction
+and the remaining implementations stay open. [Exact scope](NEAR-MULTISIG-ACTIVATION.md).
+The 366 audit-helper tests pass. The prior lifecycle workflow is in progress;
+no final hosted activation or lifecycle result is claimed in this checkpoint.

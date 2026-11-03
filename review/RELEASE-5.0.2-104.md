@@ -167,3 +167,17 @@ to fail, while five controls pass. Hosted run 41615849636 now reproduces the
 preceding paired native-contract results; downloaded hashes are verified.
 [Reproduction and limitations](NEAR-MULTISIG-LIFECYCLE.md). No full app/database
 restart, shipped-WASM, physical-device or App Store operation is claimed.
+
+## Checkpoint 11 — Activation and bootstrap authority
+
+Six production-package host methods pass with synthetic providers and runtime
+networking denied. Wrong bootstrap keys, altered permissions, duplicate keys,
+exhausted nonces, stale plans and late cancellation are rejected. Deployment and
+bootstrap removal remain separate stages, with original signatures reconciled
+after JSON reconstruction. Removing the initial bootstrap-key equality check in
+a scratch copy causes exactly one method to fail; five controls pass.
+Two complete application-file source reads receive partial dispositions, not
+full integration or UI coverage. [Reproduction and limits](NEAR-MULTISIG-ACTIVATION.md).
+The previous lifecycle GitHub replay had started when this evidence was
+prepared; its outcome is not claimed here. All 366 audit-helper tests pass. No application code, App Store,
+simulator or physical-device operation changed.

@@ -1,0 +1,106 @@
+{
+  "source_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "mutant": false,
+  "source_sha256": "b8048dcc4b6bd1433b44c5ab862784c2c59bff32a4c6b650dcf257d8c800802c",
+  "executed_source_sha256": "b8048dcc4b6bd1433b44c5ab862784c2c59bff32a4c6b650dcf257d8c800802c",
+  "overlay_sha256": "bd12b6529d8b7def3c2f897ddbbf4d9073c2f2f464209a64c65371834450b30a",
+  "driver_sha256": "06d0c76961633bedcb76461d4333363bb06fc82e721f13598494c6133d9d331b",
+  "isolation_classifier_sha256": "88842fa9ac9aad154d47509d508b481a176c9e8c854ee7ef1b2016ce4dd47b88",
+  "methods": [
+    {
+      "method": "testMissingAndUnderfundedAccountsNeverProducePlan",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testMissingAndUnderfundedAccountsNeverProducePlan.log",
+      "log_sha256": "9c3d9400f35af206d808ad4cc210477f66cd024dc6bc55ae9c01b129a62bb626"
+    },
+    {
+      "method": "testDeploymentAndBootstrapRemovalAreSeparateStages",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testDeploymentAndBootstrapRemovalAreSeparateStages.log",
+      "log_sha256": "3993d22cd1f0ead1391ee39f81fd9c8e1ae29a4763fb9f20f7bf6c4d9c214d82"
+    },
+    {
+      "method": "testUnexpectedBootstrapAuthorityAndNonceAreRejected",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testUnexpectedBootstrapAuthorityAndNonceAreRejected.log",
+      "log_sha256": "4d80f811ad3bd9971fcaa9b9d62172897ee65f79dcf6dbd7657c60da5ea9d0fb"
+    },
+    {
+      "method": "testPreflightRejectsChangedStageNonceCostOrFunding",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testPreflightRejectsChangedStageNonceCostOrFunding.log",
+      "log_sha256": "4867e719fa48782087c9612c081e8a37c7b8c3f2cb9888a4922d4496afdc2c99"
+    },
+    {
+      "method": "testCancellationAfterHeldStateCannotReturnActivationPlan",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testCancellationAfterHeldStateCannotReturnActivationPlan.log",
+      "log_sha256": "1888eff3636a49709c13f4f8cf6b5ad2453611f94423539435b9435b55752006"
+    },
+    {
+      "method": "testEachStageReconcilesOriginalSignatureBeforeNextSetup",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testEachStageReconcilesOriginalSignatureBeforeNextSetup.log",
+      "log_sha256": "2b88e659c07a96882848e572b82252a615b64da472923b92181adce1f9e19470"
+    }
+  ],
+  "runtime_network": "denied by sandbox-exec",
+  "duration_seconds": 88.026,
+  "scope": "Production package client with synthetic provider transport, real Ed25519 signing, JSON restart roundtrip and in-memory setup provider. No real provider, persistent database integration, WASM or device execution.",
+  "files": [
+    {
+      "path": "build.log",
+      "sha256": "484014579a6fed2e695769f1433b55b269c3c7f179c540ad6cbe12d0eeef6a16"
+    },
+    {
+      "path": "checkout.log",
+      "sha256": "ad933bd14df7c185ae791536f5bf22a66d85103eb31f669c03ee742f6cc32e8b"
+    },
+    {
+      "path": "clone.log",
+      "sha256": "b19b775e16d4851f9775d2da15129e27505298f267db95aa4d6e41f6446afdf3"
+    },
+    {
+      "path": "python-version.log",
+      "sha256": "0366d77cc1f1ac88ea458231ba4f639323d5caf34de0d50b7618277fd4395f1f"
+    },
+    {
+      "path": "swift-version.log",
+      "sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    {
+      "path": "testCancellationAfterHeldStateCannotReturnActivationPlan.log",
+      "sha256": "1888eff3636a49709c13f4f8cf6b5ad2453611f94423539435b9435b55752006"
+    },
+    {
+      "path": "testDeploymentAndBootstrapRemovalAreSeparateStages.log",
+      "sha256": "3993d22cd1f0ead1391ee39f81fd9c8e1ae29a4763fb9f20f7bf6c4d9c214d82"
+    },
+    {
+      "path": "testEachStageReconcilesOriginalSignatureBeforeNextSetup.log",
+      "sha256": "2b88e659c07a96882848e572b82252a615b64da472923b92181adce1f9e19470"
+    },
+    {
+      "path": "testMissingAndUnderfundedAccountsNeverProducePlan.log",
+      "sha256": "9c3d9400f35af206d808ad4cc210477f66cd024dc6bc55ae9c01b129a62bb626"
+    },
+    {
+      "path": "testPreflightRejectsChangedStageNonceCostOrFunding.log",
+      "sha256": "4867e719fa48782087c9612c081e8a37c7b8c3f2cb9888a4922d4496afdc2c99"
+    },
+    {
+      "path": "testUnexpectedBootstrapAuthorityAndNonceAreRejected.log",
+      "sha256": "4d80f811ad3bd9971fcaa9b9d62172897ee65f79dcf6dbd7657c60da5ea9d0fb"
+    },
+    {
+      "path": "xcode-version.log",
+      "sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+    }
+  ]
+}
