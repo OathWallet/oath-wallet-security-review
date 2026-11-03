@@ -473,3 +473,5 @@ all supported request types and upstream implementations remain open work.
 **295 audit-helper/evidence-integrity tests pass.** The new publication files and
 expanded logs/bundle pass the secret scan with no findings. Hosted codec/boundary
 replay has not yet produced a result; local results are reported above.
+
+The [GitHub codec/boundary replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41574264723) is queued at publication. Its hosted result remains pending.
