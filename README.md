@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Build 104 checkpoint 7.** Fifty independent NEAR multisig bundles cover 188 transaction parts; three host methods and five verifier controls pass. An isolated nonce mutation is detected. The original signature-byte fixture assumption and its correction remain visible. GitHub has also reproduced the earlier reader crash and repair, with downloaded evidence verified. [Results and remaining scope](review/NEAR-MULTISIG-VECTORS.md).
+
 **Build 104 checkpoint 6.** Ten existing NEAR multisig methods pass with runtime networking denied. Four bundled contract/source/license copies match pinned upstream bytes. Two application files gain partial source dispositions. Upstream Rust tests failed to compile in older dependencies; contract runtime and source-to-WASM reproduction remain unresolved. [Evidence and remaining scope](review/NEAR-MULTISIG-BOUNDARIES.md). No new app defect or app change is claimed.
 
 **Build 104 checkpoint 5.** [OW-2026-065](findings/OW-2026-065.md) repairs a NEAR transaction-reader crash on Data slices. The same fixture changes from four passes and one SIGTRAP to five passes; 82 signatures verify independently and 26 adjacent NEAR methods pass. Diagnostics and unsigned iOS Release compilation pass. [Reproduction and remaining scope](review/NEAR-SIGNING-VECTORS.md). Three more source files have partial dispositions. Hosted signing-removal and journal replays are now verified; the new reader replay is tracked separately.

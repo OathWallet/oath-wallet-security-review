@@ -115,3 +115,16 @@ Two application files have partial dispositions. The newly inventoried upstream
 files and lock dependencies retain explicit gaps. [Read scope and reproducible
 commands](NEAR-MULTISIG-BOUNDARIES.md). No app code, App Store submission, simulator
 or physical-device operation changed.
+
+## Checkpoint 7 — Independent multisig signing vectors
+
+Fifty SDK-generated bundles contain 188 transaction parts. Three host methods
+pass; Node independently verifies all app signatures, and five corrupted-output
+controls are rejected. An isolated nonce mutation causes 90 failed assertions
+in one method. The initial fixture's signature-byte assumption and correction
+remain in the evidence. No new production defect is claimed.
+
+GitHub run 41607922685 reproduced the prior parser failure and repair plus
+26 adjacent regressions; downloaded hashes, method identities and signatures
+were verified. [Reproduction, preserved failures and remaining review](NEAR-MULTISIG-VECTORS.md).
+No app, App Store, simulator or physical-device changes occurred.

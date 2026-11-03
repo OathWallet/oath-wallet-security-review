@@ -1,0 +1,33 @@
+name: Check independent NEAR multisig signing vectors
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/near-multisig-signing.yml', 'scripts/near-multisig-signing.py', 'tests/test_near_multisig_signing.py', 'scripts/near_multisig_signing_evidence.py', 'scripts/near_multisig_verifier_controls.py', 'fixtures/near-multisig-signing/**', 'fixtures/near-signing/package*.json']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 45
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '26.5.0'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_near_multisig_signing.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 5d91d1e4dfd36c56031c7a8fb1ee305446dc54de
+          python3 scripts/near-multisig-signing.py .work/wallet .work/near-vectors evidence/ci/near-multisig-signing
+          python3 scripts/near_multisig_signing_evidence.py evidence/ci/near-multisig-signing
+          sandbox-exec -p '(version 1) (allow default) (deny network*)' python3 scripts/near_multisig_verifier_controls.py evidence/ci/near-multisig-signing
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: near-multisig-signing-evidence, path: evidence/ci/near-multisig-signing, retention-days: 90}

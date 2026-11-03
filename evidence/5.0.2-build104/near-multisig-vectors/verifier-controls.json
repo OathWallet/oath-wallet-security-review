@@ -1,0 +1,40 @@
+{
+  "controls": [
+    {
+      "name": "missing-bundle",
+      "expected_error": "Incomplete bundle results",
+      "exit_code": 1,
+      "log": "missing-bundle.log",
+      "log_sha256": "e197bb67f19c46ee909b06290510e284580eff045b833e9726bfb5ac393a039b"
+    },
+    {
+      "name": "bundle-order",
+      "expected_error": "Missing or reordered bundle",
+      "exit_code": 1,
+      "log": "bundle-order.log",
+      "log_sha256": "a323f2c196842713fa0d6c0bc3844175fbd32b69f4471d310d055a41b3cb68c6"
+    },
+    {
+      "name": "missing-part",
+      "expected_error": "Missing or reordered bundle",
+      "exit_code": 1,
+      "log": "missing-part.log",
+      "log_sha256": "a323f2c196842713fa0d6c0bc3844175fbd32b69f4471d310d055a41b3cb68c6"
+    },
+    {
+      "name": "changed-raw",
+      "expected_error": "Changed transaction bytes",
+      "exit_code": 1,
+      "log": "changed-raw.log",
+      "log_sha256": "3ca5208056dc15d53752610d8573a29a4e001a488819851024449d50684d26bb"
+    },
+    {
+      "name": "changed-signature",
+      "expected_error": "Invalid production signature",
+      "exit_code": 1,
+      "log": "changed-signature.log",
+      "log_sha256": "0530e7652ae9ece262ae618445ea2b8d0bf0fd1219a235b0720fbac88af17f3b"
+    }
+  ],
+  "verifier_sha256": "dc3d351b32fe3e97a19863f9633c8bbaa182985ca6923466c01178935424db36"
+}

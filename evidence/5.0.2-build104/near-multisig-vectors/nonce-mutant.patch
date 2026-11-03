@@ -1,0 +1,13 @@
+diff --git a/Packages/OathAnkr/Sources/OathAnkr/NearMultisig.swift b/Packages/OathAnkr/Sources/OathAnkr/NearMultisig.swift
+index 45d2e08..a77284b 100644
+--- a/Packages/OathAnkr/Sources/OathAnkr/NearMultisig.swift
++++ b/Packages/OathAnkr/Sources/OathAnkr/NearMultisig.swift
+@@ -86,7 +86,7 @@ public extension NearSendCrypto {
+         case .transfer:
+             var result = [try tx(c.policy.publicKeys[0],c.nonces[0],[call("add_request",args(["request":c.request(plan)]),30_000_000_000_000,"0")])]
+             for i in 0..<c.policy.required {
+-                result.append(try tx(c.policy.publicKeys[i],c.nonces[i]+(i == 0 ? 1:0),[call("confirm",args(["request_id":.number(String(c.requestID))]),150_000_000_000_000,"0")]))
++                result.append(try tx(c.policy.publicKeys[i],c.nonces[i],[call("confirm",args(["request_id":.number(String(c.requestID))]),150_000_000_000_000,"0")]))
+             }
+             return result
+         }

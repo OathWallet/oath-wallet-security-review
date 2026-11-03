@@ -1,0 +1,64 @@
+{
+  "application_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "archive": "runs.zip",
+  "archive_file_count": 68,
+  "original_fixture_failure": {
+    "passed_methods": 2,
+    "failed_methods": 1,
+    "assertions": 376,
+    "cause": "Fixture required identical SDK and CryptoKit signature bytes. Independent verification of all 188 actual signatures succeeds. Original fixture and logs preserved."
+  },
+  "final": {
+    "passed_methods": 3,
+    "skipped": 0,
+    "bundles": 50,
+    "signed_parts": 188,
+    "independently_verified_signatures": 188
+  },
+  "synthetic_mutation": {
+    "commit": "579ce854c24f020fab9aaf4692a95ede21f67a52",
+    "passed_methods": 2,
+    "failed_methods": 1,
+    "assertions": 90,
+    "scope": "Isolated test-only mutation removes the first member confirmation nonce increment. Not an application finding or production edit."
+  },
+  "negative_verifier_controls": 5,
+  "files": [
+    {
+      "path": "attempt1/result.json",
+      "sha256": "6633117a724643e3c548f16566a91476e11800c23dd6c619167f2a12e2e452d7"
+    },
+    {
+      "path": "attempt2/result.json",
+      "sha256": "84d62add8b2494a4f9d1aa62999517f9fb3572a72bcf28623d3231c62a25a54f"
+    },
+    {
+      "path": "nonce-mutant-result/result.json",
+      "sha256": "a1b9a90d7416f8878103fab9ec9e6286a7471e1f5d327184466c591a6003a354"
+    },
+    {
+      "path": "nonce-mutant.patch",
+      "sha256": "75074d2d7b98fa880ddcd314aebb2132e913e7f64bd4123f03195e26a8abcf33"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "1308ac5e828e372e62020693702111043add74ef5a6abc05b1d56ef742b807fb"
+    },
+    {
+      "path": "validation/helpers.log",
+      "sha256": "b17c58ccd9542e5dd346aa2e1b7cb348a3776f850e61c0d9518831ad470ad73d"
+    },
+    {
+      "path": "validation/publication-scan.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "validation/result.json",
+      "sha256": "c5a89c58a5f2bcf78bb42e96cec561c662bcc047a412a36eb32b1c11601c49dc"
+    },
+    {
+      "path": "verifier-controls.json",
+      "sha256": "e40cea00491d957e53f1e651925a651c2f84aad5298c3ee8c0260becda5d1970"
+    }
+  ]
+}
