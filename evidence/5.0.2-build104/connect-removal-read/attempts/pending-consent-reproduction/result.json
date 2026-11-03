@@ -1,0 +1,73 @@
+{
+  "source_commit": "1c5a9fab7562dab4583810365ab6b4a2e248d6a1",
+  "source_sha256": "16c30204dc73e19f344421dfab72ad88c4c96a2850f3cb0d42b701609ad9e2b3",
+  "compiled_vault_sha256": "16c30204dc73e19f344421dfab72ad88c4c96a2850f3cb0d42b701609ad9e2b3",
+  "fixture_sha256": "a4e663fc17a5ebc750f7c43845e33da83328f2ca6282131e4ca7f3bdeb41aa48",
+  "harness_original_sha256": "aeff29896a8fb9deb76ec235dbea520fae4536d5636a330c67e2165c9445034f",
+  "harness_executed_sha256": "b36c736e2481a7f70e110f1cb32ac6491fddcc5b6dd0dc75a0a14200f6deea4a",
+  "script_sha256": "4843489c2610ac7ce9c9262798a7e430cacc2639275f34ed82932025276af623",
+  "expected_vulnerable": true,
+  "exit_code": 1,
+  "cases": [
+    {
+      "name": "soft removal biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "soft removal delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "permanent removal biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "permanent removal delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "remove and restore biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "remove and restore delayed consent",
+      "status": "fail"
+    },
+    {
+      "name": "remove and restore fresh consent",
+      "status": "pass"
+    },
+    {
+      "name": "other wallet removal biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "other wallet removal delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "failed save biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "failed save expected save failure",
+      "status": "pass"
+    },
+    {
+      "name": "failed save delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "lock biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "lock delayed consent",
+      "status": "pass"
+    }
+  ],
+  "log_sha256": "58a7e8ee1dded83495b9a6b722d01e23ce0b1acf58189bdf3afe21b3fb47515c",
+  "duration_seconds": 99.51,
+  "runtime_network": "denied",
+  "scope": "Production vault/encrypted envelope/SQLite/EVM imported-key message and typed-data signing; memory credential and biometric stores; inherited synthetic HD and unrelated chain/service adapters. No UI, OS authentication, simulator, device or relay."
+}

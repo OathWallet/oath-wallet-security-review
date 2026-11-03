@@ -1,0 +1,762 @@
+{
+  "status": "partial source trace, not whole-file review",
+  "versions": [
+    {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "eeb17988608021a989709f5a0d3af1890895d4c6dbe00e9b183dccf348377c9e",
+      "signing_methods": [
+        {
+          "name": "signBitcoinSend",
+          "line_start": 476,
+          "line_end": 517,
+          "sha256": "a6705da5f5411fc5b3345961a3f8c566901c152d85a7c355df6380b13e54dc28",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signSuiSend",
+          "line_start": 519,
+          "line_end": 547,
+          "sha256": "6e8093a56757dad5035abd0bf00eac970743e9db6c37a3e64b85fd1582e6c592",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signXrplSend",
+          "line_start": 549,
+          "line_end": 577,
+          "sha256": "a3693915c46df521c2d1e0e9806ef996a0c2e10510d2a06236b3e0bd6cbd8552",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signStellarSend",
+          "line_start": 579,
+          "line_end": 607,
+          "sha256": "171a6be284c9c7f315638d2fc33160d6fc1748897c47bff947285ebbcd7ec6c4",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signTronSend",
+          "line_start": 673,
+          "line_end": 709,
+          "sha256": "630fe02dcbc4dd27411c932337b8225f66bd314e3eaf204b8b52bec7640a0d30",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signNearSend",
+          "line_start": 712,
+          "line_end": 740,
+          "sha256": "c948a895e4023e02e6960232933fd7592383a0fa681406e2e4f943049f84e298",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signPolkadotSend",
+          "line_start": 743,
+          "line_end": 771,
+          "sha256": "9d300c45713262f4ac509407136665d97f46e78b6d6eb6b85343e9d69937697f",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signThorchainSend",
+          "line_start": 784,
+          "line_end": 812,
+          "sha256": "834bf64f214fc4df42796a6268f53785890c41fa4098f00db0e6796bc711fa10",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectXrpl",
+          "line_start": 826,
+          "line_end": 843,
+          "sha256": "3b92f998f6beda58e29fae0eb145da28a01d4c8cca7e4a4fb5b5505e37cecaa9",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectStellar",
+          "line_start": 845,
+          "line_end": 862,
+          "sha256": "58f935c963432bb3dcbd9860ae4b2392e2687fad32d765c6b01d9141691eec4c",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectNear",
+          "line_start": 864,
+          "line_end": 881,
+          "sha256": "0a6313e1764e95c940dc2214149aa401780ffdc0b953e85507469ac95b9e6c82",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectSui",
+          "line_start": 883,
+          "line_end": 900,
+          "sha256": "607b3ef5e839f46ef1988f9512f04c09377d9a49088941bbc68f71d04d3dd4ae",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectPolkadot",
+          "line_start": 911,
+          "line_end": 928,
+          "sha256": "4958e27f6431a47cdf3209c1cd892f1acb36503bd37e33138b42a54c9f31ace5",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectTron",
+          "line_start": 930,
+          "line_end": 947,
+          "sha256": "741a2f21174d4ad9d5a595f8d14d5eb0f626c46d67551522e62066da520d2875",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectBitcoin",
+          "line_start": 949,
+          "line_end": 966,
+          "sha256": "6e880c8bc8fe0c184a0f8ef73cc4e3f47e067027612bed464710b6de7f992677",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectTon",
+          "line_start": 969,
+          "line_end": 988,
+          "sha256": "75400643bd2bd6d09a183ee18ebff0f89791dedee7837b31e5787dfc3ff9ede8",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectTonProof",
+          "line_start": 990,
+          "line_end": 1009,
+          "sha256": "7e65b0d4d344aefe713f98e9d24663166e6b991f769dece513e1d1e839f69a67",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectSolana",
+          "line_start": 1011,
+          "line_end": 1031,
+          "sha256": "79fad44b94a285024d9a23b970288f16e764b86c27f40f1f50bd709b9ea2006c",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signSolanaSend",
+          "line_start": 1033,
+          "line_end": 1072,
+          "sha256": "cacd9f00a662c9a7c678fa9b4a6b280cb0120ab24de265cc43f7724fc20df3a7",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectMessage",
+          "line_start": 1077,
+          "line_end": 1098,
+          "sha256": "d53250a93e3247fd4f38f3d2d2be2c3c0afde5fdf3f7956c127022937ea94e73",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signWalletConnectTypedData",
+          "line_start": 1102,
+          "line_end": 1122,
+          "sha256": "832079b05bad88dba7d35a9f341e76278b160456dc194490dfb3fa082a5800a2",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signThorchainWalletConnect",
+          "line_start": 1126,
+          "line_end": 1147,
+          "sha256": "0cb392739000039b7820efe2f81db2fe01619cf17fec80d249c986d8d053e983",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signArcSend",
+          "line_start": 1149,
+          "line_end": 1177,
+          "sha256": "db7f010b41e44b230ba320cac1a9b8b6d2250797b3cadf54de5fa5870c028c1c",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signEVMSend",
+          "line_start": 1180,
+          "line_end": 1216,
+          "sha256": "e9d4eb342f7e1782da3bb2e10ca00b9ecf7fdcf01664bfd9c007395e3c960285",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signAptosSend",
+          "line_start": 1219,
+          "line_end": 1247,
+          "sha256": "8385cc7ea376c5e2f3e987c46e975b836677da1f3b81048b3bd1e32856a3cde9",
+          "wallet_scoped_generation": false
+        },
+        {
+          "name": "signTonSend",
+          "line_start": 1259,
+          "line_end": 1287,
+          "sha256": "cadebd8e2ba1f4a1b2876264e755074b2553697b78adda8f894b68954f5c3785",
+          "wallet_scoped_generation": false
+        }
+      ]
+    },
+    {
+      "commit": "5b03abd86443a72947ff4fcdda4f94b348620627",
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "b3d7584125758de340e4721bdd788eed49ece5f093f5ffb77d490911b105e44e",
+      "signing_methods": [
+        {
+          "name": "signBitcoinSend",
+          "line_start": 485,
+          "line_end": 526,
+          "sha256": "4e106e0bdaeaab6f989b3ec1269f34a7e6d886f19175e05789685821b1d2eae6",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signSuiSend",
+          "line_start": 528,
+          "line_end": 556,
+          "sha256": "4a58645fa6eb3b35d7d24b955f23fc4c827059d74f86f1b47506b2dd0e77ea35",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signXrplSend",
+          "line_start": 558,
+          "line_end": 586,
+          "sha256": "5e4bbac8b8cd7bc38f578946452cfad00da960ed38d4759e3059c12cd4758464",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signStellarSend",
+          "line_start": 588,
+          "line_end": 616,
+          "sha256": "4a45f84e7d3eac9d84e1866e82ca2b8fd011045805e8482df79728da0a78752f",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signTronSend",
+          "line_start": 682,
+          "line_end": 718,
+          "sha256": "4403b3715eccbbaac8f90a55832e53b75e0284f41c3125836c4e3c87736a9245",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signNearSend",
+          "line_start": 721,
+          "line_end": 749,
+          "sha256": "301e199ba79f596d6ca2bf71aeabbc20713707693a890c0d804758c3c2589417",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signPolkadotSend",
+          "line_start": 752,
+          "line_end": 780,
+          "sha256": "df0465ed9fa33e19930da96d6612d45c79787fca697560c110e22fdcc5c382d8",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signThorchainSend",
+          "line_start": 793,
+          "line_end": 821,
+          "sha256": "91444589d262ccc216b89c35ef48d26fd5fa0b1b76a66ba4bb9bcc8f1d4de10c",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectXrpl",
+          "line_start": 835,
+          "line_end": 852,
+          "sha256": "28ac855b8882b6dbb4272b3fa5315a7c9728d0817e1244f34d25cc628ead88c3",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectStellar",
+          "line_start": 854,
+          "line_end": 871,
+          "sha256": "69ca39951347bdae44ed2242fdf3c34a87bdad1fb9fdb2731090b8f615d0d840",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectNear",
+          "line_start": 873,
+          "line_end": 890,
+          "sha256": "47db8557123d687f01817e0ee7bd2571e040bfa9073078aca919748c570a7497",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectSui",
+          "line_start": 892,
+          "line_end": 909,
+          "sha256": "f1a983172ffb58fd68dc50d57ff6a05b084266f7882e32238cdc35e99a93e0c2",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectPolkadot",
+          "line_start": 920,
+          "line_end": 937,
+          "sha256": "a16eb6b9240619125c0b5f91b5e6f984a156e5723f90268809bbb5ee188a2097",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTron",
+          "line_start": 939,
+          "line_end": 956,
+          "sha256": "5a1518b5cb377f52245d27ae67d3505b122be7aa2ebbfd21d022855a864d9f38",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectBitcoin",
+          "line_start": 958,
+          "line_end": 975,
+          "sha256": "6759275a9a5a7954ac09c3e8af489c1a65c0c92593e7819f88ead48a9d86f3de",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTon",
+          "line_start": 978,
+          "line_end": 997,
+          "sha256": "9d210db7983de598031b57c91f80fa1a1a9e8b2db6232efc7e5ab8c2af67cccd",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTonProof",
+          "line_start": 999,
+          "line_end": 1018,
+          "sha256": "1f6e82065113ab9e37e06224684f35f64ae33b928f85458a566588596d460d60",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectSolana",
+          "line_start": 1020,
+          "line_end": 1040,
+          "sha256": "7285dc78e9084a84b3d192378363df12d1e6baec442790b63f7dfbb519f73b52",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signSolanaSend",
+          "line_start": 1042,
+          "line_end": 1081,
+          "sha256": "63ade5135acf33c76142f0325c0d68240cf2a7913c7031b4eb0f20b87e432b8f",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectMessage",
+          "line_start": 1086,
+          "line_end": 1107,
+          "sha256": "b321f827f4e55533cf95cc79856548606ecdc72722419abdaf86cba6247ad9e6",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTypedData",
+          "line_start": 1111,
+          "line_end": 1131,
+          "sha256": "fae86630e22d8cb8a180d4e3bba40f2fb6ce4cfed3f14723f6e54ebe6d7ce191",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signThorchainWalletConnect",
+          "line_start": 1135,
+          "line_end": 1156,
+          "sha256": "aa19eef635784451ddf6eed970ee34855a48b1485d8265db8bf96affae3a2b12",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signArcSend",
+          "line_start": 1158,
+          "line_end": 1186,
+          "sha256": "3c24be172da373970647595fcd3cf47bc176b68608b9d847c3185459b5dc9ac4",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signEVMSend",
+          "line_start": 1189,
+          "line_end": 1225,
+          "sha256": "61d9caca2d6ba1a78ef84de8b0a8eb1b964ca97d68cfd725d70316245ae7fb85",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signAptosSend",
+          "line_start": 1228,
+          "line_end": 1256,
+          "sha256": "fa03e7583fa1e961d359b2f1b0b29b352824d5b63f5e6c02351dfe0c8c6cb9ed",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signTonSend",
+          "line_start": 1268,
+          "line_end": 1296,
+          "sha256": "bea218d2ee79e42f8315da2bf3c9dcf6c45d974b178f1fa4dd6dfc7e4e7a24ca",
+          "wallet_scoped_generation": true
+        }
+      ]
+    },
+    {
+      "commit": "1c5a9fab7562dab4583810365ab6b4a2e248d6a1",
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "16c30204dc73e19f344421dfab72ad88c4c96a2850f3cb0d42b701609ad9e2b3",
+      "signing_methods": [
+        {
+          "name": "signBitcoinSend",
+          "line_start": 485,
+          "line_end": 526,
+          "sha256": "4e106e0bdaeaab6f989b3ec1269f34a7e6d886f19175e05789685821b1d2eae6",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signSuiSend",
+          "line_start": 528,
+          "line_end": 556,
+          "sha256": "4a58645fa6eb3b35d7d24b955f23fc4c827059d74f86f1b47506b2dd0e77ea35",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signXrplSend",
+          "line_start": 558,
+          "line_end": 586,
+          "sha256": "5e4bbac8b8cd7bc38f578946452cfad00da960ed38d4759e3059c12cd4758464",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signStellarSend",
+          "line_start": 588,
+          "line_end": 616,
+          "sha256": "4a45f84e7d3eac9d84e1866e82ca2b8fd011045805e8482df79728da0a78752f",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signTronSend",
+          "line_start": 682,
+          "line_end": 718,
+          "sha256": "4403b3715eccbbaac8f90a55832e53b75e0284f41c3125836c4e3c87736a9245",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signNearSend",
+          "line_start": 721,
+          "line_end": 749,
+          "sha256": "301e199ba79f596d6ca2bf71aeabbc20713707693a890c0d804758c3c2589417",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signPolkadotSend",
+          "line_start": 752,
+          "line_end": 780,
+          "sha256": "df0465ed9fa33e19930da96d6612d45c79787fca697560c110e22fdcc5c382d8",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signThorchainSend",
+          "line_start": 793,
+          "line_end": 821,
+          "sha256": "91444589d262ccc216b89c35ef48d26fd5fa0b1b76a66ba4bb9bcc8f1d4de10c",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectXrpl",
+          "line_start": 835,
+          "line_end": 852,
+          "sha256": "28ac855b8882b6dbb4272b3fa5315a7c9728d0817e1244f34d25cc628ead88c3",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectStellar",
+          "line_start": 854,
+          "line_end": 871,
+          "sha256": "69ca39951347bdae44ed2242fdf3c34a87bdad1fb9fdb2731090b8f615d0d840",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectNear",
+          "line_start": 873,
+          "line_end": 890,
+          "sha256": "47db8557123d687f01817e0ee7bd2571e040bfa9073078aca919748c570a7497",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectSui",
+          "line_start": 892,
+          "line_end": 909,
+          "sha256": "f1a983172ffb58fd68dc50d57ff6a05b084266f7882e32238cdc35e99a93e0c2",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectPolkadot",
+          "line_start": 920,
+          "line_end": 937,
+          "sha256": "a16eb6b9240619125c0b5f91b5e6f984a156e5723f90268809bbb5ee188a2097",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTron",
+          "line_start": 939,
+          "line_end": 956,
+          "sha256": "5a1518b5cb377f52245d27ae67d3505b122be7aa2ebbfd21d022855a864d9f38",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectBitcoin",
+          "line_start": 958,
+          "line_end": 975,
+          "sha256": "6759275a9a5a7954ac09c3e8af489c1a65c0c92593e7819f88ead48a9d86f3de",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTon",
+          "line_start": 978,
+          "line_end": 997,
+          "sha256": "9d210db7983de598031b57c91f80fa1a1a9e8b2db6232efc7e5ab8c2af67cccd",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTonProof",
+          "line_start": 999,
+          "line_end": 1018,
+          "sha256": "1f6e82065113ab9e37e06224684f35f64ae33b928f85458a566588596d460d60",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectSolana",
+          "line_start": 1020,
+          "line_end": 1040,
+          "sha256": "7285dc78e9084a84b3d192378363df12d1e6baec442790b63f7dfbb519f73b52",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signSolanaSend",
+          "line_start": 1042,
+          "line_end": 1081,
+          "sha256": "63ade5135acf33c76142f0325c0d68240cf2a7913c7031b4eb0f20b87e432b8f",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectMessage",
+          "line_start": 1086,
+          "line_end": 1107,
+          "sha256": "b321f827f4e55533cf95cc79856548606ecdc72722419abdaf86cba6247ad9e6",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTypedData",
+          "line_start": 1111,
+          "line_end": 1131,
+          "sha256": "fae86630e22d8cb8a180d4e3bba40f2fb6ce4cfed3f14723f6e54ebe6d7ce191",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signThorchainWalletConnect",
+          "line_start": 1135,
+          "line_end": 1156,
+          "sha256": "aa19eef635784451ddf6eed970ee34855a48b1485d8265db8bf96affae3a2b12",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signArcSend",
+          "line_start": 1158,
+          "line_end": 1186,
+          "sha256": "3c24be172da373970647595fcd3cf47bc176b68608b9d847c3185459b5dc9ac4",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signEVMSend",
+          "line_start": 1189,
+          "line_end": 1225,
+          "sha256": "61d9caca2d6ba1a78ef84de8b0a8eb1b964ca97d68cfd725d70316245ae7fb85",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signAptosSend",
+          "line_start": 1228,
+          "line_end": 1256,
+          "sha256": "fa03e7583fa1e961d359b2f1b0b29b352824d5b63f5e6c02351dfe0c8c6cb9ed",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signTonSend",
+          "line_start": 1268,
+          "line_end": 1296,
+          "sha256": "bea218d2ee79e42f8315da2bf3c9dcf6c45d974b178f1fa4dd6dfc7e4e7a24ca",
+          "wallet_scoped_generation": true
+        }
+      ]
+    },
+    {
+      "commit": "0614556b993f85808b13e3a69984ce36050a8dfe",
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "signing_methods": [
+        {
+          "name": "signBitcoinSend",
+          "line_start": 485,
+          "line_end": 526,
+          "sha256": "4e106e0bdaeaab6f989b3ec1269f34a7e6d886f19175e05789685821b1d2eae6",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signSuiSend",
+          "line_start": 528,
+          "line_end": 556,
+          "sha256": "4a58645fa6eb3b35d7d24b955f23fc4c827059d74f86f1b47506b2dd0e77ea35",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signXrplSend",
+          "line_start": 558,
+          "line_end": 586,
+          "sha256": "5e4bbac8b8cd7bc38f578946452cfad00da960ed38d4759e3059c12cd4758464",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signStellarSend",
+          "line_start": 588,
+          "line_end": 616,
+          "sha256": "4a45f84e7d3eac9d84e1866e82ca2b8fd011045805e8482df79728da0a78752f",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signTronSend",
+          "line_start": 682,
+          "line_end": 718,
+          "sha256": "4403b3715eccbbaac8f90a55832e53b75e0284f41c3125836c4e3c87736a9245",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signNearSend",
+          "line_start": 721,
+          "line_end": 749,
+          "sha256": "301e199ba79f596d6ca2bf71aeabbc20713707693a890c0d804758c3c2589417",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signPolkadotSend",
+          "line_start": 752,
+          "line_end": 780,
+          "sha256": "df0465ed9fa33e19930da96d6612d45c79787fca697560c110e22fdcc5c382d8",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signThorchainSend",
+          "line_start": 793,
+          "line_end": 821,
+          "sha256": "91444589d262ccc216b89c35ef48d26fd5fa0b1b76a66ba4bb9bcc8f1d4de10c",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectXrpl",
+          "line_start": 835,
+          "line_end": 852,
+          "sha256": "28ac855b8882b6dbb4272b3fa5315a7c9728d0817e1244f34d25cc628ead88c3",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectStellar",
+          "line_start": 854,
+          "line_end": 871,
+          "sha256": "69ca39951347bdae44ed2242fdf3c34a87bdad1fb9fdb2731090b8f615d0d840",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectNear",
+          "line_start": 873,
+          "line_end": 890,
+          "sha256": "47db8557123d687f01817e0ee7bd2571e040bfa9073078aca919748c570a7497",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectSui",
+          "line_start": 892,
+          "line_end": 909,
+          "sha256": "f1a983172ffb58fd68dc50d57ff6a05b084266f7882e32238cdc35e99a93e0c2",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectPolkadot",
+          "line_start": 920,
+          "line_end": 937,
+          "sha256": "a16eb6b9240619125c0b5f91b5e6f984a156e5723f90268809bbb5ee188a2097",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTron",
+          "line_start": 939,
+          "line_end": 956,
+          "sha256": "5a1518b5cb377f52245d27ae67d3505b122be7aa2ebbfd21d022855a864d9f38",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectBitcoin",
+          "line_start": 958,
+          "line_end": 975,
+          "sha256": "6759275a9a5a7954ac09c3e8af489c1a65c0c92593e7819f88ead48a9d86f3de",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTon",
+          "line_start": 978,
+          "line_end": 997,
+          "sha256": "9d210db7983de598031b57c91f80fa1a1a9e8b2db6232efc7e5ab8c2af67cccd",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTonProof",
+          "line_start": 999,
+          "line_end": 1018,
+          "sha256": "1f6e82065113ab9e37e06224684f35f64ae33b928f85458a566588596d460d60",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectSolana",
+          "line_start": 1020,
+          "line_end": 1040,
+          "sha256": "7285dc78e9084a84b3d192378363df12d1e6baec442790b63f7dfbb519f73b52",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signSolanaSend",
+          "line_start": 1042,
+          "line_end": 1081,
+          "sha256": "63ade5135acf33c76142f0325c0d68240cf2a7913c7031b4eb0f20b87e432b8f",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectMessage",
+          "line_start": 1086,
+          "line_end": 1107,
+          "sha256": "b321f827f4e55533cf95cc79856548606ecdc72722419abdaf86cba6247ad9e6",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signWalletConnectTypedData",
+          "line_start": 1111,
+          "line_end": 1131,
+          "sha256": "fae86630e22d8cb8a180d4e3bba40f2fb6ce4cfed3f14723f6e54ebe6d7ce191",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signThorchainWalletConnect",
+          "line_start": 1135,
+          "line_end": 1156,
+          "sha256": "aa19eef635784451ddf6eed970ee34855a48b1485d8265db8bf96affae3a2b12",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signArcSend",
+          "line_start": 1158,
+          "line_end": 1186,
+          "sha256": "3c24be172da373970647595fcd3cf47bc176b68608b9d847c3185459b5dc9ac4",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signEVMSend",
+          "line_start": 1189,
+          "line_end": 1225,
+          "sha256": "61d9caca2d6ba1a78ef84de8b0a8eb1b964ca97d68cfd725d70316245ae7fb85",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signAptosSend",
+          "line_start": 1228,
+          "line_end": 1256,
+          "sha256": "fa03e7583fa1e961d359b2f1b0b29b352824d5b63f5e6c02351dfe0c8c6cb9ed",
+          "wallet_scoped_generation": true
+        },
+        {
+          "name": "signTonSend",
+          "line_start": 1268,
+          "line_end": 1296,
+          "sha256": "bea218d2ee79e42f8315da2bf3c9dcf6c45d974b178f1fa4dd6dfc7e4e7a24ca",
+          "wallet_scoped_generation": true
+        }
+      ]
+    }
+  ],
+  "limits": "26 signing entry points share the new guard; runtime removal interleavings are tested for EVM messages and typed data only. Permission issuance has a separate 14-case fixture. Existing chain authorization tests are separate."
+}

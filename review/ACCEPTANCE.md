@@ -68,3 +68,10 @@ input tracing. The combined completion gate reports **16,908 open entries**.
 Earlier tests are not counted as new-revision passes. File-hash changes reopen
 review coverage; unchanged bytes retain their original scoped evidence.
 No whole-review completion or App Store operation is claimed.
+
+Build 104 checkpoint 2 fixes OW-2026-064 in later public source. The baseline
+source pin and all previous gaps remain explicit. 80 focused and 616 broader
+host assertions pass; 330 audit helper tests pass after repairing the historical
+count assumption. The completion gate retains 16,908 outstanding review items.
+This is not a count of vulnerabilities or a completion verdict.
+[Repair and scope](CONNECT-REMOVAL-READ.md).

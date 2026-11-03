@@ -1,0 +1,38 @@
+{
+  "note": "Arc attempt was interrupted during the explicit pause; it is not a pass. A separate resumed run records its final outcome. Helper run completed 326 tests.",
+  "files": [
+    {
+      "path": "attempts/interrupted-arc-send.log.gz",
+      "original_sha256": "ea95cdc01f67637c8ea4c3fea3b76498b21125a68004df0c5d4e9cfed037c868",
+      "published_sha256": "10cb58a2ca8c786dc18d289db89bd34bd95ed953c1c33b3b574cea6550c82dba"
+    },
+    {
+      "path": "validation/audit-helpers.log.gz",
+      "original_sha256": "d9a754ef1f12e510f52c481eada7057f9c18aa83920004dde3236d08419c58d8",
+      "published_sha256": "ac5715acecfbe69f8a46bb238ea5f6a027b25f4bb859c183f027002188dbbf41"
+    },
+    {
+      "path": "attempts/new-finding-helper-failure.log.gz",
+      "original_sha256": "0417079d9b398f4ab0fa7aeb91943e25a74749499a3b87394376401e49d55e2c",
+      "published_sha256": "307c781f03be731f287d2f263ad12aa219a63254c928bc14824ad29e8b2bc11b"
+    },
+    {
+      "path": "validation/audit-helpers-final.log.gz",
+      "original_sha256": "21bcf39d4afc9ce585416f07c60d7bcba2bbf3e501d0c366cdf58bcf718f6d7e",
+      "published_sha256": "92e6f95cf51751880f4ef6c670a8154ad223234e99d8a1d5af899dfd2d85e4df"
+    },
+    {
+      "path": "validation/publication-gitleaks.json",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "validation/expanded-logs-gitleaks.json",
+      "original_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  ],
+  "historical_test_repair": "The old helper equated current and historical finding counts. It now requires unique IDs and verifies every historical finding remains unchanged; newly appended findings are allowed.",
+  "final_audit_helper_tests": 330,
+  "publication_scan": "No leaks detected in the checkpoint files or a separate scan of every decompressed evidence log. This is not proof of no possible leakage."
+}

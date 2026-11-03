@@ -7,6 +7,8 @@ including the public repairs through PR #77. Build 104 has its own source
 inventory, host checks and unsigned iOS build. [Current target and exact results](RELEASE-5.0.2-104.md).
 The following checkpoints are historical evidence with their original pins.
 
+**Build 104 checkpoint 2.** [OW-2026-064](../findings/OW-2026-064.md) fixes signing and permission consent that could survive wallet removal. Local tests record 66 account-read and 14 pending-consent passes, 616 broader assertions, diagnostics and unsigned iOS Release compilation. Original failures and intermediate regressions remain visible. [Repair, reproduction and remaining scope](CONNECT-REMOVAL-READ.md) · [Merged PR81](https://github.com/devdasx/oath-wallet/pull/81). Hosted replay is pending; the whole-wallet review remains incomplete.
+
 **Checkpoint 21.** A controlled encrypted-write pause reproduced a race between wallet removal and a newly signed transaction journal. The same fixture changes from 19 passes/four failures to all 23 passing after the durable reservation repair; 30 restart checks cover interrupted persistence. Earlier delayed-authentication results are now verified on GitHub. [Reproduction, validation and remaining scope](CONNECT-REMOVAL-RACE.md).
 
 **Checkpoint 20.** Delayed authentication across removal, restore, failed persistence and locking passes 38 checks with production vault and EVM imported-key signers. A deliberately stale envelope produces exactly two failures, demonstrating sensitivity to that guard. No new app defect is confirmed by this matrix. [Scope, evidence and remaining races](CONNECT-REMOVAL-AUTHORIZATION.md).

@@ -54,3 +54,13 @@ On `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`:
 The compiler ledger has 227 reviewed, 122 partially reviewed, 1,529 outstanding,
 460 generated-and-verified and 20 generated inputs needing trace. These reflect
 exact hash matches and reopened changed files, not a completed audit.
+
+## Checkpoint 2 — later public repair
+
+The immutable tag above remains the baseline. PR81 merges tested repair
+`0614556b993f85808b13e3a69984ce36050a8dfe` as
+`501915920e99475e63af5fcb9e658f3c834f3cc8`. Local focused and broader tests pass;
+hosted replay is pending. [Exact results, attempts and scope](CONNECT-REMOVAL-READ.md).
+No historical source pin or test result has been rewritten. The current inventory
+continues to describe the baseline; later-source coverage is explicitly linked
+by source hashes in this checkpoint.

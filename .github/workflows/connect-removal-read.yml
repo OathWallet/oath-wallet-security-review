@@ -1,0 +1,56 @@
+name: Check wallet removal signing and permission consent
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/connect-removal-read.yml', 'scripts/connect-removal-read.py', 'tests/test_connect_removal_read.py', 'scripts/pending-consent-removal.py', 'tests/test_pending_consent_removal.py', 'fixtures/connect-removal-read/**']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 60
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_connect_removal_read.py
+      - run: python3 -m unittest discover -s tests -p test_pending_consent_removal.py
+      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - run: |
+          mkdir -p evidence/ci/connect-removal-read
+          cp evidence/ci/toolchain.txt evidence/ci/connect-removal-read/
+          git -C .work/wallet checkout --detach 0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d
+          python3 scripts/connect-removal-read.py .work/wallet .work/build evidence/ci/connect-removal-read/before --commit 0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d --expect-vulnerable
+          git -C .work/wallet checkout --detach 501915920e99475e63af5fcb9e658f3c834f3cc8
+          python3 scripts/connect-removal-read.py .work/wallet .work/build evidence/ci/connect-removal-read/after --commit 501915920e99475e63af5fcb9e658f3c834f3cc8
+          python3 scripts/pending-consent-removal.py .work/wallet .work/build evidence/ci/connect-removal-read/pending-after --commit 501915920e99475e63af5fcb9e658f3c834f3cc8
+          git -C .work/wallet checkout --detach 1c5a9fab7562dab4583810365ab6b4a2e248d6a1
+          python3 scripts/pending-consent-removal.py .work/wallet .work/build evidence/ci/connect-removal-read/pending-before --commit 1c5a9fab7562dab4583810365ab6b4a2e248d6a1 --expect-vulnerable
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: connect-removal-read-evidence, path: evidence/ci/connect-removal-read, retention-days: 90}
+  release-build:
+    runs-on: xcode-27
+    timeout-minutes: 60
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 501915920e99475e63af5fcb9e658f3c834f3cc8
+          python3 scripts/run.py .work/wallet build --expected-commit 501915920e99475e63af5fcb9e658f3c834f3cc8 --output evidence/ci/removal-read-build
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: removal-read-unsigned-build-evidence, path: evidence/ci/removal-read-build, retention-days: 90}

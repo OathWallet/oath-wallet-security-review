@@ -29,7 +29,10 @@ class Build104Transition(unittest.TestCase):
         self.assertEqual({x['path']:x['sha256'] for x in trace['files']},{x['path']:x['sha256'] for x in coverage['files']})
     def test_historical_findings_retain_original_source_pins(self):
         old=read('scope/history/5.0.1-build103/findings.json');now=read('findings/index.json')
-        self.assertEqual(len(old),len(now))
-        for before,after in zip(old,now):
+        current_by_id={item['id']:item for item in now}
+        self.assertEqual(len(current_by_id),len(now), 'Finding IDs must be unique')
+        self.assertTrue({item['id'] for item in old}.issubset(current_by_id))
+        for before in old:
+            after=current_by_id[before['id']]
             self.assertEqual({k:v for k,v in after.items() if k!='current_target'},before)
             self.assertEqual(after['current_target']['commit'],read('scope/source.json')['reviewed_commit'])
