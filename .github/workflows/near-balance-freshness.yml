@@ -1,0 +1,32 @@
+name: Reproduce NEAR post-send balance freshness repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/near-balance-freshness.yml', 'scripts/near-balance-freshness.py', 'scripts/near-balance-adjacent.py', 'tests/test_near_balance_freshness.py', 'fixtures/near-balance-freshness/**']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 50
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_near_balance_freshness.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 5d91d1e4dfd36c56031c7a8fb1ee305446dc54de
+          python3 scripts/near-balance-freshness.py .work/wallet .work/before evidence/ci/near-balance-freshness/before --baseline --expected-commit 5d91d1e4dfd36c56031c7a8fb1ee305446dc54de
+          git -C .work/wallet checkout --detach fd06fdff104d128e00cc414d2de1472f11752e04
+          python3 scripts/near-balance-freshness.py .work/wallet .work/after evidence/ci/near-balance-freshness/after --expected-commit fd06fdff104d128e00cc414d2de1472f11752e04
+          python3 scripts/near-balance-adjacent.py .work/after/source .work/after/build evidence/ci/near-balance-freshness/adjacent --expected-commit fd06fdff104d128e00cc414d2de1472f11752e04
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: near-balance-freshness-evidence, path: evidence/ci/near-balance-freshness, retention-days: 90}

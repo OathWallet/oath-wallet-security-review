@@ -196,3 +196,20 @@ The deliberate sender-reservation bypass produces exactly three expected
 failed methods and six passing controls. All 368 audit-helper tests pass.
 Earlier hosted lifecycle/activation checks remain running/queued at preparation;
 no final result is inferred.
+
+## Checkpoint 13 — Preserve retries until NEAR assets are current
+
+[OW-2026-066](../findings/OW-2026-066.md) is repaired in [PR83](https://github.com/devdasx/oath-wallet/pull/83).
+The same six synthetic production SQLite/signing methods change from two passes
+and four failures to all passing. All 24 adjacent database methods pass with
+runtime networking denied. Diagnostics record 119 passes and two explicit skips;
+source validation, secret scanning and unsigned generic iOS Release compilation
+pass. All 371 audit-helper tests pass. Four more source files receive scoped
+partial dispositions, with other chains and full application integration still
+open. [Reproduction and limitations](NEAR-BALANCE-FRESHNESS.md).
+
+The previous lifecycle workflow 41617104807 is now complete, with downloaded
+source/driver/fixture/log hashes verified: six control passes, one expected
+mutation failure and five passing mutation controls. The new freshness workflow
+is tracked separately; no hosted pass is inferred from local results. No
+App Store operation occurred, and the original build-104 tag remains unchanged.

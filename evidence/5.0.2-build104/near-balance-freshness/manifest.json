@@ -1,0 +1,90 @@
+{
+  "finding": "OW-2026-066",
+  "before_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "repair_commit": "fd06fdff104d128e00cc414d2de1472f11752e04",
+  "before": {
+    "passed": 2,
+    "failed": 4
+  },
+  "after": {
+    "passed": 6,
+    "failed": 0
+  },
+  "adjacent": {
+    "passed": 24,
+    "failed": 0,
+    "live_tests": "excluded"
+  },
+  "validation": {
+    "public_release": "passed",
+    "diagnostics_coverage": "passed",
+    "gitleaks": "passed",
+    "diagnostics_passed": 119,
+    "diagnostics_skipped": 2,
+    "unsigned_generic_ios_release": "passed",
+    "audit_helper_tests": 371,
+    "source_commit": "fd06fdff104d128e00cc414d2de1472f11752e04",
+    "runtime_scope": "host tests and compile-only; no simulator, device, live provider or App Store",
+    "build_command": [
+      "xcodebuild",
+      "-project",
+      "OathAtmosphere.xcodeproj",
+      "-scheme",
+      "OathAtmosphere",
+      "-configuration",
+      "Release",
+      "-destination",
+      "generic/platform=iOS",
+      "-derivedDataPath",
+      "<ISOLATED-SCRATCH>",
+      "CODE_SIGNING_ALLOWED=NO",
+      "build"
+    ],
+    "changed_files_and_expanded_evidence_secret_scan": "passed"
+  },
+  "files": [
+    {
+      "path": "runs.zip",
+      "sha256": "a5fa2567f00ce3f5b2d40885fc76897dede1576f3d2951c40a4ed7dc9f9b52d6"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "1273ab9cf3f6c1e217faca1f515cf0764974af657de36ab806c2658c5a040244"
+    },
+    {
+      "path": "validation/audit-helper-final.log",
+      "sha256": "40135f852fae91320a35439396fa3df20e021cdcf7f857d40649143b275c87ee"
+    },
+    {
+      "path": "validation/audit-helper-tests.log",
+      "sha256": "85a149a609b3ff0f2fc5534b343cd2cdea45da02838510fde4facd3cd7a28dc3"
+    },
+    {
+      "path": "validation/diagnostics-coverage.log",
+      "sha256": "abb86118ee61e33a96aca80101c301a2f822631e7876b09297b66e93604246f4"
+    },
+    {
+      "path": "validation/diagnostics-tests.log",
+      "sha256": "9447b56bc98e8fc2b45d9c16ffe49e152638f1931bd50240d7b071e552b1dd49"
+    },
+    {
+      "path": "validation/gitleaks.log",
+      "sha256": "681f1f39851aff2dc099449c009418dd1f4036206f2071a056b83f64ca8eddc2"
+    },
+    {
+      "path": "validation/ios-build.log",
+      "sha256": "55286a4412f99739d89649907e058e0175407e2f20a731bef50d1e015e84377c"
+    },
+    {
+      "path": "validation/public-release.log",
+      "sha256": "b2181ae041d930c4b06716a5cd693d251f60273c82a6fe92df047db450de6d3a"
+    },
+    {
+      "path": "validation/publication-scan.log",
+      "sha256": "a82d4dede96e5e116effc5e151f400c32a478629df27d516ebf23e536597ee43"
+    }
+  ],
+  "hosted_replay": "Not yet executed for this repair; dedicated workflow tracks it separately.",
+  "merge_commit": "e079cc722cb53e1894011ba074b51c129bfcf185",
+  "merge_tree_matches_tested_repair": true
+}

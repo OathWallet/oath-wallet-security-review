@@ -1493,5 +1493,22 @@
     },
     "hosted_replay": "verified",
     "hosted_evidence": "evidence/5.0.2-build104/hosted-near-signing/manifest.json"
+  },
+  {
+    "id": "OW-2026-066",
+    "severity": "low",
+    "title": "NEAR refresh completes with stale sent-token balances",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-066.md",
+    "fix_commit": "fd06fdff104d128e00cc414d2de1472f11752e04",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/83",
+    "retest_scope": "Same six production SQLite/signing methods: two pass/four fail before; all six pass after. All 24 adjacent database methods pass, 119 diagnostics pass with two skips; source validation, secret scan and unsigned generic iOS Release pass. Runtime networking denied for regression methods; no UI or live provider validation.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": false,
+      "validation": "Later public repair; exact before and after pins retained in paired evidence."
+    },
+    "hosted_replay": "pending"
   }
 ]

@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 13 repairs [OW-2026-066](../findings/OW-2026-066.md): NEAR post-send refresh no longer completes when the sent token read failed or returned a pre-execution block. The same six methods change from two passes/four failures to all passing; 24 adjacent methods and unsigned iOS Release compilation pass. [Evidence and remaining gaps](NEAR-BALANCE-FRESHNESS.md).
+
 Build 104 checkpoint 12 adds nine passing database-journal methods, including controlled duplicate-wallet races, reopened terminal records and malformed-receipt rollback. Two production files gain partial source review, and the existing journal test file is reviewed as test code. [Scope and remaining work](NEAR-JOURNAL-RACES.md).
 
 Build 104 checkpoint 11 adds six passing activation/bootstrap-authority host methods and an expected failing bootstrap-key mutation. Two application files gain scoped partial source review; full app integration remains open. [Results and remaining gaps](NEAR-MULTISIG-ACTIVATION.md).
