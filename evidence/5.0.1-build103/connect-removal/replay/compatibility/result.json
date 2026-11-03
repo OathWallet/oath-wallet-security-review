@@ -1,0 +1,19 @@
+{
+  "source_commit": "610f2fbcfa1b9a08bf9cfd9b439247324bf5366a",
+  "phase": "compatibility",
+  "expected_failure_reproduced": true,
+  "test_exit_code": 1,
+  "cases": [
+    {
+      "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testPreviouslyRemovedJournalsKeepRetentionCleanupReachable",
+      "status": "failed",
+      "exit_code": 1,
+      "duration_seconds": 2.636,
+      "log": "OathDatabase-cases/a71f09046fe378fa.log",
+      "log_sha256": "7db5d248b064c8779185035adc7d69a09e527566c51e1e127cf6183d82aa28bf"
+    }
+  ],
+  "duration_seconds": 10.86,
+  "script_sha256": "db5a20d87d767e8f864321c92df2e3c2179ab14c579a78c99053c04c4271fff0",
+  "scope": "Actual migrated database and removal methods; XRP case uses a signed synthetic transaction, seven-chain matrix uses schema-only synthetic journal rows. No provider, UI, simulator or live network tests."
+}

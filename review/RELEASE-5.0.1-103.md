@@ -475,3 +475,46 @@ expanded logs/bundle pass the secret scan with no findings. Hosted codec/boundar
 replay has not yet produced a result; local results are reported above.
 
 The [GitHub codec/boundary replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41574264723) is queued at publication. Its hosted result remains pending.
+
+## Checkpoint 19
+
+[OW-2026-062](../findings/OW-2026-062.md) repairs removal of active wallets with
+pending dApp transactions in [PR #76](https://github.com/devdasx/oath-wallet/pull/76).
+The original four methods yield two passes/two failures and **46 failing assertions**.
+A fifth test catches an intermediate compatibility regression with **seven failing
+assertions**. All five methods pass at final commit
+`0e91ce56f91ef56b3e45629967e01e449be0052f`, including the isolated clean-checkout replay.
+Original failures and the intermediate failed repair are retained.
+
+A shared guard covers pending states in seven Connect submission journals. It
+preserves unrelated wallets, terminal states, separately authorized full reset,
+and retention cleanup of already-removed legacy records. The signed XRP case
+uses an actual synthetic transaction and reopened database. The other chain
+checks use schema-only rows; they do not establish seven-chain signing correctness.
+Cross-vault/SQL atomicity and concurrent signing/removal remain open review work.
+[Scope and reproduction](CONNECT-REMOVAL.md) ·
+[Evidence manifest](../evidence/5.0.1-build103/connect-removal/manifest.json).
+
+Final broader checks: **744 database methods pass with 72 explicit skips**, and
+**119 diagnostics methods pass with two skips**. Public-source validation,
+diagnostics coverage, source secret scan and unsigned generic iOS Release build
+pass. The merged application source matches the tested commit; the 91 differing
+files are website-only. No simulator, device, live transaction or App Store action.
+
+The prior [simulation workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41573179363)
+and [codec/boundary workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41574264723)
+now pass on GitHub. Downloaded archives, source/result identities and individual
+log hashes were verified; original ZIPs accompany this checkpoint release.
+[Simulation receipt](../evidence/5.0.1-build103/ci-retests/xrpl-simulation-github.json) ·
+[Codec receipt](../evidence/5.0.1-build103/ci-retests/xrpl-codec-github.json).
+These results supersede the pending statuses in the earlier snapshots.
+
+The [three-stage removal workflow](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41576159225)
+is running at this checkpoint. Its hosted result is not yet claimed.
+The full audit remains incomplete, with **16,769 open coverage/validation entries**
+(not vulnerability counts). Existing whole-file dispositions are unchanged; the
+removal function and call-path scope is recorded separately.
+
+**301 audit-helper/evidence-integrity tests pass.** These are separate from production Swift tests.
+
+New publication files, expanded logs and both expanded hosted archives pass the secret scan with no findings.

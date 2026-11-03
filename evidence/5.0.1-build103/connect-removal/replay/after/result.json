@@ -1,0 +1,51 @@
+{
+  "source_commit": "0e91ce56f91ef56b3e45629967e01e449be0052f",
+  "phase": "after",
+  "expected_failure_reproduced": false,
+  "test_exit_code": 0,
+  "cases": [
+    {
+      "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testEveryJournalPendingStateBlocksOnlyItsWallet",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 6.1,
+      "log": "OathDatabase-cases/fb57b456377ba374.log",
+      "log_sha256": "3ff2b0550ba7253d4a345a8c99fe51ec51d539fc3b381c2ee910f71d37b41931"
+    },
+    {
+      "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testPreviouslyRemovedJournalsKeepRetentionCleanupReachable",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 2.265,
+      "log": "OathDatabase-cases/a71f09046fe378fa.log",
+      "log_sha256": "f0d850333872c782c619e545a535cf4a3c0da92f0b3d85773224e1456abd17be"
+    },
+    {
+      "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testResetStillErasesPendingJournalAndRejectsLateWrites",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 0.654,
+      "log": "OathDatabase-cases/fedaf11df935f807.log",
+      "log_sha256": "85bda7651ae02fc8133a86f63f512d3d5d990a2ec49e744a72db8b207e9de5c2"
+    },
+    {
+      "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testSignedXrplRemovalAndPurgeAreBlocked",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 1.539,
+      "log": "OathDatabase-cases/5d314c48c4f6d9fd.log",
+      "log_sha256": "825561cf82c67b35cfb38dc567caaa07e0b5accbbf7f9d8b4df3343529cd6d03"
+    },
+    {
+      "selector": "OathDatabaseTests.WalletConnectRemovalGuardTests/testTerminalJournalStatesPermitRemoval",
+      "status": "passed",
+      "exit_code": 0,
+      "duration_seconds": 6.306,
+      "log": "OathDatabase-cases/8ec9ae6a7299a755.log",
+      "log_sha256": "0fbde20bf1799ea47e5ca30aeb3bc8c716681d41385da0ad1c131a6181983c00"
+    }
+  ],
+  "duration_seconds": 13.86,
+  "script_sha256": "db5a20d87d767e8f864321c92df2e3c2179ab14c579a78c99053c04c4271fff0",
+  "scope": "Actual migrated database and removal methods; XRP case uses a signed synthetic transaction, seven-chain matrix uses schema-only synthetic journal rows. No provider, UI, simulator or live network tests."
+}

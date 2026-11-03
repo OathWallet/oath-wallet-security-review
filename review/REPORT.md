@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+**Checkpoint 19.** Pending dApp submissions now block removal of an active wallet in [PR #76](https://github.com/devdasx/oath-wallet/pull/76). Original and intermediate compatibility failures are preserved; all five final methods pass. Full database tests, diagnostics and unsigned iOS Release compilation pass. Legacy cleanup remains compatible; signing/removal concurrency remains open. [Evidence and limits](CONNECT-REMOVAL.md).
+
 **Checkpoint 18.** The shipped XRP JavaScript codec rebuilds byte-for-byte from its locked source. Six new actual-package request/signature boundary methods pass, including the isolated network-denied replay. The newly enumerated 170 upstream input files remain explicitly outstanding; a matching bundle does not certify their implementations. [Evidence and scope](XRPL-CODEC-BOUNDARIES.md).
 
 **Checkpoint 17.** [OW-2026-061](../findings/OW-2026-061.md) repairs inconsistent XRP Connect simulation metadata in [PR #75](https://github.com/devdasx/oath-wallet/pull/75). The clean-checkout replay preserves two failing methods before and all six passing after; broader XRP tests, diagnostics and unsigned Release compilation pass. The earlier signing matrix now also passes on GitHub with verified artifact hashes. [Evidence and limits](XRPL-CONNECT-SIMULATION.md).
