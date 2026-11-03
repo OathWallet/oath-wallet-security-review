@@ -12,9 +12,11 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Build 104 checkpoint 4.** Eight database journal/removal methods pass with runtime networking denied; four more files have partial source coverage. GitHub also passed the earlier 24 NEAR provider/request methods and unsigned iOS Release compilation at the merged repair. Downloaded artifact and log hashes are verified. Signing-race hosted tests remain separate and pending. [Scope and remaining gaps](review/NEAR-JOURNAL-BOUNDARIES.md). No new application defect was confirmed by this selection.
+
 **Build 104 checkpoint 2.** [OW-2026-064](findings/OW-2026-064.md) fixes signing and permission consent that could survive wallet removal. Local tests record 66 account-read and 14 pending-consent passes, 616 broader assertions, diagnostics and unsigned iOS Release compilation. Original failures and intermediate regressions remain visible. [Repair, reproduction and remaining scope](review/CONNECT-REMOVAL-READ.md) · [Merged PR81](https://github.com/devdasx/oath-wallet/pull/81). Hosted replay is pending; the whole-wallet review remains incomplete.
 
-**NEAR follow-up.** Twenty-four existing production-package methods pass with runtime networking denied. Three provider/plan/request files receive partial source dispositions; no new application defect is confirmed. [Exact scope, evidence and remaining work](review/NEAR-PROVIDER-BOUNDARIES.md).
+**NEAR follow-up.** Twenty-four existing production-package methods pass locally and on GitHub with runtime networking denied; downloaded receipts and logs are hash-verified. Three provider/plan/request files receive partial source dispositions; no new application defect is confirmed. [Exact scope, evidence and remaining work](review/NEAR-PROVIDER-BOUNDARIES.md).
 
 Four chain wallet adapters now have hash-bound partial source coverage. The compiler ledger is reproducible from the canonical inventory, including 16 preserved historical partial dispositions. [Read scope and remaining work](review/CHAIN-WALLET-ADAPTERS.md) · [Coverage reconciliation](review/COMPILER-DISPOSITION-RECONCILIATION.md). This does not close the whole-wallet review.
 

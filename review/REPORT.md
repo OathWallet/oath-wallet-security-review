@@ -7,6 +7,8 @@ including the public repairs through PR #77. Build 104 has its own source
 inventory, host checks and unsigned iOS build. [Current target and exact results](RELEASE-5.0.2-104.md).
 The following checkpoints are historical evidence with their original pins.
 
+**Build 104 checkpoint 4.** Eight database journal/removal methods pass with runtime networking denied; four more files have partial source coverage. GitHub also passed the earlier 24 NEAR provider/request methods and unsigned iOS Release compilation at the merged repair. Downloaded artifact and log hashes are verified. Signing-race hosted tests remain separate and pending. [Scope and remaining gaps](NEAR-JOURNAL-BOUNDARIES.md). No new application defect was confirmed by this selection.
+
 **Build 104 checkpoint 2.** [OW-2026-064](../findings/OW-2026-064.md) fixes signing and permission consent that could survive wallet removal. Local tests record 66 account-read and 14 pending-consent passes, 616 broader assertions, diagnostics and unsigned iOS Release compilation. Original failures and intermediate regressions remain visible. [Repair, reproduction and remaining scope](CONNECT-REMOVAL-READ.md) · [Merged PR81](https://github.com/devdasx/oath-wallet/pull/81). Hosted replay is pending; the whole-wallet review remains incomplete.
 
 **Checkpoint 21.** A controlled encrypted-write pause reproduced a race between wallet removal and a newly signed transaction journal. The same fixture changes from 19 passes/four failures to all 23 passing after the durable reservation repair; 30 restart checks cover interrupted persistence. Earlier delayed-authentication results are now verified on GitHub. [Reproduction, validation and remaining scope](CONNECT-REMOVAL-RACE.md).
@@ -55,7 +57,7 @@ The following checkpoints are historical evidence with their original pins.
 
 **Build 103 checkpoint 3.** Synthetic authenticated vault and SQLite records reproduced three integer overflows. Public source repairs passed the focused tests, full database package and unsigned iOS builds. [Vault finding](../findings/OW-2026-047.md) · [Database finding](../findings/OW-2026-048.md) · [Exact-target CI evidence](../evidence/5.0.1-build103/ci-artifacts-checkpoint3.json).
 
-**NEAR follow-up.** Twenty-four existing production-package methods pass with runtime networking denied. Three provider/plan/request files receive partial source dispositions; no new application defect is confirmed. [Exact scope, evidence and remaining work](NEAR-PROVIDER-BOUNDARIES.md).
+**NEAR follow-up.** Twenty-four existing production-package methods pass locally and on GitHub with runtime networking denied; downloaded receipts and logs are hash-verified. Three provider/plan/request files receive partial source dispositions; no new application defect is confirmed. [Exact scope, evidence and remaining work](NEAR-PROVIDER-BOUNDARIES.md).
 
 Four chain wallet adapters now have hash-bound partial source coverage. The compiler ledger is reproducible from the canonical inventory, including 16 preserved historical partial dispositions. [Read scope and remaining work](CHAIN-WALLET-ADAPTERS.md) · [Coverage reconciliation](COMPILER-DISPOSITION-RECONCILIATION.md). This does not close the whole-wallet review.
 

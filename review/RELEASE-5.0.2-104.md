@@ -51,7 +51,7 @@ On `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`:
 [Compiled inputs](../evidence/5.0.2-build104/compiler/release-inputs.json) ·
 [Compiled-input dispositions](../evidence/5.0.2-build104/compiler/dispositions.json).
 
-The compiler ledger has 227 reviewed, 129 partially reviewed, 1,522 outstanding,
+The compiler ledger has 227 reviewed, 133 partially reviewed, 1,518 outstanding,
 460 generated-and-verified and 20 generated inputs needing trace. These reflect
 exact hash matches and reopened changed files, not a completed audit.
 
@@ -70,3 +70,11 @@ hosted replay is pending. [Exact results, attempts and scope](CONNECT-REMOVAL-RE
 No historical source pin or test result has been rewritten. The current inventory
 continues to describe the baseline; later-source coverage is explicitly linked
 by source hashes in this checkpoint.
+
+## Checkpoint 4 — NEAR journals and hosted receipts
+
+Eight existing production database methods pass at `0614556b993f85808b13e3a69984ce36050a8dfe`, with network access denied during discovery and execution. Four additional files have partial source dispositions; no new application defect is confirmed. [Read scope, replay and remaining gaps](NEAR-JOURNAL-BOUNDARIES.md).
+
+[GitHub run 41603474540](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41603474540) passed the earlier 24 NEAR provider/request methods at that same application commit. The downloaded archive digest, every receipt file and case-log hash, method identities and executed driver hash were verified. [Durable evidence](../evidence/5.0.2-build104/hosted-near-provider/manifest.json).
+
+The separate [unsigned Release build job](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41601227473/job/125800183599) passed at merge `501915920e99475e63af5fcb9e658f3c834f3cc8` in 990.49 seconds. Its archive and build-log hashes are verified. [Durable evidence](../evidence/5.0.2-build104/hosted-removal-build/manifest.json). The other job in that workflow is not implied to pass by the build result. No simulator, device or App Store operation occurred.

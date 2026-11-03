@@ -66,3 +66,7 @@ verifies all case-log hashes. It leaves tracked application source unchanged.
 Tool versions, initial compilation, formal replay and source hashes are retained
 in [the evidence manifest](../evidence/5.0.2-build104/near-provider-boundaries/manifest.json).
 No simulator, device, blockchain provider or App Store operation was performed.
+
+## Hosted replay
+
+[Run 41603474540](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41603474540) completed successfully at audit commit `592d1520c44fe60debe8d613d3fe64c07eb3aa82`, testing application commit `0614556b993f85808b13e3a69984ce36050a8dfe`. The downloaded archive digest, 33 receipt-file hashes, all 24 method identities and case-log hashes, and executed driver hash were verified. [Archived receipts](../evidence/5.0.2-build104/hosted-near-provider/manifest.json). This closes the hosted replay requirement for this selection only.

@@ -85,3 +85,7 @@ The pinned read-only [GitHub workflow](../.github/workflows/connect-removal-read
 replays both before/after experiments and separately builds the exact merge.
 Hosted results are pending until their terminal receipts are downloaded and
 verified. No deployment credentials or App Store job are present.
+
+## Hosted build addendum
+
+The unsigned Release build job in run `41601227473` has now passed at merge `501915920e99475e63af5fcb9e658f3c834f3cc8`. Its downloaded artifact digest, source pin, successful job identity and build-log hash are verified. [Durable evidence](../evidence/5.0.2-build104/hosted-removal-build/manifest.json). The host race-test job was still running at this capture; the build does not establish its result.

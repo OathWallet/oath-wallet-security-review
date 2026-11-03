@@ -1,0 +1,100 @@
+{
+  "id": 125800183599,
+  "run_id": 41601227473,
+  "workflow_name": "Check wallet removal signing and permission consent",
+  "head_branch": "main",
+  "run_url": "https://api.github.com/repos/devdasx/oath-wallet-security-review/actions/runs/41601227473",
+  "run_attempt": 1,
+  "node_id": "CR_kwDOVedVFc8AAAAdSkZ3Lw",
+  "head_sha": "a9d28a43f1ed1d26c6c42c9b6245b35f1db154c7",
+  "url": "https://api.github.com/repos/devdasx/oath-wallet-security-review/actions/jobs/125800183599",
+  "html_url": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41601227473/job/125800183599",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-03T08:09:42Z",
+  "started_at": "2026-11-03T08:14:15Z",
+  "completed_at": "2026-11-03T08:31:55Z",
+  "name": "release-build",
+  "steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 1,
+      "started_at": "2026-11-03T08:14:15Z",
+      "completed_at": "2026-11-03T08:14:16Z"
+    },
+    {
+      "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 2,
+      "started_at": "2026-11-03T08:14:16Z",
+      "completed_at": "2026-11-03T08:14:40Z"
+    },
+    {
+      "name": "Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 3,
+      "started_at": "2026-11-03T08:14:40Z",
+      "completed_at": "2026-11-03T08:15:02Z"
+    },
+    {
+      "name": "Run sh scripts/toolchain.sh",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 4,
+      "started_at": "2026-11-03T08:15:02Z",
+      "completed_at": "2026-11-03T08:15:06Z"
+    },
+    {
+      "name": "Run git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 5,
+      "started_at": "2026-11-03T08:15:06Z",
+      "completed_at": "2026-11-03T08:31:47Z"
+    },
+    {
+      "name": "Run actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 6,
+      "started_at": "2026-11-03T08:31:47Z",
+      "completed_at": "2026-11-03T08:31:50Z"
+    },
+    {
+      "name": "Post Run actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 11,
+      "started_at": "2026-11-03T08:31:50Z",
+      "completed_at": "2026-11-03T08:31:50Z"
+    },
+    {
+      "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 12,
+      "started_at": "2026-11-03T08:31:50Z",
+      "completed_at": "2026-11-03T08:31:51Z"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 13,
+      "started_at": "2026-11-03T08:31:51Z",
+      "completed_at": "2026-11-03T08:31:52Z"
+    }
+  ],
+  "check_run_url": "https://api.github.com/repos/devdasx/oath-wallet-security-review/check-runs/125800183599",
+  "labels": [
+    "xcode-27"
+  ],
+  "runner_id": 1000023231,
+  "runner_name": "GitHub Actions 1000023231",
+  "runner_group_id": 0,
+  "runner_group_name": "GitHub Actions"
+}
