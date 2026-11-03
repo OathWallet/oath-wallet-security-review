@@ -1,0 +1,34 @@
+name: Reproduce XRPL amount arithmetic
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/xrpl-amount-properties.yml', 'scripts/xrpl-amount-properties.py', 'tests/test_xrpl_amount_properties.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_xrpl_amount_properties.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach a904515793b087289140e4411924f030b3fe61ff
+      - run: |
+          mkdir -p evidence/ci/xrpl-amount-properties
+          cp evidence/ci/toolchain.txt evidence/ci/xrpl-amount-properties/
+          python3 scripts/xrpl-amount-properties.py .work/wallet evidence/ci/xrpl-amount-properties/before --expected-commit a904515793b087289140e4411924f030b3fe61ff
+          git -C .work/wallet checkout --detach 6783750661c43d3511d8973a2de77106fdf2001d
+          python3 scripts/xrpl-amount-properties.py .work/wallet evidence/ci/xrpl-amount-properties/after
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: xrpl-amount-properties-evidence, path: evidence/ci/xrpl-amount-properties, retention-days: 90}
