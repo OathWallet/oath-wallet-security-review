@@ -1,5 +1,7 @@
 # Offline diagnostic coverage and source trace
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application: `27fcf5f58f6169e1a40fb6afced883bc736d124d`, the same tree
 as public merge `99742291d6124fd2628bbf1653ec0ba5f121456f` (4.1.15, build 100).
 This increment changes the audit harness and evidence, not application code.

@@ -1,5 +1,7 @@
 # Namespace validation and session-update review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `2931f8d8f2e0f7dd3d737e2ee1aab32ba39683a4`.
 Finding: [OW-2026-018](../findings/OW-2026-018.md).
 

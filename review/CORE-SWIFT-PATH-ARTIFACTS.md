@@ -1,5 +1,7 @@
 # Rebuilding the Swift path repairs for iOS
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 [Host reproducer, patch, compatibility and limitations](CORE-SWIFT-PATH-VALUES.md).
 The artifact release is **walletcore-4.8.4-swift-paths-1**. It is a dependency update for subsequent public app source. The submitted 5.0.1 (103) source tag continues to identify its original inputs.
 

@@ -25,7 +25,7 @@ class RestoreEvidenceTests(unittest.TestCase):
             self.assertEqual(result['cases'],[dict(name=n,status=s.lower()) for s,n in cases])
     def test_coverage_remains_partial_and_hash_bound(self):
         source=json.loads((E/'source.json').read_text())
-        ledger={v['path']:v for v in json.loads((ROOT/'scope/inventory.json').read_text())['files']}
+        ledger={v['path']:v for v in json.loads((ROOT/'scope/history/5.0.1-build103/inventory.json').read_text())['files']}
         self.assertEqual(len(source['files']),4)
         for entry in source['files']:
             self.assertEqual(entry['sha256'],ledger[entry['path']]['sha256'])

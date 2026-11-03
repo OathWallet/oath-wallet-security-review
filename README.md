@@ -1,16 +1,18 @@
-# Oath Wallet 5.0.1 (103) security review
+# Oath Wallet 5.0.2 (104) prerelease security review
 
 This is a **maintainer-commissioned, Codex-led security review** of the public
 Oath Wallet application. It is not independent certification, a guarantee of
 zero vulnerabilities, or a comparison with the installed App Store binary.
 
-**Active release:** [Oath Wallet 5.0.1 (103)](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.1-build103), commit `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect listed iOS version 5.0.1 as **Waiting for Review** on 2 November 2026. [Build 103 review and checks](review/RELEASE-5.0.1-103.md) · [Source manifest](scope/source.json) · [Previous review series](https://github.com/devdasx/oath-wallet-security-review/releases/tag/review-4.1.15-build100-progress57).
+**Active audit target:** [Oath Wallet 5.0.2 (104) prerelease](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.2-build104), commit `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`. This prerelease includes subsequent public audit repairs and has not been uploaded to App Store Connect. The separate 5.0.1 (103) submission is unchanged. [Current target and validation](review/RELEASE-5.0.2-104.md) · [Source manifest](scope/source.json) · [Historical build-103 checkpoints](review/RELEASE-5.0.1-103.md).
 
 **The whole-wallet review is not complete.** Test success does not turn
 outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [coverage ledger](scope/inventory.json), [findings](findings), and
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
+
+**Build 104 prerelease.** The source includes the public fixes through PR #77. Its exact-target checks pass: 748 database tests (72 skips), 119 diagnostics tests (two skips), source/secret checks and unsigned iOS Release compilation. The built app reports 5.0.2 / 104. [Current audit, carried evidence and gaps](review/RELEASE-5.0.2-104.md). Earlier checkpoints below remain historical.
 
 **Checkpoint 21.** A controlled encrypted-write pause reproduced a race between wallet removal and a newly signed transaction journal. The same fixture changes from 19 passes/four failures to all 23 passing after the durable reservation repair; 30 restart checks cover interrupted persistence. Earlier delayed-authentication results are now verified on GitHub. [Reproduction, validation and remaining scope](review/CONNECT-REMOVAL-RACE.md).
 

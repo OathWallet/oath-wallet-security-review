@@ -1,5 +1,7 @@
 # ENS contract response decoding
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 ## Source and execution boundary
 
 The reviewed source is 5.0.1 (103), commit `c7acd23bb139864a40273f405d18b479589d2b20`. The complete WalletConnectSigner module is a compiled dependency of WalletConnectSign. The public factory can construct an ENS resolver, which uses ENSRegistryContract and ENSResolverContract to decode JSON-RPC strings. A search of the application source and vendored modules found no application call into ENSResolverFactory, resolveEns or resolveAddress. This review establishes the dependency decoder's behavior under direct host calls. It does not establish a remotely reachable crash in Oath's current screens.

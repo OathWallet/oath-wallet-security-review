@@ -1,5 +1,7 @@
 # TON serialization and signing review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Source: `a65601b78f86e33ebae08a754035d69c1f5f5e43`. This is a bounded
 source review and host-test increment, not a completed TON or wallet audit.
 

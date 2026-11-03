@@ -1,5 +1,7 @@
 # Selected aezeed dependencies — progress 10
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Follow-up: these three originally reproduced defects now have [tested source
 repairs and rebuilt public app archives](AEZEED-DEPENDENCY-REPAIRS.md). The
 original review and failing evidence below are retained as historical evidence.

@@ -1,5 +1,7 @@
 # Session cleanup and sequence-store lifetime review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Tested app: `eef7eeb2d46c74aa6528b9b34ef122f9a61ef8ed`.
 Corrected regression baseline: `822aa4539c2188ef6a752eaf228b0284c80216fa`.
 

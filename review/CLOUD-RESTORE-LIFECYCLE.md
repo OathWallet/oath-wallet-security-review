@@ -1,5 +1,7 @@
 # Cloud restore lifecycle and backup queue follow-up
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Four full source reads cover the restore model, restore content/password view,
 backup service and backup database operations. Their bytes match both the
 build 103 baseline and tested commit `a904515793b087289140e4411924f030b3fe61ff`.

@@ -1,5 +1,7 @@
 # Aezeed dependency repairs and replacement archives
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 This is a maintainer-commissioned, Codex-led review in progress. It is not an
 independent certification or a whole-wallet completion verdict.
 

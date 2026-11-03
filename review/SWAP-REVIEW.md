@@ -1,5 +1,7 @@
 # Swap decoding, quote binding and progress review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `8dcc9c4c50eae2010b648782c0582c3db70c6357` (4.1.15, build 100).
 This increment reviews request/display boundaries and read-only observations.
 It does not establish arbitrary-router safety or on-chain settlement correctness.

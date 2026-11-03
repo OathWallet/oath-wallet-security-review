@@ -1,5 +1,7 @@
 # Signature and contract verification review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The reviewed release is 5.0.1 (103), `c7acd23bb139864a40273f405d18b479589d2b20`. The repaired candidate is `9193c64c6435f60b3ec856e318cdc7d8df5935d8`. The complete WalletConnectSigner source module is compiled into the dependency build. Search of application and vendored source found no call into EIP191Verifier or EIP1271Verifier beyond their definitions. EthereumSignature is a public SDK type referenced by Oath's crypto adapter. This finding records direct type and internal verifier behavior. Exploitation through a current Oath screen has not been established.
 
 The EIP-1271 interface takes a bytes32 hash and a variable-size signature. ABI bytes require a length word and padding determined by the actual byte count. The interface's return marker has a fixed meaning. [EIP-1271 specification](https://eips.ethereum.org/EIPS/eip-1271) · [ABI specification](https://docs.soliditylang.org/en/latest/abi-spec.html).

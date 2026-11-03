@@ -1,5 +1,7 @@
 # Session response routing
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application: `8508d02deaf965dbe6f46b3c0ca637074234e5da`. Regression-only baseline: `42846f9f9b9ff66ff8407700aa77539e70f963c5`.
 Original review baseline remains 4.1.15 (100), `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 

@@ -1,5 +1,7 @@
 # Multisig recovery document and adapter review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `02a6e8ab66c7629dcb9dd36637c683457e821d98`.
 This increment reads the complete eleven `*MultisigRecovery.swift` documents,
 `MultisigCredential.swift`, the eleven `Oath*Multisig.swift` wallet adapters and

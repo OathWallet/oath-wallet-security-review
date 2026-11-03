@@ -1,5 +1,7 @@
 # Delayed authorization and wallet removal
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 This checkpoint follows the pending-journal removal repair. It tests one
 specific question: can a delayed biometric result return an EVM message or
 EIP-712 signature for a wallet removed while authentication was pending?

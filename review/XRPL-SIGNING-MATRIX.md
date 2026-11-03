@@ -1,5 +1,7 @@
 # XRP signing, canonical bytes and threshold policy
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Read/test source: `6783750661c43d3511d8973a2de77106fdf2001d`.
 Baseline: build 103, `c7acd23bb139864a40273f405d18b479589d2b20`.
 The five source files listed in the [source receipt](../evidence/5.0.1-build103/xrpl-signing/source.json)

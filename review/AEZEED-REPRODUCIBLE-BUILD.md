@@ -1,5 +1,7 @@
 # Aezeed reproducible-build follow-up — reproducible replacement
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 This work follows progress release 8 and is not part of that frozen release.
 The repaired application commit is `f7441b85d5216b702dde490eb027aece1a6cfb5a`,
 based on `90b5b28`, merged in [PR 8](https://github.com/devdasx/oath-wallet/pull/8). No App Store binary equivalence is claimed.

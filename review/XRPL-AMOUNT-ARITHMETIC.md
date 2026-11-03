@@ -1,5 +1,7 @@
 # XRPL amount arithmetic — bounded host review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Baseline: build 103, `c7acd23bb139864a40273f405d18b479589d2b20`.
 Pre-fix reproduction: `a904515793b087289140e4411924f030b3fe61ff`.
 Tested repair: `6783750661c43d3511d8973a2de77106fdf2001d`, merged through

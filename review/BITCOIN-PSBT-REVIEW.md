@@ -1,5 +1,7 @@
 # Bitcoin connection requests and partially signed transactions
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The public BitcoinConnectRequest initializer reads a bounded peer payload, checks the selected method and chain identifier, binds the account, and validates parameters for the selected method. When a saved request returns through Codable, validate() encodes and runs the initializer again, then checks equality. Address parsing uses the selected Bitcoin network. A testnet-formatted address can be mapped to a corresponding owned mainnet script when matching the negotiated account. The connection does not get a new signing key from that change of address encoding.
 
 The PSBT reader first passes the bounded decoded container to BDK, then reads its key-value maps. It rejects duplicate keys within a map, non-minimal CompactSize encodings and inconsistent map counts. For review, each input's previous transaction is hashed and matched to its outpoint. A supplied witness output must also match the amount and script of that parent. Input and output totals are checked against Bitcoin's supply bound before addition. Requested input indices must be unique, owned and associated with the requested address. The selected sighash is restricted to ALL or Taproot DEFAULT. Previously finalized inputs and Taproot script-leaf signing are rejected on the reviewed path.

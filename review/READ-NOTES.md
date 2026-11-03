@@ -1,5 +1,7 @@
 # Source review notes — bounded coverage
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 These notes describe the inspected paths, not a whole-wallet conclusion.
 The file ledger is authoritative for remaining coverage.
 

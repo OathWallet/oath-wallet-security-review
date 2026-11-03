@@ -1,5 +1,7 @@
 # The final normal child and the Swift curve boundary
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 ## Address ownership, export and spend
 
 A BIP32 branch has 2³¹ normal child numbers. Child 2,147,483,647 is valid. In Swift a range that selects only that child has an *exclusive* end of 2,147,483,648. The original address API rejected that end. The change validator and the single-key, multisig and Electrum ownership checks also rejected the valid index itself. Oath now compares an actual index strictly below the first hardened child and permits a half-open range to end exactly there. The key export paths still derive the known branch and compare the complete selected address before returning the leaf. The fixed-key boundary still permits only its single address. This case concerns explicit derivation or recovery of an extreme index. Automatic gap discovery is separately bounded, and we found no evidence of lost funds. [BIP32 conventions](https://bips.dev/32/#extended-keys) · [Public repair](https://github.com/devdasx/oath-wallet/pull/49).

@@ -1,5 +1,7 @@
 # App entry, onboarding ownership and scene lifecycle
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Complete source reads cover `OathApp/OathAtmosphereApp.swift` (480 lines), `OathApp/OathSceneDelegate.swift` (348 lines) and `OathAtmosphere/Passcode/OathBiometricPresentation.swift` (48 lines) at the immutable 5.0.1 (103) baseline. All four files in the [source receipt](../evidence/5.0.1-build103/app-entry/source.json) are byte-identical in the later tested application tree `235a730de504e47fb961c34f68f9426ffdbdfe6d`. This is source review, not a new runtime proof or App Store binary comparison.
 
 The SwiftUI and retained UIKit scene delegates share a context. Startup loads local settings and wallet state concurrently; a canceled task or replaced connection UUID cannot publish readiness. State restoration is completed through defer on the startup path. Scene observers are removed on reconnection/disconnection; incoming links enter the same inbox while readiness is pending. Link payload validation remains the separate inbox/parser boundary. Debug visual fixtures are compiled only for Debug simulator configurations.

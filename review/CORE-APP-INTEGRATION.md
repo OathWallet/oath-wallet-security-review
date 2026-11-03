@@ -1,5 +1,7 @@
 # Core repairs integrated into public application source
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Application commit: `27fcf5f58f6169e1a40fb6afced883bc736d124d`.
 [PR 11](https://github.com/devdasx/oath-wallet/pull/11) merged as
 `99742291d6124fd2628bbf1653ec0ba5f121456f`; a tree comparison found no difference

@@ -1,5 +1,7 @@
 # EVM Safe contract cross-check — partial review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Application candidate: `2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc`.
 External contract reference: Safe 1.4.1, commit
 `bf943f80fec5ac647159d26161446ac5d716a294` in

@@ -1,5 +1,7 @@
 # Permission discovery, presentation and readback review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `8f5c27c030fdd85e1d5c3c18d9da8aa92ac04c79` (4.1.15, build 100).
 This increment follows the [batch authorization review](PERMISSION-BATCH-REVIEW.md).
 File reads, host tests and iOS compilation have separate evidence boundaries.

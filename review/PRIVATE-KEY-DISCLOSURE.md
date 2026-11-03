@@ -1,5 +1,7 @@
 # Private-key export: ownership, lifetime and evidence limits
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 **Checkpoint 12 follow-up:** the previously open retention question is now
 confirmed as [OW-2026-058](../findings/OW-2026-058.md), with actual synthetic OS
 snapshots, a merged source repair and before/after tests. The checkpoint 11

@@ -19,7 +19,7 @@ class XRPSigningEvidenceTests(unittest.TestCase):
             self.assertEqual((row['status'],row['exit_code']),('passed',0))
             self.assertEqual(row['log_sha256'],hashlib.sha256(gzip.decompress((E/'replay'/(row['log']+'.gz')).read_bytes())).hexdigest())
     def test_exact_hash_partial_coverage(self):
-        ledger={r['path']:r for r in json.loads((ROOT/'scope/inventory.json').read_text())['files']}
+        ledger={r['path']:r for r in json.loads((ROOT/'scope/history/5.0.1-build103/inventory.json').read_text())['files']}
         entries=json.loads((E/'source.json').read_text())['files'];self.assertEqual(len(entries),5)
         for row in entries:
             self.assertEqual(row['sha256'],ledger[row['path']]['sha256'])

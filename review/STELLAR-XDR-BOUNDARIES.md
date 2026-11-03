@@ -1,5 +1,7 @@
 # Stellar contract-call envelope decoding
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The public WalletConnect initializer parses a peer's XDR before presenting the transaction. This subreview follows the binary path into the pinned Soneso Swift SDK at `b5dac0a6e8ff312d597c9a3b4269b03131d66e0d`. The source pin, compiler-input trace and adversarial tests are distinct evidence.
 
 Start with the outer transaction discriminator. A v1 transaction has a source, fee, sequence, preconditions, memo and an operation vector. The fixture has one invoke-host-function operation and a one-character contract function name. One argument is a Soroban vector containing another vector. This is enough structure to exercise two different boundaries.

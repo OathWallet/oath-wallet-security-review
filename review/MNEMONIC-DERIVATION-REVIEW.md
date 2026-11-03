@@ -1,5 +1,7 @@
 # Mnemonic, passphrase and derivation boundaries — progress 11
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Application: `f7441b85d5216b702dde490eb027aece1a6cfb5a` (4.1.15/100).
 Wallet Core source: `d40d24a63d92619167903369308bf0e2f7eb3a59` (4.8.4).
 This is a maintainer-commissioned, Codex-led source review, not independent

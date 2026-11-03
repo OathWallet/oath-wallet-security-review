@@ -1,5 +1,7 @@
 # Outgoing session request lifetime review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Tested application: `05f1f349938c3281810241513bae8beceab35ffd`.
 Regression-only baseline: `a90d99005f3b8476178a968ba1016c0347e0328e`.
 

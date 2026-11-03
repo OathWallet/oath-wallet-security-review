@@ -1,5 +1,7 @@
 # Scalar arithmetic in the pinned secp256k1 package
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The Swift package revision is `e70a10e036a55fffea31568f0af92d69b6d449cd`. We compiled the actual scalar headers from its normal and ZKP source trees with native 128-bit, emulated 128-bit and 64-bit wide multiplication. Each run enabled internal verification and the undefined-behavior sanitizer. The release compiler trace contains the normal tree's four-limb representation. The other configurations give portable cross-checks.
 
 Both representations put the least significant limb first. The eight-limb literal macro reverses the input words. The four-limb macro widens and packs each adjacent pair before shifting. We read both complete representation headers in both trees. In the implementation headers we followed big-endian loading and reduction, carry reporting, canonical key rejection, halving odd scalars, negation at zero and the signed endomorphism decomposition. The fork also implements a separate squaring path and conversion from a 64-bit integer. The input/output and decomposition code were inspected for these operations. The larger implementation files retain partial review status.

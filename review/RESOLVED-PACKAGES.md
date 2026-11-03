@@ -1,5 +1,7 @@
 # What the unsigned iOS build resolved
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The app's Xcode lockfile has 12 source-control pins. SwiftDraw already has a dedicated ledger. The [other eleven package trees](../scope/upstream-xcode-packages.json) now have a file-level work queue. It records the exact revision, Git object ID, mode and SHA-256 of each of 5,690 blobs. Two additional rows record nested Git commits, one for a GRDB SQLite checkout and one in yttrium's test scripts. Their contents still need separate scope decisions. The inventory includes build tools, fixtures and examples. Being resolved does not prove a particular function ships in the app. The checksum check reads Git objects and rejects tracked changes to the checkouts.
 
 ## Where BitcoinDevKit comes from

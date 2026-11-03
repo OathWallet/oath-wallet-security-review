@@ -1,5 +1,7 @@
 # How the recovery importer resolves typed and scanned input
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 A BIP39 checksum, an Electrum version prefix and an aezeed envelope identify different properties of the same text. A version prefix alone can match a public payment address or the text of a URL. Conversely, one valid aezeed can also have a valid BIP39 checksum. Running a detector without preserving what the user intended can select a different wallet.
 
 The paired runner builds the production draft, validator and Bitcoin/aezeed packages at three source revisions. Each before/after pair uses a byte-identical Swift probe, starts each case in a separate network-denied host process, and checks the exact exit status and named result. It requires nine specific failures before and eleven successes after. Two controls cover ordinary BIP39, Electrum, aezeed and legacy hexadecimal input. The existing import suite additionally checks ten dictionaries, 260 vectors and all five supported BIP39 word counts. [Reproduction script](../scripts/recovery-routing.py) · [Paired outcomes](../evidence/recovery-routing/oath53-evidence/paired/recovery-routing.json).

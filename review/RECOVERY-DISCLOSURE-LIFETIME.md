@@ -1,5 +1,7 @@
 # Recovery disclosure and passcode setup ownership
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 This source pass uses the immutable 5.0.1 (103) baseline
 `c7acd23bb139864a40273f405d18b479589d2b20`. The [receipt](../evidence/5.0.1-build103/recovery-lifetime/source.json)
 identifies exact files, hashes and read ranges. No application source changed and

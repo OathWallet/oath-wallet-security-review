@@ -1,5 +1,7 @@
 # EVM transaction review — scoped progress
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed source: `6124254d43ee7a98d4a364639671ccfc52155396` (4.1.15, build 100).
 This increment repairs [OW-2026-009](../findings/OW-2026-009.md), a missing
 response-size check. It is not a complete EVM, swap, permission or dApp audit.

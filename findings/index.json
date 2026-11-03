@@ -6,7 +6,13 @@
     "status": "fixed-and-retested",
     "document": "OW-2026-001.md",
     "fix_commit": "ae5a35cec58f51bcfd6de3cd55950b47fa055a51",
-    "retest_scope": "production parser 6016 checks; 2 application XCTest cases; generic iOS Release and security host harness passed; broad package suites have unresolved failures"
+    "retest_scope": "production parser 6016 checks; 2 application XCTest cases; generic iOS Release and security host harness passed; broad package suites have unresolved failures",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-002",
@@ -23,7 +29,13 @@
     "follow_up_pr": "https://github.com/devdasx/oath-wallet/pull/8",
     "remaining_gap": "Historical shipped archive equivalence remains unproven; replacement source archives reproduced and compatibility checked.",
     "historical_comparison": "evidence/native-inputs/oath52-evidence/aezeed/historical.json",
-    "historical_go_text_outside_build_id_equal_in_all_slices": true
+    "historical_go_text_outside_build_id_equal_in_all_slices": true,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-003",
@@ -33,7 +45,13 @@
     "document": "OW-2026-003.md",
     "fix_commit": "d2fccbe8e586e7fc48609a2a48fc4a55923aeaea",
     "retest_scope": "15 authority tests and 27 combined targeted checks; no direct application caller established",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/2"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/2",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-004",
@@ -43,7 +61,13 @@
     "document": "OW-2026-004.md",
     "fix_commit": "f506dd8b820476296a6348c0ccbbdc42164c21f5",
     "retest_scope": "Synthetic production relay dispatch: two baseline rejection failures; four repaired cases pass. No end-to-end session deletion, signing bypass or fund loss demonstrated.",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/4"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/4",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-005",
@@ -53,7 +77,13 @@
     "document": "OW-2026-005.md",
     "fix_commit": "e352f56d0fb3be035c3600e646e3f9133adb9ef4",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/5",
-    "retest_scope": "Same four-case corpus: two baseline failures, four fixed passes; eight compatibility tests. Synthetic relay/history, no real peer or fund-loss demonstration."
+    "retest_scope": "Same four-case corpus: two baseline failures, four fixed passes; eight compatibility tests. Synthetic relay/history, no real peer or fund-loss demonstration.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-006",
@@ -63,7 +93,13 @@
     "document": "OW-2026-006.md",
     "fix_commit": "a65601b78f86e33ebae08a754035d69c1f5f5e43",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/6",
-    "retest_scope": "Identical eight-case corpus: 3 pass/5 fail before, 8 pass after. Production app parser accepts the synthetic input. No relay, signing or fund-loss demonstration."
+    "retest_scope": "Identical eight-case corpus: 3 pass/5 fail before, 8 pass after. Production app parser accepts the synthetic input. No relay, signing or fund-loss demonstration.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-007",
@@ -73,7 +109,13 @@
     "document": "OW-2026-007.md",
     "fix_commit": "02a6e8ab66c7629dcb9dd36637c683457e821d98",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/9",
-    "retest_scope": "Identical restoration fixture fails before and passes 140 checks after; actual Core simulator framework confirms 112 key equivalences. Host derivation is substituted; no app UI, real credentials, transactions or App Store verification."
+    "retest_scope": "Identical restoration fixture fails before and passes 140 checks after; actual Core simulator framework confirms 112 key equivalences. Host derivation is substituted; no app UI, real credentials, transactions or App Store verification.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-008",
@@ -85,7 +127,13 @@
     "fix_commit": "66e603301be904c6f9bfe0b3c0338fa704ffc1e2",
     "retest_scope": "Same fixture: 10/10 specific admission failures before, 10/10 passes on the production fix, and 10/10 passes on the final test-corrected commit, in fresh network-denied host processes. Final database: 704 pass/71 skip; networking: 1210 pass/194 skip; diagnostics: 118 pass/2 skip. Unsigned generic iOS Release build passed. Initial unsuccessful runs retained. No signing bypass, secret disclosure or fund loss demonstrated.",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/12",
-    "validation_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e"
+    "validation_commit": "2eef5a4912ce1680cd174c7596471620ffcf129e",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-001",
@@ -102,7 +150,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-002",
@@ -119,7 +173,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-003",
@@ -136,7 +196,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-004",
@@ -153,7 +219,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-005",
@@ -170,7 +242,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-AEZEED-001",
@@ -184,7 +262,13 @@
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/10",
     "evidence": "evidence/aezeed-repairs",
     "fixed_in_public_framework": true,
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-AEZEED-002",
@@ -198,7 +282,13 @@
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/10",
     "evidence": "evidence/aezeed-repairs",
     "fixed_in_public_framework": true,
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-AEZEED-003",
@@ -212,7 +302,13 @@
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/10",
     "evidence": "evidence/aezeed-repairs",
     "fixed_in_public_framework": true,
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-006",
@@ -229,7 +325,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-007",
@@ -247,7 +349,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-008",
@@ -265,7 +373,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "27fcf5f58f6169e1a40fb6afced883bc736d124d",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/11",
-    "integration_evidence": "evidence/core-app-integration"
+    "integration_evidence": "evidence/core-app-integration",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-009",
@@ -276,7 +390,13 @@
     "fix_commit": "6124254d43ee7a98d4a364639671ccfc52155396",
     "regression_only_commit": "04a239277b3b7a90ff5737b682cf2183bc5616fb",
     "retest_scope": "Identical production RPC tests: oversized precheck rejected after repair in 3 network-denied processes; exact-limit and ordinary-batch controls pass before and after. No fund loss or denial of service demonstrated.",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/13"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/13",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-010",
@@ -287,7 +407,13 @@
     "fix_commit": "2e51f0bcd3e710c35a1d78ee93746f6a8f202fdc",
     "regression_only_commit": "3cfa6168aac85b5e7c7c42daa4bf7b37e23276ce",
     "retest_scope": "Identical four-case fixture in three network-denied processes: 3 arithmetic traps and 3 invalid acceptances before; all 12 cases pass after. Existing app callers already validate the nonce; no reachable app exploit established.",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/14"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/14",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-011",
@@ -299,7 +425,13 @@
     "regression_only_commit": "976971f0ca3362cfba8c63bc738bd80d15abf096",
     "retest_scope": "Same 84-assertion, 21-scenario, three-chain corpus in three network-denied processes: 27 expected failures before; all 252 assertions pass after. Controls preserve valid grants, single use, lock and cancellation. No arbitrary-transfer bypass or live fund loss demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/15"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/15",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-012",
@@ -311,7 +443,13 @@
     "regression_only_commit": "b7ff1f5eab70b244ba64a68da10addf3a4d8c4c4",
     "retest_scope": "Same three test methods in three network-denied processes each: six expected batch/history mismatch failures and three reorganization controls before, all nine pass after. Real SQL, imported-key signatures, journal, restart and reorg triggers. Normal-app duplicate scheduling, UI effect and fund loss not demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/16"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/16",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-013",
@@ -323,7 +461,13 @@
     "regression_only_commit": "8fa6ee3bf99caf78ab71997b5642e323cccb95da",
     "retest_scope": "Same three-method corpus in three network-denied processes per phase: 12 expected Polygon destination assertion failures and six passing control executions before; all nine executions pass after. Production decoder, synthetic provider observations. False pending status, no signing bypass or fund loss demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/17"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/17",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-014",
@@ -336,7 +480,13 @@
     "regression_only_commit": "fe6d866751636da183a5de01b90c0f92ea4c5102",
     "retest_scope": "Same three-method corpus in three network-denied processes per phase: 30 omission/semantic assertion failures across six failing executions and three passing controls before, all nine pass after. Ten ABI vectors independently cross-checked with ethers 6.15.0. UI source reviewed/compiled, no runtime interaction or on-chain loss demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/21"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/21",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-015",
@@ -348,7 +498,13 @@
     "regression_only_commit": "0c466ea73d0875bdb46ce37a9bfcf6c702ee3639",
     "retest_scope": "Same four production-code host tests: 11 expected metadata exposure assertions across three failed cases and one passing encryption/routing control before; all four pass after. Network denied. Not a live relay or private-key leak proof.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/23"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/23",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-016",
@@ -360,7 +516,13 @@
     "regression_only_commit": "95e557d389413daa4dc03b8c7f7b3d4803507a7c",
     "retest_scope": "Same nine production-code host tests under network denial: 14 expected assertions across seven failed cases and two passing controls before; all nine pass after. Memory stores, cancellation-resistant fake transport and intercepted URLSession. Bounded 0.3-second negative observations; no real telemetry delivery or fund-loss claim.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/24"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/24",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-017",
@@ -372,7 +534,13 @@
     "regression_only_commit": "43281bdf88781f28f12cddbf87ec9dee03079e8b",
     "retest_scope": "Same 13 production-code cases in isolated network-denied processes: seven expected assertions across four cases, three conversion crashes and six passing controls before; all 13 pass after. Dependency API proof only; no remote Oath exploit or fund loss demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/25"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/25",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-018",
@@ -384,7 +552,13 @@
     "regression_only_commit": "4fdb1653b925ff6c58af5c07cb256ee2e0897c79",
     "retest_scope": "Identical 15-case production corpus: 13 assertion failures and two rejected-valid-case errors, two optional-unwrapping crashes, four controls before; all 15 pass after. Fixed hashing, 128 references and four dictionary capacities. Network denied; no end-to-end Oath exploit or signature bypass shown.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/26"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/26",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-019",
@@ -396,7 +570,13 @@
     "regression_only_commit": "764dd608519e8f30f60e3dea4a553c1def2f8c07",
     "retest_scope": "Same seven cases: two expected assertions in one case and six passing controls before; all seven pass after. Network-denied production-model checks with character corpus, seeded inputs, Codable and bounds. Oath uses typed-chain constructor in inspected approval path; no app exploit shown.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/29"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/29",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-020",
@@ -408,7 +588,13 @@
     "regression_only_commit": "a90d99005f3b8476178a968ba1016c0347e0328e",
     "retest_scope": "Same 11 production requester cases with transport spies: six assertions across four cases and seven passing controls before; all 11 pass after. Network denied, no actual service/relay operation or incoming Oath bypass shown.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/30"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/30",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-021",
@@ -420,7 +606,13 @@
     "regression_only_commit": "5522b5ff7c30279151ee2a4d88b6d9a8c0fd400e",
     "retest_scope": "Same ten production cases: four unowned-reference crashes, two duplicate-timer assertions and four passing controls before; all ten pass after. Actual Foundation run loop and memory-only stores in network-denied host processes. No remotely triggered Oath teardown demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/31"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/31",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-022",
@@ -432,7 +624,13 @@
     "regression_only_commit": "822aa4539c2188ef6a752eaf228b0284c80216fa",
     "retest_scope": "Same eight production cases: one unowned-reference abort, one timer-validity assertion and six passing controls before; all eight pass after. Default-preserving queue injection is disclosed. Real timers, memory-only stores, network-denied host processes; no remotely triggered Oath teardown demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/32"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/32",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-023",
@@ -444,7 +642,13 @@
     "regression_only_commit": "9050542eed7417e7c0a6ddb14f399ad51c028939",
     "retest_scope": "Identical 20-case production corpus: 32 assertions across eight failed cases, eight crashes and four controls before; all 20 pass after. Disclosed KMS/link interfaces permit memory-only spies; network denied. Outer switcher ordering is source-reviewed/compiled, not runtime tested; no incoming Oath authorization bypass shown.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/33"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/33",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-024",
@@ -456,7 +660,13 @@
     "regression_only_commit": "18b1033433143f30eeedf5b29e1ab16ea4e12f88",
     "retest_scope": "Same 16 production cases: 18 assertions across eight failed cases and eight controls before; all 16 pass after. Complete incoming dispatcher/serializer/history with synthetic memory-only keys and network denied. Host UIKit endpoint traps if reached. No enabled Oath app dispatch path or signing bypass demonstrated.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/34"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/34",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-025",
@@ -468,7 +678,13 @@
     "regression_only_commit": "01e177d816a1bcb572a3050302e42ad444643962",
     "retest_scope": "Identical 16 production cases: three nil-unwrap crashes, five state assertions and eight controls before; all 16 pass after. Memory-only stores and host UIKit callback. Incoming tests exercise synchronous subscriber state directly, not async error delivery or peer domain association.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/35"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/35",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-026",
@@ -480,7 +696,13 @@
     "regression_only_commit": "42846f9f9b9ff66ff8407700aa77539e70f963c5",
     "retest_scope": "Twelve identical production cases: 18 assertions across eight invalid routing cases and four controls before; all pass after. Link response encryption/history and relay endpoint recording; no live relay or app signing exploit.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/36"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/36",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-027",
@@ -492,7 +714,13 @@
     "regression_only_commit": "c1d12689cceb67d9bd4cfc76371082fe60da5893",
     "retest_scope": "Eleven identical production-history cases: 10 assertions across six controlled races and five controls before; all pass after. Gated thread-safe memory storage; separate-process access and async response generation binding not established.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/37"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/37",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-028",
@@ -504,7 +732,13 @@
     "regression_only_commit": "c446732194d1e81ef1127985434ec7f19c147268",
     "retest_scope": "Fourteen identical production transport/history cases: 10 assertions across six stale-completion cases and eight controls before; all pass after. Synthetic delivery endpoints and repeated relay ACKs; legacy-record and wire-field checks, not full peer handshake or message recall.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/39"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/39",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-029",
@@ -516,7 +750,13 @@
     "regression_only_commit": "439011c1774a5b5e22e75388ab59b67b3443b7a6",
     "retest_scope": "Three early-reply timeouts before, three send-error controls, six passes after. Synthetic host dispatcher and production RelayClient.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/40"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/40",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-030",
@@ -528,7 +768,13 @@
     "regression_only_commit": "34ba87a3e0b2beb27bd1acdb618e480f5faefb9d",
     "retest_scope": "Five synthetic host cases per revision in isolated, network-denied processes. Baseline signal 11 and failed depth assertion. All five pass after.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/41"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/41",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-031",
@@ -540,7 +786,13 @@
     "regression_only_commit": "7da0cd82a81bce01a0f6ed29ccae9d33f5c13a95",
     "retest_scope": "Eight host cases with synthetic sources, an injected transport and unresumed redirect tasks. Six fail before and eight pass after; no DNS resolution or real endpoint used.",
     "available_in_app_store_verified": false,
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/42"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/42",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-032",
@@ -552,7 +804,13 @@
     "regression_only_commit": "005a2fbf683773f3dffc51abe82f6d794271249a",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/44",
-    "retest_scope": "Five paired cases across two offline suites. Packet encoding, plan revalidation, and intercepted URLSession parent collection on macOS."
+    "retest_scope": "Five paired cases across two offline suites. Packet encoding, plan revalidation, and intercepted URLSession parent collection on macOS.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-033",
@@ -564,7 +822,13 @@
     "regression_only_commit": "e4d48f85ee43236c388b987dfec52feadfae2551",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/45",
-    "retest_scope": "Nine paired host cases plus independent Bitcoin Core regtest with four funded scripts on both revisions."
+    "retest_scope": "Nine paired host cases plus independent Bitcoin Core regtest with four funded scripts on both revisions.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-034",
@@ -576,7 +840,13 @@
     "regression_only_commit": "8c2eec02bddeafd9fadb1aae1db9d49a67bc4a64",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/46",
-    "retest_scope": "Fifteen paired isolated host cases, eight reproduced failures. Real production transport and fallback paths with synthetic URLProtocol responses."
+    "retest_scope": "Fifteen paired isolated host cases, eight reproduced failures. Real production transport and fallback paths with synthetic URLProtocol responses.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-035",
@@ -589,7 +859,13 @@
     "retested_commit": "a13a88cb67fe9fa73c1a0bbb222a474b195e25eb",
     "available_in_app_store_verified": false,
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/47",
-    "retest_scope": "Four networks, private-version alias rejection, independently derived scripts, encrypted cold-reopen and re-backup, and the published BIP32 invalid-key corpus."
+    "retest_scope": "Four networks, private-version alias rejection, independently derived scripts, encrypted cold-reopen and re-backup, and the published BIP32 invalid-key corpus.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-036",
@@ -601,7 +877,13 @@
     "regression_only_commit": "3c657667fb7091b9162a8d808f51e0c450bf1dc7",
     "retested_commit": "7ecfa2c163704d363ebe6dc16b60151dc8a7cd78",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/49",
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-037",
@@ -614,7 +896,13 @@
     "additional_regression_commit": null,
     "retested_commit": "343046575c980b9091a4474f098878e920963492",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/50",
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-038",
@@ -627,7 +915,13 @@
     "additional_regression_commit": "f6f86f003e998dc112f85e1c7c8f56a72ee8c13b",
     "retested_commit": "343046575c980b9091a4474f098878e920963492",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/50",
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-039",
@@ -640,7 +934,13 @@
     "additional_regression_commit": null,
     "retested_commit": "343046575c980b9091a4474f098878e920963492",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/50",
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-040",
@@ -652,7 +952,13 @@
     "available_in_app_store_verified": false,
     "fix_commit": "0ace171fa6e53a5b5904ed4eab009ae9c0fdb53e",
     "retested_commit": "8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/51"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/51",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-041",
@@ -665,7 +971,13 @@
     "regression_only_commit": "251d883f5095a42f2dff0f7ae9c6efed455afdb3",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/53",
     "available_in_app_store_verified": false,
-    "included_in_release_tag": "v5.0.1-build103"
+    "included_in_release_tag": "v5.0.1-build103",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-042",
@@ -678,7 +990,13 @@
     "regression_only_commit": "251d883f5095a42f2dff0f7ae9c6efed455afdb3",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/53",
     "available_in_app_store_verified": false,
-    "included_in_release_tag": "v5.0.1-build103"
+    "included_in_release_tag": "v5.0.1-build103",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-043",
@@ -688,7 +1006,13 @@
     "document": "OW-2026-043.md",
     "fix_commit": "b337611405bbff7a8c6c7da4bebdeb850b228163",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/55",
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-044",
@@ -699,7 +1023,13 @@
     "fix_commit": "c78b18fa42319d0a30963a10da1e9336f722fb67",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/56",
     "present_at_review_target": true,
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-045",
@@ -710,7 +1040,13 @@
     "fix_commit": "5071662dc0700d7011795035aa14b5795a4a1e3a",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/56",
     "present_at_review_target": true,
-    "available_in_app_store_verified": false
+    "available_in_app_store_verified": false,
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-009",
@@ -728,7 +1064,13 @@
     "fix_commit": "3e0e47d58af2b81f5194a19e6fc6c8eaadd7163c",
     "public_merge_commit": "2eb6b3cb46861ff6534377edd715f2ddae15d425",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/57",
-    "integration_evidence": "evidence/5.0.1-build103/core-apple/integration.json"
+    "integration_evidence": "evidence/5.0.1-build103/core-apple/integration.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "DEP-CORE-010",
@@ -746,7 +1088,13 @@
     "fix_commit": "3e0e47d58af2b81f5194a19e6fc6c8eaadd7163c",
     "public_merge_commit": "2eb6b3cb46861ff6534377edd715f2ddae15d425",
     "fix_pr": "https://github.com/devdasx/oath-wallet/pull/57",
-    "integration_evidence": "evidence/5.0.1-build103/core-apple/integration.json"
+    "integration_evidence": "evidence/5.0.1-build103/core-apple/integration.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-046",
@@ -760,7 +1108,13 @@
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/import-retry/result.json",
-    "merge_commit": "7393e4c2e55994f2034c0372fe71094934480682"
+    "merge_commit": "7393e4c2e55994f2034c0372fe71094934480682",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-047",
@@ -774,7 +1128,13 @@
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/family-index/reproduction.json",
-    "merge_commit": "0ead5bc10f8749f3a54c8f6f91f4585fb7ccefc6"
+    "merge_commit": "0ead5bc10f8749f3a54c8f6f91f4585fb7ccefc6",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-048",
@@ -788,7 +1148,13 @@
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/sql-counters/original.json",
-    "merge_commit": "6250263512a50868ca1f004958acbf2bf7f39b51"
+    "merge_commit": "6250263512a50868ca1f004958acbf2bf7f39b51",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-049",
@@ -802,7 +1168,13 @@
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
     "merge_commit": "8cff8a04c114b3dd7cfa20a2c039f4f30ad8dcc7",
-    "evidence": "evidence/5.0.1-build103/bitcoin-indices/focused.json"
+    "evidence": "evidence/5.0.1-build103/bitcoin-indices/focused.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-050",
@@ -816,7 +1188,13 @@
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
     "merge_commit": "8cff8a04c114b3dd7cfa20a2c039f4f30ad8dcc7",
-    "evidence": "evidence/5.0.1-build103/bitcoin-indices/focused.json"
+    "evidence": "evidence/5.0.1-build103/bitcoin-indices/focused.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-051",
@@ -830,7 +1208,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/63",
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
-    "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json"
+    "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-052",
@@ -844,7 +1228,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/64",
     "present_at_review_target": true,
     "available_in_app_store_verified": false,
-    "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json"
+    "evidence": "evidence/5.0.1-build103/backup-file-identity/deterministic-replay.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-053",
@@ -859,7 +1249,13 @@
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/ens-contract-decoding/result.json",
     "merge_commit": "cd63782a33f35361f9ee4cbc6a05330e1b919fc1",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/66"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/66",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-054",
@@ -873,7 +1269,13 @@
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/signature-contracts/result.json",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/67",
-    "merge_commit": "e782d434f64236aa94f58bb9add6feb6e62133f3"
+    "merge_commit": "e782d434f64236aa94f58bb9add6feb6e62133f3",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-055",
@@ -887,7 +1289,13 @@
     "available_in_app_store_verified": false,
     "evidence": "evidence/5.0.1-build103/signature-contracts/result.json",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/67",
-    "merge_commit": "e782d434f64236aa94f58bb9add6feb6e62133f3"
+    "merge_commit": "e782d434f64236aa94f58bb9add6feb6e62133f3",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-056",
@@ -900,7 +1308,13 @@
     "available_in_app_store": false,
     "retest_scope": "Nine production checksum methods; 24 independent vectors; seven original failing methods and two controls. Application-entry-point reachability unproven.",
     "merge_commit": "717e876e76a6d453f0fd692e2ca147341dc7121e",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/68"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/68",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-057",
@@ -914,7 +1328,13 @@
     "available_in_app_store": false,
     "retest_scope": "15 production host methods; real CryptoKit agreement and independent Node/OpenSSL HKDF reference; source-level approval path, no UI exploit.",
     "merge_commit": "65b06c1d67af0daf84f1748ad203f8f10c7c40ce",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/69"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/69",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-058",
@@ -928,7 +1348,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/71",
     "available_in_app_store_verified": false,
     "retest_scope": "11 production-model checks: 7 pass/4 fail before, 11 pass after; 791 broader host checks; generic iOS Release build; one isolated iOS 27.0 synthetic production-component snapshot experiment. No full export UI, device, all-OS timing or memory-zeroization claim.",
-    "evidence": "evidence/5.0.1-build103/private-key-snapshot/manifest.json"
+    "evidence": "evidence/5.0.1-build103/private-key-snapshot/manifest.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-059",
@@ -942,7 +1368,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/73",
     "available_in_app_store_verified": false,
     "retest_scope": "15 controlled production-model host cases: 12 pass/3 fail before, 15 pass after. Synthetic database/service boundaries; no persisted corruption, key disclosure or cloud runtime claim.",
-    "evidence": "evidence/5.0.1-build103/backup-presentation/manifest.json"
+    "evidence": "evidence/5.0.1-build103/backup-presentation/manifest.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-060",
@@ -956,7 +1388,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/74",
     "available_in_app_store_verified": false,
     "retest_scope": "4900 exact-arithmetic host cases: 4843 pass/57 fail before; 4900 pass after. Selected package regressions, diagnostics and unsigned Release compilation pass. No fund loss, live ledger or UI claim.",
-    "evidence": "evidence/5.0.1-build103/xrpl-amounts/manifest.json"
+    "evidence": "evidence/5.0.1-build103/xrpl-amounts/manifest.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-061",
@@ -970,7 +1408,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/75",
     "available_in_app_store_verified": false,
     "retest_scope": "Six provider methods: four pass/two fail before (eight assertions), six pass after. Broader XRP package: 43 pass/four live skips. Diagnostics 119 pass/two skips; source checks and unsigned Release build pass. No live ledger, UI or fund loss claim.",
-    "evidence": "evidence/5.0.1-build103/xrpl-connect-simulation/manifest.json"
+    "evidence": "evidence/5.0.1-build103/xrpl-connect-simulation/manifest.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-062",
@@ -984,7 +1428,13 @@
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/76",
     "available_in_app_store_verified": false,
     "retest_scope": "Five production-database methods pass; original two failures (46 assertions) and intermediate compatibility failure (seven assertions) retained. Signed synthetic XRP plus seven-table schema-only matrix. Full database 744 pass/72 skips, diagnostics 119 pass/two skips; unsigned Release compilation passes. Legacy already-removed cleanup remains permitted; cross-vault/SQL atomicity not proven.",
-    "evidence": "evidence/5.0.1-build103/connect-removal/manifest.json"
+    "evidence": "evidence/5.0.1-build103/connect-removal/manifest.json",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   },
   {
     "id": "OW-2026-063",
@@ -998,6 +1448,12 @@
     "retest_scope": "Controlled production vault/XRP journal: identical 23-case fixture changes from 19 passes/four failures to 23 passes. Thirty interrupted-recovery checks. Eight-table schema guard matrix. No live fund loss, UI or OS authentication claim. See manifest for final validation and retained failed setup attempts.",
     "evidence": "evidence/5.0.1-build103/connect-removal-race/manifest.json",
     "merge_commit": "adacd9143ca97ef559f6de36c19c4a6b4c401c6c",
-    "pull_request": "https://github.com/devdasx/oath-wallet/pull/77"
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/77",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": true,
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+    }
   }
 ]

@@ -1,5 +1,7 @@
 # Permission batch authorization and lifetime review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `da7a88ad0b3dd7cc56304d2e84e9b8b134c7eb4b` (4.1.15, build 100).
 This is a source review plus bounded macOS host execution, not an iOS runtime,
 provider or protocol-certification claim.

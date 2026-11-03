@@ -1,5 +1,7 @@
 # Solana multisig vector isolation and fixture provenance
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application: `f9cccef32d4508fca13ddbf52d3eb882b5d8f0f1`.
 Previous target: `e46fff5686db48a40103c9dbffe5e830cfc5548a`.
 Application [PR 22](https://github.com/devdasx/oath-wallet/pull/22) changes tests

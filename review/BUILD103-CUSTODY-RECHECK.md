@@ -1,5 +1,7 @@
 # Build 103 custody and handoff source checks
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The source revision for this review is `c7acd23bb139864a40273f405d18b479589d2b20`. File coverage in this note applies to that tag. Post-release changes have their own evidence.
 
 - The aezeed Swift bridge bounds input and password byte lengths, requires 24 words in the bundled 2,048-word dictionary, and checks the CRC before calling the native decoder. Recognition only means the envelope can be parsed. The decoder validates the version and authenticated native result. Transient arrays are cleared on exit; the returned material necessarily retains its entropy and password. The changed dictionary loader records only fixed internal resource-error reasons. Seven package tests passed.

@@ -1,5 +1,7 @@
 # XRP Connect simulation-response validation
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Finding: [OW-2026-061](../findings/OW-2026-061.md).
 
 The test-only before commit is

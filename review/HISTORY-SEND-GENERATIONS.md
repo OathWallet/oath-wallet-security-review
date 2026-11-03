@@ -1,5 +1,7 @@
 # Pending-history identity across asynchronous sends
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application: `4cb121a588583b9b0adef626c05cbedafce3a759`. Regression-only baseline: `c446732194d1e81ef1127985434ec7f19c147268`.
 Original baseline remains 4.1.15 (100), `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 

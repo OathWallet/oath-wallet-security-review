@@ -55,7 +55,7 @@ class XRPAmountEvidenceTests(unittest.TestCase):
             raw=(E/name).read_bytes()
             self.assertEqual(meta['bytes'],len(raw))
             self.assertEqual(meta['sha256'],hashlib.sha256(raw).hexdigest())
-        ledger={r['path']:r for r in json.loads((ROOT/'scope/inventory.json').read_text())['files']}
+        ledger={r['path']:r for r in json.loads((ROOT/'scope/history/5.0.1-build103/inventory.json').read_text())['files']}
         for row in json.loads((E/'source.json').read_text())['files']:
             self.assertEqual(row['sha256'],ledger[row['path']]['sha256'])
             self.assertEqual(ledger[row['path']]['status'],'partially-reviewed')

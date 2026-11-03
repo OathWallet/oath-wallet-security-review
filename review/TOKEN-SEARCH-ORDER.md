@@ -1,5 +1,7 @@
 # Token-search refresh ordering: fixture repair
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The exact build 103 GitHub host run failed `testOldRefreshCannotReplaceNewWalletNetworkResults`: its first assertion saw an empty result list instead of Ethereum. The later wallet-switch assertion did not fail. The original report and log remain in the final [baseline CI snapshot](../evidence/5.0.1-build103/ci-artifacts-checkpoint9.json), including its failed status. This is a confirmed test synchronization defect, not a confirmed wallet vulnerability.
 
 The original fixture waited 200 milliseconds after starting a task. Production search first debounces for 150 milliseconds, then awaits catalog lookup and detached mapping before publishing cached results. There is no contract that this work finishes in the remaining 50 milliseconds. Increasing the sleep would only change the race. The source already checks its request generation after each asynchronous publication boundary.

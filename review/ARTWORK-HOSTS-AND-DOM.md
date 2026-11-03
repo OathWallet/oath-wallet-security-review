@@ -1,5 +1,7 @@
 # Artwork destinations and the pinned SwiftDraw document model
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 ## Where a logo can go
 
 The source policy accepts token metadata and builds candidates, including an original URL carried by a signed TonAPI thumbnail. ArtworkLoader uses those candidates for cache lookup and download. ArtworkURLTransport checks its input, each proposed redirect, and the final response URL. A similar check protects the shared catalog transport. It uses HTTPS, removes cookie and credential stores, and limits accepted response size. [OW-2026-031](../findings/OW-2026-031.md) covers a lexical bypass common to these entry points.

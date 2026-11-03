@@ -1,5 +1,7 @@
 # Direct Release compiler inputs
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Progress 55 matched 458 generated Stellar SDK files to the direct compiler trace and reviewed the public metadata-queue implementation. Of the 2,354 direct inputs, 1670 remain open in this ledger. Generated-source equality and manual semantic review are recorded separately. [Current ledger](../evidence/progress55/compiled-inputs.json).
 
 ### Progress 54

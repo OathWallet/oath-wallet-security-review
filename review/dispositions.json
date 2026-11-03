@@ -293,40 +293,8 @@
       "review/READ-NOTES.md#additional-walletconnect-and-kms-review"
     ]
   },
-  "Vendor/Reown/Sources/WalletConnectKMS/Crypto/KeyManagementService.swift": {
-    "sha256": "e74c31bd5ba05fee9e5d8d5409f280791fe7f13477f5715418e17bffcff0f066",
-    "status": "reviewed",
-    "evidence": [
-      "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
-      "review/PROTOCOL-KEY-HEX.md"
-    ]
-  },
   "Vendor/Reown/Sources/WalletConnectKMS/Crypto/AgreementKeys.swift": {
     "sha256": "f8135e29c5f62badad324b8eb6a93e0b482c19fd542660ac30ff5b2b59adfeb3",
-    "status": "reviewed",
-    "evidence": [
-      "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
-      "review/PROTOCOL-KEY-HEX.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectKMS/Crypto/CryptoKitWrapper/AgreementCryptoKit.swift": {
-    "sha256": "36762bde9265473f1cfd538125f16564e5f6757765402e417539cd97d3a3edbe",
-    "status": "reviewed",
-    "evidence": [
-      "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
-      "review/PROTOCOL-KEY-HEX.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectKMS/Crypto/CryptoKitWrapper/SharedSecret.swift": {
-    "sha256": "183c37d9a7d6e233534e2f5bc07749d2c268c44f9934cdfc30cac1af023e501e",
-    "status": "reviewed",
-    "evidence": [
-      "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
-      "review/PROTOCOL-KEY-HEX.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectKMS/Crypto/SymmetricKey.swift": {
-    "sha256": "8f9da9a899d625040b18c169e84dbad6dd9505dc4ec9bc4d2c412d8938541856",
     "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
@@ -649,23 +617,6 @@
     "status": "partially-reviewed",
     "evidence": [
       "review/INPUT-BOUNDARIES.md"
-    ]
-  },
-  "Tools/CheckWalletConnectSDK.py": {
-    "sha256": "840bbacf2ebc18f3965987010307e304da49dd7050d5295eae6a044981359c52",
-    "status": "reviewed",
-    "evidence": [
-      "review/INPUT-BOUNDARIES.md",
-      "review/EVENTS-LIFECYCLE-REVIEW.md",
-      "review/SESSION-EXPIRY-REVIEW.md",
-      "review/NAMESPACE-BOUNDARY-REVIEW.md",
-      "review/CAIP-BOUNDARY-REVIEW.md",
-      "review/REQUEST-LIFETIME-REVIEW.md",
-      "review/WATCHER-LIFETIME-REVIEW.md",
-      "review/AUTH-REQUEST-BOUNDARIES.md",
-      "review/LINK-ENVELOPE-BOUNDARIES.md",
-      "review/LINK-SESSION-METADATA.md",
-      "review/SESSION-RESPONSE-ROUTING.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/TonAmount.swift": {
@@ -1303,13 +1254,6 @@
     "evidence": [
       "review/CORE-SIGNING-PARSE.md",
       "review/BITCOIN-SIGNER-AND-CORE.md"
-    ]
-  },
-  "Tools/PrepareWalletCoreSymbols.py": {
-    "sha256": "732c9b0406c8893a6c86d94aa21a0fd842d75a05e39758b4b1cde44f9079bc57",
-    "status": "reviewed",
-    "evidence": [
-      "review/CORE-APP-INTEGRATION.md"
     ]
   },
   "Packages/OathAnkr/Sources/OathAnkr/TronSendPlan.swift": {
@@ -7822,14 +7766,6 @@
       "review/CURVE-WRAPPER-AND-INDEX.md"
     ]
   },
-  "OathAtmosphere/Import/OathRecoveryPhraseDraft.swift": {
-    "status": "partially-reviewed",
-    "sha256": "b9d3a087ee59cec4ac4b127347bec041f262320d8aa7e7f3ca13a3d89148713d",
-    "evidence": [
-      "review/RECOVERY-IMPORT-ROUTING.md",
-      "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
-    ]
-  },
   "OathAtmosphere/Import/OathRecoveryPhraseScreen.swift": {
     "status": "partially-reviewed",
     "sha256": "6dc77cd30deafb02fe9aac2ea3a739e30ff9103f371ae09ecd33f2b234f0fdc4",
@@ -7844,13 +7780,6 @@
     "evidence": [
       "review/RECOVERY-IMPORT-ROUTING.md",
       "review/ELECTRUM-TWO-FACTOR.md"
-    ]
-  },
-  "Tools/CheckAezeedImport.swift": {
-    "status": "partially-reviewed",
-    "sha256": "f294bb847260e061a879335ae8ffca2031d84aee0f6eac76589adf9d8d11db1d",
-    "evidence": [
-      "review/RECOVERY-IMPORT-ROUTING.md"
     ]
   },
   "Tools/CheckElectrumImport.swift": {
@@ -8078,25 +8007,11 @@
       "review/BCH-TOKENS-AND-SIGNING.md"
     ]
   },
-  "Packages/OathAnkr/Sources/OathAnkr/PublicCheckProviders.swift": {
-    "sha256": "208b15f51a9a4e07236a304fcee7ea093860608bc47ab8ef4dc64aa1df55899f",
-    "status": "reviewed",
-    "evidence": [
-      "review/PROVIDER-QUEUE-AND-STELLAR-GENERATION.md"
-    ]
-  },
   "OathAtmosphere/Send/OathBitcoinSendModel.swift": {
     "sha256": "b40f6eca9492eb57f80895f169d11fb5d7b73f1793a66c482813ccd9223161ce",
     "status": "partially-reviewed",
     "evidence": [
       "review/PROVIDER-QUEUE-AND-STELLAR-GENERATION.md"
-    ]
-  },
-  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendStatus.swift": {
-    "sha256": "9a5765bf763098f40e0e2bee512d739ab32ac13a9d7831e90267774d6e8e9354",
-    "status": "partially-reviewed",
-    "evidence": [
-      "review/BITCOIN-JOURNAL-AND-RESET.md"
     ]
   },
   "Packages/OathAezeed/Sources/OathAezeed/Aezeed.swift": {
@@ -8134,20 +8049,6 @@
       "review/BUILD103-CUSTODY-RECHECK.md"
     ]
   },
-  "Packages/WalletCore/Package.swift": {
-    "sha256": "4e3dec19389c04f95dcaac96cde16c43162c9b2e21544c70cb8c5fc7c608f72d",
-    "status": "reviewed",
-    "evidence": [
-      "review/BUILD103-CUSTODY-RECHECK.md"
-    ]
-  },
-  "Packages/WalletCore/provenance.json": {
-    "sha256": "e8bfdc3030616d1c50bdc6e372184b6ff1a3b905874c9e1b80eeae11a6199ba8",
-    "status": "reviewed",
-    "evidence": [
-      "review/BUILD103-CUSTODY-RECHECK.md"
-    ]
-  },
   "OathAtmosphere/Wallet/OathVaultImportPreparation.swift": {
     "sha256": "9883e2f9378ce94b1444af588d813fe87736dd7bb1107a075cc173591b46827e",
     "status": "partially-reviewed",
@@ -8162,88 +8063,12 @@
       "review/BUILD103-CUSTODY-RECHECK.md"
     ]
   },
-  "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudDrive.swift": {
-    "sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
-    "status": "partially-reviewed",
-    "evidence": [
-      "review/BUILD103-CUSTODY-RECHECK.md",
-      "findings/OW-2026-052.md"
-    ]
-  },
-  "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudRestore.swift": {
-    "sha256": "41f0e36a3f03d71d6ded9c84a8ea8ed45eed0487418702b27d5105717719c244",
-    "status": "partially-reviewed",
-    "evidence": [
-      "review/BUILD103-CUSTODY-RECHECK.md",
-      "findings/OW-2026-051.md"
-    ]
-  },
   "OathApp/Info.plist": {
     "sha256": "2090f03a172473e3013e1ae18316f3c75a6bd5d03fcf0396520d0a7409b3a968",
     "status": "reviewed",
     "evidence": [
       "review/READ-NOTES.md",
       "review/BUILD103-CUSTODY-RECHECK.md"
-    ]
-  },
-  "OathAtmosphere/Wallet/OathWalletVault.swift": {
-    "sha256": "eb8850aaa44f64366340695dc08f817f140178682dc323ae6feab73de8a44b65",
-    "status": "partially-reviewed",
-    "evidence": [
-      "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md",
-      "review/PRIVATE-KEY-DISCLOSURE.md"
-    ]
-  },
-  "OathAtmosphere/Wallet/OathVaultEnvelope.swift": {
-    "status": "partially-reviewed",
-    "sha256": "89c716bda2ae2638e1648027fd6d93a95e981046ad1a60e3cf768e435ef17f7a",
-    "evidence": [
-      "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
-    ]
-  },
-  "Packages/OathDatabase/Sources/OathDatabase/OathDatabase.swift": {
-    "status": "partially-reviewed",
-    "sha256": "762333bc3b68db1950b02ae4cee8dfb6afa57da01adcf846464a5fff378a8c71",
-    "evidence": [
-      "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
-    ]
-  },
-  "Packages/OathAnkr/Sources/OathAnkr/ArcClient.swift": {
-    "status": "partially-reviewed",
-    "sha256": "1deabc9de0402493284621707420744b9018ac4d4afc4b6fb3aba0dec7b7daaa",
-    "evidence": [
-      "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
-    ]
-  },
-  "Packages/OathDatabase/Sources/OathDatabase/BitcoinLedger.swift": {
-    "status": "partially-reviewed",
-    "sha256": "69ff4bde5bd9f5d62fade1e294b158398405bce59312b7b1d7b1f3cac07cda80",
-    "evidence": [
-      "findings/OW-2026-049.md",
-      "findings/OW-2026-050.md"
-    ]
-  },
-  "Packages/OathDatabase/Sources/OathDatabase/BitcoinSend.swift": {
-    "status": "partially-reviewed",
-    "sha256": "58afbc34b6f526cd5602c9acccf65f5a7b4c457f6a53cf3a8eb945b64eb5a38d",
-    "evidence": [
-      "findings/OW-2026-049.md",
-      "findings/OW-2026-050.md"
-    ]
-  },
-  "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinDiscovery.swift": {
-    "status": "partially-reviewed",
-    "sha256": "c7b50fbbaafe1fe34bcb6b0a67ef374d7ac344cae7668f07321fd73d51cdb211",
-    "evidence": [
-      "findings/OW-2026-049.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ContractCall/ContractDecoder.swift": {
-    "sha256": "d47b78c6f24d4560ee7c62172f857fdafce7b63d83f131d4421a8191bd1ec9ea",
-    "status": "reviewed",
-    "evidence": [
-      "review/ENS-CONTRACT-DECODING.md",
-      "findings/OW-2026-053.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ContractCall/EthCall.swift": {
@@ -8262,76 +8087,12 @@
       "findings/OW-2026-053.md"
     ]
   },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSRegistryContract.swift": {
-    "sha256": "bcb5f5b89e262e5b6d75fd5d66f6a3df7e914721d9759685905bff987185eceb",
-    "status": "reviewed",
-    "evidence": [
-      "review/ENS-CONTRACT-DECODING.md",
-      "findings/OW-2026-053.md"
-    ]
-  },
   "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSResolverContract.swift": {
     "sha256": "9f86ea30084128cb3916ef1e018fd60195c3e0497a2bf54e50944494e0dc7c35",
     "status": "reviewed",
     "evidence": [
       "review/ENS-CONTRACT-DECODING.md",
       "findings/OW-2026-053.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Signer/EthereumSignature.swift": {
-    "sha256": "497190427c5a0acf4dab379426e2d2bc191a9e5d12d7931a8e1bb7a271b465cc",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP191/EIP191Verifier.swift": {
-    "sha256": "5b9ae35657257f6c8f4048b37e79936e15658881abd532e280643ac025868bbe",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP1271/EIP1271Verifier.swift": {
-    "sha256": "20eada249c6e01e5a06e1ab0b41c2b6ef02043e5bc3e84b696e6023870c30809",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP1271/ValidSignatureMethod.swift": {
-    "sha256": "60eafd84df0722c68ff21b94e014e87d9301ccad9b4a06f16abceecb8f7f2241",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ContractCall/ContractEncoder.swift": {
-    "sha256": "31e9abcd04c87aad10cea897b95a598c64d002c85d6d3bf70580d5cf65ce6d10",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSAddressMethod.swift": {
-    "sha256": "bc2d8755a32d7a09518af2bf2115308f6b6fb198de037e812e023c830bc4f09b",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSNameMethod.swift": {
-    "sha256": "c3aa5fe9cd01f8679325b7dd5d7e3ce75db340e177ed0936fe9f0733edb7f3e3",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSResolverMethod.swift": {
-    "sha256": "7eec64331084f766c30e4cda6808224ecfc3f220cb7b4200fa8ba7b9021e55e7",
-    "status": "reviewed",
-    "evidence": [
-      "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSigner/CryptoProvider.swift": {
@@ -8360,20 +8121,6 @@
     "status": "reviewed",
     "evidence": [
       "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP55/EIP55.swift": {
-    "sha256": "2f730978f84114b1cc5304f60e71879ec1e503050dbc0e455b54cac4ffdefc22",
-    "status": "reviewed",
-    "evidence": [
-      "review/ADDRESS-CHECKSUMS.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSResolver.swift": {
-    "sha256": "2718e552aef74f30418fe3c4c6d271116b445b99d1e4ec1a1042e3100a03b82b",
-    "status": "partially-reviewed",
-    "evidence": [
-      "review/ADDRESS-CHECKSUMS.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSResolverFactory.swift": {
@@ -8409,21 +8156,6 @@
     "status": "reviewed",
     "evidence": [
       "review/ADDRESS-CHECKSUMS.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectUtils/Extensions/Data+utils.swift": {
-    "sha256": "d74db64849cf5b25230fd49dce98f37808dd46278bad810a9ef183ff3dbcd76b",
-    "status": "partially-reviewed",
-    "evidence": [
-      "review/ADDRESS-CHECKSUMS.md",
-      "review/PROTOCOL-KEY-HEX.md"
-    ]
-  },
-  "Vendor/Reown/Sources/WalletConnectKMS/Crypto/CryptoKitWrapper/SigningKeyCryptoKit.swift": {
-    "sha256": "8dd070bb9dbd365872921ecdf60776b70a298e40aff442193b5bf941a50c290d",
-    "status": "reviewed",
-    "evidence": [
-      "review/PROTOCOL-KEY-HEX.md"
     ]
   },
   "Vendor/Reown/Sources/WalletConnectSign/Engine/Common/ApproveEngine.swift": {
@@ -8552,13 +8284,6 @@
     "status": "partially-reviewed",
     "evidence": [
       "review/RECOVERY-DISCLOSURE-LIFETIME.md",
-      "review/PRIVATE-KEY-DISCLOSURE.md"
-    ]
-  },
-  "OathAtmosphere/Wallet/OathPrivateKeyModel.swift": {
-    "sha256": "83744cf3c4d61363a940b8e3c07e8f7e7e42b9aa5b4928d61a0ebab79497b9ff",
-    "status": "partially-reviewed",
-    "evidence": [
       "review/PRIVATE-KEY-DISCLOSURE.md"
     ]
   },

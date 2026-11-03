@@ -1,5 +1,7 @@
 # Bitcoin payment recovery and interrupted resets
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 A host test substituted a different, already-signed payment for the bytes in a local SQLite journal. Both payments spent the same synthetic inputs. With no history returned by the injected peer, the original reader let the changed recipient reach the rebroadcast decision. No transaction was transmitted. Separately, three existing upgrade tests found that the wallet's own reset fence rejected a write during startup.
 
 [Payment identity, severity and compatibility](../findings/OW-2026-044.md) · [Interrupted reset](../findings/OW-2026-045.md) · [Merged app changes](https://github.com/devdasx/oath-wallet/pull/56).

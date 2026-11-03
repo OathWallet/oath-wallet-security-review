@@ -1,5 +1,7 @@
 # Provider response boundaries in the unsigned iOS build
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 A transport can enforce a byte budget at three points: before sending, while receiving, and before decoding. Only the middle check can prevent accumulation of an unexpectedly long unknown-length response. A size limit on an injectable decoder still matters for data that arrived through another path. The [finding and reproduction](../findings/OW-2026-034.md) describe the distinction.
 
 ## Paths examined

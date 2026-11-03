@@ -1,5 +1,7 @@
 # CAIP model and parser review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application commit: `8e5b6b0f565026951d7cef9435258daa0b02b9b2`.
 Baseline for the identical regression fixture: `764dd608519e8f30f60e3dea4a553c1def2f8c07`.
 

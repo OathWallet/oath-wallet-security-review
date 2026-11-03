@@ -1,5 +1,7 @@
 # Dependency evidence and limitations
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 `scope/dependencies.json` lists Swift lockfile pins; duplicate entries preserve
 which manifest declared them. `scope/licenses.json` hashes bundled notices.
 `scope/binaries.json` records bundled archive/module hashes. This is an inventory,

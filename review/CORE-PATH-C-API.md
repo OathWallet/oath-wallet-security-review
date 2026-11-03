@@ -1,5 +1,7 @@
 # Wallet Core derivation path C interface
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Upstream commit `d40d24a63d92619167903369308bf0e2f7eb3a59` (4.8.4).
 Read the two public path/index headers and their two C++ wrapper implementations, including constructors, getters, ownership, string conversion and deletion. Reconciled them with the underlying DerivationPath parser and its short-path defaults. The numeric path constructor sets the first three components hardened and the last two unhardened; the text constructor catches parser exceptions and returns null. Index lookup checks the requested offset before copying the child into a new allocation. Deleting the parent leaves the returned child usable. Returned description strings have independent ownership.
 

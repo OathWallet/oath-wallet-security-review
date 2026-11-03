@@ -1,5 +1,7 @@
 # Session watcher and storage callback lifetime review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Tested application: `d13c1979398ab3dc51d9af18f5bf23821e18262f`.
 Regression-only baseline: `5522b5ff7c30279151ee2a4d88b6d9a8c0fd400e`.
 

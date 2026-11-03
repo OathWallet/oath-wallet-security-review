@@ -1,5 +1,7 @@
 # Wallet removal, pending journals and interrupted persistence
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 OW-2026-062 fixed omission of pending Connect rows from removal preflight.
 The next experiment confirms a distinct time-of-check/time-of-use problem:
 another writer can insert a pending row after preflight. The durable reservation

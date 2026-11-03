@@ -1,5 +1,7 @@
 # Provider concurrency, Bitcoin recovery and Stellar source generation
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The review target remains `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`, descended from 4.1.15 (100). Results below identify later fixes separately.
 
 ## A waiting request could miss a completed result

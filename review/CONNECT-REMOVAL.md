@@ -1,5 +1,7 @@
 # Pending Connect work and wallet removal
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 [OW-2026-062](../findings/OW-2026-062.md) records the confirmed behavior, severity,
 app call-path trace and legacy cleanup exception. This is a bounded database
 review, not a completed lifecycle or wallet audit.

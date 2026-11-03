@@ -1,5 +1,7 @@
 # Build 103 diagnostic test failures
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Two jobs failed during the [release-tag matrix](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820). We verified the SHA-256 digest of each GitHub artifact before inspecting its individual tests. [Original failure receipts](../evidence/5.0.1-build103/ci-retests/failures.json).
 
 ## Arc token decimals

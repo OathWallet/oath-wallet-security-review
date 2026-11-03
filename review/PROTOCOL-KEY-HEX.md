@@ -1,5 +1,7 @@
 # Protocol key parsing and representation review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The immutable baseline is 5.0.1 (103), `c7acd23bb139864a40273f405d18b479589d2b20`. The final candidate is `235a730de504e47fb961c34f68f9426ffdbdfe6d`.
 
 ## Parsing, key size and repair

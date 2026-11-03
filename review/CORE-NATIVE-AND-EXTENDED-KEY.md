@@ -1,5 +1,7 @@
 # Native Core validation and extended-key type repair
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 > Integration update: the eight repairs are now selected by public app commit
 > `27fcf5f58f6169e1a40fb6afced883bc736d124d`, merged in PR 11.
 > [Final app checks and remaining gaps](CORE-APP-INTEGRATION.md). Earlier

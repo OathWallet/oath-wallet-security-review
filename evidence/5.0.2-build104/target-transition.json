@@ -1,0 +1,465 @@
+{
+  "previous_target": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "current_target": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+  "previous_release": "5.0.1 (103)",
+  "current_release": "5.0.2 (104) prerelease",
+  "hash_identical_dispositions_carried": 1158,
+  "changed_dispositions": [
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectKMS/Crypto/KeyManagementService.swift",
+      "previous": {
+        "sha256": "e74c31bd5ba05fee9e5d8d5409f280791fe7f13477f5715418e17bffcff0f066",
+        "status": "reviewed",
+        "evidence": [
+          "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
+          "review/PROTOCOL-KEY-HEX.md"
+        ]
+      },
+      "current_sha256": "05df6a48c18eada2332df8a67fa66ffb3425a57d24fd7f474ebbb51ef4b4c83c",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectKMS/Crypto/CryptoKitWrapper/AgreementCryptoKit.swift",
+      "previous": {
+        "sha256": "36762bde9265473f1cfd538125f16564e5f6757765402e417539cd97d3a3edbe",
+        "status": "reviewed",
+        "evidence": [
+          "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
+          "review/PROTOCOL-KEY-HEX.md"
+        ]
+      },
+      "current_sha256": "fb7626b8b59bff7879a75cde8c0c0d6b62ac46471092791874a42a8678a93e0a",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectKMS/Crypto/CryptoKitWrapper/SharedSecret.swift",
+      "previous": {
+        "sha256": "183c37d9a7d6e233534e2f5bc07749d2c268c44f9934cdfc30cac1af023e501e",
+        "status": "reviewed",
+        "evidence": [
+          "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
+          "review/PROTOCOL-KEY-HEX.md"
+        ]
+      },
+      "current_sha256": "7a1775cfb4fc5be4fdfae62fcd25a50b022d8dd54323e7fa6b8e95255d4210b1",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectKMS/Crypto/SymmetricKey.swift",
+      "previous": {
+        "sha256": "8f9da9a899d625040b18c169e84dbad6dd9505dc4ec9bc4d2c412d8938541856",
+        "status": "reviewed",
+        "evidence": [
+          "review/READ-NOTES.md#additional-walletconnect-and-kms-review",
+          "review/PROTOCOL-KEY-HEX.md"
+        ]
+      },
+      "current_sha256": "df5ae15c6dfb6f4b10206c5ba5085da31a1c2bd7bad761cc0fa57e757e47337a",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Tools/CheckWalletConnectSDK.py",
+      "previous": {
+        "sha256": "840bbacf2ebc18f3965987010307e304da49dd7050d5295eae6a044981359c52",
+        "status": "reviewed",
+        "evidence": [
+          "review/INPUT-BOUNDARIES.md",
+          "review/EVENTS-LIFECYCLE-REVIEW.md",
+          "review/SESSION-EXPIRY-REVIEW.md",
+          "review/NAMESPACE-BOUNDARY-REVIEW.md",
+          "review/CAIP-BOUNDARY-REVIEW.md",
+          "review/REQUEST-LIFETIME-REVIEW.md",
+          "review/WATCHER-LIFETIME-REVIEW.md",
+          "review/AUTH-REQUEST-BOUNDARIES.md",
+          "review/LINK-ENVELOPE-BOUNDARIES.md",
+          "review/LINK-SESSION-METADATA.md",
+          "review/SESSION-RESPONSE-ROUTING.md"
+        ]
+      },
+      "current_sha256": "b4a070a84af4c9a8e9bbb2fcb50bb703c7139d17adb915e58871fd9486b8d760",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Tools/PrepareWalletCoreSymbols.py",
+      "previous": {
+        "sha256": "732c9b0406c8893a6c86d94aa21a0fd842d75a05e39758b4b1cde44f9079bc57",
+        "status": "reviewed",
+        "evidence": [
+          "review/CORE-APP-INTEGRATION.md"
+        ]
+      },
+      "current_sha256": "82adda030355dadbba695de55095c0be3a2581bc5b4545e455fe0f019bfe4fd5",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "OathAtmosphere/Import/OathRecoveryPhraseDraft.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "b9d3a087ee59cec4ac4b127347bec041f262320d8aa7e7f3ca13a3d89148713d",
+        "evidence": [
+          "review/RECOVERY-IMPORT-ROUTING.md",
+          "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
+        ]
+      },
+      "current_sha256": "4463d42a146c2a44ffe1ea787d7f21607a4768575d10aad2916b0e2d1ead2622",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Tools/CheckAezeedImport.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "f294bb847260e061a879335ae8ffca2031d84aee0f6eac76589adf9d8d11db1d",
+        "evidence": [
+          "review/RECOVERY-IMPORT-ROUTING.md"
+        ]
+      },
+      "current_sha256": "7021422bc182df979dad4bb3648b6ef2b3c31a3b7905067739385ebcedfd313c",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/PublicCheckProviders.swift",
+      "previous": {
+        "sha256": "208b15f51a9a4e07236a304fcee7ea093860608bc47ab8ef4dc64aa1df55899f",
+        "status": "reviewed",
+        "evidence": [
+          "review/PROVIDER-QUEUE-AND-STELLAR-GENERATION.md"
+        ]
+      },
+      "current_sha256": "f959b61d7522cb5749e942d70cc0fc7bceea590c577cd9b863bd003b5c37d673",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendStatus.swift",
+      "previous": {
+        "sha256": "9a5765bf763098f40e0e2bee512d739ab32ac13a9d7831e90267774d6e8e9354",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/BITCOIN-JOURNAL-AND-RESET.md"
+        ]
+      },
+      "current_sha256": "49f354553de68da53c64abdb71e877d7473db8e83fcd05f863eff382fb118e3e",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/WalletCore/Package.swift",
+      "previous": {
+        "sha256": "4e3dec19389c04f95dcaac96cde16c43162c9b2e21544c70cb8c5fc7c608f72d",
+        "status": "reviewed",
+        "evidence": [
+          "review/BUILD103-CUSTODY-RECHECK.md"
+        ]
+      },
+      "current_sha256": "612a4b10e4c2beda3765cf8f654bd75b1561789b238618a35cf25e67ee6a5816",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/WalletCore/provenance.json",
+      "previous": {
+        "sha256": "e8bfdc3030616d1c50bdc6e372184b6ff1a3b905874c9e1b80eeae11a6199ba8",
+        "status": "reviewed",
+        "evidence": [
+          "review/BUILD103-CUSTODY-RECHECK.md"
+        ]
+      },
+      "current_sha256": "cd1c17614c549613c7f2e1fe2f20357bd32c0fc5c745dad6b94a5b723853ffca",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudDrive.swift",
+      "previous": {
+        "sha256": "515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/BUILD103-CUSTODY-RECHECK.md",
+          "findings/OW-2026-052.md"
+        ]
+      },
+      "current_sha256": "34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathCloudBackup/Sources/OathCloudBackup/CloudRestore.swift",
+      "previous": {
+        "sha256": "41f0e36a3f03d71d6ded9c84a8ea8ed45eed0487418702b27d5105717719c244",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/BUILD103-CUSTODY-RECHECK.md",
+          "findings/OW-2026-051.md"
+        ]
+      },
+      "current_sha256": "f44029ff50919f42481c2c984a10c3d14d70ef58749aae460d74b555dd79f0ef",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "previous": {
+        "sha256": "eb8850aaa44f64366340695dc08f817f140178682dc323ae6feab73de8a44b65",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md",
+          "review/PRIVATE-KEY-DISCLOSURE.md"
+        ]
+      },
+      "current_sha256": "eeb17988608021a989709f5a0d3af1890895d4c6dbe00e9b183dccf348377c9e",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathVaultEnvelope.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "89c716bda2ae2638e1648027fd6d93a95e981046ad1a60e3cf768e435ef17f7a",
+        "evidence": [
+          "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
+        ]
+      },
+      "current_sha256": "227900c01f8eab10d5f0e629d1ff2230378fd2cec95372f7e501d95914ee461d",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/OathDatabase.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "762333bc3b68db1950b02ae4cee8dfb6afa57da01adcf846464a5fff378a8c71",
+        "evidence": [
+          "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
+        ]
+      },
+      "current_sha256": "29edcd7a3743d82e9de58d0ba994c405873f9df0b47173bbdaac4d3f50a791a3",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/ArcClient.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "1deabc9de0402493284621707420744b9018ac4d4afc4b6fb3aba0dec7b7daaa",
+        "evidence": [
+          "review/BUILD103-WALLET-IDENTITY-AND-NUMBERING.md"
+        ]
+      },
+      "current_sha256": "175d8d8f80aa57220ce5d79ea1a618660bcb64856ce2395f32ab6df145b8e1c6",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/BitcoinLedger.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "69ff4bde5bd9f5d62fade1e294b158398405bce59312b7b1d7b1f3cac07cda80",
+        "evidence": [
+          "findings/OW-2026-049.md",
+          "findings/OW-2026-050.md"
+        ]
+      },
+      "current_sha256": "c29d6322cf5776366350ae267f67b03b039fa625e9adc0602fbf572159a3c69c",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/BitcoinSend.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "58afbc34b6f526cd5602c9acccf65f5a7b4c457f6a53cf3a8eb945b64eb5a38d",
+        "evidence": [
+          "findings/OW-2026-049.md",
+          "findings/OW-2026-050.md"
+        ]
+      },
+      "current_sha256": "65ed9331868738efa4c6c0f6c451fc137f2ae0b14640e285cecafee4be58ed1c",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinDiscovery.swift",
+      "previous": {
+        "status": "partially-reviewed",
+        "sha256": "c7b50fbbaafe1fe34bcb6b0a67ef374d7ac344cae7668f07321fd73d51cdb211",
+        "evidence": [
+          "findings/OW-2026-049.md"
+        ]
+      },
+      "current_sha256": "8aca16ca61aba8de2c0cac22825f78f827a0a1fb50984fdf65f89ba4ba9f193d",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ContractCall/ContractDecoder.swift",
+      "previous": {
+        "sha256": "d47b78c6f24d4560ee7c62172f857fdafce7b63d83f131d4421a8191bd1ec9ea",
+        "status": "reviewed",
+        "evidence": [
+          "review/ENS-CONTRACT-DECODING.md",
+          "findings/OW-2026-053.md"
+        ]
+      },
+      "current_sha256": "573b42fd9fd0e4c99a0c359f9e180a824b4b48beca14fc57417aac99fd83e50d",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSRegistryContract.swift",
+      "previous": {
+        "sha256": "bcb5f5b89e262e5b6d75fd5d66f6a3df7e914721d9759685905bff987185eceb",
+        "status": "reviewed",
+        "evidence": [
+          "review/ENS-CONTRACT-DECODING.md",
+          "findings/OW-2026-053.md"
+        ]
+      },
+      "current_sha256": "7da95d7a36ccb70cd74721fe9a261015ff119a667cb96298600f88b0b09b9b6e",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Signer/EthereumSignature.swift",
+      "previous": {
+        "sha256": "497190427c5a0acf4dab379426e2d2bc191a9e5d12d7931a8e1bb7a271b465cc",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "bbc3726a374d6d9335c3194a06f4e88e3273d14a9b0dd1bae13bf8b16d26421e",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP191/EIP191Verifier.swift",
+      "previous": {
+        "sha256": "5b9ae35657257f6c8f4048b37e79936e15658881abd532e280643ac025868bbe",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "a1001b5c5b3a72e20b1e676267af9b821e5948b4d8499319dfd0f7b087111bc7",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP1271/EIP1271Verifier.swift",
+      "previous": {
+        "sha256": "20eada249c6e01e5a06e1ab0b41c2b6ef02043e5bc3e84b696e6023870c30809",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "23a7321937716815bc64c2a64d458e6b5bc57b9ee5fa449772bb3a84950fbecd",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP1271/ValidSignatureMethod.swift",
+      "previous": {
+        "sha256": "60eafd84df0722c68ff21b94e014e87d9301ccad9b4a06f16abceecb8f7f2241",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "00250a4595a5b429b2cefea8c8aaf1ce24c5cba9161421b498a56ffa7506b367",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ContractCall/ContractEncoder.swift",
+      "previous": {
+        "sha256": "31e9abcd04c87aad10cea897b95a598c64d002c85d6d3bf70580d5cf65ce6d10",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "5ac30ccd4fccf3cd4e0eb652fd70b2109c057849657a3decd2e9832345ed8b15",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSAddressMethod.swift",
+      "previous": {
+        "sha256": "bc2d8755a32d7a09518af2bf2115308f6b6fb198de037e812e023c830bc4f09b",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "5971f65e4431414acb9d5930f9978a38712f74757997e6aff63485f485da88ca",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSNameMethod.swift",
+      "previous": {
+        "sha256": "c3aa5fe9cd01f8679325b7dd5d7e3ce75db340e177ed0936fe9f0733edb7f3e3",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "839222fd0b7713a1157015cdc118a080064357f4c4705ed1a7de11fa622d1eaa",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSResolverMethod.swift",
+      "previous": {
+        "sha256": "7eec64331084f766c30e4cda6808224ecfc3f220cb7b4200fa8ba7b9021e55e7",
+        "status": "reviewed",
+        "evidence": [
+          "review/SIGNATURE-CONTRACT-BOUNDARIES.md"
+        ]
+      },
+      "current_sha256": "e2fa6d23fcfec0c2d0a7b6880d0309c93ba1ee82b1131153ff5fe4ab21544bcb",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/EIP55/EIP55.swift",
+      "previous": {
+        "sha256": "2f730978f84114b1cc5304f60e71879ec1e503050dbc0e455b54cac4ffdefc22",
+        "status": "reviewed",
+        "evidence": [
+          "review/ADDRESS-CHECKSUMS.md"
+        ]
+      },
+      "current_sha256": "e684e412054762b2657cf700a1409f4c99bc9db8095e71ca87847d9d52849d68",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectSigner/Ethereum/ENS/ENSResolver.swift",
+      "previous": {
+        "sha256": "2718e552aef74f30418fe3c4c6d271116b445b99d1e4ec1a1042e3100a03b82b",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/ADDRESS-CHECKSUMS.md"
+        ]
+      },
+      "current_sha256": "62ca7d401c99502b05689d49fc61e9d9300f52fb4c285b3282174eae426b6ce7",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectUtils/Extensions/Data+utils.swift",
+      "previous": {
+        "sha256": "d74db64849cf5b25230fd49dce98f37808dd46278bad810a9ef183ff3dbcd76b",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/ADDRESS-CHECKSUMS.md",
+          "review/PROTOCOL-KEY-HEX.md"
+        ]
+      },
+      "current_sha256": "a3c8124b8a1bdd4443bb664a2d0a1e9757a178c14e2ed68c6b58f815bf4f05d0",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "Vendor/Reown/Sources/WalletConnectKMS/Crypto/CryptoKitWrapper/SigningKeyCryptoKit.swift",
+      "previous": {
+        "sha256": "8dd070bb9dbd365872921ecdf60776b70a298e40aff442193b5bf941a50c290d",
+        "status": "reviewed",
+        "evidence": [
+          "review/PROTOCOL-KEY-HEX.md"
+        ]
+      },
+      "current_sha256": "a3565f5bc13529fb19cf809499e91d5f1ba58b1552798b949a48558b6aba4495",
+      "disposition": "outstanding pending re-review of changed bytes"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPrivateKeyModel.swift",
+      "previous": {
+        "sha256": "83744cf3c4d61363a940b8e3c07e8f7e7e42b9aa5b4928d61a0ebab79497b9ff",
+        "status": "partially-reviewed",
+        "evidence": [
+          "review/PRIVATE-KEY-DISCLOSURE.md"
+        ]
+      },
+      "current_sha256": "82611a5ed11ce9ea1e2f47f04b5bf4244508c994f61df9c49dfe8922b907dde2",
+      "disposition": "outstanding pending re-review of changed bytes"
+    }
+  ],
+  "policy": "Only identical file hashes retain prior scoped review dispositions. Changed files are outstanding until review is rebound. Historical tests retain original source pins; no completion claim."
+}

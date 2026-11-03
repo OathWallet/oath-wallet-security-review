@@ -1,5 +1,7 @@
 # Acceptance checklist — in progress
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Active release: **5.0.1 (103)**, `c7acd23bb139864a40273f405d18b479589d2b20`. [Release-specific findings and exact-target checks](RELEASE-5.0.1-103.md). The completion gate reads the active commit from [the scope](../scope/source.json).
 
 Checkpoint 9 retains 16,599 open ledger items, including 1,526 outstanding direct compiler inputs and 111 partial inputs. The completed baseline workflow failed five jobs; 104 of 115 required checks have passing exact-baseline records across the evidence ledger. Later source fixes and test-harness repairs have separate commit-specific receipts. The whole-wallet acceptance criteria remain unmet.
@@ -57,3 +59,12 @@ historical baseline remains unchanged; the combined gate now reports **16,770
 open coverage/validation entries**, not 16,770 vulnerabilities. Direct compiler
 coverage counts remain unchanged. The controlled journal/removal overlap is
 repaired; other asynchronous signing and full integration paths remain open.
+
+## Active prerelease target: 5.0.2 (104)
+
+The target is `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`. Six checks now have
+passing exact-target records, including generic iOS compilation and compiler
+input tracing. The combined completion gate reports **16,908 open entries**.
+Earlier tests are not counted as new-revision passes. File-hash changes reopen
+review coverage; unchanged bytes retain their original scoped evidence.
+No whole-review completion or App Store operation is claimed.

@@ -1,5 +1,7 @@
 # Session and request expiry review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `fd002d9272a767352c114e8b752a21f65f0694cc`.
 Finding: [OW-2026-017](../findings/OW-2026-017.md).
 

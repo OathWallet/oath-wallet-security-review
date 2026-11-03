@@ -1,5 +1,7 @@
 # Envelope and session follow-up: hypotheses not confirmed
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 At `235a730de504e47fb961c34f68f9426ffdbdfe6d`, the session rejection handler force-unwraps `session.publicKey`. Source tracing shows that this computed optional always wraps `selfParticipant.publicKey`, which is a nonoptional immutable String. Codable requires that String. A nil value is not representable through the inspected constructors or decoder. This suspected nil crash was therefore not confirmed; the rest of the settlement lifecycle remains partially reviewed.
 
 The envelope decoder's first-byte expression appeared to risk an empty-data range error. The original implementation rejected the empty string without a process trap on the tested host. The same ten production-code cases passed on the immutable 5.0.1 (103) baseline and the later public source, with networking denied. These cover empty standard/URL base64 at the envelope and serializer APIs, all truncated type-1 public-key lengths, unsupported type bytes, malformed base64 and valid type-0/1/2 serialization controls. A provisional one-line guard change was discarded. No application fix or vulnerability finding is claimed.

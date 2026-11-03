@@ -1,5 +1,7 @@
 # Authentication request input and side-effect review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Tested app: `a04bebfafd38f02a441c1a0ee81540882438a99c`.
 Regression baseline: `9050542eed7417e7c0a6ddb14f399ad51c028939`.
 

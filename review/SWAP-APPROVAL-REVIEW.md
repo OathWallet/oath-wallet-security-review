@@ -1,5 +1,7 @@
 # Ordered router operations at the approval boundary
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `e46fff5686db48a40103c9dbffe5e830cfc5548a`.
 This follows the explicit mixed-operation question from progress 27. The
 production-model collision is now reproduced and repaired as

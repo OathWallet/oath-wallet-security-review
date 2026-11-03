@@ -1,5 +1,7 @@
 # Relay metadata privacy boundary — progress 30
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Application target: `e7aed8c9d08357df10a4f85be7d069a66fad07f8`.
 The confirmed, repaired privacy finding is [OW-2026-015](../findings/OW-2026-015.md).
 The full audit remains incomplete.

@@ -1,5 +1,7 @@
 # From the private-key field to the BDK decoder
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The public app trims input, checks the network choice, delegates UTXO input to that network's decoder, and holds the resulting scalar and extended-key data in its protected wallet model. It supports Bitcoin x/y/z versions, Litecoin-specific aliases and Dogecoin-specific versions; Bitcoin Cash uses Bitcoin version bytes. These inputs may share a scalar but a different chain code, depth or derivation path produces a different wallet.
 
 We followed the original accepted encoding through the UniFFI DescriptorSecretKey constructor, miniscript's secret descriptor parser, rust-bitcoin's Xpriv decoder and secp256k1's scalar validator. The bridge's secret_bytes method derives the recorded path for a single extended key and returns an empty vector for wildcard/multipath cases. Its derive method appends the requested derivation to any path already present, updates the origin and preserves the wildcard type. These are distinct from verifying that data claimed to be a private key is encoded as one. Xpriv's encoder writes the zero byte; its decoder reads the scalar after that byte. The corresponding Xpub decoder passes the complete key field to the public-point parser. The app now checks the private/public marker against the version before invoking either decoder. [Finding and affected paths](../findings/OW-2026-035.md).

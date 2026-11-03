@@ -1,5 +1,7 @@
 # Link session metadata and transport changes
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application: `57893f12d80eea8203a7e235733f055f5dbd7902`.
 Regression-only baseline: `01e177d816a1bcb572a3050302e42ad444643962`. Original review baseline remains 4.1.15 (100).
 

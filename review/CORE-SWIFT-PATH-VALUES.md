@@ -1,5 +1,7 @@
 # Swift derivation-path values and extended-key validation
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The Swift overlay shipped in Wallet Core 4.8.4 accepts paths of different lengths. A three-component account path survived parsing, but encoding and decoding it as JSON silently added two components. This changes the derivation path. The public app also uses a same-named type from BitcoinDevKit in some Bitcoin code. Those call sites do not establish that the Oath app encodes the affected Wallet Core type.
 
 ## DEP-CORE-009 · A saved path could identify a different derivation

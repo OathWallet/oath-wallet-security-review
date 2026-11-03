@@ -1,5 +1,7 @@
 # Incoming Link Mode boundaries
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application commit `f2019f3e752ee3fb1b57d7259abb8721779f0cc8`, following `18b1033433143f30eeedf5b29e1ab16ea4e12f88`
 (regression-only baseline). Original review baseline remains 4.1.15 (100).
 

@@ -1,5 +1,7 @@
 # Bitcoin signing, final proofs and independent consensus checks
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The [signer finding](../findings/OW-2026-033.md) concerns an authorized signing request whose response could be invalid. The distinction between the transaction the wallet approved and a peer's assertion that it was already signed matters for both sign-only responses and retries from the local submission journal.
 
 ## Dependency trace

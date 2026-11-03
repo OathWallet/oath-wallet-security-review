@@ -1,5 +1,7 @@
 # RPC history compound-operation atomicity
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed app: `6d8fda366773726364b0cb8b389d793cd34bd0bd`. Regression-only baseline: `c1d12689cceb67d9bd4cfc76371082fe60da5893`.
 Original baseline: 4.1.15 (100), `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`.
 

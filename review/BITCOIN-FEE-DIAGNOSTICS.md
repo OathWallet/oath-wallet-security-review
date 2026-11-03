@@ -1,5 +1,7 @@
 # Bitcoin fee failover diagnostic fixture
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 At application commit `d0c6b3a73ec794d7b768bb71454ba17c0063af98`, the full Bitcoin package run executed 328 cases. One failed two assertions, 267 passed and 60 opted out. The fee quote itself matched the expected 2,000 atomic units per 1,000 virtual bytes. The assertions that failed expected an invalid-quote diagnostic and a fallback diagnostic. Five subsequent isolated runs of the original case passed. The full failure remains in the evidence. [Original test and assertions](https://github.com/devdasx/oath-wallet/blob/d0c6b3a73ec794d7b768bb71454ba17c0063af98/Packages/OathBitcoin/Tests/OathBitcoinTests/UTXOFeeProviderTests.swift#L15-L42).
 
 The test initiated three scenarios. It assigned each a 20 ms deadline, including the one whose purpose was to return a malformed fee. The provider uses a task group to race its timer against the selected source. If the timer wins, the fallback quote can succeed with no invalid-quote reports. A second race involved the observation. The app creates diagnostic events in a background task, while the test slept for 100 ms and flushed only events already admitted to the outbox. The failure log does not reveal which race won on that run.

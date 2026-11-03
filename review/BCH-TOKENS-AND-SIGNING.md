@@ -1,5 +1,7 @@
 # Bitcoin Cash funding outputs and signing
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 A token-bearing output can contain ordinary BCH value. Counting that BCH in a balance must not make the output available for a BCH-only payment. Oath parses the prefix to recover the locking script, verifies the previous transaction ID, amount and output index, and tests the original output bytes for the token marker. Both the database spendable-output projection and BitcoinSendCoin.validate exclude those outputs. BitcoinCashSendSigner and the multisignature signer call plan validation before requesting keys or signing. The multisignature path also rederives the script from the authenticated policy. [Funding verification](https://github.com/devdasx/oath-wallet/blob/8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707/Packages/OathBitcoin/Sources/OathBitcoin/BitcoinTransactions.swift#L54-L84) · [Spend admission](https://github.com/devdasx/oath-wallet/blob/8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707/Packages/OathBitcoin/Sources/OathBitcoin/BitcoinSendPlan.swift#L42-L64).
 
 ## Prefix reader

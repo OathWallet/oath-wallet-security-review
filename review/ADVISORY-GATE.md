@@ -1,5 +1,7 @@
 # Preserve raw advisories; validate the exact compiled source selection
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Historical run [41257431422](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41257431422)
 completed with 41 successful jobs and one failed scanner job. Its application
 target was `f7441b85d5216b702dde490eb027aece1a6cfb5a`, **not** the current target.

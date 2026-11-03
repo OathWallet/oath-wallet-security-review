@@ -1,5 +1,7 @@
 # Restoration path review increment
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Reviewed application commit: `02a6e8ab66c7629dcb9dd36637c683457e821d98`.
 The complete `OathWalletRestoration.swift` and `Tools/CheckCloudRestore.swift`
 were read. Their hashes are in the disposition ledger. The much larger

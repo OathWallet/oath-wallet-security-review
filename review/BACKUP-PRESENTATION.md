@@ -1,5 +1,7 @@
 # Backup presentation, secure fields and cancellation
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Source scope: 5.0.1 (103),
 `c7acd23bb139864a40273f405d18b479589d2b20`. Complete reads covered the all-wallet
 backup page/model, backup-password form, SwiftUI secure-input bridge and native

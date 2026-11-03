@@ -1,5 +1,7 @@
 # Child derivation and dependency API characterizations
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Application target: `02a6e8ab66c7629dcb9dd36637c683457e821d98`.
 Wallet Core source: `d40d24a63d92619167903369308bf0e2f7eb3a59` (4.8.4).
 This is an incomplete maintainer-commissioned source review, not a certification.

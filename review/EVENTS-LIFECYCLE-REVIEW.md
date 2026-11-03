@@ -1,5 +1,7 @@
 # SDK event lifecycle review
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 Target: `4cfeb14ce9bd85ca2d10017cb053ab421df30cf2`.
 Finding: [OW-2026-016](../findings/OW-2026-016.md).
 

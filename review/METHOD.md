@@ -1,5 +1,7 @@
 # Method and threat model
 
+> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+
 The commissioner is the wallet maintainer. The reviewer is Codex, an automated
 coding agent. This is not an independent third-party engagement. A reproducible
 test is evidence for its assertions, not for every surrounding security property.
