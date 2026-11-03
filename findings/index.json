@@ -943,5 +943,19 @@
     "available_in_app_store_verified": false,
     "retest_scope": "15 controlled production-model host cases: 12 pass/3 fail before, 15 pass after. Synthetic database/service boundaries; no persisted corruption, key disclosure or cloud runtime claim.",
     "evidence": "evidence/5.0.1-build103/backup-presentation/manifest.json"
+  },
+  {
+    "id": "OW-2026-060",
+    "title": "Valid large XRP issued-token amounts fail transfer-rate calculation",
+    "severity": "low",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-060.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "6783750661c43d3511d8973a2de77106fdf2001d",
+    "merge_commit": "dff3a012120b839c00bba3fc5464b97598c1448b",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/74",
+    "available_in_app_store_verified": false,
+    "retest_scope": "4900 exact-arithmetic host cases: 4843 pass/57 fail before; 4900 pass after. Selected package regressions, diagnostics and unsigned Release compilation pass. No fund loss, live ledger or UI claim.",
+    "evidence": "evidence/5.0.1-build103/xrpl-amounts/manifest.json"
   }
 ]

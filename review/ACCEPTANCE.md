@@ -14,6 +14,8 @@ Checkpoint 14 verifies two hosted before/after repair replays and adds 22 passin
 
 Checkpoint 13 records OW-2026-059's tested source repair and fifteen controlled model cases (three expected failures before, none after). Four new partial dispositions leave 244 reviewed, 124 partial and 1,509 outstanding direct inputs, with generated counts unchanged. The gate retains 16,597 open items, and 266 audit-helper checks pass. Model tests do not complete UIKit, live-cloud or cryptographic coverage. [Backup review](BACKUP-PRESENTATION.md).
 
+Checkpoint 15 adds the verified public-source repair OW-2026-060 and 4,900 paired arithmetic cases. Four partial dispositions leave 244 reviewed, 132 partial and 1,501 outstanding direct compiler inputs; generated counts are unchanged. The combined gate retains 16,598 entries. The complete signing/serialization paths, dependency provenance and full-wallet coverage remain open. [XRP arithmetic scope](XRPL-AMOUNT-ARITHMETIC.md).
+
 ## Historical acceptance snapshot
 
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.

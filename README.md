@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Checkpoint 15.** [OW-2026-060](findings/OW-2026-060.md) repairs an XRP issued-token quote failure for valid large amounts. The same 4,900 deterministic arithmetic cases change from 4,843 passes/57 failures to all passing. Targeted package regressions, diagnostics, source validation and unsigned iOS Release compilation pass. [Reproduction, scope and limits](review/XRPL-AMOUNT-ARITHMETIC.md) · [Checkpoint evidence](review/RELEASE-5.0.1-103.md#checkpoint-15). No live ledger or App Store result is claimed.
+
 **Checkpoint 14.** GitHub reproduced both repairs: private-key cleanup changes from seven passes/four failures to eleven passes, and backup progress changes from twelve passes/three failures to fifteen passes. Downloaded artifact, log and source hashes were verified. Twenty-two new restore-model host checks pass and detect a deliberately broken guard; four more files have partial source coverage. [Evidence](review/RELEASE-5.0.1-103.md#checkpoint-14).
 
 **Checkpoint 13.** A canceled backup-record read could overwrite a newer batch's error/progress. [OW-2026-059](findings/OW-2026-059.md) is repaired in [PR #73](https://github.com/devdasx/oath-wallet/pull/73). The same fifteen production-model cases change from twelve passes/three failures to all fifteen passing. Diagnostics and unsigned iOS Release compilation pass; no backup corruption or key disclosure was demonstrated. Four additional files have partial source review dispositions with UI limits preserved. [Evidence](review/RELEASE-5.0.1-103.md#checkpoint-13).

@@ -1,5 +1,8 @@
 # Oath Wallet security review progress report
 
+**Checkpoint 15.** [OW-2026-060](../findings/OW-2026-060.md) repairs an XRP issued-token quote failure for valid large amounts. The same 4,900 deterministic arithmetic cases change from 4,843 passes/57 failures to all passing. Targeted package regressions, diagnostics, source validation and unsigned iOS Release compilation pass. [Reproduction, scope and limits](XRPL-AMOUNT-ARITHMETIC.md) · [Checkpoint evidence](RELEASE-5.0.1-103.md#checkpoint-15). No live ledger or App Store result is claimed.
+
+
 **IN PROGRESS. This is not a completed whole-wallet audit.**
 
 **Active target — 5.0.1 (103).** The maintainer-commissioned Codex review now targets public source `c7acd23bb139864a40273f405d18b479589d2b20`. App Store Connect showed iOS version 5.0.1 Waiting for Review on 2 November 2026. [Current results and release-specific findings](RELEASE-5.0.1-103.md) · [Coverage inventory](../scope/inventory.json).

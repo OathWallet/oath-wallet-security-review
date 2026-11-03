@@ -328,3 +328,46 @@ of vulnerabilities. No new application defect was confirmed in this follow-up.
 The app source is unchanged; its prior unsigned Release build is retained, not
 reported as a new build. No simulator, physical device or App Store operation was
 performed. The whole-wallet review remains in progress.
+
+## Checkpoint 15
+
+[OW-2026-060](../findings/OW-2026-060.md) fixes a large issued-token transfer-rate
+calculation failure in [PR #74](https://github.com/devdasx/oath-wallet/pull/74).
+The deterministic 4,900-case corpus records **4,843 passes / 57 failures before**,
+**4,900 passes / zero failures after**. The repair normalizes division padding
+before enforcing size, then validates the rounded result. Four explicit failures
+use protocol-valid `1e90`; the random helper-domain cases have a broader domain.
+No incorrect signed transaction, authorization bypass or loss of funds was shown.
+
+**29 selected XRP package methods pass**; one skipped diagnostics method passes
+when rerun in its required fresh process. Two live-testnet methods remain skipped.
+The original three-skip record is retained. OathDiagnostics passes **119 methods
+with two skips**. Source release checks, diagnostics coverage, the redacted source
+secret scan and unsigned generic iOS Release build pass at
+`6783750661c43d3511d8973a2de77106fdf2001d`. Its merge
+`dff3a012120b839c00bba3fc5464b97598c1448b` differs only in 91 concurrent Website
+files, not application source or build settings.
+[Manifest](../evidence/5.0.1-build103/xrpl-amounts/manifest.json) ·
+[Commands and limitations](XRPL-AMOUNT-ARITHMETIC.md).
+
+The [hosted restore replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41567766015)
+now succeeds: 22 production checks pass; the deliberate mutant has the expected
+three failures. Downloaded archive digest, result/log hashes and source/fixture
+bindings were verified. This supersedes the queued status recorded at checkpoint
+14 without altering that historical snapshot.
+[Receipt](../evidence/5.0.1-build103/ci-retests/restore-lifecycle-github.json).
+
+Four further partial source dispositions leave direct compiler coverage at
+**244 reviewed, 132 partial, 1,501 outstanding, 460 generated-and-verified and
+20 needing trace**. The combined gate has **16,598 open entries**, including
+findings fixed after the historical review target. These are not vulnerability
+counts. The review remains incomplete. No simulator, physical device, live ledger
+or App Store operation was performed in this checkpoint.
+
+The [GitHub arithmetic replay](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41570338830)
+also reproduces exactly 57 failures before and none after. Its downloaded ZIP
+size and SHA256 match GitHub; both source/fixture/script/compiled-input bindings
+and case outcomes match the local replay. Output digests were recomputed from
+each archived result. [Hosted receipt](../evidence/5.0.1-build103/ci-retests/xrpl-amount-github.json).
+**281 audit-helper/evidence-integrity tests pass.** These are separate from the
+Swift production-function and package tests above.
