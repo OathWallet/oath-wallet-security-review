@@ -213,3 +213,24 @@ source/driver/fixture/log hashes verified: six control passes, one expected
 mutation failure and five passing mutation controls. The new freshness workflow
 is tracked separately; no hosted pass is inferred from local results. No
 App Store operation occurred, and the original build-104 tag remains unchanged.
+
+
+## Checkpoint 14 — TRON and TON ledger boundaries
+
+Four complete source reads receive scoped partial dispositions. All 27 selected
+existing offline ledger and send-journal methods pass after incremental native
+host compilation at `fd06fdff104d128e00cc414d2de1472f11752e04`. Each test process
+has networking denied; two live-provider methods are explicitly excluded.
+All 373 audit-helper tests pass. [Exact reproduction and remaining gaps](TRON-TON-LEDGER-BOUNDARIES.md).
+No new confirmed defect or application patch is claimed. Source review and
+these tests do not prove every overlapping refresh schedule or provider snapshot
+freshness. Generic iOS compilation is not repeated for this audit-only change;
+the earlier build result retains its own source pin.
+
+The prior activation/bootstrap workflow 41618881396 is now downloaded and
+verified against GitHub's artifact digest and all 27 archived file hashes:
+six control methods pass, with one expected mutation failure and five passing
+mutation controls. Its original source and runtime limits remain unchanged.
+The ledger still contains 16,917 outstanding review items, including partially
+reviewed files. The new hosted TRON/TON replay is tracked separately. No App
+Store, simulator or physical-device operation occurred.

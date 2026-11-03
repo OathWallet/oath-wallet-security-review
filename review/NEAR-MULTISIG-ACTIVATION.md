@@ -104,3 +104,14 @@ driver cleanup; final results bind to the published driver hash.
 The preceding lifecycle workflow [41617104807](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41617104807)
 had started but had no final result when this checkpoint was prepared. Its
 completion is not inferred from the local pass.
+
+
+## Hosted follow-up — checkpoint 14
+
+Workflow [41618881396](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41618881396)
+subsequently completed successfully. Its downloaded artifact digest, source and
+fixture pins, all 27 archived files and per-method logs were verified: six
+passing controls, one expected bootstrap-authority mutation failure and five
+passing mutation controls. [Durable receipt](../evidence/5.0.2-build104/hosted-near-multisig-activation/manifest.json).
+This is a hosted replay of the pinned package tests, not contract execution or
+closure of the application integration and provenance gaps above.
