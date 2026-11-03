@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Checkpoint 12.** A synthetic runtime experiment confirmed that a revealed private key could survive into app-switcher snapshots with optional privacy disabled. [OW-2026-058](findings/OW-2026-058.md) is repaired in [public PR #71](https://github.com/devdasx/oath-wallet/pull/71): the same host cases change from seven passes/four failures to eleven passes, 791 broader wallet checks pass, and unsigned iOS Release compilation succeeds. Actual OS snapshot evidence and all substitutions are preserved. This does not establish full export UI coverage, every OS transition, or App Store delivery. [Evidence and limits](review/RELEASE-5.0.1-103.md#checkpoint-12).
+
 **Checkpoint 11.** Private-key ownership and leaf-export checks pass 305 assertions on the exact build 103 baseline. Source tracing covers the export adapter separately from the substituted host engine. Token-search and automatic-prompt GitHub reruns passed with verified artifact/log hashes. The retained-key app-switcher snapshot question remains open. [Scope and evidence](review/RELEASE-5.0.1-103.md#checkpoint-11).
 
 **Checkpoint 10.** Recovery disclosure and passcode setup source tracing adds eleven scoped file dispositions. Nineteen automatic-prompt host checks and 245 audit helper tests pass. A single synthetic simulator experiment found no readable fixture text through the settled privacy cover; actual app-switcher snapshot timing remains open. No application change was needed for these hypotheses. [Scope and evidence](review/RELEASE-5.0.1-103.md#checkpoint-10).

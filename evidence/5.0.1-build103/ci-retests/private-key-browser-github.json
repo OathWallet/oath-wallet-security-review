@@ -1,0 +1,34 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41560705804",
+  "workflow_revision": "f0cbf88b288bf8706945029f1739dc7cda6863c4",
+  "conclusion": "success",
+  "artifact_id": 13197696388,
+  "archive_digest": "sha256:6314453355e86ba45c150745f7ab51e324f9d4b80a9787197cbf9731e06627bf",
+  "published_archive": "5.0.1-build103-private-key-browser-github.zip",
+  "record": {
+    "check": "private-keys",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--private-keys"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 764.2,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 305 HD private-key browser/vault host checks. Synthetic seed adapter; real public descriptors, leaf-key derivation, database and authorization. No user data, network, simulator or device used."
+    ],
+    "log_sha256": "e49cd86b61d7e52c9a62526f7163bb571ef43aced1762b110361eb1914e8d191",
+    "runtime_scope": "macOS host; production vault, SQL and Bitcoin-family leaf WIF derivation; substituted application key/export engine with synthetic HD seed; does not execute OathPrivateKeyExport.swift, UIKit or OS authentication",
+    "live_network_tests_enabled": false,
+    "assertion_count": 305
+  },
+  "files": {
+    "private-keys.log": "e49cd86b61d7e52c9a62526f7163bb571ef43aced1762b110361eb1914e8d191",
+    "private-keys.json": "a7c538600bda3f13af34c92adac126763ecbe5c2b4e8e6576a67096505072982",
+    "toolchain.txt": "b4ecbe4e5bf12c07a7a67a71d5c5788346fb764587dae6056480a79589bc7ee1"
+  }
+}

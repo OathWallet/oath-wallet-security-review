@@ -1,0 +1,40 @@
+{
+  "baseline": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "purpose": "Synthetic disclosure view inside production root and scene lifecycle; not a full export flow or real key",
+  "substitutions": [
+    "Initial session setup instead of encrypted wallet load",
+    "Synthetic export reader",
+    "Home content replaced by presented production private-key value page",
+    "Root cloud/rate resume tasks disabled; production root lock and scene privacy rules retained",
+    "Application target bundle ID only changed to org.oath.audit.snapshotprobe for isolation; package framework bundle IDs retained"
+  ],
+  "replacements": [
+    {
+      "path": "OathApp/OathSceneDelegate.swift",
+      "before": "634e9923857afb0b74e31bfb45a97a90c4f18e1dea124a10fc6bb08042c78bc1",
+      "after": "80bddd08bc1ec57c1a66c7d243e3d24110b3abff6ddf2fa6b8a3ab2ecce5c232",
+      "old": "async let wallet: Void = session.load()",
+      "new": "async let wallet: Void = session.prepareSnapshotProbe()"
+    },
+    {
+      "path": "OathApp/OathAtmosphereApp.swift",
+      "before": "bfd30a7687807cba792af35dc106c0aa49ef239d7ad67c19f6704ebb02882047",
+      "after": "2f762e1d2df66a1ea57889187a81678e3acf9bb506df161936cb7795d0dc419e",
+      "old": "                OathHomeScreen(profile: session.displayedProfile, session: session, settings: settings,\n                               lockCoverHidden: !showsInitialLock && !lockIsVisible)",
+      "new": "                Group {\n                    if OathSnapshotProbe.enabled {\n                        OathSnapshotProbeHome(session: session)\n                    } else {\n                        OathHomeScreen(profile: session.displayedProfile, session: session, settings: settings,\n                                       lockCoverHidden: !showsInitialLock && !lockIsVisible)\n                    }\n                }"
+    },
+    {
+      "path": "OathApp/OathAtmosphereApp.swift",
+      "before": "2f762e1d2df66a1ea57889187a81678e3acf9bb506df161936cb7795d0dc419e",
+      "after": "0a451bc6e2640d1469e97362c09f2edec1e3351be830521a0325dd232a1b74bc",
+      "old": "guard session.allowsBackgroundWalletWork else { return }",
+      "new": "guard !OathSnapshotProbe.enabled, session.allowsBackgroundWalletWork else { return }"
+    }
+  ],
+  "modified_files": {
+    "OathApp/OathSceneDelegate.swift": "42d985f0524596e66797158275f4d35e7c0ab3e9b7e7009251c697472f7f0688",
+    "OathApp/OathAtmosphereApp.swift": "0a451bc6e2640d1469e97362c09f2edec1e3351be830521a0325dd232a1b74bc",
+    "OathAtmosphere/Wallet/OathWalletSession.swift": "6cad9bb3294ccc295bd5e5c5f5fdc74bde7972df43cfc837f17b46c4810ad8cd",
+    "OathAtmosphere.xcodeproj/project.pbxproj": "03aa80f55c469b919a4244a66f07fb604a08dcf588d66bc2fea6bad16b9170fe"
+  }
+}

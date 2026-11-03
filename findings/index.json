@@ -915,5 +915,19 @@
     "retest_scope": "15 production host methods; real CryptoKit agreement and independent Node/OpenSSL HKDF reference; source-level approval path, no UI exploit.",
     "merge_commit": "65b06c1d67af0daf84f1748ad203f8f10c7c40ce",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/69"
+  },
+  {
+    "id": "OW-2026-058",
+    "severity": "medium",
+    "title": "Revealed private key remains in app-switcher snapshots",
+    "status": "fixed-after-reviewed-commit",
+    "document": "OW-2026-058.md",
+    "affected_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "fix_commit": "b5621109b64d606dcf6cd906d2c4f2c2f9e78686",
+    "merge_commit": "00d26c005fbc3f811615b23b865bb50ef7b6619f",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/71",
+    "available_in_app_store_verified": false,
+    "retest_scope": "11 production-model checks: 7 pass/4 fail before, 11 pass after; 791 broader host checks; generic iOS Release build; one isolated iOS 27.0 synthetic production-component snapshot experiment. No full export UI, device, all-OS timing or memory-zeroization claim.",
+    "evidence": "evidence/5.0.1-build103/private-key-snapshot/manifest.json"
   }
 ]

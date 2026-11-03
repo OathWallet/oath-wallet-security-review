@@ -1,5 +1,12 @@
 # Private-key export: ownership, lifetime and evidence limits
 
+**Checkpoint 12 follow-up:** the previously open retention question is now
+confirmed as [OW-2026-058](../findings/OW-2026-058.md), with actual synthetic OS
+snapshots, a merged source repair and before/after tests. The checkpoint 11
+observations below are retained as historical evidence; their pending statements
+are superseded by that finding. The 305-check hosted browser run also completed
+[successfully](../evidence/5.0.1-build103/ci-retests/private-key-browser-github.json).
+
 The source baseline is 5.0.1 (103),
 `c7acd23bb139864a40273f405d18b479589d2b20`. Complete reads cover the private-key
 model, pages and application export adapter. The relevant vault/settings owner

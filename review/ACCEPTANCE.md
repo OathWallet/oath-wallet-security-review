@@ -8,6 +8,8 @@ Checkpoint 10 reduces the combined gate to 16,595 open items: direct compiler in
 
 Checkpoint 11 records 105 of 116 passing required exact-baseline checks and 250 passing audit helper tests. Direct compiler inputs include 244 reviewed, 120 partial and 1,513 outstanding; generated counts and the 16,595 combined open-item count remain unchanged. Private-key snapshot behavior and the application export adapter runtime coverage remain open. [Private-key evidence limits](PRIVATE-KEY-DISCLOSURE.md).
 
+Checkpoint 12 resolves the specific retained-key snapshot hypothesis as OW-2026-058 and publishes its tested source repair. The historical baseline still contains that defect; fixes after the reviewed commit remain separate in the gate. Runtime evidence uses one synthetic production-component fixture, not a complete export UI or every OS. No existing outstanding source/dependency entry is promoted merely because this test passed. The whole-wallet review remains in progress.
+
 ## Historical acceptance snapshot
 
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.
@@ -17,3 +19,8 @@ The Electrum two-factor repair restored both independently calculated Bitcoin ad
 Two additional planner issues were reproduced at this source and repaired afterward in [PR 53](https://github.com/devdasx/oath-wallet/pull/53). The identical named tests passed on that later source. At the reviewed source, two protected-startup assertions missed expected asynchronous diagnostics (25 of 27 assertions passed). This failed run is included in the validation evidence. OW-2026-002 remains open for historical archive provenance.
 
 28 passing check records target this revision. 87 required checks lack a passing exact-revision record. There are 17,124 open entries across the inventories, findings and validation ledger. The combined source and App Store binary equivalence have separate evidence requirements. [Manifest](../evidence/two-factor-and-bch/manifest.json).
+
+Checkpoint 12 audit-helper validation: **262 tests passed**. The combined gate
+retains **16,596 open items**; the extra finding remains counted against the
+unchanged historical baseline despite its later public repair. Direct compiler
+coverage counts are unchanged. These counts are not counts of vulnerabilities.

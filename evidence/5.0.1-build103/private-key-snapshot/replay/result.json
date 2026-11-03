@@ -1,0 +1,136 @@
+[
+  {
+    "stage": "before",
+    "source_commit": "e8e6ba9fb910a1ca31c60e0d8dac8ac84583091b",
+    "production_model_sha256": "83744cf3c4d61363a940b8e3c07e8f7e7e42b9aa5b4928d61a0ebab79497b9ff",
+    "overlays": {
+      "Tools/CheckMultiWallet.py": "83df9ee3ea796c813bf9d8980d5ee648e380319e33fb9ccdf186219731c5caf7",
+      "Tools/CheckPrivateKeyDisclosure.swift": "cad26a9fd15e427c86280c87e068793b12cd3003ebfe2ec92d4c80a396e35d1d"
+    },
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--private-key-disclosure"
+    ],
+    "exit_code": 1,
+    "duration_seconds": 148.28,
+    "raw_log_sha256": "9c92cb9f8f47a3411f3bcffdd23db1a932343da439cf3b12fef4a8fd4f137cb0",
+    "log": "before.log",
+    "log_sha256": "186b00f476283c38f576a4350f09230f24461b9b32adaac4bec48ef5dc1730d0",
+    "passed": 7,
+    "failed": 4,
+    "cases": [
+      {
+        "name": "authorization stops at warning",
+        "status": "pass"
+      },
+      {
+        "name": "acknowledged value is available while active",
+        "status": "pass"
+      },
+      {
+        "name": "native back removes displayed value",
+        "status": "pass"
+      },
+      {
+        "name": "active warning may re-reveal same authorization",
+        "status": "pass"
+      },
+      {
+        "name": "lock or background clears revealed value and selection",
+        "status": "fail"
+      },
+      {
+        "name": "old acknowledgement cannot reveal after cancellation",
+        "status": "fail"
+      },
+      {
+        "name": "repeated cleanup preserves only public accounts",
+        "status": "fail"
+      },
+      {
+        "name": "reopening requires another authorization and warning",
+        "status": "pass"
+      },
+      {
+        "name": "unacknowledged value is discarded",
+        "status": "pass"
+      },
+      {
+        "name": "new authorization keeps its own value",
+        "status": "pass"
+      },
+      {
+        "name": "fresh disclosure also clears on background",
+        "status": "fail"
+      }
+    ]
+  },
+  {
+    "stage": "after",
+    "source_commit": "b5621109b64d606dcf6cd906d2c4f2c2f9e78686",
+    "production_model_sha256": "82611a5ed11ce9ea1e2f47f04b5bf4244508c994f61df9c49dfe8922b907dde2",
+    "overlays": {
+      "Tools/CheckMultiWallet.py": "83df9ee3ea796c813bf9d8980d5ee648e380319e33fb9ccdf186219731c5caf7",
+      "Tools/CheckPrivateKeyDisclosure.swift": "cad26a9fd15e427c86280c87e068793b12cd3003ebfe2ec92d4c80a396e35d1d"
+    },
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--private-key-disclosure"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 145.88,
+    "raw_log_sha256": "e4a9cbef561487cad4eb4a671971a99ba97601bddb835ce8c470489f9aba9dc3",
+    "log": "after.log",
+    "log_sha256": "e4a9cbef561487cad4eb4a671971a99ba97601bddb835ce8c470489f9aba9dc3",
+    "passed": 11,
+    "failed": 0,
+    "cases": [
+      {
+        "name": "authorization stops at warning",
+        "status": "pass"
+      },
+      {
+        "name": "acknowledged value is available while active",
+        "status": "pass"
+      },
+      {
+        "name": "native back removes displayed value",
+        "status": "pass"
+      },
+      {
+        "name": "active warning may re-reveal same authorization",
+        "status": "pass"
+      },
+      {
+        "name": "lock or background clears revealed value and selection",
+        "status": "pass"
+      },
+      {
+        "name": "old acknowledgement cannot reveal after cancellation",
+        "status": "pass"
+      },
+      {
+        "name": "repeated cleanup preserves only public accounts",
+        "status": "pass"
+      },
+      {
+        "name": "reopening requires another authorization and warning",
+        "status": "pass"
+      },
+      {
+        "name": "unacknowledged value is discarded",
+        "status": "pass"
+      },
+      {
+        "name": "new authorization keeps its own value",
+        "status": "pass"
+      },
+      {
+        "name": "fresh disclosure also clears on background",
+        "status": "pass"
+      }
+    ]
+  }
+]

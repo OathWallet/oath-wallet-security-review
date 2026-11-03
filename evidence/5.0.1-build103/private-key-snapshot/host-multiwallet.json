@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "Tools/CheckMultiWallet.py"
+  ],
+  "source_commit": "b5621109b64d606dcf6cd906d2c4f2c2f9e78686",
+  "exit_code": 0,
+  "seconds": 145.5,
+  "log_sha256": "1dcf53c2c1745ccdfee9ece1eb7b8af1a84ed32536e32c1b7d643d5327d4c8d7",
+  "summaries": [
+    "Passed 144 wallet lifecycle checks (synthetic host storage, deletion, restore, ordering, authentication and interrupted writes).",
+    "Passed 158 targeted security checks (synthetic credentials, host clock boundaries and production vault/session).",
+    "Passed 37 reset checks (synthetic stores, interrupted cleanup, authorization, preferences and key rotation).",
+    "Passed 87 passphrase persistence, backup and flow checks.",
+    "Passed 140 cloud-restore integration checks (local synthetic backups; no live iCloud).",
+    "Passed 56 UTXO wallet identity checks (public fixtures, host vault/restore).",
+    "Passed 791 host multiwallet integration checks (production vault/session/SQLite, fixture derivation; no simulator, Keychain or live network)."
+  ]
+}

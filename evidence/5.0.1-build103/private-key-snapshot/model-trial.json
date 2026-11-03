@@ -1,0 +1,5 @@
+{
+  "before_sha256": "83744cf3c4d61363a940b8e3c07e8f7e7e42b9aa5b4928d61a0ebab79497b9ff",
+  "old": "        // Preserve an already revealed page beneath the app lock, as requested\n        // by the app's snapshot policy. Unacknowledged results are not retained.\n        if phase != .revealed { returnToChains() }",
+  "new": "        // Secret disclosure must end on lock/background even when the optional\n        // app-switcher preview blur is disabled. Reopening authenticates again.\n        returnToChains()"
+}

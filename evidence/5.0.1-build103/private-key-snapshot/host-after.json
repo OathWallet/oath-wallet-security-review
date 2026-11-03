@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python3",
+    "Tools/CheckMultiWallet.py",
+    "--private-key-disclosure"
+  ],
+  "source_commit": "b5621109b64d606dcf6cd906d2c4f2c2f9e78686",
+  "exit_code": 0,
+  "seconds": 115.29,
+  "log_sha256": "f1628ecc764f129857d7d7ed008df385e1040814467c752af4a81b73d5546133",
+  "summaries": [
+    "PASS: authorization stops at warning",
+    "PASS: acknowledged value is available while active",
+    "PASS: native back removes displayed value",
+    "PASS: active warning may re-reveal same authorization",
+    "PASS: lock or background clears revealed value and selection",
+    "PASS: old acknowledgement cannot reveal after cancellation",
+    "PASS: repeated cleanup preserves only public accounts",
+    "PASS: reopening requires another authorization and warning",
+    "PASS: unacknowledged value is discarded",
+    "PASS: new authorization keeps its own value",
+    "PASS: fresh disclosure also clears on background",
+    "Private-key disclosure checks: 11 passed, 0 failed; synthetic reader, production model; no UIKit or OS authentication."
+  ]
+}

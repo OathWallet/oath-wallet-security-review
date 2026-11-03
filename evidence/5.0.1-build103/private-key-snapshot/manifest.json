@@ -1,0 +1,325 @@
+{
+  "baseline": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "host_before_commit": "e8e6ba9fb910a1ca31c60e0d8dac8ac84583091b",
+  "fix_commit": "b5621109b64d606dcf6cd906d2c4f2c2f9e78686",
+  "merge_commit": "00d26c005fbc3f811615b23b865bb50ef7b6619f",
+  "merge_tree_equals_tested_tree": true,
+  "tested_tree": "fbeb0804251f930a21c3822e8be8524ced699416",
+  "finding": "OW-2026-058",
+  "host_before": {
+    "passed": 7,
+    "failed": 4
+  },
+  "host_after": {
+    "passed": 11,
+    "failed": 0
+  },
+  "multiwallet_checks": 791,
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2,
+    "failed": 0
+  },
+  "generic_ios_release": "passed unsigned compile only",
+  "runtime": "One iOS 27.0 arm64 synthetic production-component fixture; exact repaired model, baseline root/scene with documented injection; actual OS snapshots before and after, not full export UI",
+  "app_store_operation": false,
+  "physical_device": false,
+  "simulator_deleted": true,
+  "scope_limits": [
+    "No all-OS or timing-matrix guarantee",
+    "No full non-UTXO export-adapter runtime coverage",
+    "No memory-zeroization claim",
+    "Whole-wallet review remains incomplete"
+  ],
+  "fixtures": {
+    "fixtures/private-key-snapshot/Fixture.swift": "6328ab5b6668db4618268bcd83eea74fda2ece0340bac832d2095e37e47de11f",
+    "fixtures/private-key-snapshot/OCR.swift": "7ad929fdffafd339550b5ec7fb07e1fce9236aced54e8d324d4d960cfe79c101",
+    "fixtures/private-key-snapshot/README.md": "2dd839e19315dbf165758b19cad24d1212b55fa2cff4f47ea5666d69cc69c419",
+    "fixtures/private-key-snapshot/prepare.py": "15d487006dc59f66eebc0440753269f111621ba71a91ffc0408a58e7be00ba39"
+  },
+  "files": {
+    "audit-helper.json": {
+      "sha256": "3d475c48daebc2cc2787e9bd400147815df65b6955fbf0e1e7cd9add08366528",
+      "bytes": 615
+    },
+    "audit-helper.log.gz": {
+      "sha256": "f353c215195f556eb8e3f2d5fcdfb22e51ee3a10e3605517f32af80e0fe787ae",
+      "bytes": 384
+    },
+    "boot.log.gz": {
+      "sha256": "13299530f31ecc984f6c49dde20abd2c42050c14ddbf2a3d5a5399c651ca638f",
+      "bytes": 634
+    },
+    "build-arm64.log.gz": {
+      "sha256": "be9937670d644840b8617bb2987f8cf51eaf734129a18c17a069041b8ba3aed5",
+      "bytes": 91170
+    },
+    "build-clear-model.log.gz": {
+      "sha256": "f45a7c5be8db7e51c18e472f003a22a35aa9010c6fc5823454393d08e94ba208",
+      "bytes": 6598
+    },
+    "build-target-id.log.gz": {
+      "sha256": "6e92eb2a067b14a18b7d528adf69f32be98ccfb7123409c6e37886e59a4de1c0",
+      "bytes": 8570
+    },
+    "build-universal-attempt.log.gz": {
+      "sha256": "a08d2f8d0e5bf93a2d02638440e8bfcebeee29118faebf655bf21e02a4856196",
+      "bytes": 254552
+    },
+    "captures/foreground-after.png": {
+      "sha256": "da3a86517bbc9a2f4f8e6ef908ae68702f7739182b20839dd77ba1bbaf31bbe6",
+      "bytes": 234230
+    },
+    "captures/foreground.png": {
+      "sha256": "4926d819b2ae979a7adeb0c524f1c6e5382e9dfd5f77afff59620f42b1a44d1f",
+      "bytes": 230994
+    },
+    "captures/snapshot-before-2.png": {
+      "sha256": "8aac2e58dbf100343dac4aadbd66c3cfd83fe9268b0f6541b853d2db8a415fa7",
+      "bytes": 203738
+    },
+    "captures/snapshot-before-3.png": {
+      "sha256": "b1d071856e6ac026f5788b0789d87103a23d7b9b8d856bd5caea990af5138865",
+      "bytes": 223622
+    },
+    "cleanup.log": {
+      "sha256": "c308cfac36bfc3d2068c304ca9ad0f25e8df876c098c0fede7e1ccb0c67eb9db",
+      "bytes": 16
+    },
+    "device.json": {
+      "sha256": "7d4735ea14f1ef8f27832f90273b79ce5cd68765c537c334c35f7d607bae23f0",
+      "bytes": 245
+    },
+    "final-reviewed-scan.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "final-reviewed-scan.log": {
+      "sha256": "6828d9a25984ff37be98ddbfa96e5e89e413de63a344face7b80fb501c0bb5b8",
+      "bytes": 144
+    },
+    "final-scan.json": {
+      "sha256": "6776c4b93b932ecd11b3c2da254181c0ce9c18bf644a2c2572228fa1dde369b5",
+      "bytes": 1626
+    },
+    "final-scan.log": {
+      "sha256": "babd63dca1cae11801004801c39aed54abca2a80671361252d9eb0225440f166",
+      "bytes": 144
+    },
+    "host-after.json": {
+      "sha256": "ac4d63929ea1905d4a5265b353c7bc5d1030808ec8d55ee80663bd04a6c3163d",
+      "bytes": 1062
+    },
+    "host-after.log.gz": {
+      "sha256": "cf074843d95cd96c9763eb1b9866e0a40080aa979e548352e1e97769f10c2eed",
+      "bytes": 5050
+    },
+    "host-before-exit.json": {
+      "sha256": "7d80df46a7895da03a3678309c740b65b9bde4e2c7aa1dc2a6fcaacb8702dc21",
+      "bytes": 42
+    },
+    "host-before-flushed.log.gz": {
+      "sha256": "22e8ac792e96cd1136d6d41db1bd4167d433eac737207855a1445e2fd838ae0e",
+      "bytes": 5844
+    },
+    "host-before.log.gz": {
+      "sha256": "303ba8e88394bea2e69c2c174a163d6aeaa1ee28fd2f7e69a1d7a568e9e885a7",
+      "bytes": 14876
+    },
+    "host-multiwallet.json": {
+      "sha256": "fc2604286d6598153d9f0cbf79df36824b062c47ab71e132067545017219a7ce",
+      "bytes": 1040
+    },
+    "host-multiwallet.log.gz": {
+      "sha256": "2811b45241b9e5c241208c2102ccbe1cdf17864b0ebb8048b146219e9832594d",
+      "bytes": 1413
+    },
+    "lifecycle-before.jsonl": {
+      "sha256": "b1af828b3850eea1a0a2c5c1f101ce2869b2ce4cfadfd5ba01398eb1e7904fd0",
+      "bytes": 456
+    },
+    "lifecycle-clear-model.jsonl": {
+      "sha256": "5d5e54ca2d685e183120d2b3505cbf8064d3ed348381abc1a0c30575794c8367",
+      "bytes": 461
+    },
+    "model-match.json": {
+      "sha256": "4fba2e39968fbc606948127d1e2822fd51e71c589aed97aa7812accf3a33a3c7",
+      "bytes": 536
+    },
+    "model-trial.json": {
+      "sha256": "cddcf1a8180f10e228d39c8fff62665b7d4512f376e5023a7ef44d164f128823",
+      "bytes": 517
+    },
+    "ocr-validation.json": {
+      "sha256": "04913ab4634e0a642229384ee1abf533bbbc12d19b9ca89300df6b0009a7405a",
+      "bytes": 1242
+    },
+    "ocr.json": {
+      "sha256": "94bbc3eae98a8c6c62b9de5f23fd20b821f2b93c49b9d8c7c95bb46399542b1a",
+      "bytes": 6038
+    },
+    "publication-scan-reviewed.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "publication-scan-reviewed.log": {
+      "sha256": "a5a847ac0105161fd5b0c54299b3cf41f747db9635fc50ed978df44139006b66",
+      "bytes": 144
+    },
+    "publication-scan.json": {
+      "sha256": "c4273036afab77e6c75e4652e2208dbc5d05526765e02be652498a9f51962775",
+      "bytes": 1607
+    },
+    "publication-scan.log": {
+      "sha256": "a73388a35058f4b500dcb54197d95ad0f97051da85623363269aa84c6b8fa67a",
+      "bytes": 144
+    },
+    "replay/after.log.gz": {
+      "sha256": "5cab7b6d864230a3991676d4113654c5acd9e36872ff06c8b2c5a24320edb4b9",
+      "bytes": 14539
+    },
+    "replay/before.log.gz": {
+      "sha256": "6650d8f88219e1e0ce0a20c5a55859c068faf477036206393525d96fbd91e9f5",
+      "bytes": 15022
+    },
+    "replay/result.json": {
+      "sha256": "372dfc2e7922723f0e47746930b8f1b40c8f9a6f10004c6800bd8ea8401c86dd",
+      "bytes": 4020
+    },
+    "reviewed-digests.toml": {
+      "sha256": "cc9f7277424d909f73236937df2eec2b09afd14cea934829db4ea2bed9037c64",
+      "bytes": 467
+    },
+    "runtime-commands.log": {
+      "sha256": "960380bc33ab0659568378728d7124abe9e4577d84e50df3976b930fc1fbbea9",
+      "bytes": 3366
+    },
+    "snapshots-before/0.ktx": {
+      "sha256": "46f2a8e49bbf7f05ba4812fd0a7fb3c06fa0a8b9d56d197c91f55a55b491e7d9",
+      "bytes": 2292
+    },
+    "snapshots-before/1.ktx": {
+      "sha256": "6ab94aaddeff06f8f587695bc5af4c9d174b172ba6bddc18c9a3d31a4dd4ecf0",
+      "bytes": 2316
+    },
+    "snapshots-before/2.ktx": {
+      "sha256": "fddedbb367ebd55a9cf7aa5fb30c41cdcda35c59a8818ccecf64586984459299",
+      "bytes": 86056
+    },
+    "snapshots-before/3.ktx": {
+      "sha256": "f54e187a5d51eb3387c80657ecdaa1537c98cf82c73fd86a809f78a602b89cda",
+      "bytes": 87072
+    },
+    "snapshots-before/manifest.json": {
+      "sha256": "604097d0c50dd7e3744b301e40d8f3437ebeffba5a4a70e2b1da2410034a8aeb",
+      "bytes": 1409
+    },
+    "snapshots-clear-model/0.ktx": {
+      "sha256": "46f2a8e49bbf7f05ba4812fd0a7fb3c06fa0a8b9d56d197c91f55a55b491e7d9",
+      "bytes": 2292
+    },
+    "snapshots-clear-model/0.png": {
+      "sha256": "895a3fee93e77bb74f81398c2b6eb40c3d7b2f750bf019118d6df580db2d50c1",
+      "bytes": 41959
+    },
+    "snapshots-clear-model/1.ktx": {
+      "sha256": "6ab94aaddeff06f8f587695bc5af4c9d174b172ba6bddc18c9a3d31a4dd4ecf0",
+      "bytes": 2316
+    },
+    "snapshots-clear-model/1.png": {
+      "sha256": "546f3619d6622c216510766b73eca63c4e15cb17593a5bbe1239c3248da75806",
+      "bytes": 47271
+    },
+    "snapshots-clear-model/2.ktx": {
+      "sha256": "e625f6d780566cb8c66b76532bf0e7bb06ed39ea574e5bb0188b3f9be1c8b703",
+      "bytes": 20357
+    },
+    "snapshots-clear-model/2.png": {
+      "sha256": "c23e3cf846d1955fd62c828ca2151cae0381430fae60d90a77e8e87c4f6ed7bf",
+      "bytes": 81729
+    },
+    "snapshots-clear-model/3.ktx": {
+      "sha256": "44fe2beb5802c642d69066d6328452ed10cb7a1b98cba7e67dd5efa77977dc49",
+      "bytes": 20297
+    },
+    "snapshots-clear-model/3.png": {
+      "sha256": "adbc9516381d4d112004238b4b89b09930101d11df808d33c2e1230df3f13aea",
+      "bytes": 81534
+    },
+    "snapshots-clear-model/manifest.json": {
+      "sha256": "39fbe822b4077447b9ec8a054217150ead0487c9d8ce6030c933e491e7b0a5b4",
+      "bytes": 1003
+    },
+    "source-injection.json": {
+      "sha256": "05f32f81c2615554531f114e5e9cbe5d06fbb4b6ceee7ede5081191d593d66ea",
+      "bytes": 2739
+    },
+    "validation/OathDiagnostics-cases.json": {
+      "sha256": "c616137d00a34b17f37770d1c7fc12d4d3491ad68687bb4e651f5498e4a1541a",
+      "bytes": 41763
+    },
+    "validation/OathDiagnostics-swift-testing.log.gz": {
+      "sha256": "40f0de1658df7aee50873b92a4650654621c0f081b1cf913b09f45a1cfd7b8a9",
+      "bytes": 322
+    },
+    "validation/OathDiagnostics-swift-testing.xml": {
+      "sha256": "d74b2fd9ae82f56b6230567fb4c63e564e84789c4abaa9ea914caa14a6fde6f8",
+      "bytes": 180
+    },
+    "validation/OathDiagnostics.json": {
+      "sha256": "52a190d7b56e66bb105a8d4d6097db7029a37c4e24ba64b8cc7d7534a2a33e1a",
+      "bytes": 1171
+    },
+    "validation/OathDiagnostics.log.gz": {
+      "sha256": "06ce8dabe04e11f681f088ad8d94f684957f111661027918168506774baa5531",
+      "bytes": 1737
+    },
+    "validation/OathDiagnostics.xml": {
+      "sha256": "3b6bc5c3a1889327f1554c7593aa76a244456052b355e4685e5f6a453ae0a05e",
+      "bytes": 17687
+    },
+    "validation/build.json": {
+      "sha256": "41973326039e5714c4f9072a6c84de75d499d526c464a5e4d203001a3a1f200e",
+      "bytes": 729
+    },
+    "validation/build.log.gz": {
+      "sha256": "1e776a44879062798610a0d7d1ef9b0c08787e7c4fdad57de5d279a6677bea97",
+      "bytes": 83845
+    },
+    "validation/diagnostics-coverage.json": {
+      "sha256": "a1b1599e7ae9d15d656e6ff9e2f9fea7d08b457bfa68be47417ba6631fd6a476",
+      "bytes": 486
+    },
+    "validation/diagnostics-coverage.log.gz": {
+      "sha256": "c47947e55f580d678597e126ba95362fc2223c2dd5d09f6c352a3b4b8aa3a216",
+      "bytes": 147
+    },
+    "validation/gitleaks.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "validation/gitleaks.log.gz": {
+      "sha256": "438cf6584049b4a38ac4b15cd3cfb70d8788368219287a62a75e180995d3b829",
+      "bytes": 129
+    },
+    "validation/public.json": {
+      "sha256": "62f5953f0c04001b2d0159b211068ae5a619ca62c806dc6eca4e34a226f71e38",
+      "bytes": 484
+    },
+    "validation/public.log.gz": {
+      "sha256": "07590ec0adecf0fe2ee3a134236a8e89ebe8ca345c2680366a613975170aa8fb",
+      "bytes": 160
+    }
+  },
+  "audit_helper_tests": 262,
+  "publication_scan": {
+    "matches_after_verified_digest_exceptions": 0,
+    "review": "../ci-retests/checkpoint12-checksum-review.json",
+    "includes_decompressed_logs": true
+  },
+  "hosted_replay": {
+    "run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41564389687",
+    "status_at_packaging": "queued",
+    "workflow_commit": "b7bf575441fc129d84584152e403de770ff7d6d1"
+  }
+}

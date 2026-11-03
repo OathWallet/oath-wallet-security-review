@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "status": "passed",
+  "tests": 262,
+  "duration_seconds": 15.659,
+  "log_sha256": "d6c076b6d007171e78bd525c87f49a11260eb222375387389d4f326fded24d8e",
+  "scope": "Audit-helper tests, including receipt integrity; not 262 wallet runtime tests",
+  "development_correction": "The first new snapshot integrity test assumed a bytes field in both manifests. The after manifest stores hashes only; the test now verifies every hash and byte lengths where recorded. Its first run had one KeyError, not a wallet failure."
+}

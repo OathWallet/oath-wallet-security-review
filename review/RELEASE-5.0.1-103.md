@@ -204,3 +204,50 @@ outstanding, 460 generated-and-verified and 20 generated inputs needing trace,
 out of 2,357 inputs. The combined gate remains at 16,595 open items. These are
 coverage counts, not vulnerability counts. The whole-wallet review remains
 in progress. No application code, App Store upload or submission changed.
+
+
+## Checkpoint 12
+
+The open retained-private-key snapshot concern from checkpoint 11 reproduced.
+With App Switcher Privacy disabled, a revealed key stayed in the model after the
+session locked and entered actual OS-created scene snapshots. The key in the
+experiment was deliberately invalid synthetic text. The fixture retained the
+production root, scene, disclosure model and value page while substituting initial
+wallet loading, home content and the secret reader. It is a bounded component
+experiment, not a full export UI run. All substitutions and failed setup attempts
+are preserved. [Finding](../findings/OW-2026-058.md) ·
+[Reproduction](../fixtures/private-key-snapshot/README.md).
+
+[PR #71](https://github.com/devdasx/oath-wallet/pull/71) makes every lock/background
+cancellation discard the revealed and pending value and require fresh authorization.
+The same model patch removed the synthetic value from all four after snapshots;
+both foreground controls remained readable. The model bytes match tested commit
+`b5621109b64d606dcf6cd906d2c4f2c2f9e78686`. The runtime experiment otherwise uses
+the baseline plus the documented fixture substitutions. The production repair
+was separately compiled in unsigned generic iOS Release configuration. Its merge
+`00d26c005fbc3f811615b23b865bb50ef7b6619f` has the identical tested tree.
+
+The identical eleven host cases yield **seven passes/four failures before**, and
+**eleven passes/zero failures after**. The broader host harness passes **791 checks**.
+Diagnostics pass **119 tests, two skipped**. Public source validation, diagnostic
+coverage and the zero-match secret scan pass. Native Back during an active session
+continues to work; old acknowledgement cannot revive a cleared disclosure.
+[Machine-readable evidence](../evidence/5.0.1-build103/private-key-snapshot/manifest.json).
+The new read-only GitHub workflow replays pinned before/after production models;
+its execution is recorded separately from local results.
+
+The previously pending private-key browser GitHub run completed successfully with
+**305 assertions** at the exact baseline. Its archive digest and report/log hashes
+were verified and the archive is attached durably to this checkpoint.
+[Hosted receipt](../evidence/5.0.1-build103/ci-retests/private-key-browser-github.json).
+This does not expand the substituted host adapter's scope.
+
+The isolated simulator used for the unresolved snapshot question was shut down
+and deleted. No physical device or App Store operation occurred. The baseline's
+remaining validation and source/dependency gaps remain open. This is a progress
+release, not a whole-wallet completion verdict or independent certification.
+
+Checkpoint 12 audit-helper validation: **262 tests passed**. The combined gate
+retains **16,596 open items**; the extra finding remains counted against the
+unchanged historical baseline despite its later public repair. Direct compiler
+coverage counts are unchanged. These counts are not counts of vulnerabilities.
