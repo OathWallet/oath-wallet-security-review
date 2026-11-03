@@ -1,0 +1,144 @@
+{
+  "source_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "mutant": true,
+  "source_sha256": "32dcb784bb40d54afb0759c1093e6feae65db60273eb96906d8bdb61a95c72e5",
+  "executed_source_sha256": "17e9cd1a4fcab0c701bc0e2bf501a486cb1e93eb546552785361c6096cd7abfe",
+  "overlay_sha256": "15f1603b38401af52e9d228bedbd8379ff6b9f571960e5be319766f7fafc8c53",
+  "existing_fixture_sha256": "a8c1cb0f87fdc0bd504233afb2ed4ea41a9e969e36a580babec52877ec2d32be",
+  "driver_sha256": "69542346144d6e677020c0cd2abef968047c4c27d4990b9038e1038b8fe8ac8a",
+  "isolation_classifier_sha256": "88842fa9ac9aad154d47509d508b481a176c9e8c854ee7ef1b2016ce4dd47b88",
+  "methods": [
+    {
+      "method": "NearAuditJournalRaceTests/testConcurrentDuplicateWalletsReserveExactlyOneSender",
+      "exit_code": 1,
+      "status": "failed",
+      "log": "NearAuditJournalRaceTests-testConcurrentDuplicateWalletsReserveExactlyOneSender.log",
+      "log_sha256": "42b234de075afdaac1359dc043f0f548d4a6c62443aa4cc508bd31db35155ea8"
+    },
+    {
+      "method": "NearAuditJournalRaceTests/testLateAcknowledgementsPreserveEveryTerminalStateAfterReopen",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "NearAuditJournalRaceTests-testLateAcknowledgementsPreserveEveryTerminalStateAfterReopen.log",
+      "log_sha256": "b18828e11158f68b7e7cea94063f383aee054d44bdfbe037805522431c62279c"
+    },
+    {
+      "method": "NearAuditJournalRaceTests/testMalformedReceiptsCannotPartiallyMutateSignedJournal",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "NearAuditJournalRaceTests-testMalformedReceiptsCannotPartiallyMutateSignedJournal.log",
+      "log_sha256": "d5e68bb0d3e280d5e941fda309c83ea5ac2161c2ac8407e7c6f6dbeb236e07f8"
+    },
+    {
+      "method": "NearSendJournalTests/testCrossWalletReservationAndCancelledAuthenticationReleasesOnlyUnsigned",
+      "exit_code": 1,
+      "status": "failed",
+      "log": "NearSendJournalTests-testCrossWalletReservationAndCancelledAuthenticationReleasesOnlyUnsigned.log",
+      "log_sha256": "e3cd0df29f99249b0d42850457b79c582cc0413fa7a2e0cdf39980f861fc58f3"
+    },
+    {
+      "method": "NearSendJournalTests/testExactSignedBytesSurviveReopenAndUnknownBroadcastReservesSender",
+      "exit_code": 1,
+      "status": "failed",
+      "log": "NearSendJournalTests-testExactSignedBytesSurviveReopenAndUnknownBroadcastReservesSender.log",
+      "log_sha256": "91147486e03b69e2434e38cab5e7dc00c69cac24c4ce46d59c29af4add143dd6"
+    },
+    {
+      "method": "NearSendJournalTests/testSubmissionObservationRequiresFinalJournalAndWalletScope",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "NearSendJournalTests-testSubmissionObservationRequiresFinalJournalAndWalletScope.log",
+      "log_sha256": "0695f601eaabd060dd5ee9939546ad46d91bb919c60f1c1196096211d163b1d5"
+    },
+    {
+      "method": "NearSendJournalTests/testTamperedSignedTransactionAndTestnetPlanRejectedBeforeJournal",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "NearSendJournalTests-testTamperedSignedTransactionAndTestnetPlanRejectedBeforeJournal.log",
+      "log_sha256": "6df5ccb133294c6c4c77b16324a6035990acd962c9bc2c5611f09ff2af1173e5"
+    },
+    {
+      "method": "NearSendJournalTests/testFailedExecutionSettlesAsFailureAndNeverSuccess",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "NearSendJournalTests-testFailedExecutionSettlesAsFailureAndNeverSuccess.log",
+      "log_sha256": "bae1c1df606cb74910dbbb6086caae84fe2cdf9e84bee927c8be2f2caedeec83"
+    },
+    {
+      "method": "NearSendJournalTests/testProvenExpiryReleasesSenderWithoutClaimingFeeOrBalanceRefresh",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "NearSendJournalTests-testProvenExpiryReleasesSenderWithoutClaimingFeeOrBalanceRefresh.log",
+      "log_sha256": "3fb7a601620798b0894dd8131b8912e2d535c67204080d12a9337f9a2cabe356"
+    }
+  ],
+  "runtime_network": "denied by sandbox-exec",
+  "duration_seconds": 123.558,
+  "scope": "Production SQLite journal and real synthetic Ed25519 signatures. Concurrent duplicate-wallet reservations, database reopen, terminal receipt integrity and malformed-receipt rollback. No app UI, OS authentication, provider, blockchain, simulator or device execution.",
+  "files": [
+    {
+      "path": "NearAuditJournalRaceTests-testConcurrentDuplicateWalletsReserveExactlyOneSender.log",
+      "sha256": "42b234de075afdaac1359dc043f0f548d4a6c62443aa4cc508bd31db35155ea8"
+    },
+    {
+      "path": "NearAuditJournalRaceTests-testLateAcknowledgementsPreserveEveryTerminalStateAfterReopen.log",
+      "sha256": "b18828e11158f68b7e7cea94063f383aee054d44bdfbe037805522431c62279c"
+    },
+    {
+      "path": "NearAuditJournalRaceTests-testMalformedReceiptsCannotPartiallyMutateSignedJournal.log",
+      "sha256": "d5e68bb0d3e280d5e941fda309c83ea5ac2161c2ac8407e7c6f6dbeb236e07f8"
+    },
+    {
+      "path": "NearSendJournalTests-testCrossWalletReservationAndCancelledAuthenticationReleasesOnlyUnsigned.log",
+      "sha256": "e3cd0df29f99249b0d42850457b79c582cc0413fa7a2e0cdf39980f861fc58f3"
+    },
+    {
+      "path": "NearSendJournalTests-testExactSignedBytesSurviveReopenAndUnknownBroadcastReservesSender.log",
+      "sha256": "91147486e03b69e2434e38cab5e7dc00c69cac24c4ce46d59c29af4add143dd6"
+    },
+    {
+      "path": "NearSendJournalTests-testFailedExecutionSettlesAsFailureAndNeverSuccess.log",
+      "sha256": "bae1c1df606cb74910dbbb6086caae84fe2cdf9e84bee927c8be2f2caedeec83"
+    },
+    {
+      "path": "NearSendJournalTests-testProvenExpiryReleasesSenderWithoutClaimingFeeOrBalanceRefresh.log",
+      "sha256": "3fb7a601620798b0894dd8131b8912e2d535c67204080d12a9337f9a2cabe356"
+    },
+    {
+      "path": "NearSendJournalTests-testSubmissionObservationRequiresFinalJournalAndWalletScope.log",
+      "sha256": "0695f601eaabd060dd5ee9939546ad46d91bb919c60f1c1196096211d163b1d5"
+    },
+    {
+      "path": "NearSendJournalTests-testTamperedSignedTransactionAndTestnetPlanRejectedBeforeJournal.log",
+      "sha256": "6df5ccb133294c6c4c77b16324a6035990acd962c9bc2c5611f09ff2af1173e5"
+    },
+    {
+      "path": "build.log",
+      "sha256": "fdf6df705af2402e8ce474a72e885eeccf4d248967b63d2115e9537f7bb27d91"
+    },
+    {
+      "path": "checkout.log",
+      "sha256": "ad933bd14df7c185ae791536f5bf22a66d85103eb31f669c03ee742f6cc32e8b"
+    },
+    {
+      "path": "clone.log",
+      "sha256": "c2e6a3adb600b60503921bca28717f8c4e385d712034ad0b9e511db55a4a826a"
+    },
+    {
+      "path": "mutation.patch",
+      "sha256": "0a5150fe2b67e7c697f21df5c97c2d5b672e7a0696d5e9ff12541a872b3d9758"
+    },
+    {
+      "path": "python-version.log",
+      "sha256": "0366d77cc1f1ac88ea458231ba4f639323d5caf34de0d50b7618277fd4395f1f"
+    },
+    {
+      "path": "swift-version.log",
+      "sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    {
+      "path": "xcode-version.log",
+      "sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+    }
+  ]
+}

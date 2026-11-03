@@ -181,3 +181,18 @@ full integration or UI coverage. [Reproduction and limits](NEAR-MULTISIG-ACTIVAT
 The previous lifecycle GitHub replay had started when this evidence was
 prepared; its outcome is not claimed here. All 366 audit-helper tests pass. No application code, App Store,
 simulator or physical-device operation changed.
+
+## Checkpoint 12 — Journal reservation races and terminal integrity
+
+Nine production database methods pass, including three new methods for
+concurrent duplicate-wallet reservation, late terminal acknowledgements after
+database reopen, and malformed-receipt rollback. Synthetic signatures and actual
+SQLite code run with runtime networking denied. Two production files gain partial
+source review; the existing six-method fixture is reviewed as test code.
+[Reproduction and limits](NEAR-JOURNAL-RACES.md). Full service/model integration,
+authentication and process-interruption coverage remain open. This checkpoint
+does not change application source or involve an App Store operation.
+The deliberate sender-reservation bypass produces exactly three expected
+failed methods and six passing controls. All 368 audit-helper tests pass.
+Earlier hosted lifecycle/activation checks remain running/queued at preparation;
+no final result is inferred.

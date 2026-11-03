@@ -106,3 +106,12 @@ entries**. Full service/model/database integration, shipped-WASM reproduction
 and the remaining implementations stay open. [Exact scope](NEAR-MULTISIG-ACTIVATION.md).
 The 366 audit-helper tests pass. The prior lifecycle workflow is in progress;
 no final hosted activation or lifecycle result is claimed in this checkpoint.
+
+Build 104 checkpoint 12 adds nine passing database journal methods. One existing
+test file receives a reviewed test-code disposition, while the two production
+files remain partial. The gate has **16,917 outstanding review/validation entries**.
+The tests do not close all crash recovery, full app integration, authentication,
+contract execution or dependency provenance. [Scope](NEAR-JOURNAL-RACES.md).
+The scratch sender-reservation mutation is detected by three methods, while six
+controls pass. All 368 audit-helper tests pass. The original application checkout
+is unchanged, and earlier hosted jobs remain separately tracked.
