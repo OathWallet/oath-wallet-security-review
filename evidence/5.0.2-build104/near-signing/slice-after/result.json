@@ -1,0 +1,52 @@
+{
+  "source_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "methods": [
+    {
+      "method": "testIndependentPlanBytesHashesAndSignatures",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testIndependentPlanBytesHashesAndSignatures.log",
+      "log_sha256": "f539cc224bcb5ee33c496d4fcb8b68f654dc3bcce281d56c263a3cdd5d3ed9f8"
+    },
+    {
+      "method": "testIndependentActionsAndProductionSignatures",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testIndependentActionsAndProductionSignatures.log",
+      "log_sha256": "19855ebec6b2094249766d43d7b68cbc55144eb61f9d79b38e4e55523a2e36e4"
+    },
+    {
+      "method": "testChangedPlansAndTamperedSignaturesAreRejected",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testChangedPlansAndTamperedSignaturesAreRejected.log",
+      "log_sha256": "49c128d4a7c5222b42cd68acb2bb2167e6e67431cc80b9c94a6f0a9e6200e8d8"
+    },
+    {
+      "method": "testTruncatedAndTrailingActionBytesAreRejected",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testTruncatedAndTrailingActionBytesAreRejected.log",
+      "log_sha256": "02af424edbccd81c498b0fbc9632e81b7e39215bf574f9c1df7201b80df83ecd"
+    },
+    {
+      "method": "testNonzeroOriginDataSliceMatchesBytes",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testNonzeroOriginDataSliceMatchesBytes.log",
+      "log_sha256": "8d27ecb3f6826b096f7cd1bf8b8ce4b8ad95db9391bd6e7bda8dd03a63801ad0"
+    }
+  ],
+  "transaction_vectors": 72,
+  "action_vectors": 10,
+  "fixture_sha256": "6d508664093c9a719df34c5954083ffcfffa1fd30859158b6a22546c764aa32a",
+  "sdk_lock_sha256": "8c9954adeb43038160215cb0a5b7aa12e6e42e79f809eb5ef70e2248f616ec54",
+  "overlay_sha256": "548ca2ac3560e1db197dcb1e512e22d34c0c30f1e9edf9e5a23019617bf243cf",
+  "generator_sha256": "6d7ba281a6e8b6af6cc80eed4f5fb29cb1e646c6b30ca275e34d7c08d10d5908",
+  "script_sha256": "6e670f9b8948ad9839e3dd99748c69aff82c9d76d480b34a179f628e088a5088",
+  "independent_signature_verification": true,
+  "verifier_sha256": "7d10da480f63040a2a272d8e9901b3ed5cc9ff9c73961ee837e1e993415660e1",
+  "duration_seconds": 89.76,
+  "runtime_network": "denied by sandbox-exec",
+  "scope": "Real OathAnkr package and CryptoKit Ed25519; synthetic public keys, pinned NEAR SDK vectors and Node crypto verification; no provider or device"
+}

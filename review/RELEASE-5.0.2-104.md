@@ -51,7 +51,7 @@ On `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`:
 [Compiled inputs](../evidence/5.0.2-build104/compiler/release-inputs.json) ·
 [Compiled-input dispositions](../evidence/5.0.2-build104/compiler/dispositions.json).
 
-The compiler ledger has 227 reviewed, 133 partially reviewed, 1,518 outstanding,
+The compiler ledger has 227 reviewed, 136 partially reviewed, 1,515 outstanding,
 460 generated-and-verified and 20 generated inputs needing trace. These reflect
 exact hash matches and reopened changed files, not a completed audit.
 
@@ -66,7 +66,7 @@ with 24 existing production-package methods passing under runtime network denial
 The immutable tag above remains the baseline. PR81 merges tested repair
 `0614556b993f85808b13e3a69984ce36050a8dfe` as
 `501915920e99475e63af5fcb9e658f3c834f3cc8`. Local focused and broader tests pass;
-hosted replay is pending. [Exact results, attempts and scope](CONNECT-REMOVAL-READ.md).
+hosted replay was subsequently verified in checkpoint 5. [Exact results, attempts and scope](CONNECT-REMOVAL-READ.md).
 No historical source pin or test result has been rewritten. The current inventory
 continues to describe the baseline; later-source coverage is explicitly linked
 by source hashes in this checkpoint.
@@ -78,3 +78,28 @@ Eight existing production database methods pass at `0614556b993f85808b13e3a69984
 [GitHub run 41603474540](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41603474540) passed the earlier 24 NEAR provider/request methods at that same application commit. The downloaded archive digest, every receipt file and case-log hash, method identities and executed driver hash were verified. [Durable evidence](../evidence/5.0.2-build104/hosted-near-provider/manifest.json).
 
 The separate [unsigned Release build job](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41601227473/job/125800183599) passed at merge `501915920e99475e63af5fcb9e658f3c834f3cc8` in 990.49 seconds. Its archive and build-log hashes are verified. [Durable evidence](../evidence/5.0.2-build104/hosted-removal-build/manifest.json). The other job in that workflow is not implied to pass by the build result. No simulator, device or App Store operation occurred.
+
+
+## Checkpoint 5 — NEAR vectors, reader repair and completed hosted replays
+
+[OW-2026-065](../findings/OW-2026-065.md) repairs a confirmed Data-slice parser
+trap. The same audit fixture changes from four passes and one SIGTRAP to five
+passes. Seventy-two transfer plans and ten classic-action vectors match a locked
+independent SDK, and Node crypto verifies 82 application signatures. Twenty-six
+adjacent package methods, 119 diagnostics tests (two skips), public-source/secret
+checks, diagnostic coverage and unsigned generic iOS Release compilation pass.
+[Read scope and reproduction](NEAR-SIGNING-VECTORS.md) · [Evidence](../evidence/5.0.2-build104/near-signing/manifest.json).
+Three new source dispositions remain partial; no full-review verdict is issued.
+
+[Run 41601227473](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41601227473)
+completed successfully. Its signing account-read fixtures reproduce 12 failures
+before and all 66 checks pass after; pending consent reproduces one failure
+before and all 14 checks pass after. Archive, driver, fixture and case-log hashes
+are verified. [Durable receipts](../evidence/5.0.2-build104/hosted-removal-read/manifest.json).
+The earlier unsigned-build receipt remains intact.
+
+[Run 41605014923](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41605014923)
+completed all eight NEAR journal/removal methods successfully, with downloaded
+archive, receipt and log hashes verified. [Durable receipts](../evidence/5.0.2-build104/hosted-near-journal/manifest.json).
+The new NEAR reader/signing-vector workflow is a separate pending replay.
+No Apple submission or physical-device operation occurred.

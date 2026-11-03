@@ -1474,5 +1474,21 @@
       "fix_commit_is_ancestor": false,
       "validation": "Fix is a later source revision, not a rewrite of the baseline tag."
     }
+  },
+  {
+    "id": "OW-2026-065",
+    "severity": "low",
+    "title": "NEAR transaction reader traps on nonzero-origin Data",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-065.md",
+    "fix_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+    "pull_request": "https://github.com/devdasx/oath-wallet/pull/82",
+    "retest_scope": "Four passing controls and one SIGTRAP before; five methods pass after, 82 independent signature verifications, 26 adjacent NEAR methods; diagnostics and generic unsigned iOS Release pass. No application network reachability demonstrated.",
+    "current_target": {
+      "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
+      "release": "5.0.2 (104) prerelease",
+      "fix_commit_is_ancestor": false,
+      "validation": "Later public repair; exact source commits retained in new evidence."
+    }
   }
 ]

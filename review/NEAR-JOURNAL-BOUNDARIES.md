@@ -75,3 +75,13 @@ separate `WalletRemovalReservationTests` suite was not part of the eight-method
 selection. Earlier reservation evidence remains separately documented.
 No application source, simulator, physical device, live chain or App Store
 operation changed in this checkpoint.
+
+
+## Hosted replay
+
+Run [41605014923](https://github.com/devdasx/oath-wallet-security-review/actions/runs/41605014923)
+passed all eight methods. Downloaded archive, receipt and case-log hashes are
+verified in the [durable manifest](../evidence/5.0.2-build104/hosted-near-journal/manifest.json).
+Independent serialization work and its separate reader repair are now recorded
+in [the NEAR signing checkpoint](NEAR-SIGNING-VECTORS.md); the other limitations
+above remain open.

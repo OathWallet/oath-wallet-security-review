@@ -1,0 +1,45 @@
+{
+  "source_commit": "0614556b993f85808b13e3a69984ce36050a8dfe",
+  "methods": [
+    {
+      "method": "testIndependentPlanBytesHashesAndSignatures",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testIndependentPlanBytesHashesAndSignatures.log",
+      "log_sha256": "2c7f99696ffef785d43f7ff91fba1f8cd6f1b1bed436cb26281ddb1bb1a9bfa5"
+    },
+    {
+      "method": "testIndependentActionsAndProductionSignatures",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testIndependentActionsAndProductionSignatures.log",
+      "log_sha256": "2b0eee4bdcb448e3de1b8f47a5a395d198fbda5b9dd374dc65a982cee88c1854"
+    },
+    {
+      "method": "testChangedPlansAndTamperedSignaturesAreRejected",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testChangedPlansAndTamperedSignaturesAreRejected.log",
+      "log_sha256": "d1f0264a6b36a6b80067684f351fd41ffbceb137f0d37375c75f3f2eb1f4c17c"
+    },
+    {
+      "method": "testTruncatedAndTrailingActionBytesAreRejected",
+      "status": "passed",
+      "exit_code": 0,
+      "log": "testTruncatedAndTrailingActionBytesAreRejected.log",
+      "log_sha256": "fb1e90f2bf9898608c9a872dc68f462565f33ad3dcb44ca9cefb66565599d546"
+    }
+  ],
+  "transaction_vectors": 72,
+  "action_vectors": 10,
+  "fixture_sha256": "6d508664093c9a719df34c5954083ffcfffa1fd30859158b6a22546c764aa32a",
+  "sdk_lock_sha256": "8c9954adeb43038160215cb0a5b7aa12e6e42e79f809eb5ef70e2248f616ec54",
+  "overlay_sha256": "ee44fb8185d5d2eeeb8c6dc6528a481b697fccdb176cf187280ec72f1266f28f",
+  "generator_sha256": "6d7ba281a6e8b6af6cc80eed4f5fb29cb1e646c6b30ca275e34d7c08d10d5908",
+  "script_sha256": "cec5764d6a6b59ee99cc749810d1f1974e90901723e424052e5e50f79632a882",
+  "independent_signature_verification": true,
+  "verifier_sha256": "7d10da480f63040a2a272d8e9901b3ed5cc9ff9c73961ee837e1e993415660e1",
+  "duration_seconds": 99.08,
+  "runtime_network": "denied by sandbox-exec",
+  "scope": "Real OathAnkr package and CryptoKit Ed25519; synthetic public keys, pinned NEAR SDK vectors and Node crypto verification; no provider or device"
+}

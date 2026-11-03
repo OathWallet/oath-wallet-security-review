@@ -1,0 +1,73 @@
+{
+  "source_commit": "501915920e99475e63af5fcb9e658f3c834f3cc8",
+  "source_sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+  "compiled_vault_sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+  "fixture_sha256": "a4e663fc17a5ebc750f7c43845e33da83328f2ca6282131e4ca7f3bdeb41aa48",
+  "harness_original_sha256": "9cb310a3f5e044a9033a519526fd164829e7b70fc0330510fdb15a3f7923ce07",
+  "harness_executed_sha256": "2d5c92e69fe26b4ae16392d0ff28cba8af2203801b49061431bbd439ae989dc4",
+  "script_sha256": "470047bb44c15e9f9c51a908fbe5840af8e23a95b2dc4e85c1cb201c57a64cf6",
+  "expected_vulnerable": false,
+  "exit_code": 0,
+  "cases": [
+    {
+      "name": "soft removal biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "soft removal delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "permanent removal biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "permanent removal delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "remove and restore biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "remove and restore delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "remove and restore fresh consent",
+      "status": "pass"
+    },
+    {
+      "name": "other wallet removal biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "other wallet removal delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "failed save biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "failed save expected save failure",
+      "status": "pass"
+    },
+    {
+      "name": "failed save delayed consent",
+      "status": "pass"
+    },
+    {
+      "name": "lock biometric read held",
+      "status": "pass"
+    },
+    {
+      "name": "lock delayed consent",
+      "status": "pass"
+    }
+  ],
+  "log_sha256": "76090b122bcec0c87700e4733dd78f8d71066cee574281329be84eeae372e333",
+  "duration_seconds": 468.06,
+  "runtime_network": "denied",
+  "scope": "Production vault/encrypted envelope/SQLite and permission-consent issuance; synthetic delayed biometric read and memory credential store; inherited HD and unrelated chain/service adapters. No signature or relay delivery is asserted by this fixture; no UI, OS authentication, simulator or device."
+}

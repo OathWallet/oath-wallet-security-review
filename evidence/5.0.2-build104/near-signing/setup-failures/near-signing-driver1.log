@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/thuglifex/Developer/OathSecurityReview/scripts/near-signing-vectors.py", line 65, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/thuglifex/Developer/OathSecurityReview/scripts/near-signing-vectors.py", line 33, in main
+    run(['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)','node',str(ROOT/'fixtures/near-signing/generate.mjs'),str(sdk),str(out/'vectors.json')],'generate.log')
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/thuglifex/Developer/OathSecurityReview/scripts/near-signing-vectors.py", line 31, in run
+    if r.returncode:raise RuntimeError(f'{log} failed; original log retained')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: generate.log failed; original log retained

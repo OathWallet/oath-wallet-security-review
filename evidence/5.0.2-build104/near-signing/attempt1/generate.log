@@ -1,0 +1,8 @@
+file:///Users/thuglifex/Developer/OathSecurityReview/fixtures/near-signing/generate.mjs:36
+const actions=[a.createAccount(),a.deployContract(Buffer.from([0,97,115,109,1,0,0,0])),a.functionCall('method',Buffer.from('{"hello":"world"}'),1000000000000n,42n),a.transfer(max),a.stake(123n,delegate),a.addKey(delegate,a.fullAccessKey()),a.addKey(delegate,a.functionCallAccessKey('wrap.testnet',['ft_transfer'],250000000000000000000000n)),a.addKey(delegate,a.functionCallAccessKey('wrap.testnet',[])),a.deleteKey(delegate),a.deleteAccount('beneficiary.testnet')];
+                                                                                                                                                                                                             ^
+
+TypeError: a.addKey is not a function
+    at file:///Users/thuglifex/Developer/OathSecurityReview/fixtures/near-signing/generate.mjs:36:206
+
+Node.js v26.5.0
