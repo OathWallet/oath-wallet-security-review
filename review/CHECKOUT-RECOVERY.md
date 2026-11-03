@@ -7,3 +7,5 @@ The audit checkout helper now downloads into a disposable sibling directory, val
 Eight tests use temporary synthetic Git repositories. They verify exact pinning with newer history retained, existing dirty/wrong-revision preservation, partial clone cleanup and fresh retry, bounded repeated timeouts, invalid-pin failure, a concurrent destination and zero attempts. All eight pass. The complete audit helper suite passes 236 tests. These tests do not recreate GitHub's external outage or guarantee future network availability.
 
 The dedicated GitHub checkout/Electrum retest is separate from the retained failed job. It does not rerun the other known baseline application failures or silently replace their evidence. No wallet implementation changed in this repair.
+
+The [dedicated GitHub retest](../evidence/5.0.1-build103/ci-retests/electrum-github.json) completed successfully at audit revision `5892d46bfaf0cc4e81f65e491b27f1dbe0f560df`. It ran 205 Electrum host integration checks on the exact baseline. The artifact archive digest and test log checksum were verified; its contents passed secret scanning. This does not turn the original failed workflow into a pass.

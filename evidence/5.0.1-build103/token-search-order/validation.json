@@ -1,0 +1,53 @@
+{
+  "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a",
+  "scope": "Host test/harness repair; wallet implementation unchanged",
+  "checks": [
+    {
+      "check": "token-lookup",
+      "status": "passed",
+      "duration_seconds": 31.45,
+      "log_sha256": "89eb597c347848626d361fb9c48cf770c17c6ef7656b1756b9972a632d486950",
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a"
+    },
+    {
+      "check": "public",
+      "status": "passed",
+      "duration_seconds": 26.33,
+      "log_sha256": "d667207249c9ce03eca4ab0f527795386dafbd1390b350000df7129d0b2550f4",
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a"
+    },
+    {
+      "check": "diagnostics-coverage",
+      "status": "passed",
+      "duration_seconds": 0.34,
+      "log_sha256": "50a19f0563a5faa09171edce4e34438b3dc994a637488b25d7f4244cfb039972",
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a"
+    },
+    {
+      "check": "OathDiagnostics",
+      "status": "passed",
+      "duration_seconds": 19.15,
+      "log_sha256": "fa53c5518787e941f29a1ca006b61e0e00201cba4d924a9ff0f0a145ebb72af6",
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a"
+    },
+    {
+      "check": "build",
+      "status": "passed",
+      "duration_seconds": 454.15,
+      "log_sha256": "bb7bbd7f792890f114f31fdad6d92725493298f50cbe1fc9b7114704e9a6c765",
+      "source_commit": "b57d05196be319d1f0530e28f667eb89023a1c4a"
+    }
+  ],
+  "audit_helper_tests": 240,
+  "mutation_control": {
+    "cases": 2,
+    "expected_assertion_failures": 6
+  },
+  "runtime_scope": "host tests and generic unsigned iOS compilation",
+  "app_store_operation": false,
+  "physical_device_operation": false,
+  "simulator_operation": false,
+  "merged_commit": "e8e6ba9fb910a1ca31c60e0d8dac8ac84583091b",
+  "merge_tree_matches_tested_candidate": true,
+  "pull_request": "https://github.com/devdasx/oath-wallet/pull/70"
+}

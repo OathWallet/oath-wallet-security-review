@@ -41996,5 +41996,75 @@
     "report": "host-solana-send/solana-send.json",
     "report_sha256": "fdfda96bfd77fbae81748319a35e9169b18d63a057f93b5a9f6e54e041dffe8d",
     "log": "host-solana-send/solana-send.log"
+  },
+  {
+    "check": "wallet-links",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "a2e869087fd807e54e569e28edb741a3deca41a083cebca2ec1f23ca089082e8",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13193732938,
+    "original_archive_sha256": "5774a4055872886e3b1e117d97aeb5da1dc995bd6a579744b3365c9f8d8f7d0f",
+    "report": "host-wallet-links/wallet-links.json",
+    "report_sha256": "fbb5984d76c4323185cf645ed8b9fe04a19bd0e3795fa579eb3d06df7415e134",
+    "log": "host-wallet-links/wallet-links.log"
+  },
+  {
+    "check": "scanner",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "7e57ebd9e62d7706245becd451099230ea5a391b62a86ad10c7b42508d8d16ce",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13193697540,
+    "original_archive_sha256": "979b693c4675040cebcb0d0fb6b35bc680cb710f64b8a3216f0377269805cb10",
+    "report": "host-scanner/scanner.json",
+    "report_sha256": "0fe37eddf22b791a3bbb706e4e0c541e99b4eb6e2dc5a507b776e24584f874cf",
+    "log": "host-scanner/scanner.log"
+  },
+  {
+    "check": "token-lookup",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "failed",
+    "log_sha256": "ceede01d6b66281baafbce5a4181e78e3b4dcee10b5855d09d521081f33117ce",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13193554197,
+    "original_archive_sha256": "2af2be4a7036a6ae70e8f3df0b7040ed4cf1c2385622b78daf1d3dc0b01e53a0",
+    "report": "host-token-lookup/token-lookup.json",
+    "report_sha256": "2a90a184797847703644f6d60411b4c691f4f42e69122c6cb0e1cbd78d0b9c80",
+    "log": "host-token-lookup/token-lookup.log"
+  },
+  {
+    "check": "scanner-lifecycle",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "status": "passed",
+    "log_sha256": "5d5b86e4c4115ea03b9b6d1cbd839651c94e1d9c1979f05be0a6cca48e385799",
+    "ci_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41532120820",
+    "artifact_id": 13191759796,
+    "original_archive_sha256": "3cdc25bcba2ff78c2c8d1c6b23bc6fe719028cd9dd1a3986bc0a031f6b9a8bdb",
+    "report": "host-scanner-lifecycle/scanner-lifecycle.json",
+    "report_sha256": "9291d73ab02bf1455f351813b64bd771d4880014ef7e931111d997483b788f7f",
+    "log": "host-scanner-lifecycle/scanner-lifecycle.log"
+  },
+  {
+    "check": "electrum",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--electrum"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 495.27,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 205 Electrum host integration checks across 5 formats: import, encrypted vault, lock/unlock, SQL, receive, recovery, deduplication and BIP39 separation."
+    ],
+    "log_sha256": "87f3e5f9438510a421a2c0c29d3e6aae33b6df960bc557e8e279219795b5490b",
+    "runtime_scope": "macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter",
+    "live_network_tests_enabled": false,
+    "assertion_count": 205,
+    "evidence": "evidence/5.0.1-build103/ci-retests/electrum-github.json"
   }
 ]

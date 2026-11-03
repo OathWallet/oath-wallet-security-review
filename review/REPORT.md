@@ -6,7 +6,7 @@
 
 **Build 103 checkpoint 2.** Changing recovery format after an interrupted wallet import could return a different Bitcoin wallet. The error reproduced on the tagged source. [Finding and regression](../findings/OW-2026-046.md) · [Application and dependency checks](RELEASE-5.0.1-103.md) · [Direct input coverage](../evidence/5.0.1-build103/compiler/dispositions.json).
 
-**Checkpoint 8 follow-up.** The baseline has 104 of 115 required passing checks, backed by 101 verified result/log pairs. Two additional source hypotheses were not confirmed; all twenty envelope executions pass without a source fix. [Evidence and remaining scope](RELEASE-5.0.1-103.md#checkpoint-8-follow-up).
+**Checkpoint 9.** Token-search race tests now use controlled interleavings instead of timing guesses; they pass on unchanged production code and detect an intentionally broken variant. The final baseline workflow preserves five failed jobs and 105 verified result/log pairs. [Evidence, test repairs and remaining scope](RELEASE-5.0.1-103.md#checkpoint-9).
 
 **Build 103 checkpoint 8.** Protocol-key constructors now reject malformed hex and invalid symmetric-key sizes. Eleven original failing methods and four valid controls are preserved; all fifteen pass after repair. The complete SDK suite passes 321 tests with two skips, and unsigned iOS Release compilation succeeds. [Finding and compatibility](PROTOCOL-KEY-HEX.md) · [Validation](../evidence/5.0.1-build103/key-hex/validation.json) · [Merged fix](https://github.com/devdasx/oath-wallet/pull/69). These are WalletConnect messaging keys; the tests do not demonstrate wallet-secret disclosure or a consent bypass.
 

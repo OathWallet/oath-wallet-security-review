@@ -1,0 +1,36 @@
+{
+  "github_run": "https://github.com/devdasx/oath-wallet-security-review/actions/runs/41554928222",
+  "workflow_revision": "5892d46bfaf0cc4e81f65e491b27f1dbe0f560df",
+  "conclusion": "success",
+  "artifact_id": 13194247433,
+  "archive_digest": "sha256:43f86f577181fdbe3e74b85f7e016ce62c38f14fc38e7c65ac24e4b49ea17dff",
+  "published_archive": "5.0.1-build103-checkout-electrum-github.zip",
+  "scope": "Exact-baseline Electrum retest after an earlier clone failure; original job remains failed",
+  "record": {
+    "check": "electrum",
+    "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+    "command": [
+      "python3",
+      "Tools/CheckMultiWallet.py",
+      "--electrum"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "timed_out": false,
+    "duration_seconds": 495.27,
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "summaries": [
+      "Passed 205 Electrum host integration checks across 5 formats: import, encrypted vault, lock/unlock, SQL, receive, recovery, deduplication and BIP39 separation."
+    ],
+    "log_sha256": "87f3e5f9438510a421a2c0c29d3e6aae33b6df960bc557e8e279219795b5490b",
+    "runtime_scope": "macOS host, encrypted vault, shipped Bitcoin descriptor builder and local database, host BIP39 seed adapter",
+    "live_network_tests_enabled": false,
+    "assertion_count": 205
+  },
+  "files": {
+    "electrum.json": "f7fd64bcc04f02c6dc9e9b56d9469d16b533c00867aa627b187712b82270af1c",
+    "checkout.log": "55cd490a589c72a136ee2b4da05b04bbe09fc6d8950f0cb74c875d58f1a7f32b",
+    "electrum.log": "87f3e5f9438510a421a2c0c29d3e6aae33b6df960bc557e8e279219795b5490b",
+    "toolchain.txt": "69666d80124c45679ecc1b486edd59a5cdf75ae426521676c69cd2f086359793"
+  }
+}
