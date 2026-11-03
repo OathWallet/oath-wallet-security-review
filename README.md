@@ -14,6 +14,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 
 **Build 104 checkpoint 2.** [OW-2026-064](findings/OW-2026-064.md) fixes signing and permission consent that could survive wallet removal. Local tests record 66 account-read and 14 pending-consent passes, 616 broader assertions, diagnostics and unsigned iOS Release compilation. Original failures and intermediate regressions remain visible. [Repair, reproduction and remaining scope](review/CONNECT-REMOVAL-READ.md) · [Merged PR81](https://github.com/devdasx/oath-wallet/pull/81). Hosted replay is pending; the whole-wallet review remains incomplete.
 
+**NEAR follow-up.** Twenty-four existing production-package methods pass with runtime networking denied. Three provider/plan/request files receive partial source dispositions; no new application defect is confirmed. [Exact scope, evidence and remaining work](review/NEAR-PROVIDER-BOUNDARIES.md).
+
 Four chain wallet adapters now have hash-bound partial source coverage. The compiler ledger is reproducible from the canonical inventory, including 16 preserved historical partial dispositions. [Read scope and remaining work](review/CHAIN-WALLET-ADAPTERS.md) · [Coverage reconciliation](review/COMPILER-DISPOSITION-RECONCILIATION.md). This does not close the whole-wallet review.
 
 **Build 104 prerelease.** The source includes the public fixes through PR #77. Its exact-target checks pass: 748 database tests (72 skips), 119 diagnostics tests (two skips), source/secret checks and unsigned iOS Release compilation. The built app reports 5.0.2 / 104. [Current audit, carried evidence and gaps](review/RELEASE-5.0.2-104.md). Earlier checkpoints below remain historical.
