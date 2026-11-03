@@ -1,5 +1,8 @@
 # Oath Wallet 5.0.2 (104) prerelease security review
 
+Build 104 checkpoint 10 adds six passing staged-submission host methods and an expected failing request-binding mutation. The preceding paired native-contract GitHub replay is now downloaded and verified. [Scope and remaining gaps](review/NEAR-MULTISIG-LIFECYCLE.md).
+
+
 This is a **maintainer-commissioned, Codex-led security review** of the public
 Oath Wallet application. It is not independent certification, a guarantee of
 zero vulnerabilities, or a comparison with the installed App Store binary.

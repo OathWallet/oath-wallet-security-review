@@ -92,3 +92,9 @@ retained. A deliberate member-admission mutation causes exactly four failures.
 native replay have downloaded, hash-verified evidence. No implementation review
 is promoted by those results; shipped-WASM execution, source-to-binary rebuild
 and remaining dependency review stay open. [Repair and limitations](NEAR-CONTRACT-REJECTIONS.md).
+
+Build 104 checkpoint 10 adds six passing production-package lifecycle methods
+and one expected failed-method mutation control. The paired native-contract
+hosted replay is now verified. The gate retains 16,918 open entries: these tests
+do not promote source coverage or establish full database restart, shipped-WASM
+execution or dependency review. [Exact scope](NEAR-MULTISIG-LIFECYCLE.md).

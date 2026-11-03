@@ -1,0 +1,110 @@
+{
+  "source_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "mutant": true,
+  "source_sha256": "b8048dcc4b6bd1433b44c5ab862784c2c59bff32a4c6b650dcf257d8c800802c",
+  "executed_source_sha256": "73dceb98210454fa185e58ee3fb251cc37ebf7d1e681bbc52b24fa90d72a92fd",
+  "overlay_sha256": "7f94c3e7073babc1d1bbc09a8134699f3a7de441217c01219f71651eef243843",
+  "driver_sha256": "a08f89cf8090e9e93bc3c151e168d46f857c20cf0fc124a34c241a5e28aefc12",
+  "isolation_classifier_sha256": "88842fa9ac9aad154d47509d508b481a176c9e8c854ee7ef1b2016ce4dd47b88",
+  "methods": [
+    {
+      "method": "testStagedTransferColdRestartPreservesBytesAndFees",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testStagedTransferColdRestartPreservesBytesAndFees.log",
+      "log_sha256": "5284eb98aabafd4feadaad7168baad215f8ef0b889a987b6a732ce980cdaeb26"
+    },
+    {
+      "method": "testStatusNeverBroadcastsAndFailureStopsRemainingParts",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testStatusNeverBroadcastsAndFailureStopsRemainingParts.log",
+      "log_sha256": "e2ac5efc9bb99ca261031369bd5879ff42d0fa0965581c9d32d8b650946d0648"
+    },
+    {
+      "method": "testChangedRequestAndProposalIDNeverReleaseConfirmation",
+      "exit_code": 1,
+      "status": "failed",
+      "log": "testChangedRequestAndProposalIDNeverReleaseConfirmation.log",
+      "log_sha256": "a73205e96c24b7ef9ab4fe0cc368b3d6c74d09b7cae634b94de961e6714024cf"
+    },
+    {
+      "method": "testExpiryRequiresUnusedPartNonce",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testExpiryRequiresUnusedPartNonce.log",
+      "log_sha256": "2eb2a4cb711306d82a4bb4be0fbae69e708fbac1ce09a5da4a71f3b7560e9159"
+    },
+    {
+      "method": "testCancelledStatusReplyNeverReleasesNextPart",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testCancelledStatusReplyNeverReleasesNextPart.log",
+      "log_sha256": "bc209f483505f8e76b780094f8c4e2a5017976a333e811c3a9414a03f198aeda"
+    },
+    {
+      "method": "testConcurrentReplaysOnlyBroadcastIdenticalAuthorizedPart",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testConcurrentReplaysOnlyBroadcastIdenticalAuthorizedPart.log",
+      "log_sha256": "e790d7384c70393b2ab8e4bc7e39aeb79903bcaf8b88ccd9831bedd742287526"
+    }
+  ],
+  "runtime_network": "denied by sandbox-exec",
+  "duration_seconds": 104.766,
+  "scope": "Production package client with synthetic provider transport, real Ed25519 signing, JSON restart roundtrip and in-memory remote ledger. No real provider, persistent database integration, WASM or device execution.",
+  "files": [
+    {
+      "path": "build.log",
+      "sha256": "839dc2732b1a1a9c6f734aa71b729ad563bb4692e755469782c239001011f798"
+    },
+    {
+      "path": "checkout.log",
+      "sha256": "ad933bd14df7c185ae791536f5bf22a66d85103eb31f669c03ee742f6cc32e8b"
+    },
+    {
+      "path": "clone.log",
+      "sha256": "3796b39546235682051cdff81d7863f2d0e7b7533b85a9981b43be62eb8b1677"
+    },
+    {
+      "path": "mutation.patch",
+      "sha256": "b45c5dca5e225cdf57fb0f2aa223df1b64a470adf10065fa4a33ab8c9d97b286"
+    },
+    {
+      "path": "python-version.log",
+      "sha256": "0366d77cc1f1ac88ea458231ba4f639323d5caf34de0d50b7618277fd4395f1f"
+    },
+    {
+      "path": "swift-version.log",
+      "sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    {
+      "path": "testCancelledStatusReplyNeverReleasesNextPart.log",
+      "sha256": "bc209f483505f8e76b780094f8c4e2a5017976a333e811c3a9414a03f198aeda"
+    },
+    {
+      "path": "testChangedRequestAndProposalIDNeverReleaseConfirmation.log",
+      "sha256": "a73205e96c24b7ef9ab4fe0cc368b3d6c74d09b7cae634b94de961e6714024cf"
+    },
+    {
+      "path": "testConcurrentReplaysOnlyBroadcastIdenticalAuthorizedPart.log",
+      "sha256": "e790d7384c70393b2ab8e4bc7e39aeb79903bcaf8b88ccd9831bedd742287526"
+    },
+    {
+      "path": "testExpiryRequiresUnusedPartNonce.log",
+      "sha256": "2eb2a4cb711306d82a4bb4be0fbae69e708fbac1ce09a5da4a71f3b7560e9159"
+    },
+    {
+      "path": "testStagedTransferColdRestartPreservesBytesAndFees.log",
+      "sha256": "5284eb98aabafd4feadaad7168baad215f8ef0b889a987b6a732ce980cdaeb26"
+    },
+    {
+      "path": "testStatusNeverBroadcastsAndFailureStopsRemainingParts.log",
+      "sha256": "e2ac5efc9bb99ca261031369bd5879ff42d0fa0965581c9d32d8b650946d0648"
+    },
+    {
+      "path": "xcode-version.log",
+      "sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+    }
+  ]
+}

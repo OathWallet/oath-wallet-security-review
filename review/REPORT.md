@@ -1,5 +1,8 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 10 adds six passing staged-submission host methods and an expected failing request-binding mutation. The preceding paired native-contract GitHub replay is now downloaded and verified. [Scope and remaining gaps](NEAR-MULTISIG-LIFECYCLE.md).
+
+
 > Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
 
 **Current series: 5.0.2 (104), prerelease.** The active audit moved to the source

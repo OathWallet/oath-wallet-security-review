@@ -1,0 +1,106 @@
+{
+  "source_commit": "5d91d1e4dfd36c56031c7a8fb1ee305446dc54de",
+  "mutant": false,
+  "source_sha256": "b8048dcc4b6bd1433b44c5ab862784c2c59bff32a4c6b650dcf257d8c800802c",
+  "executed_source_sha256": "b8048dcc4b6bd1433b44c5ab862784c2c59bff32a4c6b650dcf257d8c800802c",
+  "overlay_sha256": "7f94c3e7073babc1d1bbc09a8134699f3a7de441217c01219f71651eef243843",
+  "driver_sha256": "a08f89cf8090e9e93bc3c151e168d46f857c20cf0fc124a34c241a5e28aefc12",
+  "isolation_classifier_sha256": "88842fa9ac9aad154d47509d508b481a176c9e8c854ee7ef1b2016ce4dd47b88",
+  "methods": [
+    {
+      "method": "testStagedTransferColdRestartPreservesBytesAndFees",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testStagedTransferColdRestartPreservesBytesAndFees.log",
+      "log_sha256": "60c58b506ba0aff08c124c0e2ff0d41d2a09340e573260e5d2b1dcb4a3c8fb87"
+    },
+    {
+      "method": "testStatusNeverBroadcastsAndFailureStopsRemainingParts",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testStatusNeverBroadcastsAndFailureStopsRemainingParts.log",
+      "log_sha256": "f3d5dd82c0c05520d542950bfe72461790ba5667d9f9b9c7ef297a63dbc3547f"
+    },
+    {
+      "method": "testChangedRequestAndProposalIDNeverReleaseConfirmation",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testChangedRequestAndProposalIDNeverReleaseConfirmation.log",
+      "log_sha256": "ee2aa850c3ece6d7d848ca32da3e1cb2e6732550782e43439963655c371ab9ed"
+    },
+    {
+      "method": "testExpiryRequiresUnusedPartNonce",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testExpiryRequiresUnusedPartNonce.log",
+      "log_sha256": "4a5e5074d05e64da8c9e55cfe4efa1b2903bce9df9895a383f8d23f5afeab801"
+    },
+    {
+      "method": "testCancelledStatusReplyNeverReleasesNextPart",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testCancelledStatusReplyNeverReleasesNextPart.log",
+      "log_sha256": "a6fe40bec85a0ab6937262f5c2f7d4e45288e16f20cd0afd35d4e113be7eaed1"
+    },
+    {
+      "method": "testConcurrentReplaysOnlyBroadcastIdenticalAuthorizedPart",
+      "exit_code": 0,
+      "status": "passed",
+      "log": "testConcurrentReplaysOnlyBroadcastIdenticalAuthorizedPart.log",
+      "log_sha256": "7d13b78dc6750c5cb3bb9f17cf765afe8c4764ea88b1116c60678b8c5bb2f848"
+    }
+  ],
+  "runtime_network": "denied by sandbox-exec",
+  "duration_seconds": 102.291,
+  "scope": "Production package client with synthetic provider transport, real Ed25519 signing, JSON restart roundtrip and in-memory remote ledger. No real provider, persistent database integration, WASM or device execution.",
+  "files": [
+    {
+      "path": "build.log",
+      "sha256": "3f8cafaff5c3071fd5a83d5dc5e5964c80408c31b1b79a13d5c522be151c5208"
+    },
+    {
+      "path": "checkout.log",
+      "sha256": "ad933bd14df7c185ae791536f5bf22a66d85103eb31f669c03ee742f6cc32e8b"
+    },
+    {
+      "path": "clone.log",
+      "sha256": "2a51694de87842ceb15e2fd6e8abecabaf5e0c07743779b8ac24d87c6a346db6"
+    },
+    {
+      "path": "python-version.log",
+      "sha256": "0366d77cc1f1ac88ea458231ba4f639323d5caf34de0d50b7618277fd4395f1f"
+    },
+    {
+      "path": "swift-version.log",
+      "sha256": "30bb0d72a580e8e936ab32e24cab2876f82fa6b06d66fef876fe21a47e828acc"
+    },
+    {
+      "path": "testCancelledStatusReplyNeverReleasesNextPart.log",
+      "sha256": "a6fe40bec85a0ab6937262f5c2f7d4e45288e16f20cd0afd35d4e113be7eaed1"
+    },
+    {
+      "path": "testChangedRequestAndProposalIDNeverReleaseConfirmation.log",
+      "sha256": "ee2aa850c3ece6d7d848ca32da3e1cb2e6732550782e43439963655c371ab9ed"
+    },
+    {
+      "path": "testConcurrentReplaysOnlyBroadcastIdenticalAuthorizedPart.log",
+      "sha256": "7d13b78dc6750c5cb3bb9f17cf765afe8c4764ea88b1116c60678b8c5bb2f848"
+    },
+    {
+      "path": "testExpiryRequiresUnusedPartNonce.log",
+      "sha256": "4a5e5074d05e64da8c9e55cfe4efa1b2903bce9df9895a383f8d23f5afeab801"
+    },
+    {
+      "path": "testStagedTransferColdRestartPreservesBytesAndFees.log",
+      "sha256": "60c58b506ba0aff08c124c0e2ff0d41d2a09340e573260e5d2b1dcb4a3c8fb87"
+    },
+    {
+      "path": "testStatusNeverBroadcastsAndFailureStopsRemainingParts.log",
+      "sha256": "f3d5dd82c0c05520d542950bfe72461790ba5667d9f9b9c7ef297a63dbc3547f"
+    },
+    {
+      "path": "xcode-version.log",
+      "sha256": "694b44731d0b415c5b11d844151e466d7f5e200a95627efda377f232f1a6ab77"
+    }
+  ]
+}

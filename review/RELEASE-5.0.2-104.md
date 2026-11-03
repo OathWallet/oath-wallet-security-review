@@ -155,3 +155,15 @@ compiler-version failure is retained and explicit toolchain installation added.
 [Reproduction and limits](NEAR-CONTRACT-REJECTIONS.md). Shipped-WASM execution,
 source-to-binary reproduction and whole-wallet coverage remain unverified.
 No application or App Store operation changed.
+
+## Checkpoint 10 — Staged multisig submission
+
+Six new host methods pass against unchanged production client/signing/receipt
+code with synthetic providers and runtime networking denied. They cover cold
+client reconstruction, per-part failures, request binding, nonce-based expiry,
+late cancellation and concurrent identical-byte retries. Removing only the
+request-payload equality guard in a scratch copy causes the expected one method
+to fail, while five controls pass. Hosted run 41615849636 now reproduces the
+preceding paired native-contract results; downloaded hashes are verified.
+[Reproduction and limitations](NEAR-MULTISIG-LIFECYCLE.md). No full app/database
+restart, shipped-WASM, physical-device or App Store operation is claimed.

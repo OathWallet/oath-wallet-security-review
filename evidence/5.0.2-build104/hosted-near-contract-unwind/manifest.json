@@ -1,0 +1,501 @@
+{
+  "run_id": 41615849636,
+  "audit_commit": "142024f63a7a5ba894017f6744b6096dce6ba80e",
+  "counts": {
+    "before": {
+      "passed": 9,
+      "blocked_sdk_abort": 10,
+      "invalid_fixture_pass": 1
+    },
+    "after": {
+      "passed": 18,
+      "invalid_fixture_pass": 2
+    },
+    "mutant": {
+      "passed": 14,
+      "invalid_fixture_pass": 2,
+      "failed": 4
+    }
+  },
+  "files": [
+    {
+      "path": "artifact.zip",
+      "sha256": "86f68824cd3505aa2e344795250192d96d2b3e83a511f5e8caa14b7cabd9524a"
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "157aec042461350019abc2db4a3919405ab94a7f457f4bc06cb846d044b409d1"
+    },
+    {
+      "path": "run.json",
+      "sha256": "3443746c6b3ce5ac36200fee2364315e0001ef063b0996c0c183b21af7d7f76f"
+    }
+  ],
+  "expanded_files_verified": [
+    {
+      "path": "near-contract-unit/audit_contract-characterizes_confirmation_retained_after_quorum_authorized_member_removal.log",
+      "sha256": "c6a57d965d4511092b4babb06c7ceb3fa5955a03afcd0f70ee943a493e554893"
+    },
+    {
+      "path": "near-contract-unit/audit_contract-cooldown_cleanup_preserves_other_members_requests.log",
+      "sha256": "3901a7d3182f92303cb6296a428ea00c83ac9a439f987f33d3e4d1056cb754ac"
+    },
+    {
+      "path": "near-contract-unit/audit_contract-quorum_preserves_function_call_bytes_deposit_and_gas.log",
+      "sha256": "b2e1ff989f90b283a6f62f4fff91496c92305bf5b55f14b2d4c6f30bf5b3ab8a"
+    },
+    {
+      "path": "near-contract-unit/audit_contract-quorum_schedules_exact_transfer_and_cleans_request.log",
+      "sha256": "31cad18b357898d4e29cccb59fd40bde27b402a327515c3d02471b82fb61ae9c"
+    },
+    {
+      "path": "near-contract-unit/build.jsonl",
+      "sha256": "66f5326a37d21646d1c728deb684fa7fc6d82067d88a76488fe5e5bc6e9be63d"
+    },
+    {
+      "path": "near-contract-unit/build.log",
+      "sha256": "e372b4492005520c365e3edcf5ea7d3e4557d31234f4cc19996b23f5119a4ec1"
+    },
+    {
+      "path": "near-contract-unit/discovery.log",
+      "sha256": "e6193a65f3f150786ebc163f6b3b65d817aa48254551031cfac269f8191a508e"
+    },
+    {
+      "path": "near-contract-unit/fetch.log",
+      "sha256": "14e412d4bc1ebad1e22215dc1f1e6966809dd1d3a463741c82c8334b1d9a2596"
+    },
+    {
+      "path": "near-contract-unit/inputs/Cargo.lock",
+      "sha256": "a4ff0327cd140c6557ed930f68bdc82f3de013bcdbcb455d9f6f67bf20130ae8"
+    },
+    {
+      "path": "near-contract-unit/inputs/Cargo.toml",
+      "sha256": "eb42c3e916caf5cbc5cd6561f77481bbb6ffacbc9bfea6ed480ceded2aa3fb6b"
+    },
+    {
+      "path": "near-contract-unit/inputs/src/lib.rs",
+      "sha256": "2571164aaee7a156206fd452b43492a87230ab0be083752c55523499c1e9c7e3"
+    },
+    {
+      "path": "near-contract-unit/result.json",
+      "sha256": "71e6a2131b042b0cb8f4c80c1f55d6de4d2bf9bd6ef23d9c5c9106800ab98ca6"
+    },
+    {
+      "path": "near-contract-unit/tests-add_key_delete_key_storage_cleared.log",
+      "sha256": "013a4999a1cd9131b9917910bd62750c2ad730c4b3f497c9531afbcb7b424153"
+    },
+    {
+      "path": "near-contract-unit/tests-test_change_num_confirmations.log",
+      "sha256": "390809ac6a525b80db6f9662f4353675951e43c9c87abfa20a426211f75c1945"
+    },
+    {
+      "path": "near-contract-unit/tests-test_delete_request_future.log",
+      "sha256": "c5223e75edbdea16e76ca56548362ba49170d4d4f4bcddf2ed85fce92b2ac1a8"
+    },
+    {
+      "path": "near-contract-unit/tests-test_delete_request_panic_wrong_key.log",
+      "sha256": "2d9297eb8b7504ae6fa4bd2abbfe4d1706ff974abd579381d611f49ab05295f3"
+    },
+    {
+      "path": "near-contract-unit/tests-test_multi_3_of_n.log",
+      "sha256": "56f4b6b0a4a37d48442f9b205f8df5653ea5454e48c9091f09cc1fa011e157f5"
+    },
+    {
+      "path": "near-contract-unit/tests-test_multi_add_request_and_confirm.log",
+      "sha256": "47aee2159cd183765ea1308dd36a0e5cd6fa70f0174c268d1010511d3022152c"
+    },
+    {
+      "path": "near-contract-unit/tests-test_panics_add_key_different_account.log",
+      "sha256": "be3949d0db7c33f0f75e4551ab0a17b46051964ede3ab48ded2b7612cf1fb9c1"
+    },
+    {
+      "path": "near-contract-unit/tests-test_panics_delete_request.log",
+      "sha256": "f5fc4d7be60cc3d803273df8c734c175db0c6390b42d93a4a81fad7af9e4ec2b"
+    },
+    {
+      "path": "near-contract-unit/tests-test_panics_on_second_confirm.log",
+      "sha256": "d7bb2b6794d3718144b7f3b1b987a081cc8a542f777faeaf63b4f21f0da7da87"
+    },
+    {
+      "path": "near-contract-unit/tests-test_too_many_confirmations.log",
+      "sha256": "08da149e0a5c79c9e381ddcb4924fb0813f74f09b98cb6216b032eedf46bdf8f"
+    },
+    {
+      "path": "near-contract-unit/tests-test_too_many_requests.log",
+      "sha256": "005f16ad8a3268529c888fed7637e9bde0cfc64ed5fbbec36ecd5804817cc526"
+    },
+    {
+      "path": "near-contract-unit/toolchain.json",
+      "sha256": "4ccecdc5ae2c02c7537b4360f8045e3a58dfd57aed07e28376495a41c175cab2"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_contract-characterizes_confirmation_retained_after_quorum_authorized_member_removal.log",
+      "sha256": "f5626b69cd0a755c686042b5c20a6d368f4f09e34e411dd47ab31cd058755e83"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_contract-cooldown_cleanup_preserves_other_members_requests.log",
+      "sha256": "69f8d681b109389fae0e8a056e7c723fabdfbf97031d93e4683e2da9777f2395"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_contract-quorum_preserves_function_call_bytes_deposit_and_gas.log",
+      "sha256": "edd2b5bd0d059eece788cfe2fb0063f2f3661fe2b8fc71b609cebf4731418020"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_contract-quorum_schedules_exact_transfer_and_cleans_request.log",
+      "sha256": "07b477953edbee0dd67f5e088320d68f9d6d35eba93b9f9a954b7e1fe79389d4"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_rejections-add_key_wrong_receiver_reaches_contract_guard.log",
+      "sha256": "2ea9b08bb6562a804417b9941b2d0e7eeb45bf5098e191e141cc5a9d9fa69d67"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_rejections-foreign_key_cannot_create_request.log",
+      "sha256": "f4cf666f8423391a5ad32e1db17d40daac1a528d8ddf8e8e268baf8bced0a7de"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_rejections-foreign_key_cannot_delete_even_after_cooldown.log",
+      "sha256": "cc08faeae68f074a473eb0cff65bee2749926f9db0a45a8005f4db05bb8729f0"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_rejections-member_cannot_confirm_nonexistent_request.log",
+      "sha256": "36c164927a89bfcd6ab7fbc25bbbef7859172cb07bd511d81c8a80a1cdc0c462"
+    },
+    {
+      "path": "near-contract-unwind/after/audit_rejections-removed_member_cannot_add_a_new_confirmation.log",
+      "sha256": "ae1d5454e035bd636b2e038ac16ffdb3d05ffbf5e938891676e25cd52b60dc2b"
+    },
+    {
+      "path": "near-contract-unwind/after/build.jsonl",
+      "sha256": "3212d299f49c0f800459788b0883e3d5b992c95f3ab1b8b8654518613400f67d"
+    },
+    {
+      "path": "near-contract-unwind/after/build.log",
+      "sha256": "b644f999ad5dd9b3a8ffb4af154e96dd993f0a32daa3b4a7de7905bd1aadf16b"
+    },
+    {
+      "path": "near-contract-unwind/after/discovery.log",
+      "sha256": "a393accf1f093f8d69d05ee0598db5c1a48f627f442e8666c49561d1f4cf7167"
+    },
+    {
+      "path": "near-contract-unwind/after/inputs/Cargo.lock",
+      "sha256": "c4e5d3b598c7802cfe48d73912f3d52ca1c104df06629a7c0832aa1f15a3d4fd"
+    },
+    {
+      "path": "near-contract-unwind/after/inputs/Cargo.toml",
+      "sha256": "5b7937a4eba7dfeb1b178b56acc8a48114dc6b685d240496d409d0d2f756bd8e"
+    },
+    {
+      "path": "near-contract-unwind/after/inputs/near-sdk/src/environment/mock/mocked_blockchain.rs",
+      "sha256": "79dde89d295efbccd67be4d0333bb9ee055c218782e7496a954a03a818651fb3"
+    },
+    {
+      "path": "near-contract-unwind/after/inputs/near-sys/src/lib.rs",
+      "sha256": "9661fa03a7883f279dac675a7c3f05d03d0bc5fe9876681b7c57cc6cb054f86b"
+    },
+    {
+      "path": "near-contract-unwind/after/inputs/src/lib.rs",
+      "sha256": "965c375567936af49a87c74f961a9e72304b212cba607e6000cb46e9791ef4b7"
+    },
+    {
+      "path": "near-contract-unwind/after/mock-unwind.patch",
+      "sha256": "6ef80adc2d788a77b870056c9ca972ca04c7b69be46cd9e71ec10cdc7b792844"
+    },
+    {
+      "path": "near-contract-unwind/after/result.json",
+      "sha256": "b4978c0b7437bbf7da3bb86f50133c6c93b9c4197f6dd015a83ff33d6cc75a67"
+    },
+    {
+      "path": "near-contract-unwind/after/src-unwind.patch",
+      "sha256": "bb6b2996f3dbd0f47b6922b17d31ee533d0d92354133684c4240a245ad08f3b2"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-add_key_delete_key_storage_cleared.log",
+      "sha256": "3ea5635891324b267f14953c7514fb62ad4219c310b7e4180bb1ef98afccbc3f"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_change_num_confirmations.log",
+      "sha256": "f907fd4d13c44d9c108943f8b172ca44a2aea528bfe9bb4bca3f6fc8836ee72f"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_delete_request_future.log",
+      "sha256": "48350964b74cc6cae206f4b27f3b24582a14ad99aefc6ea56e82803bf99e265c"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_delete_request_panic_wrong_key.log",
+      "sha256": "c2262e450bf7fa34ae63f70c5232b0479aa30846230d33eb65f06b5b48bef00f"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_multi_3_of_n.log",
+      "sha256": "f528ae33f11fdba4a48f256c6527a56dba08f245ea7af5bdf9715f71aca69a95"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_multi_add_request_and_confirm.log",
+      "sha256": "2e81126d12fefba501034598f39c7f759edb546fde86867a34877bb830b2833e"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_panics_add_key_different_account.log",
+      "sha256": "1a713ee8dd22cb358f19ec086080f76ef373fc8c3f865a9cb53f89e488ff74c5"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_panics_delete_request.log",
+      "sha256": "e8e02ce333870597d5fe21aa3286640c957e2663d4013dbc68620412f0214523"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_panics_on_second_confirm.log",
+      "sha256": "02d6a4ad81779eb9764d63cd9cb552653cb6f5845e6b3346ad2db89cf84f5bac"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_too_many_confirmations.log",
+      "sha256": "98cc0aeff82f9a83c1a57351c7c8de58538882f7b04f55fdeb8cbd15e349c17f"
+    },
+    {
+      "path": "near-contract-unwind/after/tests-test_too_many_requests.log",
+      "sha256": "af4e3d244a85abcabb8f79e6adc648fe6f8f046eebb1b7c4d07eb9571d11e7d4"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_contract-characterizes_confirmation_retained_after_quorum_authorized_member_removal.log",
+      "sha256": "f5626b69cd0a755c686042b5c20a6d368f4f09e34e411dd47ab31cd058755e83"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_contract-cooldown_cleanup_preserves_other_members_requests.log",
+      "sha256": "69f8d681b109389fae0e8a056e7c723fabdfbf97031d93e4683e2da9777f2395"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_contract-quorum_preserves_function_call_bytes_deposit_and_gas.log",
+      "sha256": "edd2b5bd0d059eece788cfe2fb0063f2f3661fe2b8fc71b609cebf4731418020"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_contract-quorum_schedules_exact_transfer_and_cleans_request.log",
+      "sha256": "07b477953edbee0dd67f5e088320d68f9d6d35eba93b9f9a954b7e1fe79389d4"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_rejections-add_key_wrong_receiver_reaches_contract_guard.log",
+      "sha256": "766d782b8536ddd31f3a1f7f87f079b1a2ea7d6c9e915f4729c25e7329b3ce94"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_rejections-foreign_key_cannot_create_request.log",
+      "sha256": "65cf62bbb886aec7735551a738873ecffd1caa73e2982e303aec9b652b3a0653"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_rejections-foreign_key_cannot_delete_even_after_cooldown.log",
+      "sha256": "ac2803c760d840d4e64bc6ae9317bc56c9d48d6038e2b60b580334db2809fff4"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_rejections-member_cannot_confirm_nonexistent_request.log",
+      "sha256": "e3c411f54e7fb610f386831d8c81f629d9a13d53a35687adf788e23e8427cd13"
+    },
+    {
+      "path": "near-contract-unwind/before/audit_rejections-removed_member_cannot_add_a_new_confirmation.log",
+      "sha256": "bd2527c6f0e8471d2db3667441701d913a02fc682fdc77b9a658100d1de929bc"
+    },
+    {
+      "path": "near-contract-unwind/before/build.jsonl",
+      "sha256": "2c2cd75e59ab324e5e0b04a82aec03e9a14699aeabdc02514c72893adc9a4ad6"
+    },
+    {
+      "path": "near-contract-unwind/before/build.log",
+      "sha256": "135d541931d9e7a01490ff82a0b8ea71ad8b8a33cf8d6ee57f87dcf028ffe3d2"
+    },
+    {
+      "path": "near-contract-unwind/before/discovery.log",
+      "sha256": "a393accf1f093f8d69d05ee0598db5c1a48f627f442e8666c49561d1f4cf7167"
+    },
+    {
+      "path": "near-contract-unwind/before/inputs/Cargo.lock",
+      "sha256": "c4e5d3b598c7802cfe48d73912f3d52ca1c104df06629a7c0832aa1f15a3d4fd"
+    },
+    {
+      "path": "near-contract-unwind/before/inputs/Cargo.toml",
+      "sha256": "5b7937a4eba7dfeb1b178b56acc8a48114dc6b685d240496d409d0d2f756bd8e"
+    },
+    {
+      "path": "near-contract-unwind/before/inputs/near-sdk/src/environment/mock/mocked_blockchain.rs",
+      "sha256": "32a2a25c160260a11d6808ac39e3e4434cddc9c0919ba03edd88a9bc0e223b0d"
+    },
+    {
+      "path": "near-contract-unwind/before/inputs/near-sys/src/lib.rs",
+      "sha256": "af6157a40abc98ad8b5cd80192bcbcb4898ba69a51007170b5d7bf78e32030fb"
+    },
+    {
+      "path": "near-contract-unwind/before/inputs/src/lib.rs",
+      "sha256": "965c375567936af49a87c74f961a9e72304b212cba607e6000cb46e9791ef4b7"
+    },
+    {
+      "path": "near-contract-unwind/before/result.json",
+      "sha256": "d89ce8c50682ab8db3316f21567fea768be1f200dc073df772558c5a40dbcbc5"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-add_key_delete_key_storage_cleared.log",
+      "sha256": "3ea5635891324b267f14953c7514fb62ad4219c310b7e4180bb1ef98afccbc3f"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_change_num_confirmations.log",
+      "sha256": "f907fd4d13c44d9c108943f8b172ca44a2aea528bfe9bb4bca3f6fc8836ee72f"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_delete_request_future.log",
+      "sha256": "48350964b74cc6cae206f4b27f3b24582a14ad99aefc6ea56e82803bf99e265c"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_delete_request_panic_wrong_key.log",
+      "sha256": "03e90dab405af2352cabf7caafca946304ca95f0ae6e79e5516c711cc1619781"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_multi_3_of_n.log",
+      "sha256": "f528ae33f11fdba4a48f256c6527a56dba08f245ea7af5bdf9715f71aca69a95"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_multi_add_request_and_confirm.log",
+      "sha256": "2e81126d12fefba501034598f39c7f759edb546fde86867a34877bb830b2833e"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_panics_add_key_different_account.log",
+      "sha256": "50f14c646514cbc396ad9abcbb3095e858e01a26063274cdc5e5c266176db74b"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_panics_delete_request.log",
+      "sha256": "c4f6bd271990f32b19ee5be487536b9da7fba917f69c77fcf6110f86fe048ac2"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_panics_on_second_confirm.log",
+      "sha256": "2f54acdf3a3ce99985ad5d4ec77f51ceeea17de4dba4aebae41c066879be6fae"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_too_many_confirmations.log",
+      "sha256": "95bc0bdcc283f3b9cb37a35b4f32804a73e65d06407afb593e73b175479f7f43"
+    },
+    {
+      "path": "near-contract-unwind/before/tests-test_too_many_requests.log",
+      "sha256": "751bdb91df047edbe8c116b7a08ba01f19f7635dd271461a5015b55c22e4c564"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_contract-characterizes_confirmation_retained_after_quorum_authorized_member_removal.log",
+      "sha256": "5aab75e8b946c46f65329c20aaecc86758fdbedb3312eed2d2fab0cafc1dfa96"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_contract-cooldown_cleanup_preserves_other_members_requests.log",
+      "sha256": "69f8d681b109389fae0e8a056e7c723fabdfbf97031d93e4683e2da9777f2395"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_contract-quorum_preserves_function_call_bytes_deposit_and_gas.log",
+      "sha256": "edd2b5bd0d059eece788cfe2fb0063f2f3661fe2b8fc71b609cebf4731418020"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_contract-quorum_schedules_exact_transfer_and_cleans_request.log",
+      "sha256": "07b477953edbee0dd67f5e088320d68f9d6d35eba93b9f9a954b7e1fe79389d4"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_rejections-add_key_wrong_receiver_reaches_contract_guard.log",
+      "sha256": "f84137b8180e6db4f40536866a92d2948e04dceffc289dd328290ad0e41e5b82"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_rejections-foreign_key_cannot_create_request.log",
+      "sha256": "4b592a6f448b5fe4541a8b1eabc3d48598d7942550d2c770da89d651752efa79"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_rejections-foreign_key_cannot_delete_even_after_cooldown.log",
+      "sha256": "37ac0ad0596fab0928bc3d20163494f07f92ac329585643b8db7b5f4b59856a9"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_rejections-member_cannot_confirm_nonexistent_request.log",
+      "sha256": "fa83aaa9ed80c30f273bbcae9390e5fa111960dd990961d879a2da9a9c755850"
+    },
+    {
+      "path": "near-contract-unwind/mutant/audit_rejections-removed_member_cannot_add_a_new_confirmation.log",
+      "sha256": "a0f01eb0ffdedcce3e1742ad035f1bc0b3601f14d0e4488e90d13a325c6df6a0"
+    },
+    {
+      "path": "near-contract-unwind/mutant/build.jsonl",
+      "sha256": "fd68f63d144cbf164fb56d794a7eedb1ea0f7253c47d1b8e362cdc0572847609"
+    },
+    {
+      "path": "near-contract-unwind/mutant/build.log",
+      "sha256": "0944557341acb9b89432b6794e0d934293ef196b403786f8033a76a6c23a312a"
+    },
+    {
+      "path": "near-contract-unwind/mutant/discovery.log",
+      "sha256": "a393accf1f093f8d69d05ee0598db5c1a48f627f442e8666c49561d1f4cf7167"
+    },
+    {
+      "path": "near-contract-unwind/mutant/inputs/Cargo.lock",
+      "sha256": "c4e5d3b598c7802cfe48d73912f3d52ca1c104df06629a7c0832aa1f15a3d4fd"
+    },
+    {
+      "path": "near-contract-unwind/mutant/inputs/Cargo.toml",
+      "sha256": "5b7937a4eba7dfeb1b178b56acc8a48114dc6b685d240496d409d0d2f756bd8e"
+    },
+    {
+      "path": "near-contract-unwind/mutant/inputs/near-sdk/src/environment/mock/mocked_blockchain.rs",
+      "sha256": "79dde89d295efbccd67be4d0333bb9ee055c218782e7496a954a03a818651fb3"
+    },
+    {
+      "path": "near-contract-unwind/mutant/inputs/near-sys/src/lib.rs",
+      "sha256": "9661fa03a7883f279dac675a7c3f05d03d0bc5fe9876681b7c57cc6cb054f86b"
+    },
+    {
+      "path": "near-contract-unwind/mutant/inputs/src/lib.rs",
+      "sha256": "0eb8c9992bd10e2576c79dba84755a2f7c44f7a88d82fde2be7b84f0ff3b3dbf"
+    },
+    {
+      "path": "near-contract-unwind/mutant/mock-unwind.patch",
+      "sha256": "6ef80adc2d788a77b870056c9ca972ca04c7b69be46cd9e71ec10cdc7b792844"
+    },
+    {
+      "path": "near-contract-unwind/mutant/mutation.patch",
+      "sha256": "0dc87619866b2520199c6ba74a97d95509999590e5abd9a23fe933d12d0e534d"
+    },
+    {
+      "path": "near-contract-unwind/mutant/result.json",
+      "sha256": "9ac02237b0e1276ceb641d92b31167ba5248e7040d74abff87b266e3e8e2e08c"
+    },
+    {
+      "path": "near-contract-unwind/mutant/src-unwind.patch",
+      "sha256": "bb6b2996f3dbd0f47b6922b17d31ee533d0d92354133684c4240a245ad08f3b2"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-add_key_delete_key_storage_cleared.log",
+      "sha256": "3ea5635891324b267f14953c7514fb62ad4219c310b7e4180bb1ef98afccbc3f"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_change_num_confirmations.log",
+      "sha256": "f907fd4d13c44d9c108943f8b172ca44a2aea528bfe9bb4bca3f6fc8836ee72f"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_delete_request_future.log",
+      "sha256": "48350964b74cc6cae206f4b27f3b24582a14ad99aefc6ea56e82803bf99e265c"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_delete_request_panic_wrong_key.log",
+      "sha256": "25f723542f09784a7a41e761ffee864b9089cc28d23e99e8c5d565d12b5b721a"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_multi_3_of_n.log",
+      "sha256": "f528ae33f11fdba4a48f256c6527a56dba08f245ea7af5bdf9715f71aca69a95"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_multi_add_request_and_confirm.log",
+      "sha256": "2e81126d12fefba501034598f39c7f759edb546fde86867a34877bb830b2833e"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_panics_add_key_different_account.log",
+      "sha256": "ac30f74782edb2e2a3a15d54df95e8515f543f3304dd8b1e5bae6551befcb358"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_panics_delete_request.log",
+      "sha256": "1c3d7b824d0f2b3333e7258eee55da3eb9e74f3219cef929eeede7ffe0c2ef79"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_panics_on_second_confirm.log",
+      "sha256": "ca49ceee1000ebb479ead6742fa9b430b58266bbc04ba029436def8b88aa119a"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_too_many_confirmations.log",
+      "sha256": "b9c27dcf02f595e102d84c09ec38f889cf35bb2550698b007a2e9218de681f94"
+    },
+    {
+      "path": "near-contract-unwind/mutant/tests-test_too_many_requests.log",
+      "sha256": "2d770e842aae40c2076e7a8c55774a08adfdf7dfc9165e05b94316a5be2d492f"
+    }
+  ],
+  "wasm_execution_verified": false
+}
