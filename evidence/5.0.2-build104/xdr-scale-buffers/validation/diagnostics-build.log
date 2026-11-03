@@ -1,0 +1,52 @@
+Building for debugging...
+[Planning deferred tasks]
+[45 / 74]
+[46 / 75] OathDiagnostics
+[55 / 128]
+[58 / 128]
+[64 / 128]
+[66 / 128]
+[70 / 128]
+[73 / 128]
+[80 / 128]
+[82 / 128]
+[83 / 128]
+[90 / 128] OathDiagnostics
+[91 / 128] OathDiagnostics
+[100 / 128] OathDiagnosticsTests-product
+[101 / 128] OathDiagnosticsTests-product
+[105 / 128] OathDiagnostics
+[109 / 128] OathDiagnostics
+[116 / 129] OathDiagnostics-product
+[118 / 129] OathDiagnosticsTests-product
+[128 / 175]
+[132 / 175]
+[137 / 175]
+[140 / 175]
+[143 / 175]
+[145 / 175]
+[148 / 175]
+[149 / 175]
+[154 / 175] OathDiagnosticsTests-product
+[159 / 175] OathDiagnosticsTests-product
+[167 / 175] OathDiagnosticsTests-product
+[169 / 175] OathDiagnosticsTests-product
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/xdr-scale-buffers/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:405:31: [1;33mwarning: [1;39mno 'async' operations occur within 'await' expression[0;0m [#]8;;https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker\UnnecessaryEffectMarker]8;;\]
+[0;36m403 |[0;0m         XCTAssertEqual(boundary.sourceLine, 40)
+[0;36m404 |[0;0m 
+[0;36m405 |[0;0m         let cancelled: Int? = await OathDiagnostics.attempt("cancelled_scope") { throw CancellationError() }
+    [0;36m|[0;0m                               `- [1;33mwarning: [1;39mno 'async' operations occur within 'await' expression[0;0m [#]8;;https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker\UnnecessaryEffectMarker]8;;\]
+[0;36m406 |[0;0m         let absent: Int? = await OathDiagnostics.attemptOptional("absent_scope") { nil }
+[0;36m407 |[0;0m         XCTAssertNil(cancelled); XCTAssertNil(absent)
+
+/Users/thuglifex/Developer/OathReviewRuns/5.0.2-build104/xdr-scale-buffers/fix/Packages/OathDiagnostics/Tests/OathDiagnosticsTests/DiagnosticsTests.swift:409:34: [1;33mwarning: [1;39mno 'async' operations occur within 'await' expression[0;0m [#]8;;https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker\UnnecessaryEffectMarker]8;;\]
+[0;36m407 |[0;0m         XCTAssertNil(cancelled); XCTAssertNil(absent)
+[0;36m408 |[0;0m         for deferral in [DiagnosticDeferral.publicMarketCooldown, .publicMarketCapacity, .publicMarketQuoteUnavailable, .tokenMetadataCooldown, .tokenMetadataCapacity] {
+[0;36m409 |[0;0m             let deferred: Int? = await OathDiagnostics.attempt("deferred_scope") { throw deferral }
+    [0;36m|[0;0m                                  `- [1;33mwarning: [1;39mno 'async' operations occur within 'await' expression[0;0m [#]8;;https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker\UnnecessaryEffectMarker]8;;\]
+[0;36m410 |[0;0m             XCTAssertNil(deferred)
+[0;36m411 |[0;0m             OathDiagnostics.record(deferral, component: "prices", operation: "direct_deferral")
+
+[#UnnecessaryEffectMarker]: <https://docs.swift.org/compiler/documentation/diagnostics/unnecessary-effect-marker>
+[171 / 175] OathDiagnosticsTests-product
+Build complete! (9.91 secs)

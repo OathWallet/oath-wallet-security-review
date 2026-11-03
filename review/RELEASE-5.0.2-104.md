@@ -265,3 +265,7 @@ unreviewed files. No App Store operation is included.
 ## Checkpoint 17 — Sui signing and transaction buffers
 
 Build 104 checkpoint 17 repairs a Sui transaction-parser crash on nonzero-origin Data. The identical fixture changes from one passing control/two SIGTRAPs to three passes. All 34 signing and WalletConnect methods pass, including 336 independent hash vectors; diagnostics and generic unsigned iOS Release compilation also pass. This is parser API robustness, not a demonstrated remote app exploit. [Exact source pins, reproduction and limits](SUI-SIGNING-BOUNDARIES.md). The full audit remains incomplete; no App Store operation.
+
+## Checkpoint 18
+
+Build 104 checkpoint 18 repairs nonzero-origin buffer crashes in the Stellar XDR and Polkadot SCALE readers. The identical nine-method fixture changes from three passes/six SIGTRAPs to nine passes; 40 adjacent send and WalletConnect methods pass. Diagnostics and generic unsigned iOS Release compilation pass. Public API/internal parser robustness is demonstrated, not a remote exploit. The full audit remains incomplete. [Exact pins, reproduction and limits](XDR-SCALE-BUFFERS.md).

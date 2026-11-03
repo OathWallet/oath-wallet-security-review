@@ -1,0 +1,96 @@
+{
+  "finding": "OW-2026-071",
+  "before_commit": "018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0",
+  "repair_commit": "2f914715224db31e91f1ce1f0dea4c236c043920",
+  "merge_commit": "152e094f85f196479d2ab08856eaf3b0264cd6c1",
+  "before": {
+    "passed": 3,
+    "sigtrap": 6
+  },
+  "after": {
+    "passed": 9,
+    "sigtrap": 0
+  },
+  "adjacent": {
+    "passed": 40,
+    "failed": 0,
+    "live_excluded": 7
+  },
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2
+  },
+  "generic_ios_release": "passed",
+  "hosted_replay": "pending",
+  "files": [
+    {
+      "path": "runs.zip",
+      "sha256": "30a9448d45fae19302239846d9a8fbdf946a60d3faa70bfb4a30e0eb6546e8f6"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "251a80e7c15d12c3d9fcfe692b423ee32475f0d4658c9b17ad1a8c4ff886871e"
+    },
+    {
+      "path": "validation/audit-helpers-final.log",
+      "sha256": "ebb5c2e5c2b13c45016a37b36a15ad00a5e3bb8bbc5928372f4c33a1839e9ec6"
+    },
+    {
+      "path": "validation/audit-helpers.log",
+      "sha256": "f8472ad84b1df0665539a107e572652af80436e7bf0682819b613cbb0b37a05f"
+    },
+    {
+      "path": "validation/checks.json",
+      "sha256": "d3d53bb22e602f83542320a49c9203004a3518d6bed27b8dbda87c5e64a96b1b"
+    },
+    {
+      "path": "validation/completion.log",
+      "sha256": "50311092c08fb83bd8779b0c6d3d2e30734a66184da5c5b83682d8d0e9bbb345"
+    },
+    {
+      "path": "validation/diagnostics-build.log",
+      "sha256": "5beafd1eeeb276e9199ca8f82a3069a866d83ce8ba85da1d0a9790901fba6b0b"
+    },
+    {
+      "path": "validation/diagnostics-coverage.log",
+      "sha256": "abb86118ee61e33a96aca80101c301a2f822631e7876b09297b66e93604246f4"
+    },
+    {
+      "path": "validation/diagnostics-result.json",
+      "sha256": "433c2ede8e290574ab07eaa394d0a2a428cab4bf3aedf6cd80162387878a4f2d"
+    },
+    {
+      "path": "validation/diagnostics-tests.log",
+      "sha256": "a052871c3513a256f9c7d5a6e6a277bad0a822a88004f4993fd71c7bc08e9820"
+    },
+    {
+      "path": "validation/gitleaks.log",
+      "sha256": "0f9d427d2a8ccd00caa819877ed71518ef5e3251ae563a25db9756dea2137054"
+    },
+    {
+      "path": "validation/ios-build-result.json",
+      "sha256": "b3d02263ddcc6501c8173684517ca037f55668a6ce6877649e8c76a97dc07b3c"
+    },
+    {
+      "path": "validation/ios-build.log",
+      "sha256": "1b71d13d5c84117bf63e614f87c197ea4d825407acd4354dbe6221f7452cbf8d"
+    },
+    {
+      "path": "validation/merge-binding.json",
+      "sha256": "d8e556fdf513e0c81d10aa03708385902f25ac9eea9f7886b857ad1505f35ce9"
+    },
+    {
+      "path": "validation/product-version.json",
+      "sha256": "93a1cc76c736b2c988bf1abe7b36eb68305e1a7e21a6397628e1fbd5bf10df47"
+    },
+    {
+      "path": "validation/public-source.log",
+      "sha256": "d762d9b0f3e49d760b2ceb7f8183b73d237935bb3281a87b38bf95e0936a8a5e"
+    },
+    {
+      "path": "validation/publication-secret-scan.log",
+      "sha256": "3c56ae94ec57c16d7e72dde776f8db6e12134358083ac0009f14a1d707657031"
+    }
+  ],
+  "audit_helpers_passed": 388
+}

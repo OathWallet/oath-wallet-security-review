@@ -1,0 +1,32 @@
+name: Reproduce XDR and SCALE input buffer checks
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/xdr-scale-buffers.yml', 'scripts/xdr-scale-regressions.py', 'scripts/xdr-scale-buffers.py', 'fixtures/xdr-scale-buffers/**', 'tests/test_xdr_scale_buffers.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 50
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_xdr_scale_buffers.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0
+          python3 scripts/xdr-scale-buffers.py .work/wallet .work/before evidence/ci/xdr-scale/before --baseline --expected-commit 018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0 --build-cache .work/build
+          git -C .work/wallet checkout --detach 2f914715224db31e91f1ce1f0dea4c236c043920
+          python3 scripts/xdr-scale-buffers.py .work/wallet .work/after evidence/ci/xdr-scale/after --expected-commit 2f914715224db31e91f1ce1f0dea4c236c043920 --build-cache .work/build
+          python3 scripts/xdr-scale-regressions.py .work/wallet .work/build evidence/ci/xdr-scale/adjacent --expected-commit 2f914715224db31e91f1ce1f0dea4c236c043920
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: xdr-scale-buffer-evidence, path: evidence/ci/xdr-scale, retention-days: 90}
