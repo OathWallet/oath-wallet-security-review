@@ -1,0 +1,113 @@
+{
+  "finding": "OW-2026-072",
+  "before_commit": "152e094f85f196479d2ab08856eaf3b0264cd6c1",
+  "repair_commit": "814596f8bb25a2c32ea25bba1fb036aee3303ca6",
+  "merge_commit": "c2ff488a7c7a647b2e6ab03aa1768f5735928e7e",
+  "before": {
+    "passed": 3,
+    "sigtrap": 3
+  },
+  "after": {
+    "passed": 6,
+    "sigtrap": 0
+  },
+  "adjacent": {
+    "passed": 40,
+    "failed": 0,
+    "live_excluded": 7
+  },
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2
+  },
+  "generic_ios_release": "passed",
+  "hosted_replay": "pending",
+  "files": [
+    {
+      "path": "attempts.json",
+      "sha256": "0f6620bb31b7cb7620df1167c5955772af157451e1e4ee112803b3f541d37eca"
+    },
+    {
+      "path": "attempts.zip",
+      "sha256": "cbacd708aefb466c6ca7b9e6be9a434543148e1ee9403e61783b118ed316d56e"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "d51b54ae823e4769e80da31b65826856a5deb8762561ebbc9583f13f07a36ae4"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "9a09d6e4999ef85ade8693dc0b1cba16dc794d298b9c62ba6c1d529aefc3093a"
+    },
+    {
+      "path": "validation/audit-helpers-final.log",
+      "sha256": "83c3b77201fcc85570c0e6567c94a47a120a73c2f79be2cf2e4493997bf05e7f"
+    },
+    {
+      "path": "validation/audit-helpers-inherited-record-failure.log",
+      "sha256": "83128b912034b64cc7ed192a5ecf4b37ee7135879e6f75b47b57324199f11dad"
+    },
+    {
+      "path": "validation/audit-helpers.log",
+      "sha256": "83128b912034b64cc7ed192a5ecf4b37ee7135879e6f75b47b57324199f11dad"
+    },
+    {
+      "path": "validation/checks.json",
+      "sha256": "d3d53bb22e602f83542320a49c9203004a3518d6bed27b8dbda87c5e64a96b1b"
+    },
+    {
+      "path": "validation/completion.log",
+      "sha256": "50311092c08fb83bd8779b0c6d3d2e30734a66184da5c5b83682d8d0e9bbb345"
+    },
+    {
+      "path": "validation/diagnostics-build.log",
+      "sha256": "33929533b0204a05491c89934b6c84cfdda9512c94d851d4e0dd0c707cf39359"
+    },
+    {
+      "path": "validation/diagnostics-coverage.log",
+      "sha256": "abb86118ee61e33a96aca80101c301a2f822631e7876b09297b66e93604246f4"
+    },
+    {
+      "path": "validation/diagnostics-result.json",
+      "sha256": "433c2ede8e290574ab07eaa394d0a2a428cab4bf3aedf6cd80162387878a4f2d"
+    },
+    {
+      "path": "validation/diagnostics-tests.log",
+      "sha256": "5443a6ece0f6897764e7d21a645c125d7fd2b4fb95cc60d7e3da6050234d5bd7"
+    },
+    {
+      "path": "validation/gitleaks.log",
+      "sha256": "26ae3b0dd71bfe48cb89758cf0453c47351f08aebfddd71e320a36b67400aed1"
+    },
+    {
+      "path": "validation/ios-build-result.json",
+      "sha256": "b3d02263ddcc6501c8173684517ca037f55668a6ce6877649e8c76a97dc07b3c"
+    },
+    {
+      "path": "validation/ios-build.log",
+      "sha256": "26172bb15ac402929f26fa993843c2bd16ac67ec915efe4606d2c8970e26129d"
+    },
+    {
+      "path": "validation/merge-binding.json",
+      "sha256": "95730ccab8b0fcc8d47ad2e4f1091b2492cb3d77afb8043ce09e12573f930270"
+    },
+    {
+      "path": "validation/product-version.json",
+      "sha256": "9c9ba290eb4ffede14585939da982033b3f94fc8afe8767e7beb0997b45ce0ca"
+    },
+    {
+      "path": "validation/public-source.log",
+      "sha256": "c17bc1f55add8561920f4f720efb969fe5b6c51a2a451898784ba66d131256cc"
+    },
+    {
+      "path": "validation/publication-secret-scan-final.log",
+      "sha256": "70121e8b1ba5ed8fc130eb3041825bf0570e2886e367c14a445a2efef84368d9"
+    },
+    {
+      "path": "validation/publication-secret-scan.log",
+      "sha256": "89590a5980bf743c3240cce0e7be5d444b95041a47a1ec02cef79a065eb63a80"
+    }
+  ],
+  "audit_helpers_passed": 394,
+  "outstanding_review_items": 16917
+}

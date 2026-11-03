@@ -1,0 +1,21 @@
+{
+  "initial_fixture_compile": "Missing try in a test assertion; no test execution. Corrected fixture is identical across final before/after runs.",
+  "initial_baseline": "Three passes/three SIGTRAPs; shared build directory used. Superseded by fresh-directory baseline.",
+  "first_retest": "INVALID source-to-executable binding: SwiftPM reused the exact baseline executable (identical SHA-256) without recompiling changed source. Preserved but excluded from repair validation.",
+  "clean_source_guard": "One restart correctly rejected a checkout with an untracked overlay, before compilation. Retried from a clean baseline worktree.",
+  "repair_to_harness": "Removed shared build-cache argument. Each final before/after replay requires a fresh build directory.",
+  "archive_sha256": "cbacd708aefb466c6ca7b9e6be9a434543148e1ee9403e61783b118ed316d56e",
+  "initial_evidence_helper_run": {
+    "executed": 5,
+    "passed": 4,
+    "failed": 1,
+    "cause": "Mechanical helper adaptation incorrectly expected 50 adjacent rows rather than the recorded 40. Corrected the helper count; production tests and evidence were unchanged.",
+    "observed_assertion": "AssertionError: 40 != 50"
+  },
+  "initial_complete_helper_run": {
+    "executed": 394,
+    "passed": 393,
+    "failed": 1,
+    "cause": "The legacy build-transition test requires inherited disposition entries to remain identical. Restored the historical SendReconciliation disposition entry; the new partial read remains recorded in the current inventory and source-binding ledger. No source hash or review status changed."
+  }
+}

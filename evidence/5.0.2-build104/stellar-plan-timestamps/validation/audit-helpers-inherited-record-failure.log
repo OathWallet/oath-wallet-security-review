@@ -1,0 +1,39 @@
+........................................................F.............Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp5ck04w_7/workspace/.source-download-vl5bnmp7/source'...
+done.
+fatal: unable to read tree (0000000000000000000000000000000000000000)
+.Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp0ha7d2fl/workspace/.source-download-w9e5x_le/source'...
+done.
+HEAD is now at 2b5bcf0 synthetic source
+.Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp6o7673ig/workspace/.source-download-vqh0u3n8/source'...
+done.
+HEAD is now at 2b5bcf0 synthetic source
+..Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmptvdyy_zd/workspace/.source-download-gwdy4njk/source'...
+done.
+HEAD is now at cb5a201 synthetic source
+.Source download attempt 1 failed; retrying in a fresh directory.
+Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpjuwtui5m/workspace/.source-download-pz81dssx/source'...
+done.
+HEAD is now at cb5a201 synthetic source
+.Source download attempt 1 failed; retrying in a fresh directory.
+Source download attempt 2 failed; retrying in a fresh directory.
+..Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpg5gn0651/workspace/.source-download-25jc2759/source'...
+done.
+HEAD is now at cb5a201 synthetic source
+............................................................................................................................................................................................................................................................................................................................
+======================================================================
+FAIL: test_inherited_decisions_require_identical_bytes (test_build104_transition.Build104Transition.test_inherited_decisions_require_identical_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/thuglifex/Developer/OathSecurityReview/tests/test_build104_transition.py", line 17, in test_inherited_decisions_require_identical_bytes
+    if name in old:self.assertEqual(value,old[name],name)
+                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'sha[122 chars]view/TRON-SEND-TRACE.md', 'review/STELLAR-PLAN-TIMESTAMPS.md']} != {'sha[122 chars]view/TRON-SEND-TRACE.md']}
+- {'evidence': ['review/TRON-SEND-TRACE.md', 'review/STELLAR-PLAN-TIMESTAMPS.md'],
++ {'evidence': ['review/TRON-SEND-TRACE.md'],
+   'sha256': '73fb8af905f202589739275547eddc7bfed067eacb188e9e5bed640c771b196a',
+   'status': 'partially-reviewed'} : Packages/OathDatabase/Sources/OathDatabase/SendReconciliation.swift
+
+----------------------------------------------------------------------
+Ran 394 tests in 11.501s
+
+FAILED (failures=1)

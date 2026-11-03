@@ -1,0 +1,32 @@
+name: Reproduce Stellar plan timestamp checks
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/stellar-plan-timestamps.yml', 'scripts/stellar-plan-timestamps.py', 'fixtures/stellar-plan-timestamps/**', 'tests/test_stellar_plan_timestamps.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 50
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_stellar_plan_timestamps.py
+      - run: |
+          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 152e094f85f196479d2ab08856eaf3b0264cd6c1
+          python3 scripts/stellar-plan-timestamps.py .work/wallet .work/before evidence/ci/stellar-plan-timestamps/before --baseline --expected-commit 152e094f85f196479d2ab08856eaf3b0264cd6c1
+          git -C .work/wallet checkout --detach 814596f8bb25a2c32ea25bba1fb036aee3303ca6
+          python3 scripts/stellar-plan-timestamps.py .work/wallet .work/after evidence/ci/stellar-plan-timestamps/after --expected-commit 814596f8bb25a2c32ea25bba1fb036aee3303ca6
+          python3 scripts/xdr-scale-regressions.py .work/after/source .work/after/build evidence/ci/stellar-plan-timestamps/adjacent --expected-commit 814596f8bb25a2c32ea25bba1fb036aee3303ca6
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: stellar-plan-timestamp-evidence, path: evidence/ci/stellar-plan-timestamps, retention-days: 90}
