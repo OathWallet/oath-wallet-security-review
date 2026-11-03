@@ -12,6 +12,8 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 [Actions runs](https://github.com/devdasx/oath-wallet-security-review/actions) and
 [acceptance checklist](review/ACCEPTANCE.md) together.
 
+**Checkpoint 10.** Recovery disclosure and passcode setup source tracing adds eleven scoped file dispositions. Nineteen automatic-prompt host checks and 245 audit helper tests pass. A single synthetic simulator experiment found no readable fixture text through the settled privacy cover; actual app-switcher snapshot timing remains open. No application change was needed for these hypotheses. [Scope and evidence](review/RELEASE-5.0.1-103.md#checkpoint-10).
+
 **Checkpoint 9.** Token-search race tests now use controlled interleavings instead of timing guesses; they pass on unchanged production code and detect an intentionally broken variant. The final baseline workflow preserves five failed jobs and 105 verified result/log pairs. [Evidence, test repairs and remaining scope](review/RELEASE-5.0.1-103.md#checkpoint-9).
 
 **Build 103 checkpoint 8.** Protocol-key constructors now reject malformed hex and invalid symmetric-key sizes. Eleven original failing methods and four valid controls are preserved; all fifteen pass after repair. The complete SDK suite passes 321 tests with two skips, and unsigned iOS Release compilation succeeds. [Finding and compatibility](review/PROTOCOL-KEY-HEX.md) · [Validation](evidence/5.0.1-build103/key-hex/validation.json) · [Merged fix](https://github.com/devdasx/oath-wallet/pull/69). These are WalletConnect messaging keys; the tests do not demonstrate wallet-secret disclosure or a consent bypass.

@@ -13,3 +13,20 @@ Biometric presentation tracks independent request UUIDs and posts only on real b
 Existing exact-baseline GitHub receipts cover 123 biometric fallback checks and 158 security checks, 144 wallet lifecycle and 37 reset checks, plus 28 protected-startup checks. They compile relevant production logic with synthetic storage/OS boundaries. The biometric fixture explicitly covers overlapping requests, duplicate completions, another instance's prompt, and background transitions. These checks do not execute the UIKit/SwiftUI scene delegates themselves. [Hash-linked reports and logs](../evidence/5.0.1-build103/ci-artifacts-checkpoint8.json) · [Host fixture source](https://github.com/devdasx/oath-wallet/blob/c7acd23bb139864a40273f405d18b479589d2b20/Tools/CheckBiometricFallback.swift#L101-L143).
 
 The privacy-cover view was read in full but remains partial: it uses an ultra-thin material blur plus a translucent shade (opaque background with Reduce Transparency). Source review cannot establish that sensitive text is unreadable in every rendered snapshot, or prove UIKit snapshot ordering on all lifecycle paths. A targeted synthetic visual/runtime check is still required for that concern. No simulator or physical device was used in this pass. No application source changed and no vulnerability was confirmed in these files.
+
+## Follow-up: settled cover rendering
+
+The subsequent targeted experiment used one isolated iPhone 17 Pro simulator on
+iOS 27.0, with synthetic labels and the unchanged production cover. The uncovered
+control was readable. Neither settled light/dark cover left fixture text visually
+readable; Vision recognized ten control labels, zero labels in the covered
+hierarchy renders, and only status-bar content in the dark compositor screenshot.
+The simulator was shut down after capture. No full wallet app, real wallet data or
+physical device was used. [Images, toolchain and hashes](../evidence/5.0.1-build103/privacy-cover/result.json)
+· [Reproduction fixture and limits](../fixtures/privacy-cover/README.md).
+
+This resolves the narrow legibility question for those captures, not UIKit's
+actual app-switcher snapshot ordering. The cover was attached directly and
+allowed to settle for one second. Other runtime/accessibility combinations and
+image reconstruction are not tested. The file remains partially reviewed; no
+production fix was justified by this negative experiment.

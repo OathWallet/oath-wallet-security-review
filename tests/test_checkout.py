@@ -1,4 +1,6 @@
 import importlib.util
+import contextlib
+import io
 from pathlib import Path
 import subprocess
 import sys
@@ -121,6 +123,22 @@ class CheckoutTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'At least one'):
             self.prepare(attempts=0)
         self.assertFalse(self.dest.exists())
+
+    def test_help_does_not_download(self):
+        with patch.object(sys, 'argv', ['checkout.py', '--help']), patch.object(checkout, 'checkout') as download:
+            with contextlib.redirect_stdout(io.StringIO()):
+                with self.assertRaises(SystemExit) as result:
+                    checkout.main()
+            self.assertEqual(result.exception.code, 0)
+            download.assert_not_called()
+
+    def test_unknown_arguments_do_not_download(self):
+        with patch.object(sys, 'argv', ['checkout.py', '--unexpected']), patch.object(checkout, 'checkout') as download:
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                with self.assertRaises(SystemExit) as result:
+                    checkout.main()
+            self.assertEqual(result.exception.code, 2)
+            download.assert_not_called()
 
 
 if __name__ == '__main__':

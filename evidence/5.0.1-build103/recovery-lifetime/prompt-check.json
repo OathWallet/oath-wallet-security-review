@@ -1,0 +1,35 @@
+{
+  "source_commit": "c7acd23bb139864a40273f405d18b479589d2b20",
+  "status": "passed",
+  "assertion_count": 19,
+  "compile_exit": 0,
+  "execution_exit": 0,
+  "network_denied": true,
+  "keychain_used": false,
+  "simulator_used": false,
+  "swift": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx27.0.0",
+  "commands": [
+    [
+      "swiftc",
+      "OathAtmosphere/Passcode/OathAutomaticBiometricPrompt.swift",
+      "Tools/CheckAutomaticBiometricPrompt.swift",
+      "-o",
+      "<work>/prompt-check"
+    ],
+    [
+      "sandbox-exec",
+      "-p",
+      "(version 1)(allow default)(deny network*)",
+      "<work>/prompt-check"
+    ]
+  ],
+  "sources": {
+    "OathAtmosphere/Passcode/OathAutomaticBiometricPrompt.swift": "9817d0d663d82683dc7598667286048944b8b52e4c27d30bd4fb9fb58211cce2",
+    "Tools/CheckAutomaticBiometricPrompt.swift": "d87ef6c676bcaef10cc551a7c812675fa67ba7b1ac8b2a6f72fd39dbbf8233b3"
+  },
+  "files": {
+    "prompt.log.gz": "f1af0023c83748eefdd1f7c1e3ecf890658959cf87591a088ae9e9c5e17ca55e",
+    "compile.log.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+  },
+  "scope": "Pure automatic prompt lifecycle policy, no OS authentication or UI"
+}

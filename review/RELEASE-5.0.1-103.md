@@ -119,3 +119,42 @@ Source review covers application entry, scene lifecycle and biometric presentati
 The envelope boundary follow-up also passed on GitHub. Its archive digest and all twenty case/log pairs were verified. These are negative hypotheses with unchanged envelope code, not a newly fixed vulnerability. [Hosted receipt](../evidence/5.0.1-build103/ci-retests/envelope-github.json).
 
 No simulator, physical-device, App Store upload or submission was performed. The whole-wallet review remains in progress.
+
+
+## Checkpoint 10
+
+Eleven further files have hash-linked source-review dispositions. Four narrow
+components are reviewed; seven retain partial dispositions. Recovery material
+publication is wallet-scoped and generation-checked; settings and backup-offer
+owners were traced through lock, background and navigation cleanup. The apparent
+absence of a lock observer inside the backup-offer sheet is covered by its
+parent's dismissal path. No vulnerability was confirmed from that suspicion.
+[Source tracing and limits](RECOVERY-DISCLOSURE-LIFETIME.md).
+
+The production automatic-biometric prompt fixture passes 19 host checks with
+network access denied and no Keychain, Face ID or simulator use. The pinned
+[replay runner](../scripts/automatic-biometric-prompt.py) also passes locally;
+its dedicated GitHub workflow is pending this publication. [Receipt](../evidence/5.0.1-build103/recovery-lifetime/replay.json).
+
+A separate, explicitly scoped runtime experiment rendered the unchanged privacy
+cover over synthetic labels in one isolated iPhone 17 Pro simulator on iOS 27.0.
+The control was readable; settled light/dark covers obscured the fixture text.
+Vision recognized ten control labels, none in covered hierarchy renders and only
+status-bar content in the dark compositor image. The simulator was shut down and
+deleted. The full wallet app was not launched. Real app-switcher snapshot timing,
+other OS/accessibility combinations and resistance to reconstruction remain open.
+No production fix was justified. [Captures and hashes](../evidence/5.0.1-build103/privacy-cover/result.json)
+· [Reproduction and limitations](../fixtures/privacy-cover/README.md).
+
+The audit checkout helper ignored command-line arguments, so asking for help
+started a download. Two mocked-download tests fail before argument validation;
+all ten checkout tests pass afterward, within the 245 passing audit helper tests.
+This is an audit-tool correction, not a wallet vulnerability. The interrupted
+setup attempt and failed-before log are preserved. [Validation](../evidence/5.0.1-build103/privacy-cover/validation.json).
+
+The complete review remains open with 16,595 combined ledger items. Of 2,357
+direct compiler inputs, 244 are reviewed, 118 partial, 1,515 outstanding, 460
+generated-and-verified and 20 need a generated-input trace. These are coverage
+counts, not vulnerability counts. Application source remains unchanged from the
+previous tested public repair tree; no new app build or App Store operation is
+claimed for this evidence-only checkpoint. No physical device was used.

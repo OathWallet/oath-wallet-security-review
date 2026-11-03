@@ -4,6 +4,8 @@ Active release: **5.0.1 (103)**, `c7acd23bb139864a40273f405d18b479589d2b20`. [Re
 
 Checkpoint 9 retains 16,599 open ledger items, including 1,526 outstanding direct compiler inputs and 111 partial inputs. The completed baseline workflow failed five jobs; 104 of 115 required checks have passing exact-baseline records across the evidence ledger. Later source fixes and test-harness repairs have separate commit-specific receipts. The whole-wallet acceptance criteria remain unmet.
 
+Checkpoint 10 reduces the combined gate to 16,595 open items: direct compiler inputs now include 244 reviewed, 118 partial, 1,515 outstanding, 460 generated-and-verified and 20 generated inputs needing trace. The new source reads and limited synthetic runtime result do not change the full-review acceptance status.
+
 ## Historical acceptance snapshot
 
 Original 4.1.15 (100) baseline `c7cdbde5e9f136b595500e92fbc904b107dcd8ee`. Reviewed app `8c4e1d5d3a14bec0b9ea3a1fd01c7611ea4dd707`.

@@ -1,0 +1,25 @@
+{
+  "scope": "Audit-only helper validation; no application source change",
+  "audit_helper_tests": 245,
+  "audit_helper_exit": 0,
+  "checkout_cli_before": {
+    "tests": 10,
+    "failures": 2,
+    "exit": 1
+  },
+  "checkout_cli_after": {
+    "tests": 10,
+    "failures": 0,
+    "included_in_full_suite": true
+  },
+  "checkout_cli_baseline": "56f033589f2d5635724eaaea464db7d42ac2375c",
+  "checkout_cli_before_sha256": "64a657d478bac2caa72975361f6ee9d8513aa05b1abb2031c32f174717af45cb",
+  "checkout_cli_after_sha256": "1eae1e0a5f9cfd76276bf81cda9f864da8eb6e288a75dede305b6c2fad51e3ff",
+  "test_sha256": "53bef8916c46dbe99779327a283996b208bd4989c39a93e8644ee3cec0e8d39f",
+  "files": {
+    "audit-tests-final.log.gz": "975666155dec2da5c3416566fc865d3834a86aaa8448405c0d79a30d01bc8e96",
+    "checkout-cli-before.log.gz": "7f750100d3e6aefc2c9f47f44e400af4a6d1fb8c0624e3ab008ae1de0c935574"
+  },
+  "setup_note": "An attempted --help invocation on the earlier helper started a clone. It was interrupted before publishing the checkout. The regression tests mock downloads and confirm the two argument failures without network. Argument parsing now handles help and rejects unknown arguments before any download.",
+  "runtime_runner_scope": "Privacy rendering was executed manually; the later convenience runner was not rerun on a simulator. Its explicit opt-in guard and archived evidence are covered by three host tests."
+}

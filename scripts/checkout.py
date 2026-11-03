@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Prepare an exact clean source tree without publishing partial downloads."""
+import argparse
 import json
 from pathlib import Path
 import subprocess
@@ -39,6 +40,7 @@ def checkout(repository, revision, source, *, attempts=3, timeout=600):
 
 
 def main():
+    argparse.ArgumentParser(description=__doc__).parse_args()
     root = Path(__file__).resolve().parents[1]
     config = json.loads((root / 'scope/source.json').read_text())
     revision = checkout(config['repository'], config['reviewed_commit'], root / '.work/source')
