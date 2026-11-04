@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 25 adds 52 passing single-wallet backup-model checks and 15 current-source all-wallet regression checks. Removing the completion-ownership guard in a disposable copy produces 12 expected failures. Two more files gain partial source review; no new app defect or app change is claimed. The whole-wallet audit remains incomplete. [Evidence and remaining scope](BACKUP-SETTINGS-LIFECYCLE.md).
+
 Build 104 checkpoint 24 retests the existing backup file-boundary repairs against current source: three historical failing methods become three passes. A separate pristine backup package passes 64 XCTest methods plus one Swift Testing reset-barrier test. Two source files gain partial dispositions and the package manifest gains a scoped reviewed disposition. No new app change is claimed; the whole-wallet audit remains incomplete. [Evidence and remaining scope](CLOUD-FILE-RECHECK.md).
 
 Build 104 checkpoint 23 adds twelve passing Stellar provider/contract and WalletConnect methods, with 20 malformed-state cases and 12 malformed simulations. A disposable authorization mutation causes the expected assertion failure. One additional file gains partial source review; no new app defect or change is claimed. Earlier decoding and multisignature GitHub replays are downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-PROVIDER.md).

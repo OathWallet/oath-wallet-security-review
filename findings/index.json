@@ -1385,7 +1385,13 @@
       "commit": "0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d",
       "release": "5.0.2 (104) prerelease",
       "fix_commit_is_ancestor": true,
-      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest."
+      "validation": "Historical finding results retain their exact pins. Consult build-104 validation for new runs; ancestry alone is not a retest.",
+      "retest": {
+        "commit": "c2ff488a7c7a647b2e6ab03aa1768f5735928e7e",
+        "status": "passed",
+        "evidence": "evidence/5.0.2-build104/backup-settings/manifest.json",
+        "scope": "Unchanged production all-wallet model, original 15-case regression with controlled service/database boundaries. No UI or actual iCloud."
+      }
     }
   },
   {
