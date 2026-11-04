@@ -1,5 +1,7 @@
 # Oath Wallet 5.0.2 (104) — active prerelease audit
 
+Build 104 checkpoint 26 validates the scanner state machine with 137,256 bounded transition prefixes, 6,400 concurrent capture claims and 106 existing handoff checks. All five deliberately broken controls fail the expected groups. Two additional files gain partial source review; no new production defect or app change is claimed. The earlier backup-settings GitHub replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](SCANNER-STATE-BOUNDARIES.md).
+
 Build 104 checkpoint 25 adds 52 passing single-wallet backup-model checks and 15 current-source all-wallet regression checks. Removing the completion-ownership guard in a disposable copy produces 12 expected failures. Two more files gain partial source review; no new app defect or app change is claimed. The whole-wallet audit remains incomplete. [Evidence and remaining scope](BACKUP-SETTINGS-LIFECYCLE.md).
 
 Build 104 checkpoint 24 retests the existing backup file-boundary repairs against current source: three historical failing methods become three passes. A separate pristine backup package passes 64 XCTest methods plus one Swift Testing reset-barrier test. Two source files gain partial dispositions and the package manifest gains a scoped reviewed disposition. No new app change is claimed; the whole-wallet audit remains incomplete. [Evidence and remaining scope](CLOUD-FILE-RECHECK.md).
