@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Build 104 checkpoint 22 adds ten passing Stellar multisignature methods, covering all 209 supported threshold combinations and SDK-decoded atomic setup. A disposable threshold mutation produces 627 expected assertion failures. Three files gain partial source review; no new defect or app change is claimed. Timestamp repair and persistence GitHub replays are downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-MULTISIG.md).
+
 Build 104 checkpoint 21 adds seven passing production-parser methods backed by deterministic independent Stellar vectors and 1,776 truncation cases. A disposable checksum mutation produces 64 expected assertion failures. Two files gain partial source review; no new app defect or implementation change is claimed. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-DECODING.md).
 
 Build 104 checkpoint 20 adds 31 passing offline Stellar persistence and generic refresh-worker methods, including database reopening, signature preservation, duplicate-wallet isolation and retries. Seven files have hash-bound partial read evidence; four were previously outstanding. No application implementation changes or new confirmed defect are claimed. The earlier XDR/SCALE hosted replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-PERSISTENCE.md).
