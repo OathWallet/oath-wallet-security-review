@@ -1,0 +1,40 @@
+........................................................F.............Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpd8jrm_uw/workspace/.source-download-jsmy79y_/source'...
+done.
+fatal: unable to read tree (0000000000000000000000000000000000000000)
+.Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp1hbas39t/workspace/.source-download-ew10hjpa/source'...
+done.
+HEAD is now at 2349697 synthetic source
+.Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmpuvy75vc1/workspace/.source-download-jaudyjc9/source'...
+done.
+HEAD is now at 2349697 synthetic source
+..Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp0tptgf2a/workspace/.source-download-3oh014li/source'...
+done.
+HEAD is now at 2349697 synthetic source
+.Source download attempt 1 failed; retrying in a fresh directory.
+Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp4kvdfog9/workspace/.source-download-dnp_y6f1/source'...
+done.
+HEAD is now at 54dda8d synthetic source
+.Source download attempt 1 failed; retrying in a fresh directory.
+Source download attempt 2 failed; retrying in a fresh directory.
+..Cloning into '/var/folders/3r/c0vp00nn2q9bflq211n760x80000gn/T/tmp9c219jxc/workspace/.source-download-lsb5w7x2/source'...
+done.
+HEAD is now at 54dda8d synthetic source
+.........................................................................................................................................................................................................................................................................................................................................................
+======================================================================
+FAIL: test_inherited_decisions_require_identical_bytes (test_build104_transition.Build104Transition.test_inherited_decisions_require_identical_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/thuglifex/Developer/OathSecurityReview/tests/test_build104_transition.py", line 17, in test_inherited_decisions_require_identical_bytes
+    if name in old:self.assertEqual(value,old[name],name)
+                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'sha256': '34661d04ce26e12999abcfd98b74bd006d319720b[98 chars]md']} != {'sha256': '515bfde50a25f3d6a662de36b0cf08e9efdc13876[131 chars]md']}
+- {'evidence': ['review/CLOUD-FILE-RECHECK.md'],
+-  'sha256': '34661d04ce26e12999abcfd98b74bd006d319720b29130f0793bd69ca3a4a925',
++ {'evidence': ['review/BUILD103-CUSTODY-RECHECK.md', 'findings/OW-2026-052.md'],
++  'sha256': '515bfde50a25f3d6a662de36b0cf08e9efdc13876820c7996e00edfea1259cfd',
+   'status': 'partially-reviewed'} : Packages/OathCloudBackup/Sources/OathCloudBackup/CloudDrive.swift
+
+----------------------------------------------------------------------
+Ran 423 tests in 12.051s
+
+FAILED (failures=1)
