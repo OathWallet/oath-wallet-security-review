@@ -1,5 +1,7 @@
 # Oath Wallet 5.0.2 (104) prerelease security review
 
+Build 104 checkpoint 23 adds twelve passing Stellar provider/contract and WalletConnect methods, with 20 malformed-state cases and 12 malformed simulations. A disposable authorization mutation causes the expected assertion failure. One additional file gains partial source review; no new app defect or change is claimed. Earlier decoding and multisignature GitHub replays are downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](review/STELLAR-PROVIDER.md).
+
 Build 104 checkpoint 22 adds ten passing Stellar multisignature methods, covering all 209 supported threshold combinations and SDK-decoded atomic setup. A disposable threshold mutation produces 627 expected assertion failures. Three files gain partial source review; no new defect or app change is claimed. Timestamp repair and persistence GitHub replays are downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](review/STELLAR-MULTISIG.md).
 
 Build 104 checkpoint 21 adds seven passing production-parser methods backed by deterministic independent Stellar vectors and 1,776 truncation cases. A disposable checksum mutation produces 64 expected assertion failures. Two files gain partial source review; no new app defect or implementation change is claimed. The whole-wallet audit remains incomplete. [Evidence and remaining scope](review/STELLAR-DECODING.md).
