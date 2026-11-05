@@ -1,4 +1,4 @@
-# Oath Wallet 5.0.2 (104) — active prerelease audit
+# Oath Wallet 5.0.2 (104) — security review series
 
 Build 104 checkpoint 26 validates the scanner state machine with 137,256 bounded transition prefixes, 6,400 concurrent capture claims and 106 existing handoff checks. All five deliberately broken controls fail the expected groups. Two additional files gain partial source review; no new production defect or app change is claimed. The earlier backup-settings GitHub replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](SCANNER-STATE-BOUNDARIES.md).
 
@@ -14,11 +14,7 @@ Build 104 checkpoint 21 adds seven passing production-parser methods backed by d
 
 Build 104 checkpoint 20 adds 31 passing offline Stellar persistence and generic refresh-worker methods, including database reopening, signature preservation, duplicate-wallet isolation and retries. Seven files have hash-bound partial read evidence; four were previously outstanding. No application implementation changes or new confirmed defect are claimed. The earlier XDR/SCALE hosted replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](STELLAR-PERSISTENCE.md).
 
-The current target is `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`,
-[tag v5.0.2-build104](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.2-build104).
-It includes the public repairs merged through PR #77. It is a GitHub prerelease;
-no upload, submission, withdrawal or other App Store Connect action is included.
-The separate 5.0.1 (103) submission is unchanged.
+The initial series target was `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`, including public repairs through PR #77. These original checks did not upload or submit an app. The maintainer subsequently released 5.0.2 (104), with Apple approval confirmed on 5 November 2026; see [current publication status](CURRENT-PUBLICATION.md). The released source is `7ffd0f449c3312d9fafd01eda59c6b9eb813f9ca`. Individual findings and test records retain their exact source pins; this update does not claim a complete review of that released source.
 
 ## Continuity of evidence
 
