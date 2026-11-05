@@ -1,4 +1,4 @@
-# Oath Wallet 5.0.2 (104) prerelease security review
+# Oath Wallet 5.0.2 (104) security review
 
 Build 104 checkpoint 26 validates the scanner state machine with 137,256 bounded transition prefixes, 6,400 concurrent capture claims and 106 existing handoff checks. All five deliberately broken controls fail the expected groups. Two additional files gain partial source review; no new production defect or app change is claimed. The earlier backup-settings GitHub replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](review/SCANNER-STATE-BOUNDARIES.md).
 
@@ -39,7 +39,7 @@ This is a **maintainer-commissioned, Codex-led security review** of the public
 Oath Wallet application. It is not independent certification, a guarantee of
 zero vulnerabilities, or a comparison with the installed App Store binary.
 
-**Active audit target:** [Oath Wallet 5.0.2 (104) prerelease](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.2-build104), commit `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`. This prerelease includes subsequent public audit repairs and has not been uploaded to App Store Connect. The separate 5.0.1 (103) submission is unchanged. [Current target and validation](review/RELEASE-5.0.2-104.md) · [Source manifest](scope/source.json) · [Historical build-103 checkpoints](review/RELEASE-5.0.1-103.md).
+**Current application release:** [Oath Wallet 5.0.2 (104)](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.2-build104), released source commit `7ffd0f449c3312d9fafd01eda59c6b9eb813f9ca`. Apple approval was confirmed on 5 November 2026. [Current publication status](review/CURRENT-PUBLICATION.md) distinguishes that release from the exact source commits tested in this review. The build-104 series began at `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`; its inventory and historical results remain pinned. [Review series and validation](review/RELEASE-5.0.2-104.md) · [Pinned source manifest](scope/source.json) · [Historical build-103 checkpoints](review/RELEASE-5.0.1-103.md).
 
 **The whole-wallet review is not complete.** Test success does not turn
 outstanding source into reviewed source. Consult the [report](review/REPORT.md),
@@ -65,7 +65,7 @@ outstanding source into reviewed source. Consult the [report](review/REPORT.md),
 
 Four chain wallet adapters now have hash-bound partial source coverage. The compiler ledger is reproducible from the canonical inventory, including 16 preserved historical partial dispositions. [Read scope and remaining work](review/CHAIN-WALLET-ADAPTERS.md) · [Coverage reconciliation](review/COMPILER-DISPOSITION-RECONCILIATION.md). This does not close the whole-wallet review.
 
-**Build 104 prerelease.** The source includes the public fixes through PR #77. Its exact-target checks pass: 748 database tests (72 skips), 119 diagnostics tests (two skips), source/secret checks and unsigned iOS Release compilation. The built app reports 5.0.2 / 104. [Current audit, carried evidence and gaps](review/RELEASE-5.0.2-104.md). Earlier checkpoints below remain historical.
+**Historical build-104 prerelease checks.** The source includes the public fixes through PR #77. Its exact-target checks pass: 748 database tests (72 skips), 119 diagnostics tests (two skips), source/secret checks and unsigned iOS Release compilation. The built app reports 5.0.2 / 104. [Current audit, carried evidence and gaps](review/RELEASE-5.0.2-104.md). Earlier checkpoints below remain historical.
 
 **Checkpoint 21.** A controlled encrypted-write pause reproduced a race between wallet removal and a newly signed transaction journal. The same fixture changes from 19 passes/four failures to all 23 passing after the durable reservation repair; 30 restart checks cover interrupted persistence. Earlier delayed-authentication results are now verified on GitHub. [Reproduction, validation and remaining scope](review/CONNECT-REMOVAL-RACE.md).
 
