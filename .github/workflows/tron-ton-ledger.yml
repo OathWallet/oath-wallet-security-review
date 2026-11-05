@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_tron_ton_ledger.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach fd06fdff104d128e00cc414d2de1472f11752e04
           python3 scripts/tron-ton-ledger.py .work/wallet .work/build evidence/ci/tron-ton-ledger
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9

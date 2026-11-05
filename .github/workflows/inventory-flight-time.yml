@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_inventory_flight_time.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach fd06fdff104d128e00cc414d2de1472f11752e04
           python3 scripts/inventory-flight-time.py .work/wallet .work/before evidence/ci/inventory-flight-time/before --baseline --expected-commit fd06fdff104d128e00cc414d2de1472f11752e04
           git -C .work/wallet checkout --detach 63e0be4a10106fc577792a7fb3c6d69b1cc8870c

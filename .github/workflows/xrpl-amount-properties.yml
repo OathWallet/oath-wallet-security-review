@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_xrpl_amount_properties.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach a904515793b087289140e4411924f030b3fe61ff
       - run: |
           mkdir -p evidence/ci/xrpl-amount-properties

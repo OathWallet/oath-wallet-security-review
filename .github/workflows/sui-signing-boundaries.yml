@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_sui_signing_boundaries.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach b3f1f6af98bedfe850d390cac684a563c598e3ac
           python3 scripts/sui-transaction-slices.py .work/wallet .work/before evidence/ci/sui-signing/before --baseline --expected-commit b3f1f6af98bedfe850d390cac684a563c598e3ac --build-cache .work/build
           git -C .work/wallet checkout --detach 018cd8316d5f2c899f5ccbd3bc8547b3f7a7bea0

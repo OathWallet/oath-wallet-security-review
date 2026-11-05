@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_connect_removal.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach 31178e42e40d67218c2b52eda0024a5b4224f376
       - run: |
           mkdir -p evidence/ci/connect-removal

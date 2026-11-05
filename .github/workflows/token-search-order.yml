@@ -20,7 +20,7 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_token_search_order.py
-      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - run: git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
       - run: git -C .work/wallet checkout --detach b57d05196be319d1f0530e28f667eb89023a1c4a
       - run: python3 scripts/run.py .work/wallet token-lookup --expected-commit b57d05196be319d1f0530e28f667eb89023a1c4a --scratch .work/full-token-build --output evidence/ci
       - run: python3 scripts/token-search-order.py .work/wallet .work/order-build evidence/ci/order

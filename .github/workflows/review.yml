@@ -830,7 +830,7 @@ jobs:
       - run: python3 scripts/checkout.py
       - name: Reproduce baseline failure and fixed success
         run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/baseline
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/baseline
           git -C .work/baseline checkout --detach c7cdbde5e9f136b595500e92fbc904b107dcd8ee
           set +e
           sh scripts/parser-check.sh .work/baseline .work/parser-before > evidence/ci/parser-before.log 2>&1

@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_connect_removal_read.py
       - run: python3 -m unittest discover -s tests -p test_pending_consent_removal.py
-      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - run: git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
       - run: |
           mkdir -p evidence/ci/connect-removal-read
           cp evidence/ci/toolchain.txt evidence/ci/connect-removal-read/
@@ -48,7 +48,7 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach 501915920e99475e63af5fcb9e658f3c834f3cc8
           python3 scripts/run.py .work/wallet build --expected-commit 501915920e99475e63af5fcb9e658f3c834f3cc8 --output evidence/ci/removal-read-build
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9

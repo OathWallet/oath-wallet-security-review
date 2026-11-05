@@ -20,7 +20,7 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_private_key_disclosure.py
-      - run: git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+      - run: git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
       - run: |
           mkdir -p evidence/ci/private-key-disclosure
           cp evidence/ci/toolchain.txt evidence/ci/private-key-disclosure/

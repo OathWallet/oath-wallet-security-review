@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_near_multisig_evidence.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach 5d91d1e4dfd36c56031c7a8fb1ee305446dc54de
           git clone --no-checkout https://github.com/near/core-contracts.git .work/near-contract
           git -C .work/near-contract checkout --detach 1b0436c96379c63aee7d2429c6d5d24019031ab8

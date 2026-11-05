@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_cloud_file_recheck.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach c2ff488a7c7a647b2e6ab03aa1768f5735928e7e
           python3 scripts/cloud-file-recheck.py .work/wallet .work/cloud-file-recheck evidence/ci/cloud-file-recheck
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9

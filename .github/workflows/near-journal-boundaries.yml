@@ -21,7 +21,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_near_journal_boundaries.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach 0614556b993f85808b13e3a69984ce36050a8dfe
           python3 scripts/near-journal-boundaries.py .work/wallet .work/near-journal-build evidence/ci/near-journal-boundaries
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9

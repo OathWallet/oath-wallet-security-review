@@ -1,6 +1,6 @@
 # Current application publication status
 
-Checked 5 November 2026. Oath Wallet **5.0.2 (104)** is a regular [application release](https://github.com/devdasx/oath-wallet/releases/tag/v5.0.2-build104), with Apple approval confirmed by the maintainer. The [distribution record](https://github.com/devdasx/oath-wallet/blob/main/releases/5.0.2-distribution.json) identifies the evidence. The released source tag points to `7ffd0f449c3312d9fafd01eda59c6b9eb813f9ca`.
+Checked 5 November 2026. Oath Wallet **5.0.2 (104)** is a regular [application release](https://github.com/OathWallet/oath-wallet/releases/tag/v5.0.2-build104), with Apple approval confirmed by the maintainer. The [distribution record](https://github.com/OathWallet/oath-wallet/blob/main/releases/5.0.2-distribution.json) identifies the evidence. The released source tag points to `7ffd0f449c3312d9fafd01eda59c6b9eb813f9ca`.
 
 ## What this changes
 

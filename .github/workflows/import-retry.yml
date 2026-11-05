@@ -20,7 +20,7 @@ jobs:
         with: {python-version: '3.14.7'}
       - run: sh scripts/toolchain.sh
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           python3 scripts/import-retry-identity.py .work/wallet evidence/ci/import-retry
       - name: Reproduce four historical multisig diagnostic races
         run: |

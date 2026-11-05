@@ -23,7 +23,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - name: Reproduce four original failures, then exercise the repairs and compatibility controls
         run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/payments
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/payments
           git -C .work/payments checkout --detach 8425bc0597b6bd4ab36f8710d0e8d939d786a7fa
           python3 scripts/bitcoin-journal-recovery.py .work/payments --before --scratch .work/old-build --output evidence/ci/journal-before
           git -C .work/payments checkout --detach 5071662dc0700d7011795035aa14b5795a4a1e3a

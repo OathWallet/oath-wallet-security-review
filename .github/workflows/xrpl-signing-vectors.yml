@@ -23,7 +23,7 @@ jobs:
       - run: sh scripts/toolchain.sh
       - run: python3 -m unittest discover -s tests -p test_xrpl_signing_fixture.py
       - run: |
-          git clone --no-checkout https://github.com/devdasx/oath-wallet.git .work/wallet
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
           git -C .work/wallet checkout --detach 6783750661c43d3511d8973a2de77106fdf2001d
       - run: |
           mkdir -p evidence/ci/xrpl-signing-vectors
