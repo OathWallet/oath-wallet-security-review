@@ -1,5 +1,7 @@
 # Oath Wallet security review
 
+Checkpoint 37 adds 13 passing local multisignature methods: 527 Aptos policies, 54 Sui policies, all 65,536 Sui signer bitmaps and 27 THORChain policies. A separately weakened threshold check produces three expected assertions. Twenty-two source/range dispositions remain partial; no new app defect or app change is claimed. Hosted replay is pending. [Evidence and limitations](review/MULTISIG-AUTHORITY.md).
+
 Checkpoint 36 adds 40 Sui, NEAR and Polkadot consent methods passing locally and on GitHub with zero skips: altered requests, authority actions, message domains and consent lifetime boundaries. A deliberately weakened control produces three expected assertions. Fourteen source/range dispositions remain partial; no new app defect or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Evidence and remaining scope](review/MULTICHAIN-CONSENT.md).
 
 Checkpoint 35 adds 28 EVM methods passing locally and on GitHub with zero skips: cross-chain replay, signed intent, wire tampering, every supported Safe threshold and delegation-removal binding. The deliberately weakened control produces four expected assertions. Fifteen source/range dispositions remain partial; no new app defect or app change is claimed. [Evidence and remaining scope](review/EVM-CONSENT.md).

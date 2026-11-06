@@ -1,0 +1,321 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/AptosMultisig.swift",
+      "sha256": "99a4f2a356460fceb605eddc9926c6d28f8bc7eac9d918a0d92e2fa89a93e717",
+      "lines": [
+        [
+          1,
+          94
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Canonical MultiKey policy and address; threshold, member identity/order, authenticator bytes and response binding",
+      "remaining": "Production source trace; new executable authority corpus covers Aptos/Sui/THORChain only. Cryptographic internals, all chain execution and bundled-binary provenance remain unproven here."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SuiMultisig.swift",
+      "sha256": "43f3c169b5969e05282ac17116144303944e1350d51ea92e3eea318f3c59b0ac",
+      "lines": [
+        [
+          1,
+          81
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Equal-weight policy and address; canonical signature envelope, bitmap, threshold and intent verification",
+      "remaining": "Production source trace; new executable authority corpus covers Aptos/Sui/THORChain only. Cryptographic internals, all chain execution and bundled-binary provenance remain unproven here."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/ThorchainMultisig.swift",
+      "sha256": "f61a3f6d4de8c1300a4b8d1c924467385d4038c6a4114e229fbbcccfadbe4f71",
+      "lines": [
+        [
+          1,
+          120
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Canonical policy address; Amino document, ordered distinct signers, exact protobuf and hash binding",
+      "remaining": "Production source trace; new executable authority corpus covers Aptos/Sui/THORChain only. Cryptographic internals, all chain execution and bundled-binary provenance remain unproven here."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/StellarMultisig.swift",
+      "sha256": "d334f3c3b88d5023b7c861a4ba71421dccd852856faa0138f875d7e23007170b",
+      "lines": [
+        [
+          1,
+          99
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Distinct non-master members, uniform thresholds, atomic setup and policy/signature validation",
+      "remaining": "Production source trace; new executable authority corpus covers Aptos/Sui/THORChain only. Cryptographic internals, all chain execution and bundled-binary provenance remain unproven here."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SuiSendCrypto.swift",
+      "sha256": "48a0b8d544e591e61e26a7ef82286712075f54e328af991ddb0bffc01d3adde9",
+      "lines": [
+        [
+          1,
+          94
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Message intent, signature verification, hash and sender binding; payment semantics remain in the approved plan and journal",
+      "remaining": "Production source trace; new executable authority corpus covers Aptos/Sui/THORChain only. Cryptographic internals, all chain execution and bundled-binary provenance remain unproven here."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/AptosSendCrypto.swift",
+      "sha256": "3b75aeea766c189dd70fa20e9f5ba2eb80bc90b8e0ea75434915d12acf1a9408",
+      "lines": [
+        [
+          1,
+          79
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Domain-separated signing, exact raw transaction/authenticator binding and bounded Move type serialization",
+      "remaining": "Production source trace; new executable authority corpus covers Aptos/Sui/THORChain only. Cryptographic internals, all chain execution and bundled-binary provenance remain unproven here."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SuiSendPlan.swift",
+      "sha256": "a4c83fe80d84efd337259c115e4df901e63206f80cc67207f6b62e28979259bb",
+      "lines": [
+        [
+          1,
+          125
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Bounded amounts, fees, policy/sender identity and local transaction construction",
+      "remaining": "Remaining serialization tail and full provider/chain semantics are not qualified by these ranges."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathAptosMultisig.swift",
+      "sha256": "6b7b7e77055c155db8d3c0f822a16b0ebbc7453becc6aea714b0dd287ea50969",
+      "lines": [
+        [
+          1,
+          60
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Signer derivation, recovery material/public-key binding and policy address validation",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPrivateKeyExport.swift",
+      "sha256": "8069f6580eca233c61c11e940473327159fbfca72f9582349729def5012228e6",
+      "lines": [
+        [
+          1,
+          129
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Committed derivation path/address/chain, export formats, Bitcoin-only alternate recovery formats",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletConnectSigning.swift",
+      "sha256": "14a4719b55d2d48e5a449ffdc047690ac2bd65302faf58926a9a270ca3fd80b3",
+      "lines": [
+        [
+          1,
+          41
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account/chain scope and derived-address checks at the signing-key adapter",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletEngine.swift",
+      "sha256": "a3e835d8f4dacf72f4ff6113b480b812b6b8f47eff4e525e1bfaef528409fcee",
+      "lines": [
+        [
+          1,
+          209
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Creation and import routing; BIP39, Electrum and aezeed validation and derivation boundaries",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathVaultImportPreparation.swift",
+      "sha256": "9883e2f9378ce94b1444af588d813fe87736dd7bb1107a075cc173591b46827e",
+      "lines": [
+        [
+          1,
+          108
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Handoff declared chain, uniqueness and account/derived-address consistency",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathInstallationVaultStorage.swift",
+      "sha256": "f24050e3e7485ae71e0d8c44570c4122652c10d608e0d88bc2ae7e915631354d",
+      "lines": [
+        [
+          1,
+          37
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Purpose-bound installation-key envelope access and erase boundary",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPassphraseWalletModel.swift",
+      "sha256": "8892486ce68d12ddcd8b500847ce5d9fb9038dc728ba827552191985a629e881",
+      "lines": [
+        [
+          1,
+          99
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Captured draft/request ownership, cancellation and transient text cleanup",
+      "remaining": "Source-only application review. Full lifecycle scheduling, UI/biometric runtime, transient secret copies and upstream derivation remain separate work."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          1020,
+          1165
+        ],
+        [
+          1680,
+          1940
+        ],
+        [
+          2000,
+          2056
+        ],
+        [
+          2107,
+          2208
+        ],
+        [
+          2220,
+          2268
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Fresh export authentication; authentication/removal generation fences, current selected wallet, durable passphrase creation and immutable signing context",
+      "remaining": "Only listed ranges reviewed here; full actor scheduling and Keychain/biometric execution are not runtime tested."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletSession.swift",
+      "sha256": "5e94f6f93a3adec351f8d2287c8f2422dec99435191a7242200eb26066e8ba6a",
+      "lines": [
+        [
+          1263,
+          1347
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Passphrase creation selection/generation ownership and failure recovery",
+      "remaining": "Only listed ranges reviewed here; UI scheduling and full session state remain partial."
+    },
+    {
+      "path": "Packages/OathCloudBackup/Sources/OathCloudBackup/AptosMultisigRecovery.swift",
+      "sha256": "4e8458833c3c7b48959bc8d32d004f20c2e950324320a71b06a9f720ee8aad42",
+      "lines": [
+        [
+          1,
+          44
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Recovery structural bounds, member uniqueness, threshold and canonical order",
+      "remaining": "No new backup-container or end-to-end restoration execution in this checkpoint."
+    },
+    {
+      "path": "Packages/OathCloudBackup/Sources/OathCloudBackup/RecoveryPassphrase.swift",
+      "sha256": "29b924e56aad266591752b2dbafbedd966fe628a6a88647127104d2b71bae17a",
+      "lines": [
+        [
+          1,
+          28
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "NFKD normalization, explicit UTF-8 bounds, NUL rejection and compatibility path",
+      "remaining": "No claim that all transient string storage is wiped or all restore callers are covered."
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/SuiSend.swift",
+      "sha256": "5eb93f237c7b1396fa48542f47be728d3cf770f9b73974fead0c6693f43b529d",
+      "lines": [
+        [
+          1,
+          81
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Approved plan identity and exact transaction bytes before signature journal commit",
+      "remaining": "Source-only trace; concurrent removal behavior belongs to prior focused race evidence."
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/SendReconciliation.swift",
+      "sha256": "73fb8af905f202589739275547eddc7bfed067eacb188e9e5bed640c771b196a",
+      "lines": [
+        [
+          1,
+          74
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Committed signatures retain exact plan bytes before recovered broadcast",
+      "remaining": "Source-only trace; broader recovery scheduler/provider behavior remains partial."
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/WalletRemovalReservation.swift",
+      "sha256": "6917716c50d5a234499cd38d373da1b8f3acf1c9262c2a0159bdb9d0c2ee95a0",
+      "lines": [
+        [
+          1,
+          62
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Atomic removal reservation, all protected journal triggers and token-scoped release",
+      "remaining": "Confirms the existing OW-2026-063 guard also includes Sui; no new race test or newly discovered bug is claimed."
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "93ff219e2e623f86798857bc7d137bc1e31d17192c280a10065a36268394a7a7",
+      "lines": [
+        [
+          285,
+          455
+        ],
+        [
+          479,
+          765
+        ],
+        [
+          1050,
+          1140
+        ],
+        [
+          1290,
+          1405
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Reloaded namespace ownership, peer chain/account/method checks, revocation, request expiry, consent ownership before/after authentication, journal versus response boundaries",
+      "remaining": "Only listed ranges reviewed here; protocol SDK lifecycle, actual relay, biometrics and complete scheduling interleavings remain untested."
+    }
+  ]
+}

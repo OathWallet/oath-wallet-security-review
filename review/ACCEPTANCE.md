@@ -1,13 +1,15 @@
 # Acceptance checklist — in progress
 
+Checkpoint 37 adds 13 passing local multisignature methods: 527 Aptos policies, 54 Sui policies, all 65,536 Sui signer bitmaps and 27 THORChain policies. A separately weakened threshold check produces three expected assertions. Twenty-two source/range dispositions remain partial; no new app defect or app change is claimed. Hosted replay is pending. [Evidence and limitations](MULTISIG-AUTHORITY.md).
+
 Checkpoint 36 adds 40 Sui, NEAR and Polkadot consent methods passing locally and on GitHub with zero skips: altered requests, authority actions, message domains and consent lifetime boundaries. A deliberately weakened control produces three expected assertions. Fourteen source/range dispositions remain partial; no new app defect or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Evidence and remaining scope](MULTICHAIN-CONSENT.md).
 
 Checkpoint 35 adds 28 EVM methods passing locally and on GitHub with zero skips: cross-chain replay, signed intent, wire tampering, every supported Safe threshold and delegation-removal binding. The deliberately weakened control produces four expected assertions. Fifteen source/range dispositions remain partial; no new app defect or app change is claimed. [Evidence and remaining scope](EVM-CONSENT.md).
 
 Checkpoint 34 retains an unresolved hosted file-backup-exclusion failure; the independent cryptographic checks pass. It adds scoped installation-key evidence at `32701474fefbed3840878e35f6111e8d494e1f02`; its [12 partial dispositions and host assertions](INSTALLATION-BINDING.md) do not complete the full audit or change frozen inventory counts.
 
-Current supplemental checkpoint: **5.0.3 (105)**, multichain consent review at
-`32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 36 evidence](MULTICHAIN-CONSENT.md)
+Current supplemental checkpoint: **5.0.3 (105)**, multisignature authority review at
+`32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 37 evidence](MULTISIG-AUTHORITY.md)
 covers its explicit source ranges and host corpus; it does not requalify the
 entire application. The earlier nonce-response repair at
 `6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1`, merged as
