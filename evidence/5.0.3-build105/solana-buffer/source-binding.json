@@ -1,0 +1,43 @@
+{
+  "reviewed_commit": "4b29aa2d73582c7b0c037723726a7a9972c7700a",
+  "baseline_commit": "ce9d27baf5e6d81452b46d5a2b5688da2fcd93d7",
+  "frozen_inventory_unchanged": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolana.swift",
+      "sha256": "7660ef297595833ef5963e62dcb8aadbc120f8b093117283465113c02f1a3043",
+      "status": "partially-reviewed",
+      "scope": "Transaction construction, normalization, signature slicing and verification; other request semantics remain partial.",
+      "lines": [
+        [
+          132,
+          195
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolanaClient.swift",
+      "sha256": "cd293f0b11457414bcb7ee1463491736abecd98c3545c510f6a410873b6452b7",
+      "status": "partially-reviewed",
+      "scope": "Signed submission boundary and signature extraction; broader review and provider semantics remain partial.",
+      "lines": [
+        [
+          111,
+          121
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectSolanaBufferTests.swift",
+      "sha256": "543aaa6a7034f55ab81459c3ed2b6185fc3283beb6531dfef3f22b87a47bfb01",
+      "status": "test-reviewed",
+      "scope": "All five host methods and injected transport; public SDK fixtures inherited from existing suite.",
+      "lines": [
+        [
+          1,
+          125
+        ]
+      ]
+    }
+  ]
+}

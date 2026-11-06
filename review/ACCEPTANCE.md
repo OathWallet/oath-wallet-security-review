@@ -126,3 +126,12 @@ by test success. [Evidence](INVENTORY-FLIGHT-TIME.md).
 OW-2026-073 has paired host evidence against released build 104 and repaired
 5.0.3 (105) source. This is an additive, scoped review; the frozen inventory and
 whole-wallet completion requirements remain unchanged. See [results and gaps](SOLANA-CONSENT.md).
+
+## Checkpoint 28: Solana buffer origins
+
+OW-2026-074 is fixed through PR #97 and retested at the exact repair. The merged
+source tree is identical. The frozen inventory remains unchanged; three
+source/test entries receive scoped hash-bound dispositions in the supplemental
+ledger. The five paired cases and 41 passing Solana methods do not establish
+whole-wallet coverage, ordinary dApp exploitability, UI runtime correctness or
+App Store delivery. Hosted replay remains pending. [Evidence](SOLANA-BUFFER-ORIGIN.md).

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "finding": "OW-2026-074",
+  "baseline_commit": "ce9d27baf5e6d81452b46d5a2b5688da2fcd93d7",
+  "fix_commit": "4b29aa2d73582c7b0c037723726a7a9972c7700a",
+  "retest_commit": "4b29aa2d73582c7b0c037723726a7a9972c7700a",
+  "merge_commit": "02ec5362c188134c42632c555ed5401218d653cb",
+  "pull_request": "https://github.com/OathWallet/oath-wallet/pull/97",
+  "whole_wallet_complete": false,
+  "app_store_upload": false,
+  "simulator_used": false,
+  "physical_device_used": false,
+  "before": {
+    "passed": 2,
+    "skipped": 0,
+    "failed": 3
+  },
+  "after": {
+    "passed": 41,
+    "skipped": 0,
+    "failed": 0
+  },
+  "paired_duration_seconds": 243.611,
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2,
+    "failed": 0
+  },
+  "diagnostics_trace_isolated": {
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "network": "denied"
+  },
+  "generic_ios_build": "passed; unsigned Release; source tree identical to merge",
+  "hosted_replay": "pending",
+  "exploratory_attempts": "Preserved in validation.zip; headline paired counts use only the clean-snapshot driver.",
+  "files": [
+    {
+      "path": "audit-helper-tests.log",
+      "sha256": "c01b3b11e67e49a692c2e4f06e116e5d676fc9c7adc48bc03a600931f0663b69"
+    },
+    {
+      "path": "build-receipt.json",
+      "sha256": "d9b7505c688fd6cb17558177053d86a8c9a60578bba5fcca4a9047799b5e199f"
+    },
+    {
+      "path": "completion-gate.log",
+      "sha256": "abcd403ffbf3bca132fef888886919c84e42ba0e527e9db751252cd8aa37accc"
+    },
+    {
+      "path": "pr.json",
+      "sha256": "94027c9ec85dc2ac97745a0cfe026a16e227486971d77c79b650c30324159445"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "df7fdd0e52bcaea3af69717e72fd3e6ae0501676a5abdbaf50ef4ef252ac4f62"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "d5ac65b0a67ba9b90e7aa0321fc58dc3b690e619f9a25d7508647cfe157f0eac"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "a0b40cb55c76a8514f0aa4830108410f0fb6e4afeba892d597f59d0eb938985f"
+    },
+    {
+      "path": "validation.zip",
+      "sha256": "07b0f85fbf5ebc6442cbbc410cc2ae156ead0257ecf3be4b1fd011d3150922e0"
+    }
+  ],
+  "audit_helper_tests": {
+    "passed": 450,
+    "failed": 0,
+    "duration_seconds": 12.384
+  }
+}

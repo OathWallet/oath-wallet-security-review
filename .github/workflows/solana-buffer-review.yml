@@ -1,0 +1,29 @@
+name: Replay Solana transaction buffer-origin repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/solana-buffer-review.yml', 'scripts/solana-buffer-review.py', 'fixtures/solana-buffer/**', 'tests/test_solana_buffer_review.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_solana_buffer_review.py
+      - run: |
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 4b29aa2d73582c7b0c037723726a7a9972c7700a
+          python3 scripts/solana-buffer-review.py .work/wallet .work/solana-buffer evidence/ci/solana-buffer
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: solana-buffer-review-evidence, path: evidence/ci/solana-buffer, retention-days: 90}

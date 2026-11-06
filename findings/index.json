@@ -1664,5 +1664,19 @@
     "evidence": "evidence/5.0.3-build105/solana-consent/manifest.json",
     "publication_note": "Repair already published before this checkpoint; no new application change or PR.",
     "hosted_evidence": "evidence/5.0.3-build105/hosted-solana-consent/verification.json"
+  },
+  {
+    "id": "OW-2026-074",
+    "severity": "low",
+    "title": "Solana transaction boundaries assume zero-origin Data buffers",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-074.md",
+    "baseline_commit": "ce9d27baf5e6d81452b46d5a2b5688da2fcd93d7",
+    "fix_commit": "4b29aa2d73582c7b0c037723726a7a9972c7700a",
+    "merge_commit": "02ec5362c188134c42632c555ed5401218d653cb",
+    "pull_request": "https://github.com/OathWallet/oath-wallet/pull/97",
+    "retest_scope": "Identical five production-package methods: two passing controls, one SIGTRAP and two signature errors before; all five plus 36 adjacent methods pass afterward. Runtime networking denied. Generic unsigned iOS Release build passed; repair and merge source trees are identical. No remote app exploit demonstrated.",
+    "hosted_replay": "pending",
+    "evidence": "evidence/5.0.3-build105/solana-buffer/manifest.json"
   }
 ]
