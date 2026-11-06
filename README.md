@@ -1,8 +1,8 @@
 # Oath Wallet security review
 
-Checkpoint 35 adds 28 passing EVM methods with zero skips: cross-chain replay, signed intent, wire tampering, every supported Safe threshold and delegation-removal binding. The deliberately weakened control produces four expected assertions. Fifteen source/range dispositions remain partial; no new app defect or app change is claimed. [Evidence and remaining scope](review/EVM-CONSENT.md).
+Checkpoint 35 adds 28 EVM methods passing locally and on GitHub with zero skips: cross-chain replay, signed intent, wire tampering, every supported Safe threshold and delegation-removal binding. The deliberately weakened control produces four expected assertions. Fifteen source/range dispositions remain partial; no new app defect or app change is claimed. [Evidence and remaining scope](review/EVM-CONSENT.md).
 
-Checkpoint 34 adds 56 existing and 2,647 new passing installation-key assertions, with a 12-failure purpose-binding mutation control. Twelve hash-bound source/range dispositions remain partial. No new app defect or app change is claimed. [Production trace, evidence and limitations](review/INSTALLATION-BINDING.md).
+Checkpoint 34: locally, 56 inherited and 2,647 new installation-key assertions pass. On GitHub, the inherited file-backup-exclusion assertion fails; the separate 2,647 cryptographic assertions pass. The hosted aggregate is failed and unresolved. The 12-failure purpose-binding mutation control behaves as expected on both hosts. Twelve hash-bound source/range dispositions remain partial. No new app defect or app change is claimed. [Production trace, evidence and limitations](review/INSTALLATION-BINDING.md).
 
 
 Checkpoint 33 adds 27 passing Bitcoin signing/consent methods: 1,040 signature-mode combinations, mixed owned/foreign inputs, signed-wire mutations and consent-plan checks. A separate weakened control fails exactly four assertions; the first harness expectation error is preserved. Eleven source dispositions remain partial. No new app defect or app change is claimed. [Evidence and remaining gaps](review/BITCOIN-CONSENT.md).

@@ -88,7 +88,18 @@ matrices, Safe contract execution, actual chain behavior, UI runtime, cryptograp
 dependency implementations and shipped-binary provenance remain separate work.
 Package tests cannot establish iOS Keychain or full lock-screen behavior.
 
-The pinned, read-only hosted workflow has no deployment jobs or credentials. Its
-receipt is added only after the run and downloaded artifacts are verified. No new
+## Hosted verification
+
+The [GitHub run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42239926754)
+completed successfully at audit commit `e993017f7bb4eb1da0be59a818d05c0f1ca74cc5`.
+Its downloaded artifact has the same **28 passing production methods, zero skips**
+and exactly four expected mutation-control assertions. The hosted driver took
+**722.551 seconds**, including two fresh package builds. The terminal run/job
+states, GitHub artifact digest, source/fixture/driver hashes, dependency locks,
+every log and individual case result are checked by
+`tests/test_hosted_evm_consent.py`.
+
+[Downloaded artifact and receipt](../evidence/5.0.3-build105/hosted-evm-consent/verification.json).
+The pinned, read-only hosted workflow has no deployment jobs or credentials. No new
 generic iOS build was run for these audit-only additions; no app-build result is
 claimed. No simulator, physical device or App Store operation was performed.

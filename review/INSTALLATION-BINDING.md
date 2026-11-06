@@ -87,3 +87,21 @@ claim follows from these results.
 The diagnostic [second run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42239315053) returned SIGTRAP (-5). Its unoptimized diagnostic identified the inherited assertion `Installation key is excluded from device backups`. Both optimized and diagnostic failures are retained in `hosted-attempt2.zip`. A separate public-data file metadata probe compares the runner default temporary directory with scratch storage; this is an investigation, not a waived assertion or hosted pass.
 
 The [third hosted run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42240138092) again fails the inherited backup-exclusion assertion. Both the default temporary directory and scratch directory have the `com.apple.metadata:com_apple_backup_excludeItem` extended attribute, but a fresh URL's `isExcludedFromBackup` reads **false** for the file and directory. Changing TMPDIR does not resolve it. The evidence is preserved in `hosted-attempt3.zip`; the cause remains unresolved, and this does not establish an iOS backup bypass. The driver now continues the independent cryptographic fixtures after a failed baseline, while returning a failed aggregate status and reporting baseline assertion totals as unknown. This prevents the infrastructure failure from concealing separate results without waiving the failing check.
+
+
+## Independent hosted cryptographic results; storage failure retained
+
+The [fourth hosted run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42241547803)
+at audit commit `8461ef7507c0d80138ddbc0fe302cf6339a9d06d` is **failed**. The inherited
+baseline compiles but traps at the same backup-exclusion assertion; the number
+of completed baseline assertions is unknown and is not counted as a pass.
+Independent production cryptographic checks then complete: **2,647 pass, zero
+fail, zero skip**. The context-removal control fails exactly 12 expected assertions.
+The aggregate deliberately returns failure. The driver took **36.549 seconds**,
+including diagnostic and separate cryptographic builds. The original local
+successful run and all earlier failed hosted attempts remain intact.
+
+[Terminal metadata, downloaded artifact and receipt](../evidence/5.0.3-build105/hosted-installation-binding/verification.json)
+are validated by `tests/test_hosted_installation_binding.py`. The hosted storage
+failure remains unresolved. These results neither confirm an iOS backup bypass
+nor establish that backup protection works on every supported platform.
