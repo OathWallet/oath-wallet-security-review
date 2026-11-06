@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "source_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "production": {
+    "passed": 20,
+    "skipped": 0,
+    "failed": 0
+  },
+  "mutation_control": {
+    "passed": 0,
+    "skipped": 0,
+    "failed": 1
+  },
+  "reference": {
+    "version": "ethers@6.15.0",
+    "lock_sha256": "4885846f269379dcd3b45e882dd287e572b3a1f4b0d3e4f64f8f59ab9970857e",
+    "vectors_sha256": "3def44ec6af55cb230e0d95c1e4afa5d58c21433de2b04187dc8e555c8dc1152",
+    "generator_sha256": "35c1cb0bb399c8e869f7fad30a6c359abdbddc436f83cdf328dc89342c0579c6",
+    "vector_count": 616,
+    "invalid_count": 192
+  },
+  "duration_seconds": 204.808,
+  "new_app_finding": false,
+  "app_modified": false,
+  "mutation_is_production_vulnerability": false,
+  "generic_ios_build": "Not rerun for audit-only changes; no new app compilation claim",
+  "simulator_used": false,
+  "physical_device_used": false,
+  "app_store_upload": false,
+  "whole_wallet_complete": false,
+  "files": [
+    {
+      "path": "audit-helper-tests.log",
+      "sha256": "ee49425cd0fb9ab7fe6ff5d9bca5ebc4d2b16a63161833611c6b493d8c367387"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "8782a2825f412813fde66aa5f0871290c0ed675c4a2a84f5b7c068d579a45ee8"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "4a95eacb97eaa2dcaa0e6b6f8cde65968b29189806093150a0ef5e9cf5ac919a"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "81a569df6c033377c0a2fa78839d23219db22d3a34a4102fbe37d2eb859a6c1e"
+    },
+    {
+      "path": "validation.zip",
+      "sha256": "44b53791451fa6a9c2ee214af46567a7e83f38fac0f711b4682a759e5a5dbcb9"
+    }
+  ],
+  "audit_helper_tests": {
+    "passed": 479,
+    "failed": 0,
+    "duration_seconds": 13.294
+  },
+  "publication_scan": "Changed files and unpacked evidence: no leaks found; not a whole-repository scan"
+}

@@ -1,0 +1,132 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectJSON.swift",
+      "sha256": "3df5b3481ca8f37741a5421445686dbe6888fb7293bef1cce1551752a198bf2d",
+      "lines": [
+        [
+          1,
+          107
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Lossless numeric parsing, duplicate-key rejection, bounded structures and Unicode decoding",
+      "remaining": "Foundation parser internals and exhaustive grammar coverage remain open"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectTypedData.swift",
+      "sha256": "b0057946ee5704821589462d4b4769b51f519f0ebb42fbd794fb93637280ae7d",
+      "lines": [
+        [
+          1,
+          333
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Typed-data encoding, exact numeric widths, chain and owner binding, permission classification and signature verification",
+      "remaining": "Full upstream cryptography and all nonstandard contracts remain open"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSignIn.swift",
+      "sha256": "ce191f136905bfd02b73ff05ae7d37fdee5eef5395fcb96ca54f0044e251ed99",
+      "lines": [
+        [
+          1,
+          93
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Recognized sign-in origin/account/chain/time and optional field binding",
+      "remaining": "Server-side login replay protection and full parser grammar remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletConnectSigning.swift",
+      "sha256": "14a4719b55d2d48e5a449ffdc047690ac2bd65302faf58926a9a270ca3fd80b3",
+      "lines": [
+        [
+          1,
+          41
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account and imported-key scope, chain binding, signing-time expiry and key wiping attempt",
+      "remaining": "Runtime secret lifetime and WalletCore implementation remain open"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectTypedReview.swift",
+      "sha256": "f587ac2b2fd042f2aa57d8874423507c8dc96bc42a7e17fb00b43b36f8ec9b40",
+      "lines": [
+        [
+          1,
+          164
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Immutable signed-field presentation, raw permissions and no-chain warning",
+      "remaining": "Rendered and localized consent runtime remains open"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectMessage.swift",
+      "sha256": "a69812071800889f267a0e844e4fc62c272231ba524696d5cf5b076c9a2a138f",
+      "lines": [
+        [
+          1,
+          20
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Original EIP-191 message bytes, size and signing-owner checks",
+      "remaining": "Application-level runtime and upstream signer review remain open"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectPolicy.swift",
+      "sha256": "60a6ad1d44ca92137a3425c57fcd90b53ff4a7645293243cc832095ac67a5879",
+      "lines": [
+        [
+          253,
+          269
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Personal-sign parameter ordering and exact bounded hex decoding",
+      "remaining": "Other policy branches and complete peer lifecycle remain open"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "93ff219e2e623f86798857bc7d137bc1e31d17192c280a10065a36268394a7a7",
+      "lines": [
+        [
+          630,
+          671
+        ],
+        [
+          1050,
+          1077
+        ],
+        [
+          1339,
+          1377
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Typed input parsing, generation check, immutable request and post-sign session/time validation",
+      "remaining": "Complete SDK queue, relay and lifecycle interleavings remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          1086,
+          1130
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Fresh signing authentication, selected-wallet account and generation checks around awaits",
+      "remaining": "Runtime biometric integration and all interleavings remain open"
+    }
+  ]
+}

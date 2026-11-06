@@ -1,10 +1,12 @@
 # Acceptance checklist — in progress
 
-Current supplemental checkpoint: **5.0.3 (105)**, the nonce-response repair at
+Current supplemental checkpoint: **5.0.3 (105)**, typed-data consent review at
+`32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 32 evidence](TYPED-CONSENT.md)
+covers its explicit source ranges and host corpus; it does not requalify the
+entire application. The earlier nonce-response repair at
 `6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1`, merged as
-`658245d197592c89c071a946fda0baf8bf93fb41` in PR #105. The
-[checkpoint 30 evidence](SOLANA-NONCE-VALUE.md) covers its explicit source ranges,
-paired regressions and builds; it does not requalify the entire application.
+`658245d197592c89c071a946fda0baf8bf93fb41` in PR #105, retains its separate
+[paired regressions and builds](SOLANA-NONCE-VALUE.md).
 
 The completion gate still reads the frozen **5.0.2 (104)** inventory at
 `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d` from [scope](../scope/source.json).
@@ -166,3 +168,14 @@ source dispositions remain partial. No app defect, app change, new generic iOS
 build or whole-review completion is claimed. The frozen inventory remains
 unchanged. Hosted replay succeeded and its downloaded artifact is hash-verified.
 [Exact scope and limitations](APTOS-INTENT.md).
+
+## Checkpoint 32: typed-data signing and consent
+
+At `32701474fefbed3840878e35f6111e8d494e1f02`, 20 production host methods pass
+with no skips. They include 616 independent encoding/signature vectors and 192
+invalid-value rejections. A separate domain-binding mutation produces exactly the
+expected four assertions in one failed method. Nine source dispositions remain
+partial; the frozen inventory is unchanged. No new app defect, app change, new
+generic iOS build or whole-review completion is claimed. Full application
+authentication, rendered consent and dependency provenance remain separate gaps.
+[Exact scope and limitations](TYPED-CONSENT.md).

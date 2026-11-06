@@ -1,6 +1,8 @@
 # Oath Wallet security review progress report
 
-**Checkpoint 31.** Aptos exact signed intent, multisignature indexes and simulation substitution tests pass 25 methods with no skips. A disposable removed-guard control fails as expected. No new app defect is confirmed; eight partial file/range dispositions and the original audit-fixture compilation failure remain visible. [Scope, reproduction and limits](APTOS-INTENT.md).
+**Checkpoint 32.** Typed-data/sign-in checks pass 20 methods with no skips, including 616 independent encoding/signature vectors and 192 malformed-value rejections. Deliberately removing domain binding fails the expected control. No new app defect is confirmed; nine partial file/range dispositions retain lifecycle, UI and dependency gaps. [Scope, reproduction and limits](TYPED-CONSENT.md).
+
+Checkpoint 31's 25 passing Aptos methods and expected failing control have also been reproduced on GitHub; the downloaded artifact and all result hashes are verified. [Preserved evidence](APTOS-INTENT.md).
 
 ## Checkpoint 30: Solana nonce-response presence
 

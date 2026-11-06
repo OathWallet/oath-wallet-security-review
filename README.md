@@ -1,5 +1,7 @@
 # Oath Wallet security review
 
+Checkpoint 32 adds 20 passing typed-data/sign-in host methods, including 616 independently generated hash/signature vectors and 192 invalid-value cases. A deliberately broken domain-binding build fails the expected assertions. Nine file/range dispositions remain partial; no new app vulnerability or app change is claimed. [Reproduction, evidence and limitations](review/TYPED-CONSENT.md).
+
 Checkpoint 31 adds 25 passing offline Aptos signing and provider-intent methods, with an expected failed-method control when exact-byte binding is deliberately removed. Eight source files have hash-bound partial dispositions. No new application defect or app change is claimed. Original fixture-build failure and remaining lifecycle/dependency gaps are preserved. [Evidence and limitations](review/APTOS-INTENT.md).
 
 Checkpoint 30 records the missing Solana nonce-response value repair in [PR #105](https://github.com/OathWallet/oath-wallet/pull/105). Four controls pass and two methods fail before repair; all 58 selected Solana methods pass afterward with networking denied. Diagnostics, publication checks and separate unsigned iOS Release builds at the repair and merge commits pass. [Hosted replay](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42217601211) reproduces these same scoped test results on another runner; its downloaded logs and checksums are preserved. These are scoped results; the whole-wallet audit remains incomplete. [Evidence and limitations](review/SOLANA-NONCE-VALUE.md).
