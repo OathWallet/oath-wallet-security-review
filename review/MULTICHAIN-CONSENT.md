@@ -101,7 +101,27 @@ reviewed. Full application interleavings, UI/localization runtime, node/relay
 behavior, malicious-provider truth, upstream cryptographic implementations and
 source-to-shipped-binary provenance remain separate work.
 
-The hosted replay is pending; only the local results above are currently claimed.
+## Verified hosted replay
+
+[GitHub run 42244978628](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42244978628)
+completed successfully at audit commit `4b23c16a54ada034ebb132287b547f2562666005`.
+The driver completed in **589.761 seconds**. All 40 production methods passed,
+with zero skips and failures. The separately rebuilt mutation control produced
+exactly the same three expected assertion failures in one method.
+
+The downloaded artifact's SHA-256 matches GitHub's digest:
+`e9679c442dc4f99eda43aa52fd25e204799bc17da90db9f95726f99508e7c181`.
+Every archived result, source manifest, dependency lock and case log is checked by
+`tests/test_hosted_multichain_consent.py`, including the single-file mutation.
+[Terminal metadata and verification](../evidence/5.0.3-build105/hosted-multichain-consent/verification.json) ·
+[Durable artifact](../evidence/5.0.3-build105/hosted-multichain-consent/artifact.zip).
+
+The complete audit-helper suite passes **508 tests** in 11.939 seconds.
+The expanded publication corpus passes secret scanning (2.65 MB); this is a
+publication check, not proof that application data can never leak.
+
+## Execution boundaries
+
 The audit-only workflow has read-only permissions, pinned actions and no deployment
 credentials. No new generic iOS build was run for audit-only changes. No simulator,
 physical device or App Store operation was performed.
