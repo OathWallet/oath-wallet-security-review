@@ -1,0 +1,115 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/AptosSendPlan.swift",
+      "sha256": "7b413251697f2ab4ca27885201cbb0832473f6c278d4a662e4d67b7cd39f40c8",
+      "lines": [
+        [
+          1,
+          71
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Canonical owner/reference binding; bounded amounts, gas arithmetic and plan lifetime",
+      "remaining": "Complete parser and dependency review remains open"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/AptosSendCrypto.swift",
+      "sha256": "3b75aeea766c189dd70fa20e9f5ba2eb80bc90b8e0ea75434915d12acf1a9408",
+      "lines": [
+        [
+          1,
+          79
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Locally constructed BCS, signature and exact signed-byte verification, bounded type tags",
+      "remaining": "Underlying hashing/curve implementations and exhaustive grammar proof remain open"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/AptosMultisig.swift",
+      "sha256": "99a4f2a356460fceb605eddc9926c6d28f8bc7eac9d918a0d92e2fa89a93e717",
+      "lines": [
+        [
+          1,
+          94
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Canonical keys and threshold; sorted signature indexes, bitmap and signature/response binding",
+      "remaining": "Full upstream MultiKey implementation and network execution remain open"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/AptosSendClient.swift",
+      "sha256": "954961157843dda31b7d4591e88a80f43611726df864c4ad66a85b71482748bc",
+      "lines": [
+        [
+          1,
+          307
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Pinned balance metadata, simulation intent, exact-byte submission and receipt checks",
+      "remaining": "Provider honesty, full pending/recovery lifecycle and network integration remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathAptosWallet.swift",
+      "sha256": "3bb540d9839f941f439da7da034e762c872b84a39278bc0d7d7c1f375f5f364f",
+      "lines": [
+        [
+          1,
+          49
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account/chain and imported-key binding; signer derivation and wiping attempts",
+      "remaining": "Wallet Core derivation implementation and runtime secret lifetime remain open"
+    },
+    {
+      "path": "OathAtmosphere/Send/OathAptosSendService.swift",
+      "sha256": "dc54a3ce8499ddee98f10469695d18ced6d9c2c1a8a263f985a29aa8426ef7df",
+      "lines": [
+        [
+          1,
+          100
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Quote, fresh authorization, preflight, queued intent and signature journaling before broadcast",
+      "remaining": "Held-request app service integration and complete persistence race testing remain open"
+    },
+    {
+      "path": "OathAtmosphere/Send/OathAptosSendModel.swift",
+      "sha256": "27b169903c96ff83fc17bf1c17e75e4adb97c44aabea6ba21c2a759d63d7ec0b",
+      "lines": [
+        [
+          1,
+          90
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Quote ownership, cancellation generation, unlock check and retry paths",
+      "remaining": "Rendered consent and app lifecycle runtime behavior remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          1228,
+          1266
+        ],
+        [
+          1856,
+          1870
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Aptos authorization captures generation and wallet removal generation, rechecks after awaits and before return",
+      "remaining": "Other vault paths, biometric platform integration and all interleavings remain open"
+    }
+  ]
+}

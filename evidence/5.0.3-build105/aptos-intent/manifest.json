@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "source_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "production": {
+    "passed": 25,
+    "skipped": 0,
+    "failed": 0
+  },
+  "mutation_control": {
+    "passed": 0,
+    "skipped": 0,
+    "failed": 1
+  },
+  "mutation_is_production_vulnerability": false,
+  "first_attempt": "Audit fixture failed Swift isolation compilation; preserved, corrected fixture then rerun in fresh directories",
+  "duration_seconds": 191.868,
+  "new_app_finding": false,
+  "app_modified": false,
+  "generic_ios_build": "Not rerun: audit-only fixture and documentation changes; no new app build claim",
+  "simulator_used": false,
+  "physical_device_used": false,
+  "app_store_upload": false,
+  "whole_wallet_complete": false,
+  "files": [
+    {
+      "path": "audit-helper-tests.log",
+      "sha256": "3e20a8bd46866ffc8bd454282c99b0ba5d5440eab169b7e30dd56e6dbdecc1f0"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "177d9ff6ee4958d4164543d068953f471d5c41bb6bdaeabed3cd5f7e48f9f88f"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "3246d4d45b716a6ecb25369b08f425e25726b5b00ec6601103dac739b59faf7e"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "c7b7a2e0ef230033083267aee40b1fbc7f31addc5193a1db90028977ab5c8da5"
+    },
+    {
+      "path": "validation.zip",
+      "sha256": "41e1323e8a892570cb051bb62acb88ee2d2db9ad403c735cf868ebb19b12254a"
+    }
+  ],
+  "audit_helper_tests": {
+    "passed": 472,
+    "failed": 0
+  },
+  "publication_scan": "Changed files and unpacked evidence: no leaks found; not a whole-repository scan"
+}

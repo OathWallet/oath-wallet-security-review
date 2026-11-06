@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+**Checkpoint 31.** Aptos exact signed intent, multisignature indexes and simulation substitution tests pass 25 methods with no skips. A disposable removed-guard control fails as expected. No new app defect is confirmed; eight partial file/range dispositions and the original audit-fixture compilation failure remain visible. [Scope, reproduction and limits](APTOS-INTENT.md).
+
 ## Checkpoint 30: Solana nonce-response presence
 
 Checkpoint 30 records the missing Solana nonce-response value repair in [PR #105](https://github.com/OathWallet/oath-wallet/pull/105). Four controls pass and two methods fail before repair; all 58 selected Solana methods pass afterward with networking denied. Diagnostics, publication checks and separate unsigned iOS Release builds at the repair and merge commits pass. [Hosted replay](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42217601211) reproduces the same scoped results; verified artifact checksums and logs are preserved. These are scoped results; the whole-wallet audit remains incomplete. [Evidence and limitations](SOLANA-NONCE-VALUE.md).
