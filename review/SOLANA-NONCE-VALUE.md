@@ -68,8 +68,18 @@ occurrences for 24 existing unassigned image-set assets, and no build errors.
 The [manifest](../evidence/5.0.3-build105/solana-nonce-value/manifest.json)
 binds the paired logs, exploratory attempts, scoped source copies, separate
 builds and PR receipt. The six source dispositions remain partial except for
-the fully read regression fixture. A pinned, audit-only GitHub replay is
-configured; its result is pending and is not included in the passing totals.
+the fully read regression fixture.
+
+The audit-only [GitHub replay](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42217601211)
+completed successfully at audit commit `bbfa9c91580d647c470d5cd140d1718d796296c3`.
+Its separate 797.785-second run reproduced **4 passing controls and 2 expected
+baseline failures**, followed by **58 passed, 0 skipped, 0 failed** after repair.
+The downloaded artifact matches GitHub's SHA-256 digest. All 81 recorded file
+hashes and 64 individual test-log hashes were verified, along with the fixture,
+driver and helper bindings. [Durable receipt and archive](../evidence/5.0.3-build105/hosted-solana-nonce-value/verification.json).
+These repeat the same test methods on another runner; they do not increase the
+number of unique cases or constitute an independent audit. The hosted replay
+does not rerun the generic iOS build.
 
 The audit repository's raw scan reports 3,953 matches in unchanged historical
 evidence. It is not counted as a passing scan. A separate scan of this checkpoint's
