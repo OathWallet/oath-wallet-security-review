@@ -1,5 +1,7 @@
 # Oath Wallet security review progress report
 
+Checkpoint 39 adds 27 passing local Solana/TON message-signing methods, with zero skips, and one expected failure when TON domain binding is deliberately removed. Five source/range dispositions remain partial; no new app vulnerability or app change is claimed. Hosted replay is pending. [Exact evidence and limitations](MESSAGE-DOMAINS.md).
+
 Checkpoint 38 confirms Medium finding OW-2026-077: a Solana stake authority change could receive a fee-only preview. [Open PR #117](https://github.com/OathWallet/oath-wallet/pull/117) rejects unsupported staking requests and simulated stake changes. Two controls pass and seven methods fail before repair (44 expected assertions); all 67 selected methods pass afterward. The unsigned generic iOS Release build passes at exact repair commit `f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e`. Hosted replay is pending; this repair is not yet merged or claimed distributed by Apple. [Evidence and limitations](SOLANA-STAKE-AUTHORITY.md).
 
 Checkpoint 37 adds 13 multisignature methods passing locally and on GitHub: 527 Aptos policies, 54 Sui policies, all 65,536 Sui signer bitmaps and 27 THORChain policies. A separately weakened threshold check produces three expected assertions. Twenty-two source/range dispositions remain partial; no new app defect or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Evidence and limitations](MULTISIG-AUTHORITY.md).
