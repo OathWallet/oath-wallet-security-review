@@ -1691,7 +1691,22 @@
     "merge_commit": "3338d294f08388655ffd4cfc3e50656f304e1c6c",
     "pull_request": "https://github.com/OathWallet/oath-wallet/pull/100",
     "retest_scope": "Identical eleven-method production fixture: three passing controls and eight expected assertion failures before; all 52 selected Solana host methods pass after repair with network denied. Generic unsigned iOS Release build passed. Merged application inputs are identical; separate website changes differ. No remote exploit or full journal runtime test claimed.",
+    "hosted_replay": "passed; original artifact downloaded and hashes verified",
+    "evidence": "evidence/5.0.3-build105/solana-context/manifest.json",
+    "hosted_evidence": "evidence/5.0.3-build105/hosted-solana-context/verification.json"
+  },
+  {
+    "id": "OW-2026-076",
+    "severity": "low",
+    "title": "Missing Solana nonce response value is mistaken for expiry evidence",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-076.md",
+    "baseline_commit": "193912d31c602cce314f540b2bafb64f8606bfbd",
+    "fix_commit": "6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1",
+    "merge_commit": "658245d197592c89c071a946fda0baf8bf93fb41",
+    "pull_request": "https://github.com/OathWallet/oath-wallet/pull/105",
+    "retest_scope": "Identical six-method production fixture: four passing controls and two expected assertion failures before; all 58 selected Solana methods pass after repair with network denied. Separate unsigned generic iOS Release builds pass at repair and merge commits. Pending service/database consequences are source-traced, not a full runtime test.",
     "hosted_replay": "pending",
-    "evidence": "evidence/5.0.3-build105/solana-context/manifest.json"
+    "evidence": "evidence/5.0.3-build105/solana-nonce-value/manifest.json"
   }
 ]

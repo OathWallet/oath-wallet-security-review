@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "finding": "OW-2026-076",
+  "baseline_commit": "193912d31c602cce314f540b2bafb64f8606bfbd",
+  "fix_commit": "6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1",
+  "retest_commit": "6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1",
+  "merge_commit": "658245d197592c89c071a946fda0baf8bf93fb41",
+  "pull_request": "https://github.com/OathWallet/oath-wallet/pull/105",
+  "whole_wallet_complete": false,
+  "app_store_upload": false,
+  "simulator_used": false,
+  "physical_device_used": false,
+  "before": {
+    "passed": 4,
+    "skipped": 0,
+    "failed": 2
+  },
+  "after": {
+    "passed": 58,
+    "skipped": 0,
+    "failed": 0
+  },
+  "paired_duration_seconds": 187.888,
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2,
+    "failed": 0
+  },
+  "diagnostics_trace_isolated": {
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "network": "denied"
+  },
+  "generic_ios_build": "passed at repair and merge commits; unsigned Release",
+  "hosted_replay": "pending",
+  "exploratory_attempts": "Original discovery cases and the skipped then opt-in isolated diagnostic-trace run remain in validation.zip. Published log paths are sanitized and checksums bind the sanitized bytes.",
+  "files": [
+    {
+      "path": "audit-helper-tests.log",
+      "sha256": "29fb382f2f4e836de68c3b6f433defc2d5eee12ebfb9f80616ef725de4cd6c82"
+    },
+    {
+      "path": "build-receipt.json",
+      "sha256": "71a942518d8503634c4671cc6c3a190fef3590c63ef55fcfaa184e1f83c1fd80"
+    },
+    {
+      "path": "checkpoint-publication-scan.log",
+      "sha256": "191c23d476c337aeae9ec4c45aa4cb94515973282eff11d62d66fa1eb17fc979"
+    },
+    {
+      "path": "completion-gate.log",
+      "sha256": "abcd403ffbf3bca132fef888886919c84e42ba0e527e9db751252cd8aa37accc"
+    },
+    {
+      "path": "pr.json",
+      "sha256": "2ed6e22cfec2a8e8c29b313db4186ec94f7774bae4f9d3d820e6323a5d802c22"
+    },
+    {
+      "path": "publication-scan-classification.json",
+      "sha256": "f59bdf73f2157b3bad61163528a4184f68b046b4b96afabfe0e5ebfab9c2f1ae"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "df5655a82eb9246dc5d391b7efdc1030935ff559ee5b795df283076d29bbc4ad"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "3bdd75faad93e1ac1184000dfd643be7ba2bf08e858c685cef5236b6aaccce15"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "21e2ea49ce021773028fdd39b65d5967d42ae7643e4366c329e4cca2ff41cc63"
+    },
+    {
+      "path": "validation.zip",
+      "sha256": "c4dd60ffd68523cafbee08f9a350a83b8d12124068845d1a9d8419ac16e74a92"
+    }
+  ],
+  "audit_helper_tests": {
+    "passed": 465,
+    "failed": 0
+  },
+  "completion_gate": {
+    "exit_code": 1,
+    "outstanding_items": 16916,
+    "whole_review_complete": false
+  },
+  "publication_scan": {
+    "whole_repository_raw_exit_code": 1,
+    "unchanged_historical_matches": 3953,
+    "new_checkpoint_and_unpacked_evidence_exit_code": 0,
+    "new_checkpoint_and_unpacked_evidence_findings": 0
+  }
+}

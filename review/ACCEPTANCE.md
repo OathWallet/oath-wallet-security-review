@@ -1,8 +1,18 @@
 # Acceptance checklist — in progress
 
-> Current audit target: [5.0.2 (104) prerelease](RELEASE-5.0.2-104.md). Earlier results below retain their original tested versions and commits; they are not retroactively tests of build 104.
+Current supplemental checkpoint: **5.0.3 (105)**, the nonce-response repair at
+`6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1`, merged as
+`658245d197592c89c071a946fda0baf8bf93fb41` in PR #105. The
+[checkpoint 30 evidence](SOLANA-NONCE-VALUE.md) covers its explicit source ranges,
+paired regressions and builds; it does not requalify the entire application.
 
-Active release: **5.0.1 (103)**, `c7acd23bb139864a40273f405d18b479589d2b20`. [Release-specific findings and exact-target checks](RELEASE-5.0.1-103.md). The completion gate reads the active commit from [the scope](../scope/source.json).
+The completion gate still reads the frozen **5.0.2 (104)** inventory at
+`0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d` from [scope](../scope/source.json).
+Later fixes and evidence retain their exact commit identities. Earlier results
+below are historical and are not retroactively results of build 105.
+
+Historical 5.0.1 (103) target: `c7acd23bb139864a40273f405d18b479589d2b20`.
+[Version-specific findings and exact-target checks](RELEASE-5.0.1-103.md).
 
 Checkpoint 9 retains 16,599 open ledger items, including 1,526 outstanding direct compiler inputs and 111 partial inputs. The completed baseline workflow failed five jobs; 104 of 115 required checks have passing exact-baseline records across the evidence ledger. Later source fixes and test-harness repairs have separate commit-specific receipts. The whole-wallet acceptance criteria remain unmet.
 
@@ -60,7 +70,7 @@ open coverage/validation entries**, not 16,770 vulnerabilities. Direct compiler
 coverage counts remain unchanged. The controlled journal/removal overlap is
 repaired; other asynchronous signing and full integration paths remain open.
 
-## Active prerelease target: 5.0.2 (104)
+## Frozen inventory target: 5.0.2 (104)
 
 The target is `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d`. Six checks now have
 passing exact-target records, including generic iOS compilation and compiler
@@ -143,4 +153,9 @@ the tested repair; only separate website changes differ. Eleven paired methods
 and 52 passing Solana cases do not establish provider honesty, full pending-
 journal runtime coverage, all instruction semantics or whole-wallet completion.
 The frozen inventory is unchanged; the supplemental source ledger remains scoped.
-Hosted replay is pending. [Evidence](SOLANA-RPC-CONTEXT.md).
+Hosted replay succeeded and its downloaded artifact is hash-verified. [Evidence](SOLANA-RPC-CONTEXT.md).
+
+
+## Checkpoint 30: Solana nonce-response presence
+
+Checkpoint 30 records the missing Solana nonce-response value repair in [PR #105](https://github.com/OathWallet/oath-wallet/pull/105). Four controls pass and two methods fail before repair; all 58 selected Solana methods pass afterward with networking denied. Diagnostics, publication checks and separate unsigned iOS Release builds at the repair and merge commits pass. Hosted replay is pending. These are scoped results; the whole-wallet audit remains incomplete. [Scoped evidence](SOLANA-NONCE-VALUE.md).

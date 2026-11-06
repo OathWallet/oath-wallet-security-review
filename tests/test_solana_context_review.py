@@ -130,3 +130,27 @@ class SolanaContextEvidence(unittest.TestCase):
         report = (ROOT / 'review/SOLANA-RPC-CONTEXT.md').read_text()
         for phrase in ['not independent', 'not prove provider honesty', 'No simulator', 'frozen inventory remains']:
             self.assertIn(phrase, report)
+
+    def test_hosted_replay_is_complete_and_download_hashes_match(self):
+        hosted = ROOT / 'evidence/5.0.3-build105/hosted-solana-context'
+        run = json.loads((hosted / 'run.json').read_text())
+        artifact = json.loads((hosted / 'artifact.json').read_text())
+        receipt = json.loads((hosted / 'verification.json').read_text())
+        self.assertEqual((run['status'], run['conclusion']), ('completed', 'success'))
+        self.assertEqual(receipt['audit_commit'], run['head_sha'])
+        self.assertEqual(artifact['digest'], 'sha256:' + sha((hosted / 'artifact.zip').read_bytes()))
+        with zipfile.ZipFile(hosted / 'artifact.zip') as z:
+            r = json.loads(z.read('result.json'))
+            self.assertEqual(r['baseline_commit'], driver.BEFORE)
+            self.assertEqual(r['retest_commit'], driver.AFTER)
+            self.assertEqual(r['fixture_sha256'], sha((ROOT / r['fixture']).read_bytes()))
+            self.assertEqual(r['driver_sha256'], sha((ROOT / 'scripts/solana-context-review.py').read_bytes()))
+            self.assertEqual(sha(z.read('result.json')), receipt['result_sha256'])
+            self.assertEqual(r['stages'][0]['totals'], dict(passed=3, skipped=0, failed=8))
+            self.assertEqual(r['stages'][1]['totals'], dict(passed=52, skipped=0, failed=0))
+            self.assertEqual(set(z.namelist()), {f['path'] for f in r['files']} | {'result.json'})
+            for f in r['files']:
+                self.assertEqual(sha(z.read(f['path'])), f['sha256'])
+            for stage in r['stages']:
+                for case in stage['cases']:
+                    self.assertEqual(sha(z.read(case['log'])), case['log_sha256'])

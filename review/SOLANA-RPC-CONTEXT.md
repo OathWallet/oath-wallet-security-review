@@ -71,7 +71,7 @@ hash to the exact repair commit; it does not claim runtime or App Store verifica
 [paired logs](../evidence/5.0.3-build105/solana-context/runs.zip),
 [additional validation](../evidence/5.0.3-build105/solana-context/validation.zip)
 and [build receipt](../evidence/5.0.3-build105/solana-context/build-receipt.json)
-identify exact evidence. Hosted replay is pending.
+identify exact evidence. Hosted replay succeeded and its downloaded artifact is hash-verified.
 
 ## Remaining scope
 
@@ -82,3 +82,7 @@ implementation reviewed because tests pass. Full pending-journal integration,
 provider honesty, all instruction semantics, UI behavior, dependency provenance
 and whole-wallet completion remain open. No simulator or physical device was
 used. No App Store upload or release-tag movement is included.
+
+## Hosted replay receipt
+
+[GitHub run 42203666265](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42203666265) completed successfully. The downloaded artifact matches GitHub's SHA-256 digest; every recorded file and case log hash matches. It reproduces the three baseline controls, eight expected failures, and 52 repaired passes. The [receipt](../evidence/5.0.3-build105/hosted-solana-context/verification.json) preserves the exact run and source bindings. This supersedes the original pending observation without changing its pinned evidence.

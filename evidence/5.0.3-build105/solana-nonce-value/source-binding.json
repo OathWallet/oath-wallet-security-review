@@ -1,0 +1,87 @@
+{
+  "reviewed_commit": "6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1",
+  "baseline_commit": "193912d31c602cce314f540b2bafb64f8606bfbd",
+  "frozen_inventory_unchanged": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolanaClient.swift",
+      "sha256": "854a8456c4065f63d3b9b61e70563c376825242e58c348d4fa726427f05ef401",
+      "status": "partially-reviewed",
+      "scope": "Durable-nonce presence, type, context, byte and authority checks; surrounding methods remain partial.",
+      "lines": [
+        [
+          131,
+          152
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SolanaSendClient.swift",
+      "sha256": "e81acdd0d9110e0317cd49bdd0ed4a0b6ec7e4821d9cb1dbc73f0b99c83b4cec",
+      "status": "partially-reviewed",
+      "scope": "RPC envelope presence and existing contextual value validator; not the entire send client.",
+      "lines": [
+        [
+          22,
+          40
+        ],
+        [
+          68,
+          76
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SolanaModels.swift",
+      "sha256": "06729e1d3cc1e7f07bc15fca8e3dcdc6b628eb3963b57c4b211660ee357d8f71",
+      "status": "partially-reviewed",
+      "scope": "Lossless JSON decoding and missing-member/null convenience subscript semantics only.",
+      "lines": [
+        [
+          4,
+          35
+        ]
+      ]
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "93ff219e2e623f86798857bc7d137bc1e31d17192c280a10065a36268394a7a7",
+      "status": "partially-reviewed",
+      "scope": "Pending recovery caller and error path traced; full service lifecycle not executed.",
+      "lines": [
+        [
+          830,
+          880
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/WalletConnectSolanaJournal.swift",
+      "sha256": "048fead4fac3c6560598247042814f43dae8e41fe38a80e9f6828ab38b356c1d",
+      "status": "partially-reviewed",
+      "scope": "Pending-row filtering and terminal settlement traced; no new database runtime tests.",
+      "lines": [
+        [
+          36,
+          43
+        ],
+        [
+          65,
+          73
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectSolanaNonceValueTests.swift",
+      "sha256": "50d96a888869f6064d2ed6fbc70094919a2ef1f4c893508f6729fdb97e86b202",
+      "status": "test-reviewed",
+      "scope": "All six methods and injected transport; public synthetic vectors, both supported wire formats.",
+      "lines": [
+        [
+          1,
+          89
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: Replay Solana nonce value repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/solana-nonce-value-review.yml', 'scripts/solana-nonce-value-review.py', 'fixtures/solana-nonce-value/**', 'tests/test_solana_nonce_value_review.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_solana_nonce_value_review.py
+      - run: |
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1
+          python3 scripts/solana-nonce-value-review.py .work/wallet .work/solana-nonce-value evidence/ci/solana-nonce-value
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: solana-nonce-value-review-evidence, path: evidence/ci/solana-nonce-value, retention-days: 90}
