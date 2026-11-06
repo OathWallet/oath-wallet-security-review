@@ -1706,7 +1706,23 @@
     "merge_commit": "658245d197592c89c071a946fda0baf8bf93fb41",
     "pull_request": "https://github.com/OathWallet/oath-wallet/pull/105",
     "retest_scope": "Identical six-method production fixture: four passing controls and two expected assertion failures before; all 58 selected Solana methods pass after repair with network denied. Separate unsigned generic iOS Release builds pass at repair and merge commits. Pending service/database consequences are source-traced, not a full runtime test.",
+    "hosted_replay": "passed; original artifact downloaded and hashes verified",
+    "evidence": "evidence/5.0.3-build105/solana-nonce-value/manifest.json",
+    "hosted_evidence": "evidence/5.0.3-build105/hosted-solana-nonce-value/verification.json"
+  },
+  {
+    "id": "OW-2026-077",
+    "severity": "medium",
+    "title": "Solana stake control changes omitted from signing review",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-077.md",
+    "baseline_commit": "393c29cbae673f60f1df6ac9636af908ae789649",
+    "fix_commit": "f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e",
+    "merge_commit": null,
+    "pull_request": "https://github.com/OathWallet/oath-wallet/pull/117",
+    "publication_note": "Focused public PR is open; source repair is tested but not merged or claimed available on the App Store.",
+    "retest_scope": "Identical nine-method production fixture: two passing controls and seven expected failures (44 assertions) before; all 67 selected Solana methods pass after repair with network denied. Generic unsigned iOS Release compilation passes at exact repair commit. Official SDK wires and injected synthetic account snapshots; no executed validator, custom CPI program or UI/runtime exploitation claimed.",
     "hosted_replay": "pending",
-    "evidence": "evidence/5.0.3-build105/solana-nonce-value/manifest.json"
+    "evidence": "evidence/5.0.3-build105/solana-stake-authority/manifest.json"
   }
 ]

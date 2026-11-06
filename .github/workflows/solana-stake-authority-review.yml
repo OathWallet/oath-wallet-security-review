@@ -1,0 +1,50 @@
+name: Replay Solana stake authority repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/solana-stake-authority-review.yml', 'scripts/solana-stake-authority-review.py', 'fixtures/solana-stake-authority/**', 'tests/test_solana_stake_authority_review.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_solana_stake_authority_review.py
+      - run: |
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e
+          python3 scripts/solana-stake-authority-review.py .work/wallet .work/solana-stake-authority evidence/ci/solana-stake-authority
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: solana-stake-authority-review-evidence, path: evidence/ci/solana-stake-authority, retention-days: 90}
+  generic-ios:
+    runs-on: xcode-27
+    timeout-minutes: 45
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: |
+          mkdir -p evidence/ci/solana-stake-ios
+          sh scripts/toolchain.sh | tee evidence/ci/solana-stake-ios/toolchain.log
+      - run: |
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e
+          python3 scripts/run.py .work/wallet build --expected-commit f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e --scratch .work/ios-build --output evidence/ci/solana-stake-ios
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: solana-stake-authority-ios-evidence, path: evidence/ci/solana-stake-ios, retention-days: 90}

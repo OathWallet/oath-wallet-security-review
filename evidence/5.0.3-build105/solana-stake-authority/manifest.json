@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "finding": "OW-2026-077",
+  "severity": "medium",
+  "baseline_commit": "393c29cbae673f60f1df6ac9636af908ae789649",
+  "fix_commit": "f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e",
+  "retest_commit": "f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e",
+  "merge_commit": null,
+  "pull_request": "https://github.com/OathWallet/oath-wallet/pull/117",
+  "whole_wallet_complete": false,
+  "app_store_upload": false,
+  "simulator_used": false,
+  "physical_device_used": false,
+  "before": {
+    "passed": 2,
+    "skipped": 0,
+    "failed": 7
+  },
+  "baseline_expected_assertions": 44,
+  "after": {
+    "passed": 67,
+    "skipped": 0,
+    "failed": 0
+  },
+  "paired_duration_seconds": 204.415,
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2,
+    "failed": 0
+  },
+  "diagnostics_trace_isolated": {
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "network": "denied"
+  },
+  "generic_ios_build": "passed at exact fix commit; unsigned Release, compile only",
+  "generic_ios_duration_seconds": 377.511,
+  "hosted_replay": "pending",
+  "exploratory_attempts": "Original failed and corrected logs, corrected eight-method probe and final fixture preserved; erroneous first probe source was overwritten. Initial npm cache-path failure and isolated successful retry retained.",
+  "files": [
+    {
+      "path": "audit-helper-tests.log",
+      "sha256": "db346d7dca140c3147659f2526aea85404a23059ac52ddf00479bddac966425b"
+    },
+    {
+      "path": "build-receipt.json",
+      "sha256": "ccefad191e772b0074407227b42d4a0a786a3f3e02feea29d28c12b8feabb3e5"
+    },
+    {
+      "path": "completion-gate.log",
+      "sha256": "abcd403ffbf3bca132fef888886919c84e42ba0e527e9db751252cd8aa37accc"
+    },
+    {
+      "path": "pr.json",
+      "sha256": "5c5752e012d8ef03f1adaa3515bceec0991863f9a3750457f711b2e1164051d2"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "369982bf1c231771242609f17579028bdff3121fb83a34b8f2bf6702027c69f1"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "f33b610b290e9d83ad1fa0d67760e862a3ad9fb8e8a84f92eb619a5f2fce7801"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "a53c707ea08072bb1beb558662540f017b1e1944b4ddcb932407bb49744bf163"
+    },
+    {
+      "path": "validation.zip",
+      "sha256": "90a0128683e47d7cc37f7a937638c7ada552e93de89415eef8b6f520ee8cc18c"
+    }
+  ],
+  "audit_helper_tests": {
+    "passed": 522,
+    "failed": 0,
+    "duration_seconds": 11.663
+  },
+  "publication_scan": {
+    "new_checkpoint_and_expanded_evidence_exit_code": 0,
+    "findings": 0,
+    "bytes_scanned": 3930172
+  },
+  "completion_gate": {
+    "exit_code": 1,
+    "outstanding_items": 16916,
+    "whole_review_complete": false
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "reviewed_commit": "f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e",
+  "baseline_commit": "393c29cbae673f60f1df6ac9636af908ae789649",
+  "frozen_inventory_unchanged": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolanaClient.swift",
+      "sha256": "6bcb74d7ae10516e0dc5cde4e853b700c3c3685570d735f6e5387c07a7ba4f9b",
+      "lines": [
+        [
+          1,
+          138
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Review preparation, resolved writable accounts, simulation snapshots, staking guards, balance and token permission projection.",
+      "remaining": "Remaining client receipt handling and provider honesty; full-app lifecycle execution not established."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolanaPermissions.swift",
+      "sha256": "66bbd9ceda3e381cb5bf46576d1c692a29ffa4d6b83bd86bab0ec2d31449a749",
+      "lines": [
+        [
+          1,
+          123
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Stake-account rejection, token authority decoding and delegation projection.",
+      "remaining": "All Token-2022 extensions and arbitrary program state remain outside this review model."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolana.swift",
+      "sha256": "7660ef297595833ef5963e62dcb8aadbc120f8b093117283465113c02f1a3043",
+      "lines": [
+        [
+          1,
+          195
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Request formats, cluster/account binding, raw instructions, transaction parsing and sign/verify entry points.",
+      "remaining": "Remaining reader boundaries and full on-chain execution not established."
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "f36b5c5408ac7d2a0b7c4dbac10328bd1fce2bdfece34ab635a965819b62379c",
+      "lines": [
+        [
+          765,
+          810
+        ],
+        [
+          1296,
+          1345
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Preparation rejects review errors; signing repeats review before secret use.",
+      "remaining": "Source-only service integration; full lifecycle/race and relay tests not executed."
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectSheet.swift",
+      "sha256": "fef441d70e334cf5404845971479c0e17dfbceae74f34cd781719ff8af542059",
+      "lines": [
+        [
+          505,
+          565
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Solana approval display, general simulation/sign-only warning and instruction navigation.",
+      "remaining": "Source-only; full sheet and UI runtime not reviewed."
+    },
+    {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectSolanaStakeReviewTests.swift",
+      "sha256": "baaa7b7cf81b439ae335e16d546f0de514a1c99724a9295f0271242111bc2b60",
+      "lines": [
+        [
+          1,
+          157
+        ]
+      ],
+      "status": "test-reviewed",
+      "scope": "All nine fixture methods and injected transport; exact official-SDK messages, signatures and synthetic stake layouts.",
+      "remaining": "No validator execution; CPI snapshots are injected test inputs."
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectSolanaViews.swift",
+      "sha256": "636d2505fe9d0a53eb6cbd3be643dd83a85d75bd5ba3a332ca4e5b7690874ada",
+      "lines": [
+        [
+          1,
+          135
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Balance/delegation review and raw instruction screen; no stake effects were displayed.",
+      "remaining": "Source-only; UI runtime and accessibility not executed."
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Acceptance checklist — in progress
 
+Checkpoint 38 confirms Medium finding OW-2026-077: a Solana stake authority change could receive a fee-only preview. [Open PR #117](https://github.com/OathWallet/oath-wallet/pull/117) rejects unsupported staking requests and simulated stake changes. Two controls pass and seven methods fail before repair (44 expected assertions); all 67 selected methods pass afterward. The unsigned generic iOS Release build passes at exact repair commit `f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e`. Hosted replay is pending; this repair is not yet merged or claimed distributed by Apple. [Evidence and limitations](SOLANA-STAKE-AUTHORITY.md).
+
 Checkpoint 37 adds 13 multisignature methods passing locally and on GitHub: 527 Aptos policies, 54 Sui policies, all 65,536 Sui signer bitmaps and 27 THORChain policies. A separately weakened threshold check produces three expected assertions. Twenty-two source/range dispositions remain partial; no new app defect or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Evidence and limitations](MULTISIG-AUTHORITY.md).
 
 Checkpoint 36 adds 40 Sui, NEAR and Polkadot consent methods passing locally and on GitHub with zero skips: altered requests, authority actions, message domains and consent lifetime boundaries. A deliberately weakened control produces three expected assertions. Fourteen source/range dispositions remain partial; no new app defect or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Evidence and remaining scope](MULTICHAIN-CONSENT.md).
@@ -8,13 +10,12 @@ Checkpoint 35 adds 28 EVM methods passing locally and on GitHub with zero skips:
 
 Checkpoint 34 retains an unresolved hosted file-backup-exclusion failure; the independent cryptographic checks pass. It adds scoped installation-key evidence at `32701474fefbed3840878e35f6111e8d494e1f02`; its [12 partial dispositions and host assertions](INSTALLATION-BINDING.md) do not complete the full audit or change frozen inventory counts.
 
-Current supplemental checkpoint: **5.0.3 (105)**, multisignature authority review at
-`32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 37 evidence](MULTISIG-AUTHORITY.md)
-covers its explicit source ranges and host corpus; it does not requalify the
-entire application. The earlier nonce-response repair at
-`6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1`, merged as
-`658245d197592c89c071a946fda0baf8bf93fb41` in PR #105, retains its separate
-[paired regressions and builds](SOLANA-NONCE-VALUE.md).
+Current supplemental checkpoint: **5.0.3 (105)**, Solana stake authority repair at
+`f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e` in open PR #117, based on
+`393c29cbae673f60f1df6ac9636af908ae789649`. The [checkpoint 38 evidence](SOLANA-STAKE-AUTHORITY.md)
+covers its explicit source ranges, paired host corpus and unsigned generic iOS build;
+it does not requalify the entire application. Previous checkpoints retain their
+original source identities and results.
 
 The completion gate still reads the frozen **5.0.2 (104)** inventory at
 `0b1b4aeabf01d03bc417f00d4eb022a5bb0c049d` from [scope](../scope/source.json).
