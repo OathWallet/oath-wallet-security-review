@@ -1,0 +1,205 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSui.swift",
+      "sha256": "69794b790b9c37274e5fea203ffbd46fde9cf69aae79c2afc2147682ef294b9b",
+      "lines": [
+        [
+          1,
+          234
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Strict request and complete bounded BCS decoding, sender/gas owner, intent domains, exact review binding and freshness",
+      "remaining": "Bounded package tests and source review; provider truth, complete chain/runtime behavior and upstream cryptography are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectNear.swift",
+      "sha256": "a341c07abe12ade2ba9f0fdbd98bd7926e3aa4c17c8ad28b231b77bba915395f",
+      "lines": [
+        [
+          1,
+          227
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Strict buffers and ordered batches, Borsh action parsing, explicit authority changes, exact signing binding and provider fee/network preflight",
+      "remaining": "Bounded package tests and source review; provider truth, complete chain/runtime behavior and upstream cryptography are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectNearAccess.swift",
+      "sha256": "c8464c27eba614167759920edf6f58fbe69c6ded0a2e28b1f5faade587a2bb31",
+      "lines": [
+        [
+          1,
+          133
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Bounded limited function-call grants, grant-scoped revocation, exact generated transaction and signed-wire verification",
+      "remaining": "Bounded package tests and source review; provider truth, complete chain/runtime behavior and upstream cryptography are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectPolkadot.swift",
+      "sha256": "9ad0598c6fa98f3e3167388f784aa7160b4c561ce67737faf8a653c78f471232",
+      "lines": [
+        [
+          1,
+          160
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Account/genesis binding, supported extensions, mortal era and canonical payload, message domain wrapping and review equality",
+      "remaining": "Bounded package tests and source review; provider truth, complete chain/runtime behavior and upstream cryptography are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/PolkadotConnectClient.swift",
+      "sha256": "0f615e6d103558ba5c2eb59041170b8d4d56b8c57bf9bf20c636d89af55aaaf0",
+      "lines": [
+        [
+          1,
+          141
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Provider network/runtime verification, complete call decoding, required signed extensions, fee locks and preflight equality",
+      "remaining": "Bounded package tests and source review; provider truth, complete chain/runtime behavior and upstream cryptography are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SuiSendClient.swift",
+      "sha256": "12ab4e339faa56bae233bcb4a7dc4aa189796c3b7b995ba5f50ca4e438b1b670",
+      "lines": [
+        [
+          1,
+          62
+        ],
+        [
+          180,
+          231
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Provider destination binding and WalletConnect simulation completeness, epoch, changes and fee preflight",
+      "remaining": "Remaining client functions and full provider/on-chain execution matrix remain outside this scoped pass"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathSuiWallet.swift",
+      "sha256": "151da384d0cab827c5e684560b6a633571cf72978677f5dc2b10d55b29f74743",
+      "lines": [
+        [
+          1,
+          66
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account/network, imported-key scope and derived-key binding in Sui signing adapters",
+      "remaining": "Source inspection only; all vault interleavings, secret-memory lifetime and actual derivation runtime remain separate"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectSuiViews.swift",
+      "sha256": "75cf9212f68be8ac3f1ce1aaa3fee772661fe8e051d5192f702ea6dbcbde4226",
+      "lines": [
+        [
+          1,
+          83
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Sui approval presentation, raw details, warnings, amounts and message rendering",
+      "remaining": "Source inspection only; rendered layout, accessibility, localization and interaction runtime not tested here"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathNearWallet.swift",
+      "sha256": "19204adcd93c3fb9ce153d0f62d7544b10fa69e3e82cbc9246079df246e146b2",
+      "lines": [
+        [
+          1,
+          55
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account/network, imported-key scope and derived-key binding in Near signing adapters",
+      "remaining": "Source inspection only; all vault interleavings, secret-memory lifetime and actual derivation runtime remain separate"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectNearViews.swift",
+      "sha256": "cb16e85e290eabe5ad0da42c02f01e2d8a9f03c8d238226cc3610bc488fb9d1c",
+      "lines": [
+        [
+          1,
+          68
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Near approval presentation, raw details, warnings, amounts and message rendering",
+      "remaining": "Source inspection only; rendered layout, accessibility, localization and interaction runtime not tested here"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathPolkadotWallet.swift",
+      "sha256": "09eebf74c0270d5f14e3526e0413d2146dfd733539aa4d2415b8f5864f8be2c1",
+      "lines": [
+        [
+          1,
+          44
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account/network, imported-key scope and derived-key binding in Polkadot signing adapters",
+      "remaining": "Source inspection only; all vault interleavings, secret-memory lifetime and actual derivation runtime remain separate"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectPolkadotViews.swift",
+      "sha256": "03260612b4741e25a0fea61e1066435d749453276b1c1cc3b26d14ab39e8ebb6",
+      "lines": [
+        [
+          1,
+          46
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Polkadot approval presentation, raw details, warnings, amounts and message rendering",
+      "remaining": "Source inspection only; rendered layout, accessibility, localization and interaction runtime not tested here"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          830,
+          960
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "NEAR, Sui and Polkadot signing authorization and post-await generation/account checks",
+      "remaining": "Other methods and all cancellation/reset scheduling interleavings remain incomplete"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "93ff219e2e623f86798857bc7d137bc1e31d17192c280a10065a36268394a7a7",
+      "lines": [
+        [
+          1070,
+          1293
+        ],
+        [
+          1874,
+          1902
+        ],
+        [
+          1950,
+          1992
+        ],
+        [
+          2064,
+          2114
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Preparation-generation checks, request authorization, reviewed signing and durable submission recovery boundaries",
+      "remaining": "Other session methods, journals, lock-to-commit interleavings and real relay behavior remain separate"
+    }
+  ]
+}
