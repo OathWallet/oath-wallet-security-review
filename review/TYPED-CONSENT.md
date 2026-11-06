@@ -99,3 +99,18 @@ publishing that workflow is not a successful hosted replay.
 
 No app code was changed, so no new generic iOS build was run or claimed for this
 checkpoint. No simulator, physical device or App Store operation was performed.
+
+## Verified hosted replay
+
+[Run 42229826509](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42229826509)
+completed successfully at audit commit `4c2e12f32ea4d13a46d074a8e305caf022824a10`.
+The Xcode 27.1 replay took **771.309 seconds**, including both fresh builds. All
+20 production methods passed without skips; the isolated mutation produced the
+one expected failed method. The independently regenerated 616 valid and 192
+invalid vectors are byte-identical to the local corpus.
+
+The downloaded artifact's GitHub digest, every indexed file, source manifest,
+per-case log and terminal outcome were verified. These receipts supplement the
+local run; they do not extend its source or runtime scope.
+[Receipt](../evidence/5.0.3-build105/hosted-typed-consent/verification.json) ·
+[Durable artifact](../evidence/5.0.3-build105/hosted-typed-consent/artifact.zip).
