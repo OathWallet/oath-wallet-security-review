@@ -69,6 +69,12 @@ def main():
                 debug=scratch/'baseline-diagnostic'
                 if cmd(['xcrun','swiftc','-swift-version','6','-Onone','-g','-o',str(debug),str(sourcepath),str(test)],'baseline-diagnostic-build.log')==0:
                     cmd(['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)',str(debug)],'baseline-diagnostic.log')
+                probe=scratch/'file-probe'
+                if cmd(['xcrun','swiftc','-swift-version','6','-Onone','-o',str(probe),str(sourcepath),str(ROOT/'fixtures/installation-binding/FileProtectionProbe.swift')],'file-probe-build.log')==0:
+                    cmd(['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)',str(probe),str(scratch)],'file-probe.log')
+                runtime_temp=scratch/'runtime-temp';runtime_temp.mkdir()
+                env['TMPDIR']=str(runtime_temp)+'/'
+                cmd(['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)',str(binary)],'baseline-scratch-temp.log')
                 raise ValueError(f'Inherited baseline did not complete (exit {code}); see command-results.json')
         else:
             result=json.loads((out/(stage+'.log')).read_text())

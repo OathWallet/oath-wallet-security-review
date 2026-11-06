@@ -83,3 +83,5 @@ The first [hosted run](https://github.com/OathWallet/oath-wallet-security-review
 for this audit-only change. No simulator, physical device, App Store or other
 application project was operated. No independent certification or zero-bug
 claim follows from these results.
+
+The diagnostic [second run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42239315053) returned SIGTRAP (-5). Its unoptimized diagnostic identified the inherited assertion `Installation key is excluded from device backups`. Both optimized and diagnostic failures are retained in `hosted-attempt2.zip`. A separate public-data file metadata probe compares the runner default temporary directory with scratch storage; this is an investigation, not a waived assertion or hosted pass.
