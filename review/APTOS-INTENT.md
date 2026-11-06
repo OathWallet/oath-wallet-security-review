@@ -75,9 +75,14 @@ Provider honesty, upstream cryptographic implementation/provenance, full
 application authentication and cancellation interleavings, persistent journal
 recovery, rendered consent and production-network execution remain open.
 
-The workflow is audit-only and pins the source, actions, Python and Xcode
-selection. A published workflow is not a completed hosted replay; any hosted
-result will receive a separate verified receipt.
+The audit-only [hosted replay](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42226459731)
+completed successfully at audit commit `324cdbf849b05dcfb04c8186f5fae9540588bb85`.
+Its 25 passing production methods and one expected failing mutation method agree
+with the local result. The downloaded artifact matches GitHub's SHA-256 digest;
+all file and case hashes, terminal summaries and mutation assertions were checked.
+The [receipt and durable artifact](../evidence/5.0.3-build105/hosted-aptos-intent/verification.json)
+preserve that evidence separately. The workflow pins the source, actions, Python
+and Xcode selection and has no deployment jobs.
 
 No generic iOS build was rerun for these audit-only changes, and no new app
 compilation claim is made. No simulator, physical device or App Store operation

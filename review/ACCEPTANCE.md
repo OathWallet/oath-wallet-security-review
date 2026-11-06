@@ -158,10 +158,11 @@ Hosted replay succeeded and its downloaded artifact is hash-verified. [Evidence]
 
 ## Checkpoint 30: Solana nonce-response presence
 
-Checkpoint 30 records the missing Solana nonce-response value repair in [PR #105](https://github.com/OathWallet/oath-wallet/pull/105). Four controls pass and two methods fail before repair; all 58 selected Solana methods pass afterward with networking denied. Diagnostics, publication checks and separate unsigned iOS Release builds at the repair and merge commits pass. Hosted replay is pending. These are scoped results; the whole-wallet audit remains incomplete. [Scoped evidence](SOLANA-NONCE-VALUE.md).
+Checkpoint 30 records the missing Solana nonce-response value repair in [PR #105](https://github.com/OathWallet/oath-wallet/pull/105). Four controls pass and two methods fail before repair; all 58 selected Solana methods pass afterward with networking denied. Diagnostics, publication checks and separate unsigned iOS Release builds at the repair and merge commits pass. Hosted replay succeeded and its downloaded artifact is hash-verified. These are scoped results; the whole-wallet audit remains incomplete. [Scoped evidence](SOLANA-NONCE-VALUE.md).
 
 Checkpoint 31 adds 25 passing Aptos host methods and an expected failed-method
 mutation control at `32701474fefbed3840878e35f6111e8d494e1f02`. Eight supplemental
 source dispositions remain partial. No app defect, app change, new generic iOS
 build or whole-review completion is claimed. The frozen inventory remains
-unchanged. [Exact scope and limitations](APTOS-INTENT.md).
+unchanged. Hosted replay succeeded and its downloaded artifact is hash-verified.
+[Exact scope and limitations](APTOS-INTENT.md).
