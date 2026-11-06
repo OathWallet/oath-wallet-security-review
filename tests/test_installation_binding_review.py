@@ -7,6 +7,8 @@ import re
 import sys
 import unittest
 import zipfile
+from unittest.mock import patch
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 E = ROOT / 'evidence/5.0.3-build105/installation-binding'
@@ -18,6 +20,35 @@ spec.loader.exec_module(driver)
 def sha(b): return hashlib.sha256(b).hexdigest()
 
 class InstallationBindingEvidence(unittest.TestCase):
+    def test_failed_baseline_cannot_become_aggregate_success(self):
+        import tempfile
+        z, _ = self.result()
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            def run(args, **kwargs):
+                if args[:2] == ['xcrun', 'swiftc']:
+                    Path(args[args.index('-o')+1]).write_bytes(b'synthetic executable')
+                    return subprocess.CompletedProcess(args, 0, b'', b'')
+                if args[0] == '/usr/bin/sandbox-exec':
+                    executable = Path(args[3]).name
+                    if executable in ['baseline', 'baseline-diagnostic']:
+                        return subprocess.CompletedProcess(args, -5, b'', b'fixture baseline failure')
+                    if executable in ['production', 'mutation-control']:
+                        return subprocess.CompletedProcess(args, 0 if executable == 'production' else 1, z.read(executable+'.log'), b'')
+                    return subprocess.CompletedProcess(args, 0, b'[]', b'')
+                return subprocess.CompletedProcess(args, 0, b'synthetic toolchain', b'')
+            def source(args):
+                return z.read('production-source.swift' if args[-1].endswith(driver.SOURCE) else 'baseline-fixture.swift')
+            with patch.object(sys, 'argv', ['driver', str(base/'source'), str(base/'scratch'), str(base/'out')]), patch.object(driver, 'require_source_state'), patch.object(driver.subprocess, 'run', side_effect=run), patch.object(driver.subprocess, 'check_output', side_effect=source), patch('builtins.print'):
+                with self.assertRaises(SystemExit) as exit_result: driver.main()
+            self.assertEqual(exit_result.exception.code, 1)
+            result = json.loads((base/'out/result.json').read_text())
+            self.assertEqual(result['overall_status'], 'failed')
+            self.assertIsNone(result['stages'][0]['totals'])
+            self.assertFalse(result['stages'][0]['completed_assertions_known'])
+            self.assertEqual(result['stages'][1]['totals'], dict(passed=2647, failed=0, skipped=0))
+            self.assertEqual(result['stages'][2]['totals'], dict(passed=0, failed=12, skipped=0))
+
     def archive(self, name):
         z = zipfile.ZipFile(E / name); self.addCleanup(z.close)
         files = json.loads(z.read('CHECKSUMS.json'))

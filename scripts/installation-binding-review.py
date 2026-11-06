@@ -49,6 +49,7 @@ def main():
     fixturepath=scratch/'InstallationBindingReview.swift';fixturepath.write_bytes(fixture)
     (out/'production-source.swift').write_bytes(data);(out/'baseline-fixture.swift').write_bytes(baseline)
     stages=[]
+    baseline_failed=False
     for stage,test in [('baseline',baselinepath),('production',fixturepath),('mutation-control',fixturepath)]:
         if stage=='mutation-control':
             text=data.decode()
@@ -75,14 +76,18 @@ def main():
                 runtime_temp=scratch/'runtime-temp';runtime_temp.mkdir()
                 env['TMPDIR']=str(runtime_temp)+'/'
                 cmd(['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)',str(binary)],'baseline-scratch-temp.log')
-                raise ValueError(f'Inherited baseline did not complete (exit {code}); see command-results.json')
+                # Continue independent tests to collect their results, but retain
+                # the baseline failure and return a failing aggregate exit code.
+                # The baseline's partially executed assertions are not passes.
+                baseline_failed=True
         else:
             result=json.loads((out/(stage+'.log')).read_text())
             if stage=='mutation-control':validate_mutant(code,result)
             elif code!=0 or result['failed'] or result['skipped'] or not result['cases'] or not all(c['passed'] for c in result['cases']):raise ValueError('Production assertions failed')
-        stages.append(dict(stage=stage,build_exit_code=0,exit_code=code,source_sha256=sha(sourcepath.read_bytes()),fixture_sha256=sha(test.read_bytes()),executable_sha256=sha(binary.read_bytes()),runtime_network='denied',totals=({k:result[k] for k in ['passed','failed','skipped']} if result else dict(passed=56,failed=0,skipped=0))))
+        stages.append(dict(stage=stage,build_exit_code=0,exit_code=code,source_sha256=sha(sourcepath.read_bytes()),fixture_sha256=sha(test.read_bytes()),executable_sha256=sha(binary.read_bytes()),runtime_network='denied',totals=({k:result[k] for k in ['passed','failed','skipped']} if result else (None if baseline_failed else dict(passed=56,failed=0,skipped=0))),completed_assertions_known=not(stage=='baseline' and baseline_failed)))
     require_source_state(source,COMMIT)
-    result=dict(source_commit=COMMIT,production_source=SOURCE,source_sha256=sha(data),fixture=FIXTURE,fixture_sha256=sha(fixture),baseline_fixture=BASELINE,baseline_sha256=sha(baseline),driver_sha256=sha(Path(__file__).read_bytes()),helper_sha256=sha((ROOT/'scripts/source_state.py').read_bytes()),stages=stages,duration_seconds=round(time.monotonic()-started,3),new_app_finding=False,app_modified=False,whole_wallet_complete=False,files=[dict(path=str(f.relative_to(out)),sha256=sha(f.read_bytes())) for f in sorted(out.rglob('*')) if f.is_file()])
+    result=dict(source_commit=COMMIT,production_source=SOURCE,source_sha256=sha(data),fixture=FIXTURE,fixture_sha256=sha(fixture),baseline_fixture=BASELINE,baseline_sha256=sha(baseline),driver_sha256=sha(Path(__file__).read_bytes()),helper_sha256=sha((ROOT/'scripts/source_state.py').read_bytes()),stages=stages,overall_status='failed' if baseline_failed else 'passed',duration_seconds=round(time.monotonic()-started,3),new_app_finding=False,app_modified=False,whole_wallet_complete=False,files=[dict(path=str(f.relative_to(out)),sha256=sha(f.read_bytes())) for f in sorted(out.rglob('*')) if f.is_file()])
     (out/'result.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:result[k] for k in ['source_commit','duration_seconds','stages']},indent=2))
+    if baseline_failed: raise SystemExit(1)
 if __name__=='__main__':main()
