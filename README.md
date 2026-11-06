@@ -1,6 +1,6 @@
 # Oath Wallet 5.0.2 (104) security review
 
-Checkpoint 27 records Solana delegation-consent finding OW-2026-073, reported against build 104 and already repaired in public source. An identical regression fails on the reported commit and passes on pinned 5.0.3 (105) source; all 36 selected Solana host tests pass. Original failures, the excluded discovery attempt and partial source dispositions remain visible. The whole-wallet audit remains incomplete. [Evidence and limitations](review/SOLANA-CONSENT.md).
+Checkpoint 27 records Solana delegation-consent finding OW-2026-073, reported against build 104 and already repaired in public source. An identical regression fails on the reported commit and passes on pinned 5.0.3 (105) source; all 36 selected Solana host tests pass. The GitHub replay also passed and its downloaded evidence is hash-verified. Original failures, the excluded discovery attempt and partial source dispositions remain visible. The whole-wallet audit remains incomplete. [Evidence and limitations](review/SOLANA-CONSENT.md).
 
 Build 104 checkpoint 26 validates the scanner state machine with 137,256 bounded transition prefixes, 6,400 concurrent capture claims and 106 existing handoff checks. All five deliberately broken controls fail the expected groups. Two additional files gain partial source review; no new production defect or app change is claimed. The earlier backup-settings GitHub replay is downloaded and hash-verified. The whole-wallet audit remains incomplete. [Evidence and remaining scope](review/SCANNER-STATE-BOUNDARIES.md).
 

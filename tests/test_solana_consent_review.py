@@ -117,3 +117,21 @@ class SolanaConsentEvidence(unittest.TestCase):
         for phrase in ['require_source_state(source, AFTER)', '(deny network*)', 'Fresh scratch and output',
                        '--force-resolved-versions', "stderr=", 'ASSERTION not in failures[0]']:
             self.assertIn(phrase, driver)
+
+    def test_hosted_replay_matches_github_and_embedded_hashes(self):
+        directory = ROOT / 'evidence/5.0.3-build105/hosted-solana-consent'
+        artifact = json.loads((directory / 'artifact.json').read_text())
+        receipt = json.loads((directory / 'verification.json').read_text())
+        self.assertEqual('sha256:' + sha((directory / 'artifact.zip').read_bytes()), artifact['digest'])
+        self.assertTrue(receipt['github_digest_matched'])
+        self.assertEqual(receipt['run_id'], 42196449772)
+        self.assertEqual(receipt['audit_commit'], 'a356386fb936266a2f28920374b65c478b4bed18')
+        with zipfile.ZipFile(directory / 'artifact.zip') as z:
+            result = json.loads(z.read('result.json'))
+            self.assertEqual(sha(z.read('result.json')), receipt['result_sha256'])
+            self.assertEqual(result['driver_sha256'], sha((ROOT / 'scripts/solana-consent-review.py').read_bytes()))
+            self.assertEqual(result['baseline_commit'], BEFORE)
+            self.assertEqual(result['retest_commit'], AFTER)
+            self.assertEqual([s['totals'] for s in result['stages']], [dict(passed=0, skipped=0, failed=1), dict(passed=36, skipped=0, failed=0)])
+            for f in result['files']:
+                self.assertEqual(sha(z.read(f['path'])), f['sha256'])

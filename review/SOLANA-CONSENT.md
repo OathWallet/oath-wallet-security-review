@@ -102,3 +102,14 @@ by this audit-only checkpoint.
 [GitHub run 41755387724](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/41755387724) succeeded at audit commit `ac0529e016687be0ea35d75b524df5e9a76ec658`. Its original archive was downloaded and matched GitHub's SHA-256 digest; embedded result, source and case-log hashes were verified.
 [Receipt](../evidence/5.0.2-build104/hosted-scanner-state/verification.json).
 This closes the earlier hosted-evidence gap for that scanner checkpoint only.
+
+## Hosted replay verified
+
+[GitHub run 42196449772](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42196449772)
+completed successfully at audit commit `a356386fb936266a2f28920374b65c478b4bed18`.
+The downloaded artifact matches GitHub's SHA-256 digest, and every embedded file
+and case-log hash was verified. It repeats the one expected baseline assertion
+failure and 36 repaired passes with zero skips. Driver duration was 848.529 seconds.
+[Original archive and verification receipt](../evidence/5.0.3-build105/hosted-solana-consent/verification.json).
+The original local manifest's pending-hosted state is retained as historical
+context; this receipt supersedes that pending status without altering its logs.
