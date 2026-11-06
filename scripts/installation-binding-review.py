@@ -29,8 +29,12 @@ def main():
     scratch.mkdir(parents=True);out.mkdir(parents=True)
     env={k:v for k,v in os.environ.items() if k in {'HOME','PATH','TMPDIR','DEVELOPER_DIR','LANG','LC_ALL'}}
     started=time.monotonic()
+    commands=[]
     def cmd(args,name):
+        command_started=time.monotonic()
         r=subprocess.run(args,env=env,capture_output=True,timeout=180)
+        commands.append(dict(log=name, exit_code=r.returncode, duration_seconds=round(time.monotonic()-command_started,3), stdout_bytes=len(r.stdout), stderr_bytes=len(r.stderr)))
+        (out/'command-results.json').write_text(json.dumps(commands,indent=2)+'\n')
         raw=(r.stdout+r.stderr).decode(errors='replace')
         for path,label in [(scratch,'<SCRATCH>'),(source,'<SOURCE>'),(out,'<OUTPUT>'),(Path.home(),'<HOME>')]:raw=raw.replace(str(path),label)
         (out/name).write_text(raw)
@@ -60,7 +64,12 @@ def main():
         result=None
         if stage=='baseline':
             if code!=0 or (out/(stage+'.log')).read_text().strip()!='Passed 56 installation ownership, encryption, reinstall, failure recovery and protected-file host checks.':
-                raise ValueError('Inherited baseline did not complete')
+                # Preserve the optimized failure and obtain an unoptimized diagnostic;
+                # a diagnostic pass never changes the failed review result.
+                debug=scratch/'baseline-diagnostic'
+                if cmd(['xcrun','swiftc','-swift-version','6','-Onone','-g','-o',str(debug),str(sourcepath),str(test)],'baseline-diagnostic-build.log')==0:
+                    cmd(['/usr/bin/sandbox-exec','-p','(version 1) (allow default) (deny network*)',str(debug)],'baseline-diagnostic.log')
+                raise ValueError(f'Inherited baseline did not complete (exit {code}); see command-results.json')
         else:
             result=json.loads((out/(stage+'.log')).read_text())
             if stage=='mutation-control':validate_mutant(code,result)

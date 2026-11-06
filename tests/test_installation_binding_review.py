@@ -29,7 +29,7 @@ class InstallationBindingEvidence(unittest.TestCase):
     def result(self):
         z = self.archive('runs.zip'); r = json.loads(z.read('result.json'))
         self.assertEqual(r['source_commit'], driver.COMMIT)
-        self.assertEqual(r['driver_sha256'], sha((ROOT / 'scripts/installation-binding-review.py').read_bytes()))
+        self.assertEqual(r['driver_sha256'], sha((E / 'driver-initial.py').read_bytes()))
         self.assertEqual(r['fixture_sha256'], sha((ROOT / driver.FIXTURE).read_bytes()))
         self.assertEqual(r['helper_sha256'], sha((ROOT / 'scripts/source_state.py').read_bytes()))
         for f in r['files']: self.assertEqual(sha(z.read(f['path'])), f['sha256'])

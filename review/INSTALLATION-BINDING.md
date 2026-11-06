@@ -79,8 +79,7 @@ complete backup-version compatibility, and reachable upstream cryptographic
 implementations/binary provenance remain separate gaps. Public creation/restore
 adapter reads have no new end-to-end runtime result in this checkpoint.
 
-The hosted workflow is pinned, audit-only and read-only; its result will be added
-only after completion and artifact verification. No generic iOS build was rerun
+The first [hosted run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42236729393) failed at the inherited baseline after compilation, with an empty runtime log. Its complete downloaded artifact and terminal GitHub metadata are retained in `hosted-attempt1.zip`. This is not a hosted pass or a confirmed app vulnerability. The driver now records process exit codes and runs a separately labeled unoptimized diagnostic on baseline failure; that diagnostic cannot turn a failed optimized result into a pass. The original local driver and successful evidence remain unchanged. The hosted workflow is pinned, audit-only and read-only. No generic iOS build was rerun
 for this audit-only change. No simulator, physical device, App Store or other
 application project was operated. No independent certification or zero-bug
 claim follows from these results.
