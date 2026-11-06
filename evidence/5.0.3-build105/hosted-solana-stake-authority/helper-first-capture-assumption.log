@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_hosted_reproduction_and_build_are_bound_to_exact_sources (test_hosted_solana_stake_authority.HostedSolanaStakeAuthorityEvidence.test_hosted_reproduction_and_build_are_bound_to_exact_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<AUDIT>/tests/test_hosted_solana_stake_authority.py", line 87, in test_hosted_reproduction_and_build_are_bound_to_exact_sources
+    self.assertIn('Xcode 27.1', ios.read('toolchain.log').decode())
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Xcode 27.1' not found in ''
+
+----------------------------------------------------------------------
+Ran 1 test in 0.011s
+
+FAILED (failures=1)

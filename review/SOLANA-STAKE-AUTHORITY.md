@@ -107,6 +107,24 @@ arbitrary programs and Token-2022 extensions remain separate review areas.
 Checkpoint 34's hosted backup-exclusion assertion remains failed and unresolved.
 No claim extends automatically to later source commits.
 
-Hosted replay: pending. No simulator, physical device, App Store operation or
-other application was used. The repair is not claimed available in Apple's
+Hosted replay and its separate generic unsigned iOS Release build passed.
+[Run 42256484824](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42256484824)
+used audit commit `b8cee00cc1be476a689b103f028fbf2447869777`. The host replay took
+851.479 seconds and reproduced two passing controls/seven expected failures
+before, then 67 passes with zero skips after. Generic compilation took 1,462.94
+seconds at the same repair commit. The raw ZIPs match GitHub's sizes and SHA-256
+digests; every case log, fixture, source pin and dependency lock is verified.
+[Terminal receipts and original artifacts](../evidence/5.0.3-build105/hosted-solana-stake-authority).
+
+The initial evidence helper incorrectly expected the iOS `toolchain.log` to
+contain tool versions. That file is empty: the workflow piped stdout while
+`toolchain.sh` writes to a different file outside the artifact directory. The
+original failed helper log is retained. The corrected check verifies the
+terminal toolchain-check step, the Xcode 27.1/SDK 27.1 compiler paths in the build
+log and the separate host's explicit Xcode 27.1 build 27A9275 record. It does not
+claim recovery of the missing iOS toolchain text. All **528** audit-helper tests
+pass in 11.613 seconds, including the new evidence verification and checkpoint
+39's audit-only tests.
+
+No simulator, physical device, App Store operation or other application was used. The repair is not claimed available in Apple's
 currently distributed build.
