@@ -1,0 +1,170 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectRequest.swift",
+      "sha256": "29435915c78e43a443f43bf9b28a2286d015c520de2eb76603c11b4618464b82",
+      "lines": [
+        [
+          1,
+          144
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Method, chain, account, size and selected-input bounds",
+      "remaining": "Upstream BDK, miniscript, secp256k1 implementation and binary provenance; exhaustive protocol coverage remain open"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectPSBT.swift",
+      "sha256": "b82e545cffba6ac4066fc3e4c6aac8cefe7572df6ee95ca3fae86117ddf9b314",
+      "lines": [
+        [
+          1,
+          239
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "PSBT maps, verified parents, input ownership, hash modes, fee/debit/output reconstruction and signing-plan binding",
+      "remaining": "Upstream BDK, miniscript, secp256k1 implementation and binary provenance; exhaustive protocol coverage remain open"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectProof.swift",
+      "sha256": "e80ff8027510e81d5558c7680915387e7c19f8cd25092597f2e04dd7d237f998",
+      "lines": [
+        [
+          1,
+          81
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Reconstruction and verification of selected signatures; global, output and foreign input preservation",
+      "remaining": "Upstream BDK, miniscript, secp256k1 implementation and binary provenance; exhaustive protocol coverage remain open"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectMessage.swift",
+      "sha256": "ee006b73e8de8f26a60d5209a4f1fc0ba79d1b6e87f23ffbbaf4a0a4b6c713f8",
+      "lines": [
+        [
+          1,
+          88
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Message domain and requested-address binding",
+      "remaining": "Upstream BDK, miniscript, secp256k1 implementation and binary provenance; exhaustive protocol coverage remain open"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinConnectClient.swift",
+      "sha256": "aacecff9da57d815daa5ba5fbe48b8698688824fdd8a3b3077b309654059b195",
+      "lines": [
+        [
+          1,
+          201
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Provider retrieval, parent injection, transfer planning and submission boundaries",
+      "remaining": "Upstream BDK, miniscript, secp256k1 implementation and binary provenance; exhaustive protocol coverage remain open"
+    },
+    {
+      "path": "Packages/OathBitcoin/Sources/OathBitcoin/BitcoinPrivateKeys.swift",
+      "sha256": "20d3985c0330b7396477dea3502b31e467d941ae78e06e35e465526c56534c72",
+      "lines": [
+        [
+          1,
+          72
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Re-derived path, account, branch, public script and address checks before key use",
+      "remaining": "Upstream BDK, miniscript, secp256k1 implementation and binary provenance; exhaustive protocol coverage remain open"
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/WalletConnectBitcoin.swift",
+      "sha256": "4d63f9ddc8880769efebc007d8f530d0f1cce51f7dea60746c52015fdee0d162",
+      "lines": [
+        [
+          1,
+          150
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Active wallet/account checks and atomic request/signature journal ownership",
+      "remaining": "Database lifecycle integration, crash/restart interleavings and all schema assumptions remain open"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectBitcoinViews.swift",
+      "sha256": "4dc7fb2ae180b5f9bbd2564004710754a1861a6197257926a489185d154c0e30",
+      "lines": [
+        [
+          1,
+          77
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Recipient, amount, fee, debit and message presentation from immutable reviewed values",
+      "remaining": "Rendered/localized UI, message social engineering and runtime secret lifetime remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathBitcoinWallet.swift",
+      "sha256": "0dabdeaddc025a7bf95281f293151ec16f4885a398a763bd3c7a3b43789bddf9",
+      "lines": [
+        [
+          98,
+          130
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account ownership, imported key scope and key source passed to signing",
+      "remaining": "Other adapter methods and application runtime remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          958,
+          976
+        ],
+        [
+          1856,
+          1871
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Generation and removal revision checks across authentication/database awaits",
+      "remaining": "All authentication, cancellation and removal interleavings remain open"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "93ff219e2e623f86798857bc7d137bc1e31d17192c280a10065a36268394a7a7",
+      "lines": [
+        [
+          740,
+          763
+        ],
+        [
+          1049,
+          1077
+        ],
+        [
+          1126,
+          1165
+        ],
+        [
+          1339,
+          1384
+        ],
+        [
+          1703,
+          1749
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Preparation, signing preflight, selected-wallet/session binding, request expiry and post-sign authorization",
+      "remaining": "Complete service, relay lifecycle, runtime callbacks and UI integration remain open"
+    }
+  ]
+}

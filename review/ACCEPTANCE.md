@@ -1,7 +1,7 @@
 # Acceptance checklist — in progress
 
-Current supplemental checkpoint: **5.0.3 (105)**, typed-data consent review at
-`32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 32 evidence](TYPED-CONSENT.md)
+Current supplemental checkpoint: **5.0.3 (105)**, Bitcoin consent review at
+`32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 33 evidence](BITCOIN-CONSENT.md)
 covers its explicit source ranges and host corpus; it does not requalify the
 entire application. The earlier nonce-response repair at
 `6a8bfcfcf6aeabdd858c9f3316ff4bdaeaf245a1`, merged as
@@ -179,3 +179,7 @@ partial; the frozen inventory is unchanged. No new app defect, app change, new
 generic iOS build or whole-review completion is claimed. Full application
 authentication, rendered consent and dependency provenance remain separate gaps.
 [Exact scope and limitations](TYPED-CONSENT.md).
+
+## Checkpoint 33: Bitcoin signing and consent
+
+At `32701474fefbed3840878e35f6111e8d494e1f02`, all 27 selected production methods pass with zero skips. Eleven supplemental source dispositions are partial. No new app finding or app-source change is claimed. The corrected audit-only expectation and original failed attempt are both preserved. Full dependency, runtime and whole-wallet acceptance gaps remain open. [Evidence](BITCOIN-CONSENT.md).

@@ -1,0 +1,29 @@
+name: Review Bitcoin signed intent and consent
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/bitcoin-consent-review.yml', 'scripts/bitcoin-consent-review.py', 'fixtures/bitcoin-consent/**', 'tests/test_bitcoin_consent_review.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_bitcoin_consent_review.py
+      - run: |
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach 32701474fefbed3840878e35f6111e8d494e1f02
+          python3 scripts/bitcoin-consent-review.py .work/wallet .work/bitcoin-consent evidence/ci/bitcoin-consent
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: bitcoin-consent-review-evidence, path: evidence/ci/bitcoin-consent, retention-days: 90}
