@@ -89,3 +89,9 @@ The hosted workflow is audit-only, read-only and source/action-pinned. A configu
 workflow is not a hosted result; its receipt will be appended after verification.
 No new generic iOS build was run for these audit-only changes. No simulator,
 physical device or App Store operation was performed.
+
+## Verified hosted replay
+
+[GitHub run 42233934547](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42233934547) completed successfully at audit commit `c94ecc75ddc877a3efc5e19c096be02aae71a7e7`. It replayed the same pinned app source with Xcode 27.1 in 314.876 seconds: 27 production methods passed, zero skipped; the deliberate weakened control produced its one expected failed method with four assertions.
+
+The downloaded artifact matches GitHub's SHA-256 digest. Every result, source manifest, dependency lock and case-log hash was independently checked, including the exact mutation failure signature. [Receipt and durable archive](../evidence/5.0.3-build105/hosted-bitcoin-consent/verification.json). These host results do not establish the unresolved runtime or dependency properties above.
