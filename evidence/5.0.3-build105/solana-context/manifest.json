@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "finding": "OW-2026-075",
+  "baseline_commit": "02ec5362c188134c42632c555ed5401218d653cb",
+  "fix_commit": "e888b220d7c245aaac5b3911ed4f7c72ca5743bd",
+  "retest_commit": "e888b220d7c245aaac5b3911ed4f7c72ca5743bd",
+  "pull_request": "https://github.com/OathWallet/oath-wallet/pull/100",
+  "whole_wallet_complete": false,
+  "app_store_upload": false,
+  "simulator_used": false,
+  "physical_device_used": false,
+  "before": {
+    "passed": 3,
+    "skipped": 0,
+    "failed": 8
+  },
+  "after": {
+    "passed": 52,
+    "skipped": 0,
+    "failed": 0
+  },
+  "paired_duration_seconds": 190.547,
+  "diagnostics": {
+    "passed": 119,
+    "skipped": 2,
+    "failed": 0
+  },
+  "diagnostics_trace_isolated": {
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "network": "denied"
+  },
+  "generic_ios_build": "passed; unsigned Release",
+  "hosted_replay": "pending",
+  "exploratory_attempts": "Preserved in validation.zip; headline results use the clean-snapshot driver. Nonpublic environment omitted from the incorrect diagnostics bundle-path log.",
+  "files": [
+    {
+      "path": "audit-helper-tests.log",
+      "sha256": "81763b44c10e5b1712e0f587c40214f3e7a935a0d70b1ccea0db83461f3f97a3"
+    },
+    {
+      "path": "build-receipt.json",
+      "sha256": "db5afeac86182e176544c136884eefdf094895f69c0766053908a59c06589c26"
+    },
+    {
+      "path": "completion-gate.log",
+      "sha256": "abcd403ffbf3bca132fef888886919c84e42ba0e527e9db751252cd8aa37accc"
+    },
+    {
+      "path": "pr.json",
+      "sha256": "4cefc2c0874fa80bce30435f2415982aadfc502350b1ba955e4d0fdb8462904e"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "483d4afb40a6d8b85c65d20c9de72295b079be9a767cf01f5f253c26f1c8fb7c"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "2872dca73a347f5993f8fdb6f58c0437f1b213a0d81079e300ba6c596c7a321d"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "870ac60842e9e9b532970c2f51f3d20300a45c2e7b9408f76c60c2a459b6a3b1"
+    },
+    {
+      "path": "validation.zip",
+      "sha256": "cda5d25205e70f39fc2db40df652939c0f4176a008347b91fa4550156f5d04ae"
+    }
+  ],
+  "merge_commit": "3338d294f08388655ffd4cfc3e50656f304e1c6c",
+  "merged_tree_identical": false,
+  "merged_application_inputs_identical": true,
+  "merge_additional_changes": [
+    "Website/README.md",
+    "Website/content/features.README.md",
+    "Website/content/features.json",
+    "Website/package.json",
+    "Website/public/agent-documents.json",
+    "Website/public/feature-pages.css",
+    "Website/public/features.html",
+    "Website/public/features.md",
+    "Website/public/features/icloud-wallet-backup.html",
+    "Website/public/features/icloud-wallet-backup.md",
+    "Website/public/features/revoke-token-approvals.html",
+    "Website/public/features/revoke-token-approvals.md",
+    "Website/public/features/walletconnect.html",
+    "Website/public/features/walletconnect.md",
+    "Website/public/llms-full.txt",
+    "Website/public/llms.txt",
+    "Website/public/sitemaps/pages.xml",
+    "Website/scripts/build-feature-pages.mjs",
+    "Website/scripts/build-seo.mjs",
+    "Website/scripts/verify-live-deployment.mjs",
+    "Website/src/agent-content.js",
+    "Website/src/index.js",
+    "Website/tests/feature-pages.test.mjs",
+    "Website/tests/search.test.mjs",
+    "Website/tests/seo-migration.test.mjs",
+    "Website/tests/site-chrome.test.mjs"
+  ],
+  "merge_additional_change_scope": "Website only; excluded from iOS target. Compilation and tests ran at the exact repair commit.",
+  "audit_helper_tests": {
+    "passed": 456,
+    "failed": 0,
+    "duration_seconds": 11.492
+  }
+}

@@ -1,5 +1,9 @@
 # Oath Wallet security review progress report
 
+## Checkpoint 29: Solana RPC response contexts
+
+Checkpoint 29 repairs stale or malformed Solana WalletConnect response contexts in [PR #100](https://github.com/OathWallet/oath-wallet/pull/100). The same eleven methods change from three passing controls and eight expected failures to all passing; all 52 selected Solana methods pass after repair. Diagnostics, publication scans and unsigned generic iOS Release compilation pass. Hosted replay is pending; the whole-wallet audit remains incomplete. [Evidence and limitations](SOLANA-RPC-CONTEXT.md).
+
 ## Checkpoint 28: Solana buffer origins
 
 Checkpoint 28 repairs Solana transaction buffer indexing in [PR #97](https://github.com/OathWallet/oath-wallet/pull/97). The same five methods change from two passing controls and three expected failures to all passing; 41 selected Solana methods pass after repair. Diagnostics and unsigned generic iOS Release compilation pass. The repair and merged source trees are identical. Hosted replay is pending; the whole-wallet audit remains incomplete. [Evidence and limitations](SOLANA-BUFFER-ORIGIN.md).

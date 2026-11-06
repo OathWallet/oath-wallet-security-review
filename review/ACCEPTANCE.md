@@ -135,3 +135,12 @@ source/test entries receive scoped hash-bound dispositions in the supplemental
 ledger. The five paired cases and 41 passing Solana methods do not establish
 whole-wallet coverage, ordinary dApp exploitability, UI runtime correctness or
 App Store delivery. Hosted replay remains pending. [Evidence](SOLANA-BUFFER-ORIGIN.md).
+
+## Checkpoint 29: Solana RPC response contexts
+
+OW-2026-075 is repaired through PR #100. The merged application inputs match
+the tested repair; only separate website changes differ. Eleven paired methods
+and 52 passing Solana cases do not establish provider honesty, full pending-
+journal runtime coverage, all instruction semantics or whole-wallet completion.
+The frozen inventory is unchanged; the supplemental source ledger remains scoped.
+Hosted replay is pending. [Evidence](SOLANA-RPC-CONTEXT.md).

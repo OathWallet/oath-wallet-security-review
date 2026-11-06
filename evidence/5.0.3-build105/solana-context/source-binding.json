@@ -1,0 +1,59 @@
+{
+  "reviewed_commit": "e888b220d7c245aaac5b3911ed4f7c72ca5743bd",
+  "baseline_commit": "02ec5362c188134c42632c555ed5401218d653cb",
+  "frozen_inventory_unchanged": true,
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSolanaClient.swift",
+      "sha256": "96c575f9ac1d5bb5efc66fe7914cf4c69b81c05d917426d4a78e64b0c7116bcd",
+      "status": "partially-reviewed",
+      "scope": "Review and non-nonce blockhash response contexts; other provider and status semantics remain partial.",
+      "lines": [
+        [
+          32,
+          108
+        ],
+        [
+          126,
+          138
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/SolanaSendClient.swift",
+      "sha256": "e81acdd0d9110e0317cd49bdd0ed4a0b6ec7e4821d9cb1dbc73f0b99c83b4cec",
+      "status": "partially-reviewed",
+      "scope": "Existing config/value helper used by repair; remainder not newly reviewed.",
+      "lines": [
+        [
+          68,
+          76
+        ]
+      ]
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectService.swift",
+      "sha256": "93ff219e2e623f86798857bc7d137bc1e31d17192c280a10065a36268394a7a7",
+      "status": "partially-reviewed",
+      "scope": "Preparation rejection and pending-expiry caller trace only; no full journal runtime test.",
+      "lines": [
+        [
+          775,
+          880
+        ]
+      ]
+    },
+    {
+      "path": "Packages/OathAnkr/Tests/OathAnkrTests/WalletConnectSolanaContextTests.swift",
+      "sha256": "33f5f404025d0bc889e25c446f51f522e1f17014e89f2793c1b678c2b1924c4b",
+      "status": "test-reviewed",
+      "scope": "All eleven injected-RPC methods; no live validator or funded accounts.",
+      "lines": [
+        [
+          1,
+          135
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: Replay Solana RPC context repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/solana-context-review.yml', 'scripts/solana-context-review.py', 'fixtures/solana-context/**', 'tests/test_solana_context_review.py']
+permissions:
+  contents: read
+jobs:
+  host:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+      OATH_REVIEW_XCODE: '27.1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with: {python-version: '3.14.7'}
+      - run: sh scripts/toolchain.sh
+      - run: python3 -m unittest discover -s tests -p test_solana_context_review.py
+      - run: |
+          git clone --no-checkout https://github.com/OathWallet/oath-wallet.git .work/wallet
+          git -C .work/wallet checkout --detach e888b220d7c245aaac5b3911ed4f7c72ca5743bd
+          python3 scripts/solana-context-review.py .work/wallet .work/solana-context evidence/ci/solana-context
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with: {name: solana-context-review-evidence, path: evidence/ci/solana-context, retention-days: 90}

@@ -1678,5 +1678,19 @@
     "retest_scope": "Identical five production-package methods: two passing controls, one SIGTRAP and two signature errors before; all five plus 36 adjacent methods pass afterward. Runtime networking denied. Generic unsigned iOS Release build passed; repair and merge source trees are identical. No remote app exploit demonstrated.",
     "hosted_replay": "pending",
     "evidence": "evidence/5.0.3-build105/solana-buffer/manifest.json"
+  },
+  {
+    "id": "OW-2026-075",
+    "severity": "low",
+    "title": "Solana WalletConnect accepts stale or malformed RPC response contexts",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-075.md",
+    "baseline_commit": "02ec5362c188134c42632c555ed5401218d653cb",
+    "fix_commit": "e888b220d7c245aaac5b3911ed4f7c72ca5743bd",
+    "merge_commit": "3338d294f08388655ffd4cfc3e50656f304e1c6c",
+    "pull_request": "https://github.com/OathWallet/oath-wallet/pull/100",
+    "retest_scope": "Identical eleven-method production fixture: three passing controls and eight expected assertion failures before; all 52 selected Solana host methods pass after repair with network denied. Generic unsigned iOS Release build passed. Merged application inputs are identical; separate website changes differ. No remote exploit or full journal runtime test claimed.",
+    "hosted_replay": "pending",
+    "evidence": "evidence/5.0.3-build105/solana-context/manifest.json"
   }
 ]
