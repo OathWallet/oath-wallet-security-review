@@ -1,0 +1,210 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "OathAtmosphere/Wallet/OathEVMSigning.swift",
+      "sha256": "5ac37b983c1d8758226e99fb94c461209de90743a46d21a2f53053a32ad5294b",
+      "lines": [
+        [
+          1,
+          36
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Wallet/account/network binding, imported-key scope, Safe policy equality and derived-key address validation",
+      "remaining": "Application integration, Keychain and lifetime runtime checks remain separate"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletConnectSigning.swift",
+      "sha256": "14a4719b55d2d48e5a449ffdc047690ac2bd65302faf58926a9a270ca3fd80b3",
+      "lines": [
+        [
+          1,
+          41
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Personal and typed-message derivation, wallet/account binding and typed chain/time validation",
+      "remaining": "Complete app session and consent lifetime not exercised by this package fixture"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          70,
+          165
+        ],
+        [
+          1085,
+          1270
+        ],
+        [
+          1848,
+          1870
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "EVM and message authentication flow, cancellation and removal-generation checks before/after awaited preparation and account reads",
+      "remaining": "Every actor interleaving, database operation and signing caller remains unfinished"
+    },
+    {
+      "path": "OathAtmosphere/Scanner/OathWalletConnectEVMViews.swift",
+      "sha256": "184cdd36f2beb16b29dd0268e18dbf9d2d23c0e31b9dfaf6a396fddbbbee03be",
+      "lines": [
+        [
+          1,
+          265
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Presented transaction and approval consent, unlimited/unknown-token warning paths",
+      "remaining": "Source inspection only; rendered review and all interaction state changes untested here"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendPlan.swift",
+      "sha256": "bf4f153b3f84f34a77b40aa25c9b4c8720a1fdf15955c4ffc16ece520424eacf",
+      "lines": [
+        [
+          1,
+          239
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Canonical uint256 amounts, fee bounds, nonce reservation, age/ownership and plan variants",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendCrypto.swift",
+      "sha256": "986da60629737782c3e0dc2348bf374dbd2d32a37708577af62541721395c4b4",
+      "lines": [
+        [
+          1,
+          90
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "EIP-155 and EIP-1559 wire reconstruction, signer recovery and EIP-7702 removal-only authorizations",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendNetwork.swift",
+      "sha256": "f72c3e84594967e89d8f232a288b1689f32e940777d3a7038af10f2040db797c",
+      "lines": [
+        [
+          1,
+          68
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Explicit chain identifiers and per-network fee/finality policies",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMMultisigPolicy.swift",
+      "sha256": "7a484ed792c405a9699c26555678f490e5cac68b320787606ff9cbdb3b06ed24",
+      "lines": [
+        [
+          1,
+          140
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Safe CREATE2 identity, initialization, typed digest, threshold/owner ordering and executor envelope",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMMultisigClient.swift",
+      "sha256": "ddace3ee81404c336d6a60beeec1986a16e711bbeb5e66b81e6876c48079228f",
+      "lines": [
+        [
+          1,
+          183
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Factory/singleton/proxy binding, modules/guard rejection, quote/preflight and execution receipt interpretation",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendClient.swift",
+      "sha256": "004a5685d9bf7716a86e03286685c036bcba4c9aec1ed2cbffebe384e90ddcdb",
+      "lines": [
+        [
+          1,
+          773
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Chain-verified provider reads, bounded decoding, immutable quote/simulation, submission and receipt matching",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectEVMRequest.swift",
+      "sha256": "9a8d3e621ccb5b916f436d539b71a9f7eacecae04d21084b000799a5d7c11402",
+      "lines": [
+        [
+          1,
+          113
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Strict request parsing, supported fields, chain binding, fee/nonce preservation and approval amount edits",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectEVMAction.swift",
+      "sha256": "06e3d0b0110ab351e2735efb887ac476302b74231e914a433d91a0a041299333",
+      "lines": [
+        [
+          1,
+          89
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Selector interpretation, exact ABI fields, raw fallback and unlimited approval review",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMSendPreparation.swift",
+      "sha256": "6e94c7869329affa73ab80b41f30490773709b6a8885d0e1776505f61337267f",
+      "lines": [
+        [
+          1,
+          33
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Single preparation ownership, cancellation and stale completion guards",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/FilecoinSendFee.swift",
+      "sha256": "75eec64e58b4addb8858e427e7fc554d80022885ef4ca65a912390d87b706f53",
+      "lines": [
+        [
+          1,
+          22
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Checked fee arithmetic and supported fee bounds",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/Permissions.swift",
+      "sha256": "0a11bf114d72a76069c35a26718c692f65341ca93f9c42b310de8a65f6d12710",
+      "lines": [
+        [
+          1,
+          128
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Removal-only calldata, spender/contract/nonce bounds and explicit unsupported action rejection",
+      "remaining": "Scoped production trace and selected offline checks only; full provider truth, chain runtime, all interleavings and reachable dependency implementations are not established"
+    }
+  ]
+}

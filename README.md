@@ -1,5 +1,7 @@
 # Oath Wallet security review
 
+Checkpoint 35 adds 28 passing EVM methods with zero skips: cross-chain replay, signed intent, wire tampering, every supported Safe threshold and delegation-removal binding. The deliberately weakened control produces four expected assertions. Fifteen source/range dispositions remain partial; no new app defect or app change is claimed. [Evidence and remaining scope](review/EVM-CONSENT.md).
+
 Checkpoint 34 adds 56 existing and 2,647 new passing installation-key assertions, with a 12-failure purpose-binding mutation control. Twelve hash-bound source/range dispositions remain partial. No new app defect or app change is claimed. [Production trace, evidence and limitations](review/INSTALLATION-BINDING.md).
 
 
