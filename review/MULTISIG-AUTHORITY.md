@@ -92,6 +92,13 @@ automatically qualify later code. Prior findings and failures remain unchanged.
 ## Hosted replay and execution boundary
 
 The audit-only workflow is pinned, read-only and has no deployment credentials or
-pull-request trigger. Hosted replay is pending; local success is not a hosted pass.
+pull-request trigger. [GitHub run 42250948694](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42250948694)
+completed successfully at audit commit `66f2bdf6453acffc57b0413116a122832a052dff`.
+Its fresh builds and isolated execution took **990.271 seconds**: all 13 production
+methods pass with zero skips, and the single weakened-control method produces
+its three expected assertion failures. The downloaded artifact matches GitHub's
+SHA-256 digest `d270cadea39e10db48ca490914b8c30d79d193cb5f939baf3d4867ddb749e620`.
+Every manifest, case log and fixture is checked by the committed hosted-evidence test.
+[Terminal metadata, artifact and verification receipt](../evidence/5.0.3-build105/hosted-multisig-authority/verification.json).
 No new generic iOS build was run for these audit-only changes. No simulator,
 physical device, local application or App Store operation was used.
