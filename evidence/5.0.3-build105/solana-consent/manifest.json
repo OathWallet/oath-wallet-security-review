@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "finding": "OW-2026-073",
+  "baseline_commit": "7ffd0f449c3312d9fafd01eda59c6b9eb813f9ca",
+  "fix_commit": "7c79fe5bf89de44168fc9bc25e7e781d9051fdfe",
+  "retest_commit": "247ac898168cc8f97be28398c69337f569fb5f96",
+  "application_changed_by_checkpoint": false,
+  "new_ios_build_performed": false,
+  "whole_wallet_complete": false,
+  "runtime_scope": "macOS host tests with injected RPC states; networking denied",
+  "hosted_replay": "pending",
+  "before": {
+    "passed": 0,
+    "skipped": 0,
+    "failed": 1
+  },
+  "after": {
+    "passed": 36,
+    "skipped": 0,
+    "failed": 0
+  },
+  "duration_seconds": 213.321,
+  "excluded_attempts": [
+    {
+      "archive": "attempt1.zip",
+      "reason": "Compiled, then discovery warning interleaving rejected the selector list; no tests executed."
+    }
+  ],
+  "files": [
+    {
+      "path": "attempt1.zip",
+      "sha256": "70b39d2ad9eda32d407ea16c67c27e48a67ed2005a84e8cfc45f9dda70512f28"
+    },
+    {
+      "path": "helper-tests.log",
+      "sha256": "e23fc38f59488e1574056bd54b6c8892f7b4d6573fd0b3f3395d67911ce8f419"
+    },
+    {
+      "path": "publication-scan.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "publication-scan.log",
+      "sha256": "94ccafcce00509d7ad7ee43dcc1cd77c604e5681c949785d87a90e6eae3fa0c9"
+    },
+    {
+      "path": "runs.zip",
+      "sha256": "fd20a820b0555145f17973b56ccc639b3940e10fa457349f844d0985e4f17f0d"
+    },
+    {
+      "path": "source-binding.json",
+      "sha256": "00596efc6be3b33733b50e43d142c35ce484c611c24e79b7e9b3647c6b93c75e"
+    },
+    {
+      "path": "workflow-lint-known-runner.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "workflow-lint-unconfigured.log",
+      "sha256": "1b821e7df77cc9f2e4ab5ec12c23fadd96e05ef3a7d68c6e7078babe03d3c52f"
+    }
+  ],
+  "helper_tests": {
+    "passed": 443,
+    "failed": 0,
+    "duration_seconds": 11.667
+  },
+  "workflow_lint": {
+    "initial": "unknown custom xcode-27 runner label; preserved",
+    "final": "passed with only the known xcode-27 label warning excluded; all other rules enabled"
+  },
+  "publication_secret_scan": "passed; changed files and expanded evidence archives"
+}

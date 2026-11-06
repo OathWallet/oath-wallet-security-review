@@ -1648,5 +1648,20 @@
     "baseline_commit": "152e094f85f196479d2ab08856eaf3b0264cd6c1",
     "merge_commit": "c2ff488a7c7a647b2e6ab03aa1768f5735928e7e",
     "pull_request": "https://github.com/devdasx/oath-wallet/pull/88"
+  },
+  {
+    "id": "OW-2026-073",
+    "severity": "medium",
+    "title": "Solana token delegation omitted from signing consent",
+    "status": "fixed-and-retested",
+    "document": "OW-2026-073.md",
+    "reported_by": "Ibnu",
+    "baseline_commit": "7ffd0f449c3312d9fafd01eda59c6b9eb813f9ca",
+    "fix_commit": "7c79fe5bf89de44168fc9bc25e7e781d9051fdfe",
+    "retest_commit": "247ac898168cc8f97be28398c69337f569fb5f96",
+    "retest_scope": "Identical production review fixture: one expected assertion failure on build 104; all 36 selected Solana host tests pass on the pinned build-105 repair. Runtime networking denied. No validator, UI runtime or funds transfer claimed.",
+    "hosted_replay": "pending",
+    "evidence": "evidence/5.0.3-build105/solana-consent/manifest.json",
+    "publication_note": "Repair already published before this checkpoint; no new application change or PR."
   }
 ]

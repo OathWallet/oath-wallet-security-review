@@ -120,3 +120,9 @@ Build 104 checkpoint 15 repairs OW-2026-067 on a later public source revision.
 The controlled host tests do not close the full adapter/worker integration or
 live-provider freshness gaps. No complete file-review dispositions are added
 by test success. [Evidence](INVENTORY-FLIGHT-TIME.md).
+
+## Checkpoint 27: Solana delegation consent
+
+OW-2026-073 has paired host evidence against released build 104 and repaired
+5.0.3 (105) source. This is an additive, scoped review; the frozen inventory and
+whole-wallet completion requirements remain unchanged. See [results and gaps](SOLANA-CONSENT.md).
