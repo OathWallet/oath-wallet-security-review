@@ -134,7 +134,7 @@ source tree is identical. The frozen inventory remains unchanged; three
 source/test entries receive scoped hash-bound dispositions in the supplemental
 ledger. The five paired cases and 41 passing Solana methods do not establish
 whole-wallet coverage, ordinary dApp exploitability, UI runtime correctness or
-App Store delivery. Hosted replay remains pending. [Evidence](SOLANA-BUFFER-ORIGIN.md).
+App Store delivery. Hosted replay succeeded and its downloaded artifact is hash-verified. [Evidence](SOLANA-BUFFER-ORIGIN.md).
 
 ## Checkpoint 29: Solana RPC response contexts
 

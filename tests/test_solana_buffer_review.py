@@ -122,3 +122,31 @@ class SolanaBufferEvidence(unittest.TestCase):
         report = (ROOT / 'review/SOLANA-BUFFER-ORIGIN.md').read_text()
         for phrase in ['not independent', 'remains unproven', 'No simulator', 'frozen inventory remains']:
             self.assertIn(phrase, report)
+
+    def test_hosted_replay_matches_github_and_all_logged_hashes(self):
+        directory = ROOT / 'evidence/5.0.3-build105/hosted-solana-buffer'
+        artifact = json.loads((directory / 'artifact.json').read_text())
+        receipt = json.loads((directory / 'verification.json').read_text())
+        run = json.loads((directory / 'run-observed.json').read_text())
+        self.assertEqual('sha256:' + sha((directory / 'artifact.zip').read_bytes()), artifact['digest'])
+        self.assertEqual((run['status'], run['conclusion']), (receipt['workflow_observed_status'], receipt['workflow_observed_conclusion']))
+        completed = json.loads((directory / 'run-completed.json').read_text())
+        self.assertEqual((completed['status'], completed['conclusion']), ('completed', 'success'))
+        self.assertEqual(completed['head_sha'], receipt['audit_commit'])
+        jobs = json.loads((directory / 'jobs-observed.json').read_text())
+        self.assertTrue(receipt['all_job_steps_completed_successfully'])
+        self.assertTrue(all(step['status'] == 'completed' and step['conclusion'] == 'success' for step in jobs['jobs'][0]['steps']))
+        self.assertEqual(receipt['run_id'], 42200304981)
+        self.assertEqual(receipt['audit_commit'], run['head_sha'])
+        with zipfile.ZipFile(directory / 'artifact.zip') as z:
+            result = json.loads(z.read('result.json'))
+            self.assertEqual(sha(z.read('result.json')), receipt['result_sha256'])
+            self.assertEqual(result['driver_sha256'], sha((ROOT / 'scripts/solana-buffer-review.py').read_bytes()))
+            self.assertEqual(result['baseline_commit'], driver.BEFORE)
+            self.assertEqual(result['retest_commit'], driver.AFTER)
+            self.assertEqual([s['totals'] for s in result['stages']], [dict(passed=2, skipped=0, failed=3), dict(passed=41, skipped=0, failed=0)])
+            for f in result['files']:
+                self.assertEqual(sha(z.read(f['path'])), f['sha256'])
+            for stage in result['stages']:
+                for case in stage['cases']:
+                    self.assertEqual(sha(z.read(case['log'])), case['log_sha256'])

@@ -6,7 +6,7 @@ Checkpoint 29 repairs stale or malformed Solana WalletConnect response contexts 
 
 ## Checkpoint 28: Solana buffer origins
 
-Checkpoint 28 repairs Solana transaction buffer indexing in [PR #97](https://github.com/OathWallet/oath-wallet/pull/97). The same five methods change from two passing controls and three expected failures to all passing; 41 selected Solana methods pass after repair. Diagnostics and unsigned generic iOS Release compilation pass. The repair and merged source trees are identical. Hosted replay is pending; the whole-wallet audit remains incomplete. [Evidence and limitations](SOLANA-BUFFER-ORIGIN.md).
+Checkpoint 28 repairs Solana transaction buffer indexing in [PR #97](https://github.com/OathWallet/oath-wallet/pull/97). The same five methods change from two passing controls and three expected failures to all passing; 41 selected Solana methods pass after repair. Diagnostics and unsigned generic iOS Release compilation pass. The repair and merged source trees are identical. Hosted replay succeeded and its downloaded artifact is hash-verified; the whole-wallet audit remains incomplete. [Evidence and limitations](SOLANA-BUFFER-ORIGIN.md).
 
 
 Checkpoint 27 records Solana delegation-consent finding OW-2026-073, reported against build 104 and already repaired in public source. An identical regression fails on the reported commit and passes on pinned 5.0.3 (105) source; all 36 selected Solana host tests pass. Original failures, the excluded discovery attempt and partial source dispositions remain visible. The whole-wallet audit remains incomplete. [Evidence and limitations](SOLANA-CONSENT.md).

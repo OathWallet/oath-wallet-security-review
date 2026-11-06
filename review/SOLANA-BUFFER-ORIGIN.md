@@ -73,8 +73,13 @@ test or proof of an installed App Store binary.
 [merge receipt](../evidence/5.0.3-build105/solana-buffer/pr.json)
 preserve results and checksums. The earlier exploratory failures are retained;
 the headline paired counts come only from the final clean-snapshot run.
-The pinned GitHub workflow is published for replay; no hosted pass is claimed
-until the completed run and downloaded artifact have been verified.
+The hosted replay completed successfully; its original downloaded artifact
+matches GitHub's checksum and every recorded file/case hash. The initial delayed
+workflow status and later completed receipt are both retained.
+The replay took 677.962 seconds and reproduced two passing controls and three
+expected failures before repair, then 41 passes without skips afterward.
+[Run](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42200304981) ·
+[Download verification](../evidence/5.0.3-build105/hosted-solana-buffer/verification.json).
 
 ## Scope limits
 
