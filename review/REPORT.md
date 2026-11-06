@@ -1,5 +1,8 @@
 # Oath Wallet security review progress report
 
+Checkpoint 34 adds 56 existing and 2,647 new passing installation-key assertions, with a 12-failure purpose-binding mutation control. Twelve hash-bound source/range dispositions remain partial. No new app defect or app change is claimed. [Production trace, evidence and limitations](INSTALLATION-BINDING.md).
+
+
 Checkpoint 33 adds 27 passing Bitcoin signing/consent methods: 1,040 signature-mode combinations, mixed owned/foreign inputs, signed-wire mutations and consent-plan checks. A separate weakened control fails exactly four assertions; the first harness expectation error is preserved. Eleven source dispositions remain partial. No new app defect or app change is claimed. [Evidence and remaining gaps](BITCOIN-CONSENT.md).
 
 **Checkpoint 32.** Typed-data/sign-in checks pass 20 methods with no skips, including 616 independent encoding/signature vectors and 192 malformed-value rejections. Deliberately removing domain binding fails the expected control. No new app defect is confirmed; nine partial file/range dispositions retain lifecycle, UI and dependency gaps. [Scope, reproduction and limits](TYPED-CONSENT.md).

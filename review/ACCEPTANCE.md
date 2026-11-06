@@ -1,5 +1,7 @@
 # Acceptance checklist — in progress
 
+Checkpoint 34 adds scoped installation-key evidence at `32701474fefbed3840878e35f6111e8d494e1f02`; its [12 partial dispositions and host assertions](INSTALLATION-BINDING.md) do not complete the full audit or change frozen inventory counts.
+
 Current supplemental checkpoint: **5.0.3 (105)**, Bitcoin consent review at
 `32701474fefbed3840878e35f6111e8d494e1f02`. The [checkpoint 33 evidence](BITCOIN-CONSENT.md)
 covers its explicit source ranges and host corpus; it does not requalify the

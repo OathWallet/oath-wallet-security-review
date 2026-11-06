@@ -1,0 +1,183 @@
+{
+  "reviewed_commit": "32701474fefbed3840878e35f6111e8d494e1f02",
+  "frozen_inventory_unchanged": true,
+  "automated_tests_do_not_promote_manual_review": true,
+  "files": [
+    {
+      "path": "OathAtmosphere/Wallet/OathInstallationSecurity.swift",
+      "sha256": "71bab22497fc7ca5a0c290fbaa6ef49bc04cbce4945f6a4ee8550c99c0a1a71d",
+      "lines": [
+        [
+          1,
+          152
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Installation identity, context-authenticated sealing, reset ordering and fail-closed storage reads",
+      "remaining": "Host-tested production core; OS storage and all concurrent reset interleavings remain separate"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathInstallationKeychain.swift",
+      "sha256": "306d51efaca31dfaeadf94c58a834e7662ef82ed42d7d236532ac26c9d611359",
+      "lines": [
+        [
+          1,
+          57
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Keychain accessibility and purpose binding adapters",
+      "remaining": "OS Keychain access groups, lock state and device runtime not exercised here"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathInstallationVaultStorage.swift",
+      "sha256": "f24050e3e7485ae71e0d8c44570c4122652c10d608e0d88bc2ae7e915631354d",
+      "lines": [
+        [
+          1,
+          37
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Encrypted vault/attempt storage contexts and entry updates",
+      "remaining": "OS storage and interruption behavior not exercised by new fixture"
+    },
+    {
+      "path": "OathAtmosphere/Passcode/OathBiometricCredentialStore.swift",
+      "sha256": "ea2323635e3f24ac5005fdb4bd94ea0073d1c7d9598d1756fea79415126d295e",
+      "lines": [
+        [
+          1,
+          290
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Biometric item binding, OS cancellation bridge and credential decoding",
+      "remaining": "Actual Face ID, entitlement and OS prompt/cancellation behavior remains untested here"
+    },
+    {
+      "path": "OathAtmosphere/Passcode/OathPasscodeStore.swift",
+      "sha256": "8126f93c545263f67b6d0b5d95a3bee59d95faed4865df7ac6af67f61e4e94b1",
+      "lines": [
+        [
+          1,
+          102
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Verifier KDF bounds, random salt failure and insert-only Keychain write",
+      "remaining": "No new KDF benchmark or OS Keychain runtime result"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathVaultEnvelope.swift",
+      "sha256": "218e7ecb0a92eec9710f209d6369933ab391122225313c79dcc7605f2c80a06e",
+      "lines": [
+        [
+          1,
+          482
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "PIN/data key envelope, authenticated metadata, legacy decoding and member identity binding",
+      "remaining": "Inner envelope complete compatibility corpus and runtime secret lifetime remain open"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletEngine.swift",
+      "sha256": "a3e835d8f4dacf72f4ff6113b480b812b6b8f47eff4e525e1bfaef528409fcee",
+      "lines": [
+        [
+          1,
+          209
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Creation entropy API boundary, derivation dispatch and source/account consistency",
+      "remaining": "Upstream entropy and all reachable binary implementations not reverified here"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "lines": [
+        [
+          1,
+          175
+        ],
+        [
+          300,
+          680
+        ],
+        [
+          1338,
+          1385
+        ],
+        [
+          1400,
+          1535
+        ],
+        [
+          1606,
+          1870
+        ],
+        [
+          1870,
+          2320
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Authentication generations, protected reads, export checks, restore identity and atomic ciphertext commits",
+      "remaining": "Whole actor, every suspension/race and application integration not completed; PIN-change hypothesis not confirmed"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathCloudBackupService.swift",
+      "sha256": "3d807dc15c08007b4df8c89959ab33cb1446cbd6226166e25ce937ce86af34d8",
+      "lines": [
+        [
+          1,
+          232
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Backup service save/read/delete/list delegation and cancellation boundaries",
+      "remaining": "Live iCloud, coordination and file lifecycle not rerun here"
+    },
+    {
+      "path": "Packages/OathCloudBackup/Sources/OathCloudBackup/BackupDocument.swift",
+      "sha256": "fb791336a451172f0f66bf10000cda2aef7dd43f613493a8113619ab5c61bf72",
+      "lines": [
+        [
+          1,
+          335
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Size/version/KDF limits, header authentication, payload validation and supported-format gates",
+      "remaining": "Full version migration matrix and upstream crypto not completed by new fixture"
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletRestoration.swift",
+      "sha256": "b5fe3a9c1a66bf880e26fd9e10e5ba4874c405235bc6eb372684cc4b4c6b6aa0",
+      "lines": [
+        [
+          1,
+          215
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Recovery material validation, account scope, identity conflict handling and canonical path repair",
+      "remaining": "Full production restore integration and all supported multisig derivations remain open"
+    },
+    {
+      "path": "Packages/WalletCore/Package.swift",
+      "sha256": "386d4ee6c3e2f5ffe239ccc3cb38a8a3e18d35a1f9b5890499831133e73896a4",
+      "lines": [
+        [
+          1,
+          24
+        ]
+      ],
+      "status": "partially-reviewed",
+      "reviewed": "Pinned repaired binary locations and two declared checksums",
+      "remaining": "Manifest inspection only; binary download/provenance/reproduction not newly verified"
+    }
+  ]
+}
