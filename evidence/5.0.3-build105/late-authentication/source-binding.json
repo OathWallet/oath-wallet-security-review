@@ -1,0 +1,58 @@
+{
+  "reviewed_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+  "frozen_inventory_unchanged": true,
+  "files": [
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletVault.swift",
+      "sha256": "1b0b5fcd4d6fdd57e59c97008c16e52b7f282544e195a5259f8a6159bf5f8852",
+      "reviewed_ranges": [
+        [
+          355,
+          420
+        ],
+        [
+          1080,
+          1132
+        ],
+        [
+          1694,
+          1705
+        ],
+        [
+          1852,
+          1870
+        ],
+        [
+          2110,
+          2278
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace imported EVM message and typed signing, generation checks, captured credential revalidation, selected wallet and passcode/biometric setting changes. Full vault and UI/lifecycle interactions not completed."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathVaultEnvelope.swift",
+      "sha256": "218e7ecb0a92eec9710f209d6369933ab391122225313c79dcc7605f2c80a06e",
+      "reviewed_ranges": [
+        [
+          350,
+          395
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace preserved data key on PIN replacement versus key rotation on PIN enable/disable; compatibility behavior and credential binding, not a full envelope review."
+    },
+    {
+      "path": "OathAtmosphere/Wallet/OathWalletConnectSigning.swift",
+      "sha256": "14a4719b55d2d48e5a449ffdc047690ac2bd65302faf58926a9a270ca3fd80b3",
+      "reviewed_ranges": [
+        [
+          1,
+          41
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace wallet/account/chain and imported-key scope. Imported-key branch executed through inherited host adapter; HD derivation replaced by throwing test adapter and not runtime-validated."
+    }
+  ]
+}
