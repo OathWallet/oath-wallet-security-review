@@ -1,0 +1,60 @@
+{
+  "checkpoint": 40,
+  "source_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+  "workflow_run": "https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42458592481",
+  "workflow_commit": "3052916984831b5e62427b06007cc55f3fdf9855",
+  "status": "completed",
+  "conclusion": "success",
+  "artifact_id": 13609233613,
+  "artifact_sha256": "23c46b791f4c3dbcb966275fd510454a32845d53b2d4ca89b7af27b4f2c5ee6f",
+  "artifact_size": 497332,
+  "production": {
+    "passed": 66,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 562.88
+  },
+  "deliberate_mutation": {
+    "passed": 64,
+    "expected_failures": 2,
+    "skipped": 0,
+    "duration_seconds": 553.89
+  },
+  "verified": [
+    "Terminal run and every job step succeeded",
+    "Artifact digest and byte size match GitHub receipt",
+    "Exact source, fixture, driver, generated host and log hashes match local evidence",
+    "All 66 assertion identities and results match local evidence",
+    "Dependency pins match application lock",
+    "Only the deliberate vault mutation differs between generated host source trees",
+    "Runtime network denied"
+  ],
+  "application_changed": false,
+  "new_app_finding": false,
+  "whole_wallet_complete": false,
+  "partial_file_range_dispositions": 16,
+  "frozen_inventory_unchanged": true,
+  "new_ios_build": false,
+  "limitations": [
+    "Host adapters and memory credential stores do not establish real OS authentication or UI behavior",
+    "The deliberate mutation is not a discovered production defect",
+    "Additional cancellation, Solana and swap source reads are not runtime tests",
+    "Earlier hosted backup-exclusion failure remains unresolved",
+    "Dependency review and binary-provenance gaps remain open"
+  ],
+  "supersedes_pending_status": "../late-authentication/manifest.json (original local receipt preserved)",
+  "audit_helper_tests": {
+    "passed": 538,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 13.924,
+    "log_sha256": "008073c8ce749f079badf00d0e96219a6f128e3d36e36de3c2dae5c7fe599dad"
+  },
+  "publication_scan": {
+    "exit_code": 0,
+    "scope": "Checkpoint 40 publication files and expanded archives only",
+    "bytes_scanned": 5888880,
+    "log_sha256": "0be9371b512715588e8ab9b143f886738973b51dc56d48863d473430b1c30e74",
+    "historical_repository_assessment_complete": false
+  }
+}

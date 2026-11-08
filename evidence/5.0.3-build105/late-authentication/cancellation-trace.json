@@ -1,0 +1,128 @@
+{
+  "application_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+  "dependency": {
+    "identity": "grdb.swift",
+    "kind": "remoteSourceControl",
+    "location": "https://github.com/groue/GRDB.swift",
+    "state": {
+      "revision": "533286eab041d826ed4a46c56b213fa3d2cebb7a"
+    }
+  },
+  "disposition": "No defect confirmed by source trace; prior cancellation is checked by the database writer before journal work.",
+  "manual_source_trace": true,
+  "runtime_test_performed": false,
+  "frozen_inventory_unchanged": true,
+  "files": [
+    {
+      "path": "OathAtmosphere/Send/OathEVMSendService.swift",
+      "archive_path": "application/OathAtmosphere/Send/OathEVMSendService.swift",
+      "kind": "application",
+      "source_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+      "sha256": "c6a65e42a3cd1f60cddf58096728f437b4831613647a65c29bd3640dc8f3c04f",
+      "reviewed_ranges": [
+        [
+          86,
+          203
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace signing, final multisig validation, journal commit, cancellation and durable recovery; no complete lifecycle runtime test."
+    },
+    {
+      "path": "OathAtmosphere/Send/OathEVMSendModel.swift",
+      "archive_path": "application/OathAtmosphere/Send/OathEVMSendModel.swift",
+      "kind": "application",
+      "source_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+      "sha256": "857c2068dd455c86b22985a89c101a28558164f884768dbca83f224dd3a88afb",
+      "reviewed_ranges": [
+        [
+          1,
+          84
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace task creation, cancellation and stale UI result guards; rendered screen and lifecycle callers remain untested."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/EVMMultisigClient.swift",
+      "archive_path": "application/Packages/OathAnkr/Sources/OathAnkr/EVMMultisigClient.swift",
+      "kind": "application",
+      "source_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+      "sha256": "ddace3ee81404c336d6a60beeec1986a16e711bbeb5e66b81e6876c48079228f",
+      "reviewed_ranges": [
+        [
+          96,
+          136
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace post-signature network validation and unchanged signed outer payload; all provider interleavings remain untested."
+    },
+    {
+      "path": "Packages/OathDatabase/Sources/OathDatabase/EVMSend.swift",
+      "archive_path": "application/Packages/OathDatabase/Sources/OathDatabase/EVMSend.swift",
+      "kind": "application",
+      "source_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+      "sha256": "f23f1959116a21b7aa7bd81da10972315cc4131898b2ff1376be2e8e6ddfb0ec",
+      "reviewed_ranges": [
+        [
+          135,
+          157
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace async transactional journal entry and verification; this increment does not execute a held-preflight transaction fixture."
+    },
+    {
+      "path": "GRDB/Core/DatabaseWriter.swift",
+      "archive_path": "dependency/GRDB/Core/DatabaseWriter.swift",
+      "kind": "dependency",
+      "source_commit": "533286eab041d826ed4a46c56b213fa3d2cebb7a",
+      "sha256": "9ffdcc4d3939ff3e4da4459bdecb556987b24315bf8c7afc91a0eee105030718",
+      "reviewed_ranges": [
+        [
+          634,
+          654
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace asynchronous write forwarding into a transaction."
+    },
+    {
+      "path": "GRDB/Core/DatabasePool.swift",
+      "archive_path": "dependency/GRDB/Core/DatabasePool.swift",
+      "kind": "dependency",
+      "source_commit": "533286eab041d826ed4a46c56b213fa3d2cebb7a",
+      "sha256": "98072eda40081154810bd5ad037d2ae4b6a717e26a2ef8e5d778a6497bc15d03",
+      "reviewed_ranges": [
+        [
+          786,
+          793
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace async write forwarding into SerializedDatabase.execute."
+    },
+    {
+      "path": "GRDB/Core/SerializedDatabase.swift",
+      "archive_path": "dependency/GRDB/Core/SerializedDatabase.swift",
+      "kind": "dependency",
+      "source_commit": "533286eab041d826ed4a46c56b213fa3d2cebb7a",
+      "sha256": "c393abf4666678791e5c76a3f1bab295b4cb1dac80214234b113bb578990ef6a",
+      "reviewed_ranges": [
+        [
+          250,
+          270
+        ]
+      ],
+      "status": "partially-reviewed",
+      "scope": "Trace cancellation handler and Task.checkCancellation before invoking the write closure."
+    }
+  ],
+  "limitations": [
+    "No held post-signature multisig preflight/runtime interleaving executed.",
+    "No UI lock callback or OS lifecycle runtime claim.",
+    "Cancellation after a successfully committed signature belongs to durable broadcast recovery, not the pre-commit boundary.",
+    "No whole-file or whole-dependency completion claim."
+  ]
+}

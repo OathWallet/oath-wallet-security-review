@@ -1,0 +1,34 @@
+{
+  "application_commit": "a9c062a3a1d492799b9f6e9d083630c7006183ea",
+  "manual_source_trace": true,
+  "new_runtime_tests": 0,
+  "frozen_inventory_unchanged": true,
+  "confirmed_findings": [],
+  "scope": "Partial source read of immutable router summaries and THORChain deposit recognition. No end-to-end swap, provider, protocol implementation or UI validation.",
+  "files": [
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/WalletConnectSwapReview.swift",
+      "sha256": "65ecb5c125c371bede34102630f932e54b1e7c189a0d02d49a3c4838559b16e9",
+      "status": "partially-reviewed",
+      "reviewed_ranges": [
+        [
+          1,
+          117
+        ]
+      ],
+      "limitations": "Whole-file source read does not resolve transitive implementation, provider trust, UI or runtime integration."
+    },
+    {
+      "path": "Packages/OathAnkr/Sources/OathAnkr/ThorchainEVMSwapReview.swift",
+      "sha256": "2ca55e6e293f36c1580fdf2c10d20cc8c20190e50c7c13fd9be2799b9f1ce9f9",
+      "status": "partially-reviewed",
+      "reviewed_ranges": [
+        [
+          1,
+          201
+        ]
+      ],
+      "limitations": "Whole-file source read does not resolve transitive implementation, provider trust, UI or runtime integration."
+    }
+  ]
+}

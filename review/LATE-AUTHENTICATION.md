@@ -52,7 +52,8 @@ network access is denied.
 
 - Production: **66 passed, zero failed, zero skipped**, 346.18 seconds including build.
 - Deliberate generation mutation: **64 passed, two expected failures**, 350.96 seconds including build. Both failures are the lock/reopen delayed-result assertion, one per signing path.
-- GitHub replay is pending; these are local host results.
+- [GitHub replay](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42458592481): **66 passed, zero failed, zero skipped**, 562.88 seconds including build. Its deliberate mutation records **64 passed and two expected failures**, 553.89 seconds. Artifact size, SHA-256, source/fixture/driver hashes, all generated host inputs, dependency pins and every assertion match the local evidence.
+- Hosted toolchain: Xcode 27.1 (27A9275), Swift 6.4, Python 3.14.7. [Terminal run, artifact and verification receipts](../evidence/5.0.3-build105/hosted-late-authentication/verification.json). The original local manifest retains its historical pending status; this receipt supersedes that status.
 - No new high, critical or lower-severity production defect was confirmed by this matrix.
 
 Per-assertion logs, generated sources, dependency lock, tool versions and executable
@@ -104,7 +105,63 @@ lifecycle interleavings, the OS prompt or downstream WalletConnect UI cancellati
 The earlier hosted file-backup-exclusion failure remains unresolved. No simulator,
 physical device, App Store operation or new application edit is part of this increment.
 
+## Additional source trace: cancellation before journal commit
+
+The EVM submission service awaits a final multisig network check after signing and
+before calling the transaction journal. A missing explicit cancellation check
+between those two calls initially looked like a possible late-commit path.
+Following the actual asynchronous database call resolves that particular source
+hypothesis: `journalEVMSignature` uses GRDB's async `write`, which forwards through
+`DatabasePool` to `SerializedDatabase.execute`. The pinned implementation checks
+task cancellation before invoking the write closure and installs a cancellation
+handler around it. The UI model's `cancel()` cancels the submission task.
+
+This is **manual source tracing, not a new passing runtime test or a confirmed
+finding**. A held final-preflight integration test, lock-callback behavior and
+every commit/cancellation interleaving remain unverified. Once signed bytes have
+committed successfully, the durable worker intentionally retains their ownership.
+Seven additional file/range dispositions are partial; frozen inventory counts
+are unchanged. The exact application and pinned GRDB inputs are preserved in the
+[trace ledger](../evidence/5.0.3-build105/late-authentication/cancellation-trace.json)
+and its adjacent source archive.
+
+The current Solana request, snapshot-review and permission implementation was also
+read again, together with part of the consent view. Four additional dispositions
+are recorded in the [follow-up ledger](../evidence/5.0.3-build105/late-authentication/solana-followup.json).
+These are source reads with zero new Solana runtime methods. Program-specific
+authority semantics beyond the token/delegation and stake guards, Token-2022
+extensions, provider honesty and rendered consent remain outstanding. The existing
+PR #117 results keep their original source pin and bounded stake-review scope.
+
 The merge receipt records that all non-Website root Git objects match the repair
 commit `f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e`, which has a successful unsigned
 generic iOS Release build in checkpoint 38. That build keeps its original commit
 identity; no additional merge-commit build is claimed for audit-only changes.
+
+## Additional source read: swap summaries and deposit recognition
+
+Two further partial dispositions cover the router summary and THORChain EVM
+deposit-review files. The summary retains decoded execution operations alongside
+compact routes and distinguishes input limits from outputs. Deposit recognition
+checks the request chain, current router/vault identities, pause flags and pool
+selection before presenting THORChain details. These are observed source guards,
+not proof of protocol or provider correctness. The
+[swap ledger](../evidence/5.0.3-build105/late-authentication/swap-followup.json)
+and adjacent source archive record the exact inputs. No new swap runtime test,
+whole-file completion disposition or confirmed finding is claimed.
+
+Together this increment records three authentication, seven cancellation/GRDB,
+four Solana and two swap partial source/range dispositions. The frozen inventory
+and its outstanding validation count remain unchanged. Later public-main website
+changes have matching non-Website root Git objects in the
+[source-status receipt](../evidence/5.0.3-build105/late-authentication/publication-source-status.json);
+tests retain their original source identity rather than claiming a new replay.
+
+## Publication validation
+
+All **538 audit-helper tests pass**, with no skips (13.924 seconds). These validate
+evidence identities, parsers and audit tooling; they are separate from the 66
+production-vault assertions. The scoped publication scan, including expanded
+archives, reports no matches across 5,888,880 bytes. It does not supersede the
+unreconciled historical scan. Logs and exact results are preserved with the
+[hosted verification receipt](../evidence/5.0.3-build105/hosted-late-authentication/verification.json).

@@ -1,6 +1,6 @@
 # Oath Wallet security review
 
-Checkpoint 40 adds 66 passing local production-vault assertions for delayed authentication, PIN changes, cancellation and wallet/account binding. Removing session-generation checks in a disposable copy causes exactly two expected failures. Three source/range dispositions remain partial; no new app defect or app change is claimed. GitHub replay is pending. [Evidence and remaining scope](review/LATE-AUTHENTICATION.md).
+Checkpoint 40 adds 66 passing local and GitHub production-vault assertions, with zero skips, for delayed authentication, PIN changes, cancellation and wallet/account binding. Removing session-generation checks in a disposable copy causes exactly two expected failures on both hosts. Sixteen source/range dispositions remain partial, including separate source-only EVM/GRDB, Solana and swap traces. The terminal GitHub artifact, source inputs and every assertion log are hash-verified. No new app defect or app change is claimed. [Evidence and remaining scope](review/LATE-AUTHENTICATION.md).
 
 Checkpoint 39 adds 27 passing local and GitHub Solana/TON message-signing methods, with zero skips, and one expected failure when TON domain binding is deliberately removed. Five source/range dispositions remain partial; no new app vulnerability or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Exact evidence and limitations](review/MESSAGE-DOMAINS.md).
 

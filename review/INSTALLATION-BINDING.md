@@ -105,3 +105,13 @@ successful run and all earlier failed hosted attempts remain intact.
 are validated by `tests/test_hosted_installation_binding.py`. The hosted storage
 failure remains unresolved. These results neither confirm an iOS backup bypass
 nor establish that backup protection works on every supported platform.
+
+## Later follow-up
+
+The PIN-change/in-flight-operation question above received a focused production-vault
+test at `a9c062a3a1d492799b9f6e9d083630c7006183ea` in
+[checkpoint 40](LATE-AUTHENTICATION.md). It distinguishes PIN replacement, which
+preserves an enrolled Face ID credential, from PIN disable, which rotates the key
+and disables Face ID. The message/typed-data results and their exact source and
+runtime limits are recorded there. They do not replace this checkpoint's original
+results or resolve its hosted backup-exclusion failure.
