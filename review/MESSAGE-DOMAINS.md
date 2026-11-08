@@ -84,7 +84,13 @@ python3 -m unittest discover -s tests -p test_message_domain_review.py
 
 Use the audit release's recorded macOS/Xcode toolchain and new scratch/output
 directories. A crash, timeout or unrelated assertion does not qualify as the
-expected mutation result. Hosted replay is pending.
+expected mutation result.
+
+## Verified GitHub replay
+
+[Run 42261460895](https://github.com/OathWallet/oath-wallet-security-review/actions/runs/42261460895) completed successfully at audit commit `571fdf769a6e8ee7d88713ea05825c561b76d605`. The downloaded archive matches GitHub’s SHA-256 and size; source, fixture, helper, dependency lock and every case log match their manifests. Its 27 production methods pass with zero skips and its deliberate mutation produces exactly one expected failed assertion. Total hosted duration was 912.624 seconds. [Durable receipt](../evidence/5.0.3-build105/hosted-message-domains/verification.json).
+
+The original local manifest retains its historical pending-replay state; this later receipt supersedes that state without replacing the earlier evidence.
 
 Five source/range dispositions remain partial; two vector files are classified
 as test fixtures. The frozen inventory is unchanged. Full UI/lifecycle behavior,

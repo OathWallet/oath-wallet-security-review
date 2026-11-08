@@ -128,3 +128,7 @@ pass in 11.613 seconds, including the new evidence verification and checkpoint
 
 No simulator, physical device, App Store operation or other application was used. The repair is not claimed available in Apple's
 currently distributed build.
+
+## Merge receipt — 8 November 2026
+
+PR #117 is merged at `a9c062a3a1d492799b9f6e9d083630c7006183ea`. [Exact comparison](../evidence/5.0.3-build105/pr117-merge/source-equivalence.json) records 21 Website-only changed files from the tested repair and identical non-Website root Git objects. The original build results retain their original source pin; this is not a new build of the merge commit. No Apple upload or distribution is claimed.

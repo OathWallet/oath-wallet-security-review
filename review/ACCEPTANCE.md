@@ -1,8 +1,8 @@
 # Acceptance checklist — in progress
 
-Checkpoint 39 adds 27 passing local Solana/TON message-signing methods, with zero skips, and one expected failure when TON domain binding is deliberately removed. Five source/range dispositions remain partial; no new app vulnerability or app change is claimed. Hosted replay is pending. [Exact evidence and limitations](MESSAGE-DOMAINS.md).
+Checkpoint 39 adds 27 passing local and GitHub Solana/TON message-signing methods, with zero skips, and one expected failure when TON domain binding is deliberately removed. Five source/range dispositions remain partial; no new app vulnerability or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Exact evidence and limitations](MESSAGE-DOMAINS.md).
 
-Checkpoint 38 confirms Medium finding OW-2026-077: a Solana stake authority change could receive a fee-only preview. [Open PR #117](https://github.com/OathWallet/oath-wallet/pull/117) rejects unsupported staking requests and simulated stake changes. Two controls pass and seven methods fail before repair (44 expected assertions); all 67 selected methods pass afterward. The unsigned generic iOS Release build passes at exact repair commit `f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e`. Hosted replay and the separate unsigned iOS Release build pass at that exact repair. Downloaded artifacts and every case log are hash-verified; this repair is not yet merged or claimed distributed by Apple. [Evidence and limitations](SOLANA-STAKE-AUTHORITY.md).
+Checkpoint 38 confirms Medium finding OW-2026-077: a Solana stake authority change could receive a fee-only preview. [Merged PR #117](https://github.com/OathWallet/oath-wallet/pull/117) rejects unsupported staking requests and simulated stake changes. Two controls pass and seven methods fail before repair (44 expected assertions); all 67 selected methods pass afterward. The unsigned generic iOS Release build passes at exact repair commit `f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e`. Hosted replay and the separate unsigned iOS Release build pass at that exact repair. Downloaded artifacts and every case log are hash-verified; PR #117 is merged at `a9c062a3a1d492799b9f6e9d083630c7006183ea`. Non-website Git objects are identical to the tested repair; no new merge-commit build or App Store distribution is claimed. [Evidence and limitations](SOLANA-STAKE-AUTHORITY.md).
 
 Checkpoint 37 adds 13 multisignature methods passing locally and on GitHub: 527 Aptos policies, 54 Sui policies, all 65,536 Sui signer bitmaps and 27 THORChain policies. A separately weakened threshold check produces three expected assertions. Twenty-two source/range dispositions remain partial; no new app defect or app change is claimed. The terminal GitHub artifact and every case log are hash-verified. [Evidence and limitations](MULTISIG-AUTHORITY.md).
 
@@ -13,7 +13,7 @@ Checkpoint 35 adds 28 EVM methods passing locally and on GitHub with zero skips:
 Checkpoint 34 retains an unresolved hosted file-backup-exclusion failure; the independent cryptographic checks pass. It adds scoped installation-key evidence at `32701474fefbed3840878e35f6111e8d494e1f02`; its [12 partial dispositions and host assertions](INSTALLATION-BINDING.md) do not complete the full audit or change frozen inventory counts.
 
 Current supplemental checkpoint: **5.0.3 (105)**, Solana stake authority repair at
-`f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e` in open PR #117, based on
+`f857fa9ece0b290e1b9ab9cf5e3cb85ebacc045e` in merged PR #117, based on
 `393c29cbae673f60f1df6ac9636af908ae789649`. The [checkpoint 38 evidence](SOLANA-STAKE-AUTHORITY.md)
 covers its explicit source ranges, paired host corpus and unsigned generic iOS build;
 it does not requalify the entire application. Previous checkpoints retain their
